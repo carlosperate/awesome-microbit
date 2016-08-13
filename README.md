@@ -17,5 +17,11 @@ A curated list of resources for the BBC micro:bit.
 - [Mu](http://codewith.mu) ([GitHub](http://github.com/ntoll/mu)) - A "micro" editor for MicroPython and the BBC micro:bit. 
 
 
-## Trademarks
+## License & Trademarks
+
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, the authors have waived all copyright and related or neighboring rights to this work.
+
+
 This projects is not endorsed, sponsored or associated with the BBC. "BBC” and “micro:bit” and their logos are trade marks of the BBC. http://microbit.co.uk/
