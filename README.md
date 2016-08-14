@@ -14,6 +14,7 @@ A curated list of resources for the BBC micro:bit.
 - [Libraries](#libraries)
 - [Projects](#projects)
 - [Articles](#articles)
+- [Teaching Resources](#teaching-resources)
 
 
 ## Visual Programming Languages
@@ -50,6 +51,7 @@ A curated list of resources for the BBC micro:bit.
 - [iOS App](https://itunes.apple.com/gb/app/micro-bit/id1092687276) - Connects and flashes programs to the micro:bit via Bluetooth.
 - [uFlash](https://github.com/ntoll/uflash/) - A utility for flashing the BBC micro:bit with Python scripts and the MicroPython runtime.
 - [MicroFs](https://github.com/ntoll/microfs) - A simple command line tool and module for interacting with the limited file system provided by MicroPython on the BBC micro:bit.
+- [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads forlder and flashes any new programs to the micro:bit. 
 
 
 ## Libraries
@@ -67,7 +69,7 @@ A curated list of resources for the BBC micro:bit.
 
 ## Projects
 
-All the projects here come with steps and resources required for reproduction.
+All these projects contain steps and resources required for reproduction.
 
 - []() - Description
 
@@ -78,6 +80,13 @@ Useful Articles for developing on the BBC micro:bit.
 
 - [Getting Started Microbit & Microsoft’s new www.codethemicrobit.com Environment](https://blogs.msdn.microsoft.com/uk_faculty_connection/2016/08/01/getting-started-microbit-microsofts-new-www-codethemicrobit-com-environment/)
 - [Offline C/C++ Development With The Micro:bit](http://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
+
+
+## Teaching Resources
+
+- [microbit.co.uk Teaches and Parents](https://www.microbit.co.uk/teachers-and-parents)
+- [IET micro:bit Teaching Resources](http://faraday.theiet.org/stem-activity-days/bbc-microbit/resources/index.cfm)
+- [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
 
 
 ## License & Trademarks
