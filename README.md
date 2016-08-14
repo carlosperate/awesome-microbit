@@ -28,20 +28,23 @@ A curated list of resources for the BBC micro:bit.
 
 - [MicroPython](http://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs) - The core set of drivers, mechanisms and types that make up the micro:bit runtime is written in C/C++, and can be used to easily interface with the micro:bit hardware.
-- [Touch Develp](https://www.microbit.co.uk/create-code) - A flexible, text-based programming language with an interactive visual component.
-- [PTX TypeScript](https://codethemicrobit.com) - The Programming eXperience Toolkit is based on a subset of TypeScript, which in itself is a superset of JavaScript. 
-- [Rust on BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Describes the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL. 
+- [Touch Develop](https://www.microbit.co.uk/create-code) - A flexible, text-based programming language with an interactive visual component.
+- [PTX TypeScript](https://codethemicrobit.com) - The Programming eXperience Toolkit is based on a subset of TypeScript, which in itself is a superset of JavaScript.
+- [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
+- [Rust on BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Describes the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
 
 
 ## Online Code Editors
 
 - [microbit website](https://www.microbit.co.uk) - Includes the Code Kingdoms, Microsoft Blocks, Touch Develop, and Python editors.
 - [PTX](https://codethemicrobit.com) - Includes the Blocks and TypeScript editors for the Programming eXperience Toolkit.
+- [create.withcode.uk](https://create.withcode.uk) - A Python online editor and simulator that supports the micro:bit MicroPython ([instructions](http://community.computingatschool.org.uk/resources/4479)).
 
 
 ## Desktop Code Editors
 
-- [Mu](http://codewith.mu) - A "micro" editor for MicroPython and the BBC micro:bit. 
+- [Mu](http://codewith.mu) - A "micro" editor for MicroPython and the BBC micro:bit.
+- [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the [Atom text editor](https://atom.io/).
 
 
 ## Programming Tools
@@ -71,7 +74,7 @@ A curated list of resources for the BBC micro:bit.
 
 All these projects contain steps and resources required for reproduction.
 
-- [Quiz:bit](https://github.com/lancaster-university/quiz-bit) - micro:bit programs and a matching application for providing a quiz-voter-style service using micro:bits as the controls
+- [Quiz:bit](https://github.com/lancaster-university/quiz-bit) - micro:bit programs and a matching application for providing a quiz-voter-style service using micro:bits as the controls.
 
 
 ## Articles
@@ -80,6 +83,7 @@ Useful Articles for developing on the BBC micro:bit.
 
 - [Getting Started Microbit & Microsoft’s new www.codethemicrobit.com Environment](https://blogs.msdn.microsoft.com/uk_faculty_connection/2016/08/01/getting-started-microbit-microsofts-new-www-codethemicrobit-com-environment/)
 - [Offline C/C++ Development With The Micro:bit](http://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
+- [Sending 'commands' from a micro:bit over Bluetooth](http://bluetooth-mdw.blogspot.co.uk/2016/07/sending-commands-from-microbit-over.html)
 
 
 ## Teaching Resources
@@ -94,6 +98,5 @@ Useful Articles for developing on the BBC micro:bit.
 [![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 To the extent possible under law, the authors have waived all copyright and related or neighbouring rights to this work.
-
 
 This projects is not endorsed, sponsored or associated with the BBC. "BBC”, “micro:bit”, and their logos are trade marks of the BBC. [http://microbit.co.uk](http://microbit.co.uk)
