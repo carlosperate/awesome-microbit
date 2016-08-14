@@ -71,7 +71,7 @@ A curated list of resources for the BBC micro:bit.
 
 All these projects contain steps and resources required for reproduction.
 
-- []() - Description
+- [Quiz:bit](https://github.com/lancaster-university/quiz-bit) - micro:bit programs and a matching application for providing a quiz-voter-style service using micro:bits as the controls
 
 
 ## Articles
