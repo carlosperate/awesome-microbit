@@ -44,7 +44,7 @@ A curated list of resources for the BBC micro:bit.
 ## Desktop Code Editors
 
 - [Mu](http://codewith.mu) - A "micro" editor for MicroPython and the BBC micro:bit.
-- [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the [Atom text editor](https://atom.io/).
+- [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the [Atom text editor](https://atom.io).
 
 
 ## Programming Tools
