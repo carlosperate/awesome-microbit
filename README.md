@@ -91,6 +91,7 @@ Useful Articles for developing on the BBC micro:bit.
 - [microbit.co.uk Teaches and Parents](https://www.microbit.co.uk/teachers-and-parents)
 - [IET micro:bit Teaching Resources](http://faraday.theiet.org/stem-activity-days/bbc-microbit/resources/index.cfm)
 - [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
+- [Make with the micro:bit by Technology Will Save Us](http://make.techwillsaveus.com/)
 
 
 ## License & Trademarks
