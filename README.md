@@ -27,7 +27,7 @@ A curated list of resources for the BBC micro:bit.
 ## Written Programming Languages
 
 - [MicroPython](http://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
-- [C/C++ runtime](https://lancaster-university.github.io/microbit-docs) - The core set of drivers, mechanisms and types that make up the micro:bit runtime is written in C/C++, and can be used to easily interface with the micro:bit hardware.
+- [C/C++ runtime](https://lancaster-university.github.io/microbit-docs) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original *.hex file that ships on the micro:bit devices.
 - [Touch Develop](https://www.microbit.co.uk/create-code) - A flexible, text-based programming language with an interactive visual component.
 - [PTX TypeScript](https://codethemicrobit.com) - The Programming eXperience Toolkit is based on a subset of TypeScript, which in itself is a superset of JavaScript.
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
@@ -44,7 +44,7 @@ A curated list of resources for the BBC micro:bit.
 ## Desktop Code Editors
 
 - [Mu](http://codewith.mu) - A "micro" editor for MicroPython and the BBC micro:bit.
-- [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the [Atom text editor](https://atom.io/).
+- [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the [Atom text editor](https://atom.io).
 
 
 ## Programming Tools
