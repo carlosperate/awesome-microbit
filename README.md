@@ -11,6 +11,7 @@ A curated list of resources for the BBC micro:bit.
 - [Online Code Editors](#online-code-editors)
 - [Desktop Code Editors](#desktop-code-editors)
 - [Programming Tools](#programming-tools)
+- [Interface Chip](#interface-chip)
 - [Libraries](#libraries)
 - [Projects](#projects)
 - [Articles](#articles)
@@ -55,6 +56,14 @@ A curated list of resources for the BBC micro:bit.
 - [uFlash](https://github.com/ntoll/uflash/) - A utility for flashing the BBC micro:bit with Python scripts and the MicroPython runtime.
 - [MicroFs](https://github.com/ntoll/microfs) - A simple command line tool and module for interacting with the limited file system provided by MicroPython on the BBC micro:bit.
 - [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads forlder and flashes any new programs to the micro:bit. 
+
+
+## Interface Chip
+
+The Interface Chip is the microcontroller placed close to the battery connector. It provides the USB mass storage capability to load the micro:bit firmware using the Operating System file explorer.
+
+- [DAPLink on micro:bit](https://www.mbed.com/en/development/hardware/prototyping-production/daplink/daplink-on-kl26z/) - The DAPLink is the default software running on the Interface Chip, this page contains information, update instructions, and the latest firmware.
+- [J-Link OB Firmware](https://www.segger.com/bbc-micro-bit.html) - Offers the same flashing functionality than the DAPLink and expands it to include J-Link debugging.
 
 
 ## Libraries
