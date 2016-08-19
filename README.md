@@ -27,7 +27,7 @@ A curated list of resources for the BBC micro:bit.
 ## Written Programming Languages
 
 - [MicroPython](http://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
-- [C/C++ runtime](https://lancaster-university.github.io/microbit-docs) - The core set of drivers, mechanisms and types that make up the micro:bit runtime is written in C/C++, and can be used to easily interface with the micro:bit hardware.
+- [C/C++ runtime](https://lancaster-university.github.io/microbit-docs) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original *.hex file that ships on the micro:bit devices.
 - [Touch Develop](https://www.microbit.co.uk/create-code) - A flexible, text-based programming language with an interactive visual component.
 - [PTX TypeScript](https://codethemicrobit.com) - The Programming eXperience Toolkit is based on a subset of TypeScript, which in itself is a superset of JavaScript.
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
@@ -91,7 +91,6 @@ Useful Articles for developing on the BBC micro:bit.
 - [microbit.co.uk Teaches and Parents](https://www.microbit.co.uk/teachers-and-parents)
 - [IET micro:bit Teaching Resources](http://faraday.theiet.org/stem-activity-days/bbc-microbit/resources/index.cfm)
 - [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
-- [The micro:bit runtime guide by Lancaster University](https://lancaster-university.github.io/microbit-docs/)
 
 
 ## License & Trademarks
