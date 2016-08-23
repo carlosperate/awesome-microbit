@@ -4,6 +4,8 @@
 
 A curated list of resources for the BBC micro:bit.
 
+Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
+
 **Table Of Contents:**
 
 - [Visual Programming Languages](#visual-programming-languages)
@@ -46,6 +48,7 @@ A curated list of resources for the BBC micro:bit.
 
 - [Mu](http://codewith.mu) - A "micro" editor for MicroPython and the BBC micro:bit.
 - [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the [Atom text editor](https://atom.io).
+- [Micro:Pi](https://github.com/Bottersnike/Micro-Pi) - A C/C++ editor with serial monitor and deploy functionality. Written in Python with an installer (ATM Linux only, but could be manually installed in any OS) that includes all dependencies.
 
 
 ## Programming Tools
@@ -71,7 +74,7 @@ The Interface Chip is the microcontroller placed close to the battery connector.
 ### Python
 
 - [MicroPeri](https://github.com/JoeGlancy/microperi) - Run Python programs on your computer with the same micro:bit MicroPython API and connecting a micro:bit as an external peripheral device or sensor.
-- [microbit_stub](https://github.com/casnortheast/microbit_stub) - A Python module that emulates the BBC microbit as defined by the microbit micropython API.
+- [microbit_stub](https://github.com/casnortheast/microbit_stub) - A Python module that emulates the BBC micro:bit as defined by the micro:bit MicroPython API.
 
 
 ### Node.js
@@ -100,7 +103,7 @@ Useful Articles for developing on the BBC micro:bit.
 - [microbit.co.uk Teaches and Parents](https://www.microbit.co.uk/teachers-and-parents)
 - [IET micro:bit Teaching Resources](http://faraday.theiet.org/stem-activity-days/bbc-microbit/resources/index.cfm)
 - [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
-- [Make with the micro:bit by Technology Will Save Us](http://make.techwillsaveus.com/)
+- [Make with the micro:bit by Technology Will Save Us](http://make.techwillsaveus.com)
 
 
 ## License & Trademarks
