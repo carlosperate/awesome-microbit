@@ -107,6 +107,7 @@ Useful Articles for developing on the BBC micro:bit.
 - [Make with the micro:bit by Technology Will Save Us](http://make.techwillsaveus.com)
 - [Grok Learning](https://groklearning.com/microbit/) - Provides an online MicroPython code editor, Blockly visual programming, full micro:bit simulator, curriculum-aligned teaching material and auto-marked problems.
 - [Microbit For Primary Schools](http://mb4ps.co.uk)
+- [101 Computing BBC micro:bit category](http://www.101computing.net/category/bbc-microbit/)
 
 ## License & Trademarks
 
