@@ -59,6 +59,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [uFlash](https://github.com/ntoll/uflash/) - A utility for flashing the BBC micro:bit with Python scripts and the MicroPython runtime.
 - [MicroFs](https://github.com/ntoll/microfs) - A simple command line tool and module for interacting with the limited file system provided by MicroPython on the BBC micro:bit.
 - [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads forlder and flashes any new programs to the micro:bit. 
+- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using BBC micro:bit with Scratch / S2Bot: the [S2Bot](http://www.picaxe.com/s2bot) app allows you to use the BBC micro:bit as a bluetooth 'games controller' for your Scratch project. Needs [BLED112](http://www.picaxe.com/bled112) [Bluetooth dongle](http://www.silabs.com/products/wireless/bluetooth/bluetooth-smart-modules/Pages/bled112-bluetooth-smart-dongle.aspx).
 
 
 ## Interface Chip
