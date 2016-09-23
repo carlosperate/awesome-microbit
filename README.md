@@ -25,6 +25,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Microsoft Blocks](https://www.microbit.co.uk/create-code) - A Block interface that produces Touch Develop code.
 - [Code Kingdoms](https://www.microbit.co.uk/create-code) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 - [PXT](https://codethemicrobit.com) - The Programming eXperience Toolkit for the micro:bit provides a Blocks interface with more capabilities than Microsoft Blocks.
+- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using BBC micro:bit with Scratch / S2Bot as a bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 
 
 ## Written Programming Languages
@@ -58,8 +59,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [iOS App](https://itunes.apple.com/gb/app/micro-bit/id1092687276) - Connects and flashes programs to the micro:bit via Bluetooth.
 - [uFlash](https://github.com/ntoll/uflash/) - A utility for flashing the BBC micro:bit with Python scripts and the MicroPython runtime.
 - [MicroFs](https://github.com/ntoll/microfs) - A simple command line tool and module for interacting with the limited file system provided by MicroPython on the BBC micro:bit.
-- [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads forlder and flashes any new programs to the micro:bit. 
-- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using BBC micro:bit with Scratch / S2Bot: the [S2Bot](http://www.picaxe.com/s2bot) app allows you to use the BBC micro:bit as a bluetooth 'games controller' for your Scratch project. Needs [BLED112](http://www.picaxe.com/bled112) [Bluetooth dongle](http://www.silabs.com/products/wireless/bluetooth/bluetooth-smart-modules/Pages/bled112-bluetooth-smart-dongle.aspx).
+- [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 
 
 ## Interface Chip
@@ -106,6 +106,7 @@ Useful Articles for developing on the BBC micro:bit.
 - [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
 - [Make with the micro:bit by Technology Will Save Us](http://make.techwillsaveus.com)
 - [Grok Learning](https://groklearning.com/microbit/) - Provides an online MicroPython code editor, Blockly visual programming, full micro:bit simulator, curriculum-aligned teaching material and auto-marked problems.
+- [Microbit For Primary Schools](http://mb4ps.co.uk)
 
 ## License & Trademarks
 
