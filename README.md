@@ -1,6 +1,6 @@
 # Awesome micro:bit [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-[![BBC micro:bit logo](https://az742082.vo.msecnd.net/pub/juslkhnu)](https://www.microbit.co.uk)
+[![micro:bit logo](http://i.imgur.com/rYLbkBh.jpg)](https://www.microbit.org)
 
 A curated list of resources for the BBC micro:bit, a pocket-sized programmable board with a Bluetooth capable microcontroller, accelerometer, magnetometer, LED matrix, a couple of buttons, and accessible GPIO.
 
@@ -23,17 +23,17 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ## Visual Programming Languages
 
-- [Microsoft Blocks](https://www.microbit.co.uk/create-code) - A Block interface that produces Touch Develop code.
-- [Code Kingdoms](https://www.microbit.co.uk/create-code) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
+- [Microsoft Blocks](https://www.microbit.org/code/) - A Block interface that produces Touch Develop code.
+- [Code Kingdoms](https://www.microbit.org/code/) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 - [PXT](https://codethemicrobit.com) - The Programming eXperience Toolkit for the micro:bit provides a Blocks interface with more capabilities than Microsoft Blocks.
-- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using BBC micro:bit with Scratch / S2Bot as a bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
+- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 
 
 ## Written Programming Languages
 
 - [MicroPython](http://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original *.hex file that ships on the micro:bit devices.
-- [Touch Develop](https://www.microbit.co.uk/create-code) - A flexible, text-based programming language with an interactive visual component.
+- [Touch Develop](https://www.microbit.org/code/) - A flexible, text-based programming language with an interactive visual component.
 - [PTX TypeScript](https://codethemicrobit.com) - The Programming eXperience Toolkit is based on a subset of TypeScript, which in itself is a superset of JavaScript.
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 - [Rust on BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Describes the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
@@ -41,7 +41,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ## Online Code Editors
 
-- [microbit website](https://www.microbit.co.uk) - Includes the Code Kingdoms, Microsoft Blocks, Touch Develop, and Python editors.
+- [microbit website](https://www.microbit.org/code/) - Includes the Code Kingdoms, Microsoft Blocks, Touch Develop, and Python editors.
 - [PTX](https://codethemicrobit.com) - Includes the Blocks and TypeScript editors for the Programming eXperience Toolkit.
 - [create.withcode.uk](https://create.withcode.uk) - A Python online editor and simulator that supports the micro:bit MicroPython ([instructions](http://community.computingatschool.org.uk/resources/4479)).
 
@@ -58,8 +58,8 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Vagrant C/C++ Development Environment](https://github.com/carlosperate/microbit-dev-env) - With a single command it creates a virtual machine with all the toolchain required to compile and flash C/C++ programs to the micro:bit (including  MicroPython).
 - [Android App](https://play.google.com/store/apps/details?id=com.samsung.microbit) - Connects and flashes programs to the micro:bit via Bluetooth.
 - [iOS App](https://itunes.apple.com/gb/app/micro-bit/id1092687276) - Connects and flashes programs to the micro:bit via Bluetooth.
-- [uFlash](https://github.com/ntoll/uflash/) - A utility for flashing the BBC micro:bit with Python scripts and the MicroPython runtime.
-- [MicroFs](https://github.com/ntoll/microfs) - A simple command line tool and module for interacting with the limited file system provided by MicroPython on the BBC micro:bit.
+- [uFlash](https://github.com/ntoll/uflash/) - A utility for flashing the micro:bit with Python scripts and the MicroPython runtime.
+- [MicroFs](https://github.com/ntoll/microfs) - A simple command line tool and module for interacting with the limited file system provided by MicroPython on the micro:bit.
 - [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 - [PXT Command Line Tool](https://www.pxt.io/cli) - Use the command line to program the micro:bit with javascript using PXT.
 
@@ -77,12 +77,12 @@ The Interface Chip is the microcontroller placed close to the battery connector.
 ### Python
 
 - [MicroPeri](https://github.com/JoeGlancy/microperi) - Run Python programs on your computer with the same micro:bit MicroPython API and connecting a micro:bit as an external peripheral device or sensor.
-- [microbit_stub](https://github.com/casnortheast/microbit_stub) - A Python module that emulates the BBC micro:bit as defined by the micro:bit MicroPython API.
+- [microbit_stub](https://github.com/casnortheast/microbit_stub) - A Python module that emulates the micro:bit as defined by the micro:bit MicroPython API.
 
 
 ### Node.js
 
-- [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a BBC micro:bit from Node.js using BLE.
+- [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
 
 
 ## Projects
@@ -95,7 +95,7 @@ All these projects contain steps and resources required for reproduction.
 
 ## Articles
 
-Useful Articles for developing on the BBC micro:bit.
+Useful Articles for developing on the micro:bit.
 
 - [Getting Started Microbit & Microsoft’s new www.codethemicrobit.com Environment](https://blogs.msdn.microsoft.com/uk_faculty_connection/2016/08/01/getting-started-microbit-microsofts-new-www-codethemicrobit-com-environment/)
 - [Offline C/C++ Development With The Micro:bit](http://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
@@ -107,7 +107,7 @@ Useful Articles for developing on the BBC micro:bit.
 
 ## Teaching Resources
 
-- [microbit.co.uk Teaches and Parents](https://www.microbit.co.uk/teachers-and-parents)
+- [microbit.org Teaching Resources](https://www.microbit.org/teach/)
 - [IET micro:bit Teaching Resources](http://faraday.theiet.org/stem-activity-days/bbc-microbit/resources/index.cfm)
 - [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
 - [Make with the micro:bit by Technology Will Save Us](http://make.techwillsaveus.com)
@@ -121,4 +121,4 @@ Useful Articles for developing on the BBC micro:bit.
 
 To the extent possible under law, the authors have waived all copyright and related or neighbouring rights to this work.
 
-This projects is not endorsed, sponsored or associated with the BBC. "BBC”, “micro:bit”, and their logos are trade marks of the BBC. [http://microbit.co.uk](http://microbit.co.uk)
+This projects is not endorsed, sponsored or associated with the BBC. "BBC”, “micro:bit”, and their logos are trade marks of the BBC. [https://microbit.org](https://microbit.org)
