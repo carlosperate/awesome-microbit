@@ -100,10 +100,13 @@ Useful Articles for developing on the micro:bit.
 - [Getting Started Microbit & Microsoft’s new www.codethemicrobit.com Environment](https://blogs.msdn.microsoft.com/uk_faculty_connection/2016/08/01/getting-started-microbit-microsofts-new-www-codethemicrobit-com-environment/)
 - [Offline C/C++ Development With The Micro:bit](http://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
 - [Sending 'commands' from a micro:bit over Bluetooth](http://bluetooth-mdw.blogspot.co.uk/2016/07/sending-commands-from-microbit-over.html)
+- [MultiWingSpan](http://www.multiwingspan.co.uk/micro.php) - A large collection of examples, instructions, and direction on how to use electronic components.
+
 
 ## Videos
 
 - [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - A YouTube channel with tutorials to learn to code with your family. 
+
 
 ## Teaching Resources
 
@@ -114,6 +117,7 @@ Useful Articles for developing on the micro:bit.
 - [Grok Learning](https://groklearning.com/microbit/) - Provides an online MicroPython code editor, Blockly visual programming, full micro:bit simulator, curriculum-aligned teaching material and auto-marked problems.
 - [Microbit For Primary Schools](http://mb4ps.co.uk)
 - [101 Computing BBC micro:bit category](http://www.101computing.net/category/bbc-microbit/)
+
 
 ## License & Trademarks
 
