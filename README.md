@@ -19,6 +19,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Articles](#articles)
 - [Videos](#videos)
 - [Teaching Resources](#teaching-resources)
+- [Miscellaneous](#miscellaneous)
 
 
 ## Visual Programming Languages
@@ -49,7 +50,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 ## Desktop Code Editors
 
 - [Mu](http://codewith.mu) - A "micro" editor for MicroPython and the BBC micro:bit.
-- [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the [Atom text editor](https://atom.io).
+- [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the Atom text editor.
 - [Micro:Pi](https://github.com/Bottersnike/Micro-Pi) - A C/C++ editor with serial monitor and deploy functionality. Written in Python with an installer (ATM Linux only, but could be manually installed in any OS) that includes all dependencies.
 
 
@@ -91,6 +92,7 @@ All these projects contain steps and resources required for reproduction.
 
 - [microbit.co.uk Site Index](https://www.microbit.co.uk/index) - The microbit.co.uk website contains an extensive list with all their projects and tutorials.
 - [Quiz:bit](https://github.com/lancaster-university/quiz-bit) - micro:bit programs and a matching application for providing a quiz-voter-style service using micro:bits as the controls.
+- [JUST DO IoT](https://hackaday.io/project/12164-just-do-iot) - Connect the micro:Bit to the LoRaWAN network, includes open source hardware microbit connector board. 
 
 
 ## Articles
@@ -117,6 +119,11 @@ Useful Articles for developing on the micro:bit.
 - [Grok Learning](https://groklearning.com/microbit/) - Provides an online MicroPython code editor, Blockly visual programming, full micro:bit simulator, curriculum-aligned teaching material and auto-marked problems.
 - [Microbit For Primary Schools](http://mb4ps.co.uk)
 - [101 Computing BBC micro:bit category](http://www.101computing.net/category/bbc-microbit/)
+
+
+## Miscellaneous
+
+- [Kodu Controller](https://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
 
 
 ## License & Trademarks
