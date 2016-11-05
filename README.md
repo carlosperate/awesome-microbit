@@ -125,6 +125,7 @@ Useful Articles for developing on the micro:bit.
 ## Miscellaneous
 
 - [Kodu Controller](https://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
+- [microbit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parks contains one for the micro:bit.
 
 
 ## License & Trademarks
