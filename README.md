@@ -117,7 +117,7 @@ Useful Articles for developing on the micro:bit.
 - [microbit.org Teaching Resources](https://www.microbit.org/teach/)
 - [IET micro:bit Teaching Resources](http://faraday.theiet.org/stem-activity-days/bbc-microbit/resources/index.cfm)
 - [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
-- [Make with the micro:bit by Technology Will Save Us](http://make.techwillsaveus.com)
+- [Make with the micro:bit by Technology Will Save Us](http://make.techwillsaveus.com/bbc-microbit)
 - [Grok Learning](https://groklearning.com/microbit/) - Provides an online MicroPython code editor, Blockly visual programming, full micro:bit simulator, curriculum-aligned teaching material and auto-marked problems.
 - [Microbit For Primary Schools](http://mb4ps.co.uk)
 - [101 Computing BBC micro:bit category](http://www.101computing.net/category/bbc-microbit/)
@@ -127,7 +127,7 @@ Useful Articles for developing on the micro:bit.
 
 - [Kodu Controller](https://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
 - [microbit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parts contains a model for the micro:bit.
-- [micro:bit Blue](https://github.com/bluetooth-mdw/microbit-blue) - [Android app](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) containing a series demos for interacting with the microbit using Bluetooth. 
+- [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) - [Android app](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) containing a series demos for interacting with the microbit using Bluetooth. 
 
 
 ## License & Trademarks
