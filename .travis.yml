@@ -11,4 +11,4 @@ install:
 
 script:
   - awesome-lint
-  - awesome_bot README.md
+  - awesome_bot README.md --allow-redirect --allow-dupe
