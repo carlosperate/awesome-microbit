@@ -79,7 +79,8 @@ The Interface Chip is the microcontroller placed close to the battery connector.
 ### Python
 
 - [MicroPeri](https://github.com/JoeGlancy/microperi) - Run Python programs on your computer with the same micro:bit MicroPython API and connecting a micro:bit as an external peripheral device or sensor.
-- [microbit_stub](https://github.com/casnortheast/microbit_stub) - A Python module that emulates the micro:bit as defined by the micro:bit MicroPython API.
+- [microbit_stub](https://github.com/casnortheast/microbit_stub) - A Python package that emulates the micro:bit as defined by the micro:bit MicroPython API.
+- [bluezero](https://github.com/ukBaz/python-bluezero) - A Python package to interface with Bluetooth devices, with examples for the micro:bit. 
 
 
 ### Node.js
@@ -94,7 +95,7 @@ All these projects contain steps and resources required for reproduction.
 - [microbit.co.uk Site Index](https://www.microbit.co.uk/index) - The microbit.co.uk website contains an extensive list with all their projects and tutorials.
 - [Quiz:bit](https://github.com/lancaster-university/quiz-bit) - micro:bit programs and a matching application for providing a quiz-voter-style service using micro:bits as the controls.
 - [JUST DO IoT](https://hackaday.io/project/12164-just-do-iot) - Connect the micro:Bit to the LoRaWAN network, includes open source hardware microbit connector board.
-- [Micro:Bob](https://hackaday.io/project/8643-microbob) - A simple bipedal robot controlled by Micro:Bit.
+- [Micro:Bob](https://hackaday.io/project/8643-microbob) - A simple bipedal robot controlled by a micro:bit.
 
 
 ## Articles
@@ -138,4 +139,4 @@ Useful Articles for developing on the micro:bit.
 
 To the extent possible under law, the authors have waived all copyright and related or neighbouring rights to this work.
 
-This projects is not endorsed, sponsored or associated with the BBC. "BBC”, “micro:bit”, and their logos are trade marks of the BBC. [https://microbit.org](https://microbit.org)
+This projects is not endorsed, sponsored or associated with the BBC. "BBC”, “micro:bit”, and their logos are trademarks of the BBC. [https://microbit.org](https://microbit.org)
