@@ -128,7 +128,8 @@ Useful Articles for developing on the micro:bit.
 
 - [Kodu Controller](https://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
 - [microbit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parts contains a model for the micro:bit.
-- [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) - [Android app](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) containing a series demos for interacting with the microbit using Bluetooth. 
+- [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) - [Android app](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) containing a series demos for interacting with the microbit using Bluetooth.
+- [Bitty Software](http://www.bittysoftware.com) - Provides phone apps for the micro:bit with hands-on tutorials.
 
 
 ## License & Trademarks
