@@ -138,6 +138,7 @@ Useful Articles for developing on the micro:bit.
 - [Bitty Software](http://www.bittysoftware.com) - Provides phone apps for the micro:bit with hands-on tutorials.
 - [micro:bit broadcast](http://eepurl.com/cq4Y6b) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - Free micro:bit CAD model from Kitronik.
+- [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
 
 
 ## License & Trademarks
