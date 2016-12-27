@@ -13,6 +13,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Online Code Editors](#online-code-editors)
 - [Desktop Code Editors](#desktop-code-editors)
 - [Programming Tools](#programming-tools)
+- [Apps](#apps)
 - [Interface Chip](#interface-chip)
 - [Libraries](#libraries)
 - [Projects](#projects)
@@ -63,6 +64,11 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 - [PXT Command Line Tool](https://www.pxt.io/cli) - Use the command line to program the micro:bit with javascript using PXT.
 - [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - This package allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
+
+
+## Apps
+
+- [Insight Mr Bit](http://www.insightresources.co.uk/microbit/page63.html) - Create simple programs in plain English to control the BBC micro:bit to do lots of useful things.
 
 
 ## Interface Chip
