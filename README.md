@@ -113,7 +113,8 @@ Useful Articles for developing on the micro:bit.
 
 ## Videos
 
-- [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - A YouTube channel with tutorials to learn to code with your family. 
+- [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - A YouTube channel with tutorials to learn to code with your family.
+- [micro:bit and Bluetooth](https://www.youtube.com/playlist?list=PLYOCnwH2UtBzhJ2nvn_DM3itz6GNVwrDu) - YouTube playlist with Martin Woolley's Bluetooth videos.
 
 
 ## Teaching Resources
