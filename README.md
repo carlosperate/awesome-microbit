@@ -113,7 +113,8 @@ Useful Articles for developing on the micro:bit.
 
 ## Videos
 
-- [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - A YouTube channel with tutorials to learn to code with your family. 
+- [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - A YouTube channel with tutorials to learn to code with your family.
+- [micro:bit and Bluetooth](https://www.youtube.com/playlist?list=PLYOCnwH2UtBzhJ2nvn_DM3itz6GNVwrDu) - YouTube playlist with Martin Woolley's Bluetooth videos.
 
 
 ## Teaching Resources
@@ -136,6 +137,8 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) - [Android app](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) containing a series demos for interacting with the microbit using Bluetooth.
 - [Bitty Software](http://www.bittysoftware.com) - Provides phone apps for the micro:bit with hands-on tutorials.
 - [micro:bit broadcast](http://eepurl.com/cq4Y6b) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
+- [CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - Free micro:bit CAD model from Kitronik.
+- [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
 
 
 ## License & Trademarks
