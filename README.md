@@ -68,6 +68,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ## Apps
 
+- [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) - [Android](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) Contains a series demos for interacting with the microbit using Bluetooth.
 - [Insight Mr Bit](http://www.insightresources.co.uk/microbit/page63.html) - Create simple programs in plain English to control the BBC micro:bit to do lots of useful things.
 
 
@@ -140,7 +141,6 @@ Useful Articles for developing on the micro:bit.
 
 - [Kodu Controller](http://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
 - [microbit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parts contains a model for the micro:bit.
-- [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) - [Android app](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) containing a series demos for interacting with the microbit using Bluetooth.
 - [Bitty Software](http://www.bittysoftware.com) - Provides phone apps for the micro:bit with hands-on tutorials.
 - [micro:bit broadcast](http://eepurl.com/cq4Y6b) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - Free micro:bit CAD model from Kitronik.
