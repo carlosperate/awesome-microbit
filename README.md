@@ -68,9 +68,9 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ## Apps
 
-- [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) - [Android](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) Contains a series demos for interacting with the microbit using Bluetooth.
+- [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) ([Android](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo)) - Contains a series demos for interacting with the microbit using Bluetooth.
 - [Bitty Software Apps](http://www.bittysoftware.com/apps.html) - A diverse collection of Android and iOS apps, going from data logging to audio pranks, you'll certainly find something of interest. 
-- [Insight Mr Bit](http://www.insightresources.co.uk/microbit/page63.html) - Create simple programs in plain English to control the BBC micro:bit to do lots of useful things.
+- [Insight Mr Bit](http://www.insightresources.co.uk/microbit/page63.html) ([iOS](https://itunes.apple.com/gb/app/insight-mr-bit/id1175915875?mt=8)) - Create simple programs in plain English to control the BBC micro:bit to do lots of useful things.
 
 
 ## Interface Chip
