@@ -62,6 +62,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 - [PXT Command Line Tool](https://www.pxt.io/cli) - Use the command line to program the micro:bit with javascript using PXT.
 - [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - This package allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
+- [Simulink Coder Support Package](http://uk.mathworks.com/matlabcentral/fileexchange/60273-simulink-coder-support-package-for-bbc-micro-bit-board) - This package enables you to create Simulink models and automatically generate and deploy code on the micro:bit.
 
 
 ## Apps
