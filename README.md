@@ -100,6 +100,7 @@ The Interface Chip is the microcontroller placed close to the battery connector.
 All these projects contain steps and resources required for reproduction.
 
 - [microbit.co.uk Site Index](https://www.microbit.co.uk/index) - The microbit.co.uk website contains an extensive list with all their projects and tutorials.
+- [hackster micro:bit community](https://www.hackster.io/micro-bit/projects) - This hackster community contains user submitted projects for the micro:bit.
 - [Quiz:bit](https://github.com/lancaster-university/quiz-bit) - micro:bit programs and a matching application for providing a quiz-voter-style service using micro:bits as the controls.
 - [JUST DO IoT](https://hackaday.io/project/12164-just-do-iot) - Connect the micro:Bit to the LoRaWAN network, includes open source hardware microbit connector board.
 - [Micro:Bob](https://hackaday.io/project/8643-microbob) - A simple bipedal robot controlled by a micro:bit.
@@ -141,7 +142,6 @@ Useful Articles for developing on the micro:bit.
 
 - [Kodu Controller](http://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
 - [microbit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parts contains a model for the micro:bit.
-- [Bitty Software](http://www.bittysoftware.com) - Provides phone apps for the micro:bit with hands-on tutorials.
 - [micro:bit broadcast](http://eepurl.com/cq4Y6b) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - Free micro:bit CAD model from Kitronik.
 - [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
