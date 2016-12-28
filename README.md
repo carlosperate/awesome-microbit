@@ -57,8 +57,6 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 ## Programming Tools
 
 - [Vagrant C/C++ Development Environment](https://github.com/carlosperate/microbit-dev-env) - With a single command it creates a virtual machine with all the toolchain required to compile and flash C/C++ programs to the micro:bit (including  MicroPython).
-- [Android App](https://play.google.com/store/apps/details?id=com.samsung.microbit) - Connects and flashes programs to the micro:bit via Bluetooth.
-- [iOS App](https://itunes.apple.com/gb/app/micro-bit/id1092687276) - Connects and flashes programs to the micro:bit via Bluetooth.
 - [uFlash](https://github.com/ntoll/uflash/) - A utility for flashing the micro:bit with Python scripts and the MicroPython runtime.
 - [MicroFs](https://github.com/ntoll/microfs) - A simple command line tool and module for interacting with the limited file system provided by MicroPython on the micro:bit.
 - [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
@@ -68,6 +66,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ## Apps
 
+- [Official App](https://www.microbit.org/mobile/) ([Android](https://play.google.com/store/apps/details?id=com.samsung.microbit), [iOS](https://itunes.apple.com/gb/app/micro-bit/id1092687276)) - Pair, program and flash programs to the micro:bit via Bluetooth.
 - [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) ([Android](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo)) - Contains a series demos for interacting with the microbit using Bluetooth.
 - [Bitty Software Apps](http://www.bittysoftware.com/apps.html) - A diverse collection of Android and iOS apps, going from data logging to audio pranks, you'll certainly find something of interest. 
 - [Insight Mr Bit](http://www.insightresources.co.uk/microbit/page63.html) ([iOS](https://itunes.apple.com/gb/app/insight-mr-bit/id1175915875?mt=8)) - Create simple programs in plain English to control the BBC micro:bit to do lots of useful things.
