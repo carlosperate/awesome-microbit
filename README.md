@@ -144,7 +144,7 @@ Useful Articles for developing on the micro:bit.
 
 - [Kodu Controller](http://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
 - [microbit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parts contains a model for the micro:bit.
-- [micro:bit broadcast](http://eepurl.com/cq4Y6b) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
+- [micro:bit broadcast](http://microbit-broadcast.embeddedlog.com) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - Free micro:bit CAD model from Kitronik.
 - [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
 
