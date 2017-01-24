@@ -8,14 +8,15 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 **Table Of Contents:**
 
-- [Visual Programming Languages](#visual-programming-languages)
-- [Written programming Languages](#written-programming-languages)
-- [Online Code Editors](#online-code-editors)
-- [Desktop Code Editors](#desktop-code-editors)
+- [Programming](#programming)
+- [Python](#python)
+- [Javascript / PXT](#javascript)
+- [C++](#c)
+- [Other Languages](#other-languages)
 - [Programming Tools](#programming-tools)
 - [Apps](#apps)
+- [Hardware](#hardware)
 - [Interface Chip](#interface-chip)
-- [Libraries](#libraries)
 - [Projects](#projects)
 - [Articles](#articles)
 - [Videos](#videos)
@@ -41,7 +42,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 ### Javascript (PXT.io)
 - [PXT](https://codethemicrobit.com) - The Programming eXperience Toolkit for the micro:bit provides a Blocks interface with more capabilities than Microsoft Blocks.
 
-### C/C++
+### C/C++s
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original *.hex file that ships on the micro:bit devices.
 - [Micro:Pi](https://github.com/Bottersnike/Micro-Pi) - A C/C++ editor with serial monitor and deploy functionality. Written in Python with an installer (ATM Linux only, but could be manually installed in any OS) that includes all dependencies.
 
