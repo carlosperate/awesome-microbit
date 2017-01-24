@@ -136,4 +136,4 @@ Useful Articles for developing on the micro:bit.
 
 To the extent possible under law, the authors have waived all copyright and related or neighbouring rights to this work.
 
-This projects is not endorsed, sponsored or associated with the BBC. "BBC”, “micro:bit”, and their logos are trademarks of the BBC.
+This projects is not endorsed, sponsored or associated with the BBC. "BBC", "micro:bit", and their logos are trademarks of the BBC.
