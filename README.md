@@ -14,7 +14,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 	- [C/C++](#cc)
 	- [Other Languages](#other-languages)
 - [Programming Tools](#programming-tools)
-- [Apps](#mobile-apps)
+- [Mobile Apps](#mobile-apps)
 - [Hardware](#hardware)
 	- [Interface Chip](#interface-chip)
 - [Projects](#projects)
@@ -39,8 +39,9 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 #### MicroPython Libraries
 
-- [Servo Class](https://github.com/microbit-playground/microbit-servo-class) - A simple class for controlling servos on the microbit using PWM.
+- [Servo](https://github.com/microbit-playground/microbit-servo-class) - A simple class for controlling servos on the microbit using PWM.
 - [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - A simple python class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver using the I2C interface.
+- [MAX7219](https://github.com/microbit-playground/matrix7seg) - Python module for using a 7-segment display driven by a MAX7219 chip.
 
 #### Desktop Python Libraries
 
