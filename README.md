@@ -14,7 +14,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 	- [C/C++](#cc)
 	- [Other Languages](#other-languages)
 - [Programming Tools](#programming-tools)
-- [Apps](#apps)
+- [Apps](#mobile-apps)
 - [Hardware](#hardware)
 	- [Interface Chip](#interface-chip)
 - [Projects](#projects)
@@ -29,7 +29,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 - [MicroPython](http://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
 
-#### Editors
+#### Python Editors
 
 - [microbit.org Python editor](https://python.microbit.org) - The official online Python editor from the micro:bit foundation website.
 - [microbit.co.uk Python editor](http://microbit.co.uk/app/#create:xyelfe) - Original Python editor from microbit.co.uk, contains an older version of MicroPython.
@@ -37,12 +37,12 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the Atom text editor.
 - [create.withcode.uk](https://create.withcode.uk) - A Python online editor and simulator that supports the micro:bit MicroPython ([instructions](http://community.computingatschool.org.uk/resources/4479)).
 
-#### micro:bit Libraries
+#### MicroPython Libraries
 
 - [Servo Class](https://github.com/microbit-playground/microbit-servo-class) - A simple class for controlling servos on the microbit using PWM.
 - [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - A simple python class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver using the I2C interface.
 
-#### Desktop libraries
+#### Desktop Python Libraries
 
 - [MicroPeri](https://github.com/c0d3st0rm/microperi) - Run Python programs on your computer with the same micro:bit MicroPython API and connecting a micro:bit as an external peripheral device or sensor.
 - [microbit_stub](https://github.com/casnortheast/microbit_stub) - A Python package that emulates the micro:bit as defined by the micro:bit MicroPython API.
@@ -54,7 +54,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 
-#### Desktop libraries
+#### Node.js Libraries
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
 
@@ -62,7 +62,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original *.hex file that ships on the micro:bit devices.
 
-#### Editors
+#### C/C++ Editors
 
 - [Micro:Pi](https://github.com/Bottersnike/Micro-Pi) - A C/C++ editor with serial monitor and deploy functionality. Written in Python with an installer (ATM Linux only, but could be manually installed in any OS) that includes all dependencies.
 
@@ -83,7 +83,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - This package allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
 - [Simulink Coder Support Package](http://uk.mathworks.com/matlabcentral/fileexchange/60273-simulink-coder-support-package-for-bbc-micro-bit-board) - This package enables you to create Simulink models and automatically generate and deploy code on the micro:bit.
 
-## Apps
+## Mobile Apps
 
 - [Official App](https://www.microbit.org/mobile/) ([Android](https://play.google.com/store/apps/details?id=com.samsung.microbit), [iOS](https://itunes.apple.com/gb/app/micro-bit/id1092687276)) - Pair, program and flash programs to the micro:bit via Bluetooth.
 - [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) ([Android](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo)) - Contains a series demos for interacting with the microbit using Bluetooth.
