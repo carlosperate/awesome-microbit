@@ -144,6 +144,7 @@ Useful Articles for developing on the micro:bit.
 - [101 Computing BBC micro:bit category](http://www.101computing.net/category/bbc-microbit/) - Computing challenges with the micro:bit to boost your programming skills or spice up your teaching of computer science.
 - [Micro:bit Maths](https://microbitmathsblog.wordpress.com) - A blog exploring the BBC micro:bit in mathematics education.
 - [micro:bit of Things](https://sites.google.com/view/microbitofthings/) - Notes on micro:bit project ideas for Key Stage 2 and 3.
+- [The Brooke Primary School Space Programme](http://www.brooke.norfolk.sch.uk/brooke-space-programme/) - Project page documenting Brooke Primary School pupil's upcoming journey for launching a BBC micro:bit (on its own) into near-space, with experiments and sensor measurements.
 
 ## Miscellaneous
 
