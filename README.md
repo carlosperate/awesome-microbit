@@ -39,9 +39,9 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 #### MicroPython Libraries
 
-- [Servo](https://github.com/microbit-playground/microbit-servo-class) - A simple class for controlling servos on the microbit using PWM.
-- [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - A simple python class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver using the I2C interface.
-- [MAX7219](https://github.com/microbit-playground/matrix7seg) - Python module for using a 7-segment display driven by a MAX7219 chip.
+- [Servo](https://github.com/microbit-playground/microbit-servo-class) - A simple class for controlling servos on the microbit via PWM.
+- [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - A simple python class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver via I2C.
+- [MAX7219](https://github.com/microbit-playground/matrix7seg) - Python module for using a 7-segment display driven by a MAX7219 chip via SPI.
 
 #### Desktop Python Libraries
 
@@ -123,6 +123,9 @@ Useful Articles for developing on the micro:bit.
 - [Offline C/C++ Development With The Micro:bit](http://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
 - [Sending 'commands' from a micro:bit over Bluetooth](http://bluetooth-mdw.blogspot.co.uk/2016/07/sending-commands-from-microbit-over.html)
 - [MultiWingSpan](http://www.multiwingspan.co.uk/micro.php) - A large collection of examples, instructions, and direction on how to use electronic components.
+- [Modelling micro:bit data with the Bitty Data Logger App](https://www.stem.org.uk/elibrary/community-resource/289686/modelling-microbit-data-bitty-data-logger-app)
+- [Getting Started with the micro:bit Bluetooth IO Pin Service](https://ukbaz.github.io/howto/ubit_ble_profile.html)
+- [Using MQTT-SN over BLE with the BBC micro:bit](https://blog.benjamin-cabe.com/2017/01/16/using-mqtt-sn-over-ble-with-the-bbc-microbit)
 
 ## Videos
 
