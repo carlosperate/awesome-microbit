@@ -67,6 +67,11 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 - [Micro:Pi](https://github.com/Bottersnike/Micro-Pi) - A C/C++ editor with serial monitor and deploy functionality. Written in Python with an installer (ATM Linux only, but could be manually installed in any OS) that includes all dependencies.
 
+#### C/C++ Libraries
+
+- [OneWire](https://github.com/adamboardman/microbit-onewire) - micro:bit OneWire Library, based upon Erik Olieman's mbed DS1820 lib.
+- [neopixel](https://github.com/elmorg/uBit_neopixel) - Library for using neopixels with the BBC micro:bit.
+
 ### Other Languages
 
 - [Touch Develop](https://www.microbit.co.uk/create-code#touchdevelopEditor) - A flexible, text-based programming language with an interactive visual component.
