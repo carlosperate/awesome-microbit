@@ -154,6 +154,7 @@ Useful Articles for developing on the micro:bit.
 - [Micro:bit Maths](https://microbitmathsblog.wordpress.com) - A blog exploring the BBC micro:bit in mathematics education.
 - [micro:bit of Things](https://sites.google.com/view/microbitofthings/) - Notes on micro:bit project ideas for Key Stage 2 and 3.
 - [The Brooke Primary School Space Programme](http://www.brooke.norfolk.sch.uk/brooke-space-programme/) - Project page documenting Brooke Primary School pupil's upcoming journey for launching a BBC micro:bit (on its own) into near-space, with experiments and sensor measurements.
+- [FunWithMicrobit](https://github.com/MicrobitPolska/FunWithMicrobit) - FunWithMicrobit is a 6 hours workshop made by kids for the kids.
 
 ## Miscellaneous
 
