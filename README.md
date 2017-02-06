@@ -23,13 +23,14 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Teaching Resources](#teaching-resources)
 - [Miscellaneous](#miscellaneous)
 
+
 ## Programming
 
 ### Python
 
 - [MicroPython](http://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
 
-#### Python Editors
+##### Python Editors
 
 - [microbit.org Python editor](https://python.microbit.org) - The official online Python editor from the micro:bit foundation website.
 - [microbit.co.uk Python editor](http://microbit.co.uk/app/#create:xyelfe) - Original Python editor from microbit.co.uk, contains an older version of MicroPython.
@@ -37,13 +38,13 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the Atom text editor.
 - [create.withcode.uk](https://create.withcode.uk) - A Python online editor and simulator that supports the micro:bit MicroPython ([instructions](http://community.computingatschool.org.uk/resources/4479)).
 
-#### MicroPython Libraries
+##### MicroPython Libraries
 
 - [Servo](https://github.com/microbit-playground/microbit-servo-class) - A simple class for controlling servos on the microbit via PWM.
 - [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - A simple python class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver via I2C.
 - [MAX7219](https://github.com/microbit-playground/matrix7seg) - Python module for using a 7-segment display driven by a MAX7219 chip via SPI.
 
-#### Desktop Python Libraries
+##### Desktop Python Libraries
 
 - [MicroPeri](https://github.com/c0d3st0rm/microperi) - Run Python programs on your computer with the same micro:bit MicroPython API and connecting a micro:bit as an external peripheral device or sensor.
 - [microbit_stub](https://github.com/casnortheast/microbit_stub) - A Python package that emulates the micro:bit as defined by the micro:bit MicroPython API.
@@ -55,7 +56,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 
-#### Node.js Libraries
+##### Node.js Libraries
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
 
@@ -63,11 +64,11 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original *.hex file that ships on the micro:bit devices.
 
-#### C/C++ Editors
+##### C/C++ Editors
 
 - [Micro:Pi](https://github.com/Bottersnike/Micro-Pi) - A C/C++ editor with serial monitor and deploy functionality. Written in Python with an installer (ATM Linux only, but could be manually installed in any OS) that includes all dependencies.
 
-#### C/C++ Libraries
+##### C/C++ Libraries
 
 - [OneWire](https://github.com/adamboardman/microbit-onewire) - micro:bit OneWire Library, based upon Erik Olieman's mbed DS1820 lib.
 - [neopixel](https://github.com/elmorg/uBit_neopixel) - Library for using neopixels with the BBC micro:bit.
@@ -89,12 +90,14 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - This package allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
 - [Simulink Coder Support Package](http://uk.mathworks.com/matlabcentral/fileexchange/60273-simulink-coder-support-package-for-bbc-micro-bit-board) - This package enables you to create Simulink models and automatically generate and deploy code on the micro:bit.
 
+
 ## Mobile Apps
 
 - [Official App](https://www.microbit.org/mobile/) ([Android](https://play.google.com/store/apps/details?id=com.samsung.microbit), [iOS](https://itunes.apple.com/gb/app/micro-bit/id1092687276)) - Pair, program and flash programs to the micro:bit via Bluetooth.
 - [micro:bit Blue](https://github.com/microbit-foundation/microbit-blue) ([Android](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo)) - Contains a series demos for interacting with the microbit using Bluetooth.
 - [Bitty Software Apps](http://www.bittysoftware.com/apps.html) - A diverse collection of Android and iOS apps, going from data logging to audio pranks, you'll certainly find something of interest. 
 - [Insight Mr Bit](http://www.insightresources.co.uk/microbit/page63.html) ([iOS](https://itunes.apple.com/gb/app/insight-mr-bit/id1175915875?mt=8)) - Create simple programs in plain English to control the BBC micro:bit to do lots of useful things.
+
 
 ## Hardware
 
@@ -105,6 +108,7 @@ The Interface Chip is the microcontroller placed close to the battery connector.
 - [DAPLink on micro:bit](https://www.mbed.com/en/development/hardware/prototyping-production/daplink/daplink-on-kl26z/) - The DAPLink is the default software running on the Interface Chip, this page contains information, update instructions, and the latest firmware.
 - [DAPLink source code](https://github.com/mbedmicro/DAPLink) - Source code for the mbed DAPLink, contains the build configuration for the micro:bit.
 - [J-Link OB Firmware](https://www.segger.com/bbc-micro-bit.html) - Offers the same flashing functionality than the DAPLink and expands it to include J-Link debugging.
+
 
 ## Projects
 
@@ -136,11 +140,13 @@ Useful Articles for developing on the micro:bit.
 - [Getting Started with the micro:bit Bluetooth IO Pin Service](https://ukbaz.github.io/howto/ubit_ble_profile.html)
 - [Using MQTT-SN over BLE with the BBC micro:bit](https://blog.benjamin-cabe.com/2017/01/16/using-mqtt-sn-over-ble-with-the-bbc-microbit)
 
+
 ## Videos
 
 - [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - A YouTube channel with tutorials to learn to code with your family.
 - [micro:bit and Bluetooth](https://www.youtube.com/playlist?list=PLYOCnwH2UtBzhJ2nvn_DM3itz6GNVwrDu) - YouTube playlist with Martin Woolley's Bluetooth videos.
 - [Video Series from The Maker Movies](https://www.youtube.com/playlist?list=PLD0HD_3AJljXDWoasq2x5gHmkKeV7cc-P) - A list of short, introductory videos for anyone wanting to get started with the micro:bit.
+
 
 ## Teaching Resources
 
@@ -156,6 +162,7 @@ Useful Articles for developing on the micro:bit.
 - [The Brooke Primary School Space Programme](http://www.brooke.norfolk.sch.uk/brooke-space-programme/) - Project page documenting Brooke Primary School pupil's upcoming journey for launching a BBC micro:bit (on its own) into near-space, with experiments and sensor measurements.
 - [FunWithMicrobit](https://github.com/MicrobitPolska/FunWithMicrobit) - FunWithMicrobit is a 6 hours workshop made by kids for the kids.
 
+
 ## Miscellaneous
 
 - [Kodu Controller](http://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
@@ -163,6 +170,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit broadcast](https://microbit-broadcast.embeddedlog.com) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - Free micro:bit CAD model from Kitronik.
 - [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
+
 
 ## License & Trademarks
 
