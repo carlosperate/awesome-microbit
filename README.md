@@ -81,6 +81,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - A Block interface that produces Touch Develop code.
 - [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 
+
 ## Programming Tools
 
 - [Vagrant C/C++ Development Environment](https://github.com/carlosperate/microbit-dev-env) - With a single command it creates a virtual machine with all the toolchain required to compile and flash C/C++ programs to the micro:bit (including  MicroPython).
@@ -113,7 +114,8 @@ The Interface Chip is the microcontroller placed close to the battery connector.
 
 ## CAD Resources
 
-- [Kitronik Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - Free micro:bit CAD model from Kitronik.
+- [Kitronik Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - micro:bit CAD model from Kitronik.
+- [Proto-PIC Resources](https://www.proto-pic.co.uk/micro-bit-resources.html) - Proto-PIC products CAD resources.
 
 
 ## Projects
