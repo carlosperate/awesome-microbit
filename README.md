@@ -17,7 +17,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Mobile Apps](#mobile-apps)
 - [Hardware](#hardware)
 	- [Interface Chip](#interface-chip)
-- [CAD resources](#cad-resources)
+- [CAD & 3D Printing](#cad-3d-printing)
 - [Projects](#projects)
 - [Articles](#articles)
 - [Videos](#videos)
@@ -112,10 +112,12 @@ The Interface Chip is the microcontroller placed close to the battery connector.
 - [J-Link OB Firmware](https://www.segger.com/bbc-micro-bit.html) - Offers the same flashing functionality than the DAPLink and expands it to include J-Link debugging.
 
 
-## CAD Resources
+## CAD & 3D Printing
 
-- [Kitronik Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - micro:bit CAD model from Kitronik.
-- [Proto-PIC Resources](https://www.proto-pic.co.uk/micro-bit-resources.html) - Proto-PIC products CAD resources.
+- [Kitronik CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - micro:bit CAD model from Kitronik.
+- [Proto-PIC CAD Resources](https://www.proto-pic.co.uk/micro-bit-resources.html) - Proto-PIC products CAD resources.
+- [Microbot Case](http://www.thingiverse.com/thing:1434797) - 3D printed case for the micro:bit in the shape of a robot.
+- [micro:bit Stand](http://www.thingiverse.com/thing:2144500) - 3D printed stand for the micro:bit.
 
 
 ## Projects
