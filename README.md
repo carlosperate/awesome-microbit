@@ -119,6 +119,8 @@ The Interface Chip is the microcontroller placed close to the battery connector.
 - [Microbot Case](http://www.thingiverse.com/thing:1434797) - 3D printed case for the micro:bit in the shape of a robot.
 - [micro:bit Stand](http://www.thingiverse.com/thing:2144500) - 3D printed stand for the micro:bit.
 - [micro:bit Rover](https://www.myminifactory.com/object/microbit-rover-27013) - 3D printable parts to build a micro:bit robot rover.
+- [Binary Watch](https://www.myminifactory.com/object/binary-watch-15257) - 3D printed watch case and strap for the micro:bit.
+
 
 ## Projects
 
