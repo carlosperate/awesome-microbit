@@ -17,6 +17,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Mobile Apps](#mobile-apps)
 - [Hardware](#hardware)
 	- [Interface Chip](#interface-chip)
+- [CAD resources](#cad-resources)
 - [Projects](#projects)
 - [Articles](#articles)
 - [Videos](#videos)
@@ -110,6 +111,11 @@ The Interface Chip is the microcontroller placed close to the battery connector.
 - [J-Link OB Firmware](https://www.segger.com/bbc-micro-bit.html) - Offers the same flashing functionality than the DAPLink and expands it to include J-Link debugging.
 
 
+## CAD Resources
+
+- [Kitronik Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - Free micro:bit CAD model from Kitronik.
+
+
 ## Projects
 
 All these projects contain steps and resources required for reproduction.
@@ -169,7 +175,6 @@ Useful Articles for developing on the micro:bit.
 - [Kodu Controller](http://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
 - [microbit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parts contains a model for the micro:bit.
 - [micro:bit broadcast](https://microbit-broadcast.embeddedlog.com) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
-- [CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - Free micro:bit CAD model from Kitronik.
 - [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
 
 
