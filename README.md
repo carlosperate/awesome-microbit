@@ -141,6 +141,7 @@ All these projects contain steps and resources required for reproduction.
 - [Micro Simon](http://mrtomsworld.blogspot.co.uk/2017/01/micro-simon.html) - Programming and connecting a micro:bit to a vintage MB Simon game.
 - [Connecting a thermal printer to a BBC microbit](http://www.suppertime.co.uk/blogmywiki/2016/12/microbit-thermal/) - Connecting the micro:bit to a thermal till-roll printer to print a random poems or Christmas cracker jokes.
 - [Alexa Weather On micro:bit](https://www.hackster.io/chen-tiebiao/weather-on-micro-bit-c79c19) - Creating an Amazon Alexa skill where the current weather can be asked and the result displayed on the micro:bit.
+- [BBC Microbit Balloon Tracker](http://www.daveakerman.com/?p=2019) - Making a ballon tracker with a micro:bit connected to GPS and a LoRa transceiver to track and transmit its position.
 
 
 ## Articles
