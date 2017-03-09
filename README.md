@@ -54,7 +54,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ### Javascript and PXT
 
-- [PXT](https://codethemicrobit.com) - The Programming eXperience Toolkit for the micro:bit provides a Blocks interface and JavaScript as the underlying written language.
+- [PXT](https://pxt.microbit.org) - The Programming eXperience Toolkit for the micro:bit provides a Blocks interface and JavaScript as the underlying written language.
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 
