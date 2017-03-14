@@ -36,8 +36,8 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [microbit.org Python editor](https://python.microbit.org) - The official online Python editor from the micro:bit foundation website.
 - [microbit.co.uk Python editor](http://microbit.co.uk/app/#create:xyelfe) - Original Python editor from microbit.co.uk, contains an older version of MicroPython.
 - [Mu](http://codewith.mu) - A "micro" editor for MicroPython and the BBC micro:bit.
-- [Atom microbit-python package](https://github.com/Giannie/atom-microbit-python) - Flash Python code to your micro:bit directly from the Atom text editor.
 - [create.withcode.uk](https://create.withcode.uk) - A Python online editor and simulator that supports the micro:bit MicroPython ([instructions](http://community.computingatschool.org.uk/resources/4479)).
+- [Atom microbit-micropython](https://github.com/Giannie/atom-microbit-python) - micro:bit MicroPython support package for the Atom editor.
 
 ##### MicroPython Libraries
 
