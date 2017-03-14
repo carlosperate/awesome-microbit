@@ -44,7 +44,8 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Servo](https://github.com/microbit-playground/microbit-servo-class) - A simple class for controlling servos on the microbit via PWM.
 - [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - A simple class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver via I2C.
 - [MAX7219](https://github.com/microbit-playground/matrix7seg) - MicroPython module for using a 7-segment display driven by a MAX7219 chip via SPI.
-- [microbit SSD1306](https://github.com/fizban99/microbit_ssd1306) - MicroPython library to control the OLED SSD1306 128x64 I2C with a micro:bit.
+- [SSD1306](https://github.com/fizban99/microbit_ssd1306) - MicroPython library to control the OLED SSD1306 128x64 I2C with a micro:bit.
+- [SSD1306 7seg](https://github.com/fizban99/microbit_ssd1306_7seg) - MicroPython library to use an SSD1306 OLED display as a 7 segment display.
 
 ##### Desktop Python Libraries
 
