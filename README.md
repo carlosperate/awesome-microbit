@@ -37,7 +37,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [microbit.co.uk Python editor](http://microbit.co.uk/app/#create:xyelfe) - Original Python editor from microbit.co.uk, contains an older version of MicroPython.
 - [Mu](http://codewith.mu) - A "micro" editor for MicroPython and the BBC micro:bit.
 - [create.withcode.uk](https://create.withcode.uk) - A Python online editor and simulator that supports the micro:bit MicroPython ([instructions](http://community.computingatschool.org.uk/resources/4479)).
-- [Atom microbit-micropython](https://github.com/Giannie/atom-microbit-python) - micro:bit MicroPython support package for the Atom editor.
+- [Atom microbit-micropython](https://github.com/wendlers/atom-microbit-micropython) - micro:bit MicroPython support package for the Atom editor.
 
 ##### MicroPython Libraries
 
