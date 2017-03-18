@@ -9,6 +9,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 **Table Of Contents:**
 
 - [Programming](#programming)
+	- [Visual](#visual)
 	- [Python](#python)
 	- [Javascript / PXT](#javascript-and-pxt)
 	- [C/C++](#cc)
@@ -26,6 +27,13 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 
 ## Programming
+
+### Visual
+
+- [PXT](https://pxt.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code.
+- [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - A Block interface that produces Touch Develop code. No longer in development and it's recommended to use PXT instead.
+- [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
+- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 
 ### Python
 
@@ -56,7 +64,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ### Javascript and PXT
 
-- [PXT](https://pxt.microbit.org) - The Programming eXperience Toolkit for the micro:bit provides a Blocks interface and JavaScript as the underlying written language.
+- [PXT](https://pxt.microbit.org) - The Programming eXperience Toolkit for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 
@@ -82,8 +90,6 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 - [Touch Develop](https://www.microbit.co.uk/create-code#touchdevelopEditor) - A flexible, text-based programming language with an interactive visual component.
 - [Rust on BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Describes the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
-- [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - A Block interface that produces Touch Develop code.
-- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 - [Forth](https://wiki.forth-ev.de/doku.php/en:projects:microbit:start) - Forth, a stack-based language, for the BBC micro:bit.
 
 
