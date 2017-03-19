@@ -188,6 +188,7 @@ Useful Articles for developing on the micro:bit.
 - [The Brooke Primary School Space Programme](http://www.brooke.norfolk.sch.uk/brooke-space-programme/) - Project page documenting Brooke Primary School pupil's upcoming journey for launching a BBC micro:bit (on its own) into near-space, with experiments and sensor measurements.
 - [FunWithMicrobit](https://github.com/MicrobitPolska/FunWithMicrobit) - FunWithMicrobit is a 6 hours workshop made by kids for the kids.
 - [Year 7 micro:bit lessons](http://www.jonwitts.co.uk/year-7-microbit) - by Jon Witts, used to introduce students to the micro:bit and Python.
+- [UCL’s BBC Micro:bit Tutorials](http://microbit-challenges.readthedocs.io/en/latest/) - Tutorial sheets that introduce micro:bit features with practical examples provided to invite students to design solutions to problems.
 
 
 ## Miscellaneous
