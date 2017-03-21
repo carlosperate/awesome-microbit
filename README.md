@@ -195,6 +195,7 @@ Useful Articles for developing on the micro:bit.
 - [FunWithMicrobit](https://github.com/MicrobitPolska/FunWithMicrobit) - FunWithMicrobit is a 6 hours workshop made by kids for the kids.
 - [Year 7 micro:bit lessons](http://www.jonwitts.co.uk/year-7-microbit) - by Jon Witts, used to introduce students to the micro:bit and Python.
 - [UCL’s BBC Micro:bit Tutorials](http://microbit-challenges.readthedocs.io/en/latest/) - Tutorial sheets that introduce micro:bit features with practical examples provided to invite students to design solutions to problems.
+- [BBC micro:bit and Kodu Interact](https://www.kodugamelab.com/resources/#microbit) - Kodu is a visual programming language made specifically for creating games and allow interaction with the micro:bit.
 
 
 ## Miscellaneous
