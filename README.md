@@ -34,6 +34,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - A Block interface that produces Touch Develop code. No longer in development and it's recommended to use PXT instead.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 - [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
+- [Open Roberta Lab](https://lab.open-roberta.org/) - A block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
 
 ### Python
 
