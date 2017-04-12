@@ -18,7 +18,6 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Mobile Apps](#mobile-apps)
 - [Interface Chip](#interface-chip)
 - [Hardware](#hardware)
-	- [Interface Chip](#interface-chip)
 - [CAD & 3D Printing](#cad--3d-printing)
 - [Projects](#projects)
 - [Articles](#articles)
@@ -142,7 +141,8 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 
 ## Hardware
 
-Nothing yet.
+- [Hardware design](https://github.com/bbcmicrobit/hardware) - Schematics and bill of materials for the BBC micro:bit.
+- [micro:bit Reference Design](https://github.com/microbit-foundation/microbit-reference-design) - Hardware design files for a board 100% binary compatible with the micro:bit. Created to help make your own micro:bit derived designs.
 
 
 ## CAD & 3D Printing
