@@ -16,6 +16,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 	- [Other Languages](#other-languages)
 - [Programming Tools](#programming-tools)
 - [Mobile Apps](#mobile-apps)
+- [Interface Chip](#interface-chip)
 - [Hardware](#hardware)
 	- [Interface Chip](#interface-chip)
 - [CAD & 3D Printing](#cad--3d-printing)
@@ -128,16 +129,18 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Insight Mr Bit](http://www.insightresources.co.uk/microbit/page63.html) ([iOS](https://itunes.apple.com/gb/app/insight-mr-bit/id1175915875)) - Create simple programs in plain English to control the BBC micro:bit to do lots of useful things.
 
 
-## Hardware
+## Interface Chip
 
-### Interface Chip
-
-The Interface Chip is the microcontroller placed close to the battery connector. It provides the USB mass storage capability to load the micro:bit firmware using the Operating System file explorer.
+The USB Interface Chip is the microcontroller placed close to the battery connector. It provides the USB mass storage capability to load the micro:bit firmware using the Operating System file explorer.
 
 - [DAPLink on micro:bit](https://www.mbed.com/en/development/hardware/prototyping-production/daplink/daplink-on-kl26z/) - The DAPLink is the default software running on the Interface Chip, this page contains information, update instructions, and the latest firmware.
 - [DAPLink source code](https://github.com/mbedmicro/DAPLink) - Source code for the mbed DAPLink, contains the build configuration for the micro:bit.
 - [J-Link OB Firmware](https://www.segger.com/bbc-micro-bit.html) - Offers the same flashing functionality than the DAPLink and expands it to include J-Link debugging.
 
+
+## Hardware
+
+Nothing yet.
 
 ## CAD & 3D Printing
 
