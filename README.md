@@ -142,7 +142,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 
 ## Hardware
 
-Nothing yet.
+- [Hardware design](https://github.com/bbcmicrobit/hardware) - Schematics and bill of materials for the BBC micro:bit.
 
 
 ## CAD & 3D Printing
