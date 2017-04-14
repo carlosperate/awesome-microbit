@@ -198,7 +198,7 @@ Useful Articles for developing on the micro:bit.
 
 ## Books
 
-TBA
+- [micro:bit IoT In C](http://www.iot-programmer.com/index.php/books/micro-bit-iot-in-c)
 
 
 ## Teaching Resources
