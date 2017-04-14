@@ -22,6 +22,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Projects](#projects)
 - [Articles](#articles)
 - [Videos](#videos)
+- [Books](#books)
 - [Teaching Resources](#teaching-resources)
 - [Miscellaneous](#miscellaneous)
 
@@ -193,6 +194,13 @@ Useful Articles for developing on the micro:bit.
 - [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - A YouTube channel with tutorials to learn to code with your family.
 - [micro:bit and Bluetooth](https://www.youtube.com/playlist?list=PLYOCnwH2UtBzhJ2nvn_DM3itz6GNVwrDu) - YouTube playlist with Martin Woolley's Bluetooth videos.
 - [Video Series from The Maker Movies](https://www.youtube.com/playlist?list=PLD0HD_3AJljXDWoasq2x5gHmkKeV7cc-P) - A list of short, introductory videos for anyone wanting to get started with the micro:bit.
+
+
+## Books
+
+- [micro:bit IoT In C](http://www.iot-programmer.com/index.php/books/micro-bit-iot-in-c)
+- [BBC micro:bit - 35 Touch Develop & MicroPython Projects](https://www.elektor.com/bbc-micro-bit-35-touch-develop-micropython-projects)
+- [Programming with MicroPython](http://shop.oreilly.com/product/0636920056515.do)
 
 
 ## Teaching Resources
