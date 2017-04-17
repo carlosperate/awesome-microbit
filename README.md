@@ -221,6 +221,7 @@ Useful Articles for developing on the micro:bit.
 - [Year 7 micro:bit lessons](http://www.jonwitts.co.uk/year-7-microbit) - by Jon Witts, used to introduce students to the micro:bit and Python.
 - [UCL’s BBC Micro:bit Tutorials](http://microbit-challenges.readthedocs.io/en/latest/) - Tutorial sheets that introduce micro:bit features with practical examples provided to invite students to design solutions to problems.
 - [BBC micro:bit and Kodu Interact](https://www.kodugamelab.com/resources/#microbit) - Kodu is a visual programming language made specifically for creating games and allow interaction with the micro:bit.
+- [Build A Robot Wars Buggy](https://www.kitronik.co.uk/blog/robot-buggy-part-1-build-robot-wars-buggy-introduction/) - This fun learning resource has been put together to provide teachers with an all in one design and technology challenge that you can set for your students over the course of a term or a year.
 
 
 ## Miscellaneous
