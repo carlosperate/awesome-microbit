@@ -106,6 +106,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Touch Develop](https://www.microbit.co.uk/create-code#touchdevelopEditor) - A flexible, text-based programming language with an interactive visual component.
 - [Rust on BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Describes the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
 - [Forth](https://wiki.forth-ev.de/doku.php/en:projects:microbit:start) - Forth, a stack-based language, for the BBC micro:bit.
+- [Pascal](http://wiki.freepascal.org/micro:bit) - The Free Pascal compiler can also target the ARM embedded platform, including the micro:bit.
 
 
 ## Programming Tools
