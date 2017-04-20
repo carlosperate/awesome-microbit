@@ -11,7 +11,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Programming](#programming)
 	- [Visual](#visual)
 	- [Python](#python)
-	- [Javascript / PXT](#javascript-and-pxt)
+	- [JavaScript / PXT](#javascript-and-pxt)
 	- [C/C++](#cc)
 	- [Other Languages](#other-languages)
 - [Programming Tools](#programming-tools)
@@ -34,7 +34,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [PXT](https://pxt.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code.
 - [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - A Block interface that produces Touch Develop code. No longer in development and it's recommended to use PXT instead.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
-- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
+- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a Bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 - [Open Roberta Lab](http://lab.open-roberta.org) - A block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
 
 ### Python
@@ -51,7 +51,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ##### MicroPython Libraries
 
-- [Servo](https://github.com/microbit-playground/microbit-servo-class) - A simple class for controlling servos on the microbit via PWM.
+- [Servo](https://github.com/microbit-playground/microbit-servo-class) - A simple class for controlling servos on the micro:bit via PWM.
 - [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - A simple class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver via I2C.
 - [MAX7219](https://github.com/microbit-playground/matrix7seg) - MicroPython module for using a 7-segment display driven by a MAX7219 chip via SPI.
 - [SSD1306](https://github.com/fizban99/microbit_ssd1306) - MicroPython library to control the OLED SSD1306 128x64 I2C with a micro:bit.
@@ -125,7 +125,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 - [Official Android App](https://play.google.com/store/apps/details?id=com.samsung.microbit) ([Source Code](https://github.com/Samsung/microbit)) - Pair, program and flash programs to the micro:bit via Bluetooth.
 - [Official iOS App](https://itunes.apple.com/gb/app/micro-bit/id1092687276) - Pair, program and flash programs to the micro:bit via Bluetooth.
-- [micro:bit Blue](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) ([Source Code](https://github.com/microbit-foundation/microbit-blue)) - Android app that contains a series demos for interacting with the microbit using Bluetooth.
+- [micro:bit Blue](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) ([Source Code](https://github.com/microbit-foundation/microbit-blue)) - Android app that contains a series demos for interacting with the micro:bit using Bluetooth.
 - [Bitty Software Apps](http://www.bittysoftware.com/apps.html) - A diverse collection of Android and iOS apps, going from data logging to audio pranks, you'll certainly find something of interest. 
 - [Insight Mr Bit](http://www.insightresources.co.uk/microbit/page63.html) ([iOS](https://itunes.apple.com/gb/app/insight-mr-bit/id1175915875)) - Create simple programs in plain English to control the BBC micro:bit to do lots of useful things.
 - [Micro:bit Xamarin](https://play.google.com/store/apps/details?id=com.sumitgouthaman.microbitble) ([Source code](https://github.com/sumitgouthaman/microbit-ble-mobile)) - Android app that demonstrates communicating with BBC micro:bit over Bluetooth LE and getting sensor data. As an open source app, it's a good example of using Xamaring with the micro:bit.   
@@ -230,6 +230,7 @@ Useful Articles for developing on the micro:bit.
 - [microbit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parts contains a model for the micro:bit.
 - [micro:bit broadcast](https://microbit-broadcast.embeddedlog.com) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
+- [microbit.org Support](https://support.microbit.org) - The support pages from the micro:bit Foundation it's a great source of information, containing an extensive collection of FAQs, articles, and guides. 
 
 
 ## License & Trademarks
