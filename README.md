@@ -230,7 +230,7 @@ Useful Articles for developing on the micro:bit.
 - [microbit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parts contains a model for the micro:bit.
 - [micro:bit broadcast](https://microbit-broadcast.embeddedlog.com) - Free newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
-- [microbit.org Support](https://support.microbit.org) - The support pages from the micro:bit Foundation it's a great source of information, containing an extensive collection of FAQs, articles, and guides. 
+- [microbit.org Support](https://support.microbit.org) - The support pages from the micro:bit Foundation is a great source of information, containing an extensive collection of FAQs, articles, and guides. 
 
 
 ## License & Trademarks
