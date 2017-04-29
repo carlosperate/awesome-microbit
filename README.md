@@ -61,6 +61,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [HC-SR04](https://github.com/fizban99/microbit_hcsr04) - Basic MicroPython library to read the distance from a HC-SR04 ultrasonic sensor using the SPI peripheral.
 - [US-100](https://github.com/fizban99/microbit_us100) - Basic MicroPython library to read the distance from a US-100 ultrasonic sensor via UART.
 - [KY038](https://github.com/fizban99/microbit_ky038) - MicroPython library to calibrate and use a sound sensor KY038, including clap counter functionality.
+- [Nokia 5110 PCD8544 LCD](https://github.com/matneee/microbit-nokia5110-PCD8544-lcd) - A Fast Micro:bit MicroPython controller for Nokia 5110 LCDs.
 
 ##### Python Libraries
 
