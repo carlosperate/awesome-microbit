@@ -230,6 +230,7 @@ Useful Articles for developing on the micro:bit.
 - [Build A Robot Wars Buggy](https://www.kitronik.co.uk/blog/robot-buggy-part-1-build-robot-wars-buggy-introduction/) - This fun learning resource has been put together to provide teachers with an all in one design and technology challenge that you can set for your students over the course of a term or a year.
 - [Doctor Who Live Lesson](http://www.bbc.co.uk/programmes/articles/3ydvd6mvhl89cHVJ7F2nmzf/doctor-who-and-the-micro-bit-live-lesson) - The BBC micro:bit will be put to the test at the controls of the TARDIS in this special BBC Live Lesson in collaboration with the team behind Doctor Who.
 - [CPC UCreate Micro:bit resources](http://warksjammy.blogspot.co.uk/2017/04/cpc-ucreate-microbit-resources-all-in.html) - A collection of micro:bit resources made for CPC.
+- [Year 7 BBC micro:bit topic](https://bournetocode.com/projects/7-CS-micro/) - micro:bit lessons from Bourne Grammar school.
 
 
 ## Miscellaneous
