@@ -152,6 +152,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit Badge](https://github.com/make-zurich/micro-bit-badge) - Open Source PCB for the micro:bit with a battery holder, buzzer, extension edge connector and pins breaks out.
 - [Eagle micro:bit Edge Part](https://github.com/proto-pic/micro-bit-eagle-libraries) - Eagle librarie from Proto-Pic for the micro:bit edge connectors.
 - [Kicad micro:bit Connector](https://github.com/anthonykirby/kicad_microbit_connector) - A KiCad component library and footprint library for a micro:bit edge-connector socket.
+- [SparkFun Breakout Board](https://github.com/sparkfun/Micro_Bit_Breakout) - Open source files for the SparkFun micro:bit Breakout Board.
 
 
 ## CAD & 3D Printing
