@@ -48,6 +48,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Mu](http://codewith.mu) - A "micro" editor for MicroPython and the BBC micro:bit.
 - [create.withcode.uk](https://create.withcode.uk) - A Python online editor and simulator that supports the micro:bit MicroPython ([instructions](http://community.computingatschool.org.uk/resources/4479)).
 - [Atom microbit-micropython](https://github.com/wendlers/atom-microbit-micropython) - micro:bit MicroPython support package for the Atom editor.
+- [Thonny micro:bit](https://bitbucket.org/KauriRaba/thonny-microbit/wiki/installation-guide) - A plug-in for [Thonny](http://thonny.org), a Python IDE for beginners.
 
 ##### MicroPython Libraries
 
