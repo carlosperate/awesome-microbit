@@ -166,7 +166,8 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit Stand](http://www.thingiverse.com/thing:2144500) - 3D printed stand for the micro:bit.
 - [micro:bit Rover](https://www.myminifactory.com/object/microbit-rover-27013) - 3D printable parts to build a micro:bit robot rover.
 - [Binary Watch](https://www.myminifactory.com/object/binary-watch-15257) - 3D printed watch case and strap for the micro:bit.
-- [A4 folder holder](https://www.myminifactory.com/object/micro-bit-a4-folder-holder-22039) - 3D printed holder to keep your micro:bit in a A4 school folder. 
+- [A4 folder holder](https://www.myminifactory.com/object/micro-bit-a4-folder-holder-22039) - 3D printed holder to keep your micro:bit in a A4 school folder.
+- [mibot drawing robot](https://www.myminifactory.com/object/mibot-drawing-robot-36030) - 3D printed chassis for a painting robot powered by a BBC micro:bit and its motor drive board.
 
 
 ## Projects
