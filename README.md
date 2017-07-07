@@ -36,6 +36,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 - [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a Bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 - [Open Roberta Lab](http://lab.open-roberta.org) - A block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
+- [ScratchX micro:bit extension](https://llk.github.io/microbit-extension/) -  Lets you control your micro:bit wirelessly using Scratch programming blocks.
 
 ### Python
 
