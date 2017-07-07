@@ -246,6 +246,7 @@ Useful Articles for developing on the micro:bit.
 - [Year 7 BBC micro:bit topic](https://bournetocode.com/projects/7-CS-micro/) - micro:bit lessons from Bourne Grammar school.
 - [Doctor Who Live Lesson](http://www.bbc.co.uk/programmes/articles/3ydvd6mvhl89cHVJ7F2nmzf/doctor-who-and-the-micro-bit-live-lesson) - The BBC micro:bit will be put to the test at the controls of the TARDIS in this special BBC Live Lesson in collaboration with the team behind Doctor Who.
 - [Tackle time and space with Doctor Who and the BBC micro:bit](http://www.bbc.co.uk/programmes/articles/GDNGTpkHJrDJSYMQJbH9f1/tackle-time-and-space-with-doctor-who-and-the-bbc-micro-bit) - Join The Doctor on an adventure of courage, cunning and coding! Part 1: Mission Sonic, Part 2: Mission Decode, and Part 3: Mission Hack.
+- [Inventorspace micro:bit category](https://invent.sparkfun.com/cwists/category?utm_content=55321977#products=[8]) - A community by SparkFun with fun projects you can implement in your classroom, school or district.
 
 
 ## Miscellaneous
