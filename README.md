@@ -11,7 +11,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Programming](#programming)
 	- [Visual](#visual)
 	- [Python](#python)
-	- [JavaScript / PXT](#javascript-and-pxt)
+	- [JavaScript / MakeCode](#javascript-and-makecode)
 	- [C/C++](#cc)
 	- [Other Languages](#other-languages)
 - [Programming Tools](#programming-tools)
@@ -31,8 +31,8 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ### Visual
 
-- [PXT](https://pxt.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code.
-- [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - A Block interface that produces Touch Develop code. No longer in development and it's recommended to use PXT instead.
+- [MakeCode](https://makecode.microbit.org) - (Previously known as PXT) Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code.
+- [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - A Block interface that produces Touch Develop code. No longer in development and it's recommended to use MakeCode instead.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 - [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a Bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 - [Open Roberta Lab](http://lab.open-roberta.org) - A block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
@@ -81,9 +81,9 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - This package allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
 - [JetBrains PyCharm IDE micro:bit support](https://plugins.jetbrains.com/plugin/9777-micropython-support) - Support for MicroPython devices in IntelliJ IDEA and PyCharm.
 
-### JavaScript and PXT
+### JavaScript and MakeCode
 
-- [PXT](https://pxt.microbit.org) - The Programming eXperience Toolkit for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
+- [MakeCode](https://makecode.microbit.org) - The Programming eXperience Toolkit for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 
@@ -93,7 +93,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ##### JavaScript Programming Tools
 
-- [PXT Command Line Tool](https://www.pxt.io/cli) - Use the command line to program the micro:bit with PXT JavaScript. You can also run a local version of the PXT online editor.
+- [PXT Command Line Tool](https://makecode.com/cli) - Use the command line to program the micro:bit with MakeCode JavaScript. You can also run a local version of the MakeCode online editor (previously known as PXT).
 
 ### C/C++
 
@@ -182,7 +182,7 @@ All these projects contain steps and resources required for reproduction.
 
 - [microbit.co.uk Site Index](https://www.microbit.co.uk/index) - The microbit.co.uk website contains an extensive list with all their projects and tutorials.
 - [hackster micro:bit community](https://www.hackster.io/micro-bit/projects) - This hackster community contains user submitted projects for the micro:bit.
-- [PXT Projects](https://pxt.microbit.org/projects) - List of micro:bit projects you can do with the PXT editor.
+- [MakeCode Projects](https://makecode.microbit.org/projects/) - List of micro:bit projects you can do with the MakeCode editor.
 - [Quiz:bit](https://github.com/lancaster-university/quiz-bit) - micro:bit programs and a matching application for providing a quiz-voter-style service using micro:bits as the controls.
 - [JUST DO IoT](https://hackaday.io/project/12164-just-do-iot) - Connect the micro:Bit to the LoRaWAN network, includes open source hardware microbit connector board.
 - [Micro:Bob](https://hackaday.io/project/8643-microbob) - A simple bipedal robot controlled by a micro:bit.
