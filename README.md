@@ -92,6 +92,10 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
 
+##### JavaScript browser Libraries
+
+- [microBit.js](https://github.com/antefact/microBit.js) - A javascript library to interact with BBC micro:bit using web bluetooth API. .
+
 ##### JavaScript Programming Tools
 
 - [PXT Command Line Tool](https://makecode.com/cli) - Use the command line to program the micro:bit with MakeCode JavaScript. You can also run a local version of the MakeCode online editor (previously known as PXT).
