@@ -13,7 +13,8 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 	- [Python](#python)
 	- [JavaScript / MakeCode](#javascript-and-makecode)
 	- [C/C++](#cc)
-	- [Other Languages](#other-languages)
+	- [Other micro:bit Languages](#other-microbit-languages)
+	- [Other Interface Languages](#other-interface-languages)
 - [Programming Tools](#programming-tools)
 - [Mobile Apps](#mobile-apps)
 - [Interface Chip](#interface-chip)
@@ -92,7 +93,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
 
-##### JavaScript browser Libraries
+##### JavaScript Browser Libraries
 
 - [microBit.js](https://github.com/antefact/microBit.js) - A javascript library to interact with BBC micro:bit using web bluetooth API. .
 
@@ -114,7 +115,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [OneWire](https://github.com/adamboardman/microbit-onewire) - micro:bit OneWire Library, based upon Erik Olieman's mbed DS1820 lib.
 - [neopixel](https://github.com/elmorg/uBit_neopixel) - Library for using neopixels with the BBC micro:bit.
 
-### Other Languages
+### Other micro:bit Languages
 
 - [Touch Develop](https://www.microbit.co.uk/create-code#touchdevelopEditor) - A flexible, text-based programming language with an interactive visual component.
 - [Rust on BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Describes the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
@@ -122,11 +123,8 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Pascal](http://wiki.freepascal.org/micro:bit) - The Free Pascal compiler can also target the ARM embedded platform, including the micro:bit.
 - [Ada](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/examples/MicroBit) - Instruction on how to setup the Ada development environment for the micro:bit.
 
+### Other Interface Languages
 
-## Programming Tools
-
-- [Vagrant C/C++ Development Environment](https://github.com/carlosperate/microbit-dev-env) - With a single command it creates a virtual machine with all the toolchain required to compile and flash C/C++ programs to the micro:bit (including  MicroPython).
-- [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 - [Kodu Controller](http://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
 - [Simulink Coder Support Package](http://uk.mathworks.com/matlabcentral/fileexchange/60273-simulink-coder-support-package-for-bbc-micro-bit-board) - This package enables you to create Simulink models and automatically generate and deploy code on the micro:bit.
 - [microbit for Dyalog APL on the Pi](https://github.com/APLPi/microbit) - Tools for using the micro:bit (via MicroPython serial connection) with the Dyalog APL programming language on the Raspberry Pi.
@@ -135,6 +133,12 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Haxe node BBC micro:bit](https://github.com/MatthijsKamstra/hx-node-bbc-microbit) - Control a BBC micro:bit from Node.js using BLE and the Haxe programming language.
 - [App Inventor + IoT](http://iot.appinventor.mit.edu/#/microbit/microbitintro) - Control a micro:bit via Bluetooth with App Inventor, a visual programming environment for Android applications.
 - [BlockyTalkyBLE](http://www.playfulcomputation.group/blockytalkyble.html) - MakeCode and App Inventor extension that makes it easy to connect AppInventor mobile phone apps with the BBC micro:bit wirelessly over Bluetooth.
+
+
+## Programming Tools
+
+- [Vagrant C/C++ Development Environment](https://github.com/carlosperate/microbit-dev-env) - With a single command it creates a virtual machine with all the toolchain required to compile and flash C/C++ programs to the micro:bit (including  MicroPython).
+- [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 
 
 ## Mobile Apps
