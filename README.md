@@ -92,6 +92,15 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 ##### MakeCode Libraries
 
+- [PXT Neopixel](https://github.com/Microsoft/pxt-neopixel) - A Neo-Pixel package for pxt-microbit.
+- [PXT Filesystem](https://github.com/Microsoft/pxt-filesystem) - BETA package to support file system.
+- [PXT MAX6675](https://github.com/Microsoft/pxt-max6675) - A package for the MAX6675 component in PXT.
+- [PXT Bluetooth MAX6675](https://github.com/Microsoft/pxt-bluetooth-max6675) - A bluetooth service for the MAX6675 temperature probe.
+- [PXT Sonar](https://github.com/Microsoft/pxt-sonar) - A Microsoft MakeCode package to handle sonar sensors and pings.
+- [PXT Bluetooth Temperature Sensor](https://github.com/Microsoft/pxt-bluetooth-temperature-sensor) - A Bluetooth service to expose a temperature reading.
+- [PXT MIDI](https://github.com/Microsoft/pxt-midi) - A MIDI interface for MakeCode - beta.
+- [PXT Bluetooth MIDI](https://github.com/Microsoft/pxt-bluetooth-midi) - A Bluetooth Midi package for Microsoft Make Code - beta.
+- [PXT BlueDot](https://github.com/Microsoft/pxt-bluedot) - A PXT package to support the BlueDot app - beta.
 - [PXT microbit GY521](https://github.com/PaulDFoster/pxt-microbit-GY521) - A PXT package for the Microbit to drive a MPU-6050 (GY-521).
 - [PXT UCL Junkrobot](https://github.com/chevyng/pxt-ucl-junkrobot) - A junk robot controlled using 28BYJ-48 stepper motors and HC-SR04 ultrasonic sensor.
 - [PXT BitBot](https://github.com/srs/pxt-bitbot) - BitBot Package for Microsoft PXT.
