@@ -90,6 +90,29 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - A JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - A graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 
+##### MakeCode Libraries
+
+- [PXT Neopixel](https://github.com/Microsoft/pxt-neopixel) - A Neo-Pixel package for pxt-microbit.
+- [PXT Filesystem](https://github.com/Microsoft/pxt-filesystem) - BETA package to support file system.
+- [PXT MAX6675](https://github.com/Microsoft/pxt-max6675) - A package for the MAX6675 component in PXT.
+- [PXT Bluetooth MAX6675](https://github.com/Microsoft/pxt-bluetooth-max6675) - A bluetooth service for the MAX6675 temperature probe.
+- [PXT Sonar](https://github.com/Microsoft/pxt-sonar) - A Microsoft MakeCode package to handle sonar sensors and pings.
+- [PXT Bluetooth Temperature Sensor](https://github.com/Microsoft/pxt-bluetooth-temperature-sensor) - A Bluetooth service to expose a temperature reading.
+- [PXT MIDI](https://github.com/Microsoft/pxt-midi) - A MIDI interface for MakeCode - beta.
+- [PXT Bluetooth MIDI](https://github.com/Microsoft/pxt-bluetooth-midi) - A Bluetooth Midi package for Microsoft Make Code - beta.
+- [PXT BlueDot](https://github.com/Microsoft/pxt-bluedot) - A PXT package to support the BlueDot app - beta.
+- [PXT microbit GY521](https://github.com/PaulDFoster/pxt-microbit-GY521) - A PXT package for the Microbit to drive a MPU-6050 (GY-521).
+- [PXT UCL Junkrobot](https://github.com/chevyng/pxt-ucl-junkrobot) - A junk robot controlled using 28BYJ-48 stepper motors and HC-SR04 ultrasonic sensor.
+- [PXT BitBot](https://github.com/srs/pxt-bitbot) - BitBot Package for Microsoft PXT.
+- [PXT gamer:bit](https://github.com/sparkfun/pxt-gamer-bit) - SparkFun gamer:bit package for Microsoft MakeCode.
+- [PXT moto:bit](https://github.com/sparkfun/pxt-moto-bit) - MakeCode package for the SparkFun weather:bit board.
+- [PXT weather:bit](https://github.com/sparkfun/pxt-weather-bit) - The package adds support for the weather:bit add-on board from SparkFun.
+- [PXT SSD1306 microbit](https://github.com/Tinkertanker/pxt-ssd1306-microbit) - This is the PXT Package for SSD1306 OLED controller, based on the Adafruit Arduino library.
+- [PXT mi:node](https://github.com/minodekit/pxt-minode) - mi:node kit(micro:bit IoT Starter Kit by element14) driver package for PXT/microbit.
+- [PXT Kitronik Servo Lite](https://github.com/KitronikLtd/pxt-kitronik-servo-lite) - Blocks that support Kitronik Servo:Lite board for the micro:bit.
+- [PXT Kitronik I2C 16 Servo](https://github.com/KitronikLtd/pxt-kitronik-I2C-16-servo) - Blocks for driving the Kitronik I2C 16 servo expansion board.
+- [PXT Kitronik motor driver](https://github.com/KitronikLtd/pxt-kitronik-motor-driver) - Blocks for driving the Kitronik micro:bit motor driver board.
+
 ##### Node.js Libraries
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
