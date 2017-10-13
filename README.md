@@ -226,6 +226,7 @@ All these projects contain steps and resources required for reproduction.
 - [Alexa Weather On micro:bit](https://www.hackster.io/chen-tiebiao/weather-on-micro-bit-c79c19) - Creating an Amazon Alexa skill where the current weather can be asked and the result displayed on the micro:bit.
 - [BBC Microbit Balloon Tracker](http://www.daveakerman.com/?p=2019) - Making a ballon tracker with a micro:bit connected to GPS and a LoRa transceiver to track and transmit its position.
 - [SonicPixels](https://github.com/jrmedd/SonicPixels) - Micro:bit and Max frameworks for triggering multiple speakers in a grid arrangment.
+- [Little Bug Bit](http://goo.gl/eEFhcy) - Low cost micro:bit buggy.
 
 ### Project Collections
 
