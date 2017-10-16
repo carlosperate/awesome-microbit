@@ -258,7 +258,8 @@ Useful Articles for developing on the micro:bit.
 ### Article Collections
 
 - [MultiWingSpan](http://www.multiwingspan.co.uk/micro.php) - A large collection of examples, instructions, and direction on how to use electronic components.
-- [Elecfreaks micro:bit category](https://www.elecfreaks.com/category/micro-bit) - A comprehensive collection of experiments going through the concepts of using individual sensors or components.
+- [Elecfreaks micro:bit category](https://www.elecfreaks.com/category/micro-bit) - Elecfreaks collection of experiments going through the concepts of using individual sensors or components.
+- [SparkFun micro:bit tutorials](https://learn.sparkfun.com/tutorials/tags/microbit) - Collection of tutorials from SparkFun, including comprehensive experiment guides for their kits.
 
 
 ## Videos
