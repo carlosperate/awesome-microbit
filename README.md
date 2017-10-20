@@ -231,6 +231,7 @@ All these projects contain steps and resources required for reproduction.
 - [Little Bug Bit](http://goo.gl/eEFhcy) - Low cost micro:bit buggy.
 - [HandShake](https://sites.google.com/site/hardwaremonkey/home/handshake) - Project designed to enable unique gesture recognition for people with limited control of their motion.
 - [Mega:Bit](http://www.makerspace-uk.co.uk/megabit/) - A a scaled up micro:bit with the 5 x 5 LED matrix and buttons, connected to a real micro:bit.
+- [Scrolling display](https://meanderingpi.wordpress.com/2017/09/16/bbc-microbit-scrolling-display/) - Create a display screen using a number of micro:bits communicating via radio.
 
 ### Project Collections
 
