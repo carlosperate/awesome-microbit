@@ -230,6 +230,7 @@ All these projects contain steps and resources required for reproduction.
 - [SonicPixels](https://github.com/jrmedd/SonicPixels) - Micro:bit and Max frameworks for triggering multiple speakers in a grid arrangment.
 - [Little Bug Bit](http://goo.gl/eEFhcy) - Low cost micro:bit buggy.
 - [HandShake](https://sites.google.com/site/hardwaremonkey/home/handshake) - Project designed to enable unique gesture recognition for people with limited control of their motion.
+- [Mega:Bit](http://www.makerspace-uk.co.uk/megabit/) - A a scaled up micro:bit with the 5 x 5 LED matrix and buttons, connected to a real micro:bit.
 
 ### Project Collections
 
