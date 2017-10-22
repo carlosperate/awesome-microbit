@@ -51,6 +51,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [create.withcode.uk](https://create.withcode.uk) - A Python online editor and simulator that supports the micro:bit MicroPython ([instructions](http://community.computingatschool.org.uk/resources/4479)).
 - [Atom microbit-micropython](https://github.com/wendlers/atom-microbit-micropython) - micro:bit MicroPython support package for the Atom editor.
 - [Thonny micro:bit](https://bitbucket.org/KauriRaba/thonny-microbit/wiki/installation-guide) - A plug-in for [Thonny](http://thonny.org), a Python IDE for beginners.
+- [JetBrains IDEA/PyCharm IDE plugin](https://plugins.jetbrains.com/plugin/9777-micropython-support) - Support for MicroPython devices in IntelliJ IDEA and PyCharm.
 
 ##### MicroPython Libraries
 
@@ -82,7 +83,6 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [uFlash](https://github.com/ntoll/uflash/) - A utility for flashing the micro:bit with Python scripts and the MicroPython runtime.
 - [MicroFs](https://github.com/ntoll/microfs) - A simple command line tool and module for interacting with the limited file system provided by MicroPython on the micro:bit.
 - [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - This package allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
-- [JetBrains PyCharm IDE micro:bit support](https://plugins.jetbrains.com/plugin/9777-micropython-support) - Support for MicroPython devices in IntelliJ IDEA and PyCharm.
 
 ### JavaScript and MakeCode
 
