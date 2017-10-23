@@ -280,6 +280,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit IoT In C](http://www.iot-programmer.com/index.php/books/micro-bit-iot-in-c)
 - [BBC micro:bit - 35 Touch Develop & MicroPython Projects](https://www.elektor.com/bbc-micro-bit-35-touch-develop-micropython-projects)
 - [Programming with MicroPython](http://shop.oreilly.com/product/0636920056515.do)
+- [Getting Started with the micro:bit](http://shop.oreilly.com/product/0636920115267.do)
 
 
 ## Teaching Resources
