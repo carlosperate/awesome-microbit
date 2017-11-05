@@ -116,6 +116,7 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 - [KY-040](https://github.com/Tinkertanker/pxt-ky040-microbit) - Tinkertanker package for the KY-040 rotary encoder.
 - [Invent robot](https://github.com/techcampuk/pxt-invent) - This library provides a Microsoft PXT package for Invent robot.
 - [Robotbit](https://github.com/KittenBot/pxt-robotbit) - Package for KittenBot Robotbit.
+- [ubirch NB-IoT](https://github.com/ubirch/pxt-ubirch) - Package for sending signed data messages to the ubirch backend.
 
 ##### Node.js Libraries
 
