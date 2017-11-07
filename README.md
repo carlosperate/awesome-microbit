@@ -2,9 +2,12 @@
 
 [![micro:bit logo](https://i.imgur.com/rYLbkBh.jpg)](https://www.microbit.org)
 
-A curated list of resources for the BBC micro:bit, a pocket-sized programmable board with a Bluetooth capable microcontroller, accelerometer, magnetometer, LED matrix, a couple of buttons, and accessible GPIO.
+A curated list of resources for the BBC micro:bit, a tiny programmable computer designed to make learning and teaching easy and fun! 
+This embedded board has a Bluetooth capable microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and accessible GPIO.
 
 Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
+
+Contributions are welcome!
 
 ## Contents
 
