@@ -17,7 +17,7 @@ Contributions are welcome!
 	- [JavaScript / MakeCode](#javascript-and-makecode)
 	- [C/C++](#cc)
 	- [Other micro:bit Languages](#other-microbit-languages)
-	- [Other Interface Languages](#other-interface-languages)
+	- [Other Interaction Languages](#other-interaction-languages)
 - [Programming Tools](#programming-tools)
 - [Mobile Apps](#mobile-apps)
 - [Interface Chip](#interface-chip)
@@ -157,7 +157,7 @@ Contributions are welcome!
 - [Pascal](http://wiki.freepascal.org/micro:bit) - Free Pascal compiler that can target the ARM embedded platform, including the micro:bit.
 - [Ada](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/examples/MicroBit) - Instruction on how to setup the Ada development environment for the micro:bit.
 
-### Other Interface Languages
+### Other Interaction Languages
 
 - [Kodu Controller](http://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the microbit from Kodu Game Lab.
 - [Simulink Coder Support Package](http://uk.mathworks.com/matlabcentral/fileexchange/60273-simulink-coder-support-package-for-bbc-micro-bit-board) - Package that enables you to create Simulink models and automatically generate and deploy code on the micro:bit.
