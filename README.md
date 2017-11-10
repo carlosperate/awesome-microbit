@@ -328,6 +328,8 @@ Useful Articles for developing on the micro:bit.
 ## Community
 
 - [Official Slack Channel](http://tech.microbit.org/get-involved/where-to-find/) - Online form to join this chat group, a great place to discuss and meet more people from the micro:bit community.
+- [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
+- [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
 
 
 ## Miscellaneous
