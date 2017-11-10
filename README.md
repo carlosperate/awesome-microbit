@@ -28,6 +28,7 @@ Contributions are welcome!
 - [Videos](#videos)
 - [Books](#books)
 - [Teaching Resources](#teaching-resources)
+- [Community](#community)
 - [Miscellaneous](#miscellaneous)
 
 
@@ -322,6 +323,11 @@ Useful Articles for developing on the micro:bit.
 - [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14 years). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the first time.
 - [micro:bit in science teaching - How clean is my pond](https://community.computingatschool.org.uk/resources/5204) - Using a micro:bit to monitor the level of algal growth in a pond and to control a filter pump.
 - [Inventorspace micro:bit category](https://invent.sparkfun.com/cwists/category#products=%5B8%5D) - Community by SparkFun with fun projects you can implement in your classroom, school or district.
+
+
+## Community
+
+- [Official Slack Channel](http://tech.microbit.org/get-involved/where-to-find/) - Online form to join this chat group, a great place to discuss and meet more people from the micro:bit community.
 
 
 ## Miscellaneous
