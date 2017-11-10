@@ -168,7 +168,7 @@ Contributions are welcome!
 - [App Inventor + IoT](http://iot.appinventor.mit.edu/#/microbit/microbitintro) - Control a micro:bit via Bluetooth with App Inventor, a visual programming environment for Android applications.
 - [BlockyTalkyBLE](http://www.playfulcomputation.group/blockytalkyble.html) - MakeCode and App Inventor extension that makes it easy to connect AppInventor mobile phone apps with the BBC micro:bit wirelessly over Bluetooth.
 - [DroidScript - MicroBit Plugin](https://play.google.com/store/apps/details?id=org.droidscript.microbit) - Allows you you to control the BBC micro:bit remotely from your own DroidScript apps (Android apps written in JavaScript).
-- [CBMicroBit](https://github.com/Louismac/CBMicroBit) - CoreBluetooth wrapper that connects a micro:bit to a computer running OSX using BLE and outputs over OSC (standalone, C++ and Objective C libraries).
+- [CBMicroBit](https://github.com/Louismac/CBMicroBit) - CoreBluetooth wrapper in C++ that connects a micro:bit to a computer running OSX using BLE and outputs over OSC (can be used standalone, or as a C++ or Objective C library).
 
 
 ## Programming Tools
