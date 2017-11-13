@@ -149,6 +149,7 @@ Contributions are welcome!
 - [OneWire](https://github.com/adamboardman/microbit-onewire) - BBC micro:bit OneWire Library, based upon Erik Olieman's mbed DS1820 lib.
 - [neopixel](https://github.com/elmorg/uBit_neopixel) - Library for using neopixels with the BBC micro:bit.
 - [microbit Screen](https://github.com/ht-deko/microbit_Screen) - Arduino LED Screen library for micro:bit.
+- [Adafruit Arduino MicroBit library](https://github.com/adafruit/Adafruit_Microbit) - Wrapper code and examples for using micro:bit with Arduino IDE.
 
 ### Other micro:bit Languages
 
