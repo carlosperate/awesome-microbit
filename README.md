@@ -20,6 +20,7 @@ Contributions are welcome!
 	- [Other Interaction Languages](#other-interaction-languages)
 - [Programming Tools](#programming-tools)
 - [Mobile Apps](#mobile-apps)
+- [ChromeOS Apps](#chromeos-apps)
 - [Interface Chip](#interface-chip)
 - [Hardware](#hardware)
 - [CAD & 3D Printing](#cad--3d-printing)
@@ -189,6 +190,11 @@ Contributions are welcome!
 - [Micro:bit Xamarin](https://play.google.com/store/apps/details?id=com.sumitgouthaman.microbitble) ([Source code](https://github.com/sumitgouthaman/microbit-ble-mobile)) - Android app that demonstrates communicating with BBC micro:bit over Bluetooth LE and getting sensor data. As an open source app, it's a good example of using Xamaring with the micro:bit.
 - [bitty blue](http://www.bittysoftware.com/apps/bitty_blue.html) - iOS and Android app that provides a collection of fun things to do with a BBC micro:bit (or compatible device) and Bluetooth.
 - [micro:bit logger](https://play.google.com/store/apps/details?id=nl.defbu.mblogger) - Android app that enables users to log data from the BLE services and export it to a file. 
+
+
+## ChromeOS Apps
+
+- [bitty blue](http://www.bittysoftware.com/apps.html) - Play with 3D "PolySquiggles", use as a compass, have fun with the buttons, send images or text to the LED display, connect and control electronic circuits, and all via Bluetooth.
 
 
 ## Interface Chip
