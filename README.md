@@ -123,7 +123,8 @@ Contributions are welcome!
 - [Robotbit](https://github.com/KittenBot/pxt-robotbit) - Package for KittenBot Robotbit.
 - [ubirch NB-IoT](https://github.com/ubirch/pxt-ubirch) - Package for sending signed data messages to the ubirch backend.
 - [CCS811](https://github.com/ADataDate/pxt-airQuality) - Makecode Package for the CCS811 Air Quality Sensor.
-- [DS1307](https://github.com/Tinkertanker/pxt-ds1307-microbit) - Tinkercademy MakeCode package for using the DS1307 real-time clock (beta). 
+- [DS1307](https://github.com/Tinkertanker/pxt-ds1307-microbit) - Tinkercademy MakeCode package for using the DS1307 real-time clock (beta).
+- [HT16K33](https://github.com/Tinkertanker/pxt-ht16k33-alnum4) - Tinkercademy MakeCode Package for the HT16K33 I2C Alphanumeric Display (beta).
 
 ##### Node.js Libraries
 
