@@ -336,6 +336,7 @@ Useful Articles for developing on the micro:bit.
 - [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14 years). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the first time.
 - [micro:bit in science teaching - How clean is my pond](https://community.computingatschool.org.uk/resources/5204) - Using a micro:bit to monitor the level of algal growth in a pond and to control a filter pump.
 - [Inventorspace micro:bit category](https://invent.sparkfun.com/cwists/category#products=%5B8%5D) - Community by SparkFun with fun projects you can implement in your classroom, school or district.
+- [Strictly micro:bit - BBC Live Lessons](https://www.youtube.com/watch?v=QgEP8aI8Gvw&index=1&list=PLcvEcrsF_9zL-zmL_1-yikUGtsTMo1oO-) - Suitable for teaching ages 11-14. The full BBC Live Lesson exploring the basics of coding, with help from the stars of Strictly Come Dancing and the BBC micro:bit.
 
 
 ## Community
