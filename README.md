@@ -130,6 +130,7 @@ Contributions are welcome!
 ##### Node.js Libraries
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
+- [node-bbc-microbit-io](https://github.com/sandeepmistry/node-bbc-microbit-io) - Johnny-Five (JavaScript Robotics and IoT programming framework) micro:bit IO Plugin.
 
 ##### JavaScript Browser Libraries
 
