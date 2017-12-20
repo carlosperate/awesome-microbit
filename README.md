@@ -119,7 +119,7 @@ Contributions are welcome!
 - [Kitronik I2C 16 Servo](https://github.com/KitronikLtd/pxt-kitronik-I2C-16-servo) - Blocks for driving the Kitronik I2C 16 servo expansion board.
 - [Kitronik motor driver](https://github.com/KitronikLtd/pxt-kitronik-motor-driver) - Blocks for driving the Kitronik micro:bit motor driver board.
 - [Lego Power Functions](https://github.com/philipphenkel/pxt-powerfunctions) - Control your LEGO® Power Functions motors using your micro:bit with an infrared LED.
-- [KY-040](https://github.com/Tinkertanker/pxt-ky040-microbit) - Tinkertanker package for the KY-040 rotary encoder.
+- [KY040](https://github.com/Tinkertanker/pxt-ky040-microbit) - Tinkertanker package for the KY-040 rotary encoder.
 - [Invent robot](https://github.com/techcampuk/pxt-invent) - This library provides a Microsoft PXT package for Invent robot.
 - [Robotbit](https://github.com/KittenBot/pxt-robotbit) - Package for KittenBot Robotbit.
 - [ubirch NB-IoT](https://github.com/ubirch/pxt-ubirch) - Package for sending signed data messages to the ubirch backend.
@@ -128,6 +128,7 @@ Contributions are welcome!
 - [HT16K33](https://github.com/Tinkertanker/pxt-ht16k33-alnum4) - Tinkercademy MakeCode Package for the HT16K33 I2C Alphanumeric Display (beta).
 - [HoneyBit](https://github.com/HoneycombKits/pxt-HoneyBit) - A Honeycomb kits package for micro:bit MakeCode.
 - [katakana](https://github.com/mbitfun/pxt-katakana) - This library make it possible to show characters of Katakana in half-width.
+- [Bluetooth beacons](https://github.com/kshoji/pxt-bluetooth-beacons) - Allows the micro:bit to act as iBeacon / AltBeacon advertiser.
 
 ##### Node.js Libraries
 
