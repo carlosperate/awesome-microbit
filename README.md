@@ -127,6 +127,7 @@ Contributions are welcome!
 - [DS1307](https://github.com/Tinkertanker/pxt-ds1307-microbit) - Tinkercademy MakeCode package for using the DS1307 real-time clock (beta).
 - [HT16K33](https://github.com/Tinkertanker/pxt-ht16k33-alnum4) - Tinkercademy MakeCode Package for the HT16K33 I2C Alphanumeric Display (beta).
 - [HoneyBit](https://github.com/HoneycombKits/pxt-HoneyBit) - A Honeycomb kits package for micro:bit MakeCode.
+- [katakana](https://github.com/mbitfun/pxt-katakana) - This library make it possible to show characters of Katakana in half-width.
 
 ##### Node.js Libraries
 
