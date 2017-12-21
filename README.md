@@ -359,6 +359,8 @@ Useful Articles for developing on the micro:bit.
 - [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
 - [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
 - [micro:bit Python mailing list](https://mail.python.org/mailman/listinfo/microbit)
+- [micro:bit Sri Lanka User Group](http://microbitslug.org)
+- [Croatian Makers](http://izradi.croatianmakers.hr/bbc-microbit-uvodna-stranica/)
 
 
 ## Miscellaneous
