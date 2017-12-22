@@ -322,7 +322,7 @@ Useful Articles for developing on the micro:bit.
 - [BBC micro:bit - 35 Touch Develop & MicroPython Projects](https://www.elektor.com/bbc-micro-bit-35-touch-develop-micropython-projects)
 - [Programming with MicroPython](http://shop.oreilly.com/product/0636920056515.do)
 - [Getting Started with the micro:bit](http://shop.oreilly.com/product/0636920115267.do)
-- [The Official BBC micro:bit User Guide](http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111938673X.html)
+- [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735)
 - [Programming the BBC micro:bit](http://simonmonk.org/prog_mb/)
 
 
