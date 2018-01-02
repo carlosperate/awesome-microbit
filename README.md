@@ -40,8 +40,11 @@ Contributions are welcome!
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (Previously known as PXT).
 - [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - Block interface that produces Touch Develop code. No longer in development and it's recommended to use MakeCode instead.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
-- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a Bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 - [Open Roberta Lab](http://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
+
+##### Scratch Extensions
+
+- [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a Bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 - [ScratchX micro:bit extension](https://llk.github.io/microbit-extension/) - Lets you control your micro:bit wirelessly using Scratch programming blocks.
 
 ### Python
