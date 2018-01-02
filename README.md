@@ -46,6 +46,7 @@ Contributions are welcome!
 
 - [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a Bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 - [ScratchX micro:bit extension](https://llk.github.io/microbit-extension/) - Lets you control your micro:bit wirelessly using Scratch programming blocks.
+- [s2m](https://github.com/MrYsLab/s2m) - A Python program that acts as a bridge between the Scratch 2 off-line editor and the micro:bit via USB.
 
 ### Python
 
