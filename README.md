@@ -61,6 +61,7 @@ Contributions are welcome!
 - [Atom microbit-micropython](https://github.com/wendlers/atom-microbit-micropython) - BBC micro:bit MicroPython support package for the Atom editor.
 - [Thonny micro:bit](https://bitbucket.org/KauriRaba/thonny-microbit/wiki/installation-guide) - Plug-in for [Thonny](http://thonny.org), a Python IDE for beginners.
 - [JetBrains IDEA/PyCharm IDE plugin](https://plugins.jetbrains.com/plugin/9777-micropython-support) - Support for MicroPython devices in IntelliJ IDEA and PyCharm.
+- [uPyCraft](https://www.gitbook.com/book/dfrobot/upycraft/details) - A micro:bit compatible MicroPython IDE for Windows/Mac, designed with a simple and convenient interface.
 
 ##### MicroPython Libraries
 
