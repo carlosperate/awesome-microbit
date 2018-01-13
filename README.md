@@ -251,7 +251,8 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Micro:bit Compass](https://www.myminifactory.com/object/micro-bit-compass-18994) -3D printed compass case for the micro:bit.
 - [A4 folder holder](https://www.myminifactory.com/object/micro-bit-a4-folder-holder-22039) - 3D printed holder to keep your micro:bit in a A4 school folder.
 - [mibot drawing robot](https://www.myminifactory.com/object/mibot-drawing-robot-36030) - 3D printed chassis for a painting robot powered by a BBC micro:bit and its motor drive board.
-- [Robottillo:bit](https://www.myminifactory.com/object/robottillo-bit-46478) - A 3D printed case which looks like a small robot. Two versions available, with a rear protective cover or with a perforated cover for the pins. 
+- [Robottillo:bit](https://www.myminifactory.com/object/robottillo-bit-46478) - A 3D printed case which looks like a small robot. Two versions available, with a rear protective cover or with a perforated cover for the pins.
+- [Battery pack holder](https://www.thingiverse.com/thing:2666671) - Simple 3D printed battery pack holder for BBC micro:bit.
 
 
 ## Projects
