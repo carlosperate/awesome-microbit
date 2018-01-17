@@ -336,6 +336,7 @@ Useful Articles for developing on the micro:bit.
 ### eBooks
 
 - [Networking with the micro:bit](https://microbit.nominetresearch.uk/networking-book/)
+- [micro:bit in Wonderland](https://leanpub.com/microbitinwonderland)
 
 
 ## Teaching Resources
