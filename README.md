@@ -338,7 +338,7 @@ Useful Articles for developing on the micro:bit.
 - [Programming with MicroPython](http://shop.oreilly.com/product/0636920056515.do)
 - [Getting Started with the micro:bit](http://shop.oreilly.com/product/0636920115267.do)
 - [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735)
-- [Programming the BBC micro:bit](http://simonmonk.org/prog_mb/)
+- [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/)
 
 ### eBooks
 
