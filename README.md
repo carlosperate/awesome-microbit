@@ -138,6 +138,7 @@ Contributions are welcome!
 - [Bluetooth beacons](https://github.com/kshoji/pxt-bluetooth-beacons) - Allows the micro:bit to act as iBeacon / AltBeacon advertiser.
 - [micro turtle](https://github.com/Microsoft/pxt-microturtle) - A LOGO-like turtle library, the turtle is a single pixel moving on the micro:bit screen.
 - [Grove](https://github.com/seeed-studio/pxt-grove) - Blocks for several Seeed Studio Grove modules.
+- [LumexOLED](https://github.com/lioujj/pxt-oled) - Package designed for Lumex OLED display.
 
 ##### Node.js Libraries
 
