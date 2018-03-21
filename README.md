@@ -350,7 +350,7 @@ Useful Articles for developing on the micro:bit.
 - [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735)
 - [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/)
 - [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/)
-- [micro:bit in Wonderland](https://leanpub.com/microbitinwonderland)
+- [micro:bit in Wonderland](http://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html)
 
 
 ## Teaching Resources
