@@ -211,6 +211,7 @@ Contributions are welcome!
 - [micro:bit logger](https://play.google.com/store/apps/details?id=nl.defbu.mblogger) - Android app that enables users to log data from the BLE services and export it to a file.
 - [Kitronik Move](https://play.google.com/store/apps/details?id=com.kitronik.kitronikmove) - Android app that presents a D-Pad interface to control a micro:bit over Bluetooth LE.
 - [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp) - A generic tool for Android that allows you to scan, advertise and explore BLE devices. It supports the micro:bit by including information on the micro:bit services, custom macros and more.
+- [Tickle](https://tickleapp.com) - iOS app to program a large selection of devices, including the micro:bit, connecting them all together, so that they can interact with each other.
 
 
 ## ChromeOS Apps
