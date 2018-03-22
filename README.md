@@ -171,6 +171,7 @@ The following editor are no longer maintained:
 - [neopixel](https://github.com/elmorg/uBit_neopixel) - Library for using neopixels with the BBC micro:bit.
 - [microbit Screen](https://github.com/ht-deko/microbit_Screen) - Arduino LED Screen library for micro:bit.
 - [Adafruit Arduino MicroBit library](https://github.com/adafruit/Adafruit_Microbit) - Wrapper code and examples for using micro:bit with Arduino IDE.
+-  [RTCC MCP7941X](https://os.mbed.com/users/euxton/code/microbit-RTCC-MCP7941X/) - Program to interface BBC micro:bit to a MCP79410 RTCC (Real Time Clock Calendar) module.
 
 ### Other micro:bit Languages
 
