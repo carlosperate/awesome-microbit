@@ -222,6 +222,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [Kitronik Move](https://play.google.com/store/apps/details?id=com.kitronik.kitronikmove) - Android app that presents a D-Pad interface to control a micro:bit over Bluetooth LE.
 - [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp) - A generic tool for Android that allows you to scan, advertise and explore BLE devices. It supports the micro:bit by including information on the micro:bit services, custom macros and more.
 - [Tickle](https://tickleapp.com) - iOS app to program a large selection of devices, including the micro:bit, connecting them all together, so that they can interact with each other.
+- [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) - Android app capable to send and receive micro:bit Bluetooth UART data.
 
 
 ## ChromeOS Apps
