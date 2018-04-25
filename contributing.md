@@ -13,14 +13,17 @@ Please note that this project is released with a [Contributor Code of Conduct](c
 Please ensure your pull request adheres to the following guidelines:
 
 - Search previous suggestions before making a new one, as yours may be a duplicate.
-- Make sure the list is useful before submitting. That implies it has enough content and every item has a good succinct description.
+- Make sure the new resource is useful before submitting. That implies it has enough content and every item has a good succinct description.
 - Make an individual pull request for each suggestion.
 - Use [title-casing](http://titlecapitalization.com) (AP style).
-- Use the following format: `[List Name](link)`
+- Use the following format: `[Resource Title](link) - Resource short Description (2 lines or less in total).`
 - Link additions should be added to the bottom of the relevant category.
 - New categories or improvements to the existing categorization are welcome.
 - Check your spelling and grammar.
+- Use the correct spelling and capitalisation for `BBC micro:bit`, `micro:bit`, and `Micro:bit Educational Foundation` (resource title could be excluded if there is a good reason).
 - The pull request and commit should have a useful title.
+- The content linked is in English or contains an English translation.
+
 
 Thank you for your suggestions!
 
