@@ -400,7 +400,8 @@ Useful Articles for developing on the micro:bit.
 - [Micro:bit Lessons Aligned to Code.org's CS Fundamentals](http://microbit.org/teach/code-org-fundamentals/) - Includes lesson plans aligned to Code.org's Computer Science Fundamentals curriculum for primary and elementary school students.
 - [First steps in using micro:bits with PCs](http://community.computingatschool.org.uk/resources/5437/single) - This very comprehensive article explores ways in which the micro:bit can send data via USB cable or wirelessly to PC applications.
 - [Starting Computer Science with the BBC micro:bit](http://microbit.org/en/2018-01-19-train_the_trainer/) - From Getting Started to Games. Computer Science teaching resources designed for use with students aged 10-14 years.
-- [Science Experiment Lessons](https://makecode.microbit.org/courses/ucp-science) - Geared for students in middle and early high school, these Science Experiment lessons are designed help gain a greater understanding of the forces and behaviour of the physical world. 
+- [Science Experiment Lessons](https://makecode.microbit.org/courses/ucp-science) - Geared for students in middle and early high school, these Science Experiment lessons are designed help gain a greater understanding of the forces and behaviour of the physical world.
+- [Part 1](https://microbit.hackster.io/kkristoff/micro-bit-basics-for-teachers-part-1-the-hardware-768229), [Part 2](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-2-javascript-blocks-6eaed5), and [Part 3](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-3-micropython-c3fde0) of micro:bit Basics for Teachers - Are you a teacher who wants to use micro:bit in your classroom, but doesn't know where to start? We'll show you how!
 
 ### BBC Teaching Resources
 
