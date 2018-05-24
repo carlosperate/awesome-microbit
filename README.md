@@ -192,6 +192,7 @@ Other programming languages capable to program the micro:bit.
 - [Pascal](http://wiki.freepascal.org/micro:bit) - Free Pascal compiler that can target the ARM embedded platform, including the micro:bit.
 - [Ada](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/examples/MicroBit) - Instruction on how to setup the Ada development environment for the micro:bit.
 - [Sniff](http://www.sniff.org.uk/p/bbc-microbit.html) - Sniff is a "Scratch-like" programming language that's designed to help Scratchers move gently from Scratch to more conventional languages.
+- [Lisp](http://www.ulisp.com/show?2672) - An interpreter for the classic AI programming language for the BBC micro:bit.
 
 ### Other Interaction Languages
 
