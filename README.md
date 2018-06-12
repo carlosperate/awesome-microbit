@@ -2,7 +2,7 @@
 
 [![micro:bit logo](https://i.imgur.com/rYLbkBh.jpg)](https://www.microbit.org)
 
-A curated list of resources for the BBC micro:bit, a tiny programmable computer designed to make learning and teaching easy and fun! 
+A curated list of resources for the BBC micro:bit, a tiny programmable computer designed to make learning and teaching easy and fun!
 This embedded board has a Bluetooth capable microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and accessible GPIO.
 
 Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
@@ -355,7 +355,6 @@ Useful Articles for developing on the micro:bit.
 ### Article Collections
 
 - [MultiWingSpan](http://www.multiwingspan.co.uk/micro.php) - Large collection of examples, instructions, and direction on how to use electronic components.
-- [ElecFreaks micro:bit category](https://www.elecfreaks.com/blog/micro-bit/) - ElecFreaks collection of experiments going through the concepts of using individual sensors or components.
 - [SparkFun micro:bit tutorials](https://learn.sparkfun.com/tutorials/tags/microbit) - Collection of tutorials from SparkFun, including comprehensive experiment guides for their kits.
 - [BitIO blogs](http://warksjammy.blogspot.co.uk/2017/07/bitio-blogs-in-one-place.html) - Collection of blogs written about using the BitIO Python module to control the micro:bit.
 - [micro:bit learning](http://www.microbitlearning.com/tag/microbit) - Blog with a section for articles showing how to use a wide selection of sensors with the micro:bit and the Arduino software.
