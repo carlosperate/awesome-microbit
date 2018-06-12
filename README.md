@@ -129,7 +129,7 @@ The following editors are no longer maintained:
 - [UCL Junkrobot](https://github.com/chevyng/pxt-ucl-junkrobot) - Junk robot controlled using 28BYJ-48 stepper motors and HC-SR04 ultrasonic sensor.
 - [BitBot](https://github.com/srs/pxt-bitbot) - BitBot Package for Microsoft PXT.
 - [gamer:bit](https://github.com/sparkfun/pxt-gamer-bit) - SparkFun gamer:bit package for Microsoft MakeCode.
-- [moto:bit](https://github.com/sparkfun/pxt-moto-bit) - MakeCode package for the SparkFun weather:bit board.
+- [moto:bit](https://github.com/sparkfun/pxt-moto-bit) - MakeCode package for the SparkFun moto:bit board.
 - [weather:bit](https://github.com/sparkfun/pxt-weather-bit) - Package to add support for the weather:bit add-on board from SparkFun.
 - [SSD1306](https://github.com/Tinkertanker/pxt-ssd1306-microbit) - Package for SSD1306 OLED controller, based on the Adafruit Arduino library.
 - [mi:node](https://github.com/minodekit/pxt-minode) - Mi:node kit (micro:bit IoT Starter Kit by element14) driver package.
