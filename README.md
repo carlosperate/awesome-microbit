@@ -137,6 +137,7 @@ The following packages can be added into MakeCode by copying the GitHub URL and 
 - [HoneyBit](https://github.com/HoneycombKits/pxt-HoneyBit) - A Honeycomb kits package for micro:bit MakeCode.
 - [Bluetooth beacons](https://github.com/kshoji/pxt-bluetooth-beacons) - Allows the micro:bit to act as iBeacon / AltBeacon advertiser.
 - [LumexOLED](https://github.com/lioujj/pxt-oled) - Package designed for Lumex OLED display.
+- [MakerBit](https://github.com/1010Technologies/pxt-makerbit) - Blocks that support Roger Wagner's MakerBit board including Serial MP3, I2C LCD 1602, and ultrasonic.
 
 ##### Node.js Libraries
 
