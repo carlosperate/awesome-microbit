@@ -94,6 +94,7 @@ The following editors are no longer maintained:
 - [DHT12](https://github.com/mcauser/microbit-dht12) - Library for interfacing with an Aosong DHT12 temperature and humidity sensor over I2C.
 - [TM1637](https://github.com/mcauser/microbit-tm1637) - Library for quad 7-segment LED display modules using the TM1637 LED driver.
 - [micro:bit MIDI](https://github.com/liamkinne/microbit-midi) - Module to enable talking to MIDI devices on the BBC micro:bit.
+- [Kitronik Motor Driver Board](https://github.com/MrYsLab/kitronik_motor_board) - A micro:bit MicroPython class to control the Kitronik motor driver board.
 
 ##### Python Libraries
 
