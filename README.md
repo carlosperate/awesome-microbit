@@ -308,6 +308,7 @@ All these projects contain steps and resources required for reproduction.
 - [OpenGestureControl](https://opengesturecontrol.github.io) - A Linux application which interacts with the BBC micro:bit to give hand prothesis users the ability to control their desktop computer using gestures.
 - [micro:bit spectrum](https://github.com/linker3000/micro-bit_spectrum) - Circuit and code to display an audio spectrum bar chart on the BBC micro:bit.
 - [micro:bit TVPong](https://github.com/linker3000/Microbit-TVPong) - Play the classic Pong game on a TV - using BBC Microbits as paddles, Bluetooth also supported.
+- [Remote control LibreOffice slides with a micro:bit](https://blog.oless.xyz/post/microbitremote/) - Control LibreOffice Impress slides (as well as any other program) via Bluetooth on Linux.
 
 ### Project Collections
 
