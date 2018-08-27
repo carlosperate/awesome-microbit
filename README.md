@@ -341,6 +341,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Radio Packets](https://ukbaz.github.io/howto/ubit_radio.html) - Explanation of the MakeCode radio packet specification (built on top of the micro:bit runtime specification) and how to communicate between MakeCode and MicroPython programs via radio.
 - [Synchronized Music on micro:bits](https://blog.flowblok.id.au/2018-02/synchronized-music-on-microbits.html) - Building a micro:bit mesh network so they can play music synchronized across a large area.
 - [Using the Built-in Sensors](https://learn.adafruit.com/micro-bit-lesson-1-using-the-built-in-sensors) - Learn how to use the micro:bit's built-in accelerometer and magnetometer.
+- [Bluetooth Low Energy Remote Control for Spotify](https://www.hackster.io/josejuansanchez/bluetooth-low-energy-remote-control-for-spotify-3438d1) - This project allows you to configure your micro:bit to work as a Bluetooth Low Energy remote control to control Spotify on macOS.
 
 ### Article Collections
 
