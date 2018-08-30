@@ -308,6 +308,7 @@ All these projects contain steps and resources required for reproduction.
 - [OpenGestureControl](https://opengesturecontrol.github.io) - A Linux application which interacts with the BBC micro:bit to give hand prothesis users the ability to control their desktop computer using gestures.
 - [micro:bit spectrum](https://github.com/linker3000/micro-bit_spectrum) - Circuit and code to display an audio spectrum bar chart on the BBC micro:bit.
 - [micro:bit TVPong](https://github.com/linker3000/Microbit-TVPong) - Play the classic Pong game on a TV - using BBC Microbits as paddles, Bluetooth also supported.
+- [Bluetooth Low Energy Remote Control for Spotify](https://www.hackster.io/josejuansanchez/bluetooth-low-energy-remote-control-for-spotify-3438d1) - This project allows you to configure your micro:bit to work as a Bluetooth Low Energy remote control for Spotify on macOS.
 
 ### Project Collections
 
