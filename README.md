@@ -309,7 +309,7 @@ All these projects contain steps and resources required for reproduction.
 - [micro:bit spectrum](https://github.com/linker3000/micro-bit_spectrum) - Circuit and code to display an audio spectrum bar chart on the BBC micro:bit.
 - [micro:bit TVPong](https://github.com/linker3000/Microbit-TVPong) - Play the classic Pong game on a TV - using BBC Microbits as paddles, Bluetooth also supported.
 - [Bluetooth Low Energy Remote Control for Spotify](https://www.hackster.io/josejuansanchez/bluetooth-low-energy-remote-control-for-spotify-3438d1) - This project allows you to configure your micro:bit to work as a Bluetooth Low Energy remote control for Spotify on macOS.
-- [Remote control LibreOffice slides with a micro:bit](https://blog.oless.xyz/post/microbitremote/) - The micro:bit as a Bluetooth remote for LibreOffice Impress presentations (and other use cases) on Linux using evemu to handle a virtual input device
+- [Remote control LibreOffice slides with a micro:bit](https://blog.oless.xyz/post/microbitremote/) - The micro:bit as a Bluetooth remote for LibreOffice Impress presentations (and other use cases) on Linux using evemu to handle a virtual input device.
 
 ### Project Collections
 
