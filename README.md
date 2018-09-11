@@ -382,7 +382,7 @@ Useful Articles for developing on the micro:bit.
 
 - [microbit.org Teaching Resources](https://www.microbit.org/teach/)
 - [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
-- [Make with the micro:bit by Technology Will Save Us](http://make.techwillsaveus.com/bbc-microbit)
+- [Make with the micro:bit by Technology Will Save Us](https://make.techwillsaveus.com/microbit)
 - [IET micro:bit Teaching Resources](http://microbit.org/teach/iet/) - A series of resources created by the IET (Institution of Engineering and Technology) as part of their highly successful IET Faraday brand.
 - [Grok Learning](https://groklearning.com/microbit/) - Provides an online MicroPython code editor, Blockly visual programming, full micro:bit simulator, curriculum-aligned teaching material and auto-marked problems.
 - [micro:bit For Primary Schools](http://mb4ps.co.uk) - Fully-customisable scheme of work and resources for use in the primary classroom.
