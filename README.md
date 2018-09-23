@@ -267,11 +267,12 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:Racing](https://www.myminifactory.com/object/micro-racing-18280) - Driving wheel case for the micro:bit.
 - [Binary Watch](https://www.myminifactory.com/object/binary-watch-15257) - Watch case and strap for the micro:bit.
 - [micro:bit Compass](https://www.myminifactory.com/object/micro-bit-compass-18994) - Compass case for the micro:bit.
-- [A4 folder holder](https://www.myminifactory.com/object/micro-bit-a4-folder-holder-22039) - micro:bit holder to store your device in a A4 school folder.
+- [A4 folder holder](https://www.myminifactory.com/object/micro-bit-a4-folder-holder-22039) - Device holder to store your micro:bit in a A4 school folder.
 - [mibot drawing robot](https://www.myminifactory.com/object/mibot-drawing-robot-36030) - Chassis for a painting robot powered by a BBC micro:bit and its motor driver board.
 - [Robottillo:bit](https://www.myminifactory.com/object/robottillo-bit-46478) - Case which looks like a small robot. Two versions available, with a rear protective cover or with a perforated cover for the pins.
 - [Battery pack holder](https://www.thingiverse.com/thing:2666671) - Simple battery clip for the BBC micro:bit.
 - [micro:bit holder](https://www.thingiverse.com/thing:2750805) - Stand that holds 20 micro:bit boards vertically, useful in a classroom setting.
+- [BBC micro:bit Case V2](https://www.thingiverse.com/thing:3028078) - A slim, nice looking, and functional snap-together case that protects all sides and corners.
 
 
 ## CAD
