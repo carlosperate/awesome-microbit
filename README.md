@@ -328,6 +328,7 @@ All these projects contain steps and resources required for reproduction.
 - [Tinkercademy Projects](https://tinkercademy.com/microbit/) - Collection of projects using the micro:bit and Tinkercademy Tinker Kit.
 - [Raspberry Pi micro:bit Projects](https://projects.raspberrypi.org/en/projects?technologies%5B%5D=microbit) - Collection of Raspberry Pi and micro:bit projects from the Raspberry Pi Foundation.
 - [Hackaday.io micro:bit Projects](https://hackaday.io/projects?tag=micro%3Abit) - Projects using the micro:bit tag in Hackaday.io, a collaborative hardware development community.
+- [Maker.io micro:bit projects](https://www.digikey.com.au/en/maker/search-results?y=13825c8674444e22884d8d26197819d1&t=54c4be4fbd2f4f748d1eacf05fd3b5b0&g=newest&page=1) - All the micro:bit projects users posted in Maker.io, a playground for makers.
 
 
 ## Articles
