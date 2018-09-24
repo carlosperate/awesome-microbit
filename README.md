@@ -1,6 +1,6 @@
 # Awesome micro:bit [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-[![micro:bit logo](https://i.imgur.com/rYLbkBh.jpg)](https://www.microbit.org)
+[![micro:bit logo](https://user-images.githubusercontent.com/4189262/45967806-fcf4ec00-c026-11e8-90a7-be2ecac881d5.png)](https://www.microbit.org)
 
 A curated list of resources for the BBC micro:bit, a tiny programmable computer designed to make learning and teaching easy and fun!
 This embedded board has a Bluetooth capable microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and accessible GPIO.
