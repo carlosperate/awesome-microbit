@@ -12,3 +12,7 @@ install:
 script:
   # - awesome-lint README.md
   - awesome_bot README.md --allow-redirect --allow-dupe
+
+notifications:
+  email:
+    on_failure: always
