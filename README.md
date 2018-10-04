@@ -111,6 +111,7 @@ The following editors are no longer maintained:
 ##### Python Programming Tools
 
 - [uFlash](https://github.com/ntoll/uflash/) - Utility for flashing the micro:bit with Python scripts and the MicroPython runtime.
+- [MicroREPL](https://github.com/ntoll/microrepl) - A REPL client for MicroPython running on the BBC micro:bit.
 - [MicroFs](https://github.com/ntoll/microfs) - Simple command line tool and module for interacting with the limited file system provided by MicroPython on the micro:bit.
 - [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - Package that allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
 
