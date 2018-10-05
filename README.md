@@ -148,6 +148,7 @@ The following packages can be added into MakeCode by copying the GitHub URL and 
 - [BMP085](https://github.com/sabas1080/uBit_BMP085) - Package to control the BMP085 or BMP180 pressure and altitude sensors.
 - [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, enabling the the micro:bit to obtain temperature and relative humidity from these sensors.
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Package to calculate distances using a VL53L0X Time-of-Flight ranging sensor.
+- [KY-040](https://github.com/Tinkertanker/pxt-rotary-encoder-ky040) - Package for using the KY-040 rotary encoder.
 
 ##### Node.js Libraries
 
@@ -181,6 +182,7 @@ The following packages can be added into MakeCode by copying the GitHub URL and 
 - [AS-289R2](https://os.mbed.com/users/MACRUM/code/microbit_AS-289R2/) - AS-289R2 thermal printer Mbed library for micro:bit.
 - [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, enabling the the micro:bit to obtain temperature and relative humidity from these sensors.
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Driver for the VL53L0X Time-of-Flight ranging sensor.
+- [KY-040](https://github.com/Tinkertanker/pxt-rotary-encoder-ky040) - Library for using the KY-040 rotary encoder.
 
 ### Other micro:bit Languages
 
