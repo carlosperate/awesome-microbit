@@ -295,6 +295,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
 - [micro:bit SVG](https://github.com/microbit-foundation/microbit-svg) - A detailed SVG (Scalable Vector Graphics) drawing of the BBC micro:bit.
 - [MonkMakes micro:bit Diagramming Kit](https://github.com/simonmonk/mm_mb_diagramming_kit) - An SVG file template for drawing BBC micro:bit wiring diagrams using alligator clips.
+- [Pixel Art](http://www.steamlearninglabs.com/blog/2018/2/26/microbit-inspired-pixel-art-download-use) - micro:bit-inspired fan art made with "Make 8 Bit Art".
 
 
 ## Projects
