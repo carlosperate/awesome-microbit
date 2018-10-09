@@ -150,6 +150,7 @@ The following packages can be added into MakeCode by copying the GitHub URL and 
 - [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, enabling the the micro:bit to obtain temperature and relative humidity from these sensors.
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Package to calculate distances using a VL53L0X Time-of-Flight ranging sensor.
 - [KY-040](https://github.com/Tinkertanker/pxt-rotary-encoder-ky040) - Package for using the KY-040 rotary encoder.
+- [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Package to controll the PCA9685, a 16-channel PWM controller, with included servo support.
 
 ##### Node.js Libraries
 
@@ -184,6 +185,7 @@ The following packages can be added into MakeCode by copying the GitHub URL and 
 - [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, enabling the the micro:bit to obtain temperature and relative humidity from these sensors.
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Driver for the VL53L0X Time-of-Flight ranging sensor.
 - [KY-040](https://github.com/Tinkertanker/pxt-rotary-encoder-ky040) - Library for using the KY-040 rotary encoder.
+- [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Driver for the PCA9685, a 16-channel PWM controller, with included servo support.
 
 ### Other micro:bit Languages
 
