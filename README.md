@@ -285,6 +285,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Battery pack holder](https://www.thingiverse.com/thing:2666671) - Simple battery clip for the BBC micro:bit.
 - [micro:bit holder](https://www.thingiverse.com/thing:2750805) - Stand that holds 20 micro:bit boards vertically, useful in a classroom setting.
 - [BBC micro:bit Case V2](https://www.thingiverse.com/thing:3028078) - A slim, nice looking, and functional snap-together case that protects all sides and corners.
+- [Otto Robot](https://www.thingiverse.com/thing:2786066) - Otto chassis for the microbit to make a bidepad robot with a robitbit accessory.
 
 
 ## CAD
