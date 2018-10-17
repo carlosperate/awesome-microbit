@@ -197,6 +197,7 @@ Other programming languages capable to program the micro:bit.
 - [Sniff](http://www.sniff.org.uk/p/bbc-microbit.html) - Sniff is a "Scratch-like" programming language that's designed to help Scratchers move gently from Scratch to more conventional languages.
 - [Lisp](http://www.ulisp.com/show?2672) - An interpreter for the classic AI programming language for the BBC micro:bit.
 - [C# / F#](https://github.com/kekyo/IL2C) - IL2C is a translator implementation of .NET intermediate language to C language, with C# and F# examples for the micro:bit.
+- [TinyGo](https://github.com/aykevl/tinygo) - ([examples](https://github.com/hybridgroup/tinygo-zoo)) Project to bring Go to microcontrollers and small systems, with out-of-box support for the BBC micro:bit. 
 
 ### Other Interaction Languages
 
