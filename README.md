@@ -122,15 +122,15 @@ The following editors are no longer maintained:
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/productId/9PJC7SV48LCX) - Windows 10 application for micro:bit MakeCode.
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 
-##### MakeCode Packages
+##### MakeCode Extensions
 
-To add a package find the  "Add Package" option in the Settings menu or the "Advance" toolbox category.
+To add an extension find the "Extensions" option in the Settings menu or the "Advance" toolbox category.
 
-The packages included in the official list below can be found by searching for their name in the "Add Package" window.
+The extensions included in the official list below can be found by searching for their name in the "Extensions" screen.
 
-- [MakeCode Package Gallery](https://makecode.microbit.org/packages) - Official list of packages available directly within MakeCode.
+- [MakeCode Extensions Gallery](https://makecode.microbit.org/extensions) - Official list of extensions available directly within MakeCode.
 
-The following packages can be added into MakeCode by copying the GitHub URL and pasting it into the search box of the "Add Package" window.
+The following extensions can be added into MakeCode by copying the GitHub URL and pasting it into the search box of the "Extensions" screen.
 
 - [BlueDot](https://github.com/Microsoft/pxt-bluedot) - PXT package to support the BlueDot app - beta.
 - [Kitronik Servo Lite](https://github.com/KitronikLtd/pxt-kitronik-servo-lite) - Blocks that support Kitronik Servo:Lite board for the micro:bit.
