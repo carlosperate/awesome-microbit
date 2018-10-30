@@ -275,6 +275,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [SparkFun moto:bit](https://github.com/sparkfun/Micro_Bit_Moto_Bit) - Open source files for the SparkFun moto:bit, a board to provide a robotics platform.
 - [SparkFun weather:bit](https://github.com/sparkfun/Micro_Bit_Weather_Bit) - Open source files for the SparkFun weather:bit, a board to provide a weather station.
 - [SparkFun gamer:bit](https://github.com/sparkfun/Micro_Bit_Gamer_Bit) - Open source files for the SparkFun gamer:bit, a board to provide a game system.
+- [NeoBit](https://github.com/ppelleti/NeoBit) - Open source board that lets you hook up NeoPixel and DotStar LEDs to a BBC micro:bit, also contains a headphone jack and a couple of slide potentiometers for input. 
 
 
 ## 3D Printing
