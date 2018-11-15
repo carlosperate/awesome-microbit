@@ -76,23 +76,23 @@ The following editors are no longer maintained:
 
 ##### MicroPython Libraries
 
-- [Servo](https://github.com/microbit-playground/microbit-servo-class) - Simple class for controlling servos on the micro:bit via PWM.
-- [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - Simple class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver via I2C.
-- [MAX7219 7-segment](https://github.com/microbit-playground/matrix7seg) - MicroPython module for using a 7-segment display driven by a MAX7219 chip via SPI.
-- [MAX7219 matrix](https://github.com/titimoby/microbit4all/blob/master/libraries/matrix7219.py) - MicroPython module for using a 8x8 Leds Matrix driven by a MAX7219 chip via SPI.
-- [SSD1306](https://github.com/fizban99/microbit_ssd1306) - MicroPython library to control the OLED SSD1306 128x64 I2C with a micro:bit.
-- [SSD1306 7seg](https://github.com/fizban99/microbit_ssd1306_7seg) - MicroPython library to use an SSD1306 OLED display as a 7 segment display.
-- [SSD1306 SPI](https://github.com/fizban99/microbit_ssd1306spi) - MicroPython library to control the OLED SSD1306 128x64 display with a micro:bit via SPI.
-- [SSD1306](https://github.com/Afantor/Microbit_SSD1306_OLED) - Simple MicroPython library to control the SSD1306 display via I2C.
-- [HT16K33](https://bitbucket.org/thesheep/microbit-ht16k33) - MicroPython library for the HT16K33 LED matrix driver in multiple configurations (16x8, 8x8 or 8x8x2).
-- [HC-SR04](https://github.com/fizban99/microbit_hcsr04) - Basic MicroPython library to read the distance from a HC-SR04 ultrasonic sensor using the SPI peripheral.
-- [US-100](https://github.com/fizban99/microbit_us100) - Basic MicroPython library to read the distance from a US-100 ultrasonic sensor via UART.
-- [KY038](https://github.com/fizban99/microbit_ky038) - MicroPython library to calibrate and use a sound sensor KY038, including clap counter functionality.
-- [Nokia 5110 PCD8544 LCD](https://github.com/matneee/microbit-nokia5110-PCD8544-lcd) - Fast Micro:bit MicroPython controller for Nokia 5110 LCDs.
-- [MPL115A1](https://github.com/hackscribble/microbit-MPL115A1-barometer) - MicroPython class to read the pressure and temperature readings from the NXP MPL115A1 SPI sensor.
-- [24LCxxx EEPROM](https://github.com/matneee/microbit-I2C-EEPROM-24LCxxx-Read-Write) - Example Micro:bit functions to read and write to a Microchip I2C EEPROM.
-- [ULN2003](https://github.com/IDWizard/uln2003) - Micropython code to drive stepper motors via ULN2003 darlington transistors.
-- [Bosch BME280](https://github.com/jemerlia/microbit-BoschBME280-P-T-and-H-Sensor) - Reading from Bosch BME280 Pressure, Temperature and Humidity Sensor via I2C.
+- [Servo](https://github.com/microbit-playground/microbit-servo-class) - Class for controlling servos on the micro:bit via PWM.
+- [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - Class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver via I2C.
+- [MAX7219 7-segment](https://github.com/microbit-playground/matrix7seg) - Module for using a 7-segment display driven by a MAX7219 chip via SPI.
+- [MAX7219 matrix](https://github.com/titimoby/microbit4all/blob/master/libraries/matrix7219.py) - Module for using a 8x8 Leds Matrix driven by a MAX7219 chip via SPI.
+- [SSD1306](https://github.com/fizban99/microbit_ssd1306) - Library to control the OLED SSD1306 128x64 I2C with a micro:bit.
+- [SSD1306 7seg](https://github.com/fizban99/microbit_ssd1306_7seg) - Library to use an SSD1306 OLED display as a 7 segment display.
+- [SSD1306 SPI](https://github.com/fizban99/microbit_ssd1306spi) - Library to control the OLED SSD1306 128x64 display with a micro:bit via SPI.
+- [SSD1306](https://github.com/Afantor/Microbit_SSD1306_OLED) - Library to control the SSD1306 display via I2C.
+- [HT16K33](https://bitbucket.org/thesheep/microbit-ht16k33) - Library for the HT16K33 LED matrix driver in multiple configurations (16x8, 8x8 or 8x8x2).
+- [HC-SR04](https://github.com/fizban99/microbit_hcsr04) - Library to read the distance from a HC-SR04 ultrasonic sensor using the SPI peripheral.
+- [US-100](https://github.com/fizban99/microbit_us100) - Library to read the distance from a US-100 ultrasonic sensor via UART.
+- [KY038](https://github.com/fizban99/microbit_ky038) - Library to calibrate and use a sound sensor KY038, including clap counter functionality.
+- [Nokia 5110 PCD8544 LCD](https://github.com/matneee/microbit-nokia5110-PCD8544-lcd) - Fast controller for Nokia 5110 LCDs.
+- [MPL115A1](https://github.com/hackscribble/microbit-MPL115A1-barometer) - Class to read the pressure and temperature readings from the NXP MPL115A1 SPI sensor.
+- [24LCxxx EEPROM](https://github.com/matneee/microbit-I2C-EEPROM-24LCxxx-Read-Write) - Example micro:bit functions to read and write to a Microchip I2C EEPROM.
+- [ULN2003](https://github.com/IDWizard/uln2003) - Module to drive stepper motors via ULN2003 darlington transistors.
+- [Bosch BME280](https://github.com/jemerlia/microbit-BoschBME280-P-T-and-H-Sensor) - Module for Bosch BME280 Pressure, Temperature and Humidity Sensor via I2C.
 - [Pixy](https://github.com/liamkinne/microbit-pixy) - Interface module for using the Pixy cam with the BBC micro:bit.
 - [MB1013](https://github.com/liamkinne/microbit-mb1013) - Module for the MB1013 ultrasonic sensor controlled via UART.
 - [MY9221](https://github.com/mcauser/microbit-my9221) - Library for 10 segment LED bar graph modules using the MY9221 LED driver.
@@ -100,7 +100,7 @@ The following editors are no longer maintained:
 - [DHT12](https://github.com/mcauser/microbit-dht12) - Library for interfacing with an Aosong DHT12 temperature and humidity sensor over I2C.
 - [TM1637](https://github.com/mcauser/microbit-tm1637) - Library for quad 7-segment LED display modules using the TM1637 LED driver.
 - [micro:bit MIDI](https://github.com/liamkinne/microbit-midi) - Module to enable talking to MIDI devices on the BBC micro:bit.
-- [Kitronik Motor Driver Board](https://github.com/MrYsLab/kitronik_motor_board) - A micro:bit MicroPython class to control the Kitronik motor driver board.
+- [Kitronik Motor Driver Board](https://github.com/MrYsLab/kitronik_motor_board) - Class to control the Kitronik motor driver board.
 - [microbit python libs](https://github.com/shaoziyang/microbit-lib) - Growing collection of modules, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307/DS3231 RTC, NeoPixel drivers, APDS9930 Digital Proximity and Ambient Light Sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
 
 ##### Python Libraries
