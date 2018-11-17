@@ -341,7 +341,8 @@ All these projects contain steps and resources required for reproduction.
 - [Bluetooth Low Energy Remote Control for Spotify](https://www.hackster.io/josejuansanchez/bluetooth-low-energy-remote-control-for-spotify-3438d1) - This project allows you to configure your micro:bit to work as a Bluetooth Low Energy remote control for Spotify on macOS.
 - [Remote control LibreOffice slides with a micro:bit](https://blog.oless.xyz/post/microbitremote/) - The micro:bit as a Bluetooth remote for LibreOffice Impress presentations (and other use cases) on Linux using evemu to handle a virtual input device.
 - [Stirling Blue](https://www.element14.com/community/community/design-challenges/bluetoothunleashed/blog/2018/05/07/stirling-blue-project-description-blog-1) - An extensive project to examine Stirling engine operation and performance. A micro:bit is used to create a custom keyboard and LCD interface that communicates with other parts of the project.
-- [Micro:Gamer](https://hackaday.io/project/47760-microgamer) - A portable game console based on the micro:bit board. It features a 128x64 monochrome OLED screen, six buttons, a buzzer for sound, and a 2xAAA battery holder. 
+- [Micro:Gamer](https://hackaday.io/project/47760-microgamer) - A portable game console based on the micro:bit board. It features a 128x64 monochrome OLED screen, six buttons, a buzzer for sound, and a 2xAAA battery holder.
+- [µBOSS](https://www.element14.com/community/community/project14/test-instrumentation/blog/2018/10/12/%C2%B5boss-test-instrumentation-microbit) - Turning a BBC micro:bit into a test instrument by displaying all the sensor readings on an LCD and packaging it into a 3D printed box.
 
 ### Project Collections
 
