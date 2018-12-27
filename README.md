@@ -391,7 +391,7 @@ Useful Articles for developing on the micro:bit.
 - [BBC micro:bit - Kitronik University](https://www.kitronik.co.uk/blog/bbc-microbit-kitronik-university/) - A varied collection of micro:bit resources by Kitronik.
 - [Maker.io micro:bit blog posts](https://www.digikey.com.au/en/maker/search-results?y=cb5252a72f0549558ffaaa2a80d3a1ed&t=54c4be4fbd2f4f748d1eacf05fd3b5b0&g=newest&page=1) - All the micro:bit articles posted in Maker.io, a playground for makers.
 - [Physical computing with the BBC micro:bit](http://www.teachwithict.com/physical-computing.html) - How to use different electronic components with the micro:bit.
-- [DF Robot micro:bit blog section](https://www.dfrobot.com/category-microbit.html) - log posts and articles about micro:bit from DF Robot.
+- [DF Robot micro:bit blog section](https://www.dfrobot.com/category-microbit.html) - Blog posts and articles about micro:bit from DF Robot.
 
 
 ## Videos
