@@ -153,6 +153,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Package to calculate distances using a VL53L0X Time-of-Flight ranging sensor.
 - [KY-040](https://github.com/Tinkertanker/pxt-rotary-encoder-ky040) - Package for using the KY-040 rotary encoder.
 - [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Package to control the PCA9685, a 16-channel PWM controller, with included servo support.
+- [MakerBit-Touch](https://github.com/1010Technologies/pxt-makerbit-touch) - Touch sensing package for the capacitive touch sensor controller MPR121.
 
 ##### Node.js Libraries
 
