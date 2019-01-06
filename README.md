@@ -176,6 +176,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 ##### C/C++ Editors
 
 - [Micro:Pi](https://github.com/Bottersnike/Micro-Pi) - C/C++ editor for the micro:bit with serial monitor and deploy functionality. Written in Python with an installer (ATM Linux only, but could be manually installed in any OS) that includes all dependencies.
+- [PlatformIO](https://docs.platformio.org/en/latest/boards/nordicnrf51/bbcmicrobit.html) - Embedded IDE with support for the micro:bit using the Arduino or Mbed software stack.
 
 ##### C/C++ Libraries
 
