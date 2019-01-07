@@ -248,6 +248,8 @@ These languages do not program the micro:bit directly, but can be used to create
 - [Tickle](https://tickleapp.com) - iOS app to program a large selection of devices, including the micro:bit, connecting them all together, so that they can interact with each other.
 - [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) - Android app capable to send and receive micro:bit Bluetooth UART data.
 - [micro:bit Slither](https://github.com/novucs/microbit-slither) - Multiplayer snake game on Android, controlled with micro:bits via Bluetooth.
+- [Micro:bit Explorer](https://phwallen.github.io/microbit-explorer/) - A Swift Playground Book that introduces computer fundamentals in a visual way, it allows you to enter machine code or assembly and see how it executes and how the micro:bit registers are affected.
+
 
 
 ## ChromeOS Apps
