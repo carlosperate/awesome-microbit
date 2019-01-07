@@ -5,7 +5,7 @@
 A curated list of resources for the BBC micro:bit, a tiny programmable computer designed to make learning and teaching easy and fun!
 This embedded board has a Bluetooth capable microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and GPIO accessible via the edge connector.
 
-[![watch badge](https://img.shields.io/github/watchers/badges/shields.svg?label=Watch&style=social)](https://github.com/carlosperate/awesome-microbit/watchers) You can "Watch" this repository if you'd like to get notfications when a new entry is added to the list.
+[![watch badge](https://img.shields.io/github/watchers/carlosperate/awesome-microbit.svg?label=Watch&style=social)](https://github.com/carlosperate/awesome-microbit/watchers) You can "Watch" this repository if you'd like to get notfications when a new entry is added to the list.
 
 Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
