@@ -193,7 +193,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Driver for the VL53L0X Time-of-Flight ranging sensor.
 - [KY-040](https://github.com/Tinkertanker/pxt-rotary-encoder-ky040) - Library for using the KY-040 rotary encoder.
 - [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Driver for the PCA9685, a 16-channel PWM controller, with included servo support.
-- [DS3234](https://os.mbed.com/users/jsa1969/code/microbit-DS3234/) - Example using DS3234 RTC drivers via SPI.
+- [DS3234](https://os.mbed.com/users/jsa1969/code/microbit-DS3234/) - Example using DS3234 RTC driver via SPI.
 
 ### Other micro:bit Languages
 
