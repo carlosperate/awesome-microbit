@@ -303,6 +303,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Otto Robot](https://www.thingiverse.com/thing:2786066) - Otto chassis for the microbit to make a bidepad robot with a robitbit accessory.
 - [micro:bit Tracking Car](https://www.thingiverse.com/thing:3270962) - A line follower chassis for the micro:bit.
 - [Walking Robot V1](https://www.thingiverse.com/thing:3300339) - Add-on to the bit:booster that makes a simple walking robot using two continuous servos.
+- [Humbot mi:sumo robot](https://www.myminifactory.com/object/3d-print-humbot-mi-sumo-microbit-robot-80445) - Chassis for a sumo robot.
 
 
 ## CAD
