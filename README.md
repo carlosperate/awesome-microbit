@@ -355,6 +355,7 @@ All these projects contain steps and resources required for reproduction.
 - [µBOSS](https://www.element14.com/community/community/project14/test-instrumentation/blog/2018/10/12/%C2%B5boss-test-instrumentation-microbit) - Turning a BBC micro:bit into a test instrument by displaying all the sensor readings on an LCD and packaging it into a 3D printed box.
 - [DIY 3D Virtual Reality System](https://sites.google.com/site/colinord/Home/3d-virtual-reality-hmd-and-controller-project) - Using two micro:bits for head and hand orientation tracking.
 - [Robot Arm Rover](https://github.com/AMoazeni/Robot-Arm-Rover) - A gesture controlled Robot Arm Buggy using the micro:bit accelerometer and radio.
+- [Musical Instrument Controller](https://phwallen.github.io/microbit-music-controller/) - A micro:bit instrument that communites with an iPad via Bluetooth into MIDI controller app that can play music via GarageBand.
 
 ### Project Collections
 
