@@ -356,6 +356,7 @@ All these projects contain steps and resources required for reproduction.
 - [DIY 3D Virtual Reality System](https://sites.google.com/site/colinord/Home/3d-virtual-reality-hmd-and-controller-project) - Using two micro:bits for head and hand orientation tracking.
 - [Robot Arm Rover](https://github.com/AMoazeni/Robot-Arm-Rover) - A gesture controlled Robot Arm Buggy using the micro:bit accelerometer and radio.
 - [Musical Instrument Controller](https://phwallen.github.io/microbit-music-controller/) - A micro:bit instrument that communites with an iPad via Bluetooth into MIDI controller app that can play music via GarageBand.
+- [Inexpensive Remote Controlled Robot](https://mryslab.github.io/microbit-robot/) - Guide to create an inexpesensive robot, easily assembled from a set of off the shelf parts.
 
 ### Project Collections
 
