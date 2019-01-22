@@ -157,6 +157,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Package to control the PCA9685, a 16-channel PWM controller, with included servo support.
 - [MakerBit-Touch](https://github.com/1010Technologies/pxt-makerbit-touch) - Touch sensing package for the capacitive touch sensor controller MPR121.
 - [MAX7219 8x8](https://github.com/alankrantas/pxt-MAX7219_8x8) - Control the MAX7219 LED matrix display module with an 8x8 LED matrix.
+- [ColorBit](https://github.com/51bit/colorbit) - 5x5 WS2812B LED matrix makecode extension for micro:bit.
 
 ##### Node.js Libraries
 
