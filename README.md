@@ -418,6 +418,7 @@ Useful Articles for developing on the micro:bit.
 - [SparkFun video resources](http://sparkfuneducation.com/video-resources/microbit.html) - Growing list of video resources for the micro:bit.
 - [SamCodes YouTube Playlist](https://www.youtube.com/playlist?list=PLumNlyd5JxxegaAVScP7Qm1AXPtJdGBCq) - Video tutorials showing how to  use different electronic components and features of the micro:bit.
 - [Fun with Zephyr Project and BBC micro:bit](https://www.youtube.com/watch?v=ZZRbIpVJGns) - This presentation shows how Zephyr empowers the BBC micro:bit devices and its Bluetooth chip to do fun things.
+- [Behind the MakeCode Hardware](https://www.youtube.com/playlist?list=PLMMBk9hE-SeqDYtw9pGNPsQ10V_EGMyGe) - Collection of videos explaining the basics on how different hardware components work.
 
 
 ## Books
