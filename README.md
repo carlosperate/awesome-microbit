@@ -359,6 +359,7 @@ All these projects contain steps and resources required for reproduction.
 - [Robot Arm Rover](https://github.com/AMoazeni/Robot-Arm-Rover) - A gesture controlled Robot Arm Buggy using the micro:bit accelerometer and radio.
 - [Musical Instrument Controller](https://phwallen.github.io/microbit-music-controller/) - A micro:bit instrument that communites with an iPad via Bluetooth into MIDI controller app that can play music via GarageBand.
 - [Inexpensive Remote Controlled Robot](https://mryslab.github.io/microbit-robot/) - Guide to create an inexpesensive robot, easily assembled from a set of off the shelf parts.
+- [Natural Disaster Sensor](https://core-electronics.com.au/tutorials/natural-disaster-sensor-project-for-the-microbit-stem.html) - Wind, seismic, and temperature data monitoring from remote micro:bits.
 
 ### Project Collections
 
