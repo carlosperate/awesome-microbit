@@ -20,19 +20,19 @@ Contributions are welcome!
 	- [C/C++](#cc)
 	- [Other micro:bit Languages](#other-microbit-languages)
 	- [Other Interaction Languages](#other-interaction-languages)
-- [Programming Tools](#programming-tools)
-- [Mobile Apps](#mobile-apps)
+- [🛠️ Programming Tools](#-programming-tools)
+- [📱 Mobile Apps](#-mobile-apps)
 - [ChromeOS Apps](#chromeos-apps)
 - [Interface Chip](#interface-chip)
 - [Hardware](#hardware)
-- [3D Printing](#3d-printing)
+- [🖨️ 3D Printing](#-3d-printing)
 - [CAD](#cad)
-- [2D Design](#2d-design)
+- [🎨2D Design](#-2d-design)
 - [Projects](#projects)
-- [Articles](#articles)
+- [📰 Articles](#-articles)
 - [Videos](#videos)
-- [Books](#books)
-- [Teaching Resources](#teaching-resources)
+- [📚 Books](#-books)
+- [🏫 Teaching Resources](#-teaching-resources)
 - [Community](#community)
 - [Miscellaneous](#miscellaneous)
 
@@ -230,13 +230,13 @@ These languages do not program the micro:bit directly, but can be used to create
 - [Node-RED](https://github.com/seanmtracey/node-red-contrib-bitio-wrapper) - A node-red (flow-based visual programming) module that wraps some of the functionality of the Python/MicroPython Bitio Library.
 
 
-## Programming Tools
+## 🛠️ Programming Tools
 
 - [Vagrant Development Environment for C/C++, MicroPython and Makecode](https://github.com/carlosperate/microbit-dev-env) - Creates a virtual machine with the toolchain required to create C/C++ programs, develop/compile MicroPython, and create packages for MakeCode.
 - [micro:bit uploader](https://www.touchdevelop.com/microbituploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 
 
-## Mobile Apps
+## 📱 Mobile Apps
 
 - [Official Android App](https://play.google.com/store/apps/details?id=com.samsung.microbit) - ([Source Code](https://github.com/Samsung/microbit)) Pair, program and flash programs to the micro:bit via Bluetooth.
 - [Official iOS App](https://itunes.apple.com/gb/app/micro-bit/id1092687276) - Pair, program and flash programs to the micro:bit via Bluetooth.
@@ -290,7 +290,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [NeoBit](https://github.com/ppelleti/NeoBit) - Open source board that lets you hook up NeoPixel and DotStar LEDs to a BBC micro:bit, also contains a headphone jack and a couple of slide potentiometers for input. 
 
 
-## 3D Printing
+## 🖨️ 3D Printing
 
 - [Microbot Case](http://www.thingiverse.com/thing:1434797) - Case for the micro:bit in the shape of a robot.
 - [micro:bit Stand](http://www.thingiverse.com/thing:2144500) - Stand for the micro:bit.
@@ -316,7 +316,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Proto-PIC CAD Resources](https://www.proto-pic.co.uk/micro-bit-resources.html) - Proto-PIC products CAD resources.
 
 
-## 2D Design
+## 🎨 2D Design
 
 - [micro:bit Fritzing Part](https://github.com/topshed/FritzingParts) - Richard Hayler collection of Fritzing parts contains a model for the micro:bit.
 - [micro:bit-o-matic](https://pycomic.github.io/microbit.html) - Easily create micro:bit illustrations with custom LED matrix messages.
@@ -374,7 +374,7 @@ All these projects contain steps and resources required for reproduction.
 - [Electromaker micro:bit projects](https://www.electromaker.io/projects?platform=microbit) - All the micro:bit projects posted to Electromaker, a platform for makers to showcase their projects.
 
 
-## Articles
+## 📰 Articles
 
 Useful Articles for developing on the micro:bit.
 
@@ -424,7 +424,7 @@ Useful Articles for developing on the micro:bit.
 - [Behind the MakeCode Hardware](https://www.youtube.com/playlist?list=PLMMBk9hE-SeqDYtw9pGNPsQ10V_EGMyGe) - Collection of videos explaining the basics on how different hardware components work.
 
 
-## Books
+## 📚 Books
 
 - [micro:bit IoT In C](http://www.iot-programmer.com/index.php/books/micro-bit-iot-in-c)
 - [Programming with MicroPython](http://shop.oreilly.com/product/0636920056515.do)
@@ -436,7 +436,7 @@ Useful Articles for developing on the micro:bit.
 - [Beginning BBC micro:bit](https://www.apress.com/gb/book/9781484233597)
 
 
-## Teaching Resources
+## 🏫 Teaching Resources
 
 - [microbit.org Teaching Resources](https://www.microbit.org/teach/)
 - [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
@@ -504,7 +504,7 @@ Useful Articles for developing on the micro:bit.
 - [Accessory Guide](https://microbit.org/assets/documents/AccessoryGuide.pdf) - A constantly updated list of accessories for the micro:bit.
 
 
-## License
+## ⚖️ License
 
 [![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
