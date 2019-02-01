@@ -501,6 +501,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:mag](http://micromag.cc) - The Unofficial micro:bit Community Magazine.
 - [micro:bit Out Of Box Experience](https://support.microbit.org/support/solutions/articles/19000021613-reset-the-micro-bit-to-factory-defaults) - ([Source Code](https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/out-of-box-experience)) The default program running on a brand new micro:bit.
 - [Accessory Guide](https://microbit.org/assets/documents/AccessoryGuide.pdf) - A constantly updated list of accessories for the micro:bit.
+- [BtleJack](https://github.com/virtualabs/btlejack) - Based on the micro:bit, it provides everything you need to sniff, jam and hijack Bluetooth Low Energy devices.
 
 
 ## ⚖️ License
