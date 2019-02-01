@@ -23,14 +23,14 @@ Contributions are welcome!
 - [🛠️ Programming Tools](#-programming-tools)
 - [📱 Mobile Apps](#-mobile-apps)
 - [ChromeOS Apps](#chromeos-apps)
-- [Interface Chip](#interface-chip)
-- [Hardware](#hardware)
+- [↔️ Interface Chip](#-interface-chip)
+- [🔩 Hardware](#-hardware)
 - [🖨️ 3D Printing](#-3d-printing)
-- [CAD](#cad)
-- [🎨2D Design](#-2d-design)
+- [📐 CAD](#-cad)
+- [🎨 2D Design](#-2d-design)
 - [Projects](#projects)
 - [📰 Articles](#-articles)
-- [Videos](#videos)
+- [📹 Videos](#-videos)
 - [📚 Books](#-books)
 - [🏫 Teaching Resources](#-teaching-resources)
 - [Community](#community)
@@ -264,7 +264,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [microbit-chrome](https://github.com/Microsoft/microbit-chrome) - Prototype chrome addon that exposes the micro:bit's serial output to web pages like the MakeCode editor.
 
 
-## Interface Chip
+## ↔️ Interface Chip
 
 The USB Interface Chip is the microcontroller placed close to the battery connector. It provides the USB mass storage capability to load the micro:bit firmware using the Operating System file explorer.
 
@@ -276,7 +276,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [DAP.js](https://github.com/ARMmbed/dapjs) - JavaScript (Node.js and WebUSB) interface to DAP-CMSIS over USB/HID, meant to provide a subset of functionality of pyOCD.
 
 
-## Hardware
+## 🔩 Hardware
 
 - [Hardware Design](https://github.com/bbcmicrobit/hardware) - Schematics and bill of materials for the BBC micro:bit.
 - [micro:bit Reference Design](https://github.com/microbit-foundation/microbit-reference-design) - Hardware design files for a board 100% binary compatible with the micro:bit. Created to help make your own micro:bit derived designs.
@@ -310,7 +310,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Humbot mi:sumo robot](https://www.myminifactory.com/object/3d-print-humbot-mi-sumo-microbit-robot-80445) - Chassis for a sumo robot.
 
 
-## CAD
+## 📐 CAD
 
 - [Kitronik CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - BBC micro:bit CAD model from Kitronik.
 - [Proto-PIC CAD Resources](https://www.proto-pic.co.uk/micro-bit-resources.html) - Proto-PIC products CAD resources.
@@ -413,7 +413,7 @@ Useful Articles for developing on the micro:bit.
 - [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
 
 
-## Videos
+## 📹 Videos
 
 - [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - YouTube channel with tutorials to learn to code with your family.
 - [micro:bit and Bluetooth](https://www.youtube.com/playlist?list=PLYOCnwH2UtBzhJ2nvn_DM3itz6GNVwrDu) - YouTube playlist with Martin Woolley's Bluetooth videos.
