@@ -11,15 +11,15 @@ Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
 Contributions are welcome!
 
-## Contents
+## 🗂️ Contents
 
 - [👩‍💻 Programming](#-programming)
-	- [Visual](#visual)
-	- [Python](#python)
-	- [JavaScript / MakeCode](#javascript-and-makecode)
-	- [C/C++](#cc)
-	- [Other micro:bit Languages](#other-microbit-languages)
-	- [Other Interaction Languages](#other-interaction-languages)
+	- [🆚 Visual](#v-isual)
+	- [🐍 Python](#-python)
+	- [🗿 JavaScript / MakeCode](#-javascript-and-makecode)
+	- [©️ C/C++](#-cc)
+	- [🚩 Other micro:bit Languages](#-other-microbit-languages)
+	- [🎚️ Other Interaction Languages](#-other-interaction-languages)
 - [🛠️ Programming Tools](#-programming-tools)
 - [📱 Mobile Apps](#-mobile-apps)
 - [🔵 ChromeOS Apps](#-chromeos-apps)
@@ -29,8 +29,8 @@ Contributions are welcome!
 - [📐 CAD](#-cad)
 - [🎨 2D Design](#-2d-design)
 - [🏗️ Projects](#-projects)
-- [📰 Articles](#-articles)
-- [📹 Videos](#-videos)
+- [🗞️ Articles](#-articles)
+- [🎥 Videos](#-videos)
 - [📚 Books](#-books)
 - [🏫 Teaching Resources](#-teaching-resources)
 - [👪 Community](#-community)
@@ -39,7 +39,7 @@ Contributions are welcome!
 
 ## 👩‍💻 Programming
 
-### Visual
+### 🆚 Visual
 
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (part of Microsoft's PXT).
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
@@ -60,7 +60,7 @@ The following editors are no longer maintained:
 - [s2m](https://github.com/MrYsLab/s2m) - A Python program that acts as a bridge between the Scratch 2 off-line editor and the micro:bit via USB.
 - [s2microbit BLE](https://github.com/memakura/s2microbit-ble#English) - Scratch 2 (offline) extension for BBC micro:bit bluetooth connection with a Windows PC.
 
-### Python
+### 🐍 Python
 
 - [MicroPython](http://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
 
@@ -119,7 +119,7 @@ The following editors are no longer maintained:
 - [MicroFs](https://github.com/ntoll/microfs) - Simple command line tool and module for interacting with the limited file system provided by MicroPython on the micro:bit.
 - [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - Package that allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
 
-### JavaScript and MakeCode
+### 🗿 JavaScript and MakeCode
 
 - [MakeCode](https://makecode.microbit.org) - This block and text editor for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
@@ -173,7 +173,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [PXT Command Line Tool](https://makecode.com/cli) - Use the command line to program the micro:bit with MakeCode JavaScript. You can also run a local version of the MakeCode online editor (part of Microsoft's PXT).
 
-### C/C++
+### ©️ C/C++
 
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original `*.hex` file that ships on the micro:bit devices.
 - [Arduino nRF5](https://github.com/sandeepmistry/arduino-nRF5/) - Arduino Core for Nordic Semiconductor nRF5 based boards, including the micro:bit.
@@ -198,7 +198,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS3234](https://os.mbed.com/users/jsa1969/code/microbit-DS3234/) - Driver in example project using the DS3234 RTC via SPI.
 - [HTU21D](https://github.com/ti-nspire/microbit-in-mbed-library-for-HTU21D-sensor) - Mbed library for the HTU21D digital humidity and temperature sensor.
 
-### Other micro:bit Languages
+### 🚩 Other micro:bit Languages
 
 Other programming languages capable to program the micro:bit.
 
@@ -212,7 +212,7 @@ Other programming languages capable to program the micro:bit.
 - [C# / F#](https://github.com/kekyo/IL2C) - IL2C is a translator implementation of .NET intermediate language to C language, with C# and F# examples for the micro:bit.
 - [TinyGo](https://github.com/aykevl/tinygo) - ([examples](https://github.com/hybridgroup/tinygo-zoo)) Project to bring Go to microcontrollers and small systems, with out-of-box support for the BBC micro:bit. 
 
-### Other Interaction Languages
+### 🎚️ Other Interaction Languages
 
 These languages do not program the micro:bit directly, but can be used to create programs that interface with a micro:bit.
 
@@ -373,7 +373,7 @@ All these projects contain steps and resources required for reproduction.
 - [Electromaker micro:bit projects](https://www.electromaker.io/projects?platform=microbit) - All the micro:bit projects posted to Electromaker, a platform for makers to showcase their projects.
 
 
-## 📰 Articles
+## 🗞️ Articles
 
 Useful Articles for developing on the micro:bit.
 
@@ -412,7 +412,7 @@ Useful Articles for developing on the micro:bit.
 - [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
 
 
-## 📹 Videos
+## 🎥 Videos
 
 - [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - YouTube channel with tutorials to learn to code with your family.
 - [micro:bit and Bluetooth](https://www.youtube.com/playlist?list=PLYOCnwH2UtBzhJ2nvn_DM3itz6GNVwrDu) - YouTube playlist with Martin Woolley's Bluetooth videos.
