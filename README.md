@@ -13,7 +13,7 @@ Contributions are welcome!
 
 ## Contents
 
-- [Programming](#programming)
+- [👩‍💻 Programming](#-programming)
 	- [Visual](#visual)
 	- [Python](#python)
 	- [JavaScript / MakeCode](#javascript-and-makecode)
@@ -22,7 +22,7 @@ Contributions are welcome!
 	- [Other Interaction Languages](#other-interaction-languages)
 - [🛠️ Programming Tools](#-programming-tools)
 - [📱 Mobile Apps](#-mobile-apps)
-- [ChromeOS Apps](#chromeos-apps)
+- [🔵 ChromeOS Apps](#-chromeos-apps)
 - [↔️ Interface Chip](#-interface-chip)
 - [🔩 Hardware](#-hardware)
 - [🖨️ 3D Printing](#-3d-printing)
@@ -37,7 +37,7 @@ Contributions are welcome!
 - [🤷 Miscellaneous](#-miscellaneous)
 
 
-## Programming
+## 👩‍💻 Programming
 
 ### Visual
 
@@ -255,8 +255,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [Micro:bit Explorer](https://phwallen.github.io/microbit-explorer/) - A Swift Playground Book that introduces computer fundamentals in a visual way, it allows you to enter machine code or assembly and see how it executes and how the micro:bit registers are affected.
 
 
-
-## ChromeOS Apps
+## 🔵 ChromeOS Apps
 
 - [Quiz:bit](https://chrome.google.com/webstore/detail/quizbit/hfnanbphehfnlcpkelfnkmfdljphlmna) - ([Source Code](https://github.com/lancaster-university/quiz-bit)) BBC micro:bit programs and a matching application for providing a quiz-voter-style service using micro:bits as the controls.
 - [bitty blue](http://www.bittysoftware.com/apps/bitty_blue.html) - Play with 3D "PolySquiggles", use as a compass, have fun with the buttons, send images or text to the LED display, connect and control electronic circuits, and all via Bluetooth.
