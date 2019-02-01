@@ -28,13 +28,13 @@ Contributions are welcome!
 - [🖨️ 3D Printing](#-3d-printing)
 - [📐 CAD](#-cad)
 - [🎨 2D Design](#-2d-design)
-- [Projects](#projects)
+- [🏗️ Projects](#-projects)
 - [📰 Articles](#-articles)
 - [📹 Videos](#-videos)
 - [📚 Books](#-books)
 - [🏫 Teaching Resources](#-teaching-resources)
-- [Community](#community)
-- [Miscellaneous](#miscellaneous)
+- [👪 Community](#-community)
+- [🤷 Miscellaneous](#-miscellaneous)
 
 
 ## Programming
@@ -325,7 +325,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Pixel Art](http://www.steamlearninglabs.com/blog/2018/2/26/microbit-inspired-pixel-art-download-use) - micro:bit-inspired fan art made with "Make 8 Bit Art".
 
 
-## Projects
+## 🏗️ Projects
 
 All these projects contain steps and resources required for reproduction.
 
@@ -478,7 +478,7 @@ Useful Articles for developing on the micro:bit.
 	- [Part 3: Mission Hack](http://www.bbc.co.uk/programmes/articles/1ZD3hYYBZVM5SDCVKH6vGfm/doctor-who-and-the-micro-bit-mission-hack) - It's the final mission! Click here to get hacking and infiltrate the Dalek spaceship.
 
 
-## Community
+## 👪 Community
 
 - [Official Slack Channel](http://tech.microbit.org/get-involved/where-to-find/) - Online form to join this chat group, a great place to discuss and meet more people from the micro:bit community.
 - [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
@@ -489,7 +489,7 @@ Useful Articles for developing on the micro:bit.
 - [MakeCode Gitter](https://gitter.im/makecode-community/Lobby)
 
 
-## Miscellaneous
+## 🤷 Miscellaneous
 
 - [micro:bit broadcast](https://microbit-broadcast.embeddedlog.com) - (Discontinued, archived) newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [microbit.org Support](https://support.microbit.org) - The support pages from the micro:bit Foundation is a great source of information, containing an extensive collection of FAQs, articles, and guides.
