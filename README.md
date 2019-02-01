@@ -159,6 +159,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [MAX7219 8x8](https://github.com/alankrantas/pxt-MAX7219_8x8) - Control the MAX7219 LED matrix display module with an 8x8 LED matrix.
 - [ColorBit](https://github.com/51bit/colorbit) - 5x5 WS2812B LED matrix makecode extension for micro:bit.
 - [dfplayer](https://github.com/lioujj/pxt-mp3) - Play mp3 files with a DFPlayer mini module.
+- [PCA9685](https://github.com/jdarling/pxt-pca9685) - Generic PCA9685 driver, a 16-channel PWM controller.
 
 ##### Node.js Libraries
 
