@@ -362,6 +362,7 @@ All these projects contain steps and resources required for reproduction.
 - [Musical Instrument Controller](https://phwallen.github.io/microbit-music-controller/) - A micro:bit instrument that communites with an iPad via Bluetooth into MIDI controller app that can play music via GarageBand.
 - [Inexpensive Remote Controlled Robot](https://mryslab.github.io/microbit-robot/) - Guide to create an inexpesensive robot, easily assembled from a set of off the shelf parts.
 - [Natural Disaster Sensor](https://core-electronics.com.au/tutorials/natural-disaster-sensor-project-for-the-microbit-stem.html) - Wind, seismic, and temperature data monitoring from remote micro:bits.
+- [Bike Light](https://www.kitronik.co.uk/blog/zip-tile-microbit-bike-light-isaac-gorsani/) - A rear bike light with a Kitronik Zip Tile (8x8 RGB LED matrix) and 3D printed case.
 
 ### Project Collections
 
