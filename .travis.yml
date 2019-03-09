@@ -10,7 +10,7 @@ install:
   - gem install awesome_bot
 
 script:
-  # - awesome-lint README.md
+  - awesome-lint README.md
   - awesome_bot README.md --allow-redirect --allow-dupe
 
 notifications:
