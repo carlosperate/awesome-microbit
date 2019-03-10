@@ -35,6 +35,7 @@ Contributions are welcome!
 - [🏫 Teaching Resources](#-teaching-resources)
 - [👪 Community](#-community)
 - [🤷 Miscellaneous](#-miscellaneous)
+- [⚖️License](#-License)
 
 
 ## 👩‍💻 Programming
