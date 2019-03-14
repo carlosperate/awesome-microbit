@@ -25,16 +25,17 @@ Contributions are welcome!
 - [🔵 ChromeOS Apps](#-chromeos-apps)
 - [↔️ Interface Chip](#-interface-chip)
 - [🔩 Hardware](#-hardware)
-- [🖨️ 3D Printing](#-3d-printing)
+- [🖨️ 3D Printing](#%EF%B8%8F-3d-printing)
 - [📐 CAD](#-cad)
 - [🎨 2D Design](#-2d-design)
-- [🏗️ Projects](#-projects)
-- [🗞️ Articles](#-articles)
+- [🏗️ Projects](#%EF%B8%8F-projects)
+- [🗞️ Articles](#%EF%B8%8F-articles)
 - [🎥 Videos](#-videos)
 - [📚 Books](#-books)
 - [🏫 Teaching Resources](#-teaching-resources)
 - [👪 Community](#-community)
 - [🤷 Miscellaneous](#-miscellaneous)
+- [⚖️License](#-license)
 
 
 ## 👩‍💻 Programming
