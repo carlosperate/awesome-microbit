@@ -494,6 +494,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Python mailing list (archived)](https://github.com/ntoll/microbit_mailman_archive)
 - [Croatian Makers](http://izradi.croatianmakers.hr/bbc-microbit-uvodna-stranica/)
 - [MakeCode Gitter](https://gitter.im/makecode-community/Lobby)
+- [Arabic Microbit Community](https://community.nadi-microbit.com)
 
 
 ## 🤷 Miscellaneous
