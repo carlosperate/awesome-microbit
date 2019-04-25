@@ -51,6 +51,7 @@ Contributions are welcome!
 - [Workbench](https://edu.workbencheducation.com/partners/microbit) - A multi-device coding canvas for block-based programming that connects with BLE devices via Chrome Web Bluetooth.
 
 The following editors are no longer maintained:
+- [Touch Develop](https://www.touchdevelop.com) - Flexible, text-based programming language with an interactive visual component.
 - [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - Block interface that produces Touch Develop code. No longer in development and it's recommended to use MakeCode instead.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript). This editor is no longer maintained.
 
@@ -205,7 +206,6 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 Other programming languages capable to program the micro:bit.
 
-- [Touch Develop](https://www.microbit.co.uk/create-code#touchdevelopEditor) - Flexible, text-based programming language with an interactive visual component.
 - [Rust](https://github.com/SimonSapin/rust-on-bbc-microbit) - Article describing the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
 - [Forth](https://wiki.forth-ev.de/doku.php/en:projects:microbit:start) - Forth, a stack-based language, for the BBC micro:bit.
 - [Pascal](http://wiki.freepascal.org/micro:bit) - Free Pascal compiler that can target the ARM embedded platform, including the micro:bit.
