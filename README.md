@@ -43,6 +43,7 @@ Contributions are welcome!
 ### 🆚 Visual
 
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (part of Microsoft's PXT).
+	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
 - [Scratch 3.0](https://scratch.mit.edu/microbit) - The new version of Scratch is officially compatible with the micro:bit via their Scratch Link plug-in.
 - [Open Roberta Lab](http://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
@@ -68,7 +69,8 @@ The following editors are no longer maintained:
 
 ##### MicroPython Editors
 
-- [microbit.org Python editor](https://python.microbit.org) - The official online Python editor from the micro:bit foundation website.
+- [microbit.org Python Editor](https://python.microbit.org) - The official online Python editor from the micro:bit foundation website.
+	- [microbit.org Python Editor Beta](https://python.microbit.org/v/beta) - Beta version of the Python editor to test the latest features.
 - [microbit.co.uk Python editor](http://microbit.co.uk/app/#create:xyelfe) - Original Python editor from microbit.co.uk, contains an older version of MicroPython.
 - [Mu](http://codewith.mu) - "Micro" editor for MicroPython and the BBC micro:bit.
 - [create.withcode.uk](https://create.withcode.uk) - Python online editor and simulator that supports the micro:bit MicroPython ([instructions](http://community.computingatschool.org.uk/resources/4479)).
@@ -124,6 +126,7 @@ The following editors are no longer maintained:
 ### 🗿 JavaScript and MakeCode
 
 - [MakeCode](https://makecode.microbit.org) - This block and text editor for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
+	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 
