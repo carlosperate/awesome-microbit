@@ -34,6 +34,7 @@ Contributions are welcome!
 - [📚 Books](#-books)
 - [🏫 Teaching Resources](#-teaching-resources)
 - [👪 Community](#-community)
+	- [📅 Events](#-events)
 - [🤷 Miscellaneous](#-miscellaneous)
 - [⚖️License](#%EF%B8%8F-license)
 
@@ -499,6 +500,12 @@ Useful Articles for developing on the micro:bit.
 - [Croatian Makers](http://izradi.croatianmakers.hr/bbc-microbit-uvodna-stranica/)
 - [MakeCode Gitter](https://gitter.im/makecode-community/Lobby)
 - [Arabic Microbit Community](https://community.nadi-microbit.com)
+
+### 📅 Events
+
+Do you know about any free event with micro:bits? Please add them here, PRs are encouraged! 
+
+- [micro:bit Live 2019](https://microbit.org/en/2019-04-12-microbit-live/) - The very first annual gathering of the global micro:bit community of educators and partners. Call for proposals is open, so don't hesistate to submit one!
 
 
 ## 🤷 Miscellaneous
