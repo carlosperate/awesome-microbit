@@ -79,7 +79,7 @@ The following editors are no longer maintained:
 - [Thonny micro:bit](https://bitbucket.org/KauriRaba/thonny-microbit/wiki/installation-guide) - Plug-in for [Thonny](http://thonny.org), a Python IDE for beginners.
 - [JetBrains IDEA/PyCharm IDE plugin](https://plugins.jetbrains.com/plugin/9777-micropython-support) - Support for MicroPython devices in IntelliJ IDEA and PyCharm.
 - [uPyCraft](https://www.gitbook.com/book/dfrobot/upycraft/details) - A micro:bit compatible MicroPython IDE for Windows/Mac, designed with a simple and convenient interface.
-- [CodeSpace](https://make.firialabs.com) - An online MicroPython IDE for micro:bits, with bundled learning resources.
+- [CodeSpace](https://make.firialabs.com) - From Firia Labs, an online MicroPython IDE for micro:bits, with bundled learning resources.
 
 ##### MicroPython Libraries
 
