@@ -167,6 +167,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [dfplayer](https://github.com/lioujj/pxt-mp3) - Play mp3 files with a DFPlayer mini module.
 - [PCA9685](https://github.com/jdarling/pxt-pca9685) - Generic PCA9685 driver, a 16-channel PWM controller.
 - [Smart Tools](https://github.com/51bit/SmartTools) - Collection of utility blocks to do things like rounding numbers and convert between decimal and hex.
+- [KeiganMotor](https://github.com/keigan-motor/pxt-KeiganMotor) - Controller for KeiganMotor KM-1 Series, an all-in-one brushless gearless electric motor module.
 
 ##### Node.js Libraries
 
