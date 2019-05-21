@@ -321,6 +321,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Laser Cut micro:bit Box](https://www.thingiverse.com/thing:3433129) - Two laser cut designs, one for 10 micro:bits and another for 20.
 - [Shiun robot (micro:bit biped robot)](https://www.thingiverse.com/thing:3469886) - Using micro:bit as control board and very simple 3D design, you can easy to assembly and program the biped robot.
 - [miniPOW](https://github.com/GeorgeChiou/miniPOW) [[Bulldozer](https://www.thingiverse.com/thing:3330288)], [[Tank Base](https://www.thingiverse.com/thing:3341546)], [[WALL-E](https://www.thingiverse.com/thing:3456871)] - Models using a Power Board for the BBC micro:bit.
+- [micro:bit pinball](https://www.myminifactory.com/object/3d-print-micro-bit-pinball-22965) - A 3D printed pinball machine with one or more micro:bits controlling it.
 
 
 ## 📐 CAD
