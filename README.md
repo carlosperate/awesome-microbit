@@ -1,4 +1,7 @@
-# Awesome micro:bit [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome micro:bit
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Build Status](https://travis-ci.org/carlosperate/awesome-microbit.svg?branch=master)](https://travis-ci.org/carlosperate/awesome-microbit)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
 [![micro:bit logo](https://user-images.githubusercontent.com/4189262/45967806-fcf4ec00-c026-11e8-90a7-be2ecac881d5.png)](https://www.microbit.org)
 
