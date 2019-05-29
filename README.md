@@ -221,7 +221,7 @@ Other programming languages capable to program the micro:bit.
 - [uLisp](http://www.ulisp.com/show?2672) - A Lisp interpreter for the classic AI programming language for the BBC micro:bit.
 - [C# / F#](https://github.com/kekyo/IL2C) - IL2C is a translator implementation of .NET intermediate language to C language, with C# and F# examples for the micro:bit.
 - [TinyGo](https://github.com/aykevl/tinygo) - ([examples](https://github.com/hybridgroup/tinygo-zoo)) Project to bring Go to microcontrollers and small systems, with out-of-box support for the BBC micro:bit.
-- [Tiny BASIC](https://github.com/Tamakichi/ttbasic_microbit) - Port of the Arduino port of Tiny BASIC dialect that runs on the micro:bit.
+- [Tiny BASIC](https://github.com/Tamakichi/ttbasic_microbit) - Port for the micro:bit, including commands to use the on-board features, based on the Arduino port of the Tiny BASIC dialect.
 
 ### 🎚️ Other Interaction Languages
 
