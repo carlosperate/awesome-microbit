@@ -508,6 +508,7 @@ Useful Articles for developing on the micro:bit.
 - [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
 - [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
 - [micro:bit Python mailing list (archived)](https://github.com/ntoll/microbit_mailman_archive)
+- [micro:bit Sri Lanka User Group](http://microbitslug.org)
 - [Croatian Makers](http://izradi.croatianmakers.hr/bbc-microbit-uvodna-stranica/)
 - [MakeCode Gitter](https://gitter.im/makecode-community/Lobby)
 - [Arabic Microbit Community](https://community.nadi-microbit.com)
