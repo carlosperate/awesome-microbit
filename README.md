@@ -135,9 +135,11 @@ The following editors are no longer maintained:
 
 ##### MakeCode Extensions
 
-To add an extension find the "Extensions" option in the Settings menu or the "Advance" toolbox category.
+- [How to Build MakeCode Extensions](https://makecode.com/extensions/getting-started) - Guide to create your own MakeCode extensions.
 
-The extensions included in the official list below can be found by searching for their name in the "Extensions" screen.
+To add an extension to MakeCode find the "Extensions" option in the Settings menu or in the "Advance" toolbox category.
+
+The link below contains a list of the oficially approved extensions, and they can be loaded by by searching for their name in the "Extensions" screen.
 
 - [MakeCode Extensions Gallery](https://makecode.microbit.org/extensions) - Official list of extensions available directly within MakeCode.
 
