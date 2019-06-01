@@ -135,7 +135,7 @@ The following editors are no longer maintained:
 
 ##### MakeCode Extensions
 
-- [How to Build MakeCode Extensions](https://makecode.com/extensions/getting-started) - Guide to create your own MakeCode extensions.
+- [How to Build MakeCode Extensions](https://makecode.microbit.org/extensions/build-your-own) - Guide to create your own MakeCode extensions.
 
 To add an extension to MakeCode find the "Extensions" option in the Settings menu or in the "Advance" toolbox category.
 
