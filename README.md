@@ -180,6 +180,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [node-bbc-microbit-io](https://github.com/sandeepmistry/node-bbc-microbit-io) - Johnny-Five (JavaScript Robotics and IoT programming framework) micro:bit IO Plugin.
 - [microBit.js](https://github.com/antefact/microBit.js) - JavaScript library to interact with BBC micro:bit using web bluetooth API.
 - [microbit-web-bluetooth](https://github.com/thegecko/microbit-web-bluetooth) - Web Bluetooth library implementing the micro:bit Bluetooth Profile.
+- [microbit-web-components](https://github.com/thegecko/microbit-web-components) - Web Components for all the micro:bit features exposed via BLE.
 
 ##### JavaScript Programming Tools
 
