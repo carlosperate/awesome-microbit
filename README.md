@@ -174,13 +174,10 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [KeiganMotor](https://github.com/keigan-motor/pxt-KeiganMotor) - Controller for KeiganMotor KM-1 Series, an all-in-one brushless gearless electric motor module.
 - [WiFi:bit](https://github.com/e-radionicacom/pxt-wifi) - Connect micro:bit to the Internet through WiFi network.
 
-##### Node.js Libraries
+##### Node.js and Browser Libraries
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
 - [node-bbc-microbit-io](https://github.com/sandeepmistry/node-bbc-microbit-io) - Johnny-Five (JavaScript Robotics and IoT programming framework) micro:bit IO Plugin.
-
-##### JavaScript Browser Libraries
-
 - [microBit.js](https://github.com/antefact/microBit.js) - JavaScript library to interact with BBC micro:bit using web bluetooth API.
 
 ##### JavaScript Programming Tools
