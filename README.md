@@ -174,6 +174,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Smart Tools](https://github.com/51bit/SmartTools) - Collection of utility blocks to do things like rounding numbers and convert between decimal and hex.
 - [KeiganMotor](https://github.com/keigan-motor/pxt-KeiganMotor) - Controller for KeiganMotor KM-1 Series, an all-in-one brushless gearless electric motor module.
 - [WiFi:bit](https://github.com/e-radionicacom/pxt-wifi) - Connect micro:bit to the Internet through WiFi network.
+- [MLX90614](https://github.com/DoraLC/pxt-MLX90614) - I2C driver for Infra Red Thermometer MLX90614.
 
 ##### Node.js and Browser Libraries
 
