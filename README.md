@@ -385,6 +385,7 @@ All these projects contain steps and resources required for reproduction.
 - [IoT Pill Reminders with SAP Cloud Foundry and Google Sheets](https://blogs.sap.com/2019/02/25/iot-pill-reminders-with-sap-cloud-foundry-google-sheets-and-microbit/) - How to build an IoT “Pill Reminder” device to remind the patient to take their pills and update their status in Google Sheets.
 - [Pong-Like Retro Clock Using TinyGo and Microbit](https://www.hackster.io/_conejo/pong-like-retro-clock-using-tinygo-and-microbit-682736) - Use an RGB matrix and a micro:bit to display the time with an awesome game of PONG. Made with love and TinyGo.
 - [Racing Car Timing Gate](https://github.com/astrotutor9/Microbit-Racing-Car-Timing-Gate) - Create a speed trap for toy cars with three micro:bits, torches, radio and the MicroPython REPL.
+- [Robot Unicorn](https://github.com/helenleigh/robot-unicorn) - Gesture controlled robot unicorn made of cardboard, glitter, 3D printed horn, and micro:bits.
 
 ### Project Collections
 
