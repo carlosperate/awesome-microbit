@@ -426,7 +426,8 @@ Useful Articles for developing on the micro:bit.
 - [Network Rivalry: a Low-Latency Game for the BBC micro:bit](https://www.instructables.com/id/Network-Rivalry-a-Low-Latency-Game-for-the-BBC-Mic/) - Tutorial explaining how to implement a basic multiplayer game on the BBC micro:bit.
 - [Circuit Lumber Punking](https://www.instructables.com/id/Circuit-Lumber-Punking/) - Creating micro:bit circuit boards in timber.
 - [Measuring the BBC micro:bit LED current draw](https://www.seismicmatt.com/2019/03/06/measuring-the-bbc-microbit-led-current-draw/) - Looking at the voltage and current supplied to the BBC micro:bit for different numbers of active LEDs.
-- [micro:bit <-> Raspberry Pi](https://ukbaz.github.io/howto/ubit_workshop.html) - An introduction on how you can exchange information between a micro:bit and a Raspberry Pi using Bluetooth Low Energy (BLE). 
+- [micro:bit <-> Raspberry Pi](https://ukbaz.github.io/howto/ubit_workshop.html) - An introduction on how you can exchange information between a micro:bit and a Raspberry Pi using Bluetooth Low Energy (BLE).
+- [WiFi Web Server on BBC micro:bit and ESP-01](https://www.hackster.io/alankrantas/wifi-web-server-on-bbc-micro-bit-and-esp-01-esp8266-498e0d) - Create a micro:bit web server via AT commands to an ESP8266 which can respond to web browser requests over WiFi.
 
 ### Article Collections
 
