@@ -428,6 +428,7 @@ Useful Articles for developing on the micro:bit.
 - [Measuring the BBC micro:bit LED current draw](https://www.seismicmatt.com/2019/03/06/measuring-the-bbc-microbit-led-current-draw/) - Looking at the voltage and current supplied to the BBC micro:bit for different numbers of active LEDs.
 - [micro:bit <-> Raspberry Pi](https://ukbaz.github.io/howto/ubit_workshop.html) - An introduction on how you can exchange information between a micro:bit and a Raspberry Pi using Bluetooth Low Energy (BLE).
 - [WiFi Web Server on BBC micro:bit and ESP-01](https://www.hackster.io/alankrantas/wifi-web-server-on-bbc-micro-bit-and-esp-01-esp8266-498e0d) - Create a micro:bit web server via AT commands to an ESP8266 which can respond to web browser requests over WiFi.
+- [Connect BBC micro:bit to Sigfox](https://medium.com/coinmonks/connect-bbc-micro-bit-to-sigfox-4d1603d19350) - Walking through the steps for creating your own BBC micro:bit IoT device connected to the Sigfox network.
 
 ### Article Collections
 
