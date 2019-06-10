@@ -430,6 +430,7 @@ Useful Articles for developing on the micro:bit.
 - [WiFi Web Server on BBC micro:bit and ESP-01](https://www.hackster.io/alankrantas/wifi-web-server-on-bbc-micro-bit-and-esp-01-esp8266-498e0d) - Create a micro:bit web server via AT commands to an ESP8266 which can respond to web browser requests over WiFi.
 - [Connect BBC micro:bit to Sigfox](https://medium.com/coinmonks/connect-bbc-micro-bit-to-sigfox-4d1603d19350) - Walking through the steps for creating your own BBC micro:bit IoT device connected to the Sigfox network.
 - [Visualising BBC micro:bit sensors with thethings.iO](https://medium.com/@ly.lee/visualising-bbc-micro-bit-sensors-with-thethings-io-5689fb613531) - Sending and plotting sensor data to the thethings.iO via Sigfox network.
+- [How to connect your Mini.mu to PureData](https://vulpestruments.com/2018/11/21/how-to-connect-your-mini-mu-to-puredata/) - Connecting the micro:bit to PureData (visual programming language to crate interactive computer music) via radio and serial MIDI.
 
 ### Article Collections
 
