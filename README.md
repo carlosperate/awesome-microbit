@@ -175,6 +175,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [KeiganMotor](https://github.com/keigan-motor/pxt-KeiganMotor) - Controller for KeiganMotor KM-1 Series, an all-in-one brushless gearless electric motor module.
 - [WiFi:bit](https://github.com/e-radionicacom/pxt-wifi) - Connect micro:bit to the Internet through WiFi network.
 - [MLX90614](https://github.com/DoraLC/pxt-MLX90614) - I2C driver for Infra Red Thermometer MLX90614.
+- [Adafruit Motor Driver Board](https://github.com/vijairaj/pxt-adafruit-motor-driver) - Driver to control the DC motors on the Adafruit Motor Shield v1.
 
 ##### Node.js and Browser Libraries
 
