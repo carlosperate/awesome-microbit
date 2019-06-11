@@ -443,6 +443,7 @@ Useful Articles for developing on the micro:bit.
 - [Physical computing with the BBC micro:bit](http://www.teachwithict.com/physical-computing.html) - How to use different electronic components with the micro:bit.
 - [DF Robot micro:bit blog section](http://www.dfrobot.com/category-microbit.html) - Blog posts and articles about micro:bit from DF Robot.
 - [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
+- [micro:bit Month Of Making](https://micromag.cc/category/monthofmaking/) - Collection of 5-minute micro:bit makes, one for  each day of March 2019.
 
 
 ## 🎥 Videos
