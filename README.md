@@ -496,7 +496,7 @@ Useful Articles for developing on the micro:bit.
 - [Starting Computer Science with the BBC micro:bit](http://microbit.org/en/2018-01-19-train_the_trainer/) - From Getting Started to Games. Computer Science teaching resources designed for use with students aged 10-14 years.
 - [Science Experiment Lessons](https://makecode.microbit.org/courses/ucp-science) - Geared for students in middle and early high school, these Science Experiment lessons are designed help gain a greater understanding of the forces and behaviour of the physical world.
 - [micro:bit Basics for Teachers](https://microbit.hackster.io/kkristoff/micro-bit-basics-for-teachers-part-1-the-hardware-768229) - ([Part 2](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-2-javascript-blocks-6eaed5), [Part 3](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-3-micropython-c3fde0)) - Are you a teacher who wants to use micro:bit in your classroom, but doesn't know where to start? We'll show you how!
-- [micro:bit Lessons](https://github.com/PhonicCanine/microbit-lessons) -  Basic lessons on programming with a BBC micro:bit in Python.
+- [micro:bit Lessons](https://github.com/PhonicCanine/microbit-lessons) - Basic lessons on Python programming with a BBC micro:bit.
 
 ### BBC Teaching Resources
 
