@@ -386,6 +386,7 @@ All these projects contain steps and resources required for reproduction.
 - [Pong-Like Retro Clock Using TinyGo and Microbit](https://www.hackster.io/_conejo/pong-like-retro-clock-using-tinygo-and-microbit-682736) - Use an RGB matrix and a micro:bit to display the time with an awesome game of PONG. Made with love and TinyGo.
 - [Racing Car Timing Gate](https://github.com/astrotutor9/Microbit-Racing-Car-Timing-Gate) - Create a speed trap for toy cars with three micro:bits, torches, radio and the MicroPython REPL.
 - [Robot Unicorn](https://github.com/helenleigh/robot-unicorn) - Gesture controlled robot unicorn made of cardboard, glitter, a 3D printed horn, and micro:bits.
+- [The Christmas Joy Spreading Machine](https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559) - Project inside a box representing a metaphor of the most popular Christmas symbols. Maybe it's a bit distopyc but it moves, lights and reacts to music.
 
 ### Project Collections
 
