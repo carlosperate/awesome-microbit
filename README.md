@@ -387,6 +387,7 @@ All these projects contain steps and resources required for reproduction.
 - [Racing Car Timing Gate](https://github.com/astrotutor9/Microbit-Racing-Car-Timing-Gate) - Create a speed trap for toy cars with three micro:bits, torches, radio and the MicroPython REPL.
 - [Robot Unicorn](https://github.com/helenleigh/robot-unicorn) - Gesture controlled robot unicorn made of cardboard, glitter, a 3D printed horn, and micro:bits.
 - [The Christmas Joy Spreading Machine](https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559) - Project inside a box representing a metaphor of the most popular Christmas symbols. Maybe it's a bit distopyc but it moves, lights and reacts to music.
+- [micro:bit Guitar](https://www.kitronik.co.uk/blog/microbit-guitar-noise-pack-inventors-kit/) - A micro:bit guitar using the Noise Pack Add-on for the Kitronik Inventors Kit.
 
 ### Project Collections
 
