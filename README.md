@@ -176,6 +176,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [WiFi:bit](https://github.com/e-radionicacom/pxt-wifi) - Connect micro:bit to the Internet through WiFi network.
 - [MLX90614](https://github.com/DoraLC/pxt-MLX90614) - I2C driver for Infra Red Thermometer MLX90614.
 - [Adafruit Motor Driver Board](https://github.com/vijairaj/pxt-adafruit-motor-driver) - Driver to control the DC motors on the Adafruit Motor Shield v1.
+- [ESP-01](https://github.com/51bit/esp01) - Control an ESP8266 module via serial AT commands.
 
 ##### Node.js and Browser Libraries
 
