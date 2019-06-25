@@ -180,6 +180,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
 - [DHT11/DHT22](https://github.com/alankrantas/pxt-DHT11_DHT22) - Control DHT11/DHT22 temperature and humidity sensors.
+- [ESP8266/ThingSpeak](https://github.com/alankrantas/pxt-ESP8266_ThingSpeak) - Use a ESP8266 wifi module to upload data to ThingSpeak.com.
 
 ##### Node.js and Browser Libraries
 
