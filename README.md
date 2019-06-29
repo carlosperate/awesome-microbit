@@ -440,6 +440,7 @@ Useful Articles for developing on the micro:bit.
 - [Connect BBC micro:bit to Sigfox](https://medium.com/coinmonks/connect-bbc-micro-bit-to-sigfox-4d1603d19350) - Walking through the steps for creating your own BBC micro:bit IoT device connected to the Sigfox network.
 - [Visualising BBC micro:bit sensors with thethings.iO](https://medium.com/@ly.lee/visualising-bbc-micro-bit-sensors-with-thethings-io-5689fb613531) - Sending and plotting sensor data to the thethings.iO via Sigfox network.
 - [IoT Cloud Access with micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program the BBC micro:bit with Mbed OS and remotely send data to the cloud by utilizing BLE to smartphone/PC IoT Cloud Gateway.
+- [How to connect your Mini.mu to PureData](https://vulpestruments.com/2018/11/21/how-to-connect-your-mini-mu-to-puredata/) - Connecting the micro:bit to PureData (visual programming language to crate interactive computer music) via radio and serial MIDI.
 
 ### Article Collections
 
