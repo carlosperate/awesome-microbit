@@ -112,6 +112,7 @@ The following editors are no longer maintained:
 - [Kitronik Motor Driver Board](https://github.com/MrYsLab/kitronik_motor_board) - Class to control the Kitronik motor driver board.
 - [microbit python libs](https://github.com/shaoziyang/microbit-lib) - Growing collection of modules, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307/DS3231 RTC, NeoPixel drivers, APDS9930 Digital Proximity and Ambient Light Sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
 - [RAK811](https://github.com/PiSupply/rak811-python) - RAK811 Python library for use with LoRa pHAT & MicroBIT Node.
+- [Micropython-MakeCode compatible Radio](https://github.com/rhubarbdog/microbit-radio) - Class MakeRadio which includes all the functionality of the Micropyhton radio module, while being compatible with MakeCode blocks.
 
 ##### Python Libraries
 
@@ -177,6 +178,10 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [MLX90614](https://github.com/DoraLC/pxt-MLX90614) - I2C driver for Infra Red Thermometer MLX90614.
 - [Adafruit Motor Driver Board](https://github.com/vijairaj/pxt-adafruit-motor-driver) - Driver to control the DC motors on the Adafruit Motor Shield v1.
 - [ESP-01](https://github.com/51bit/esp01) - Control an ESP8266 module via serial AT commands.
+- [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
+- [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
+- [DHT11/DHT22](https://github.com/alankrantas/pxt-DHT11_DHT22) - Control DHT11/DHT22 temperature and humidity sensors.
+- [ESP8266/ThingSpeak](https://github.com/alankrantas/pxt-ESP8266_ThingSpeak) - Use a ESP8266 wifi module to upload data to ThingSpeak.com.
 - [SFC SNES Gamepad](https://github.com/51bit/SFC) - Connect an SNES (Super Nintendo/Super Famicom) controller to the micro:bit.
 
 ##### Node.js and Browser Libraries
@@ -436,6 +441,8 @@ Useful Articles for developing on the micro:bit.
 - [WiFi Web Server on BBC micro:bit and ESP-01](https://www.hackster.io/alankrantas/wifi-web-server-on-bbc-micro-bit-and-esp-01-esp8266-498e0d) - Create a micro:bit web server via AT commands to an ESP8266 which can respond to web browser requests over WiFi.
 - [Connect BBC micro:bit to Sigfox](https://medium.com/coinmonks/connect-bbc-micro-bit-to-sigfox-4d1603d19350) - Walking through the steps for creating your own BBC micro:bit IoT device connected to the Sigfox network.
 - [Visualising BBC micro:bit sensors with thethings.iO](https://medium.com/@ly.lee/visualising-bbc-micro-bit-sensors-with-thethings-io-5689fb613531) - Sending and plotting sensor data to the thethings.iO via Sigfox network.
+- [IoT Cloud Access with micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program the BBC micro:bit with Mbed OS and remotely send data to the cloud by utilizing BLE to smartphone/PC IoT Cloud Gateway.
+- [How to connect your Mini.mu to PureData](https://vulpestruments.com/2018/11/21/how-to-connect-your-mini-mu-to-puredata/) - Connecting the micro:bit to PureData (visual programming language to crate interactive computer music) via radio and serial MIDI.
 
 ### Article Collections
 
@@ -450,6 +457,7 @@ Useful Articles for developing on the micro:bit.
 - [DF Robot micro:bit blog section](http://www.dfrobot.com/category-microbit.html) - Blog posts and articles about micro:bit from DF Robot.
 - [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
 - [micro:bit Month Of Making](https://micromag.cc/category/monthofmaking/) - Collection of 5-minute micro:bit makes, one for  each day of March 2019.
+- [Little Bird How To Guides](https://www.littlebird.com.au/a/how-to#micro-bit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
 
 
 ## 🎥 Videos
