@@ -456,6 +456,7 @@ Useful Articles for developing on the micro:bit.
 - [DF Robot micro:bit blog section](http://www.dfrobot.com/category-microbit.html) - Blog posts and articles about micro:bit from DF Robot.
 - [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
 - [micro:bit Month Of Making](https://micromag.cc/category/monthofmaking/) - Collection of 5-minute micro:bit makes, one for  each day of March 2019.
+- [Little Bird How To Guides](https://www.littlebird.com.au/a/how-to#micro-bit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
 
 
 ## 🎥 Videos
