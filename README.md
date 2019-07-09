@@ -471,6 +471,7 @@ Useful Articles for developing on the micro:bit.
 - [Behind the MakeCode Hardware](https://www.youtube.com/playlist?list=PLMMBk9hE-SeqDYtw9pGNPsQ10V_EGMyGe) - Collection of videos explaining the basics on how different hardware components work.
 - [MicroPython for micro:bit Workshop](https://www.youtube.com/playlist?list=PLPK2l9Knytg6SygFSODc3H1JL4KEm-Ruv) - Collection of videos explaining how to use the micro:bit features with MicroPython.
 - [Grade 10 micro:bit Tutorials](https://www.youtube.com/playlist?list=PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr) - Collection of short videos showing how to use micro:bit MakeCode blocks and features.
+- [micro:bit to Firebase](https://www.youtube.com/playlist?list=PLGYgoZPmYyek0eIEfVWyt3nK_J8iZ4OBP) - Send data from a BBC micro:bit to Google’s Firebase cloud database with a Python script. Retrieve the data and  create a simple IoT demo model.
 
 
 ## 📚 Books
