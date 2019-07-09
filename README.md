@@ -1,8 +1,8 @@
 # Awesome micro:bit [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Build Status](https://travis-ci.org/carlosperate/awesome-microbit.svg?branch=master)](https://travis-ci.org/carlosperate/awesome-microbit) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-[![micro:bit logo](https://user-images.githubusercontent.com/4189262/45967806-fcf4ec00-c026-11e8-90a7-be2ecac881d5.png)](https://www.microbit.org)
+[![awesome micro:bit logo](https://user-images.githubusercontent.com/4189262/60908738-830bb780-a274-11e9-9d86-6b82ab89334f.png)](https://github.com/carlosperate/awesome-microbit)
 
-A curated list of resources for the BBC micro:bit, a tiny programmable computer designed to make learning and teaching easy and fun!
+A curated list of resources for the [BBC micro:bit](https://www.microbit.org), a tiny programmable computer designed to make learning and teaching easy and fun!
 This embedded board has a Bluetooth capable microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and GPIO accessible via the edge connector.
 
 [![watch badge](https://img.shields.io/github/watchers/carlosperate/awesome-microbit.svg?label=Watch&style=social)](https://github.com/carlosperate/awesome-microbit/watchers) You can "Watch" this repository if you'd like to get notfications when a new entry is added to the list.
