@@ -536,7 +536,7 @@ Do you know about any free event with micro:bits? Please add them here, PRs are 
 - [micro:bit Out Of Box Experience](https://support.microbit.org/support/solutions/articles/19000021613-reset-the-micro-bit-to-factory-defaults) - ([Source Code](https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/out-of-box-experience)) The default program running on a brand new micro:bit.
 - [Accessory Guide](https://microbit.org/assets/documents/AccessoryGuide.pdf) - A constantly updated list of accessories for the micro:bit.
 - [BtleJack](https://github.com/virtualabs/btlejack) - Based on the micro:bit, it provides everything you need to sniff, jam and hijack Bluetooth Low Energy devices.
-- [Hardware Simulation with QEMU](https://www.qemu.org/2019/05/22/microbit/) - micro:bit emulation support is available from QEMU 4.0 onwards and can be used for low-level software testing and development
+- [Hardware Simulation with QEMU](https://www.qemu.org/2019/05/22/microbit/) - Emulation support for the micro:bit is available from QEMU 4.0 and can be used for low-level software testing and development.
 
 
 ## ⚖️ License
