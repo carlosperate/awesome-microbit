@@ -37,7 +37,7 @@ Contributions are welcome!
 - [📚 Books](#-books)
 - [🏫 Teaching Resources](#-teaching-resources)
 - [👪 Community](#-community)
-	- [📅 Events](#-events)
+- [📅 Events](#-events)
 - [🤷 Miscellaneous](#-miscellaneous)
 - [⚖️ License](#%EF%B8%8F-license)
 
@@ -63,7 +63,7 @@ The following editors are no longer maintained:
 - [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - Block interface that produces Touch Develop code. No longer in development and it's recommended to use MakeCode instead.
 - [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript). This editor is no longer maintained.
 
-##### Scratch 2 Extensions
+##### 🆚 Scratch 2 Extensions
 
 - [Scratch for BBC micro:bit](http://www.picaxe.com/BBC-microbit) - Using micro:bit with Scratch / S2Bot as a Bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 - [ScratchX micro:bit extension](https://llk.github.io/microbit-extension/) - Lets you control your micro:bit wirelessly using Scratch programming blocks.
@@ -74,7 +74,7 @@ The following editors are no longer maintained:
 
 - [MicroPython](http://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
 
-##### MicroPython Editors
+##### 🐍 MicroPython Editors
 
 - [microbit.org Python Editor](https://python.microbit.org) - The official online Python editor from the micro:bit foundation website.
 	- [microbit.org Python Editor Beta](https://python.microbit.org/v/beta) - Beta version of the Python editor to test the latest features.
@@ -87,7 +87,7 @@ The following editors are no longer maintained:
 - [uPyCraft](https://www.gitbook.com/book/dfrobot/upycraft/details) - A micro:bit compatible MicroPython IDE for Windows/Mac, designed with a simple and convenient interface.
 - [CodeSpace](https://make.firialabs.com) - From Firia Labs, an online MicroPython IDE for micro:bits, with bundled learning resources.
 
-##### MicroPython Libraries
+##### 🐍 MicroPython Libraries
 
 - [Servo](https://github.com/microbit-playground/microbit-servo-class) - Class for controlling servos on the micro:bit via PWM.
 - [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - Class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver via I2C.
@@ -118,14 +118,14 @@ The following editors are no longer maintained:
 - [RAK811](https://github.com/PiSupply/rak811-python) - RAK811 Python library for use with LoRa pHAT & MicroBIT Node.
 - [Micropython-MakeCode compatible Radio](https://github.com/rhubarbdog/microbit-radio) - Class MakeRadio which includes all the functionality of the MicroPyhton radio module, while being compatible with MakeCode blocks.
 
-##### Python Libraries
+##### 🐍 Python Libraries
 
 - [MicroPeri](https://github.com/c0d3st0rm/microperi) - Run Python programs on your computer with the same micro:bit MicroPython API and connecting a micro:bit as an external peripheral device or sensor.
 - [microbit_stub](https://github.com/casnortheast/microbit_stub) - Python package that emulates the micro:bit as defined by the micro:bit MicroPython API.
 - [bluezero](https://github.com/ukBaz/python-bluezero) - Python package to interface with Bluetooth devices, with examples for the micro:bit.
 - [bitio](https://github.com/whaleygeek/bitio) - BBC micro:bit I/O library for Python. It allows you to run code in Python on a PC/Mac/Linux/Raspberry Pi and interact directly with the micro:bit.
 
-##### Python Programming Tools
+##### 🐍 Python Programming Tools
 
 - [uFlash](https://github.com/ntoll/uflash/) - Utility for flashing the micro:bit with Python scripts and the MicroPython runtime.
 - [MicroREPL](https://github.com/ntoll/microrepl) - A REPL client for MicroPython running on the BBC micro:bit.
@@ -139,7 +139,7 @@ The following editors are no longer maintained:
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
 - [Espruino JavaScript](http://www.espruino.com/MicroBit) - JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks.
 
-##### MakeCode Extensions
+##### 🗿 MakeCode Extensions
 
 - [How to Build MakeCode Extensions](https://makecode.microbit.org/extensions/build-your-own) - Guide to create your own MakeCode extensions.
 
@@ -188,7 +188,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [ESP8266/ThingSpeak](https://github.com/alankrantas/pxt-ESP8266_ThingSpeak) - Use a ESP8266 wifi module to upload data to ThingSpeak.com.
 - [SFC SNES Gamepad](https://github.com/51bit/SFC) - Connect an SNES (Super Nintendo/Super Famicom) controller to the micro:bit.
 
-##### Node.js and Browser Libraries
+##### 🗿 Node.js and Browser Libraries
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
 - [node-bbc-microbit-io](https://github.com/sandeepmistry/node-bbc-microbit-io) - Johnny-Five (JavaScript Robotics and IoT programming framework) micro:bit IO Plugin.
@@ -196,7 +196,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [microbit-web-bluetooth](https://github.com/thegecko/microbit-web-bluetooth) - Web Bluetooth library implementing the micro:bit Bluetooth Profile.
 - [microbit-web-components](https://github.com/thegecko/microbit-web-components) - Web Components for all the micro:bit features exposed via BLE.
 
-##### JavaScript Programming Tools
+##### 🗿 JavaScript Programming Tools
 
 - [PXT Command Line Tool](https://makecode.com/cli) - Use the command line to program the micro:bit with MakeCode JavaScript. You can also run a local version of the MakeCode online editor (part of Microsoft's PXT).
 
@@ -205,12 +205,12 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original `*.hex` file that ships on the micro:bit devices.
 - [Arduino nRF5](https://github.com/sandeepmistry/arduino-nRF5/) - Arduino Core for Nordic Semiconductor nRF5 based boards, including the micro:bit.
 
-##### C/C++ Editors
+##### ©️ C/C++ Editors
 
 - [Micro:Pi](https://github.com/Bottersnike/Micro-Pi) - C/C++ editor for the micro:bit with serial monitor and deploy functionality. Written in Python with an installer (ATM Linux only, but could be manually installed in any OS) that includes all dependencies.
 - [PlatformIO](https://docs.platformio.org/en/latest/boards/nordicnrf51/bbcmicrobit.html) - Embedded IDE with support for the micro:bit using the Arduino or Mbed software stack.
 
-##### C/C++ Libraries
+##### ©️ C/C++ Libraries
 
 - [OneWire](https://github.com/adamboardman/microbit-onewire) - BBC micro:bit OneWire Library, based upon Erik Olieman's Mbed DS1820 lib.
 - [neopixel](https://github.com/elmorg/uBit_neopixel) - Library for using NeoPixels with the BBC micro:bit.
@@ -402,7 +402,7 @@ All these projects contain steps and resources required for reproduction.
 - [The Christmas Joy Spreading Machine](https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559) - Project inside a box representing a metaphor of the most popular Christmas symbols. Maybe it's a bit distopyc but it moves, lights and reacts to music.
 - [micro:bit Guitar](https://www.kitronik.co.uk/blog/microbit-guitar-noise-pack-inventors-kit/) - A micro:bit guitar using the Noise Pack Add-on for the Kitronik Inventors Kit.
 
-### Project Collections
+### 🏗️ Project Collections
 
 - [microbit.co.uk Site Index](https://www.microbit.co.uk/index) - The microbit.co.uk website contains an extensive list with all their projects and tutorials.
 - [hackster micro:bit community](https://microbit.hackster.io) - This hackster community contains user submitted projects for the micro:bit.
@@ -449,7 +449,7 @@ Useful Articles for developing on the micro:bit.
 - [IoT Cloud Access with micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program the BBC micro:bit with Mbed OS and remotely send data to the cloud by utilizing BLE to smartphone/PC IoT Cloud Gateway.
 - [How to connect your Mini.mu to PureData](https://vulpestruments.com/2018/11/21/how-to-connect-your-mini-mu-to-puredata/) - Connecting the micro:bit to PureData (visual programming language to crate interactive computer music) via radio and serial MIDI.
 
-### Article Collections
+### 🗞️ Article Collections
 
 - [MultiWingSpan](http://www.multiwingspan.co.uk/micro.php) - Large collection of examples, instructions, and direction on how to use electronic components.
 - [SparkFun micro:bit tutorials](https://learn.sparkfun.com/tutorials/tags/microbit) - Collection of tutorials from SparkFun, including comprehensive experiment guides for their kits.
@@ -521,7 +521,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Basics for Teachers](https://microbit.hackster.io/kkristoff/micro-bit-basics-for-teachers-part-1-the-hardware-768229) - ([Part 2](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-2-javascript-blocks-6eaed5), [Part 3](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-3-micropython-c3fde0)) - Are you a teacher who wants to use micro:bit in your classroom, but doesn't know where to start? We'll show you how!
 - [micro:bit Lessons](https://github.com/PhonicCanine/microbit-lessons) - Basic lessons on Python programming with a BBC micro:bit.
 
-### BBC Teaching Resources
+### 🏫 BBC Teaching Resources
 
 - [Welcome to the micro:bit - Live Lesson](http://www.bbc.co.uk/programmes/articles/2M3H2YpKLsw2W8fC2ycHYSR/welcome-to-the-micro-bit-live-lesson) - Learn how to create games, animations and robots using simple code.
 - [Doctor Who and the micro:bit - Live Lesson](http://www.bbc.co.uk/programmes/articles/3ydvd6mvhl89cHVJ7F2nmzf/doctor-who-and-the-micro-bit-live-lesson) - The BBC micro:bit will be put to the test at the controls of the TARDIS in this special BBC Live Lesson in collaboration with the team behind Doctor Who.
@@ -544,7 +544,7 @@ Useful Articles for developing on the micro:bit.
 - [MakeCode Gitter](https://gitter.im/makecode-community/Lobby)
 - [Arabic micro:bit Community](https://community.nadi-microbit.com)
 
-### 📅 Events
+## 📅 Events
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged! 
 
