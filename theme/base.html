@@ -20,7 +20,7 @@
         <link href="{{ 'css/bootstrap-custom.min.css'|url }}" rel="stylesheet">
         <link href="{{ 'css/font-awesome.min.css'|url }}" rel="stylesheet">
         <link href="{{ 'css/base.css'|url }}" rel="stylesheet">
-        <link href="css/extend.css" rel="stylesheet">
+        <link href="{{ 'css/extend.css'|url }}" rel="stylesheet">
         {%- if config.theme.highlightjs %}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ config.theme.hljs_style }}.min.css">
         {%- endif %}
@@ -120,21 +120,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                        {%- endif %}
-                      {%- endblock %}
-
-                      {%- block next_prev %}
-                        {%- if page and (page.next_page or page.previous_page) %}
-                            <li {% if not page.previous_page %}class="disabled"{% endif %}>
-                                <a rel="next" {% if page.previous_page %}href="{{ page.previous_page.url|url }}"{% endif %}>
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li {% if not page.next_page %}class="disabled"{% endif %}>
-                                <a rel="prev" {% if page.next_page %}href="{{ page.next_page.url|url }}"{% endif %}>
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                         {%- endif %}
                       {%- endblock %}
 
