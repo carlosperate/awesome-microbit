@@ -1,0 +1,34 @@
+###########
+# Project #
+###########
+node_modules/
+site/
+
+######################
+# OS generated files #
+######################
+# macoOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
