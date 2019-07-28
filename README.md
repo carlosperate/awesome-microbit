@@ -57,11 +57,11 @@ Contributions are welcome!
 - [Mind+](http://mindplus.cc/en.html) - Desktop application to program hardware devices, like the micro:bit, with blocks, Python, or the C language.
 - [mBlock 5](https://www.makeblock.com/software/mblock5) - Desktop application supporting block-based and Python-based programming on multiple hardware platforms, including the micro:bit.
 
-The following editors are no longer maintained:
+The following editors are **no longer maintained**:
 
-- [Touch Develop](https://www.touchdevelop.com) - Flexible, text-based programming language with an interactive visual component.
-- [Microsoft Blocks](https://www.microbit.co.uk/app/#create:xczaux) - Block interface that produces Touch Develop code. No longer in development and it's recommended to use MakeCode instead.
-- [Code Kingdoms](https://www.microbit.co.uk/app/#create:tomwku) - Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript). This editor is no longer maintained.
+- Touch Develop - (Retired) Flexible, text-based programming language with an interactive visual component, retired.
+- Microsoft Blocks - (Replaced by MakeCode) Block interface that produced Touch Develop code.
+- [Code Kingdoms](https://microbit.codekingdoms.com) - (No longer maintained) Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 
 ##### 🆚 Scratch 2 Extensions
 
@@ -535,7 +535,7 @@ Useful Articles for developing on the micro:bit.
 
 ## 👪 Community
 
-- [Official Slack Channel](http://tech.microbit.org/get-involved/where-to-find/) - Online form to join this chat group, a great place to discuss and meet more people from the micro:bit community.
+- [Official micro:bit Slack Channel](http://tech.microbit.org/get-involved/where-to-find/)
 - [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
 - [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
 - [micro:bit Python mailing list (archived)](https://github.com/ntoll/microbit_mailman_archive)
