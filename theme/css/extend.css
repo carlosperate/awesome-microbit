@@ -1,8 +1,63 @@
+/* Overwrites the original theme CSS for this project. */
+
+/* Default HTML elements */
 body {
     padding-top: 50px;
     background-color: #f5f5f5;
 }
 
+p {
+    margin: 0px 0px 16px 0px;
+}
+
+a,
+a code {
+    color: #8D689C;
+}
+a:hover, a:focus {
+    color: #562769;
+}
+.main-content li a {
+    font-weight: bold;
+}
+
+h1, h2 {
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 12px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+h5 {
+    font-size: 19px;
+}
+
+/* Navigation bar*/
+.navbar-default {
+    color: #fff;
+    background-color: #696482;
+    border-color: #B1A9DB;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #7E789C;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+    background-color: #B1A9DB;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #7E789C;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #7E789C;
+}
+
+/* Additional classes for the main container */
 .main-container {
     background-color: white;
     padding-left: 0;
@@ -16,11 +71,12 @@ body {
 }
 
 @media(max-width: 991px) {
-    .toc {
+    .main-toc {
         display: none;
     }
 }
 
+/* Footer */
 footer {
     margin-top: 0;
     margin-bottom: 0;
