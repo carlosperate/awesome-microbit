@@ -153,8 +153,6 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [BlueDot](https://github.com/Microsoft/pxt-bluedot) - PXT package to support the BlueDot app - beta.
 - [Kitronik Servo Lite](https://github.com/KitronikLtd/pxt-kitronik-servo-lite) - Blocks that support Kitronik Servo:Lite board for the micro:bit.
-- [Kitronik I2C 16 Servo](https://github.com/KitronikLtd/pxt-kitronik-I2C-16-servo) - Blocks for driving the Kitronik I2C 16 servo expansion board.
-- [Kitronik motor driver](https://github.com/KitronikLtd/pxt-kitronik-motor-driver) - Blocks for driving the Kitronik micro:bit motor driver board.
 - [Lego Power Functions](https://github.com/philipphenkel/pxt-powerfunctions) - Control your LEGO® Power Functions motors using your micro:bit with an infrared LED.
 - [Invent robot](https://github.com/techcampuk/pxt-invent) - This library provides a Microsoft PXT package for Invent robot.
 - [ubirch NB-IoT](https://github.com/ubirch/pxt-ubirch) - Package for sending signed data messages to the ubirch backend.
@@ -164,29 +162,18 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [HoneyBit](https://github.com/HoneycombKits/pxt-HoneyBit) - A Honeycomb kits package for micro:bit MakeCode.
 - [Bluetooth beacons](https://github.com/kshoji/pxt-bluetooth-beacons) - Allows the micro:bit to act as iBeacon / AltBeacon advertiser.
 - [LumexOLED](https://github.com/lioujj/pxt-oled) - Package designed for Lumex OLED display.
-- [MakerBit](https://github.com/1010Technologies/pxt-makerbit) - Blocks that support Roger Wagner's MakerBit board including Serial MP3, I2C LCD 1602, and ultrasonic.
 - [MakeCode Extensions](https://github.com/makecode-extensions) - Growing collection of packages, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307 RTC, APDS9930 Digital Proximity and Ambient Light Sensor, BH1750 digital ambient light sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
 - [BMP085](https://github.com/sabas1080/uBit_BMP085) - Package to control the BMP085 or BMP180 pressure and altitude sensors.
 - [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, enabling the the micro:bit to obtain temperature and relative humidity from these sensors.
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Package to calculate distances using a VL53L0X Time-of-Flight ranging sensor.
-- [KY-040](https://github.com/Tinkertanker/pxt-rotary-encoder-ky040) - Package for using the KY-040 rotary encoder.
 - [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Package to control the PCA9685, a 16-channel PWM controller, with included servo support.
-- [MakerBit-Touch](https://github.com/1010Technologies/pxt-makerbit-touch) - Touch sensing package for the capacitive touch sensor controller MPR121.
-- [MAX7219 8x8](https://github.com/alankrantas/pxt-MAX7219_8x8) - Control the MAX7219 LED matrix display module with an 8x8 LED matrix.
-- [ColorBit](https://github.com/51bit/colorbit) - 5x5 WS2812B LED matrix makecode extension for micro:bit.
 - [dfplayer](https://github.com/lioujj/pxt-mp3) - Play mp3 files with a DFPlayer mini module.
-- [PCA9685](https://github.com/jdarling/pxt-pca9685) - Generic PCA9685 driver, a 16-channel PWM controller.
-- [Smart Tools](https://github.com/51bit/SmartTools) - Collection of utility blocks to do things like rounding numbers and convert between decimal and hex.
 - [KeiganMotor](https://github.com/keigan-motor/pxt-KeiganMotor) - Controller for KeiganMotor KM-1 Series, an all-in-one brushless gearless electric motor module.
-- [WiFi:bit](https://github.com/e-radionicacom/pxt-wifi) - Connect micro:bit to the Internet through WiFi network.
 - [MLX90614](https://github.com/DoraLC/pxt-MLX90614) - I2C driver for Infra Red Thermometer MLX90614.
 - [Adafruit Motor Driver Board](https://github.com/vijairaj/pxt-adafruit-motor-driver) - Driver to control the DC motors on the Adafruit Motor Shield v1.
 - [ESP-01](https://github.com/51bit/esp01) - Control an ESP8266 module via serial AT commands.
 - [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
-- [DHT11/DHT22](https://github.com/alankrantas/pxt-DHT11_DHT22) - Control DHT11/DHT22 temperature and humidity sensors.
-- [ESP8266/ThingSpeak](https://github.com/alankrantas/pxt-ESP8266_ThingSpeak) - Use a ESP8266 wifi module to upload data to ThingSpeak.com.
-- [SFC SNES Gamepad](https://github.com/51bit/SFC) - Connect an SNES (Super Nintendo/Super Famicom) controller to the micro:bit.
 
 ##### 🗿 Node.js and Browser Libraries
 
