@@ -56,6 +56,7 @@ Contributions are welcome!
 - [Workbench](https://edu.workbencheducation.com/partners/microbit) - A multi-device coding canvas for block-based programming that connects with BLE devices via Chrome Web Bluetooth.
 - [Mind+](http://mindplus.cc/en.html) - Desktop application to program hardware devices, like the micro:bit, with blocks, Python, or the C language.
 - [mBlock 5](https://www.makeblock.com/software/mblock5) - Desktop application supporting block-based and Python-based programming on multiple hardware platforms, including the micro:bit.
+- [CodeMao Kitten Editor](https://ide.codemao.cn) - Block programming platform to create games, includes micro:bit support.
 
 The following editors are **no longer maintained**:
 
