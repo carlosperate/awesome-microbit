@@ -477,6 +477,7 @@ Useful Articles for developing on the micro:bit.
 - [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/)
 - [micro:bit in Wonderland](http://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html)
 - [Beginning BBC micro:bit](https://www.apress.com/gb/book/9781484233597)
+- [BBC micro:bit Recipes](https://www.apress.com/gp/book/9781484249123)
 
 
 ## 🏫 Teaching Resources
