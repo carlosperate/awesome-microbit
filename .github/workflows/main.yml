@@ -4,12 +4,11 @@ on:
   push:
     branches:
     - master
+    - action
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v1
     - uses: ./.github/actions/tweet-commit

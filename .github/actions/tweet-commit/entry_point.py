@@ -4,7 +4,9 @@ from git import Repo
 
 print('Hello world!')
 
-repo = Repo(os.getcwd())
-msg = repo.commit('master').message
+repository_path = os.getcwd()
+trigger_commit_sha = os.environ['GITHUB_SHA']
+repo = Repo(repository_path)
+msg = repo.commit(trigger_commit_sha).message
 
-print('Last commit message:\n"{}"'.format(msg))
+print('Trigger commit message:\n"{}"'.format(msg))
