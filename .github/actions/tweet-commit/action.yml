@@ -1,0 +1,16 @@
+name: tweet-commit
+description: Tweet a commit
+author: Carlos Pereira Atencio
+branding:
+  color: blue
+  icon: twitter
+inputs:
+  trigger:
+    description: Trigger keyword to tweet a specific commit
+    required: false
+    default: tweet
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+  - ${{ inputs.trigger }}
