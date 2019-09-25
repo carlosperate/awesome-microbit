@@ -1,6 +1,9 @@
-name: CI
+name: Tweet commit
 
-on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
   build:
@@ -8,4 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - uses: actions/checkout@v1
     - uses: ./.github/actions/tweet-commit
