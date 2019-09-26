@@ -11,4 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: ./.github/actions/tweet-commit
+    - name: Send Tweet if requested in commit message
+      uses: ./.github/actions/tweet-commit
+      with:
+        trigger_keyword: TweetMe
+        twitter_api_key: "${{ secrets.twitter_api_key }}"
+        twitter_api_secret_key: "${{ secrets.twitter_api_secret_key }}"
+        twitter_access_token: "${{ secrets.twitter_access_token }}"
+        twitter_access_token_secret: "${{ secrets.twitter_access_token_secret }}"

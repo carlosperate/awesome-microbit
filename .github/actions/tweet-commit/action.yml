@@ -5,10 +5,10 @@ branding:
   color: blue
   icon: twitter
 inputs:
-  trigger:
+  trigger_keyword:
     description: Trigger keyword to tweet a specific commit
     required: false
-    default: tweet
+    default: Tweet!
 runs:
   using: docker
   image: Dockerfile

@@ -8,7 +8,7 @@ LABEL "homepage"="https://github.com/carlosperate/awesome-microbit"
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN pip install --upgrade --no-cache-dir gitpython
+RUN pip install --upgrade --no-cache-dir gitpython tweepy
 
 COPY entry_point.py /
 ENTRYPOINT [ "python", "/entry_point.py" ]
