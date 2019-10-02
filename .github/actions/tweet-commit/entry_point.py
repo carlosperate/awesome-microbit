@@ -20,7 +20,7 @@ project_root_dir = \
         os.path.dirname(os.path.realpath(__file__)))))  # This file folder dir
 
 
-def get_commit_info(commit_hash):
+def get_commit_info(commit_hash=None):
     repository_path = project_root_dir
     repo = Repo(repository_path)
     if not commit_hash:
