@@ -15,19 +15,17 @@ except ImportError:
     TWITTER_ACCESS_TOKEN_SECRET = os.environ['INPUT_TWITTER_ACCESS_TOKEN_SECRET']
 
 
-project_root_dir = \
-    os.path.dirname(os.path.dirname(os.path.dirname(    # Going up 3 levels
-        os.path.dirname(os.path.realpath(__file__)))))  # This file folder dir
-
-
-def get_commit_info(commit_hash=None):
-    repository_path = project_root_dir
+def get_commit_msg(commit_hash):
+    repository_path = os.getcwd()
     repo = Repo(repository_path)
-    if not commit_hash:
-        # Get the commit message that triggered this action
-        commit_hash = os.environ['GITHUB_SHA']
     commit = repo.commit(commit_hash)
-    commit_msg = commit.message
+    return commit.message
+
+
+def get_commit_list_entry(commit_hash):
+    repository_path = os.getcwd()
+    repo = Repo(repository_path)
+    commit = repo.commit(commit_hash)
     diffs = commit.parents[0].diff(commit, create_patch=True)
     diff = diffs[0]
 
@@ -45,8 +43,9 @@ def get_commit_info(commit_hash=None):
             for match in re.finditer("-[ ]\[(.*?)\]\((.*?)\)[ ]-[ ](.*)", line):
                 # end_char  = match.span()[1] + 1 # Want to be off by one to bypass stop
                 title, url, description = match.groups()
-                return (commit_msg, title, url, description)
-    return commit_msg, None, None, None
+                return title, url, description
+
+    raise Exception('Could not match an awesome list entry.')
 
 
 def format_tweet_msg(entry_title, entry_url, entry_description):
@@ -64,17 +63,16 @@ def tweet_msg(msg):
 
 
 def main():
-    tweet_trigge_str = os.environ['INPUT_TRIGGER_KEYWORD']
-    commit_msg, entry_title, entry_url, entry_description = get_commit_info()
-    if tweet_trigge_str not in commit_msg:
+    commit_hash = os.environ['GITHUB_SHA']
+    tweet_trigger_str = os.environ['INPUT_TRIGGER_KEYWORD']
+    commit_msg = get_commit_msg(commit_hash)
+    if tweet_trigger_str not in commit_msg:
         print('Tweet trigger keyword not found, exiting...')
         sys.exit(0)
 
     print('Tweet trigger detected, let\'s tweet!')
+    entry_title, entry_url, entry_description = get_commit_list_entry(commit_hash)
     msg = format_tweet_msg(entry_title, entry_url, entry_description)
-    if not entry_title:
-        print('Could not match an awesome list entry.')
-        sys.exit(1)
     print('Tweet msg:\n\t"{}"'.format(msg))
     tweet_msg(msg)
     print('Tweeted!')
