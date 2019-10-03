@@ -10,5 +10,5 @@ ENV PYTHONUNBUFFERED 1
 
 RUN pip install --upgrade --no-cache-dir gitpython tweepy
 
-COPY entry_point.py /
-ENTRYPOINT [ "python", "/entry_point.py" ]
+COPY entrypoint.sh /
+ENTRYPOINT [ "/entrypoint.sh" ]

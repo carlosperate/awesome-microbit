@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Run tweet action tests
+      uses: ./.github/actions/tweet-commit
+      with:
+        args: test
     - name: Send Tweet if requested in commit message
       uses: ./.github/actions/tweet-commit
       with:

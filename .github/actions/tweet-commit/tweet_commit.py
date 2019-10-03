@@ -9,10 +9,10 @@ import tweepy
 try:
     from twitter_secrets import *
 except ImportError:
-    TWITTER_API_KEY = os.environ['INPUT_TWITTER_API_KEY']
-    TWITTER_API_SECRET_KEY = os.environ['INPUT_TWITTER_API_SECRET_KEY']
-    TWITTER_ACCESS_TOKEN = os.environ['INPUT_TWITTER_ACCESS_TOKEN']
-    TWITTER_ACCESS_TOKEN_SECRET = os.environ['INPUT_TWITTER_ACCESS_TOKEN_SECRET']
+    TWITTER_API_KEY = os.environ.get('INPUT_TWITTER_API_KEY', None)
+    TWITTER_API_SECRET_KEY = os.environ.get('INPUT_TWITTER_API_SECRET_KEY', None)
+    TWITTER_ACCESS_TOKEN = os.environ.get('INPUT_TWITTER_ACCESS_TOKEN', None)
+    TWITTER_ACCESS_TOKEN_SECRET = os.environ.get('INPUT_TWITTER_ACCESS_TOKEN_SECRET', None)
 
 
 def get_commit_msg(commit_hash):
