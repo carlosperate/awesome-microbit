@@ -1,6 +1,6 @@
 # Awesome micro:bit
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Build Status](https://travis-ci.org/carlosperate/awesome-microbit.svg?branch=master)](https://travis-ci.org/carlosperate/awesome-microbit) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Build Status](https://travis-ci.org/carlosperate/awesome-microbit.svg?branch=master)](https://travis-ci.org/carlosperate/awesome-microbit) ![GitHub Action](https://github.com/carlosperate/awesome-microbit/workflows/tweet-new-entries/badge.svg) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
 [![awesome micro:bit logo](https://user-images.githubusercontent.com/4189262/60908738-830bb780-a274-11e9-9d86-6b82ab89334f.png)](https://github.com/carlosperate/awesome-microbit)
 

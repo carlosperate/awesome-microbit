@@ -1,5 +1,5 @@
 name: tweet-commit
-description: Tweet a commit
+description: Tweet an Awesome List entry from a commit
 author: Carlos Pereira Atencio
 branding:
   color: blue
@@ -13,4 +13,4 @@ runs:
   using: docker
   image: Dockerfile
   args:
-  - ${{ inputs.trigger }}
+  - ${{ inputs.trigger_keyword }}

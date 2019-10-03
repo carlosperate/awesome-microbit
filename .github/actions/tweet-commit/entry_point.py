@@ -65,6 +65,7 @@ def tweet_msg(msg):
 def main():
     commit_hash = os.environ['GITHUB_SHA']
     tweet_trigger_str = os.environ['INPUT_TRIGGER_KEYWORD']
+    print('Commit: {}\nTrigger: {}'.format(commit_hash, tweet_trigger_str))
     commit_msg = get_commit_msg(commit_hash)
     if tweet_trigger_str not in commit_msg:
         print('Tweet trigger keyword not found, exiting...')
