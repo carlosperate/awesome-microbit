@@ -18,10 +18,10 @@ class TestCommitTweet(unittest.TestCase):
 
     def test_commit_1(self):
         """Normal commit."""
-        title, url, description = tweet_commit.get_commit_list_entry('f219e79ff490f784d8a6bb8807149034dded68a8')
+        title, url, description = tweet_commit.get_commit_list_entry('2c58c69cd5ea09fe15726d60c40faaccc6735921')
         tweet = tweet_commit.format_tweet_msg(title, url, description)
 
-        self.assertEqual(tweet, 'CodeMao Kitten Editor: Block programming platform to create games, includes micro:bit support.\nhttps://ide.codemao.cn')
+        self.assertEqual(tweet, 'MB1013: Module for the MB1013 ultrasonic sensor controlled via UART.\nhttps://github.com/liamkinne/microbit-mb1013')
 
     def test_commit_2(self):
         """Merge commit."""
@@ -32,10 +32,10 @@ class TestCommitTweet(unittest.TestCase):
 
     def test_commit_3(self):
         """Normal commit with extra dots in the middle."""
-        title, url, description = tweet_commit.get_commit_list_entry('4b661cf6bdeb22a56721bc5955eb554c736eca8c')
+        title, url, description = tweet_commit.get_commit_list_entry("2faac881c36435b45a454989ca915f50fe919c94")
         tweet = tweet_commit.format_tweet_msg(title, url, description)
 
-        self.assertEqual(tweet, 'Hardware Simulation with QEMU: Emulation support for the micro:bit is available from QEMU 4.0 and can be used for low-level software testing and development.\nhttps://www.qemu.org/2019/05/22/microbit/')
+        self.assertEqual(tweet, "The Christmas Joy Spreading Machine: Project inside a box representing a metaphor of the most popular Christmas symbols. Maybe it's a bit distopyc but it moves, lights and reacts to music.\nhttps://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559")
 
     def test_commit_4(self):
         """Invalid awesome list entry."""
@@ -45,11 +45,11 @@ class TestCommitTweet(unittest.TestCase):
         self.assertTrue('Could not match an awesome list entry.' in str(context.exception))
 
     def test_commit_5(self):
-        """Normal commit with brakets."""
-        title, url, description = tweet_commit.get_commit_list_entry('8a570813f0cfb3a9ebbcd9f8006e0eb8c6f11799')
+        """Normal commit with brackets."""
+        title, url, description = tweet_commit.get_commit_list_entry("d8eaa108e6fbb635f282f341e64b7b36507f0788")
         tweet = tweet_commit.format_tweet_msg(title, url, description)
 
-        self.assertEqual(tweet, 'SFC SNES Gamepad: Connect an SNES (Super Nintendo/Super Famicom) controller to the micro:bit.\nhttps://github.com/51bit/SFC')
+        self.assertEqual(tweet, "Ironman Arc Reactor: Choose between two different versions (Mk I and Mk II) ready to 3D print and build.\nhttps://www.kitronik.co.uk/blog/halo-ween-ironman-arc-reactor")
 
     def test_commit_6(self):
         """Markdown link inside the list entry description."""
@@ -57,6 +57,20 @@ class TestCommitTweet(unittest.TestCase):
         tweet = tweet_commit.format_tweet_msg(title, url, description)
 
         self.assertEqual(tweet, 'Official Swift Playgrounds: ([Source Code](https://github.com/microbit-foundation/microbit-swift-playgrounds)) Swift Playgrounds is an app for the iPad that helps teach people to code in the Swift language using interactive \'books\'.\nhttps://microbit.org/guide/swift-playgrounds/')
+
+    def test_commit_replace_microbit_1(self):
+        """Replace microbit for #microbit in description."""
+        title, url, description = tweet_commit.get_commit_list_entry("efeffb853b72a6df40cb2a0dad45c1b3384aba2f")
+        tweet = tweet_commit.format_tweet_msg(title, url, description)
+
+        self.assertEqual(tweet, "Otto Robot: Otto chassis for the #microbit to make a bidepad robot with a robitbit accessory.\nhttps://www.thingiverse.com/thing:2786066")
+
+    def test_commit_replace_microbit_2(self):
+        """Replace micro:bit for #microbit in description, but not in title."""
+        title, url, description = tweet_commit.get_commit_list_entry("5a04d4c8a4d51c10ee87a0d69656bb1c695447f1")
+        tweet = tweet_commit.format_tweet_msg(title, url, description)
+
+        self.assertEqual(tweet, "Grade 10 micro:bit Tutorials: Collection of short videos showing how to use #microbit MakeCode blocks and features.\nhttps://www.youtube.com/playlist?list=PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr")
 
 
 if __name__ == '__main__':

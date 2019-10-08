@@ -49,6 +49,12 @@ def get_commit_list_entry(commit_hash):
 
 
 def format_tweet_msg(entry_title, entry_url, entry_description):
+    """Formats a tweet combining the title, description and URL.
+
+    It also replaces common words in the description to use hashtags.
+    """
+    entry_description = entry_description.replace(" microbit", " #microbit")
+    entry_description = entry_description.replace(" micro:bit", " #microbit")
     msg = "{}: {}\n{}".format(entry_title, entry_description, entry_url)
     return msg
 
