@@ -329,6 +329,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit pinball](https://www.myminifactory.com/object/3d-print-micro-bit-pinball-22965) - A 3D printed pinball machine with one or more micro:bits controlling it.
 - [micro:bit class rack](https://www.thingiverse.com/thing:3631044) - Stand that holds 14 micro:bits and battery packs.
 - [micro:bit Hand Controller](https://www.thingiverse.com/thing:3728487) - Nunchuck style single-hand controller for a micro:bit with an external thumb joystick and two buttons.
+- [WalkerBot:bit](https://www.thingiverse.com/thing:2746171) - Two servo walking robot controlled by a BBC micro:bit.
 
 
 ## 📐 CAD
@@ -469,15 +470,15 @@ Useful Articles for developing on the micro:bit.
 
 ## 📚 Books
 
-- [micro:bit IoT In C](http://www.iot-programmer.com/index.php/books/micro-bit-iot-in-c)
-- [Programming with MicroPython](http://shop.oreilly.com/product/0636920056515.do)
-- [Getting Started with the micro:bit](http://shop.oreilly.com/product/0636920115267.do)
-- [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735)
-- [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/)
-- [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/)
-- [micro:bit in Wonderland](http://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html)
-- [Beginning BBC micro:bit](https://www.apress.com/gb/book/9781484233597)
-- [BBC micro:bit Recipes](https://www.apress.com/gp/book/9781484249123)
+- [micro:bit IoT In C](http://www.iot-programmer.com/index.php/books/micro-bit-iot-in-c) - Using the C langague to gain full access to the micro:bit features and external devices.
+- [Programming with MicroPython](http://shop.oreilly.com/product/0636920056515.do) - Embedded Programming with Microcontrollers and Python.
+- [Getting Started with the micro:bit](http://shop.oreilly.com/product/0636920115267.do) - Coding and Making with the BBC's Open Development Board.
+- [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735) - The go-to guide to getting started with the BBC micro:bit and exploring all of its amazing capabilities.
+- [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/) - Getting Started with MicroPython
+- [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/) - Presents a series of activities to teach the basics of computer networks.
+- [micro:bit in Wonderland](http://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html) - A project book for the BBC micro:bit inspired by the classic story of Alice in Wonderland.
+- [Beginning BBC micro:bit](https://www.apress.com/gb/book/9781484233597) - A Practical Introduction to micro:bit Development.
+- [BBC micro:bit Recipes](https://www.apress.com/gp/book/9781484249123) - Learn Programming with Microsoft MakeCode Blocks.
 
 
 ## 🏫 Teaching Resources
