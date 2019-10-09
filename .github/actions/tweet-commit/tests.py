@@ -72,6 +72,27 @@ class TestCommitTweet(unittest.TestCase):
 
         self.assertEqual(tweet, "Grade 10 micro:bit Tutorials: Collection of short videos showing how to use #microbit MakeCode blocks and features.\nhttps://www.youtube.com/playlist?list=PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr")
 
+    def test_commit_replace_python(self):
+        """Replace Python for #Python in description."""
+        title, url, description = tweet_commit.get_commit_list_entry("67fb7bcb010e62982201c2c365028586e14fab70")
+        tweet = tweet_commit.format_tweet_msg(title, url, description)
+
+        self.assertEqual(tweet, "micro:bit Lessons: Basic lessons on #Python programming with a BBC #microbit.\nhttps://github.com/PhonicCanine/microbit-lessons")
+
+    def test_commit_replace_micropython_1(self):
+        """Replace micropython for #MicroPython in description."""
+        title, url, description = tweet_commit.get_commit_list_entry("b7a6767a088a47450019c5cacf9469533a087efa")
+        tweet = tweet_commit.format_tweet_msg(title, url, description)
+
+        self.assertEqual(tweet, "BBC Micro:bit composer: Write music and get the corresponding #microbit #MicroPython code, a tool made with Scratch.\nhttps://scratch.mit.edu/projects/201592887/")
+
+    def test_commit_replace_micropython_2(self):
+        """Replace MicroPython for #MicroPython in description."""
+        title, url, description = tweet_commit.get_commit_list_entry("96e29b83d0c7ee1c0e387a2c06aea06bf1ad8929")
+        tweet = tweet_commit.format_tweet_msg(title, url, description)
+
+        self.assertEqual(tweet, "MicroREPL: A REPL client for #MicroPython running on the BBC #microbit.\nhttps://github.com/ntoll/microrepl")
+
 
 if __name__ == '__main__':
     project_root_dir = \
