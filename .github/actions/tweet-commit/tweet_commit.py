@@ -22,7 +22,7 @@ def get_commit_msg(commit_hash):
     return commit.message
 
 
-def get_commit_list_entry(commit_hash):
+def get_commit_list_entries(commit_hash):
     repository_path = os.getcwd()
     repo = Repo(repository_path)
     commit = repo.commit(commit_hash)
@@ -38,14 +38,21 @@ def get_commit_list_entry(commit_hash):
 
     diff_change = diff.diff.decode('utf-8')
     diff_lines = diff_change.splitlines()
+    entries = []
     for line in diff_lines:
         if line.startswith('+'):
             for match in re.finditer("-[ ]\[(.*?)\]\((.*?)\)[ ]-[ ](.*)", line):
                 # end_char  = match.span()[1] + 1 # Want to be off by one to bypass stop
                 title, url, description = match.groups()
-                return title, url, description
+                entries.append({
+                    "title": title,
+                    "url": url,
+                    "description": description
+                })
 
-    raise Exception('Could not match an awesome list entry.')
+    if len(entries) == 0:
+        raise Exception('Could not match an Awesome List entry.')
+    return entries
 
 
 def format_tweet_msg(entry_title, entry_url, entry_description):
@@ -83,11 +90,12 @@ def main():
         sys.exit(0)
 
     print('Tweet trigger detected, let\'s tweet!')
-    entry_title, entry_url, entry_description = get_commit_list_entry(commit_hash)
-    msg = format_tweet_msg(entry_title, entry_url, entry_description)
-    print('Tweet msg:\n\t"{}"'.format(msg))
-    tweet_msg(msg)
-    print('Tweeted!')
+    entries = get_commit_list_entries(commit_hash)
+    for i, entry in enumerate(entries):
+        msg = format_tweet_msg(entry.title, entry.url, entry.description)
+        print("Tweet msg [{}]:\n\t\"{}\"".format(i, msg))
+        tweet_msg(msg)
+        print('Tweeted [{}]!'.format(i))
 
 
 if __name__ == "__main__":
