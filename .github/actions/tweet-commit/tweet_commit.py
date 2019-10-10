@@ -67,7 +67,7 @@ def format_tweet_msg(entry_title, entry_url, entry_description):
     entry_description = entry_description.replace("MicroPython", "#MicroPython")
     entry_description = entry_description.replace("Micropython", "#MicroPython")
     entry_description = entry_description.replace("micropython", "#MicroPython")
-    msg = "{}: {}\n{}".format(entry_title, entry_description, entry_url)
+    msg = "{} - {}\n{}".format(entry_title, entry_description, entry_url)
     return msg
 
 
