@@ -92,7 +92,7 @@ def main():
     print('Tweet trigger detected, let\'s tweet!')
     entries = get_commit_list_entries(commit_hash)
     for i, entry in enumerate(entries):
-        msg = format_tweet_msg(entry.title, entry.url, entry.description)
+        msg = format_tweet_msg(entry["title"], entry["url"], entry["description"])
         print("Tweet msg [{}]:\n\t\"{}\"".format(i, msg))
         tweet_msg(msg)
         print('Tweeted [{}]!'.format(i))
