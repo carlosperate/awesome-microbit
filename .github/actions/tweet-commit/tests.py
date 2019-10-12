@@ -9,11 +9,11 @@ except ImportError:
 
 
 class TestCommitTweet(unittest.TestCase):
-    """Tests that commits in this repo are parsed correctly.
+    """Test tweet parsing from commits located in this repo.
 
     This tests depend on the git history from the awesome-microbit repo, not
-    a great way to test this (we could mock a the git library), but a quick
-    way to get this tested.
+    a great way to write test, as we could have mock a the git library, but
+    this is quick way to get this tested.
     """
 
     def test_commit_1(self):
@@ -74,7 +74,7 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(tweet_1, "Battery pack holder - Simple 3D printed battery pack holder for BBC #microbit.\nhttps://www.thingiverse.com/thing:2666671")
 
     def test_commit_replace_microbit_1(self):
-        """Replace microbit for #microbit in description."""
+        """Replace "microbit" for "#microbit" in description."""
         entries = tweet_commit.get_commit_list_entries("efeffb853b72a6df40cb2a0dad45c1b3384aba2f")
         tweet = tweet_commit.format_tweet_msg(entries[0]["title"], entries[0]["url"], entries[0]["description"])
 
@@ -82,7 +82,7 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(tweet, "Otto Robot - Otto chassis for the #microbit to make a bidepad robot with a robitbit accessory.\nhttps://www.thingiverse.com/thing:2786066")
 
     def test_commit_replace_microbit_2(self):
-        """Replace micro:bit for #microbit in description, but not in title."""
+        """Replace "micro:bit" for "#microbit" in description, but not in title."""
         entries = tweet_commit.get_commit_list_entries("5a04d4c8a4d51c10ee87a0d69656bb1c695447f1")
         tweet = tweet_commit.format_tweet_msg(entries[0]["title"], entries[0]["url"], entries[0]["description"])
 
@@ -90,7 +90,7 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(tweet, "Grade 10 micro:bit Tutorials - Collection of short videos showing how to use #microbit MakeCode blocks and features.\nhttps://www.youtube.com/playlist?list=PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr")
 
     def test_commit_replace_python(self):
-        """Replace Python for #Python in description."""
+        """Replace "Python" for "#Python" in description."""
         entries = tweet_commit.get_commit_list_entries("67fb7bcb010e62982201c2c365028586e14fab70")
         tweet = tweet_commit.format_tweet_msg(entries[0]["title"], entries[0]["url"], entries[0]["description"])
 
@@ -98,15 +98,18 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(tweet, "micro:bit Lessons - Basic lessons on #Python programming with a BBC #microbit.\nhttps://github.com/PhonicCanine/microbit-lessons")
 
     def test_commit_replace_micropython_1(self):
-        """Replace micropython for #MicroPython in description."""
+        """Replace "micropython" for "#MicroPython" and "Scratch" for "#Scratch" in description.
+
+        There isn't commits with "scratch" in lower case.
+        """
         entries = tweet_commit.get_commit_list_entries("b7a6767a088a47450019c5cacf9469533a087efa")
         tweet = tweet_commit.format_tweet_msg(entries[0]["title"], entries[0]["url"], entries[0]["description"])
 
         self.assertEqual(len(entries), 1)
-        self.assertEqual(tweet, "BBC Micro:bit composer - Write music and get the corresponding #microbit #MicroPython code, a tool made with Scratch.\nhttps://scratch.mit.edu/projects/201592887/")
+        self.assertEqual(tweet, "BBC Micro:bit composer - Write music and get the corresponding #microbit #MicroPython code, a tool made with #Scratch.\nhttps://scratch.mit.edu/projects/201592887/")
 
     def test_commit_replace_micropython_2(self):
-        """Replace MicroPython for #MicroPython in description."""
+        """Replace "MicroPython" for "#MicroPython" in description."""
         entries = tweet_commit.get_commit_list_entries("96e29b83d0c7ee1c0e387a2c06aea06bf1ad8929")
         tweet = tweet_commit.format_tweet_msg(entries[0]["title"], entries[0]["url"], entries[0]["description"])
 

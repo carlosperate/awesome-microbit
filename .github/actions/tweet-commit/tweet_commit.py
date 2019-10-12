@@ -67,6 +67,8 @@ def format_tweet_msg(entry_title, entry_url, entry_description):
     entry_description = entry_description.replace("MicroPython", "#MicroPython")
     entry_description = entry_description.replace("Micropython", "#MicroPython")
     entry_description = entry_description.replace("micropython", "#MicroPython")
+    entry_description = entry_description.replace("Scratch", "#Scratch")
+    entry_description = entry_description.replace("scratch", "#Scratch")
     msg = "{} - {}\n{}".format(entry_title, entry_description, entry_url)
     return msg
 
@@ -93,9 +95,9 @@ def main():
     entries = get_commit_list_entries(commit_hash)
     for i, entry in enumerate(entries):
         msg = format_tweet_msg(entry["title"], entry["url"], entry["description"])
-        print("Tweet msg [{}]:\n\t\"{}\"".format(i, msg))
+        print("Tweet msg #{}:\n\t\"{}\"".format(i, msg.replace("\n", "\n\t")))
         tweet_msg(msg)
-        print('Tweeted [{}]!'.format(i))
+        print('Tweeted #{}!'.format(i))
 
 
 if __name__ == "__main__":
