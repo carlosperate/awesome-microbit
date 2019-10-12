@@ -73,6 +73,22 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(tweet_0, "Robottillo:bit - A 3D printed case which looks like a small robot. Two versions available, with a rear protective cover or with a perforated cover for the pins.\nhttps://www.myminifactory.com/object/robottillo-bit-46478")
         self.assertEqual(tweet_1, "Battery pack holder - Simple 3D printed battery pack holder for BBC #microbit.\nhttps://www.thingiverse.com/thing:2666671")
 
+    def test_editing_an_entry(self):
+        """Editing an existing entry."""
+        entries = tweet_commit.get_commit_list_entries("76deb0040093492197732ba1839ba52beb2e70fc")
+        tweet = tweet_commit.format_tweet_msg(entries[0]["title"], entries[0]["url"], entries[0]["description"])
+
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(tweet, "EduBlocks - Blocks interface that provides a transitioning experience from #Scratch to #Python.\nhttps://app.edublocks.org")
+
+    def test_moving_an_entry(self):
+        """Moving an existing entry to a different position."""
+        entries = tweet_commit.get_commit_list_entries("a05ffd323e0cce48119ba78a35478fd18dee359c")
+        tweet = tweet_commit.format_tweet_msg(entries[0]["title"], entries[0]["url"], entries[0]["description"])
+
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(tweet, "JetBrains IDEA/PyCharm IDE plugin - Support for #MicroPython devices in IntelliJ IDEA and PyCharm.\nhttps://plugins.jetbrains.com/plugin/9777-micropython-support")
+
     def test_commit_replace_microbit_1(self):
         """Replace "microbit" for "#microbit" in description."""
         entries = tweet_commit.get_commit_list_entries("efeffb853b72a6df40cb2a0dad45c1b3384aba2f")
