@@ -1,8 +1,14 @@
 #!/bin/bash
+set -e
+
 if [[ "$1" == "test" ]]; then
     echo "Running the tests:"
-    sh -c "python .github/actions/tweet-commit/tests.py"
+    python .github/actions/tweet-commit/tests.py
+    echo "Running flake8:"
+    flake8 .github/actions/tweet-commit/tweet_commit.py .github/actions/tweet-commit/tests.py
+    echo "Running black:"
+    black .github/actions/tweet-commit/tweet_commit.py .github/actions/tweet-commit/tests.py --check --diff --line-length 79
 else
     echo "Tweeting new Awesome List entry:"
-    sh -c "python .github/actions/tweet-commit/tweet_commit.py"
+    python .github/actions/tweet-commit/tweet_commit.py
 fi

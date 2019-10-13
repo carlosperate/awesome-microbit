@@ -8,7 +8,7 @@ LABEL "homepage"="https://github.com/carlosperate/awesome-microbit"
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN pip install --upgrade --no-cache-dir gitpython tweepy
-
-COPY entrypoint.sh /
+RUN pip install --upgrade --no-cache-dir pipenv
+COPY entrypoint.sh Pipfile* /
+RUN cd / && pipenv install --dev --system --ignore-pipfile
 ENTRYPOINT [ "/entrypoint.sh" ]

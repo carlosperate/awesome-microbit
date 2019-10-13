@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gitpython = "==3.*"
+tweepy = "==3.8.*"
+
+[dev-packages]
+flake8 = "*"
+flake8-bugbear = {version = "*",markers = "python_version >= '3.5'"}
+black = {version = "==19.3b0",markers = "python_version >= '3.6'"}
+flake8-builtins = "*"
+flake8-docstrings = "*"
+
+[requires]
+python_version = "3"

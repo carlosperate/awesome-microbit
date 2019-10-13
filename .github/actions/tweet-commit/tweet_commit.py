@@ -1,3 +1,11 @@
+"""GH Action entry point to tweet new entries to the Awesome micro:bit list.
+
+This script depends on environmental variables set by GitHub for the action,
+including secrets set in the Awesome micro:bit repository for the Twitter
+tokens.
+It also depends on running with the Current Working Direcotory set to the
+repository root.
+"""
 import os
 import re
 import sys
@@ -7,15 +15,25 @@ import tweepy
 
 # Getting the Twitter secrets form local dev file or GH action secrets
 try:
-    from twitter_secrets import *
+    from twitter_secrets import (
+        TWITTER_API_KEY,
+        TWITTER_API_SECRET_KEY,
+        TWITTER_ACCESS_TOKEN,
+        TWITTER_ACCESS_TOKEN_SECRET,
+    )
 except ImportError:
-    TWITTER_API_KEY = os.environ.get('INPUT_TWITTER_API_KEY', None)
-    TWITTER_API_SECRET_KEY = os.environ.get('INPUT_TWITTER_API_SECRET_KEY', None)
-    TWITTER_ACCESS_TOKEN = os.environ.get('INPUT_TWITTER_ACCESS_TOKEN', None)
-    TWITTER_ACCESS_TOKEN_SECRET = os.environ.get('INPUT_TWITTER_ACCESS_TOKEN_SECRET', None)
+    TWITTER_API_KEY = os.environ.get("INPUT_TWITTER_API_KEY", None)
+    TWITTER_API_SECRET_KEY = os.environ.get(
+        "INPUT_TWITTER_API_SECRET_KEY", None
+    )
+    TWITTER_ACCESS_TOKEN = os.environ.get("INPUT_TWITTER_ACCESS_TOKEN", None)
+    TWITTER_ACCESS_TOKEN_SECRET = os.environ.get(
+        "INPUT_TWITTER_ACCESS_TOKEN_SECRET", None
+    )
 
 
 def get_commit_msg(commit_hash):
+    """Return the commit message from the given hash."""
     repository_path = os.getcwd()
     repo = Repo(repository_path)
     commit = repo.commit(commit_hash)
@@ -23,7 +41,7 @@ def get_commit_msg(commit_hash):
 
 
 def get_commit_list_entries(commit_hash):
-    """Extracts an Awesome list entry from a given git commit in this repo."""
+    """Extract an Awesome list entry from a given git commit in this repo."""
     repository_path = os.getcwd()
     repo = Repo(repository_path)
     commit = repo.commit(commit_hash)
@@ -31,33 +49,32 @@ def get_commit_list_entries(commit_hash):
     diff = diffs[0]
 
     # Check the git diff is what we expect
-    exc_msg = 'Can only analyse a single diff'
+    exc_msg = "Can only analyse a single diff"
     if len(diffs) != 1:
-        raise Exception(exc_msg + '.')
-    if diff.a_path != diff.b_path != 'README.md':
-        raise Exception(exc_msg + ' for the README.md file.')
+        raise Exception(exc_msg + ".")
+    if diff.a_path != diff.b_path != "README.md":
+        raise Exception(exc_msg + " for the README.md file.")
 
-    diff_change = diff.diff.decode('utf-8')
+    diff_change = diff.diff.decode("utf-8")
     diff_lines = diff_change.splitlines()
     entries = []
     for line in diff_lines:
-        if line.startswith('+'):
-            for match in re.finditer("-[ ]\[(.*?)\]\((.*?)\)[ ]-[ ](.*)", line):
-                # end_char  = match.span()[1] + 1 # Want to be off by one to bypass stop
+        if line.startswith("+"):
+            for match in re.finditer(
+                r"-[ ]\[(.*?)\]\((.*?)\)[ ]-[ ](.*)", line
+            ):
                 title, url, description = match.groups()
-                entries.append({
-                    "title": title,
-                    "url": url,
-                    "description": description
-                })
+                entries.append(
+                    {"title": title, "url": url, "description": description}
+                )
 
     if len(entries) == 0:
-        raise Exception('Could not match an Awesome List entry.')
+        raise Exception("Could not match an Awesome List entry.")
     return entries
 
 
 def format_tweet_msg(title, url, description):
-    """Formats a tweet combining the title, description and URL.
+    """Format a tweet combining the title, description and URL.
 
     It ensures the total size does not exceed the tweet max characters limit.
     And it also replaces common words in the description to use hashtags.
@@ -74,7 +91,7 @@ def format_tweet_msg(title, url, description):
     description = description.replace("scratch", "#Scratch")
     # Now let's make sure we don't exceed the 280 character limit
     max_characters = 280
-    link_length = 24    # Includes an extra character for a '\n'
+    link_length = 24  # Includes an extra character for a '\n'
     msg = "{} - {}".format(title, description)
     if len(msg) > (max_characters - link_length):
         ellipsis = "..."
@@ -84,7 +101,7 @@ def format_tweet_msg(title, url, description):
 
 
 def tweet_msg(msg):
-    """Tweets the given message content."""
+    """Tweet the given message content."""
     # Authenticate to Twitter and create API object
     auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET_KEY)
     auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
@@ -94,21 +111,24 @@ def tweet_msg(msg):
 
 
 def main():
-    commit_hash = os.environ['GITHUB_SHA']
-    tweet_trigger_str = os.environ['INPUT_TRIGGER_KEYWORD']
-    print('Commit: {}\nTrigger: {}'.format(commit_hash, tweet_trigger_str))
+    """Entry point."""
+    commit_hash = os.environ["GITHUB_SHA"]
+    tweet_trigger_str = os.environ["INPUT_TRIGGER_KEYWORD"]
+    print("Commit: {}\nTrigger: {}".format(commit_hash, tweet_trigger_str))
     commit_msg = get_commit_msg(commit_hash)
     if tweet_trigger_str not in commit_msg:
-        print('Tweet trigger keyword not found, exiting...')
+        print("Tweet trigger keyword not found, exiting...")
         sys.exit(0)
 
-    print('Tweet trigger detected, let\'s tweet!')
+    print("Tweet trigger detected, let's tweet!")
     entries = get_commit_list_entries(commit_hash)
     for i, entry in enumerate(entries):
-        msg = format_tweet_msg(entry["title"], entry["url"], entry["description"])
-        print("Tweet msg #{}:\n\t\"{}\"".format(i, msg.replace("\n", "\n\t")))
+        msg = format_tweet_msg(
+            entry["title"], entry["url"], entry["description"]
+        )
+        print('Tweet msg #{}:\n\t"{}"'.format(i, msg.replace("\n", "\n\t")))
         tweet_msg(msg)
-        print('Tweeted #{}!'.format(i))
+        print("Tweeted #{}!".format(i))
 
 
 if __name__ == "__main__":
