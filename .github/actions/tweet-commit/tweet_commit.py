@@ -23,6 +23,7 @@ def get_commit_msg(commit_hash):
 
 
 def get_commit_list_entries(commit_hash):
+    """Extracts an Awesome list entry from a given git commit in this repo."""
     repository_path = os.getcwd()
     repo = Repo(repository_path)
     commit = repo.commit(commit_hash)
@@ -55,25 +56,35 @@ def get_commit_list_entries(commit_hash):
     return entries
 
 
-def format_tweet_msg(entry_title, entry_url, entry_description):
+def format_tweet_msg(title, url, description):
     """Formats a tweet combining the title, description and URL.
 
-    It also replaces common words in the description to use hashtags.
+    It ensures the total size does not exceed the tweet max characters limit.
+    And it also replaces common words in the description to use hashtags.
     """
-    entry_description = entry_description.replace(" microbit", " #microbit")
-    entry_description = entry_description.replace(" micro:bit", " #microbit")
-    entry_description = entry_description.replace(" Python", " #Python")
-    entry_description = entry_description.replace(" python", " #Python")
-    entry_description = entry_description.replace("MicroPython", "#MicroPython")
-    entry_description = entry_description.replace("Micropython", "#MicroPython")
-    entry_description = entry_description.replace("micropython", "#MicroPython")
-    entry_description = entry_description.replace("Scratch", "#Scratch")
-    entry_description = entry_description.replace("scratch", "#Scratch")
-    msg = "{} - {}\n{}".format(entry_title, entry_description, entry_url)
-    return msg
+    # First let's introduce hashtags to the description
+    description = description.replace(" microbit", " #microbit")
+    description = description.replace(" micro:bit", " #microbit")
+    description = description.replace(" Python", " #Python")
+    description = description.replace(" python", " #Python")
+    description = description.replace("MicroPython", "#MicroPython")
+    description = description.replace("Micropython", "#MicroPython")
+    description = description.replace("micropython", "#MicroPython")
+    description = description.replace("Scratch", "#Scratch")
+    description = description.replace("scratch", "#Scratch")
+    # Now let's make sure we don't exceed the 280 character limit
+    max_characters = 280
+    link_length = 24    # Includes an extra character for a '\n'
+    msg = "{} - {}".format(title, description)
+    if len(msg) > (max_characters - link_length):
+        ellipsis = "..."
+        cut_msg_len = max_characters - link_length - len(ellipsis)
+        msg = msg[:cut_msg_len].rsplit(" ", 1)[0] + ellipsis
+    return "{}\n{}".format(msg, url)
 
 
 def tweet_msg(msg):
+    """Tweets the given message content."""
     # Authenticate to Twitter and create API object
     auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET_KEY)
     auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)

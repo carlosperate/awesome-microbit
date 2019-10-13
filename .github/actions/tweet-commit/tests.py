@@ -89,6 +89,31 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(len(entries), 1)
         self.assertEqual(tweet, "JetBrains IDEA/PyCharm IDE plugin - Support for #MicroPython devices in IntelliJ IDEA and PyCharm.\nhttps://plugins.jetbrains.com/plugin/9777-micropython-support")
 
+    def test_msg_format_max_length(self):
+        """Check that formatting the tweet msg respects content that fits the twitter limit."""
+        # 280 characters total, 23 for the shortned URL, 4 characters formating
+        tweet = tweet_commit.format_tweet_msg("t" * 12, "u" * 23, ("d" * 240) + ".")
+
+        self.assertEqual(len(tweet), 280)
+        self.assertEqual(tweet, "tttttttttttt - dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd.\nuuuuuuuuuuuuuuuuuuuuuuu")
+
+    def test_msg_format_over_length(self):
+        """Check that when the tweet content exceeds the twitter character limit, it truncates the text to nearest word."""
+        # 280 characters total, 23 for the shortned URL, 4 characters formating
+        tweet = tweet_commit.format_tweet_msg("t" * 12, "u" * 23, " dd" * 1000)
+
+        self.assertEqual(len(tweet), 279)
+        self.assertEqual(tweet, "tttttttttttt -  dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd...\nuuuuuuuuuuuuuuuuuuuuuuu")
+
+    def test_long_tweet(self):
+        """An entry that is too long to fit in a tweet."""
+        entries = tweet_commit.get_commit_list_entries("8e74b6730578c24c650b375f9490a08eb7d42bdf")
+        tweet = tweet_commit.format_tweet_msg(entries[0]["title"], entries[0]["url"], entries[0]["description"])
+
+        self.assertEqual(len(entries), 1)
+        self.maxDiff = None
+        self.assertEqual(tweet, "Radiobit, a BBC Micro:Bit RF firmware - Radiobit is composed of a dedicated #MicroPython-based firmware and a set of tools allowing security researchers to sniff, receive and send data over Nordic's ShockBurst protocol, Enhanced ShockBurst protocol,...\nhttps://github.com/virtualabs/radiobit")
+
     def test_commit_replace_microbit_1(self):
         """Replace "microbit" for "#microbit" in description."""
         entries = tweet_commit.get_commit_list_entries("efeffb853b72a6df40cb2a0dad45c1b3384aba2f")
