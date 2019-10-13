@@ -8,7 +8,7 @@ A curated list of resources for the [BBC micro:bit](https://www.microbit.org), a
 This embedded board has a Bluetooth capable microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and GPIO accessible via the edge connector.
 
 - [![watch badge](https://img.shields.io/github/watchers/carlosperate/awesome-microbit.svg?label=Watch&style=social)](https://github.com/carlosperate/awesome-microbit/watchers) You can "Watch" this repository if you'd like to get notfications when a new entry is added to the list.
-- ![Twitter Follow](https://img.shields.io/twitter/follow/awesomemicrobit?color=%231da1f2&label=Twitter&style=social) And now you can also follow [@awesomemicrobit](https://twitter.com/awesomemicrobit) on Twitter and get updates in your timeline! 📣
+- [![Twitter Follow](https://img.shields.io/twitter/follow/awesomemicrobit?color=%231da1f2&label=Twitter&style=social)](https://twitter.com/awesomemicrobit) And now you can also follow [@awesomemicrobit](https://twitter.com/awesomemicrobit) on Twitter and get updates in your timeline! 📣
 
 Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
 
