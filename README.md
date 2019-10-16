@@ -1,6 +1,6 @@
 # Awesome micro:bit
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Link Checker GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Check%20Links/badge.svg)](https://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries) [![Tweet GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg)](https://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-informational.svg)](https://creativecommons.org/publicdomain/zero/1.0/) [![Twitter Follow](https://img.shields.io/twitter/follow/awesomemicrobit?color=%231da1f2&label=Follow%20on%20Twitter&style=flat)](https://twitter.com/awesomemicrobit)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Link Checker GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Check%20Links/badge.svg)](http://github.com/carlosperate/awesome-microbit/actions?workflow=Check+Links) [![Tweet GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg)](http://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-informational.svg)](https://creativecommons.org/publicdomain/zero/1.0/) [![Twitter Follow](https://img.shields.io/twitter/follow/awesomemicrobit?color=%231da1f2&label=Follow%20on%20Twitter&style=flat)](https://twitter.com/awesomemicrobit)
 
 [![awesome micro:bit logo](https://user-images.githubusercontent.com/4189262/60908738-830bb780-a274-11e9-9d86-6b82ab89334f.png)](https://github.com/carlosperate/awesome-microbit)
 
@@ -410,7 +410,7 @@ All these projects contain steps and resources required for reproduction.
 
 Useful Articles for developing on the micro:bit.
 
-- [Offline C/C++ Development With The micro:bit](https://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
+- [Offline C/C++ Development With The micro:bit](http://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
 - [Sending 'commands' from a micro:bit over Bluetooth](https://bluetooth-mdw.blogspot.co.uk/2016/07/sending-commands-from-microbit-over.html)
 - [Modelling micro:bit data with the Bitty Data Logger App](https://www.stem.org.uk/elibrary/community-resource/289686/modelling-microbit-data-bitty-data-logger-app)
 - [Getting Started with the micro:bit Bluetooth IO Pin Service](https://ukbaz.github.io/howto/ubit_ble_profile.html)
@@ -498,7 +498,7 @@ Useful Articles for developing on the micro:bit.
 - [FunWithMicrobit](https://github.com/MicrobitPolska/FunWithMicrobit) - A 6 hours workshop made by kids for the kids.
 - [Year 7 micro:bit lessons](https://www.jonwitts.co.uk/year-7-microbit) - Lessons used to introduce students to the micro:bit and Python.
 - [UCL’s BBC micro:bit Tutorials](https://microbit-challenges.readthedocs.io/en/latest/) - Tutorial sheets that introduce micro:bit features with practical examples provided to invite students to design solutions to problems.
-- [BBC micro:bit and Kodu Interact](https://www.kodugamelab.com/resources/#microbit) - Kodu is a visual programming language made specifically for creating games and allow interaction with the micro:bit.
+- [BBC micro:bit and Kodu Interact](http://www.kodugamelab.com/resources/#microbit) - Kodu is a visual programming language made specifically for creating games and allow interaction with the micro:bit.
 - [Build A Robot Wars Buggy](https://www.kitronik.co.uk/blog/robot-buggy-part-1-build-robot-wars-buggy-introduction/) - This fun learning resource has been put together to provide teachers with an all in one design and technology challenge that you can set for your students over the course of a term or a year.
 - [CPC UCreate micro:bit resources](https://warksjammy.blogspot.co.uk/2017/04/cpc-ucreate-microbit-resources-all-in.html) - Collection of micro:bit resources made for CPC.
 - [Year 7 BBC micro:bit topic](https://bournetocode.com/projects/7-CS-micro/) - BBC micro:bit lessons from Bourne Grammar school.
