@@ -5,6 +5,9 @@ on:
     branches:
     - master
     - action
+  schedule:
+    # Runs every midnight
+    - cron:  '0 0 * * *'
 
 jobs:
   build:
