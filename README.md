@@ -310,13 +310,13 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 
 - [Microbot Case](https://www.thingiverse.com/thing:1434797) - Case for the micro:bit in the shape of a robot.
 - [micro:bit Stand](https://www.thingiverse.com/thing:2144500) - Stand for the micro:bit.
-- [micro:bit Rover](https://www.myminifactory.com/object/microbit-rover-27013) - Multiple 3D printable parts to build a micro:bit robot rover.
-- [micro:Racing](https://www.myminifactory.com/object/micro-racing-18280) - Driving wheel case for the micro:bit.
-- [Binary Watch](https://www.myminifactory.com/object/binary-watch-15257) - Watch case and strap for the micro:bit.
-- [micro:bit Compass](https://www.myminifactory.com/object/micro-bit-compass-18994) - Compass case for the micro:bit.
-- [A4 folder holder](https://www.myminifactory.com/object/micro-bit-a4-folder-holder-22039) - Device holder to store your micro:bit in a A4 school folder.
-- [mibot drawing robot](https://www.myminifactory.com/object/mibot-drawing-robot-36030) - Chassis for a painting robot powered by a BBC micro:bit and its motor driver board.
-- [Robottillo:bit](https://www.myminifactory.com/object/robottillo-bit-46478) - Case which looks like a small robot. Two versions available, with a rear protective cover or with a perforated cover for the pins.
+- [micro:bit Rover](https://www.myminifactory.com/object/3d-print-microbit-rover-27013) - Multiple 3D printable parts to build a micro:bit robot rover.
+- [micro:Racing](https://www.myminifactory.com/object/3d-print-micro-racing-18280) - Driving wheel case for the micro:bit.
+- [Binary Watch](https://www.myminifactory.com/object/3d-print-binary-watch-15257) - Watch case and strap for the micro:bit.
+- [micro:bit Compass](https://www.myminifactory.com/object/3d-print-micro-bit-compass-18994) - Compass case for the micro:bit.
+- [A4 folder holder](https://www.myminifactory.com/object/3d-print-micro-bit-a4-folder-holder-22039) - Device holder to store your micro:bit in a A4 school folder.
+- [mibot drawing robot](https://www.myminifactory.com/object/3d-print-mibot-drawing-robot-36030) - Chassis for a painting robot powered by a BBC micro:bit and its motor driver board.
+- [Robottillo:bit](https://www.myminifactory.com/object/3d-print-robottillo-bit-46478) - Case which looks like a small robot. Two versions available, with a rear protective cover or with a perforated cover for the pins.
 - [Battery pack holder](https://www.thingiverse.com/thing:2666671) - Simple battery clip for the BBC micro:bit.
 - [micro:bit holder](https://www.thingiverse.com/thing:2750805) - Stand that holds 20 micro:bit boards vertically, useful in a classroom setting.
 - [BBC micro:bit Case V2](https://www.thingiverse.com/thing:3028078) - A slim, nice looking, and functional snap-together case that protects all sides and corners.
@@ -356,8 +356,8 @@ All these projects contain steps and resources required for reproduction.
 - [Micro:Bob](https://hackaday.io/project/8643-microbob) - Simple bipedal robot controlled by a micro:bit.
 - [Coffee Timer](https://www.norwegiancreations.com/2016/09/coffee-timer-part-1-the-first-prototype-based-on-the-bbc-microbit/) - ([Part 2](https://www.norwegiancreations.com/2016/10/coffee-timer-part-2-low-power-wireless-on-the-bbc-microbit/), [Part 3](https://www.norwegiancreations.com/2016/11/coffee-timer-part-3-enclosures/)) Three part article describing how to augment a coffee maker with an micro:bit indicator, options for low power communication, and creating a custom enclosure.
 - [Thermal Printer](http://www.suppertime.co.uk/blogmywiki/2016/12/microbit-thermal/) - Connecting and using a Sparkfun thermal till-roll printer.
-- [Telescopic Light Sword](https://www.myminifactory.com/object/telescopic-lightsword-with-micro-bit-14598) - Project shows how to make your own Light Sword with the micro:bit, electronics, and 3D printed parts.
-- [Micro Simon](https://mrtomsworld.blogspot.co.uk/2017/01/micro-simon.html) - Programming and connecting a micro:bit to a vintage MB Simon game.
+- [Telescopic Light Sword](https://www.myminifactory.com/object/3d-print-telescopic-lightsword-with-micro-bit-14598) - Project shows how to make your own Light Sword with the micro:bit, electronics, and 3D printed parts.
+- [Micro Simon](https://mrtomsworld.blogspot.com/2017/01/micro-simon.html) - Programming and connecting a micro:bit to a vintage MB Simon game.
 - [Alexa Weather On micro:bit](https://www.hackster.io/chen-tiebiao/weather-on-micro-bit-c79c19) - Creating an Amazon Alexa skill where the current weather can be asked and the result displayed on the micro:bit.
 - [BBC micro:bit Balloon Tracker](https://www.daveakerman.com/?p=2019) - Making a balloon tracker with a micro:bit connected to GPS and a LoRa transceiver to track and transmit its position.
 - [SonicPixels](https://github.com/jrmedd/SonicPixels) - BBC micro:bit and Max frameworks for triggering multiple speakers in a grid arrangement.
@@ -411,16 +411,16 @@ All these projects contain steps and resources required for reproduction.
 Useful Articles for developing on the micro:bit.
 
 - [Offline C/C++ Development With The micro:bit](http://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
-- [Sending 'commands' from a micro:bit over Bluetooth](https://bluetooth-mdw.blogspot.co.uk/2016/07/sending-commands-from-microbit-over.html)
-- [Modelling micro:bit data with the Bitty Data Logger App](https://www.stem.org.uk/elibrary/community-resource/289686/modelling-microbit-data-bitty-data-logger-app)
+- [Sending 'commands' from a micro:bit over Bluetooth](https://bluetooth-mdw.blogspot.com/2016/07/sending-commands-from-microbit-over.html)
+- [Modelling micro:bit data with the Bitty Data Logger App](https://www.stem.org.uk/resources/community/resource/289686/modelling-microbit-data-bitty-data-logger-app)
 - [Getting Started with the micro:bit Bluetooth IO Pin Service](https://ukbaz.github.io/howto/ubit_ble_profile.html)
 - [Using MQTT-SN over BLE with the BBC micro:bit](https://blog.benjamin-cabe.com/2017/01/16/using-mqtt-sn-over-ble-with-the-bbc-microbit)
 - [The First Video Game on the BBC micro:bit [probably]](https://hackernoon.com/the-first-video-game-on-the-bbc-micro-bit-probably-4175fab44da8) - Creating a game for the micro:bit, the MicroPython changes needed to increase performance and a general profile of its resources.
 - [Custom BLE services with micro:bit](https://www.hackster.io/pelikhan/custom-ble-services-with-micro-bit-6c9879) - Build your own Bluetooth low energy services and bundle them as PXT/MakeCode blocks that beginners can use.
 - [Excel and micro:Bit - Hacking for fun and creativity!](https://techcommunity.microsoft.com/t5/Excel-Blog/Excel-and-Micro-Bit-Hacking-for-fun-and-creativity/ba-p/63603) - Experiment to have some basic sensor data collected using the micro controller and then visualized in Excel.
 - [Writing the second video game for the micro:bit in Rust](https://hackernoon.com/writing-the-second-video-game-for-the-micro-bit-in-rust-3cd8b5ab22d3) - Updating a micro:bit game and porting it to the Rust language.
-- [Adding a new module to MicroPython](https://cigdemsengul.blogspot.co.uk/2017/04/offline-development-in-microbit-adding.html) - Article describing an experiment to add a new module into MicroPython for the micro:bit.
-- [Become a Time Lord with the BBC micro:bit](https://blog.groklearning.com/become-a-time-lord-with-the-bbc-micro-bit-c4b8b4e2d747) - Using different timing mechanisms to run multiple things in MicroPython.
+- [Adding a new module to MicroPython](https://cigdemsengul.blogspot.com/2017/04/offline-development-in-microbit-adding.html) - Article describing an experiment to add a new module into MicroPython for the micro:bit.
+- [Become a Time Lord with the BBC micro:bit](https://medium.com/groklearning/become-a-time-lord-with-the-bbc-micro-bit-c4b8b4e2d747 ) - Using different timing mechanisms to run multiple things in MicroPython.
 - [Debugging the micro:bit with pyOCD and GDB](https://os.mbed.com/docs/mbed-os/v5.11/tutorials/debug-microbit.html) - Shows how to debug a micro:bit program using PyOCD and GDB.
 - [Exploring the BBC micro:bit Software Stack](https://mattwarren.org/2017/11/28/Exploring-the-BBC-microbit-Software-Stack/) - What’s in it, what it does and how it all fits together.
 - [Building the 1,000 BBC micro:bit Display](https://www.kitronik.co.uk/blog/building-the-bbc-microbit-matrix-display/) - Building a screen to show images from a thousand BBC micro:bits.
@@ -444,7 +444,7 @@ Useful Articles for developing on the micro:bit.
 
 - [MultiWingSpan](http://www.multiwingspan.co.uk/micro.php) - Large collection of examples, instructions, and direction on how to use electronic components.
 - [SparkFun micro:bit tutorials](https://learn.sparkfun.com/tutorials/tags/microbit) - Collection of tutorials from SparkFun, including comprehensive experiment guides for their kits.
-- [BitIO blogs](https://warksjammy.blogspot.co.uk/2017/07/bitio-blogs-in-one-place.html) - Collection of blogs written about using the BitIO Python module to control the micro:bit.
+- [BitIO blogs](https://warksjammy.blogspot.com/2017/07/bitio-blogs-in-one-place.html) - Collection of blogs written about using the BitIO Python module to control the micro:bit.
 - [micro:bit learning](http://www.microbitlearning.com/tag/microbit) - Blog with a section for articles showing how to use a wide selection of sensors with the micro:bit and the Arduino software.
 - [Adafruit Learn micro:bit section](https://learn.adafruit.com/category/micro-bit) - Adafruit Learning System section for the BBC micro:bit.
 - [BBC micro:bit - Kitronik University](https://www.kitronik.co.uk/blog/bbc-microbit-kitronik-university/) - A varied collection of micro:bit resources by Kitronik.
@@ -479,7 +479,7 @@ Useful Articles for developing on the micro:bit.
 - [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735) - The go-to guide to getting started with the BBC micro:bit and exploring all of its amazing capabilities.
 - [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/) - Getting Started with MicroPython
 - [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/) - Presents a series of activities to teach the basics of computer networks.
-- [micro:bit in Wonderland](http://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html) - A project book for the BBC micro:bit inspired by the classic story of Alice in Wonderland.
+- [micro:bit in Wonderland](https://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html) - A project book for the BBC micro:bit inspired by the classic story of Alice in Wonderland.
 - [Beginning BBC micro:bit](https://www.apress.com/gb/book/9781484233597) - A Practical Introduction to micro:bit Development.
 - [BBC micro:bit Recipes](https://www.apress.com/gp/book/9781484249123) - Learn Programming with Microsoft MakeCode Blocks.
 
@@ -487,10 +487,10 @@ Useful Articles for developing on the micro:bit.
 ## 🏫 Teaching Resources
 
 - [microbit.org Teaching Resources](https://www.microbit.org/teach/)
-- [Code Club micro:bit projects](https://www.codeclubprojects.org/en-GB/microbit/)
+- [Code Club micro:bit projects](https://codeclubprojects.org/en-GB/microbit/)
 - [Make with the micro:bit by Technology Will Save Us](https://make.techwillsaveus.com/microbit)
 - [IET micro:bit Teaching Resources](https://microbit.org/teach/iet/) - A series of resources created by the IET (Institution of Engineering and Technology) as part of their highly successful IET Faraday brand.
-- [IET micro:bit case studies](https://faraday-secondary.theiet.org/stem-activities/microbit/microbit-case-studies/) - Booklets and video content to bring a variety of real-life applications of the micro:bit to life in your classroom.
+- [IET micro:bit case studies](https://education.theiet.org/secondary/stem-activities/microbit/) - Booklets and video content to bring a variety of real-life applications of the micro:bit to life in your classroom.
 - [Grok Learning](https://groklearning.com/microbit/) - Provides an online MicroPython code editor, Blockly visual programming, full micro:bit simulator, curriculum-aligned teaching material and auto-marked problems.
 - [micro:bit For Primary Schools](https://mb4ps.co.uk) - Fully-customisable scheme of work and resources for use in the primary classroom.
 - [101 Computing BBC micro:bit category](https://www.101computing.net/category/bbc-microbit/) - Computing challenges with the micro:bit to boost your programming skills or spice up your teaching of computer science.
@@ -500,10 +500,10 @@ Useful Articles for developing on the micro:bit.
 - [UCL’s BBC micro:bit Tutorials](https://microbit-challenges.readthedocs.io/en/latest/) - Tutorial sheets that introduce micro:bit features with practical examples provided to invite students to design solutions to problems.
 - [BBC micro:bit and Kodu Interact](http://www.kodugamelab.com/resources/#microbit) - Kodu is a visual programming language made specifically for creating games and allow interaction with the micro:bit.
 - [Build A Robot Wars Buggy](https://www.kitronik.co.uk/blog/robot-buggy-part-1-build-robot-wars-buggy-introduction/) - This fun learning resource has been put together to provide teachers with an all in one design and technology challenge that you can set for your students over the course of a term or a year.
-- [CPC UCreate micro:bit resources](https://warksjammy.blogspot.co.uk/2017/04/cpc-ucreate-microbit-resources-all-in.html) - Collection of micro:bit resources made for CPC.
+- [CPC UCreate micro:bit resources](https://warksjammy.blogspot.com/2017/04/cpc-ucreate-microbit-resources-all-in.html) - Collection of micro:bit resources made for CPC.
 - [Year 7 BBC micro:bit topic](https://bournetocode.com/projects/7-CS-micro/) - BBC micro:bit lessons from Bourne Grammar school.
 - [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14 years). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the first time.
-- [micro:bit in science teaching - How clean is my pond](https://community.computingatschool.org.uk/resources/5204) - Using a micro:bit to monitor the level of algal growth in a pond and to control a filter pump.
+- [micro:bit in science teaching - How clean is my pond](https://community.computingatschool.org.uk/resources/5204/single) - Using a micro:bit to monitor the level of algal growth in a pond and to control a filter pump.
 - [Kitronik Inventors Kit Resources](https://www.kitronik.co.uk/blog/kitronik-inventors-kit-resources) - A a great way to get started with programming and hardware interaction with the micro:bit. Includes 12 experiments using LEDs, motors, LDRs and capacitors.
 - [CLOQQ Activities](https://cloqq.com/newtomorrowtogether2017) - ([more](https://cloqq.com/tecnologia?id=14777677)) Activities with different difficulty levels, target age, and duration.
 - [Learn micro:bit](https://github.com/LearnToProgramRoanoke/Learn-microbit) - Code and materials for learning to program with the BBC micro:bit.
