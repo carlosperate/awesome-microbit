@@ -5,9 +5,12 @@ on:
     branches:
     - master
     - action
+  pull_request:
+    branches:
+      - master
   schedule:
     # Runs every midnight
-    - cron:  '0 0 * * *'
+    - cron: '0 17 * * *'
 
 jobs:
   build:
