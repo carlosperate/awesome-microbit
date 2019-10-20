@@ -51,6 +51,7 @@ Contributions are welcome!
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
 - [Scratch 3.0](https://scratch.mit.edu/microbit) - The new version of Scratch is officially compatible with the micro:bit via their Scratch Link plug-in.
+- [Code Kingdoms](https://microbit.codekingdoms.com) - (No longer maintained) Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 - [Open Roberta Lab](https://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
 - [EduBlocks](https://app.edublocks.org) - Blocks interface that provides a transitioning experience from Scratch to Python.
 - [MicroBlocks](http://microblocks.fun) - A visual programming language inspired by Scratch that runs right inside microcontroller boards such as the micro:bit.
@@ -58,12 +59,6 @@ Contributions are welcome!
 - [Mind+](http://mindplus.cc/en.html) - Desktop application to program hardware devices, like the micro:bit, with blocks, Python, or the C language.
 - [mBlock 5](https://www.makeblock.com/software/mblock5) - Desktop application supporting block-based and Python-based programming on multiple hardware platforms, including the micro:bit.
 - [CodeMao Kitten Editor](https://ide.codemao.cn) - Block programming platform to create games, includes micro:bit support.
-
-The following editors are **no longer maintained**:
-
-- Touch Develop - (Retired) Flexible, text-based programming language with an interactive visual component, retired.
-- Microsoft Blocks - (Replaced by MakeCode) Block interface that produced Touch Develop code.
-- [Code Kingdoms](https://microbit.codekingdoms.com) - (No longer maintained) Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 
 ##### 🆚 Scratch 2 Extensions
 
@@ -80,7 +75,6 @@ The following editors are **no longer maintained**:
 
 - [microbit.org Python Editor](https://python.microbit.org) - The official online Python editor from the micro:bit foundation website.
 	- [microbit.org Python Editor Beta](https://python.microbit.org/v/beta) - Beta version of the Python editor to test the latest features.
-- [microbit.co.uk Python editor](https://microbit.co.uk/app/#create:xyelfe) - Original Python editor from microbit.co.uk, contains an older version of MicroPython.
 - [Mu](https://codewith.mu) - "Micro" editor for MicroPython and the BBC micro:bit.
 - [create.withcode.uk](https://create.withcode.uk) - Python online editor and simulator that supports the micro:bit MicroPython ([instructions](https://community.computingatschool.org.uk/resources/4479/single)).
 - [Atom micro:bit MicroPython package](https://github.com/wendlers/atom-microbit-micropython) - BBC micro:bit MicroPython support package for the Atom editor.
@@ -396,7 +390,6 @@ All these projects contain steps and resources required for reproduction.
 
 ### 🏗️ Project Collections
 
-- [microbit.co.uk Site Index](https://www.microbit.co.uk/index) - The microbit.co.uk website contains an extensive list with all their projects and tutorials.
 - [hackster micro:bit community](https://microbit.hackster.io) - This hackster community contains user submitted projects for the micro:bit.
 - [MakeCode Projects](https://makecode.microbit.org/projects/) - List of micro:bit projects you can do with the MakeCode editor.
 - [Tinkercademy Projects](https://tinkercademy.com/microbit/) - Collection of projects using the micro:bit and Tinkercademy Tinker Kit.
