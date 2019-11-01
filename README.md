@@ -170,6 +170,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [ESP-01](https://github.com/51bit/esp01) - Control an ESP8266 module via serial AT commands.
 - [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
+- [DFRobot DS18B20](https://github.com/DFRobot/pxt-ds18b20) - Read temperature from a DS18B20 sensor.
 
 ##### 🗿 Node.js and Browser Libraries
 
