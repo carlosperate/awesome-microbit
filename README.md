@@ -325,6 +325,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit class rack](https://www.thingiverse.com/thing:3631044) - Stand that holds 14 micro:bits and battery packs.
 - [micro:bit Hand Controller](https://www.thingiverse.com/thing:3728487) - Nunchuck style single-hand controller for a micro:bit with an external thumb joystick and two buttons.
 - [WalkerBot:bit](https://www.thingiverse.com/thing:2746171) - Two servo walking robot controlled by a BBC micro:bit.
+- [Jump Lead Adapter](https://www.thingiverse.com/thing:3919130) - 3D print part for the micro:bit to insert the male end of jumper cables to the edge connector.
 
 
 ## 📐 CAD
