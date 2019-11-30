@@ -14,7 +14,7 @@ class TestCommitTweet(unittest.TestCase):
 
     This tests depend on the git history from the awesome-microbit repo, not
     a great way to write test, as we could have mock a the git library, but
-    this is quick way to get this tested.
+    this is quick way to run the tests with real examples.
     """
 
     def test_commit_1(self):
@@ -27,6 +27,11 @@ class TestCommitTweet(unittest.TestCase):
         )
 
         self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["entry"],
+            "- [MB1013](https://github.com/liamkinne/microbit-mb1013) - "
+            "Module for the MB1013 ultrasonic sensor controlled via UART.",
+        )
         self.assertEqual(
             tweet,
             "MB1013 - Module for the MB1013 ultrasonic sensor controlled via "
@@ -44,6 +49,12 @@ class TestCommitTweet(unittest.TestCase):
 
         self.assertEqual(len(entries), 1)
         self.assertEqual(
+            entries[0]["entry"],
+            "- [ESP8266/ThingSpeak]"
+            "(https://github.com/alankrantas/pxt-ESP8266_ThingSpeak) - "
+            "Use a ESP8266 wifi module to upload data to ThingSpeak.com.",
+        )
+        self.assertEqual(
             tweet,
             "ESP8266/ThingSpeak - Use a ESP8266 wifi module to upload data to "
             "ThingSpeak.com.\n"
@@ -60,6 +71,14 @@ class TestCommitTweet(unittest.TestCase):
         )
 
         self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["entry"],
+            "- [The Christmas Joy Spreading Machine]"
+            "(https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559) - "
+            "Project inside a box representing a metaphor of the most popular "
+            "Christmas symbols. Maybe it's a bit distopyc but it moves, "
+            "lights and reacts to music.",
+        )
         self.assertEqual(
             tweet,
             "The Christmas Joy Spreading Machine - Project inside a box "
@@ -80,6 +99,13 @@ class TestCommitTweet(unittest.TestCase):
 
         self.assertEqual(len(entries), 1)
         self.assertEqual(
+            entries[0]["entry"],
+            "- [Ironman Arc Reactor]"
+            "(https://www.kitronik.co.uk/blog/halo-ween-ironman-arc-reactor) - "
+            "Choose between two different versions (Mk I and Mk II) ready to "
+            "3D print and build.",
+        )
+        self.assertEqual(
             tweet,
             "Ironman Arc Reactor - Choose between two different versions (Mk "
             "I and Mk II) ready to 3D print and build.\n"
@@ -96,6 +122,14 @@ class TestCommitTweet(unittest.TestCase):
         )
 
         self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["entry"],
+            "- [Official Swift Playgrounds]"
+            "(https://microbit.org/guide/swift-playgrounds/) - ([Source Code]"
+            "(https://github.com/microbit-foundation/microbit-swift-playgrounds)) "
+            "Swift Playgrounds is an app for the iPad that helps teach people "
+            "to code in the Swift language using interactive 'books'.",
+        )
         self.assertEqual(
             tweet,
             "Official Swift Playgrounds - ([Source Code](https://github.com/"
@@ -130,11 +164,25 @@ class TestCommitTweet(unittest.TestCase):
 
         self.assertEqual(len(entries), 2)
         self.assertEqual(
+            entries[0]["entry"],
+            "- [Robottillo:bit]"
+            "(https://www.myminifactory.com/object/robottillo-bit-46478) - "
+            "A 3D printed case which looks like a small robot. Two versions "
+            "available, with a rear protective cover or with a perforated "
+            "cover for the pins.",
+        )
+        self.assertEqual(
             tweet_0,
             "Robottillo:bit - A 3D printed case which looks like a small "
             "robot. Two versions available, with a rear protective cover or "
             "with a perforated cover for the pins.\n"
             "https://www.myminifactory.com/object/robottillo-bit-46478",
+        )
+        self.assertEqual(
+            entries[1]["entry"],
+            "- [Battery pack holder]"
+            "(https://www.thingiverse.com/thing:2666671) - "
+            "Simple 3D printed battery pack holder for BBC micro:bit.",
         )
         self.assertEqual(
             tweet_1,
@@ -153,6 +201,11 @@ class TestCommitTweet(unittest.TestCase):
 
         self.assertEqual(len(entries), 1)
         self.assertEqual(
+            entries[0]["entry"],
+            "- [EduBlocks](https://app.edublocks.org) - Blocks interface that "
+            "provides a transitioning experience from Scratch to Python.",
+        )
+        self.assertEqual(
             tweet,
             "EduBlocks - Blocks interface that provides a transitioning "
             "experience from #Scratch to #Python.\nhttps://app.edublocks.org",
@@ -168,6 +221,12 @@ class TestCommitTweet(unittest.TestCase):
         )
 
         self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["entry"],
+            "- [JetBrains IDEA/PyCharm IDE plugin]"
+            "(https://plugins.jetbrains.com/plugin/9777-micropython-support) - "
+            "Support for MicroPython devices in IntelliJ IDEA and PyCharm.",
+        )
         self.assertEqual(
             tweet,
             "JetBrains IDEA/PyCharm IDE plugin - Support for #MicroPython "
@@ -223,6 +282,16 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(len(entries), 1)
         self.maxDiff = None
         self.assertEqual(
+            entries[0]["entry"],
+            "- [Radiobit, a BBC Micro:Bit RF firmware]"
+            "(https://github.com/virtualabs/radiobit) - "
+            "Radiobit is composed of a dedicated Micropython-based firmware "
+            "and a set of tools allowing security researchers to sniff, "
+            "receive and send data over Nordic's ShockBurst protocol, "
+            "Enhanced ShockBurst protocol, Bluetooth Smart Link Layer and "
+            "sniff raw 2.4GHz GFSK demodulated data.",
+        )
+        self.assertEqual(
             tweet,
             "Radiobit, a BBC Micro:Bit RF firmware - Radiobit is composed of "
             "a dedicated #MicroPython-based firmware and a set of tools "
@@ -241,6 +310,12 @@ class TestCommitTweet(unittest.TestCase):
         )
 
         self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["entry"],
+            "- [Otto Robot](https://www.thingiverse.com/thing:2786066) - "
+            "Otto chassis for the microbit to make a bidepad robot with a "
+            "robitbit accessory.",
+        )
         self.assertEqual(
             tweet,
             "Otto Robot - Otto chassis for the #microbit to make a bidepad "
@@ -262,6 +337,13 @@ class TestCommitTweet(unittest.TestCase):
 
         self.assertEqual(len(entries), 1)
         self.assertEqual(
+            entries[0]["entry"],
+            "- [Grade 10 micro:bit Tutorials]"
+            "(https://www.youtube.com/playlist?list=PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr) - "
+            "Collection of short videos showing how to use micro:bit MakeCode "
+            "blocks and features.",
+        )
+        self.assertEqual(
             tweet,
             "Grade 10 micro:bit Tutorials - Collection of short videos "
             "showing how to use #microbit MakeCode blocks and features.\n"
@@ -279,6 +361,12 @@ class TestCommitTweet(unittest.TestCase):
         )
 
         self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["entry"],
+            "- [micro:bit Lessons]"
+            "(https://github.com/PhonicCanine/microbit-lessons) - "
+            "Basic lessons on Python programming with a BBC micro:bit.",
+        )
         self.assertEqual(
             tweet,
             "micro:bit Lessons - Basic lessons on #Python programming with a "
@@ -300,6 +388,13 @@ class TestCommitTweet(unittest.TestCase):
 
         self.assertEqual(len(entries), 1)
         self.assertEqual(
+            entries[0]["entry"],
+            "- [BBC Micro:bit composer]"
+            "(https://scratch.mit.edu/projects/201592887/) - "
+            "Write music and get the corresponding micro:bit micropython "
+            "code, a tool made with Scratch.",
+        )
+        self.assertEqual(
             tweet,
             "BBC Micro:bit composer - Write music and get the corresponding "
             "#microbit #MicroPython code, a tool made with #Scratch.\n"
@@ -316,6 +411,11 @@ class TestCommitTweet(unittest.TestCase):
         )
 
         self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["entry"],
+            "- [MicroREPL](https://github.com/ntoll/microrepl) - "
+            "A REPL client for MicroPython running on the BBC micro:bit.",
+        )
         self.assertEqual(
             tweet,
             "MicroREPL - A REPL client for #MicroPython running on the BBC "

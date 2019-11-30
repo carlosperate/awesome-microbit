@@ -3,7 +3,7 @@
 This script depends on environmental variables set by GitHub for the action,
 including secrets set in the Awesome micro:bit repository for the Twitter
 tokens.
-It also depends on running with the Current Working Direcotory set to the
+It also depends on running with the Current Working Directory set to the
 repository root.
 """
 import os
@@ -65,7 +65,12 @@ def get_commit_list_entries(commit_hash):
             ):
                 title, url, description = match.groups()
                 entries.append(
-                    {"title": title, "url": url, "description": description}
+                    {
+                        "entry": line[1:],
+                        "title": title,
+                        "url": url,
+                        "description": description,
+                    }
                 )
 
     if len(entries) == 0:
