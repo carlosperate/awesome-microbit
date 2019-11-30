@@ -7,6 +7,7 @@ It also depends on running with the Current Working Directory set to the
 repository root.
 """
 import os
+import io
 import re
 import sys
 
@@ -32,19 +33,8 @@ except ImportError:
     )
 
 
-def get_commit_msg(commit_hash):
-    """Return the commit message from the given hash."""
-    repository_path = os.getcwd()
-    repo = Repo(repository_path)
-    commit = repo.commit(commit_hash)
-    return commit.message
-
-
-def get_commit_list_entries(commit_hash):
+def get_commit_list_entries(commit):
     """Extract an Awesome list entry from a given git commit in this repo."""
-    repository_path = os.getcwd()
-    repo = Repo(repository_path)
-    commit = repo.commit(commit_hash)
     diffs = commit.parents[0].diff(commit, create_patch=True)
     diff = diffs[0]
 
@@ -78,7 +68,28 @@ def get_commit_list_entries(commit_hash):
     return entries
 
 
-def format_tweet_msg(title, url, description):
+def get_commit_readme(commit):
+    """Returns the README.md file contents at the given commit."""
+    readme_file_blob = commit.tree / "README.md"
+    with io.BytesIO(readme_file_blob.data_stream.read()) as f:
+        readme_file = f.read().decode("utf-8")
+    return readme_file
+
+
+def get_entry_section(readme_str, list_entry):
+    """Returns the section an entry from the Awesome list belong to."""
+    readme_lines = readme_str.splitlines()
+    for line_number, line in enumerate(readme_lines):
+        if line == list_entry:
+            # Found the entry, now iterate backwards until we find a section
+            for line in readme_lines[line_number::-1]:
+                if line.startswith("#"):
+                    return line.replace("#", "").strip()
+    else:
+        raise Exception("Could not find a section for the Awesome List entry.")
+
+
+def format_tweet_msg(section, title, url, description):
     """Format a tweet combining the title, description and URL.
 
     It ensures the total size does not exceed the tweet max characters limit.
@@ -97,7 +108,7 @@ def format_tweet_msg(title, url, description):
     # Now let's make sure we don't exceed the 280 character limit
     max_characters = 280
     link_length = 24  # Includes an extra character for a '\n'
-    msg = "{} - {}".format(title, description)
+    msg = "{} - {}\n{}".format(section, title, description)
     if len(msg) > (max_characters - link_length):
         ellipsis = "..."
         cut_msg_len = max_characters - link_length - len(ellipsis)
@@ -120,16 +131,20 @@ def main():
     commit_hash = os.environ["GITHUB_SHA"]
     tweet_trigger_str = os.environ["INPUT_TRIGGER_KEYWORD"]
     print("Commit: {}\nTrigger: {}".format(commit_hash, tweet_trigger_str))
-    commit_msg = get_commit_msg(commit_hash)
-    if tweet_trigger_str not in commit_msg:
+
+    repo = Repo(os.getcwd())
+    commit = repo.commit(commit_hash)
+    if tweet_trigger_str not in commit.message:
         print("Tweet trigger keyword not found, exiting...")
         sys.exit(0)
 
     print("Tweet trigger detected, let's tweet!")
-    entries = get_commit_list_entries(commit_hash)
+    entries = get_commit_list_entries(commit)
+    readme = get_commit_readme(commit)
     for i, entry in enumerate(entries):
+        section = get_entry_section(readme, entry["entry"])
         msg = format_tweet_msg(
-            entry["title"], entry["url"], entry["description"]
+            section, entry["title"], entry["url"], entry["description"]
         )
         print('Tweet msg #{}:\n\t"{}"'.format(i, msg.replace("\n", "\n\t")))
         tweet_msg(msg)
