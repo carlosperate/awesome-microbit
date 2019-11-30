@@ -18,12 +18,12 @@ Contributions are welcome!
 ## 🗂️ Contents
 
 - [👩‍💻 Programming](#-programming)
-	- [🆚 Visual](#-visual)
+	- [🆚 Visual Programming](#-visual-programming)
 	- [🐍 Python](#-python)
 	- [🗿 JavaScript / MakeCode](#-javascript-and-makecode)
 	- [©️ C/C++](#%EF%B8%8F-cc)
-	- [🚩 Other micro:bit Languages](#-other-microbit-languages)
-	- [🎚️ Other Interaction Languages](#%EF%B8%8F-other-interaction-languages)
+	- [🚩 Other Languages](#-other-languages)
+	- [🎚️ Interaction Languages](#%EF%B8%8F-interaction-languages)
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
 - [📱 Mobile Apps](#-mobile-apps)
 - [🔵 ChromeOS Apps](#-chromeos-apps)
@@ -45,7 +45,7 @@ Contributions are welcome!
 
 ## 👩‍💻 Programming
 
-### 🆚 Visual
+### 🆚 Visual Programming
 
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (part of Microsoft's PXT).
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
@@ -121,7 +121,7 @@ Contributions are welcome!
 - [bluezero](https://github.com/ukBaz/python-bluezero) - Python package to interface with Bluetooth devices, with examples for the micro:bit.
 - [bitio](https://github.com/whaleygeek/bitio) - BBC micro:bit I/O library for Python. It allows you to run code in Python on a PC/Mac/Linux/Raspberry Pi and interact directly with the micro:bit.
 
-##### 🐍 Python Programming Tools
+##### 🐍 Python Tools
 
 - [uFlash](https://github.com/ntoll/uflash/) - Utility for flashing the micro:bit with Python scripts and the MicroPython runtime.
 - [MicroREPL](https://github.com/ntoll/microrepl) - A REPL client for MicroPython running on the BBC micro:bit.
@@ -171,7 +171,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
 
-##### 🗿 Node.js and Browser Libraries
+##### 🗿 Node.js and Browser
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
 - [node-bbc-microbit-io](https://github.com/sandeepmistry/node-bbc-microbit-io) - Johnny-Five (JavaScript Robotics and IoT programming framework) micro:bit IO Plugin.
@@ -179,7 +179,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [microbit-web-bluetooth](https://github.com/thegecko/microbit-web-bluetooth) - Web Bluetooth library implementing the micro:bit Bluetooth Profile.
 - [microbit-web-components](https://github.com/thegecko/microbit-web-components) - Web Components for all the micro:bit features exposed via BLE.
 
-##### 🗿 JavaScript Programming Tools
+##### 🗿 JavaScript Tools
 
 - [PXT Command Line Tool](https://makecode.com/cli) - Use the command line to program the micro:bit with MakeCode JavaScript. You can also run a local version of the MakeCode online editor (part of Microsoft's PXT).
 
@@ -208,7 +208,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS3234](https://os.mbed.com/users/jsa1969/code/microbit-DS3234/) - Driver in example project using the DS3234 RTC via SPI.
 - [HTU21D](https://github.com/ti-nspire/microbit-in-mbed-library-for-HTU21D-sensor) - Mbed library for the HTU21D digital humidity and temperature sensor.
 
-### 🚩 Other micro:bit Languages
+### 🚩 Other Languages
 
 Other programming languages capable to program the micro:bit.
 
@@ -222,7 +222,7 @@ Other programming languages capable to program the micro:bit.
 - [TinyGo](https://tinygo.org/microcontrollers/bbc-microbit/) - ([examples](https://github.com/tinygo-org/tinygo-zoo)) Project to bring Go to microcontrollers and small systems, with out-of-box support for the BBC micro:bit.
 - [Tiny BASIC](https://github.com/Tamakichi/ttbasic_microbit) - Port for the micro:bit, including commands to use the on-board features, based on the Arduino port of the Tiny BASIC dialect.
 
-### 🎚️ Other Interaction Languages
+### 🎚️ Interaction Languages
 
 These languages do not program the micro:bit directly, but can be used to create programs that interface with a micro:bit.
 
