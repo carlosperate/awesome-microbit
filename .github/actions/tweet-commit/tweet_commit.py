@@ -69,7 +69,7 @@ def get_commit_list_entries(commit):
 
 
 def get_commit_readme(commit):
-    """Returns the README.md file contents at the given commit."""
+    """Return the README.md file contents at the given commit."""
     readme_file_blob = commit.tree / "README.md"
     with io.BytesIO(readme_file_blob.data_stream.read()) as f:
         readme_file = f.read().decode("utf-8")
@@ -77,7 +77,7 @@ def get_commit_readme(commit):
 
 
 def get_entry_section(readme_str, list_entry):
-    """Returns the section an entry from the Awesome list belong to."""
+    """Return the section an entry from the Awesome list belong to."""
     readme_lines = readme_str.splitlines()
     for line_number, line in enumerate(readme_lines):
         if line == list_entry:

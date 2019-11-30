@@ -1,6 +1,5 @@
 """Tests for tweet_commit."""
 import os
-import io
 import unittest
 
 from git import Repo
@@ -12,16 +11,6 @@ except ImportError:
     import tweet_commit
 
 
-def get_readme_from_commit(commit):
-    repository_path = os.getcwd()
-    repo = Repo(repository_path)
-    commit = repo.commit(commit)
-    readme_file_blob = commit.tree / "README.md"
-    with io.BytesIO(readme_file_blob.data_stream.read()) as f:
-        readme_file = f.read().decode("utf-8")
-    return readme_file
-
-
 class TestCommitTweet(unittest.TestCase):
     """Test tweet parsing from commits located in this repo.
 
@@ -31,6 +20,7 @@ class TestCommitTweet(unittest.TestCase):
     """
 
     def get_commit_data(self, commit_hash):
+        """Get the list entires and readme from a commit hash."""
         repository_path = os.getcwd()
         repo = Repo(repository_path)
         commit = repo.commit(commit_hash)
@@ -108,7 +98,8 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(
             entries[0]["entry"],
             "- [The Christmas Joy Spreading Machine]"
-            "(https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559) - "
+            "(https://www.hackster.io/balearicdynamics/"
+            "the-christmas-joy-spreading-machine-3d3559) - "
             "Project inside a box representing a metaphor of the most popular "
             "Christmas symbols. Maybe it's a bit distopyc but it moves, "
             "lights and reacts to music.",
@@ -119,7 +110,8 @@ class TestCommitTweet(unittest.TestCase):
             "Project inside a box representing a metaphor of the most popular "
             "Christmas symbols. Maybe it's a bit distopyc but it moves, "
             "lights and reacts to music.\n"
-            "https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559",
+            "https://www.hackster.io/balearicdynamics/"
+            "the-christmas-joy-spreading-machine-3d3559",
         )
 
     def test_commit_5(self):
@@ -139,7 +131,8 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(
             entries[0]["entry"],
             "- [Ironman Arc Reactor]"
-            "(https://www.kitronik.co.uk/blog/halo-ween-ironman-arc-reactor) - "
+            "(https://www.kitronik.co.uk/blog/"
+            "halo-ween-ironman-arc-reactor) - "
             "Choose between two different versions (Mk I and Mk II) ready to "
             "3D print and build.",
         )
@@ -169,14 +162,16 @@ class TestCommitTweet(unittest.TestCase):
             entries[0]["entry"],
             "- [Official Swift Playgrounds]"
             "(https://microbit.org/guide/swift-playgrounds/) - ([Source Code]"
-            "(https://github.com/microbit-foundation/microbit-swift-playgrounds)) "
+            "(https://github.com/microbit-foundation/"
+            "microbit-swift-playgrounds)) "
             "Swift Playgrounds is an app for the iPad that helps teach people "
             "to code in the Swift language using interactive 'books'.",
         )
         self.assertEqual(
             tweet,
             "📱 Mobile Apps - Official Swift Playgrounds\n"
-            "([Source Code](https://github.com/microbit-foundation/microbit-swift-playgrounds)) "
+            "([Source Code](https://github.com/microbit-foundation/"
+            "microbit-swift-playgrounds)) "
             "Swift Playgrounds is an app for the iPad that helps teach people "
             "to code in the Swift language using interactive 'books'.\n"
             "https://microbit.org/guide/swift-playgrounds/",
@@ -287,8 +282,8 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(
             entries[0]["entry"],
             "- [JetBrains IDEA/PyCharm IDE plugin]"
-            "(https://plugins.jetbrains.com/plugin/9777-micropython-support) - "
-            "Support for MicroPython devices in IntelliJ IDEA and PyCharm.",
+            "(https://plugins.jetbrains.com/plugin/9777-micropython-support) "
+            "- Support for MicroPython devices in IntelliJ IDEA and PyCharm.",
         )
         self.assertEqual(
             tweet,
@@ -421,7 +416,8 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(
             entries[0]["entry"],
             "- [Grade 10 micro:bit Tutorials]"
-            "(https://www.youtube.com/playlist?list=PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr) - "
+            "(https://www.youtube.com/playlist?list="
+            "PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr) - "
             "Collection of short videos showing how to use micro:bit MakeCode "
             "blocks and features.",
         )
@@ -430,7 +426,8 @@ class TestCommitTweet(unittest.TestCase):
             "🎥 Videos - Grade 10 micro:bit Tutorials\n"
             "Collection of short videos showing how to use #microbit MakeCode "
             "blocks and features.\n"
-            "https://www.youtube.com/playlist?list=PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr",
+            "https://www.youtube.com/playlist?list="
+            "PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr",
         )
 
     def test_commit_replace_python(self):
