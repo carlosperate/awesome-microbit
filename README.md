@@ -388,6 +388,7 @@ All these projects contain steps and resources required for reproduction.
 - [micro:bit Guitar](https://www.kitronik.co.uk/blog/microbit-guitar-noise-pack-inventors-kit/) - A micro:bit guitar using the Noise Pack Add-on for the Kitronik Inventors Kit.
 - [Gesture controlled lamp](https://manoj.ninja/articles/2019/09/19/2019-building-a-gesture-controlled-lamp) - Building a colourful 3D printed lamp with the BBC micro:bit that responds to gestures.
 - [micro:bit Magic Wand](https://www.instructables.com/id/Microbit-Magic-Wand-Beginner/) - This project uses two micro:bit, a few small electronic parts, and some everyday objects from around the house to create our very own magical wand.
+- [LightBit](https://github.com/musabkilic/lightbit) - This project lets you do things on your computer by sliding your hand left and right, just like in a Sci-Fi movie. 
 
 ### 🏗️ Project Collections
 
