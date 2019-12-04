@@ -170,7 +170,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [ESP-01](https://github.com/51bit/esp01) - Control an ESP8266 module via serial AT commands.
 - [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
-- [DSTemp Alpha](https://github.com/bsiever/microbit-dstemp-alpha) - Read temperature from DS18B20 sensor. Supports multiple sensors. - Alpha
+- [DSTemp](https://github.com/bsiever/microbit-dstemp-alpha) - Read the temperature from one or multiple DS18B20 sensors (currently in alpha).
 
 ##### 🗿 Node.js and Browser
 
