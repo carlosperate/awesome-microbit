@@ -171,6 +171,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
 - [DSTemp](https://github.com/bsiever/microbit-dstemp-alpha) - Read the temperature from one or multiple DS18B20 sensors (currently in alpha).
+- [DFRobot DS18B20](https://github.com/DFRobot/pxt-ds18b20) - Read temperature from a DS18B20 sensor.
 
 ##### 🗿 Node.js and Browser
 
