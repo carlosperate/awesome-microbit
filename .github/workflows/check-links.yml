@@ -9,8 +9,8 @@ on:
     branches:
       - master
   schedule:
-    # Runs every midnight
-    - cron: '0 17 * * *'
+    # Runs every day at 9 am
+    - cron: '0 9 * * *'
 
 jobs:
   build:
@@ -21,4 +21,4 @@ jobs:
       with:
         ruby-version: '2.4'
     - run: gem install awesome_bot
-    - run: awesome_bot README.md --allow-redirect --allow-dupe
+    - run: awesome_bot README.md --allow-redirect --allow-dupe --set-timeout 60

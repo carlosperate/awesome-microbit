@@ -18,12 +18,12 @@ Contributions are welcome!
 ## 🗂️ Contents
 
 - [👩‍💻 Programming](#-programming)
-	- [🆚 Visual](#-visual)
+	- [🆚 Visual Programming](#-visual-programming)
 	- [🐍 Python](#-python)
 	- [🗿 JavaScript / MakeCode](#-javascript-and-makecode)
 	- [©️ C/C++](#%EF%B8%8F-cc)
-	- [🚩 Other micro:bit Languages](#-other-microbit-languages)
-	- [🎚️ Other Interaction Languages](#%EF%B8%8F-other-interaction-languages)
+	- [🚩 Other Languages](#-other-languages)
+	- [🎚️ Interaction Languages](#%EF%B8%8F-interaction-languages)
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
 - [📱 Mobile Apps](#-mobile-apps)
 - [🔵 ChromeOS Apps](#-chromeos-apps)
@@ -45,7 +45,7 @@ Contributions are welcome!
 
 ## 👩‍💻 Programming
 
-### 🆚 Visual
+### 🆚 Visual Programming
 
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (part of Microsoft's PXT).
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
@@ -121,7 +121,7 @@ Contributions are welcome!
 - [bluezero](https://github.com/ukBaz/python-bluezero) - Python package to interface with Bluetooth devices, with examples for the micro:bit.
 - [bitio](https://github.com/whaleygeek/bitio) - BBC micro:bit I/O library for Python. It allows you to run code in Python on a PC/Mac/Linux/Raspberry Pi and interact directly with the micro:bit.
 
-##### 🐍 Python Programming Tools
+##### 🐍 Python Tools
 
 - [uFlash](https://github.com/ntoll/uflash/) - Utility for flashing the micro:bit with Python scripts and the MicroPython runtime.
 - [MicroREPL](https://github.com/ntoll/microrepl) - A REPL client for MicroPython running on the BBC micro:bit.
@@ -170,9 +170,10 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [ESP-01](https://github.com/51bit/esp01) - Control an ESP8266 module via serial AT commands.
 - [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
+- [DSTemp](https://github.com/bsiever/microbit-dstemp-alpha) - Read the temperature from one or multiple DS18B20 sensors (currently in alpha).
 - [DFRobot DS18B20](https://github.com/DFRobot/pxt-ds18b20) - Read temperature from a DS18B20 sensor.
 
-##### 🗿 Node.js and Browser Libraries
+##### 🗿 Node.js and Browser
 
 - [node-bbc-microbit](https://github.com/sandeepmistry/node-bbc-microbit) - Control a micro:bit from Node.js using BLE.
 - [node-bbc-microbit-io](https://github.com/sandeepmistry/node-bbc-microbit-io) - Johnny-Five (JavaScript Robotics and IoT programming framework) micro:bit IO Plugin.
@@ -180,7 +181,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [microbit-web-bluetooth](https://github.com/thegecko/microbit-web-bluetooth) - Web Bluetooth library implementing the micro:bit Bluetooth Profile.
 - [microbit-web-components](https://github.com/thegecko/microbit-web-components) - Web Components for all the micro:bit features exposed via BLE.
 
-##### 🗿 JavaScript Programming Tools
+##### 🗿 JavaScript Tools
 
 - [PXT Command Line Tool](https://makecode.com/cli) - Use the command line to program the micro:bit with MakeCode JavaScript. You can also run a local version of the MakeCode online editor (part of Microsoft's PXT).
 
@@ -209,7 +210,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS3234](https://os.mbed.com/users/jsa1969/code/microbit-DS3234/) - Driver in example project using the DS3234 RTC via SPI.
 - [HTU21D](https://github.com/ti-nspire/microbit-in-mbed-library-for-HTU21D-sensor) - Mbed library for the HTU21D digital humidity and temperature sensor.
 
-### 🚩 Other micro:bit Languages
+### 🚩 Other Languages
 
 Other programming languages capable to program the micro:bit.
 
@@ -223,7 +224,7 @@ Other programming languages capable to program the micro:bit.
 - [TinyGo](https://tinygo.org/microcontrollers/bbc-microbit/) - ([examples](https://github.com/tinygo-org/tinygo-zoo)) Project to bring Go to microcontrollers and small systems, with out-of-box support for the BBC micro:bit.
 - [Tiny BASIC](https://github.com/Tamakichi/ttbasic_microbit) - Port for the micro:bit, including commands to use the on-board features, based on the Arduino port of the Tiny BASIC dialect.
 
-### 🎚️ Other Interaction Languages
+### 🎚️ Interaction Languages
 
 These languages do not program the micro:bit directly, but can be used to create programs that interface with a micro:bit.
 
@@ -326,6 +327,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit class rack](https://www.thingiverse.com/thing:3631044) - Stand that holds 14 micro:bits and battery packs.
 - [micro:bit Hand Controller](https://www.thingiverse.com/thing:3728487) - Nunchuck style single-hand controller for a micro:bit with an external thumb joystick and two buttons.
 - [WalkerBot:bit](https://www.thingiverse.com/thing:2746171) - Two servo walking robot controlled by a BBC micro:bit.
+- [Jump Lead Adapter](https://www.thingiverse.com/thing:3919130) - 3D print part for the micro:bit to insert the male end of jumper cables to the edge connector.
 
 
 ## 📐 CAD
@@ -445,8 +447,7 @@ Useful Articles for developing on the micro:bit.
 - [BBC micro:bit - Kitronik University](https://www.kitronik.co.uk/blog/bbc-microbit-kitronik-university/) - A varied collection of micro:bit resources by Kitronik.
 - [Maker.io micro:bit blog posts](https://www.digikey.com.au/en/maker/search-results?y=cb5252a72f0549558ffaaa2a80d3a1ed&t=54c4be4fbd2f4f748d1eacf05fd3b5b0&g=newest&page=1) - All the micro:bit articles posted in Maker.io, a playground for makers.
 - [Physical computing with the BBC micro:bit](http://www.teachwithict.com/physical-computing.html) - How to use different electronic components with the micro:bit.
-- [DF Robot micro:bit blog section](https://www.dfrobot.com/index.php?route=DFblog/blogs&path=30) - Blog posts and articles about micro:bit from DF Robot.
-- [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
+- [ElecFreaks Learn](http://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
 - [micro:bit Month Of Making](https://micromag.cc/category/monthofmaking/) - Collection of 5-minute micro:bit makes, one for  each day of March 2019.
 - [Little Bird How To Guides](https://www.littlebird.com.au/a/how-to#micro-bit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
 
