@@ -170,6 +170,8 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [ESP-01](https://github.com/51bit/esp01) - Control an ESP8266 module via serial AT commands.
 - [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
+- [DSTemp](https://github.com/bsiever/microbit-dstemp-alpha) - Read the temperature from one or multiple DS18B20 sensors (currently in alpha).
+- [DS18B20](https://github.com/DFRobot/pxt-ds18b20) - DFRobot extensions to read the temperature from a DS18B20 sensor.
 
 ##### 🗿 Node.js and Browser
 
@@ -259,7 +261,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [micro:bit logger](https://play.google.com/store/apps/details?id=nl.defbu.mblogger) - Android app that enables users to log data from the BLE services and export it to a file.
 - [Kitronik Move](https://play.google.com/store/apps/details?id=com.kitronik.blemove) - Android app that presents a D-Pad interface to control a micro:bit over Bluetooth LE.
 - [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp) - A generic tool for Android that allows you to scan, advertise and explore BLE devices. It supports the micro:bit by including information on the micro:bit services, custom macros and more.
-- [Tickle](https://tickleapp.com) - iOS app to program a large selection of devices, including the micro:bit, connecting them all together, so that they can interact with each other.
+- [Tickle](http://tickleapp.com) - iOS app to program a large selection of devices, including the micro:bit, connecting them all together, so that they can interact with each other.
 - [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) - Android app capable to send and receive micro:bit Bluetooth UART data.
 - [micro:bit Slither](https://github.com/novucs/microbit-slither) - Multiplayer snake game on Android, controlled with micro:bits via Bluetooth.
 - [Micro:bit Explorer](https://phwallen.github.io/microbit-explorer/) - A Swift Playground Book that introduces computer fundamentals in a visual way, it allows you to enter machine code or assembly and see how it executes and how the micro:bit registers are affected.
@@ -389,6 +391,7 @@ All these projects contain steps and resources required for reproduction.
 - [Gesture controlled lamp](https://manoj.ninja/articles/2019/09/19/2019-building-a-gesture-controlled-lamp) - Building a colourful 3D printed lamp with the BBC micro:bit that responds to gestures.
 - [micro:bit Magic Wand](https://www.instructables.com/id/Microbit-Magic-Wand-Beginner/) - This project uses two micro:bit, a few small electronic parts, and some everyday objects from around the house to create our very own magical wand.
 - [LightBit](https://github.com/musabkilic/lightbit) - This project lets you do things on your computer by sliding your hand left and right, just like in a Sci-Fi movie. 
+- [MicroBike](https://github.com/musabkilic/MicroBike) - Turn your micro:bit into a game controller.
 
 ### 🏗️ Project Collections
 
@@ -530,7 +533,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Sri Lanka User Group](http://microbitslug.org)
 - [Croatian Makers](https://izradi.croatianmakers.hr/bbc-microbit-uvodna-stranica/)
 - [MakeCode Gitter](https://gitter.im/makecode-community/Lobby)
-- [Arabic micro:bit Community](https://community.nadi-microbit.com)
+
 
 ## 📅 Events
 
