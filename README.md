@@ -511,6 +511,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Basics for Teachers](https://microbit.hackster.io/kkristoff/micro-bit-basics-for-teachers-part-1-the-hardware-768229) - ([Part 2](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-2-javascript-blocks-6eaed5), [Part 3](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-3-micropython-c3fde0)) - Are you a teacher who wants to use micro:bit in your classroom, but doesn't know where to start? We'll show you how!
 - [micro:bit Lessons](https://github.com/PhonicCanine/microbit-lessons) - Basic lessons on Python programming with a BBC micro:bit.
 - [Pimoroni Education](https://edu.pimoroni.com/tag/microbit/) - Educational resources with the micro:bit from Pimoroni.
+- [British Council micro:bit for Teachers](https://microbit.britishcouncil.org) - This course with interactive video learning and progress tracking will guide you through 12 modules to get to know the micro:bit and block code editor (needs sign-up). 
 
 ### 🏫 BBC Teaching Resources
 
