@@ -391,6 +391,7 @@ All these projects contain steps and resources required for reproduction.
 - [Gesture controlled lamp](https://manoj.ninja/articles/2019/09/19/2019-building-a-gesture-controlled-lamp) - Building a colourful 3D printed lamp with the BBC micro:bit that responds to gestures.
 - [micro:bit Magic Wand](https://www.instructables.com/id/Microbit-Magic-Wand-Beginner/) - This project uses two micro:bit, a few small electronic parts, and some everyday objects from around the house to create our very own magical wand.
 - [MicroBike](https://github.com/musabkilic/MicroBike) - Turn your micro:bit into a game controller.
+- [LightBit](https://github.com/musabkilic/lightbit) - This project lets you do things on your computer by sliding your hand left and right, just like in a Sci-Fi movie. 
 
 ### 🏗️ Project Collections
 
