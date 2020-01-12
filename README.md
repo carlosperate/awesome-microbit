@@ -391,7 +391,7 @@ All these projects contain steps and resources required for reproduction.
 - [Gesture controlled lamp](https://manoj.ninja/articles/2019/09/19/2019-building-a-gesture-controlled-lamp) - Building a colourful 3D printed lamp with the BBC micro:bit that responds to gestures.
 - [micro:bit Magic Wand](https://www.instructables.com/id/Microbit-Magic-Wand-Beginner/) - This project uses two micro:bit, a few small electronic parts, and some everyday objects from around the house to create our very own magical wand.
 - [MicroBike](https://github.com/musabkilic/MicroBike) - Turn your micro:bit into a game controller.
-- [LightBit](https://github.com/musabkilic/lightbit) - This project lets you do things on your computer by sliding your hand left and right, just like in a Sci-Fi movie. 
+- [LightBit](https://github.com/musabkilic/lightbit) - This project lets you do things on your computer by sliding your hand left and right, just like in a Sci-Fi movie.
 
 ### 🏗️ Project Collections
 
@@ -427,7 +427,7 @@ Useful Articles for developing on the micro:bit.
 - [Synchronized Music on micro:bits](https://blog.flowblok.id.au/2018-02/synchronized-music-on-microbits.html) - Building a micro:bit mesh network so they can play music synchronized across a large area.
 - [Using the Built-in Sensors](https://learn.adafruit.com/micro-bit-lesson-1-using-the-built-in-sensors) - Learn how to use the micro:bit's built-in accelerometer and magnetometer.
 - [Read micro:bit data from Linux via Bluetooth (BLE)](https://github.com/alcir/microbit-ble) - Random notes and examples about micro:bit BLE and Linux.
-- [Measure pressure with your micro:bit](https://www.instructables.com/id/Measure-Pressure-With-Your-Microbit/) - An inexpensive and easy to build device to perform pressure measurements and demonstrate Boyle's law with the micro:bit and BMP280 pressure/temperature sensor. 
+- [Measure pressure with your micro:bit](https://www.instructables.com/id/Measure-Pressure-With-Your-Microbit/) - An inexpensive and easy to build device to perform pressure measurements and demonstrate Boyle's law with the micro:bit and BMP280 pressure/temperature sensor.
 - [IoT Cloud Access with Micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program BBC Micro:bit with mbed OS and remotely send data to cloud by utilizing BLE to smartphone/PC IoT cloud gateway.
 - [Network Rivalry: a Low-Latency Game for the BBC micro:bit](https://www.instructables.com/id/Network-Rivalry-a-Low-Latency-Game-for-the-BBC-Mic/) - Tutorial explaining how to implement a basic multiplayer game on the BBC micro:bit.
 - [Circuit Lumber Punking](https://www.instructables.com/id/Circuit-Lumber-Punking/) - Creating micro:bit circuit boards in timber.
@@ -512,7 +512,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Basics for Teachers](https://microbit.hackster.io/kkristoff/micro-bit-basics-for-teachers-part-1-the-hardware-768229) - ([Part 2](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-2-javascript-blocks-6eaed5), [Part 3](https://microbit.hackster.io/monica/micro-bit-basics-for-teachers-part-3-micropython-c3fde0)) - Are you a teacher who wants to use micro:bit in your classroom, but doesn't know where to start? We'll show you how!
 - [micro:bit Lessons](https://github.com/PhonicCanine/microbit-lessons) - Basic lessons on Python programming with a BBC micro:bit.
 - [Pimoroni Education](https://edu.pimoroni.com/tag/microbit/) - Educational resources with the micro:bit from Pimoroni.
-- [British Council micro:bit for Teachers](https://microbit.britishcouncil.org) - This course with interactive video learning and progress tracking will guide you through 12 modules to get to know the micro:bit and block code editor (needs sign-up). 
+- [British Council micro:bit for Teachers](https://microbit.britishcouncil.org) - This course with interactive video learning and progress tracking will guide you through 12 modules to get to know the micro:bit and block code editor (needs sign-up).
 
 ### 🏫 BBC Teaching Resources
 
