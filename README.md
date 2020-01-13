@@ -392,6 +392,7 @@ All these projects contain steps and resources required for reproduction.
 - [micro:bit Magic Wand](https://www.instructables.com/id/Microbit-Magic-Wand-Beginner/) - This project uses two micro:bit, a few small electronic parts, and some everyday objects from around the house to create our very own magical wand.
 - [MicroBike](https://github.com/musabkilic/MicroBike) - Turn your micro:bit into a game controller.
 - [LightBit](https://github.com/musabkilic/lightbit) - This project lets you do things on your computer by sliding your hand left and right, just like in a Sci-Fi movie.
+- [Programmable Rainbow Light Up Sign](https://www.thingiverse.com/thing:3111622) - A laser-cut, 3D printed, micro:bit powered programmable sign with rainbow lights.
 
 ### 🏗️ Project Collections
 
