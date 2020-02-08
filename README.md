@@ -98,7 +98,6 @@ Contributions are welcome!
 - [US-100](https://github.com/fizban99/microbit_us100) - Library to read the distance from a US-100 ultrasonic sensor via UART.
 - [KY038](https://github.com/fizban99/microbit_ky038) - Library to calibrate and use a sound sensor KY038, including clap counter functionality.
 - [Nokia 5110 PCD8544 LCD](https://github.com/matneee/microbit-nokia5110-PCD8544-lcd) - Fast controller for Nokia 5110 LCDs.
-- [MPL115A1](https://github.com/hackscribble/microbit-MPL115A1-barometer) - Class to read the pressure and temperature readings from the NXP MPL115A1 SPI sensor.
 - [24LCxxx EEPROM](https://github.com/matneee/microbit-I2C-EEPROM-24LCxxx-Read-Write) - Example micro:bit functions to read and write to a Microchip I2C EEPROM.
 - [ULN2003](https://github.com/IDWizard/uln2003) - Module to drive stepper motors via ULN2003 darlington transistors.
 - [Bosch BME280](https://github.com/jemerlia/microbit-BoschBME280-P-T-and-H-Sensor) - Module for Bosch BME280 Pressure, Temperature and Humidity Sensor via I2C.
