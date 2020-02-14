@@ -83,6 +83,11 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [uPyCraft](https://dfrobot.gitbooks.io/upycraft/) - A micro:bit compatible MicroPython IDE for Windows/Mac, designed with a simple and convenient interface.
 - [CodeSpace](https://make.firialabs.com) - From Firia Labs, an online MicroPython IDE for micro:bits, with bundled learning resources.
 
+##### 🐍 MicroPython Blocks Editors
+
+- [EduBlocks](https://app.edublocks.org) - Blocks interface that provides a transitioning experience from Scratch to Python.
+- [Open Roberta Lab](https://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
+
 ##### 🐍 MicroPython Libraries
 
 - [Servo](https://github.com/microbit-playground/microbit-servo-class) - Class for controlling servos on the micro:bit via PWM.
