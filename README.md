@@ -398,6 +398,7 @@ All these projects contain steps and resources required for reproduction.
 - [MicroBike](https://github.com/musabkilic/MicroBike) - Turn your micro:bit into a game controller.
 - [LightBit](https://github.com/musabkilic/lightbit) - This project lets you do things on your computer by sliding your hand left and right, just like in a Sci-Fi movie.
 - [Programmable Rainbow Light Up Sign](https://www.thingiverse.com/thing:3111622) - A laser-cut, 3D printed, micro:bit powered programmable sign with rainbow lights.
+- [Connected Flowerpot](https://www.instructables.com/id/Connected-Flowerpot-by-Microbit/) - 3D printed flowerpot that fist a micro:bit to detect soil moisture and display its status in an RGB LED ring.
 
 ### 🏗️ Project Collections
 
