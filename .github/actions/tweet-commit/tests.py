@@ -516,6 +516,37 @@ class TestCommitTweet(unittest.TestCase):
             "https://github.com/ntoll/microrepl",
         )
 
+    def test_commit_replace_raspberry_pi(self):
+        """Replace "Raspberry Pi" for "#RaspberryPi" in description."""
+        entries, readme = self.get_commit_data(
+            "e767f02151131335392957c5cf6038df9deffc6f"
+        )
+        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = tweet_commit.format_tweet_msg(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["entry"],
+            "- [Raspberry Pi micro:bit Projects]"
+            "(https://projects.raspberrypi.org/en/projects?technologies%5B%5D="
+            "microbit) - "
+            "Collection of Raspberry Pi and micro:bit projects from the "
+            "Raspberry Pi Foundation.",
+        )
+        self.assertEqual(
+            tweet,
+            "Project Collections - Raspberry Pi micro:bit Projects\n"
+            "Collection of #RaspberryPi and #microbit projects from the "
+            "#RaspberryPi Foundation.\n"
+            "https://projects.raspberrypi.org/en/projects?technologies%5B%5D="
+            "microbit",
+        )
+
 
 if __name__ == "__main__":
     # Project root is up 3 levels from this file
