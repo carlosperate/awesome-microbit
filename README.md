@@ -399,7 +399,7 @@ All these projects contain steps and resources required for reproduction.
 - [LightBit](https://github.com/musabkilic/lightbit) - This project lets you do things on your computer by sliding your hand left and right, just like in a Sci-Fi movie.
 - [Programmable Rainbow Light Up Sign](https://www.thingiverse.com/thing:3111622) - A laser-cut, 3D printed, micro:bit powered programmable sign with rainbow lights.
 - [Connected Flowerpot](https://www.instructables.com/id/Connected-Flowerpot-by-Microbit/) - 3D printed flowerpot with a micro:bit to detect soil moisture and display its status in an RGB LED ring.
-- [Voice Controlled Robot Car](https://www.hackster.io/H0meMadeGarbage/voice-controlled-robot-car-54faef) - Robot car controlled by voice commands using Amazon Alexa, Node-RED and micro:bit.
+- [Voice Controlled Robot Car](https://www.hackster.io/H0meMadeGarbage/voice-controlled-robot-car-54faef) - Robot car controlled by voice commands using Amazon Alexa, Node-RED on a Raspberry Pi Zero, and micro:bit.
 
 ### 🏗️ Project Collections
 
