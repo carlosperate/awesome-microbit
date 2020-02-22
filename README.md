@@ -216,7 +216,8 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 ##### ©️ RTOS with micro:bit profile
 
-- [ChibiOS](https://github.com/ChibiOS/ChibiOS-Contrib) - A complete development environment for embedded applications including RTOS, a HAL, peripheral drivers, support files, and tools. 
+- [ChibiOS](https://github.com/ChibiOS/ChibiOS-Contrib) - A complete development environment for embedded applications including RTOS, a HAL, peripheral drivers, support files, and tools.
+- [Mynewt](https://github.com/apache/mynewt-core) - Open-source operating system for tiny embedded devices. Its goal is to make it easy to develop applications for microcontroller environments where power and cost are driving factors.
 
 ### 🚩 Other Languages
 
