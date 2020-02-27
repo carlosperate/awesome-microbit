@@ -547,6 +547,36 @@ class TestCommitTweet(unittest.TestCase):
             "microbit",
         )
 
+    def test_commit_replace_arduino(self):
+        """Replace "Arduino" for "#Arduino" in description."""
+        entries, readme = self.get_commit_data(
+            "ac8791c560dcfffdfa80fc09dfa218556c98bebe"
+        )
+        section = tweet_commit.get_entry_section(readme, entries[1]["entry"])
+        tweet = tweet_commit.format_tweet_msg(
+            section,
+            entries[1]["title"],
+            entries[1]["url"],
+            entries[1]["description"],
+        )
+
+        self.assertEqual(len(entries), 2)
+        self.assertEqual(
+            entries[1]["entry"],
+            "- [Arduino nRF5]"
+            "(https://github.com/sandeepmistry/arduino-nRF5/) - "
+            "Arduino Core for Nordic Semiconductor nRF5 based boards, "
+            "including the micro:bit.",
+        )
+        self.assertEqual(
+            tweet,
+            "C/C++ - Arduino nRF5\n"
+            "#Arduino Core for Nordic Semiconductor nRF5 based boards, "
+            "including the #microbit.\n"
+            "https://github.com/sandeepmistry/arduino-nRF5/"
+        )
+
+
 
 if __name__ == "__main__":
     # Project root is up 3 levels from this file
