@@ -573,9 +573,8 @@ class TestCommitTweet(unittest.TestCase):
             "C/C++ - Arduino nRF5\n"
             "#Arduino Core for Nordic Semiconductor nRF5 based boards, "
             "including the #microbit.\n"
-            "https://github.com/sandeepmistry/arduino-nRF5/"
+            "https://github.com/sandeepmistry/arduino-nRF5/",
         )
-
 
 
 if __name__ == "__main__":
