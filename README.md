@@ -59,6 +59,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [Mind+](http://mindplus.cc/en.html) - Desktop application to program hardware devices, like the micro:bit, with blocks, Python, or the C language.
 - [mBlock 5](https://www.makeblock.com/software/mblock5) - Desktop application supporting block-based and Python-based programming on multiple hardware platforms, including the micro:bit.
 - [CodeMao Kitten Editor](https://ide.codemao.cn) - Block programming platform to create games, includes micro:bit support.
+- [eBlock](https://github.com/distintiva/eBlock) - A Scratch 2 based application (forked from  mBlock 3) to visually code the BBC micro:bit and other devices.
 
 ##### 🆚 Scratch 2 Extensions
 
@@ -213,6 +214,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Driver for the PCA9685, a 16-channel PWM controller, with included servo support.
 - [DS3234](https://os.mbed.com/users/jsa1969/code/microbit-DS3234/) - Driver in example project using the DS3234 RTC via SPI.
 - [HTU21D](https://github.com/ti-nspire/microbit-in-mbed-library-for-HTU21D-sensor) - Mbed library for the HTU21D digital humidity and temperature sensor.
+- [Distintiva micro:bit library](https://github.com/distintiva/distintiva_microbit_lib) - Arduino library to code the micro:bit using the Arduino IDE.
 
 ##### ©️ RTOS with micro:bit profile
 
