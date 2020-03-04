@@ -118,6 +118,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [microbit python libs](https://github.com/shaoziyang/microbit-lib) - Growing collection of modules, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307/DS3231 RTC, NeoPixel drivers, APDS9930 Digital Proximity and Ambient Light Sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
 - [RAK811](https://github.com/PiSupply/rak811-python) - RAK811 Python library for use with LoRa pHAT & MicroBIT Node.
 - [Micropython-MakeCode compatible Radio](https://github.com/rhubarbdog/microbit-radio) - Class MakeRadio which includes all the functionality of the MicroPyhton radio module, while being compatible with MakeCode blocks.
+- [Cutebot](https://github.com/Krakenus/microbit-cutebot-micropython) - Library providing functions to work with Cutebot kit for BBC micro:bit.
 
 ##### 🐍 Python Libraries
 
