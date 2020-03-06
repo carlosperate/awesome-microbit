@@ -458,6 +458,7 @@ Useful Articles for developing on the micro:bit.
 - [IoT Cloud Access with micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program the BBC micro:bit with Mbed OS and remotely send data to the cloud by utilizing BLE to smartphone/PC IoT Cloud Gateway.
 - [How to connect your Mini.mu to PureData](https://vulpestruments.com/2018/11/21/how-to-connect-your-mini-mu-to-puredata/) - Connecting the micro:bit to PureData (visual programming language to crate interactive computer music) via radio and serial MIDI.
 - [Using micro:bit and MakeCode with Data Streamer](https://docs.microsoft.com/en-us/microsoft-365/education/data-streamer/using-microbit-and-makecode) - How to use the MakeCode to write a simple program that sends live data from the BBC micro:bit to Microsoft Excel using the Microsoft Data Streamer add-in.
+- [3D Rendering on a Children's Toy](https://blog.scottlogic.com/2020/03/03/microbit-raytracer.html) - Implementing a ray tracer, an algorithm which simulates light rays to render a 3D scene, to render a pyramid in the micro:bit display.
 
 ### 🗞️ Article Collections
 
