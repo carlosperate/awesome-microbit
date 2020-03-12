@@ -422,6 +422,7 @@ All these projects contain steps and resources required for reproduction.
 - [Maker.io micro:bit projects](https://www.digikey.com.au/en/maker/search-results?y=13825c8674444e22884d8d26197819d1&t=54c4be4fbd2f4f748d1eacf05fd3b5b0&g=newest&page=1) - All the micro:bit projects posted to Maker.io, a playground for makers.
 - [Electromaker micro:bit projects](https://www.electromaker.io/projects?platform=microbit) - All the micro:bit projects posted to Electromaker, a platform for makers to showcase their projects.
 - [Saturday Science & BBC micro:bits](https://saturdayscience.org/bbc-microbit/) - Practical science and engineering projects with the micro:bit, explore physical properties with cool experiments.
+- [Maker Pro micro:bit Projects & Tutorials](https://maker.pro/microbit) - The micro:bit section of Maker Pro, a place for makers to share designs, collaborate, and learn how to take your product to market.
 
 
 ## 🗞️ Articles
