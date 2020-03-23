@@ -491,6 +491,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit to Firebase](https://www.youtube.com/playlist?list=PLGYgoZPmYyek0eIEfVWyt3nK_J8iZ4OBP) - Send data from a BBC micro:bit to Google’s Firebase cloud database with a Python script. Retrieve the data and  create a simple IoT demo model.
 - [Scratch micro:bit Tutorials](https://www.youtube.com/playlist?list=PLSgUBfi51uldOnJU11lVkViTZBi0rE30L) - Tutorials and project ideas for the micro:bit with Scratch.
 - [The Learning Circuit](https://www.element14.com/community/community/element14-presents/thelearningcircuit/tags#/?tags=learning%20circuit+microbit) - Element14 video series to learn about basic electronics. Some of the episodes cover different ways to learn and explore with the BBC micro:bit.
+- [Online Learning with MakeCode](https://makecode.com/online-learning) - A list of helpful resources, including live video streams, that students can access to continue their computing education outside the classroom now that many schools are closed.
 
 
 ## 📚 Books
