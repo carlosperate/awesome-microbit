@@ -503,6 +503,7 @@ Useful Articles for developing on the micro:bit.
 - [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735) - The go-to guide to getting started with the BBC micro:bit and exploring all of its amazing capabilities.
 - [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/) - Getting Started with MicroPython
 - [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/) - Presents a series of activities to teach the basics of computer networks.
+    - [Prácticas de redes con placas micro:bit](https://github.com/jemole/microbit-networking-book) - Spanish translation.
 - [micro:bit in Wonderland](https://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html) - A project book for the BBC micro:bit inspired by the classic story of Alice in Wonderland.
 - [Beginning BBC micro:bit](https://www.apress.com/gb/book/9781484233597) - A Practical Introduction to micro:bit Development.
 - [BBC micro:bit Recipes](https://www.apress.com/gp/book/9781484249123) - Learn Programming with Microsoft MakeCode Blocks.
