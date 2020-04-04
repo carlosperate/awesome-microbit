@@ -19,6 +19,8 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/setup-ruby@v1
       with:
-        ruby-version: '2.4'
-    - run: gem install awesome_bot
-    - run: awesome_bot README.md --allow-redirect --allow-dupe --set-timeout 60
+        ruby-version: '2.6'
+    - name: Install awesome_bot
+      run: gem install awesome_bot
+    - name: Run awesome_bot
+      run: awesome_bot README.md --allow-redirect --allow-dupe --set-timeout 60
