@@ -13,14 +13,25 @@ on:
     - cron: '0 9 * * *'
 
 jobs:
-  build:
+  awesome_bot:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-ruby@v1
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
       with:
         ruby-version: '2.6'
     - name: Install awesome_bot
       run: gem install awesome_bot
     - name: Run awesome_bot
       run: awesome_bot README.md --allow-redirect --allow-dupe --set-timeout 60
+  awesome_lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-ruby@v1
+      with:
+        node-version: '10.x'
+    - name: Install awesome-lint
+      run: npm install awesome-lint
+    - name: Run awesome-lint
+      run: npx awesome-lint
