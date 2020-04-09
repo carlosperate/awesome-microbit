@@ -412,6 +412,7 @@ All these projects contain steps and resources required for reproduction.
 - [Voice Controlled Robot Car](https://www.hackster.io/H0meMadeGarbage/voice-controlled-robot-car-54faef) - Robot car controlled by voice commands using Amazon Alexa, Node-RED on a Raspberry Pi Zero, and micro:bit.
 - [Obstacle Detecting White Cane](https://www.instructables.com/id/Obstacle-Detecting-White-Cane/) - A warning system for unpredictable obstacles for those who are visually impaired.
 - [micro:bit Quiz System](http://weddell.co.uk/computing/microbit-quiz-system/) - A wireless LED quiz button system with sound.
+- [DIY Educational micro:bit Robot](https://www.instructables.com/id/DIY-Educational-Microbit-Robot/) - Building a relatively accessible, capable and cheap robot. Two variants provided with different sensorrs and example code for MakeCode and MicroPython.
 
 ### 🏗️ Project Collections
 
