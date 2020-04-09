@@ -7,7 +7,7 @@
 A curated list of resources for the [BBC micro:bit](https://www.microbit.org), a tiny programmable computer designed to make learning and teaching easy and fun!
 This embedded board has a Bluetooth capable microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and GPIO accessible via the edge connector.
 
-- [![watch badge](https://img.shields.io/github/watchers/carlosperate/awesome-microbit.svg?label=Watch&style=social)](https://github.com/carlosperate/awesome-microbit/watchers) You can "Watch" this repository if you'd like to get notfications when a new entry is added to the list.
+- [![watch badge](https://img.shields.io/github/watchers/carlosperate/awesome-microbit.svg?label=Watch&style=social)](https://github.com/carlosperate/awesome-microbit/watchers) You can "Watch" this repository if you'd like to get notifications when a new entry is added to the list.
 - [![Twitter Follow](https://img.shields.io/twitter/follow/awesomemicrobit?color=%231da1f2&label=Twitter&style=social)](https://twitter.com/awesomemicrobit) And now you can also follow [@awesomemicrobit](https://twitter.com/awesomemicrobit) on Twitter and get updates in your timeline! 📣
 
 Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
@@ -169,7 +169,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, enabling the the micro:bit to obtain temperature and relative humidity from these sensors.
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Package to calculate distances using a VL53L0X Time-of-Flight ranging sensor.
 - [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Package to control the PCA9685, a 16-channel PWM controller, with included servo support.
-- [dfplayer](https://github.com/lioujj/pxt-mp3) - Play mp3 files with a DFPlayer mini module.
+- [dfplayer](https://github.com/lioujj/pxt-mp3) - Play MP3 files with a DFPlayer mini module.
 - [KeiganMotor](https://github.com/keigan-motor/pxt-KeiganMotor) - Controller for KeiganMotor KM-1 Series, an all-in-one brushless gearless electric motor module.
 - [MLX90614](https://github.com/DoraLC/pxt-MLX90614) - I2C driver for Infra Red Thermometer MLX90614.
 - [Adafruit Motor Driver Board](https://github.com/vijairaj/pxt-adafruit-motor-driver) - Driver to control the DC motors on the Adafruit Motor Shield v1.
@@ -401,7 +401,7 @@ All these projects contain steps and resources required for reproduction.
 - [Pong-Like Retro Clock Using TinyGo and Microbit](https://www.hackster.io/_conejo/pong-like-retro-clock-using-tinygo-and-microbit-682736) - Use an RGB matrix and a micro:bit to display the time with an awesome game of PONG. Made with love and TinyGo.
 - [Racing Car Timing Gate](https://github.com/astrotutor9/Microbit-Racing-Car-Timing-Gate) - Create a speed trap for toy cars with three micro:bits, torches, radio and the MicroPython REPL.
 - [Robot Unicorn](https://github.com/helenleigh/robot-unicorn) - Gesture controlled robot unicorn made of cardboard, glitter, a 3D printed horn, and micro:bits.
-- [The Christmas Joy Spreading Machine](https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559) - Project inside a box representing a metaphor of the most popular Christmas symbols. Maybe it's a bit distopyc but it moves, lights and reacts to music.
+- [The Christmas Joy Spreading Machine](https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559) - Project inside a box representing a metaphor of the most popular Christmas symbols. Maybe it's a bit dystopian but it moves, lights and reacts to music.
 - [micro:bit Guitar](https://www.kitronik.co.uk/blog/microbit-guitar-noise-pack-inventors-kit/) - A micro:bit guitar using the Noise Pack Add-on for the Kitronik Inventors Kit.
 - [Gesture Controlled Lamp](https://manoj.ninja/articles/2019/09/19/building-a-gesture-controlled-lamp) - Building a colourful 3D printed lamp with the BBC micro:bit that responds to gestures.
 - [micro:bit Magic Wand](https://www.instructables.com/id/Microbit-Magic-Wand-Beginner/) - This project uses two micro:bit, a few small electronic parts, and some everyday objects from around the house to create our very own magical wand.
@@ -412,7 +412,7 @@ All these projects contain steps and resources required for reproduction.
 - [Voice Controlled Robot Car](https://www.hackster.io/H0meMadeGarbage/voice-controlled-robot-car-54faef) - Robot car controlled by voice commands using Amazon Alexa, Node-RED on a Raspberry Pi Zero, and micro:bit.
 - [Obstacle Detecting White Cane](https://www.instructables.com/id/Obstacle-Detecting-White-Cane/) - A warning system for unpredictable obstacles for those who are visually impaired.
 - [micro:bit Quiz System](http://weddell.co.uk/computing/microbit-quiz-system/) - A wireless LED quiz button system with sound.
-- [DIY Educational micro:bit Robot](https://www.instructables.com/id/DIY-Educational-Microbit-Robot/) - Building a relatively accessible, capable and cheap robot. Two variants provided with different sensorrs and example code for MakeCode and MicroPython.
+- [DIY Educational micro:bit Robot](https://www.instructables.com/id/DIY-Educational-Microbit-Robot/) - Building a relatively accessible, capable and cheap robot. Two variants provided with different sensors and example code for MakeCode and MicroPython.
 
 ### 🏗️ Project Collections
 
@@ -457,7 +457,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit <-> Raspberry Pi](https://ukbaz.github.io/howto/ubit_workshop.html) - An introduction on how you can exchange information between a micro:bit and a Raspberry Pi using Bluetooth Low Energy (BLE).
 - [WiFi Web Server on BBC micro:bit and ESP-01](https://www.hackster.io/alankrantas/wifi-web-server-on-bbc-micro-bit-and-esp-01-esp8266-498e0d) - Create a micro:bit web server via AT commands to an ESP8266 which can respond to web browser requests over WiFi.
 - [Connect BBC micro:bit to Sigfox](https://medium.com/coinmonks/connect-bbc-micro-bit-to-sigfox-4d1603d19350) - Walking through the steps for creating your own BBC micro:bit IoT device connected to the Sigfox network.
-- [Visualising BBC micro:bit sensors with thethings.iO](https://medium.com/@ly.lee/visualising-bbc-micro-bit-sensors-with-thethings-io-5689fb613531) - Sending and plotting sensor data to the thethings.iO via Sigfox network.
+- [Visualising BBC micro:bit sensors with thethings.io](https://medium.com/@ly.lee/visualising-bbc-micro-bit-sensors-with-thethings-io-5689fb613531) - Sending and plotting sensor data to the thethings.io via Sigfox network.
 - [IoT Cloud Access with micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program the BBC micro:bit with Mbed OS and remotely send data to the cloud by utilizing BLE to smartphone/PC IoT Cloud Gateway.
 - [How to connect your Mini.mu to PureData](https://vulpestruments.com/2018/11/21/how-to-connect-your-mini-mu-to-puredata/) - Connecting the micro:bit to PureData (visual programming language to crate interactive computer music) via radio and serial MIDI.
 - [Using micro:bit and MakeCode with Data Streamer](https://docs.microsoft.com/en-us/microsoft-365/education/data-streamer/using-microbit-and-makecode) - How to use the MakeCode to write a simple program that sends live data from the BBC micro:bit to Microsoft Excel using the Microsoft Data Streamer add-in.
@@ -502,7 +502,7 @@ Useful Articles for developing on the micro:bit.
 - [Programming with MicroPython](http://shop.oreilly.com/product/0636920056515.do) - Embedded Programming with Microcontrollers and Python.
 - [Getting Started with the micro:bit](http://shop.oreilly.com/product/0636920115267.do) - Coding and Making with the BBC's Open Development Board.
 - [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735) - The go-to guide to getting started with the BBC micro:bit and exploring all of its amazing capabilities.
-- [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/) - Getting Started with MicroPython
+- [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/) - Getting Started with MicroPython.
 - [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/) - Presents a series of activities to teach the basics of computer networks.
     - [Prácticas de redes con placas micro:bit](https://github.com/jemole/microbit-networking-book) - Spanish translation.
 - [micro:bit in Wonderland](https://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html) - A project book for the BBC micro:bit inspired by the classic story of Alice in Wonderland.
@@ -570,7 +570,7 @@ Useful Articles for developing on the micro:bit.
 
 ## 📅 Events
 
-Do you know about any free event with micro:bits? Please add them here, PRs are encouraged! 
+Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
 - [micro:bit Live 2019](https://microbit.org/en/2019-04-12-microbit-live/) - The very first annual gathering of the global micro:bit community of educators and partners. Call for proposals is open, so don't hesitate to submit one!
 
