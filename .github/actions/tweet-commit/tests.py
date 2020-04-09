@@ -402,7 +402,7 @@ class TestCommitTweet(unittest.TestCase):
         However do not touch it in the title.
         """
         entries, readme = self.get_commit_data(
-            "5a04d4c8a4d51c10ee87a0d69656bb1c695447f1"
+            "10d7622864d9dd6cdd81546e3514bfc945af7396"
         )
         section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
         tweet = tweet_commit.format_tweet_msg(
@@ -415,19 +415,17 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(len(entries), 1)
         self.assertEqual(
             entries[0]["entry"],
-            "- [Grade 10 micro:bit Tutorials]"
-            "(https://www.youtube.com/playlist?list="
-            "PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr) - "
-            "Collection of short videos showing how to use micro:bit MakeCode "
-            "blocks and features.",
+            "- [Haxe node BBC micro:bit]"
+            "(https://github.com/MatthijsKamstra/hx-node-bbc-microbit) - "
+            "Control a BBC micro:bit from Node.js using BLE and the Haxe "
+            "programming language.",
         )
         self.assertEqual(
             tweet,
-            "🎥 Videos - Grade 10 micro:bit Tutorials\n"
-            "Collection of short videos showing how to use #microbit MakeCode "
-            "blocks and features.\n"
-            "https://www.youtube.com/playlist?list="
-            "PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr",
+            "Programming Tools - Haxe node BBC micro:bit\n"
+            "Control a BBC #microbit from Node.js using BLE and the Haxe "
+            "programming language.\n"
+            "https://github.com/MatthijsKamstra/hx-node-bbc-microbit",
         )
 
     def test_commit_replace_python(self):
@@ -457,7 +455,7 @@ class TestCommitTweet(unittest.TestCase):
             "https://github.com/PhonicCanine/microbit-lessons",
         )
 
-    def test_commit_replace_micropython_1(self):
+    def test_commit_replace_micropython_and_scratch(self):
         """Replace "micropython" -> "#MicroPython" and "Scratch" -> "#Scratch".
 
         Note that there isn't commits with "scratch" in lower case, so there
@@ -574,6 +572,59 @@ class TestCommitTweet(unittest.TestCase):
             "#Arduino Core for Nordic Semiconductor nRF5 based boards, "
             "including the #microbit.\n"
             "https://github.com/sandeepmistry/arduino-nRF5/",
+        )
+
+    def test_commit_replace_makecode_1(self):
+        """Replace "MakeCode" for "#MakeCode" in description."""
+        entries, readme = self.get_commit_data(
+            "7014b106374048fc18bb1604673e07c8208c6bc3"
+        )
+        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = tweet_commit.format_tweet_msg(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        self.assertEqual(len(entries), 4)
+        self.assertEqual(
+            entries[0]["entry"],
+            "\t- [MakeCode Beta](https://makecode.microbit.org/beta) - "
+            "Beta version of the MakeCode editor to test the latest features.",
+        )
+        self.assertEqual(
+            tweet,
+            "🆚 Visual - MakeCode Beta\n"
+            "Beta version of the #MakeCode editor to test the latest "
+            "features.\n"
+            "https://makecode.microbit.org/beta",
+        )
+
+    def test_commit_replace_makecode_2(self):
+        """Replace "Makecode" for "#MakeCode" in description."""
+        entries, readme = self.get_commit_data(
+            "b0bb85c5d2477100e34e53c5662acc71867bf6d0"
+        )
+        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = tweet_commit.format_tweet_msg(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["entry"],
+            "- [CCS811](https://github.com/ADataDate/pxt-airQuality) - "
+            "Makecode Package for the CCS811 Air Quality Sensor.",
+        )
+        self.assertEqual(
+            tweet,
+            "MakeCode Libraries - CCS811\n"
+            "#MakeCode Package for the CCS811 Air Quality Sensor.\n"
+            "https://github.com/ADataDate/pxt-airQuality",
         )
 
 

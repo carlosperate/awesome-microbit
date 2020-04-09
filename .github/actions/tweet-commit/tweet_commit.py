@@ -111,6 +111,9 @@ def format_tweet_msg(section, title, url, description):
     description = description.replace("raspberry Pi", "#RaspberryPi")
     description = description.replace("Arduino", "#Arduino")
     description = description.replace("arduino", "#Arduino")
+    description = description.replace("MakeCode", "#MakeCode")
+    description = description.replace("makecode", "#MakeCode")
+    description = description.replace("Makecode", "#MakeCode")
     # Now let's make sure we don't exceed the 280 character limit
     max_characters = 280
     link_length = 24  # Includes an extra character for a '\n'
