@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-ruby@v1
       with:
         ruby-version: '2.6'
     - name: Install awesome_bot
@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-ruby@v1
+    - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
     - name: Install awesome-lint
