@@ -23,7 +23,7 @@ jobs:
     - name: Install awesome_bot
       run: gem install awesome_bot
     - name: Run awesome_bot
-      run: awesome_bot README.md --allow-redirect --allow-dupe --set-timeout 60
+      run: awesome_bot README.md --allow-redirect --allow-dupe --set-timeout 60 --skip-save-results --allow 429
   awesome_lint:
     runs-on: ubuntu-latest
     steps:
