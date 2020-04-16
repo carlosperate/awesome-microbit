@@ -50,6 +50,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (part of Microsoft's PXT).
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
+	- [MakeCode Offline App](https://makecode.microbit.org/offline-app) - Stand alone offline app (remember MakeCode in your browser also works offline).
 - [Scratch 3.0](https://scratch.mit.edu/microbit) - The new version of Scratch is officially compatible with the micro:bit via their Scratch Link plug-in.
 - [Code Kingdoms](https://microbit.codekingdoms.com) - (No longer maintained) Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 - [Open Roberta Lab](https://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
@@ -139,6 +140,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [MakeCode](https://makecode.microbit.org) - This block and text editor for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
+	- [MakeCode Offline App](https://makecode.microbit.org/offline-app) - Stand alone offline app (remember MakeCode in your browser also works offline).
 - [Espruino JavaScript](https://www.espruino.com/MicroBit) - JavaScript interpreter for microcontrollers. It also offers a WebIDE for written code and blocks. The motion sensors from v1.5 of the micro:bit are currently not implemented.
 
 ##### 🗿 MakeCode Extensions
