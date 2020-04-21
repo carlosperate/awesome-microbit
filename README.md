@@ -178,6 +178,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
 - [DSTemp](https://github.com/bsiever/microbit-dstemp-alpha) - Read the temperature from one or multiple DS18B20 sensors (currently in alpha).
 - [DS18B20](https://github.com/DFRobot/pxt-ds18b20) - DFRobot extensions to read the temperature from a DS18B20 sensor.
+- [DS3231](https://github.com/gbraad/pxt-rtc-ds3231) - RTC (Real Time Clock) MakeCode extension for the micro:bit.
 
 ##### 🗿 Node.js and Browser
 
