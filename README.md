@@ -60,6 +60,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [mBlock 5](https://www.makeblock.com/software/mblock5) - Desktop application supporting block-based and Python-based programming on multiple hardware platforms, including the micro:bit.
 - [CodeMao Kitten Editor](https://ide.codemao.cn) - Block programming platform to create games, includes micro:bit support.
 - [eBlock](https://github.com/distintiva/eBlock) - A Scratch 2 based application (forked from  mBlock 3) to visually code the BBC micro:bit and other devices.
+- [Vittascience](https://vittascience.com/microbit/) - MicroPython block programming and built-in simulator for the micro:bit.
 
 ##### 🆚 Scratch 2 Extensions
 
