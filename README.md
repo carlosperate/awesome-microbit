@@ -516,7 +516,7 @@ Useful Articles for developing on the micro:bit.
 
 ## 🏫 Teaching Resources
 
-- [microbit.org Teaching Resources](https://www.microbit.org/teach/)
+- [microbit.org Lessons](https://microbit.org/lessons/)
 - [Code Club micro:bit projects](https://codeclubprojects.org/en-GB/microbit/)
 - [Make with the micro:bit by Technology Will Save Us](https://make.techwillsaveus.com/microbit)
 - [IET micro:bit Teaching Resources](https://archive.microbit.org/teach/iet/) - A series of resources created by the IET (Institution of Engineering and Technology) as part of their highly successful IET Faraday brand.
