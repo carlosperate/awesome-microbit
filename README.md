@@ -84,7 +84,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [JetBrains IDEA/PyCharm IDE plugin](https://plugins.jetbrains.com/plugin/9777-micropython) - Support for MicroPython devices in IntelliJ IDEA and PyCharm.
 - [uPyCraft](https://dfrobot.gitbooks.io/upycraft/) - A micro:bit compatible MicroPython IDE for Windows/Mac, designed with a simple and convenient interface.
 - [CodeSpace](https://make.firialabs.com) - From Firia Labs, an online MicroPython IDE for micro:bits, with bundled learning resources.
-- [Device Simulator Express](https://marketplace.visualstudio.com/items?itemName=ms-python.devicesimulatorexpress) - Visual Studio Code extension with a micro:bit simulator, debugger and serial terminal.
+- [Device Simulator Express](https://marketplace.visualstudio.com/items?itemName=ms-python.devicesimulatorexpress) - Visual Studio Code extension for micro:bit MicroPython with a simulator, debugger, and serial terminal.
 
 ##### 🐍 MicroPython Blocks Editors
 
