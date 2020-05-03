@@ -22,6 +22,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 	- [🐍 Python](#-python)
 	- [🗿 JavaScript / MakeCode](#-javascript-and-makecode)
 	- [©️ C/C++](#%EF%B8%8F-cc)
+	- [🦀 Rust]()#-Rust
 	- [🚩 Other Languages](#-other-languages)
 	- [🎚️ Interaction Languages](#%EF%B8%8F-interaction-languages)
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
@@ -227,11 +228,14 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [RIOT](https://riot-os.org/api/group__boards__microbit.html) - A friendly, real-time, multi-threading operating system that supports a range of devices that are typically found in the Internet of Things (IoT).
 - [Zephyr](https://docs.zephyrproject.org/latest/boards/arm/bbc_microbit/doc/index.html) - A scalable real-time operating system (RTOS) supporting multiple hardware architectures, optimized for resource constrained devices, and built with security in mind.
 
+### 🦀 Rust
+
+- [Running Rust code on a BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Article describing the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
+
 ### 🚩 Other Languages
 
 Other programming languages capable to program the micro:bit.
 
-- [Rust](https://github.com/SimonSapin/rust-on-bbc-microbit) - Article describing the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
 - [Forth](https://wiki.forth-ev.de/doku.php/en:projects:microbit:start) - Forth, a stack-based language, for the BBC micro:bit.
 - [Pascal](https://wiki.freepascal.org/micro:bit) - Free Pascal compiler that can target the ARM embedded platform, including the micro:bit.
 - [Ada](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/examples/MicroBit) - Instruction on how to setup the Ada development environment for the micro:bit.
