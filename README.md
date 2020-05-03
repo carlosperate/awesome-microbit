@@ -578,7 +578,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- [micro:bit Live 2019](https://microbit.org/en/2019-04-12-microbit-live/) - The very first annual gathering of the global micro:bit community of educators and partners. Call for proposals is open, so don't hesitate to submit one!
+- No current events
 
 
 ## 🤷 Miscellaneous
