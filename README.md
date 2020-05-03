@@ -22,7 +22,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 	- [🐍 Python](#-python)
 	- [🗿 JavaScript / MakeCode](#-javascript-and-makecode)
 	- [©️ C/C++](#%EF%B8%8F-cc)
-	- [🦀 Rust]()#-Rust
+	- [🦀 Rust](#-rust)
 	- [🚩 Other Languages](#-other-languages)
 	- [🎚️ Interaction Languages](#%EF%B8%8F-interaction-languages)
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
