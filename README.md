@@ -232,6 +232,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [Board support crate for micro:bit](https://docs.rs/crate/microbit/) - Contains everything required to get started with the use of Rust to create firmwares for the BBC micro:bit board.
 - [Running Rust code on a BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Article describing the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
+- [MicroRust](https://droogmic.github.io/microrust/) - Discover the world of microcontrollers through Rust on the BBC micro:bit.
 
 ### 🚩 Other Languages
 
