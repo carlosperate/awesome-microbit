@@ -357,7 +357,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 ## 📐 CAD
 
 - [Kitronik CAD Resources](https://www.kitronik.co.uk/blog/bbc-microbit-cad-resources/) - BBC micro:bit CAD model from Kitronik.
-- [Proto-PIC CAD Resources](https://www.proto-pic.co.uk/microbit-resources/) - Proto-PIC products CAD resources.
+- [Proto-PIC CAD Resources](https://proto-pic.co.uk/microbit-resources/) - Proto-PIC products CAD resources.
 
 
 ## 🎨 2D Design
