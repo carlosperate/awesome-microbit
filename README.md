@@ -502,7 +502,7 @@ Useful Articles for developing on the micro:bit.
 - [The Learning Circuit](https://www.element14.com/community/community/element14-presents/thelearningcircuit/tags#/?tags=learning%20circuit+microbit) - Element14 video series to learn about basic electronics. Some of the episodes cover different ways to learn and explore with the BBC micro:bit.
 - [Online Learning with MakeCode](https://makecode.com/online-learning) - A list of helpful resources, including live video streams, that students can access to continue their computing education outside the classroom now that many schools are closed.
 - [Creative Coding with micro:bit](https://www.youtube.com/playlist?list=PLIRQWQAcfF037nji2jK6iiafMLubgJqUh) - Creative activities with the micro:bit from Kids Code Jeunesse.
-- [Video Tutorials for micro:bit](https://www.youtube.com/watch?v=-HUD_96vvJA&list=PLS9qLR8VoFA5jr14vzjJwqZ5DsBLFzuYn) - A playlist of video tutorials by Geek Tutorials, walking through a lot of the micro:bit features.
+- [Video Tutorials for micro:bit](https://www.youtube.com/playlist?list=PLS9qLR8VoFA5jr14vzjJwqZ5DsBLFzuYn) - A playlist of video tutorials by Geek Tutorials, walking through a lot of the micro:bit features.
 
 
 ## 📚 Books
