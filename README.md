@@ -524,6 +524,7 @@ Useful Articles for developing on the micro:bit.
 - [Beginning BBC micro:bit](https://www.apress.com/gb/book/9781484233597) - A Practical Introduction to micro:bit Development.
 - [BBC micro:bit Recipes](https://www.apress.com/gp/book/9781484249123) - Learn Programming with Microsoft MakeCode Blocks.
 - [Micro:bit for Mad Scientists](https://nostarch.com/microbitformad) - The 30 simple projects and experiments in this book will show you how to use the micro:bit to build a secret science lab, as you learn basic coding and electronics skills.
+- [Save The World With Code](https://www.mhprofessional.com/9781260457599-usa-save-the-world-with-code-20-fun-projects-for-all-ages-using-raspberry-pi-microbit-and-circuit-playground-express-group) - Twenty fun projects for all ages using Raspberry Pi, micro:bit, and Circuit Playground Express.
 
 
 ## 🏫 Teaching Resources
