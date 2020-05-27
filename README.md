@@ -477,6 +477,7 @@ Useful Articles for developing on the micro:bit.
 - [Using micro:bit and MakeCode with Data Streamer](https://docs.microsoft.com/en-us/microsoft-365/education/data-streamer/using-microbit-and-makecode) - How to use the MakeCode to write a simple program that sends live data from the BBC micro:bit to Microsoft Excel using the Microsoft Data Streamer add-in.
 - [3D Rendering on a Children's Toy](https://blog.scottlogic.com/2020/03/03/microbit-raytracer.html) - Implementing a ray tracer, an algorithm which simulates light rays to render a 3D scene, to render a pyramid in the micro:bit display.
 - [The ThreadBoard: micro:bit E-Textile Prototyping Board](https://www.instructables.com/id/The-ThreadBoard-Microbit-E-Textile-Prototyping-Boa/) - Developing a tool that will adapt to the unique set of constraints that e-textile creators face when fabricating an e-textile project.
+- [Build a snake game on the BBC micro:bit](https://www.cameronmacleod.com/blog/microbit-snake) - A detailed tutorial walking through the steps of writing a snake game in MicroPython.
 
 ### 🗞️ Article Collections
 
