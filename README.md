@@ -27,7 +27,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 	- [🎚️ Interaction Languages](#%EF%B8%8F-interaction-languages)
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
 - [📱 Mobile Apps](#-mobile-apps)
-- [🔵 ChromeOS Apps](#-chromeos-apps)
 - [↔️ Interface Chip](#%EF%B8%8F-interface-chip)
 - [🔩 Hardware](#-hardware)
 - [🖨️ 3D Printing](#%EF%B8%8F-3d-printing)
@@ -292,14 +291,6 @@ These languages do not program the micro:bit directly, but can be used to create
 - [micro:bit Slither](https://github.com/novucs/microbit-slither) - Multiplayer snake game on Android, controlled with micro:bits via Bluetooth.
 - [Micro:bit Explorer](https://phwallen.github.io/microbit-explorer/) - A Swift Playground Book that introduces computer fundamentals in a visual way, it allows you to enter machine code or assembly and see how it executes and how the micro:bit registers are affected.
 - [BirdBlox](https://www.birdbraintechnologies.com/microbit-birdblox/) - A tablet-based programming option for the Hummingbird, a robotics board kit for the micro:bit.
-
-
-## 🔵 ChromeOS Apps
-
-- [Quiz:bit](https://chrome.google.com/webstore/detail/quizbit/hfnanbphehfnlcpkelfnkmfdljphlmna) - ([Source Code](https://github.com/lancaster-university/quiz-bit)) BBC micro:bit programs and a matching application for providing a quiz-voter-style service using micro:bits as the controls.
-- [bitty blue](https://www.bittysoftware.com/apps/bitty_blue.html) - Play with 3D "PolySquiggles", use as a compass, have fun with the buttons, send images or text to the LED display, connect and control electronic circuits, and all via Bluetooth.
-- [bitty data logger](https://www.bittysoftware.com/apps/bitty_data_logger.html) - Capture and chart accelerometer, magnetometer and temperature data from your micro:bit's internal sensors over Bluetooth.
-- [microbit-chrome](https://github.com/Microsoft/microbit-chrome) - Prototype chrome add-on that exposes the micro:bit's serial output to web pages like the MakeCode editor.
 
 
 ## ↔️ Interface Chip
