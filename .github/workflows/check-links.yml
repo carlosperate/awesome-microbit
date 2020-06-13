@@ -2,9 +2,7 @@ name: Check Links
 
 on:
   push:
-    branches:
-    - master
-    - action
+    branches: '*'
   pull_request:
     branches:
       - master
