@@ -573,7 +573,6 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Sri Lanka User Group](http://microbitslug.org)
 - [Croatian Makers](https://izradi.croatianmakers.hr/bbc-microbit-uvodna-stranica/)
 - [Arabic micro:bit Community](https://community.nadi-microbit.com)
-- [MakeCode Gitter](https://gitter.im/makecode-community/Lobby)
 - [MakeCode Forum](https://forum.makecode.com/c/microbit/11)
 
 
