@@ -420,6 +420,7 @@ All these projects contain steps and resources required for reproduction.
 - [micro:bit Quiz System](http://weddell.co.uk/computing/microbit-quiz-system/) - A wireless LED quiz button system with sound.
 - [DIY Educational micro:bit Robot](https://www.instructables.com/id/DIY-Educational-Microbit-Robot/) - Building a relatively accessible, capable and cheap robot. Two variants provided with different sensors and example code for MakeCode and MicroPython.
 - [MIDI CC Wireless Controller](https://www.instructables.com/id/Microbit-Midi-CC-Wireless-Controller/) - A wireless MIDI CC controller, allowing you to use your micro:bit as a MIDI controller and connect it to your favourite music production software.
+- [Smart Garden Ornaments](https://github.com/jimbobbennett/smart-garden-ornaments) - Track things happening in your garden, neighbourhood, or school using smart ornaments with the BBC micro:bit, Raspberry Pi, and a cloud-based IoT service.
 
 ### 🏗️ Project Collections
 
