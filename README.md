@@ -552,6 +552,7 @@ Useful Articles for developing on the micro:bit.
 - [Pimoroni Education](https://edu.pimoroni.com/tag/microbit/) - Educational resources with the micro:bit from Pimoroni.
 - [British Council micro:bit for Teachers](https://microbit.britishcouncil.org) - This course with interactive video learning and progress tracking will guide you through 12 modules to get to know the micro:bit and block code editor (needs sign-up).
 - [Arm School Program Resources for Schools](https://www.arm.com/resources/education/schools/content) - A suite of teaching and learning resources to help teachers deliver engaging and inspirational lessons in Computing (K-12).
+- [NCCE KS3 Physical computing](https://teachcomputing.org/curriculum/key-stage-3/physical-computing) - This unit applies and enhances the learners’ programming skills in a new engaging context: physical computing, using the BBC micro:bit.
 
 ### 🏫 BBC Teaching Resources
 
