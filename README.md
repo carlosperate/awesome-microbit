@@ -52,6 +52,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
 	- [MakeCode Offline App](https://makecode.microbit.org/offline-app) - Stand alone offline app (note that MakeCode in the browser also works offline).
 	- [MakeCode Multi Editor](https://makecode.microbit.org/---multi) - Two MakeCode editors side by side to create, modify, and test two micro:bit programs at the same time, great for simulating radio with a transmitter and receiver.
+	- [MakeCode Streamer Beta](https://makecode.com/streamer/docs) - Experimental web app that simplifies the creation of interactive, high quality coding videos. Designed for teachers, students or generally anyone who would want to do any kind of online MakeCode coding.
 - [Scratch 3.0](https://scratch.mit.edu/microbit) - The new version of Scratch is officially compatible with the micro:bit via their Scratch Link plug-in.
 - [Code Kingdoms](https://microbit.codekingdoms.com) - (No longer maintained) Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 - [Open Roberta Lab](https://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
