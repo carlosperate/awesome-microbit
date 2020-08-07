@@ -188,6 +188,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS18B20](https://github.com/DFRobot/pxt-ds18b20) - DFRobot extensions to read the temperature from a DS18B20 sensor.
 - [DS3231](https://github.com/gbraad/pxt-rtc-ds3231) - RTC (Real Time Clock) MakeCode extension for the micro:bit.
 - [timeanddate](https://github.com/bsiever/microbit-pxt-timeanddate) -  Software Based Real Time Clock (Time & Date) for the micro:bit.
+- [MAX31855](https://github.com/bremoran/microDriver_max31855) - Driver for the MAX31855 Thermocouple Amplifier.
 
 ##### 🗿 Node.js and Browser
 
