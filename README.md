@@ -477,6 +477,7 @@ Useful Articles for developing on the micro:bit.
 - [Build a snake game on the BBC micro:bit](https://www.cameronmacleod.com/blog/microbit-snake) - A detailed tutorial walking through the steps of writing a snake game in MicroPython.
 - [micro:bit & Vital Signs](https://medium.com/liki-blog/micro-bit-vital-signs-b76e495f6a59) - How to measure electrical pulses with the micro:bit, to build a pulse monitor with an optical heart rate detector.
 - [Measuring pendulum decay with BBC micro:bit and XinaBox](https://www.hackster.io/PragmaticPhil/measuring-pendulum-decay-with-bbc-micro-bit-and-xinabox-b836a2) - Collecting large data sets is key to applied data science, use the techniques in this project to collect data on your BBC micro:bit.
+- [Read a PS/2 keyboard on a BBC micro:bit](http://www.suppertime.co.uk/blogmywiki/2020/08/ps2-keyboard-microbit/) - Learning how PS/2 keyboards work, their serial communication, and how to connect them to a micro:bit.
 
 ### 🗞️ Article Collections
 
