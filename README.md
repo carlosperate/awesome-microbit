@@ -189,6 +189,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS3231](https://github.com/gbraad/pxt-rtc-ds3231) - RTC (Real Time Clock) MakeCode extension for the micro:bit.
 - [timeanddate](https://github.com/bsiever/microbit-pxt-timeanddate) -  Software Based Real Time Clock (Time & Date) for the micro:bit.
 - [MAX31855](https://github.com/bremoran/microDriver_max31855) - Driver for the MAX31855 Thermocouple Amplifier.
+- [Perfect Projects](https://github.com/dillonbarnes/perfect-projects) - Many projects in one extension.
 
 ##### 🗿 Node.js and Browser
 
@@ -436,7 +437,8 @@ All these projects contain steps and resources required for reproduction.
 - [Electromaker micro:bit projects](https://www.electromaker.io/projects?platform=microbit) - All the micro:bit projects posted to Electromaker, a platform for makers to showcase their projects.
 - [Saturday Science & BBC micro:bits](https://saturdayscience.org/bbc-microbit/) - Practical science and engineering projects with the micro:bit, explore physical properties with cool experiments.
 - [Maker Pro micro:bit Projects & Tutorials](https://maker.pro/microbit) - The micro:bit section of Maker Pro, a place for makers to share designs, collaborate, and learn how to take your product to market.
-
+- [microbit-node-and-spotify(Mac)](https://www.hackster.io/samelhusseini/micro-bit-spotify-mac-5ac6d7) - Allows you to control a Spotify playlist with 2 micro:bits on Mac.
+- [microbit-node-and-spotify(Windows)](https://www.hackster.io/samelhusseini/microbit-spotify-windows-8a8551) - Allows you to control a Spotify playlist with 2 micro:bits on Windows.
 
 ## 🗞️ Articles
 
