@@ -424,6 +424,7 @@ All these projects contain steps and resources required for reproduction.
 - [DIY Educational micro:bit Robot](https://www.instructables.com/id/DIY-Educational-Microbit-Robot/) - Building a relatively accessible, capable and cheap robot. Two variants provided with different sensors and example code for MakeCode and MicroPython.
 - [MIDI CC Wireless Controller](https://www.instructables.com/id/Microbit-Midi-CC-Wireless-Controller/) - A wireless MIDI CC controller, allowing you to use your micro:bit as a MIDI controller and connect it to your favourite music production software.
 - [Smart Garden Ornaments](https://github.com/jimbobbennett/smart-garden-ornaments) - Track things happening in your garden, neighbourhood, or school using smart ornaments with the BBC micro:bit, Raspberry Pi, and a cloud-based IoT service.
+- [microbit-node-and-spotify(Mac)](https://www.hackster.io/samelhusseini/micro-bit-spotify-mac-5ac6d7)[Windows](https://www.hackster.io/samelhusseini/microbit-spotify-windows-8a8551) - Allows you to control a Spotify playlist with 2 micro:bits.
 
 ### 🏗️ Project Collections
 
@@ -436,8 +437,6 @@ All these projects contain steps and resources required for reproduction.
 - [Electromaker micro:bit projects](https://www.electromaker.io/projects?platform=microbit) - All the micro:bit projects posted to Electromaker, a platform for makers to showcase their projects.
 - [Saturday Science & BBC micro:bits](https://saturdayscience.org/bbc-microbit/) - Practical science and engineering projects with the micro:bit, explore physical properties with cool experiments.
 - [Maker Pro micro:bit Projects & Tutorials](https://maker.pro/microbit) - The micro:bit section of Maker Pro, a place for makers to share designs, collaborate, and learn how to take your product to market.
-- [microbit-node-and-spotify(Mac)](https://www.hackster.io/samelhusseini/micro-bit-spotify-mac-5ac6d7) - Allows you to control a Spotify playlist with 2 micro:bits on Mac.
-- [microbit-node-and-spotify(Windows)](https://www.hackster.io/samelhusseini/microbit-spotify-windows-8a8551) - Allows you to control a Spotify playlist with 2 micro:bits on Windows.
 
 ## 🗞️ Articles
 
