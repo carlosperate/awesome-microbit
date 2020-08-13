@@ -189,6 +189,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS3231](https://github.com/gbraad/pxt-rtc-ds3231) - RTC (Real Time Clock) MakeCode extension for the micro:bit.
 - [timeanddate](https://github.com/bsiever/microbit-pxt-timeanddate) -  Software Based Real Time Clock (Time & Date) for the micro:bit.
 - [MAX31855](https://github.com/bremoran/microDriver_max31855) - Driver for the MAX31855 Thermocouple Amplifier.
+- [Perfect Projects](https://github.com/dillonbarnes/perfect-projects) - Many projects in one extension.
 
 ##### 🗿 Node.js and Browser
 
