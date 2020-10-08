@@ -582,6 +582,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Sri Lanka User Group](http://microbitslug.org)
 - [Arabic micro:bit Community](https://community.nadi-microbit.com)
 - [MakeCode Forum](https://forum.makecode.com/c/microbit/11)
+- [micro:bit subreddit](https://www.reddit.com/r/microbit/)
 
 
 ## 📅 Events
