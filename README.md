@@ -424,6 +424,7 @@ All these projects contain steps and resources required for reproduction.
 - [MIDI CC Wireless Controller](https://www.instructables.com/id/Microbit-Midi-CC-Wireless-Controller/) - A wireless MIDI CC controller, allowing you to use your micro:bit as a MIDI controller and connect it to your favourite music production software.
 - [Smart Garden Ornaments](https://github.com/jimbobbennett/smart-garden-ornaments) - Track things happening in your garden, neighbourhood, or school using smart ornaments with the BBC micro:bit, Raspberry Pi, and a cloud-based IoT service.
 - [micro:bit + Spotify (macOS)](https://www.hackster.io/samelhusseini/micro-bit-spotify-mac-5ac6d7) - ([Windows version](https://www.hackster.io/samelhusseini/microbit-spotify-windows-8a8551)) Allows you to control a Spotify playlist with 2 micro:bits.
+- [micro:bit Air Guitar](https://www.instructables.com/Microbit-Air-Guitar-DMP/) - How to make your very own customisable guitar controller paired with micro:bit.
 
 ### 🏗️ Project Collections
 
