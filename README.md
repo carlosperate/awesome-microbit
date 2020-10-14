@@ -478,6 +478,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit & Vital Signs](https://medium.com/liki-blog/micro-bit-vital-signs-b76e495f6a59) - How to measure electrical pulses with the micro:bit, to build a pulse monitor with an optical heart rate detector.
 - [Measuring pendulum decay with BBC micro:bit and XinaBox](https://www.hackster.io/PragmaticPhil/measuring-pendulum-decay-with-bbc-micro-bit-and-xinabox-b836a2) - Collecting large data sets is key to applied data science, use the techniques in this project to collect data on your BBC micro:bit.
 - [Read a PS/2 keyboard on a BBC micro:bit](http://www.suppertime.co.uk/blogmywiki/2020/08/ps2-keyboard-microbit/) - Learning how PS/2 keyboards work, their serial communication, and how to connect them to a micro:bit.
+- [Testing the micro:bit's ADC](http://www.doctormonk.com/2020/08/testing-microbits-analog-inputs.html) - The micro:bit can measure analog voltages, but you can't measure something without altering it & the best we can do is to make the measurement errors small. This article determines the micro:bit ADC measurement error.
 
 ### 🗞️ Article Collections
 
@@ -575,7 +576,7 @@ Useful Articles for developing on the micro:bit.
 
 ## 👪 Community
 
-- [Official micro:bit Slack Channel](https://tech.microbit.org/get-involved/where-to-find/)
+- [Official micro:bit Slack Channel](https://tech.microbit.org/community/#join-us-on-the-microbit-community-slack-channel)
 - [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
 - [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
 - [micro:bit Python mailing list (archived)](https://github.com/ntoll/microbit_mailman_archive)
@@ -583,6 +584,7 @@ Useful Articles for developing on the micro:bit.
 - [Arabic micro:bit Community](https://community.nadi-microbit.com)
 - [MakeCode Forum](https://forum.makecode.com/c/microbit/11)
 - [micro:bit subreddit](https://www.reddit.com/r/microbit/)
+- [micro:bit Champions](https://microbit.org/champions)
 
 
 ## 📅 Events
