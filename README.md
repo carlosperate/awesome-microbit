@@ -424,6 +424,7 @@ All these projects contain steps and resources required for reproduction.
 - [MIDI CC Wireless Controller](https://www.instructables.com/id/Microbit-Midi-CC-Wireless-Controller/) - A wireless MIDI CC controller, allowing you to use your micro:bit as a MIDI controller and connect it to your favourite music production software.
 - [Smart Garden Ornaments](https://github.com/jimbobbennett/smart-garden-ornaments) - Track things happening in your garden, neighbourhood, or school using smart ornaments with the BBC micro:bit, Raspberry Pi, and a cloud-based IoT service.
 - [micro:bit + Spotify (macOS)](https://www.hackster.io/samelhusseini/micro-bit-spotify-mac-5ac6d7) - ([Windows version](https://www.hackster.io/samelhusseini/microbit-spotify-windows-8a8551)) Allows you to control a Spotify playlist with 2 micro:bits.
+- [Delightfully Delirious Day Clock](https://www.hackster.io/8bitsandabyte/delightfully-delirious-day-clock-b8cd6c) - Also wondering what day it is today? This delightfully delirious day clock narrows it down to roughly eight different possibilities.
 - [micro:bit Air Guitar](https://www.instructables.com/Microbit-Air-Guitar-DMP/) - How to make your very own customisable guitar controller paired with micro:bit.
 
 ### 🏗️ Project Collections
@@ -479,6 +480,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit & Vital Signs](https://medium.com/liki-blog/micro-bit-vital-signs-b76e495f6a59) - How to measure electrical pulses with the micro:bit, to build a pulse monitor with an optical heart rate detector.
 - [Measuring pendulum decay with BBC micro:bit and XinaBox](https://www.hackster.io/PragmaticPhil/measuring-pendulum-decay-with-bbc-micro-bit-and-xinabox-b836a2) - Collecting large data sets is key to applied data science, use the techniques in this project to collect data on your BBC micro:bit.
 - [Read a PS/2 keyboard on a BBC micro:bit](http://www.suppertime.co.uk/blogmywiki/2020/08/ps2-keyboard-microbit/) - Learning how PS/2 keyboards work, their serial communication, and how to connect them to a micro:bit.
+- [Testing the micro:bit's ADC](http://www.doctormonk.com/2020/08/testing-microbits-analog-inputs.html) - The micro:bit can measure analog voltages, but you can't measure something without altering it & the best we can do is to make the measurement errors small. This article determines the micro:bit ADC measurement error.
 
 ### 🗞️ Article Collections
 
@@ -561,6 +563,7 @@ Useful Articles for developing on the micro:bit.
 - [British Council micro:bit for Teachers](https://microbit.britishcouncil.org) - This course with interactive video learning and progress tracking will guide you through 12 modules to get to know the micro:bit and block code editor (needs sign-up).
 - [Arm School Program Resources for Schools](https://www.arm.com/resources/education/schools/content) - A suite of teaching and learning resources to help teachers deliver engaging and inspirational lessons in Computing (K-12).
 - [NCCE KS3 Physical computing](https://teachcomputing.org/curriculum/key-stage-3/physical-computing) - This unit applies and enhances the learners’ programming skills in a new engaging context: physical computing, using the BBC micro:bit.
+- [Remote Learning with micro:bit](https://www.sparkfun.com/news/3304) - Webinar showing how to remotely teach students all about micro:bit in less than one hour.
 
 ### 🏫 BBC Teaching Resources
 
@@ -576,13 +579,15 @@ Useful Articles for developing on the micro:bit.
 
 ## 👪 Community
 
-- [Official micro:bit Slack Channel](https://tech.microbit.org/get-involved/where-to-find/)
+- [Official micro:bit Slack Channel](https://tech.microbit.org/community/#join-us-on-the-microbit-community-slack-channel)
 - [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
 - [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
 - [micro:bit Python mailing list (archived)](https://github.com/ntoll/microbit_mailman_archive)
 - [micro:bit Sri Lanka User Group](http://microbitslug.org)
 - [Arabic micro:bit Community](https://community.nadi-microbit.com)
 - [MakeCode Forum](https://forum.makecode.com/c/microbit/11)
+- [micro:bit subreddit](https://www.reddit.com/r/microbit/)
+- [micro:bit Champions](https://microbit.org/champions)
 
 
 ## 📅 Events
