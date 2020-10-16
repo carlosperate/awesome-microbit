@@ -425,6 +425,7 @@ All these projects contain steps and resources required for reproduction.
 - [Smart Garden Ornaments](https://github.com/jimbobbennett/smart-garden-ornaments) - Track things happening in your garden, neighbourhood, or school using smart ornaments with the BBC micro:bit, Raspberry Pi, and a cloud-based IoT service.
 - [micro:bit + Spotify (macOS)](https://www.hackster.io/samelhusseini/micro-bit-spotify-mac-5ac6d7) - ([Windows version](https://www.hackster.io/samelhusseini/microbit-spotify-windows-8a8551)) Allows you to control a Spotify playlist with 2 micro:bits.
 - [Delightfully Delirious Day Clock](https://www.hackster.io/8bitsandabyte/delightfully-delirious-day-clock-b8cd6c) - Also wondering what day it is today? This delightfully delirious day clock narrows it down to roughly eight different possibilities.
+- [micro:bit Air Guitar](https://www.instructables.com/Microbit-Air-Guitar-DMP/) - How to make your very own customisable guitar controller paired with micro:bit.
 
 ### 🏗️ Project Collections
 
