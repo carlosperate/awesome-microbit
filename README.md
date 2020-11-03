@@ -567,6 +567,8 @@ Useful Articles for developing on the micro:bit.
 - [Arm School Program Resources for Schools](https://www.arm.com/resources/education/schools/content) - A suite of teaching and learning resources to help teachers deliver engaging and inspirational lessons in Computing (K-12).
 - [NCCE KS3 Physical computing](https://teachcomputing.org/curriculum/key-stage-3/physical-computing) - This unit applies and enhances the learners’ programming skills in a new engaging context: physical computing, using the BBC micro:bit.
 - [Remote Learning with micro:bit](https://www.sparkfun.com/news/3304) - Webinar showing how to remotely teach students all about micro:bit in less than one hour.
+- [Coding with micro:bit video series for teachers](https://www.youtube.com/playlist?list=PLmqeu38gRdJVCMUhgmF8OrjOhYpYtoh9U) - Videos series resource for teachers and students with an introduction to coding with micro:bit to build inventions and make creations integrating LEDs, motors, servos and speakers.
+
 
 ### 🏫 BBC Teaching Resources
 
