@@ -532,6 +532,7 @@ Useful Articles for developing on the micro:bit.
 - [Micro:bit for Mad Scientists](https://nostarch.com/microbitformad) - The 30 simple projects and experiments in this book will show you how to use the micro:bit to build a secret science lab, as you learn basic coding and electronics skills.
 - [Save The World With Code](https://www.mhprofessional.com/9781260457599-usa-save-the-world-with-code-20-fun-projects-for-all-ages-using-raspberry-pi-microbit-and-circuit-playground-express-group) - Twenty fun projects for all ages using Raspberry Pi, micro:bit, and Circuit Playground Express.
 - [Beginning Data Science, IoT, and AI on Single Board Computers](https://www.apress.com/gp/book/9781484257654) - Core Skills and Real-World Application with the BBC micro:bit and XinaBox.
+- [The Tinkerer's Guide to the micro:bit Galaxy](https://gethacking.com/products/the-tinkerers-guide-to-the-micro-bit-galaxy) - Get ready to make and code amazing projects that light up, make noise, move, and talk (via radio).
 
 
 ## 🏫 Teaching Resources
