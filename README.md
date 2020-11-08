@@ -173,7 +173,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [LumexOLED](https://github.com/lioujj/pxt-oled) - Package designed for Lumex OLED display.
 - [MakeCode Extensions](https://github.com/makecode-extensions) - Growing collection of packages, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307 RTC, APDS9930 Digital Proximity and Ambient Light Sensor, BH1750 digital ambient light sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
 - [BMP085](https://github.com/sabas1080/uBit_BMP085) - Package to control the BMP085 or BMP180 pressure and altitude sensors.
-- [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, enabling the the micro:bit to obtain temperature and relative humidity from these sensors.
+- [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, enabling the micro:bit to obtain temperature and relative humidity from these sensors.
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Package to calculate distances using a VL53L0X Time-of-Flight ranging sensor.
 - [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Package to control the PCA9685, a 16-channel PWM controller, with included servo support.
 - [dfplayer](https://github.com/lioujj/pxt-mp3) - Play MP3 files with a DFPlayer mini module.
