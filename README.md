@@ -259,7 +259,7 @@ Other programming languages capable to program the micro:bit.
 
 These languages do not program the micro:bit directly, but can be used to create programs that interface with a micro:bit.
 
-- [Kodu Controller](https://www.kodugamelab.com/bbc-microbit/) - Enables interacting with the micro:bit from Kodu Game Lab.
+- [Kodu Controller](https://www.kodugamelab.com/resources/bbc_microbit/microbit) - Enables interacting with the micro:bit from Kodu Game Lab.
 - [Simulink Coder Support Package](https://www.mathworks.com/help/supportpkg/microbit/) - Package that enables you to create Matlab and Simulink models and automatically generate and deploy code on the micro:bit.
 - [micro:bit for Dyalog APL on the Pi](https://github.com/APLPi/microbit) - Tools for using the micro:bit (via MicroPython serial connection) with the Dyalog APL programming language on the Raspberry Pi.
 - [Gobot](https://gobot.io/documentation/platforms/microbit/) - Framework for the Go programming language to program devices in the real world. It can access the micro:bit via Bluetooth LE.
