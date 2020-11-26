@@ -211,6 +211,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [Micro:Pi](https://github.com/Bottersnike/Micro-Pi) - C/C++ editor for the micro:bit with serial monitor and deploy functionality. Written in Python with an installer (ATM Linux only, but could be manually installed in any OS) that includes all dependencies.
 - [PlatformIO](https://docs.platformio.org/en/latest/boards/nordicnrf51/bbcmicrobit.html) - Embedded IDE with support for the micro:bit using the Arduino or Mbed software stack.
+- [Eclipse Instructions](https://www.seismicmatt.com/2018/05/04/eclipse-yotta-c-c-and-the-bbc-microbit/) - Setting up Eclipse with Yotta to build and debug with the BBC micro:bit.
 
 ##### ©️ C/C++ Libraries
 
