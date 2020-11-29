@@ -227,6 +227,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS3234](https://os.mbed.com/users/jsa1969/code/microbit-DS3234/) - Driver in example project using the DS3234 RTC via SPI.
 - [HTU21D](https://github.com/ti-nspire/microbit-in-mbed-library-for-HTU21D-sensor) - Mbed library for the HTU21D digital humidity and temperature sensor.
 - [Distintiva micro:bit library](https://github.com/distintiva/distintiva_microbit_lib) - Arduino library to code the micro:bit using the Arduino IDE.
+- [micro:Maqueen Library for Arduino](https://github.com/kd8bxp/micro-Maqueen-Arduino-Library) - A simple Arduino library for the DF Robot micro:Maqueen robot, using a BBC Micro:Bit controller.
 
 ##### ©️ RTOS with micro:bit profile
 
