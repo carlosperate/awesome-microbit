@@ -58,7 +58,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [Open Roberta Lab](https://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
 - [EduBlocks](https://app.edublocks.org) - Blocks interface that provides a transitioning experience from Scratch to Python.
 - [MicroBlocks](http://microblocks.fun) - A visual programming language inspired by Scratch that runs right inside microcontroller boards such as the micro:bit.
-- [Workbench](https://edu.workbencheducation.com/partners/microbit) - A multi-device coding canvas for block-based programming that connects with BLE devices via Chrome Web Bluetooth.
 - [Mind+](http://mindplus.cc/en.html) - Desktop application to program hardware devices, like the micro:bit, with blocks, Python, or the C language.
 - [CodeMao Kitten Editor](https://ide.codemao.cn) - Block programming platform to create games, includes micro:bit support.
 - [eBlock](https://github.com/distintiva/eBlock) - A Scratch 2 based application (forked from  mBlock 3) to visually code the BBC micro:bit and other devices.
