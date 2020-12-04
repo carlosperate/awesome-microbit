@@ -603,8 +603,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- No current events
-
+- [micro:bit LIVE 2020 virtual](https://microbit.org/news/events/live/) - Join educators, researchers, and the developer community for micro:bit LIVE 2020 virtual, an online FREE event this Friday and Saturday!
 
 ## 🤷 Miscellaneous
 
