@@ -257,6 +257,7 @@ Other programming languages capable to program the micro:bit.
 - [C# / F#](https://github.com/kekyo/IL2C) - IL2C is a translator implementation of .NET intermediate language to C language, with C# and F# examples for the micro:bit.
 - [TinyGo](https://tinygo.org/microcontrollers/bbc-microbit/) - ([examples](https://github.com/tinygo-org/tinygo-zoo)) Project to bring Go to microcontrollers and small systems, with out-of-box support for the BBC micro:bit.
 - [Tiny BASIC](https://github.com/Tamakichi/ttbasic_microbit) - Port for the micro:bit, including commands to use the on-board features, based on the Arduino port of the Tiny BASIC dialect.
+- [Zig](https://github.com/markfirmware/zig-bare-metal-microbit) - A BBC micro:bit bare metal example in the Zig language.
 
 ### 🎚️ Interaction Languages
 
