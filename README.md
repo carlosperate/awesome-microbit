@@ -287,7 +287,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 ## 📱 Mobile Apps
 
-- [Official Android App](https://play.google.com/store/apps/details?id=com.samsung.microbit) - ([Source Code](https://github.com/Samsung/microbit)) Pair, program and flash programs to the micro:bit via Bluetooth.
+- [Official Android App](https://play.google.com/store/apps/details?id=com.samsung.microbit) - ([Source Code](https://github.com/microbit-foundation/microbit-android)) Pair, program and flash programs to the micro:bit via Bluetooth.
 - [Official iOS App](https://apps.apple.com/gb/app/micro-bit/id1092687276) - Pair, program and flash programs to the micro:bit via Bluetooth.
 - [Official Swift Playgrounds](https://microbit.org/guide/swift-playgrounds/) - ([Source Code](https://github.com/microbit-foundation/microbit-swift-playgrounds)) Swift Playgrounds is an app for the iPad that helps teach people to code in the Swift language using interactive 'books'.
 - [micro:bit Blue](https://play.google.com/store/apps/details?id=com.bluetooth.mwoolley.microbitbledemo) -  ([Source Code](https://github.com/microbit-foundation/microbit-blue)) Android app that contains a series of demos for interacting with the micro:bit using Bluetooth.
