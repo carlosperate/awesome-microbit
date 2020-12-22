@@ -232,7 +232,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS3234](https://os.mbed.com/users/jsa1969/code/microbit-DS3234/) - Driver in example project using the DS3234 RTC via SPI.
 - [HTU21D](https://github.com/ti-nspire/microbit-in-mbed-library-for-HTU21D-sensor) - Mbed library for the HTU21D digital humidity and temperature sensor.
 - [Distintiva micro:bit library](https://github.com/distintiva/distintiva_microbit_lib) - Arduino library to code the micro:bit using the Arduino IDE.
-- [micro:Maqueen Library for Arduino](https://github.com/kd8bxp/micro-Maqueen-Arduino-Library) - A simple Arduino library for the DF Robot micro:Maqueen robot, using a BBC Micro:Bit controller.
+- [micro:Maqueen Library for Arduino](https://github.com/kd8bxp/micro-Maqueen-Arduino-Library) - A simple Arduino library for the DF Robot micro:Maqueen robot, using a BBC micro:Bit controller.
 
 ##### ©️ RTOS with micro:bit profile
 
@@ -305,7 +305,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 ## 🎓 Machine Learning
 
-- [Voice activated Micro:bit with Machine Learning](https://www.edgeimpulse.com/blog/voice-activated-microbit) - How to make your micro:bit respond to a keyword, by training a machine learning model with Edge Impulse that recognizes your voice.
+- [Voice activated micro:bit with Machine Learning](https://www.edgeimpulse.com/blog/voice-activated-microbit) - How to make your micro:bit respond to a keyword, by training a machine learning model with Edge Impulse that recognizes your voice.
 
 
 ## ↔️ Interface Chip
@@ -478,7 +478,7 @@ Useful Articles for developing on the micro:bit.
 - [Using the Built-in Sensors](https://learn.adafruit.com/micro-bit-lesson-1-using-the-built-in-sensors) - Learn how to use the micro:bit's built-in accelerometer and magnetometer.
 - [Read micro:bit data from Linux via Bluetooth (BLE)](https://github.com/alcir/microbit-ble) - Random notes and examples about micro:bit BLE and Linux.
 - [Measure pressure with your micro:bit](https://www.instructables.com/id/Measure-Pressure-With-Your-Microbit/) - An inexpensive and easy to build device to perform pressure measurements and demonstrate Boyle's law with the micro:bit and BMP280 pressure/temperature sensor.
-- [IoT Cloud Access with Micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program BBC Micro:bit with mbed OS and remotely send data to cloud by utilizing BLE to smartphone/PC IoT cloud gateway.
+- [IoT Cloud Access with micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program BBC micro:bit with mbed OS and remotely send data to cloud by utilizing BLE to smartphone/PC IoT cloud gateway.
 - [Network Rivalry: a Low-Latency Game for the BBC micro:bit](https://www.instructables.com/id/Network-Rivalry-a-Low-Latency-Game-for-the-BBC-Mic/) - Tutorial explaining how to implement a basic multiplayer game on the BBC micro:bit.
 - [Circuit Lumber Punking](https://www.instructables.com/id/Circuit-Lumber-Punking/) - Creating micro:bit circuit boards in timber.
 - [Measuring the BBC micro:bit LED current draw](https://www.seismicmatt.com/2019/03/06/measuring-the-bbc-microbit-led-current-draw/) - Looking at the voltage and current supplied to the BBC micro:bit for different numbers of active LEDs.
