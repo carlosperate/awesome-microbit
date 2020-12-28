@@ -623,7 +623,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- No current events.
+- [BBC micro:bit V2 - Workshop Webinar](https://www.element14.com/community/events/5668/l/bbc-microbit-v2-workshop-webinar) - Get to know the BBC micro:bit V2 in this "box to first project" workshop webinar on January 14th and ask questions of the team that made it happen!
 
 
 ## 🤷 Miscellaneous
