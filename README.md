@@ -124,7 +124,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [RAK811](https://github.com/PiSupply/rak811-python) - RAK811 Python library for use with LoRa pHAT & MicroBIT Node.
 - [Micropython-MakeCode compatible Radio](https://github.com/rhubarbdog/microbit-radio) - Class MakeRadio which includes all the functionality of the MicroPyhton radio module, while being compatible with MakeCode blocks.
 - [Cutebot](https://github.com/Krakenus/microbit-cutebot-micropython) - Library providing functions to work with Cutebot kit for BBC micro:bit.
-- [Sonic Pi OSC](https://github.com/RBilsland/pxt-sonicpiosc) - Send OpenSound Control (OSC) messages to Sonic Pi from a micro:bit using an ESP8266.
 
 ##### 🐍 Python Libraries
 
@@ -192,6 +191,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Perfect Projects](https://github.com/dillonbarnes/perfect-projects) - Many projects in one extension. This is useful if you prefer using programs than doing the coding or you want inspiration for your own projects.
 - [Bluetooth Mouse](https://github.com/kshoji/pxt-bluetooth-mouse) - MakeCode extension for BLE HID Mouse module for micro:bit.
 - [SmartMatrix](https://github.com/Shorts1999/pxt-smartmatrix) - Easily control LED matrices/displays made from ws2812b/NeoPixel controllable RGB LEDs.
+- [Sonic Pi OSC](https://github.com/RBilsland/pxt-sonicpiosc) - Send OpenSound Control (OSC) messages to Sonic Pi from a micro:bit using an ESP8266.
 
 ##### 🗿 Node.js and Browser
 
