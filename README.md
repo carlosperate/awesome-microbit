@@ -447,6 +447,7 @@ All these projects contain steps and resources required for reproduction.
 - [Hands-Free Cardboard Gumball Machine](https://www.instructables.com/Hands-Free-Cardboard-Gumball-Machine/) - A gumball machine using a micro:bit, Crazy Circuits Bit board, distance sensor, servo, and cardboard. It detects when you place your hand in the base of the rocket and the machine administers a gumball, without touching a thing.
 - [Automatic Plant Watering System Using a micro:bit](https://www.instructables.com/Automatic-Plant-Watering-System-Using-a-Microbit/) - How to build an automatic plant watering system using a micro:bit, moisture sensor, and some other small electronic components.
 - [Sorting the Object Using Ferb Detective Agent](https://www.instructables.com/Sorting-the-Object-Using-Ferb-Detective-Agent/) - How to design a DIY colour sorter that can sort black and white objects using an IR sensor.
+- [micro:bit Solar Tracker](https://www.instructables.com/Microbit-Solar-Tracker/) - How to build a solar tracker with a micro:bit, light sensors and servos.
 
 ### 🏗️ Project Collections
 
