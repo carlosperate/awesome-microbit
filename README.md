@@ -191,6 +191,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Perfect Projects](https://github.com/dillonbarnes/perfect-projects) - Many projects in one extension. This is useful if you prefer using programs than doing the coding or you want inspiration for your own projects.
 - [Bluetooth Mouse](https://github.com/kshoji/pxt-bluetooth-mouse) - MakeCode extension for BLE HID Mouse module for micro:bit.
 - [SmartMatrix](https://github.com/Shorts1999/pxt-smartmatrix) - Easily control LED matrices/displays made from ws2812b/NeoPixel controllable RGB LEDs.
+- [Sonic Pi OSC](https://github.com/RBilsland/pxt-sonicpiosc) - Send OpenSound Control (OSC) messages to Sonic Pi from a micro:bit using an ESP8266.
 
 ##### 🗿 Node.js and Browser
 
@@ -247,6 +248,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Running Rust code on a BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Article describing the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
 - [MicroRust](https://droogmic.github.io/microrust/) - Discover the world of microcontrollers through Rust on the BBC micro:bit.
 - [Rust on the micro:bit 101](https://www.eggers-club.de/blog/2018/05/31/rust-on-the-microbit-101-part-1/) - How to get started using the board support crate and start programming the BBC micro:bit in Rust.
+- [Rust on the BBC micro:bit](https://blog.drogue.io/rust-and-microbit/) - How to get started using Rust and BLE on the micro:bit, exposing temperature data as a Bluetooth Environment Sensing Service, and publishing it to the Drogue Cloud via a Bluetooth gateway.
 
 ### 🚩 Other Languages
 
@@ -306,6 +308,7 @@ These languages do not program the micro:bit directly, but can be used to create
 ## 🎓 Machine Learning
 
 - [Voice activated micro:bit with Machine Learning](https://www.edgeimpulse.com/blog/voice-activated-microbit) - How to make your micro:bit respond to a keyword, by training a machine learning model with Edge Impulse that recognizes your voice.
+- [Vibrational Anomaly Detection](https://github.com/Technica-Corporation/microbit-ml) - This project introduces a statistics-based, time-series Vibrational Anomaly Detection using Tri-Axial accelerometer data on a micro:bit.
 
 
 ## ↔️ Interface Chip
@@ -441,6 +444,9 @@ All these projects contain steps and resources required for reproduction.
 - [Simple gimbal with micro:bit and 2 servos](https://www.instructables.com/Simple-Gimbal-With-Microbit-and-2-Servos/) - How to make a simple gimbal stabiliser controlled by the micro:bit.
 - [Disaster Management with Smart Circuit Breaker](https://blog.adacore.com/make-with-ada-2020-disaster-management-smart-circuit-breaker) - Ensuring safety against electrical fire or shock during earthquake, flood, gas leakage & fire breakout by disconnecting mains with smart circuit breaker.
 - [micro:bit Corona Scanner](https://github.com/znuh/microbit-corona-scanner) - Using a micro:bit to listen to Bluetooth COVID-19 Exposure Notifications from COVID mobile apps.
+- [Hands-Free Cardboard Gumball Machine](https://www.instructables.com/Hands-Free-Cardboard-Gumball-Machine/) - A gumball machine using a micro:bit, Crazy Circuits Bit board, distance sensor, servo, and cardboard. It detects when you place your hand in the base of the rocket and the machine administers a gumball, without touching a thing.
+- [Automatic Plant Watering System Using a micro:bit](https://www.instructables.com/Automatic-Plant-Watering-System-Using-a-Microbit/) - How to build an automatic plant watering system using a micro:bit, moisture sensor, and some other small electronic components.
+- [Sorting the Object Using Ferb Detective Agent](https://www.instructables.com/Sorting-the-Object-Using-Ferb-Detective-Agent/) - How to design a DIY colour sorter that can sort black and white objects using an IR sensor.
 - [micro:bit Solar Tracker](https://www.instructables.com/Microbit-Solar-Tracker/) - How to build a solar tracker with a micro:bit, light sensors and servos.
 
 ### 🏗️ Project Collections
@@ -521,7 +527,6 @@ Useful Articles for developing on the micro:bit.
 - [Video Series from The Maker Movies](https://www.youtube.com/playlist?list=PLD0HD_3AJljXDWoasq2x5gHmkKeV7cc-P) - List of short, introductory videos for anyone wanting to get started with the micro:bit.
 - [SparkFun video resources](https://sparkfuneducation.com/video-resources/microbit.html) - Growing list of video resources for the micro:bit.
 - [SamCodes YouTube Playlist](https://www.youtube.com/playlist?list=PLumNlyd5JxxegaAVScP7Qm1AXPtJdGBCq) - Video tutorials showing how to  use different electronic components and features of the micro:bit.
-- [Fun with Zephyr Project and BBC micro:bit](https://www.youtube.com/watch?v=ZZRbIpVJGns) - This presentation shows how Zephyr empowers the BBC micro:bit devices and its Bluetooth chip to do fun things.
 - [Behind the MakeCode Hardware](https://www.youtube.com/playlist?list=PLMMBk9hE-SeqDYtw9pGNPsQ10V_EGMyGe) - Collection of videos explaining the basics on how different hardware components work.
 - [MicroPython for micro:bit Workshop](https://www.youtube.com/playlist?list=PLPK2l9Knytg6SygFSODc3H1JL4KEm-Ruv) - Collection of videos explaining how to use the micro:bit features with MicroPython.
 - [Grade 10 micro:bit Tutorials](https://www.youtube.com/playlist?list=PLo6KSCBvKXc92f7p8ONiBeWAJKIqNpKlr) - Collection of short videos showing how to use micro:bit MakeCode blocks and features.
@@ -532,6 +537,11 @@ Useful Articles for developing on the micro:bit.
 - [Creative Coding with micro:bit](https://www.youtube.com/playlist?list=PLIRQWQAcfF037nji2jK6iiafMLubgJqUh) - Creative activities with the micro:bit from Kids Code Jeunesse.
 - [Video Tutorials for micro:bit](https://www.youtube.com/playlist?list=PLS9qLR8VoFA5jr14vzjJwqZ5DsBLFzuYn) - A playlist of video tutorials by Geek Tutorials, walking through a lot of the micro:bit features.
 - [Code with Liam](https://www.youtube.com/channel/UCubWM52hsTe2eeiTWqRJICw/) - Video tutorials showing how to code with the micro:bit.
+
+### 🎥 Conference Talks
+
+- [Fun with Zephyr Project and BBC micro:bit](https://www.youtube.com/watch?v=ZZRbIpVJGns) - This presentation shows how Zephyr empowers the BBC micro:bit devices and its Bluetooth chip to do fun things.
+- [micro:bit LIVE 2020 virtual](https://www.youtube.com/playlist?list=PLEo0hMrjdofv9-M0IOyD8Q0VtsX8O__iW) - All the talks and sessions from the micro:bit LIVE 2020 Virtual online event.
 
 
 ## 📚 Books
@@ -616,7 +626,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- No current events.
+- [BBC micro:bit V2 - Workshop Webinar](https://www.element14.com/community/events/5668/l/bbc-microbit-v2-workshop-webinar) - Get to know the BBC micro:bit V2 in this "box to first project" workshop webinar on January 14th and ask questions of the team that made it happen!
 
 
 ## 🤷 Miscellaneous
