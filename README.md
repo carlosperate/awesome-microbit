@@ -387,6 +387,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 
 All these projects contain steps and resources required for reproduction.
 
+- [Mewt](https://github.com/dakota-mewt/mewt/blob/main/README_Microbit.md) - Mute/unmute all computer microphones, displays status and hot mic using volume meter
 - [JUST DO IoT](https://hackaday.io/project/12164-just-do-iot) - Connect the micro:bit to the LoRaWAN network, includes an open source hardware micro:bit connector board.
 - [Micro:Bob](https://hackaday.io/project/8643-microbob) - Simple bipedal robot controlled by a micro:bit.
 - [Coffee Timer](https://www.norwegiancreations.com/2016/09/coffee-timer-part-1-the-first-prototype-based-on-the-bbc-microbit/) - ([Part 2](https://www.norwegiancreations.com/2016/10/coffee-timer-part-2-low-power-wireless-on-the-bbc-microbit/), [Part 3](https://www.norwegiancreations.com/2016/11/coffee-timer-part-3-enclosures/)) Three part article describing how to augment a coffee maker with an micro:bit indicator, options for low power communication, and creating a custom enclosure.
