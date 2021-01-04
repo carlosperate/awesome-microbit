@@ -309,6 +309,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 - [Voice activated micro:bit with Machine Learning](https://www.edgeimpulse.com/blog/voice-activated-microbit) - How to make your micro:bit respond to a keyword, by training a machine learning model with Edge Impulse that recognizes your voice.
 - [Vibrational Anomaly Detection](https://github.com/Technica-Corporation/microbit-ml) - This project introduces a statistics-based, time-series Vibrational Anomaly Detection using Tri-Axial accelerometer data on a micro:bit.
+- [AlpacaML](https://github.com/LaboratoryForPlayfulComputation/AlpacaML) - Automated Learning and Prototyping for Athletics and Creative Activity with Machine Learning. A wearable micro:bit connected to an app that can graph the data and learn to classify actions based off of the users criteria.
 
 
 ## ↔️ Interface Chip
