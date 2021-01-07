@@ -595,6 +595,7 @@ Useful Articles for developing on the micro:bit.
 - [Remote Learning with micro:bit](https://www.sparkfun.com/news/3304) - Webinar showing how to remotely teach students all about micro:bit in less than one hour.
 - [Coding with micro:bit video series for teachers](https://www.youtube.com/playlist?list=PLmqeu38gRdJVCMUhgmF8OrjOhYpYtoh9U) - Videos series resource for teachers and students with an introduction to coding with micro:bit to build inventions and make creations integrating LEDs, motors, servos and speakers.
 - [Python For Kids](https://github.com/mytechnotalent/Python-For-Kids) - A comprehensive online Python development course for kids utilizing a BBC micro:bit and later an ESP32 board going step-by-step into the world of Python for microcontrollers.
+- [DreamSpace TV](https://education.microsoft.com/en-us/resource/f7b52fd4) - Lessons to bring students, in school or at home, on a STEAM learning journey with a focus on computational thinking, creativity & problem-solving.
 
 
 ### 🏫 BBC Teaching Resources
