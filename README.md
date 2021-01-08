@@ -263,6 +263,7 @@ Other programming languages capable to program the micro:bit.
 - [TinyGo](https://tinygo.org/microcontrollers/bbc-microbit/) - ([examples](https://github.com/tinygo-org/tinygo-zoo)) Project to bring Go to microcontrollers and small systems, with out-of-box support for the BBC micro:bit.
 - [Tiny BASIC](https://github.com/Tamakichi/ttbasic_microbit) - Port for the micro:bit, including commands to use the on-board features, based on the Arduino port of the Tiny BASIC dialect.
 - [Zig](https://github.com/markfirmware/zig-bare-metal-microbit) - A BBC micro:bit bare metal example in the Zig language.
+- [MicroJIT](https://github.com/thomasdenney/microjit) - A Just-In-Time compiler for [Alex Roger's Stack Virtual Machine](http://www.cs.ox.ac.uk/people/alex.rogers/stack/) on the BBC micro:bit.
 
 ### 🎚️ Interaction Languages
 
