@@ -648,6 +648,7 @@ Do you know about any free event with micro:bits? Please add them here, PRs are 
 - [Hardware Simulation with QEMU](https://www.qemu.org/2019/05/22/microbit/) - Emulation support for the micro:bit is available from QEMU 4.0 and can be used for low-level software testing and development.
 - [micro:bit USB Grapher](https://github.com/bsiever/microbit-usb-grapher) - A web page using WebUSB to graph, manipulate, and save data collected on the micro:bit.
 - [pin:out](https://microbit.pinout.xyz) - A GPIO pinout interactive reference for the BBC micro:bit and accessories.
+- [Mewt](https://github.com/dakota-mewt/mewt/blob/main/README_Microbit.md) - Single button press to mute/unmute all system microphones, shows you status and when the microphone is actively broadcasting.
 
 
 ## ⚖️ License
