@@ -449,6 +449,8 @@ All these projects contain steps and resources required for reproduction.
 - [Automatic Plant Watering System Using a micro:bit](https://www.instructables.com/Automatic-Plant-Watering-System-Using-a-Microbit/) - How to build an automatic plant watering system using a micro:bit, moisture sensor, and some other small electronic components.
 - [Sorting the Object Using Ferb Detective Agent](https://www.instructables.com/Sorting-the-Object-Using-Ferb-Detective-Agent/) - How to design a DIY colour sorter that can sort black and white objects using an IR sensor.
 - [micro:bit Solar Tracker](https://www.instructables.com/Microbit-Solar-Tracker/) - How to build a solar tracker with a micro:bit, light sensors and servos.
+- [Mewt](https://github.com/dakota-mewt/mewt/blob/main/README_Microbit.md) - Single button press to mute/unmute all system microphones, shows you status and when the microphone is actively broadcasting.
+
 
 ### 🏗️ Project Collections
 
