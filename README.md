@@ -71,6 +71,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [ScratchX micro:bit extension](https://llk.github.io/microbit-extension/) - Lets you control your micro:bit wirelessly using Scratch programming blocks.
 - [s2m](https://github.com/MrYsLab/s2m) - A Python program that acts as a bridge between the Scratch 2 off-line editor and the micro:bit via USB.
 - [s2microbit BLE](https://github.com/memakura/s2microbit-ble#English) - Scratch 2 (offline) extension for BBC micro:bit bluetooth connection with a Windows PC.
+- [pyscrlink](https://github.com/kawasaki/pyscrlink) - A Scratch-link for Linux to connect Scratch 3.0 to Bluetooth devices such as the micro:bit.
 
 ### 🐍 Python
 
