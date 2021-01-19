@@ -619,6 +619,7 @@ Useful Articles for developing on the micro:bit.
 - [Official micro:bit Slack Channel](https://tech.microbit.org/community/#join-us-on-the-microbit-community-slack-channel)
 - [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
 - [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
+- [Micro:bit Educational Foundation on YouTube](https://www.youtube.com/channel/UCJRGTnzeb0esPmsE-mFkPGg/)
 - [micro:bit Python mailing list (archived)](https://github.com/ntoll/microbit_mailman_archive)
 - [micro:bit Sri Lanka User Group](http://microbitslug.org)
 - [Arabic micro:bit Community](https://community.nadi-microbit.com)
@@ -631,7 +632,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- [BBC micro:bit V2 - Workshop Webinar](https://www.element14.com/community/events/5668/l/bbc-microbit-v2-workshop-webinar) - Get to know the BBC micro:bit V2 in this "box to first project" workshop webinar on January 14th and ask questions of the team that made it happen!
+- No current events
 
 
 ## 🤷 Miscellaneous
