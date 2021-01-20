@@ -633,7 +633,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- No current events
+- [Introduction to the micro:bit V2 Webinar](https://webinars.nordicsemi.com/introduction-to-the-microbit-v2/) - In this webinar on 3rd of February, Jonny Austin, CTO of The Micro:bit Educational Foundation will talk about the features of the new device and how they have been exposed in easy to use, web-based editors.
 
 
 ## 🤷 Miscellaneous
