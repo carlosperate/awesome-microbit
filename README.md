@@ -64,6 +64,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [eBlock](https://github.com/distintiva/eBlock) - A Scratch 2 based application (forked from  mBlock 3) to visually code the BBC micro:bit and other devices.
 - [Vittascience](https://vittascience.com/microbit/) - Block programming based on MicroPython for the micro:bit with a built-in simulator.
 - [Espruino JavaScript](https://www.espruino.com/MicroBit) - Contains an in-browser Blocky editor that can program micro:bit wirelessly. Also supports Bluetooth LE functionality.
+- [mbit-more](https://github.com/yokobond/mbit-more-v2/) - A third party Scratch extension with extra features, including visualising sensor data and support for V1 and V2 micro:bit.
 
 ##### 🆚 Unofficial Scratch Extensions
 
