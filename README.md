@@ -628,7 +628,6 @@ Useful Articles for developing on the micro:bit.
 - [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
 - [Micro:bit Educational Foundation on YouTube](https://www.youtube.com/channel/UCJRGTnzeb0esPmsE-mFkPGg/)
 - [micro:bit Python mailing list (archived)](https://github.com/ntoll/microbit_mailman_archive)
-- [micro:bit Sri Lanka User Group](http://microbitslug.org)
 - [Arabic micro:bit Community](https://community.nadi-microbit.com)
 - [MakeCode Forum](https://forum.makecode.com/c/microbit/11)
 - [micro:bit subreddit](https://www.reddit.com/r/microbit/)
