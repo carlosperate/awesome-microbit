@@ -606,6 +606,7 @@ Useful Articles for developing on the micro:bit.
 - [Coding with micro:bit video series for teachers](https://www.youtube.com/playlist?list=PLmqeu38gRdJVCMUhgmF8OrjOhYpYtoh9U) - Videos series resource for teachers and students with an introduction to coding with micro:bit to build inventions and make creations integrating LEDs, motors, servos and speakers.
 - [Python For Kids](https://github.com/mytechnotalent/Python-For-Kids) - A comprehensive online Python development course for kids utilizing a BBC micro:bit and later an ESP32 board going step-by-step into the world of Python for microcontrollers.
 - [DreamSpace TV](https://education.microsoft.com/en-us/resource/f7b52fd4) - Lessons to bring students, in school or at home, on a STEAM learning journey with a focus on computational thinking, creativity & problem-solving.
+- [MicroPython For micro:bit](https://github.com/mytechnotalent/MicroPython-For-micro-bit) - A free MicroPython course designed to teach MicroPython with specific application to the micro:bit V2.
 
 
 ### 🏫 BBC Teaching Resources
