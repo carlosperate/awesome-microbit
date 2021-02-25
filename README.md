@@ -459,6 +459,7 @@ All these projects contain steps and resources required for reproduction.
 - [micro:bit Solar Tracker](https://www.instructables.com/Microbit-Solar-Tracker/) - How to build a solar tracker with a micro:bit, light sensors and servos.
 - [PET Robotic Arm](https://www.instructables.com/PET-Robotic-Arm-Microbit-Project/) - A robot arm made with a servo and recycling waste plastic.
 - [Ticklebot](https://www.jasmineflorentine.com/ticklebot) - Making a ticklish robot with a micro:bit, feel free to get creative.
+- [Digital Measuring Roller Using micro:bit & Tinkercad](https://www.instructables.com/Digital-Measuring-Roller-Using-Microbit-Tinkercad/) - How to make a digital measuring roller with the help of a micro:bit, a rotatory encoder, a few blocks of code, and some 3D printed parts.
 
 ### 🏗️ Project Collections
 
