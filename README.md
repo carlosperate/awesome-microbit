@@ -330,6 +330,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [J-Link OB Firmware](http://www.segger.com/bbc-micro-bit.html) - Offers the same flashing functionality than the DAPLink and expands it to include J-Link debugging.
 - [pyOCD](https://github.com/mbedmicro/pyOCD) - Python library for programming and debugging ARM Cortex-M microcontrollers, like the one included in the micro:bit, using the CMSIS-DAP provided by the Interface Chip.
 - [DAP.js](https://github.com/ARMmbed/dapjs) - JavaScript (Node.js and WebUSB) interface to DAP-CMSIS over USB/HID, meant to provide a subset of the PyOCD functionality.
+- [microbit-webusb](https://github.com/bsiever/microbit-webusb) - A simple WebUSB library implementation to interact with the micro:bit, with a good README explanation, and a demo application.
 
 
 ## 🔩 Hardware
