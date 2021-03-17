@@ -645,6 +645,7 @@ Useful Articles for developing on the micro:bit.
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
 - [What’s a Microcontroller? with Python and micro:bit](https://www.parallax.com/whats-a-microcontroller-with-python-and-microbit-zoom-meeting-part-2/) - Informational Zoom meeting on February 23rd (part 2 on March 23rd) for any middle school and high school educator using the micro:bit and Python, electronics, sensors and microcontrollers.
+- [Introduction to the micro:bit](https://microsoftedu.eventbuilder.com/event/41204) - April 13th live webminar from Microsofts' Reimagining Computer Science Education series. This session introduces the micro:bit and discusses tips for integrating it into the classroom.
 
 
 ## 🤷 Miscellaneous
