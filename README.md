@@ -261,6 +261,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 ### 🐦 Ada
 
 - [Ada for micro:bit Getting Started](https://blog.adacore.com/ada-for-microbit-part-1-getting-started) -  How to setup an Ada development environment for the micro:bit.
+- [Ada micro:bit bsp](https://github.com/Fabien-Chouteau/microbit_bsp) - Board Support Package for the BBC micro:bit.
 - [Ada Drivers](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/examples/MicroBit) - Drivers for the micro:bit on-board components and instruction on how to setup the Ada development environment.
 - [Ada micro:bit Examples](https://github.com/Fabien-Chouteau/microbit_examples) - Examples and tutorials for Ada on the BBC micro:bit.
 - [Ada for micro:bit articles](https://blog.adacore.com/ada-for-microbit-part-2-push-buttons) - [Part 3](https://blog.adacore.com/ada-for-microbit-part-3-pin-output), [Part 4](https://blog.adacore.com/ada-for-microbit-part-4-pin-input), [Part 5](https://blog.adacore.com/ada-for-microbit-part-5-analog-output), [Part 6](https://blog.adacore.com/ada-for-microbit-part-6-analog-input), [Part 7](https://blog.adacore.com/ada-for-microbit-part-7-accelerometer), [Part 8](https://blog.adacore.com/ada-for-microbit-part-8-music) A series of articles and tutorials about using Ada on the micro:bit.
