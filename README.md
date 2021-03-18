@@ -262,6 +262,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [Ada for micro:bit Getting Started](https://blog.adacore.com/ada-for-microbit-part-1-getting-started) -  How to setup an Ada development environment for the micro:bit.
 - [Ada Drivers](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/examples/MicroBit) - Drivers for the micro:bit on-board components and instruction on how to setup the Ada development environment.
+- [Ada micro:bit Examples](https://github.com/Fabien-Chouteau/microbit_examples) - Examples and tutorials for Ada on the BBC micro:bit.
 
 ### 🚩 Other Languages
 
