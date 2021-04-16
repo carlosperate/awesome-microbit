@@ -471,6 +471,7 @@ All these projects contain steps and resources required for reproduction.
 - [Digital Measuring Roller Using micro:bit & Tinkercad](https://www.instructables.com/Digital-Measuring-Roller-Using-Microbit-Tinkercad/) - How to make a digital measuring roller with the help of a micro:bit, a rotatory encoder, a few blocks of code, and some 3D printed parts.
 - [Hacking a Cardboard PinBall Machine](https://www.instructables.com/CardBoard-Paper-MicroBit-Pinball-Machine/) - Adding a micro:bit to a cardboard pinball kit to create a game with interactive lights, sounds, and motion.
 - [Totally Useless Coffee Dispenser](https://www.instructables.com/Totally-Useless-Coffee-Dispenser/) - Designing and building a coffee dispenser with micro:bit, motors and 3D printed parts.
+- ["High-Fivey" the Cardboard Robot](https://www.instructables.com/High-Fivey-the-Cardboard-Microbit-Robot/) - Stuck at home but still have a need to high-five someone? Make a friendly little cardboard micro:bit robot to high-five.
 
 ### 🏗️ Project Collections
 
