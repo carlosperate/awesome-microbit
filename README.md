@@ -651,7 +651,6 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Introduction to the micro:bit](https://microsoftedu.eventbuilder.com/event/41204) - April 13th live webminar from Microsofts' Reimagining Computer Science Education series. This session introduces the micro:bit and discusses tips for integrating it into the classroom.
 - [Using the micro:bit in the Primary Classroom](https://community.computingatschool.org.uk/events/9107) - Join Magda & Aimee from the Micro:bit Educational Foundation on April 22th, as they guide you through set up and getting started with creative projects in the Primary classroom with micro:bit.
 
 
