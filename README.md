@@ -128,6 +128,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [Cutebot](https://github.com/Krakenus/microbit-cutebot-micropython) - Library providing functions to work with Cutebot kit for BBC micro:bit.
 - [MCP3008](https://github.com/ti-nspire/microbit_MicroPython_MCP3008) - Library to interface with a MCP3008 10-bit Analog-to-Digital Converter (ADC).
 - [HTU21D](https://github.com/ti-nspire/microbit-in-micropython-library-for-HTU21D-sensor) - Library to interface with a HTU21D digital humidity and temperature sensor.
+- [VEML6030](https://github.com/CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module) - Library for interfacing with a VEML6030 Ambient Light Sensor via I2C.
 
 ##### 🐍 Python Libraries
 
