@@ -473,6 +473,7 @@ All these projects contain steps and resources required for reproduction.
 - [Hacking a Cardboard PinBall Machine](https://www.instructables.com/CardBoard-Paper-MicroBit-Pinball-Machine/) - Adding a micro:bit to a cardboard pinball kit to create a game with interactive lights, sounds, and motion.
 - [Totally Useless Coffee Dispenser](https://www.instructables.com/Totally-Useless-Coffee-Dispenser/) - Designing and building a coffee dispenser with micro:bit, motors and 3D printed parts.
 - ["High-Fivey" the Cardboard Robot](https://www.instructables.com/High-Fivey-the-Cardboard-Microbit-Robot/) - Stuck at home but still have a need to high-five someone? Make a friendly little cardboard micro:bit robot to do just that.
+- [Awaken the Force with micro:bit](https://www.okdo.com/project/awaken-the-force-with-microbit/) - For millennia people have used the force for good, evil, and just to lift things up and move them about. We have found quite a large amount of force inside the micro:bit, enough in fact to lift small, everyday objects.
 
 ### 🏗️ Project Collections
 
