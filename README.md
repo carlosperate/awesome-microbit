@@ -129,6 +129,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [MCP3008](https://github.com/ti-nspire/microbit_MicroPython_MCP3008) - Library to interface with a MCP3008 10-bit Analog-to-Digital Converter (ADC).
 - [HTU21D](https://github.com/ti-nspire/microbit-in-micropython-library-for-HTU21D-sensor) - Library to interface with a HTU21D digital humidity and temperature sensor.
 - [VEML6030](https://github.com/CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module) - Library for interfacing with a VEML6030 Ambient Light Sensor via I2C.
+- [TMP117](https://github.com/CoreElectronics/CE-PiicoDev-TMP117-MicroPython-Module) - Library to interface with a TMP117 high precision temperature sensor.
 
 ##### 🐍 Python Libraries
 
@@ -193,7 +194,6 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS3231](https://github.com/gbraad/pxt-rtc-ds3231) - RTC (Real Time Clock) MakeCode extension for the micro:bit.
 - [timeanddate](https://github.com/bsiever/microbit-pxt-timeanddate) -  Software Based Real Time Clock (Time & Date) for the micro:bit.
 - [MAX31855](https://github.com/bremoran/microDriver_max31855) - Driver for the MAX31855 Thermocouple Amplifier.
-- [Perfect Projects](https://github.com/dillonbarnes/perfect-projects) - Many projects in one extension. This is useful if you prefer using programs than doing the coding or you want inspiration for your own projects.
 - [Bluetooth Keyboard](https://github.com/kshoji/pxt-bluetooth-keyboard) - MakeCode extension for BLE HID Keyboard module for micro:bit.
 - [Bluetooth Mouse](https://github.com/kshoji/pxt-bluetooth-mouse) - MakeCode extension for BLE HID Mouse module for micro:bit.
 - [Bluetooth Gamepad](https://github.com/kshoji/pxt-bluetooth-gamepad) - MakeCode extension for BLE HID Gamepad module for micro:bit.
@@ -292,7 +292,6 @@ These languages do not program the micro:bit directly, but can be used to create
 - [Haxe node BBC micro:bit](https://github.com/MatthijsKamstra/hx-node-bbc-microbit) - Control a BBC micro:bit from Node.js using BLE and the Haxe programming language.
 - [App Inventor + IoT](http://iot.appinventor.mit.edu/#/microbit/microbitintro) - Control a micro:bit via Bluetooth with App Inventor, a visual programming environment for Android applications.
 - [BlockyTalkyBLE](https://www.playfulcomputation.group/blockytalkyble.html) - MakeCode and App Inventor extension that makes it easy to connect AppInventor mobile phone apps with the BBC micro:bit wirelessly over Bluetooth.
-- [DroidScript micro:bit Plugin](https://play.google.com/store/apps/details?id=org.droidscript.microbit) - Allows you to control the BBC micro:bit remotely from your own DroidScript apps (Android apps written in JavaScript).
 - [CBMicroBit](https://github.com/Louismac/CBMicroBit) - CoreBluetooth wrapper in C++ that connects a micro:bit to a computer running macOS using BLE and outputs over OSC (can be used standalone, or as a C++ or Objective C library).
 - [Swift](https://github.com/phwallen/microbit-swift) - An application programming interface written in Swift for use with the micro:bit. It allows programs written for Apple devices to communicate with the micro:bit using BLE.
 - [Node-RED](https://github.com/seanmtracey/node-red-contrib-bitio-wrapper) - A node-red (flow-based visual programming) module that wraps some of the functionality of the Python/MicroPython Bitio Library.
@@ -418,6 +417,7 @@ All these projects contain steps and resources required for reproduction.
 - [SonicPixels](https://github.com/jrmedd/SonicPixels) - BBC micro:bit and Max frameworks for triggering multiple speakers in a grid arrangement.
 - [Little Bug Bit](https://goo.gl/eEFhcy) - Low cost micro:bit buggy.
 - [HandShake](https://sites.google.com/site/hardwaremonkey/home/handshake) - Project designed to enable unique gesture recognition for people with limited control of their motion.
+- [Mega:Bit](https://www.makerspace-uk.co.uk/megabit/) - Scaled up micro:bit with the 5x5 LED matrix and buttons, connected to a real micro:bit.
 - [Scrolling display](https://meanderingpi.wordpress.com/2017/09/16/bbc-microbit-scrolling-display/) - Create a display screen using a number of micro:bits communicating via radio.
 - [Ironman Arc Reactor](https://www.kitronik.co.uk/blog/halo-ween-ironman-arc-reactor) - Choose between two different versions (Mk I and Mk II) ready to 3D print and build.
 - [microbit-beacon-finder](https://github.com/kshoji/microbit-beacon-finder) - The micro:bit finds various types of BLE Beacons, and displays their ID to the LEDs.
@@ -474,6 +474,7 @@ All these projects contain steps and resources required for reproduction.
 - [Totally Useless Coffee Dispenser](https://www.instructables.com/Totally-Useless-Coffee-Dispenser/) - Designing and building a coffee dispenser with micro:bit, motors and 3D printed parts.
 - ["High-Fivey" the Cardboard Robot](https://www.instructables.com/High-Fivey-the-Cardboard-Microbit-Robot/) - Stuck at home but still have a need to high-five someone? Make a friendly little cardboard micro:bit robot to do just that.
 - [BBC micro:bit + WiFi + phone notifications](https://www.hackster.io/393644/bbc-micro-bit-wifi-phone-notifications-ddb90d) - How to connect BBC microbit to WiFi and send a phone notification when a sound is detected.
+- [Awaken the Force with micro:bit](https://www.okdo.com/project/awaken-the-force-with-microbit/) - For millennia people have used the force for good, evil, and just to lift things up and move them about. We have found quite a large amount of force inside the micro:bit, enough in fact to lift small, everyday objects.
 
 ### 🏗️ Project Collections
 
@@ -654,6 +655,7 @@ Useful Articles for developing on the micro:bit.
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
 - [Using the micro:bit in the Primary Classroom](https://community.computingatschool.org.uk/events/9107) - Join Magda & Aimee from the Micro:bit Educational Foundation on April 22th, as they guide you through set up and getting started with creative projects in the Primary classroom with micro:bit.
+- [Building 3 fun projects with the micro:bit V2](https://www.nordicsemi.com/Events/2021/Webinar-microbit-May) - In this webinar on May 26 Jonny Austin, Micro:bit Foundation CTO, will guide you through building 3 fun projects with the BBC micro:bit V2, each showcasing the V2's new capabilities (e.g. microphone and sound).
 
 
 ## 🤷 Miscellaneous
