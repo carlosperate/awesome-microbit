@@ -641,7 +641,7 @@ Useful Articles for developing on the micro:bit.
 
 - [Official micro:bit Slack Channel](https://tech.microbit.org/community/#join-us-on-the-microbit-community-slack-channel)
 - [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
-- [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
+- [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation
 - [Micro:bit Educational Foundation on YouTube](https://www.youtube.com/channel/UCJRGTnzeb0esPmsE-mFkPGg/)
 - [micro:bit Python mailing list (archived)](https://github.com/ntoll/microbit_mailman_archive)
 - [Arabic micro:bit Community](https://community.nadi-microbit.com)
@@ -654,7 +654,6 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Using the micro:bit in the Primary Classroom](https://community.computingatschool.org.uk/events/9107) - Join Magda & Aimee from the Micro:bit Educational Foundation on April 22th, as they guide you through set up and getting started with creative projects in the Primary classroom with micro:bit.
 - [Building 3 fun projects with the micro:bit V2](https://www.nordicsemi.com/Events/2021/Webinar-microbit-May) - In this webinar on May 26 Jonny Austin, Micro:bit Foundation CTO, will guide you through building 3 fun projects with the BBC micro:bit V2, each showcasing the V2's new capabilities (e.g. microphone and sound).
 
 
