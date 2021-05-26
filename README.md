@@ -655,6 +655,7 @@ Useful Articles for developing on the micro:bit.
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
 - [Building 3 fun projects with the micro:bit V2](https://www.nordicsemi.com/Events/2021/Webinar-microbit-May) - In this webinar on May 26 Jonny Austin, Micro:bit Foundation CTO, will guide you through building 3 fun projects with the BBC micro:bit V2, each showcasing the V2's new capabilities (e.g. microphone and sound).
+- [Getting started with the micro:Bit Classroom](https://www.eventbrite.com/e/getting-started-with-the-microbit-classroom-tickets-154234777371) - A hands on, online introduction to micro:bit Classroom on June 30, learn how to setup and use it particularly when delivering the NCCE CS curriculum online.
 
 
 ## 🤷 Miscellaneous
