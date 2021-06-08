@@ -130,6 +130,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [HTU21D](https://github.com/ti-nspire/microbit-in-micropython-library-for-HTU21D-sensor) - Library to interface with a HTU21D digital humidity and temperature sensor.
 - [VEML6030](https://github.com/CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module) - Library for interfacing with a VEML6030 Ambient Light Sensor via I2C.
 - [TMP117](https://github.com/CoreElectronics/CE-PiicoDev-TMP117-MicroPython-Module) - Library to interface with a TMP117 high precision temperature sensor.
+- [BME280](https://github.com/CoreElectronics/CE-PiicoDev-BME280-MicroPython-Module) - Library to interface with a BME280 sensor measuring relative humidity, barometric pressure and ambient temperature via I2C.
 
 ##### 🐍 Python Libraries
 
