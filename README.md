@@ -532,7 +532,6 @@ Useful Articles for developing on the micro:bit.
 - [Make your own processor with a micro:bit](http://www.suppertime.co.uk/blogmywiki/2020/05/microbit-cpu/) - Coding a 5-bit CPU in the micro:bit, useful for understanding or teaching how CPUs and simple systems work.
 - [Embedded Python: Build a Game on the BBC micro:bit](https://realpython.com/embedded-python/) - In this tutorial you’ll learn what embedded development is, why you would use Python, and how to write a basic game on the BBC micro:bit with MicroPython.
 
-
 ### 🗞️ Article Collections
 
 - [MultiWingSpan](http://www.multiwingspan.co.uk/micro.php) - Large collection of examples, instructions, and direction on how to use electronic components.
