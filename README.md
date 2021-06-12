@@ -656,7 +656,6 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Arm's Innovation Coffee - micro:bit](https://www.youtube.com/watch?v=N3W_auWJEac) - This Thursday join a chat with Jonny Austin, Micro:bit Foundation CTO, demoing & showing off the micro:bit V2 as well as talking about what's coming up for the pocket-sized computer!
 - [micro:bit workshop for beginners](https://www.eventbrite.co.uk/e/microbit-workshop-for-beginners-tickets-156505475089) - As part of this workshop on June 22nd, we'll introduce you to some of the amazing things you can do with the micro:bit and get you started block programming in an online classroom with a simulator.
 - [Getting started with the micro:bit Classroom](https://www.eventbrite.com/e/getting-started-with-the-microbit-classroom-tickets-154234777371) - A hands on, online introduction to micro:bit Classroom on June 30, learn how to setup and use it particularly when delivering the NCCE CS curriculum online.
 
