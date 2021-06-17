@@ -576,7 +576,7 @@ Useful Articles for developing on the micro:bit.
 
 - [micro:bit IoT In C](https://www.iot-programmer.com/index.php/books/micro-bit-iot-in-c) - Using the C langague to gain full access to the micro:bit features and external devices.
 - [Programming with MicroPython](https://www.oreilly.com/library/view/programming-with-micropython/9781491972724/) - Embedded Programming with Microcontrollers and Python.
-- [Getting Started with the micro:bit](http://shop.oreilly.com/product/0636920115267.do) - Coding and Making with the BBC's Open Development Board.
+- [Getting Started with the micro:bit](https://www.oreilly.com/library/view/getting-started-with/9781680453010/) - Coding and Making with the BBC's Open Development Board.
 - [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735) - The go-to guide to getting started with the BBC micro:bit and exploring all of its amazing capabilities.
 - [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/) - Getting Started with MicroPython.
 - [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/) - Presents a series of activities to teach the basics of computer networks.
