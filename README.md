@@ -594,7 +594,7 @@ Useful Articles for developing on the micro:bit.
 
 - [microbit.org Lessons](https://microbit.org/lessons/)
 - [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14 years). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the first time.
-- [Code Club micro:bit projects](https://codeclubprojects.org/en-GB/microbit/)
+- [Code Club micro:bit projects](https://projects.raspberrypi.org/en/codeclub/microbit)
 - [IET micro:bit Teaching Resources](https://archive.microbit.org/teach/iet/) - A series of resources created by the IET (Institution of Engineering and Technology) as part of their highly successful IET Faraday brand.
 - [IET micro:bit case studies](https://education.theiet.org/secondary/stem-activities/microbit/) - Booklets and video content to bring a variety of real-life applications of the micro:bit to life in your classroom.
 - [Grok Learning](https://groklearning.com/microbit/) - Provides an online MicroPython code editor, Blockly visual programming, full micro:bit simulator, curriculum-aligned teaching material and auto-marked problems.
