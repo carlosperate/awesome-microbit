@@ -667,7 +667,7 @@ Do you know about any free event with micro:bits? Please add them here, PRs are 
 - [Bluetooth troubleshooting guide](https://drive.google.com/uc?id=0B2Ud_NaMFsQSZWxVWWtqYksyRlE&export=download) - Tips on how to solve common and not so common micro:bit Bluetooth problems.
 - [Micro World Tour](https://microworldtour.github.io) - Before the micro:bit was released a few went on a tour to the world-wide Python community. A lot of interesting content and ideas on these micro:bit adventures.
 - [Parent's Complete Guide To The BBC micro:bit](https://www.kitronik.co.uk/blog/parents-complete-guide-bbc-microbit/) - Free resource to help parent's get actively involved in helping their children learn how to code, even with no prior coding experience.
-- [micro:mag](https://micromag.cc) - The Unofficial micro:bit Community Magazine.
+- [micro:mag](https://magazines.micromag.cc/) - The Unofficial micro:bit Community Magazine.
 - [micro:bit Out Of Box Experience](https://support.microbit.org/support/solutions/articles/19000021613-reset-the-micro-bit-to-factory-defaults) - ([Source Code](https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/out-of-box-experience)) The default program running on a brand new micro:bit.
 - [Accessory Guide](https://microbit.org/buy/accessories/) - A constantly updated list of accessories for the micro:bit.
 - [BtleJack](https://github.com/virtualabs/btlejack) - Based on the micro:bit, it provides everything you need to sniff, jam and hijack Bluetooth Low Energy devices.
