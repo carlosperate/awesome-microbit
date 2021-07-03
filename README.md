@@ -675,6 +675,7 @@ Do you know about any free event with micro:bits? Please add them here, PRs are 
 - [micro:bit USB Grapher](https://github.com/bsiever/microbit-usb-grapher) - A web page using WebUSB to graph, manipulate, and save data collected on the micro:bit.
 - [pin:out](https://microbit.pinout.xyz) - A GPIO pinout interactive reference for the BBC micro:bit and accessories.
 - [Mewt](https://github.com/dakota-mewt/mewt/blob/main/README_Microbit.md) - Single button press to mute/unmute all system microphones, shows you status and when the microphone is actively broadcasting.
+- [Battery Pack Holder](https://microbit.org/get-started/user-guide/battery-pack-holder/) - The new micro:bit comes with a cardboard cut out to hold the micro:bit and battery pack, this is the template to create and customise your own battery holder.
 
 
 ## ⚖️ License
