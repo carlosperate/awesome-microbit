@@ -187,7 +187,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [MLX90614](https://github.com/DoraLC/pxt-MLX90614) - I2C driver for Infra Red Thermometer MLX90614.
 - [Adafruit Motor Driver Board](https://github.com/vijairaj/pxt-adafruit-motor-driver) - Driver to control the DC motors on the Adafruit Motor Shield v1.
 - [ESP-01](https://github.com/51bit/esp01) - Control an ESP8266 module via serial AT commands.
-- [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 color sensor.
+- [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 colour sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
 - [DSTemp](https://github.com/bsiever/microbit-dstemp) - Read the temperature from one or multiple DS18B20 sensors.
 - [DS18B20](https://github.com/DFRobot/pxt-ds18b20) - DFRobot extensions to read the temperature from a DS18B20 sensor.
@@ -197,7 +197,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Bluetooth Keyboard](https://github.com/kshoji/pxt-bluetooth-keyboard) - MakeCode extension for BLE HID Keyboard module for micro:bit.
 - [Bluetooth Mouse](https://github.com/kshoji/pxt-bluetooth-mouse) - MakeCode extension for BLE HID Mouse module for micro:bit.
 - [Bluetooth Gamepad](https://github.com/kshoji/pxt-bluetooth-gamepad) - MakeCode extension for BLE HID Gamepad module for micro:bit.
-- [SmartMatrix](https://github.com/Shorts1999/pxt-smartmatrix) - Easily control LED matrices/displays made from ws2812b/NeoPixel controllable RGB LEDs.
+- [SmartMatrix](https://github.com/Shorts1999/pxt-smartmatrix) - Easily control LED matrices/displays made from WS2812b/NeoPixel controllable RGB LEDs.
 - [Sonic Pi OSC](https://github.com/RBilsland/pxt-sonicpiosc) - Send OpenSound Control (OSC) messages to Sonic Pi from a micro:bit using an ESP8266.
 
 ##### 🗿 Node.js and Browser
@@ -369,7 +369,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Battery pack holder](https://www.thingiverse.com/thing:2666671) - Simple battery clip for the BBC micro:bit.
 - [micro:bit holder](https://www.thingiverse.com/thing:2750805) - Stand that holds 20 micro:bit boards vertically, useful in a classroom setting.
 - [BBC micro:bit Case V2](https://www.thingiverse.com/thing:3028078) - A slim, nice looking, and functional snap-together case that protects all sides and corners.
-- [Otto Robot](https://www.thingiverse.com/thing:2786066) - Otto chassis for the microbit to make a bidepad robot with a robitbit accessory.
+- [Otto Robot](https://www.thingiverse.com/thing:2786066) - Otto chassis for the microbit to make a bipedal robot with a Robot:bit accessory.
 - [micro:bit Tracking Car](https://www.thingiverse.com/thing:3270962) - A line follower chassis for the micro:bit.
 - [Walking Robot V1](https://www.thingiverse.com/thing:3300339) - Add-on to the bit:booster that makes a simple walking robot using two continuous servos.
 - [Humbot mi:sumo robot](https://www.myminifactory.com/object/3d-print-humbot-mi-sumo-microbit-robot-80445) - Chassis for a sumo robot.
@@ -518,7 +518,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit <-> Raspberry Pi](https://ukbaz.github.io/howto/ubit_workshop.html) - An introduction on how you can exchange information between a micro:bit and a Raspberry Pi using Bluetooth Low Energy (BLE).
 - [WiFi Web Server on BBC micro:bit and ESP-01](https://www.hackster.io/alankrantas/wifi-web-server-on-bbc-micro-bit-and-esp-01-esp8266-498e0d) - Create a micro:bit web server via AT commands to an ESP8266 which can respond to web browser requests over WiFi.
 - [IoT Cloud Access with micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program the BBC micro:bit with Mbed OS and remotely send data to the cloud by utilizing BLE to smartphone/PC IoT Cloud Gateway.
-- [How to connect your Mini.mu to PureData](https://vulpestruments.com/2018/11/21/how-to-connect-your-mini-mu-to-puredata/) - Connecting the micro:bit to PureData (visual programming language to crate interactive computer music) via radio and serial MIDI.
+- [How to connect your Mini.mu to PureData](https://vulpestruments.com/2018/11/21/how-to-connect-your-mini-mu-to-puredata/) - Connecting the micro:bit to PureData (visual programming language to create interactive computer music) via radio and serial MIDI.
 - [Using micro:bit and MakeCode with Data Streamer](https://docs.microsoft.com/en-us/microsoft-365/education/data-streamer/using-microbit-and-makecode) - How to use the MakeCode to write a simple program that sends live data from the BBC micro:bit to Microsoft Excel using the Microsoft Data Streamer add-in.
 - [3D Rendering on a Children's Toy](https://blog.scottlogic.com/2020/03/03/microbit-raytracer.html) - Implementing a ray tracer, an algorithm which simulates light rays to render a 3D scene, to render a pyramid in the micro:bit display.
 - [The ThreadBoard: micro:bit E-Textile Prototyping Board](https://www.instructables.com/id/The-ThreadBoard-Microbit-E-Textile-Prototyping-Boa/) - Developing a tool that will adapt to the unique set of constraints that e-textile creators face when fabricating an e-textile project.
