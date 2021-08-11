@@ -545,7 +545,7 @@ Useful Articles for developing on the micro:bit.
 - [Physical computing with the BBC micro:bit](http://www.teachwithict.com/physical-computing.html) - How to use different electronic components with the micro:bit.
 - [DF Robot micro:bit blog section](https://www.dfrobot.com/blog-tag-micro:bit.html) - Blog posts and articles about micro:bit from DF Robot.
 - [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
-- [Little Bird How To Guides](https://www.littlebird.com.au/a/how-to#micro-bit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
+- [Little Bird Guides](https://littlebird.com.au/guides/microbit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
 
 
 ## 🎥 Videos
