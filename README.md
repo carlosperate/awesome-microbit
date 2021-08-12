@@ -243,6 +243,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Distintiva micro:bit library](https://github.com/distintiva/distintiva_microbit_lib) - Arduino library to code the micro:bit using the Arduino IDE.
 - [micro:Maqueen Library for Arduino](https://github.com/kd8bxp/micro-Maqueen-Arduino-Library) - A simple Arduino library for the DF Robot micro:Maqueen robot, using a BBC micro:Bit controller.
 - [nRF51 Radio](https://github.com/tipih/NRF51_Radio_library) - Arduino library based on the microbit DAL radio implementation.
+- [MMA8653](https://github.com/lfhohmann/MMA8653) - This Arduino library brings support for the NXP MMA8653 I2C accelerometer.
 
 ##### ©️ RTOS with micro:bit profile
 
