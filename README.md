@@ -480,6 +480,7 @@ All these projects contain steps and resources required for reproduction.
 - ["High-Fivey" the Cardboard Robot](https://www.instructables.com/High-Fivey-the-Cardboard-Microbit-Robot/) - Stuck at home but still have a need to high-five someone? Make a friendly little cardboard micro:bit robot to do just that.
 - [BBC micro:bit + WiFi + phone notifications](https://www.hackster.io/393644/bbc-micro-bit-wifi-phone-notifications-ddb90d) - How to connect BBC microbit to WiFi and send a phone notification when a sound is detected.
 - [Awaken the Force with micro:bit](https://www.okdo.com/project/awaken-the-force-with-microbit/) - For millennia people have used the force for good, evil, and just to lift things up and move them about. We have found quite a large amount of force inside the micro:bit, enough in fact to lift small, everyday objects.
+- [Foldio micro:bit Coding Kit](www.startnext.com/foldio) - Paper robot with printed electronics extenteding the touch functionality of BBC micro:bit (Available in German and English)) 
 
 ### 🏗️ Project Collections
 
