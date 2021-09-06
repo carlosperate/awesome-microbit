@@ -210,6 +210,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [microbit-web-bluetooth](https://github.com/thegecko/microbit-web-bluetooth) - Web Bluetooth library implementing the micro:bit Bluetooth Profile.
 - [microbit-web-components](https://github.com/thegecko/microbit-web-components) - Web Components for all the micro:bit features exposed via BLE.
 - [ubit.js](https://github.com/lyneca/ubit.js) - Library for Node.js to interact with the on-device MicroPython file system via serial connection.
+- [microbitFs](https://github.com/microbit-foundation/microbit-fs) - TypeScript library to manipulate files inside a micro:bit MicroPython hex file.
 
 ##### 🗿 JavaScript Tools
 
