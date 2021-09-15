@@ -668,7 +668,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Getting started with the micro:bit Classroom](https://www.eventbrite.com/e/getting-started-with-the-microbit-classroom-tickets-154234777371) - A hands on, online introduction to micro:bit Classroom on June 30, learn how to setup and use it particularly when delivering the NCCE CS curriculum online.
+- No events currently scheduled.
 
 
 ## 🤷 Miscellaneous
