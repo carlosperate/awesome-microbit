@@ -352,8 +352,9 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 
 ## 🔩 Hardware
 
-- [Hardware Design](https://github.com/bbcmicrobit/hardware) - Schematics and bill of materials for the BBC micro:bit.
-- [micro:bit Reference Design](https://github.com/microbit-foundation/microbit-reference-design) - Hardware design files for a board 100% binary compatible with the micro:bit. Created to help make your own micro:bit derived designs.
+- [micro:bit V1 Hardware Design](https://github.com/bbcmicrobit/hardware) - Schematics and bill of materials for the BBC micro:bit.
+- [micro:bit V2 Hardware Design](https://github.com/microbit-foundation/microbit-v2-hardware) - Schematics and bill of materials for the BBC micro:bit V2.
+- [micro:bit V1 Reference Design](https://github.com/microbit-foundation/microbit-reference-design) - Hardware design files for a board 100% binary compatible with the micro:bit. Created to help make your own micro:bit derived designs.
 - [micro:bit Badge](https://github.com/make-zurich/micro-bit-badge) - Open Source PCB for the micro:bit with a battery holder, buzzer, extension edge connector and pins breaks out.
 - [Eagle micro:bit Edge Part](https://github.com/proto-pic/micro-bit-eagle-libraries) - Eagle library from Proto-Pic for the micro:bit edge connectors.
 - [Kicad micro:bit Connector](https://github.com/anthonykirby/kicad_microbit_connector) - KiCad component library and footprint library for a micro:bit edge-connector socket.
@@ -669,7 +670,7 @@ Useful Articles for developing on the micro:bit.
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
 - [Tech Talk - Kitronik LAB:bit for BBC micro:bit](https://kitronik.co.uk/blogs/resources/tech-talk-kitronik-lab-bit-for-bbc-micro-bit) - Join Kitronik on YouTube on the 23rd September at 10:30AM GMT to take close look at the Kitronik LAB:bit Educational Platform for BBC micro:bit and a live Q&A.
-- [Block-based Coding for Beginners with micro:bit](https://cyber.org/events/block-based-coding-beginners-micro-bit) - A 90 min virtual workshop from CYBER.ORG on September 30th. Discover the basics of block-based coding with Microsoft MakeCode for micro: bit.
+- [Block-based Coding for Beginners with micro:bit](https://cyber.org/events/block-based-coding-beginners-micro-bit) - A 90 min virtual workshop from CYBER.ORG on September 30th. Discover the basics of block-based coding with Microsoft MakeCode for micro:bit.
 
 
 ## 🤷 Miscellaneous
