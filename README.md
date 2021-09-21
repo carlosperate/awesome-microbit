@@ -486,6 +486,7 @@ All these projects contain steps and resources required for reproduction.
 - [BBC micro:bit + WiFi + phone notifications](https://www.hackster.io/393644/bbc-micro-bit-wifi-phone-notifications-ddb90d) - How to connect BBC microbit to WiFi and send a phone notification when a sound is detected.
 - [Awaken the Force with micro:bit](https://www.okdo.com/project/awaken-the-force-with-microbit/) - For millennia people have used the force for good, evil, and just to lift things up and move them about. We have found quite a large amount of force inside the micro:bit, enough in fact to lift small, everyday objects.
 - [Mechanical 7-segment digital clock](https://www.thingiverse.com/thing:4626956) - Digital clock with 23 segments, controlled by a single RC servo motor, with all segments and the carries between digits mechanically resolved.
+- [Mechanical digital clock](https://www.thingiverse.com/thing:4613624) - 4 digits, 24 hour-notation mechanical digital clock controlled by micro:bit and only one RC servo motor. Time adjustment from PC is possible via bluetooth.
 
 ### 🏗️ Project Collections
 
