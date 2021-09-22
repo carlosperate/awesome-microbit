@@ -37,7 +37,8 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [🗞️ Articles](#%EF%B8%8F-articles)
 - [🎥 Videos](#-videos)
 - [📚 Books](#-books)
-- [🏫 Teaching Resources](#-teaching-resources)
+- [🧑‍🏫 Teaching Resources](#-teaching-resources)
+- [🏫 Online Courses](#-online-courses)
 - [👪 Community](#-community)
 - [📅 Events](#-events)
 - [🤷 Miscellaneous](#-miscellaneous)
@@ -602,7 +603,7 @@ Useful Articles for developing on the micro:bit.
 - [The Tinkerer's Guide to the micro:bit Galaxy](https://gethacking.com/products/the-tinkerers-guide-to-the-micro-bit-galaxy) - Get ready to make and code amazing projects that light up, make noise, move, and talk (via radio).
 
 
-## 🏫 Teaching Resources
+## 🧑‍🏫 Teaching Resources
 
 - [microbit.org Lessons](https://microbit.org/lessons/)
 - [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14 years). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the first time.
@@ -639,8 +640,7 @@ Useful Articles for developing on the micro:bit.
 - [MicroPython For micro:bit](https://github.com/mytechnotalent/MicroPython-For-micro-bit) - A free MicroPython course designed to teach MicroPython with specific application to the micro:bit V2.
 - [Scratch+micro:bit](https://plix.media.mit.edu/activities/scratch-microbit) - This activity combines storytelling, coding, and making to engage in physical tinkering while helping to bridge the gap between the physical and digital worlds with micro:bit.
 
-
-### 🏫 BBC Teaching Resources
+### 🧑‍🏫 BBC Teaching Resources
 
 - [Welcome to the micro:bit - Live Lesson](https://www.bbc.co.uk/programmes/articles/2M3H2YpKLsw2W8fC2ycHYSR/welcome-to-the-micro-bit-live-lesson) - Learn how to create games, animations and robots using simple code.
 - [Doctor Who and the micro:bit - Live Lesson](https://www.bbc.co.uk/programmes/articles/3ydvd6mvhl89cHVJ7F2nmzf/doctor-who-and-the-micro-bit-live-lesson) - The BBC micro:bit will be put to the test at the controls of the TARDIS in this special BBC Live Lesson in collaboration with the team behind Doctor Who.
@@ -650,6 +650,11 @@ Useful Articles for developing on the micro:bit.
 	- [Part 1: Mission Sonic](https://www.bbc.co.uk/programmes/articles/52yF6JCCn1X2L4HKBQtgWlP/doctor-who-and-the-micro-bit-mission-sonic) - What plan does the Doctor have in mind to save the Universe from the Reality Bomb?
 	- [Part 2: Mission Decode](https://www.bbc.co.uk/programmes/articles/1tbvkWxx5vqQDmGnWMSLBJg/doctor-who-and-the-micro-bit-mission-decode) - The Doctor has intercepted some seriously strange data from the Daleks; it's up to you to help decode it.
 	- [Part 3: Mission Hack](https://www.bbc.co.uk/programmes/articles/1ZD3hYYBZVM5SDCVKH6vGfm/doctor-who-and-the-micro-bit-mission-hack) - It's the final mission! Click here to get hacking and infiltrate the Dalek spaceship.
+
+
+## 🏫 Online Courses
+
+- Nothing yet
 
 
 ## 👪 Community
