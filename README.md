@@ -657,6 +657,7 @@ Useful Articles for developing on the micro:bit.
 ## 🏫 Online Courses
 
 - [Teaching Physical Computing to 5-11 year olds](https://www.futurelearn.com/courses/teaching-physical-computing-to-5-to-11-year-olds) - Introduction to the world of physical computing with a Crumble or a BBC micro:bit, and learn how it can encourage learners to use their imaginations to solve problems and develop new ideas.
+- [Electronics, MicroPython, and BBC micro:bit Bootcamp](https://www.udemy.com/course/electronics-micropython-and-bbc-microbit-bootcamp/) - Learn the basics of electronics, MicroPython, and the BBC micro:bit in detail in a single course.
 
 
 ## 👪 Community
