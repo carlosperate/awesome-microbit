@@ -124,8 +124,8 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [TM1637](https://github.com/mcauser/microbit-tm1637) - Library for quad 7-segment LED display modules using the TM1637 LED driver.
 - [micro:bit MIDI](https://github.com/liamkinne/microbit-midi) - Module to enable talking to MIDI devices on the BBC micro:bit.
 - [Kitronik Motor Driver Board](https://github.com/MrYsLab/kitronik_motor_board) - Class to control the Kitronik motor driver board.
-- [microbit python libs](https://github.com/shaoziyang/microbit-lib) - Growing collection of modules, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307/DS3231 RTC, NeoPixel drivers, APDS9930 Digital Proximity and Ambient Light Sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
-- [RAK811](https://github.com/PiSupply/rak811-python) - RAK811 Python library for use with LoRa pHAT & MicroBIT Node.
+- [micro:bit python libs](https://github.com/shaoziyang/microbit-lib) - Growing collection of modules, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307/DS3231 RTC, NeoPixel drivers, APDS9930 Digital Proximity and Ambient Light Sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
+- [RAK811](https://github.com/PiSupply/rak811-python) - RAK811 Python library for use with LoRa pHAT & micro:bit Node.
 - [Micropython-MakeCode compatible Radio](https://github.com/rhubarbdog/microbit-radio) - Class MakeRadio which includes all the functionality of the MicroPyhton radio module, while being compatible with MakeCode blocks.
 - [Cutebot](https://github.com/Krakenus/microbit-cutebot-micropython) - Library providing functions to work with Cutebot kit for BBC micro:bit.
 - [MCP3008](https://github.com/ti-nspire/microbit_MicroPython_MCP3008) - Library to interface with a MCP3008 10-bit Analog-to-Digital Converter (ADC).
@@ -228,7 +228,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 ##### ©️ C/C++ Editors
 
 - [PlatformIO](https://docs.platformio.org/en/latest/boards/nordicnrf51/bbcmicrobit.html) - Embedded IDE with support for the micro:bit using the Arduino or Mbed software stack.
-- [COMPX318 MicroBit Compiler](https://peer-compile.cms.waikato.ac.nz) - Upload a single source file to be compiled online with the DAL C/C++ toolchain and download the resulting hex file.
+- [COMPX318 micro:bit Compiler](https://peer-compile.cms.waikato.ac.nz) - Upload a single source file to be compiled online with the DAL C/C++ toolchain and download the resulting hex file.
 - [Eclipse Instructions](https://www.seismicmatt.com/2018/05/04/eclipse-yotta-c-c-and-the-bbc-microbit/) - Setting up Eclipse with Yotta to build and debug with the BBC micro:bit.
 
 ##### ©️ C/C++ Libraries
@@ -247,7 +247,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [HTU21D](https://github.com/ti-nspire/microbit-in-mbed-library-for-HTU21D-sensor) - Mbed library for the HTU21D digital humidity and temperature sensor.
 - [Distintiva micro:bit library](https://github.com/distintiva/distintiva_microbit_lib) - Arduino library to code the micro:bit using the Arduino IDE.
 - [micro:Maqueen Library for Arduino](https://github.com/kd8bxp/micro-Maqueen-Arduino-Library) - A simple Arduino library for the DF Robot micro:Maqueen robot, using a BBC micro:Bit controller.
-- [nRF51 Radio](https://github.com/tipih/NRF51_Radio_library) - Arduino library based on the microbit DAL radio implementation.
+- [nRF51 Radio](https://github.com/tipih/NRF51_Radio_library) - Arduino library based on the micro:bit DAL radio implementation.
 - [MMA8653](https://github.com/lfhohmann/MMA8653) - This Arduino library brings support for the NXP MMA8653 I2C accelerometer.
 
 ##### ©️ RTOS with micro:bit profile
@@ -339,7 +339,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 ## ↔️ Interface Chip
 
-The USB Interface Chip is the microcontroller placed close to the battery connector. It provides the capability to flash the micro:bit via the MICROBIT USB (Mass Storage Device) drive, flash via WebUSB from the browser, a serial console, and HID debugger.
+The USB Interface Chip is the microcontroller placed close to the battery connector. It provides the capability to flash the micro:bit via the `MICROBIT` USB (Mass Storage Device) drive, flash via WebUSB from the browser, a serial console, and HID debugger.
 
 - [micro:bit Firmware](https://microbit.org/get-started/user-guide/firmware/) - General information about the firmware with instructions on how to update it to the latest version.
 - [microbit.org Developer Community Info](https://tech.microbit.org/software/daplink-interface/) - This micro:bit Developer Community page contains information about the Interface Chip DAPlink and the USB interface.
@@ -381,7 +381,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Battery pack holder](https://www.thingiverse.com/thing:2666671) - Simple battery clip for the BBC micro:bit.
 - [micro:bit holder](https://www.thingiverse.com/thing:2750805) - Stand that holds 20 micro:bit boards vertically, useful in a classroom setting.
 - [BBC micro:bit Case V2](https://www.thingiverse.com/thing:3028078) - A slim, nice looking, and functional snap-together case that protects all sides and corners.
-- [Otto Robot](https://www.thingiverse.com/thing:2786066) - Otto chassis for the microbit to make a bipedal robot with a Robot:bit accessory.
+- [Otto Robot](https://www.thingiverse.com/thing:2786066) - Otto chassis for the micro:bit to make a bipedal robot with a Robot:bit accessory.
 - [micro:bit Tracking Car](https://www.thingiverse.com/thing:3270962) - A line follower chassis for the micro:bit.
 - [Walking Robot V1](https://www.thingiverse.com/thing:3300339) - Add-on to the bit:booster that makes a simple walking robot using two continuous servos.
 - [Humbot mi:sumo robot](https://www.myminifactory.com/object/3d-print-humbot-mi-sumo-microbit-robot-80445) - Chassis for a sumo robot.
@@ -394,7 +394,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [WalkerBot:bit](https://www.thingiverse.com/thing:2746171) - Two servo walking robot controlled by a BBC micro:bit.
 - [Jump Lead Adapter](https://www.thingiverse.com/thing:3919130) - 3D print part for the micro:bit to insert the male end of jumper cables to the edge connector.
 - [Gamer Case](https://www.prusaprinters.org/prints/20112-gamer-case-for-bbc-microbit) - A gamer case for your BBC micro:bit that is easy to print, handle and can attach the battery box at the back.
-- [BBC micro:bit V2 battery pack holder](https://www.prusaprinters.org/prints/46067-bbc-microbit-v2-battery-pack-holder) - A multi-purpose battery pack holder for BBC microbit that can stand on its own, be clipped on lanyard, or with use of velcro strap used as wearable.
+- [BBC micro:bit V2 battery pack holder](https://www.prusaprinters.org/prints/46067-bbc-microbit-v2-battery-pack-holder) - A multi-purpose battery pack holder for BBC micro:bit that can stand on its own, be clipped on lanyard, or with use of velcro strap used as wearable.
 - [Stackable micro:bit LED Matrix Magnifier](https://www.thingiverse.com/thing:4756078) - Designed to be placed on top of the micro:bit to magnify the display, it can be combined with multiple micro:bits to create a larger screen to quadruple the LED matrix.
 - [Solderless micro:bit timer](https://www.thingiverse.com/thing:4790928) - A configurable timer made with a v2 micro:bit board, some electronics components and very few soldering.
 
@@ -452,7 +452,7 @@ All these projects contain steps and resources required for reproduction.
 - [Natural Disaster Sensor](https://core-electronics.com.au/tutorials/natural-disaster-sensor-project-for-the-microbit-stem.html) - Wind, seismic, and temperature data monitoring from remote micro:bits.
 - [Bike Light](https://www.kitronik.co.uk/blog/zip-tile-microbit-bike-light-isaac-gorsani/) - A rear bike light with a Kitronik Zip Tile (8x8 RGB LED matrix) and 3D printed case.
 - [IoT Pill Reminders with SAP Cloud Foundry and Google Sheets](https://blogs.sap.com/2019/02/25/iot-pill-reminders-with-sap-cloud-foundry-google-sheets-and-microbit/) - How to build an IoT “Pill Reminder” device to remind the patient to take their pills and update their status in Google Sheets.
-- [Pong-Like Retro Clock Using TinyGo and Microbit](https://www.hackster.io/_conejo/pong-like-retro-clock-using-tinygo-and-microbit-682736) - Use an RGB matrix and a micro:bit to display the time with an awesome game of PONG. Made with love and TinyGo.
+- [Pong-Like Retro Clock Using TinyGo and micro:bit](https://www.hackster.io/_conejo/pong-like-retro-clock-using-tinygo-and-microbit-682736) - Use an RGB matrix and a micro:bit to display the time with an awesome game of PONG. Made with love and TinyGo.
 - [Racing Car Timing Gate](https://github.com/astrotutor9/Microbit-Racing-Car-Timing-Gate) - Create a speed trap for toy cars with three micro:bits, torches, radio and the MicroPython REPL.
 - [Robot Unicorn](https://github.com/helenleigh/robot-unicorn) - Gesture controlled robot unicorn made of cardboard, glitter, a 3D printed horn, and micro:bits.
 - [The Christmas Joy Spreading Machine](https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559) - Project inside a box representing a metaphor of the most popular Christmas symbols. Maybe it's a bit dystopian but it moves, lights and reacts to music.
@@ -485,7 +485,7 @@ All these projects contain steps and resources required for reproduction.
 - [Hacking a Cardboard PinBall Machine](https://www.instructables.com/CardBoard-Paper-MicroBit-Pinball-Machine/) - Adding a micro:bit to a cardboard pinball kit to create a game with interactive lights, sounds, and motion.
 - [Totally Useless Coffee Dispenser](https://www.instructables.com/Totally-Useless-Coffee-Dispenser/) - Designing and building a coffee dispenser with micro:bit, motors and 3D printed parts.
 - ["High-Fivey" the Cardboard Robot](https://www.instructables.com/High-Fivey-the-Cardboard-Microbit-Robot/) - Stuck at home but still have a need to high-five someone? Make a friendly little cardboard micro:bit robot to do just that.
-- [BBC micro:bit + WiFi + phone notifications](https://www.hackster.io/393644/bbc-micro-bit-wifi-phone-notifications-ddb90d) - How to connect BBC microbit to WiFi and send a phone notification when a sound is detected.
+- [BBC micro:bit + WiFi + phone notifications](https://www.hackster.io/393644/bbc-micro-bit-wifi-phone-notifications-ddb90d) - How to connect BBC micro:bit to WiFi and send a phone notification when a sound is detected.
 - [Awaken the Force with micro:bit](https://www.okdo.com/project/awaken-the-force-with-microbit/) - For millennia people have used the force for good, evil, and just to lift things up and move them about. We have found quite a large amount of force inside the micro:bit, enough in fact to lift small, everyday objects.
 - [Mechanical 7-segment digital clock](https://www.thingiverse.com/thing:4626956) - Digital clock with 23 segments, controlled by a single RC servo motor, with all segments and the carries between digits mechanically resolved.
 - [Mechanical digital clock](https://www.thingiverse.com/thing:4613624) - 4 digits, 24 hour-notation mechanical digital clock controlled by micro:bit and only one RC servo motor. Time adjustment from PC is possible via bluetooth.
