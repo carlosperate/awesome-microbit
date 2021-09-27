@@ -677,7 +677,6 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Tech Talk - Kitronik LAB:bit for BBC micro:bit](https://kitronik.co.uk/blogs/resources/tech-talk-kitronik-lab-bit-for-bbc-micro-bit) - Join Kitronik on YouTube on the 23rd September at 10:30AM GMT to take close look at the Kitronik LAB:bit Educational Platform for BBC micro:bit and a live Q&A.
 - [Block-based Coding for Beginners with micro:bit](https://cyber.org/events/block-based-coding-beginners-micro-bit) - A 90 min virtual workshop from CYBER.ORG on September 30th. Discover the basics of block-based coding with Microsoft MakeCode for micro:bit.
 
 
