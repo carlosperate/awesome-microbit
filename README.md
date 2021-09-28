@@ -89,7 +89,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [Thonny](https://thonny.org) - A Python IDE for beginners, with micro:bit support out of the box (previously via plugin).
 - [JetBrains IDEA/PyCharm IDE plugin](https://plugins.jetbrains.com/plugin/9777-micropython) - Support for MicroPython devices in IntelliJ IDEA and PyCharm.
 - [uPyCraft](https://dfrobot.gitbooks.io/upycraft/) - A micro:bit compatible MicroPython IDE for Windows/Mac, designed with a simple and convenient interface.
-- [CodeSpace](https://make.firialabs.com) - From Firia Labs, an online MicroPython IDE for micro:bits, with bundled learning resources.
+- [CodeSpace](https://firialabs.com/pages/what-is-codespace) - From Firia Labs, an online MicroPython IDE for micro:bits, with bundled learning resources.
 - [Device Simulator Express](https://marketplace.visualstudio.com/items?itemName=ms-python.devicesimulatorexpress) - Visual Studio Code extension for micro:bit MicroPython with a simulator, debugger, and serial terminal.
 - [micro:bit Python](https://marketplace.visualstudio.com/items?itemName=MAKinteract.micro-bit-python) - Visual Studio Code extension for micro:bit MicroPython with access to flash and edit example sketches and interact with the filesystem.
 
