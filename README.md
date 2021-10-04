@@ -679,7 +679,6 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Block-based Coding for Beginners with micro:bit](https://cyber.org/events/block-based-coding-beginners-micro-bit) - A 90 min virtual workshop from CYBER.ORG on September 30th. Discover the basics of block-based coding with Microsoft MakeCode for micro:bit.
 - [micro:bit LIVE 2021](https://microbit.org/news/events/live/) - Connect virtually on December 3rd and 4th with educators, researchers, and tech developers from around the world showcasing the latest innovations and best practice in the micro:bit community.
 
 
