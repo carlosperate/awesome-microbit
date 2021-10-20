@@ -492,6 +492,7 @@ All these projects contain steps and resources required for reproduction.
 - [Mechanical 7-segment digital clock](https://www.thingiverse.com/thing:4626956) - Digital clock with 23 segments, controlled by a single RC servo motor, with all segments and the carries between digits mechanically resolved.
 - [Mechanical digital clock](https://www.thingiverse.com/thing:4613624) - 4 digits, 24 hour-notation mechanical digital clock controlled by micro:bit and only one RC servo motor. Time adjustment from PC is possible via bluetooth.
 - [Robbit](https://github.com/Dealerpriest/robbit) - An open source telepresence robot with micro:bit and an Android phone for students who can not attend school in person.
+- [PIR Movement Alarm](https://www.instructables.com/PIR-Movement-Alarm-With-BBC-Microbit-and-External-/) - How to make a simple movement alarm using MicroPython on a BBC micro:bit with a passive infrared (PIR) sensor module to play a low bitrate sound sample when a warm, moving object is detected.
 
 ### 🏗️ Project Collections
 
