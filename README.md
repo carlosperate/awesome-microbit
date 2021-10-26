@@ -23,6 +23,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 	- [🗿 JavaScript / MakeCode](#-javascript-and-makecode)
 	- [©️ C/C++](#%EF%B8%8F-cc)
 	- [🦀 Rust](#-rust)
+	- [🐦 Ada](#-ada)
 	- [🚩 Other Languages](#-other-languages)
 	- [🎚️ Interaction Languages](#%EF%B8%8F-interaction-languages)
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
