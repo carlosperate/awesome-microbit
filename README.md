@@ -251,6 +251,10 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [nRF51 Radio](https://github.com/tipih/NRF51_Radio_library) - Arduino library based on the micro:bit DAL radio implementation.
 - [MMA8653](https://github.com/lfhohmann/MMA8653) - This Arduino library brings support for the NXP MMA8653 I2C accelerometer.
 
+##### C/C++ Examples
+
+- [Zephyr BBC micro:bit V2](https://github.com/fduignan/zephyr_bbc_microbit_v2) - Various examples for Zephyr RTOS running on the BBC micro:bit V2.
+
 ##### ©️ RTOS with micro:bit profile
 
 - [ChibiOS](https://github.com/ChibiOS/ChibiOS-Contrib) - A complete development environment for embedded applications including RTOS, a HAL, peripheral drivers, support files, and tools.
