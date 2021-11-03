@@ -589,8 +589,7 @@ Useful Articles for developing on the micro:bit.
 - [Video Tutorials for micro:bit](https://www.youtube.com/playlist?list=PLS9qLR8VoFA5jr14vzjJwqZ5DsBLFzuYn) - A playlist of video tutorials by Geek Tutorials, walking through a lot of the micro:bit features.
 - [Code with Liam](https://www.youtube.com/channel/UCubWM52hsTe2eeiTWqRJICw/) - Video tutorials showing how to code with the micro:bit.
 - [Get started with the micro:bit](https://www.youtube.com/playlist?list=PLEo0hMrjdofusveMscRFN9FeqKzDBzuXr) - A set of videos that will take you from first use to micro:bit expert, exploring all the features of this tiny computer.
-- [A wide range of great videos on the micro:bit](https://www.youtube.com/playlist?list=PL99_XE3drPZeUdLgZBOlZdGbJZ4XUXcmY) - A series of videos from beginning to expert with a wide range of topics, uses and add-ons.
-
+- [A wide range of micro:bit videos](https://www.youtube.com/playlist?list=PL99_XE3drPZeUdLgZBOlZdGbJZ4XUXcmY) - A series of videos from beginning to expert with a wide range of topics, uses and add-ons.
 
 ### 🎥 Conference Talks
 
