@@ -498,7 +498,8 @@ All these projects contain steps and resources required for reproduction.
 - [Mechanical digital clock](https://www.thingiverse.com/thing:4613624) - 4 digits, 24 hour-notation mechanical digital clock controlled by micro:bit and only one RC servo motor. Time adjustment from PC is possible via bluetooth.
 - [Robbit](https://github.com/Dealerpriest/robbit) - An open source telepresence robot with micro:bit and an Android phone for students who can not attend school in person.
 - [PIR Movement Alarm](https://www.instructables.com/PIR-Movement-Alarm-With-BBC-Microbit-and-External-/) - How to make a simple movement alarm using MicroPython on a BBC micro:bit with a passive infrared (PIR) sensor module to play a low bitrate sound sample when a warm, moving object is detected.
-- [Lip Syncing Characters](https://www.instructables.com/Lip-Syncing-Characters-With-Microbit/) - Cute characters that lip-sync to the sound of your voice with micro:bit to appear as if they are the ones doing the talking/singing.
+- [Lip Syncing Characters](https://www.instructables.com/Lip-Syncing-Characters-With-Microbit/) - Cute characters made with micro:bit that lip-sync to the sound of your voice to appear as if they are the ones doing the talking/singing.
+
 
 ### 🏗️ Project Collections
 
