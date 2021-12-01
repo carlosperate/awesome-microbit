@@ -254,6 +254,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 ##### C/C++ Examples
 
 - [Zephyr BBC micro:bit V2](https://github.com/fduignan/zephyr_bbc_microbit_v2) - Various examples for Zephyr RTOS running on the BBC micro:bit V2.
+- [ioprog Zephyr & micro:bit Articles](https://ioprog.com/tag/microbit-v2/) - A series of articles and tutorials using the micro:bit on board components with Zephyr.
 
 ##### ©️ RTOS with micro:bit profile
 
