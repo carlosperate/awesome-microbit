@@ -67,6 +67,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [Vittascience](https://vittascience.com/microbit/) - Block programming based on MicroPython for the micro:bit with a built-in simulator.
 - [Espruino JavaScript](https://www.espruino.com/MicroBit) - Contains an in-browser Blocky editor that can program micro:bit wirelessly. Also supports Bluetooth LE functionality.
 - [Tinkercad Circuits](https://www.tinkercad.com/learn/circuits) - Create, code, and simulate electronic designs using common components with the micro:bit or Arduino, [related article](https://blog.tinkercad.com/explore-microbit-with-tinkercad).
+- [OpenBlock](https://openblockcc.github.io/wiki/en/) - Block programming with hardware device support, including micro:bit, with code generation, compilation, flashing, and serial connection.
 
 ##### 🆚 Unofficial Scratch Extensions
 
