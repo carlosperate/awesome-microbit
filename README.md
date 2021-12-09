@@ -222,7 +222,6 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original `*.hex` file that ships on the micro:bit devices.
 - [Arduino nRF5](https://github.com/sandeepmistry/arduino-nRF5/) - Arduino Core for Nordic Semiconductor nRF5 based boards, including the micro:bit.
-- [Bare metal micro:bit](https://spivey.oriel.ox.ac.uk/baremetal/Bare_Metal_micro:bit) - Low level programming examples and tutorials.
 
 ##### ©️ C/C++ Editors
 
@@ -254,6 +253,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Zephyr BBC micro:bit V2](https://github.com/fduignan/zephyr_bbc_microbit_v2) - Various examples for Zephyr RTOS running on the BBC micro:bit V2.
 - [ioprog Zephyr & micro:bit Articles](https://ioprog.com/tag/microbit-v2/) - A series of articles and tutorials using the micro:bit on board components with Zephyr.
 - [Bare metal examples](https://github.com/dwelch67/microbit) - C bare metal examples for the BBC micro:bit.
+- [Bare metal micro:bit](https://spivey.oriel.ox.ac.uk/baremetal/Bare_Metal_micro:bit) - Low level programming examples and tutorials.
 
 ##### ©️ RTOS with micro:bit profile
 
