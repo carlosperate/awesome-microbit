@@ -690,7 +690,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
 
-- [micro:bit LIVE 2021](https://microbit.org/news/events/live/) - Connect virtually on December 3rd and 4th with educators, researchers, and tech developers from around the world showcasing the latest innovations and best practice in the micro:bit community.
+- No current events
 
 
 ## 🤷 Miscellaneous
