@@ -29,6 +29,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
 - [📱 Mobile Apps](#-mobile-apps)
 - [🎓 Machine Learning](#-machine-learning)
+- [♻️ Projects Using micro:bit as a Dev Board](#-projects-using-microbit-as-a-dev-board)
 - [↔️ Interface Chip](#%EF%B8%8F-interface-chip)
 - [🔩 Hardware](#-hardware)
 - [🖨️ 3D Printing](#%EF%B8%8F-3d-printing)
@@ -345,8 +346,9 @@ These languages do not program the micro:bit directly, but can be used to create
 - [micro:bit Gesture Recognizer](https://github.com/ttseng/microbit-ml) - An experimental gesture recognition tool using the micro:bit's accelerometer, built using ml5js, which is built on top of TensorFlow.js.
 
 
-## ♻️ Projects Using micro:bit as a Development Board
+## ♻️ Projects Using micro:bit as a Dev Board
 
+- [Radiobit, a BBC micro:Bit RF firmware](https://github.com/virtualabs/radiobit) - Radiobit is composed of a dedicated MicroPython-based firmware and a set of tools allowing security researchers to sniff, receive and send data over Nordic's ShockBurst protocol, Enhanced ShockBurst protocol, Bluetooth Smart Link Layer and sniff raw 2.4GHz GFSK demodulated data.
 - [BtleJack](https://github.com/virtualabs/btlejack) - Based on the micro:bit, it provides everything you need to sniff, jam and hijack Bluetooth Low Energy devices.
 
 
@@ -704,7 +706,6 @@ Do you know about any free event with micro:bits? Please add them here, PRs are 
 
 - [micro:bit broadcast](https://microbit-broadcast.embeddedlog.com) - (Discontinued, archived) newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [microbit.org Support](https://support.microbit.org) - The support pages from the micro:bit Foundation is a great source of information, containing an extensive collection of FAQs, articles, and guides.
-- [Radiobit, a BBC micro:Bit RF firmware](https://github.com/virtualabs/radiobit) - Radiobit is composed of a dedicated MicroPython-based firmware and a set of tools allowing security researchers to sniff, receive and send data over Nordic's ShockBurst protocol, Enhanced ShockBurst protocol, Bluetooth Smart Link Layer and sniff raw 2.4GHz GFSK demodulated data.
 - [micro:bit Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/550) - Element14 has put together this detailed, beautifully rendered, cross-section micro:bit poster highlighting all of the device's key functions and components.
 - [Bluetooth troubleshooting guide](https://drive.google.com/uc?id=0B2Ud_NaMFsQSZWxVWWtqYksyRlE&export=download) - Tips on how to solve common and not so common micro:bit Bluetooth problems.
 - [Micro World Tour](https://microworldtour.github.io) - Before the micro:bit was released a few went on a tour to the world-wide Python community. A lot of interesting content and ideas on these micro:bit adventures.
