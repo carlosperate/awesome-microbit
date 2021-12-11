@@ -680,6 +680,7 @@ Useful Articles for developing on the micro:bit.
 - [Electronics, MicroPython, and BBC micro:bit Bootcamp](https://www.udemy.com/course/electronics-micropython-and-bbc-microbit-bootcamp/) - Learn the basics of electronics, MicroPython, and the BBC micro:bit in detail in a single course.
 - [Build a Physical Computing Prototype](https://www.futurelearn.com/courses/build-a-physical-computing-prototype) - On this course you’ll learn what’s inside the devices we all use every day, come to understand how they work, and ultimately learn to create your own physical computing prototype.
 - [Teaching with Physical Computing](https://www.edx.org/course/teaching-with-physical-computing-course-1-introduction-to-project-based-learning) - Introduces the fundamental concepts underpinning Project-Based Learning, and how you can apply it with programmable devices to bring STEM & Computing to life in the classroom.
+- [Pathfinders Professional Development Course](https://microbit.org/news/2021-12-06/microbit-lessons-for-cs-the-new-teacher-pd-course-is-launched-today/) - Created to bring the delight of physical computing to Elementary CS lessons & designed to support educators looking for ways to integrate CS into their classrooms.
 
 
 ## 👪 Community
