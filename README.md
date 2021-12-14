@@ -142,6 +142,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [MicroPeri](https://github.com/ntoll/microperi) - Run Python programs on your computer with the same micro:bit MicroPython API and connecting a micro:bit as an external peripheral device or sensor.
 - [bluezero](https://github.com/ukBaz/python-bluezero) - Python package to interface with Bluetooth devices, with examples for the micro:bit.
 - [bitio](https://github.com/whaleygeek/bitio) - BBC micro:bit I/O library for Python. It allows you to run code in Python on a PC/Mac/Linux/Raspberry Pi and interact directly with the micro:bit.
+- [micro:bit Stubs](https://github.com/oivron/microbit-stubs) - Python stubs with type hints to provide autocompletion in code editors.
 
 ##### 🐍 Python Tools
 
