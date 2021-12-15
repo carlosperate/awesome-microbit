@@ -29,7 +29,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
 - [📱 Mobile Apps](#-mobile-apps)
 - [🎓 Machine Learning](#-machine-learning)
-- [♻️ Projects Using micro:bit as a Dev Board](#%EF%B8%8F-projects-using-microbit-as-a-dev-board)
+- [♻️ Projects Utilising micro:bit](#%EF%B8%8F-projects-using-microbit-as-a-dev-board)
 - [↔️ Interface Chip](#%EF%B8%8F-interface-chip)
 - [🔩 Hardware](#-hardware)
 - [🖨️ 3D Printing](#%EF%B8%8F-3d-printing)
