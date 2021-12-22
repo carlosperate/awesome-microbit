@@ -226,6 +226,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original `*.hex` file that ships on the micro:bit devices.
 - [Arduino nRF5](https://github.com/sandeepmistry/arduino-nRF5/) - Arduino Core for Nordic Semiconductor nRF5 based boards, including the micro:bit.
+- [MbedOS micro:bit V2 Starter](https://github.com/microbit-foundation/mbedos-microbit-v2-starter) - MbedOS template project that adds support for the micro:bit V2.
 
 ##### ©️ C/C++ Editors
 
