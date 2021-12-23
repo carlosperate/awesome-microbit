@@ -441,6 +441,7 @@ All these projects contain steps and resources required for reproduction.
 - [Simple gimbal with micro:bit and 2 servos](https://www.instructables.com/Simple-Gimbal-With-Microbit-and-2-Servos/) - How to make a simple gimbal stabiliser controlled by the micro:bit.
 - [Disaster Management with Smart Circuit Breaker](https://blog.adacore.com/make-with-ada-2020-disaster-management-smart-circuit-breaker) - Ensuring safety against electrical fire or shock during earthquake, flood, gas leakage & fire breakout by disconnecting mains with smart circuit breaker.
 - [micro:bit Corona Scanner](https://github.com/znuh/microbit-corona-scanner) - Using a micro:bit to listen to Bluetooth COVID-19 Exposure Notifications from COVID mobile apps.
+- [micro:bit Solar Tracker](https://www.instructables.com/Microbit-Solar-Tracker/) - How to build a solar tracker with a micro:bit, light sensors and servos.
 
 ### 🏗️ Project Collections
 
