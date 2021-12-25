@@ -102,6 +102,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [EduBlocks](https://app.edublocks.org) - Blocks interface that provides a transitioning experience from Scratch to Python.
 - [Open Roberta Lab](https://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
 - [Vittascience](https://vittascience.com/microbit/) - Block programming based on MicroPython for the micro:bit with a built-in simulator.
+- [Strype](https://www.strype.org) - A novel tool that combines the strengths of blocks and text programming with the use of Frames. Write real Python for the micro:bit with drag and drop features.
 
 ##### 🐍 MicroPython Libraries
 
