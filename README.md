@@ -152,6 +152,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [MicroREPL](https://github.com/ntoll/microrepl) - A REPL client for MicroPython running on the BBC micro:bit.
 - [MicroFs](https://github.com/ntoll/microfs) - Simple command line tool and module for interacting with the limited file system provided by MicroPython on the micro:bit.
 - [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - Package that allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
+- [Combining micro:bit with TI calculators](https://education.ti.com/en/teachers/microbit) - Connect and programme the BBC micro:bit in Python with multiple TI calculator models.
 
 ### 🗿 JavaScript and MakeCode
 
