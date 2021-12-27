@@ -254,19 +254,19 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [nRF51 Radio](https://github.com/tipih/NRF51_Radio_library) - Arduino library based on the micro:bit DAL radio implementation.
 - [MMA8653](https://github.com/lfhohmann/MMA8653) - This Arduino library brings support for the NXP MMA8653 I2C accelerometer.
 
-##### C/C++ Examples
-
-- [Zephyr BBC micro:bit V2](https://github.com/fduignan/zephyr_bbc_microbit_v2) - Various examples for Zephyr RTOS running on the BBC micro:bit V2.
-- [ioprog Zephyr & micro:bit Articles](https://ioprog.com/tag/microbit-v2/) - A series of articles and tutorials using the micro:bit on board components with Zephyr.
-- [Bare metal examples](https://github.com/dwelch67/microbit) - C bare metal examples for the BBC micro:bit.
-- [Bare metal micro:bit](https://spivey.oriel.ox.ac.uk/baremetal/Bare_Metal_micro:bit) - Low level programming examples and tutorials.
-
 ##### ©️ RTOS with micro:bit profile
 
 - [ChibiOS](https://github.com/ChibiOS/ChibiOS-Contrib) - A complete development environment for embedded applications including RTOS, a HAL, peripheral drivers, support files, and tools.
 - [Mynewt](https://github.com/apache/mynewt-core) - Open-source operating system for tiny embedded devices. Its goal is to make it easy to develop applications for microcontroller environments where power and cost are driving factors.
 - [RIOT](https://doc.riot-os.org/group__boards__microbit.html) - A friendly, real-time, multi-threading operating system that supports a range of devices that are typically found in the Internet of Things (IoT).
 - [Zephyr](https://docs.zephyrproject.org/latest/boards/arm/bbc_microbit/doc/index.html) - A scalable real-time operating system (RTOS) supporting multiple hardware architectures, optimized for resource constrained devices, and built with security in mind.
+
+##### ©️ C/C++ Examples
+
+- [Zephyr BBC micro:bit V2](https://github.com/fduignan/zephyr_bbc_microbit_v2) - Various examples for Zephyr RTOS running on the BBC micro:bit V2.
+- [ioprog Zephyr & micro:bit Articles](https://ioprog.com/tag/microbit-v2/) - A series of articles and tutorials using the micro:bit on board components with Zephyr.
+- [Bare metal examples](https://github.com/dwelch67/microbit) - C bare metal examples for the BBC micro:bit.
+- [Bare metal micro:bit](https://spivey.oriel.ox.ac.uk/baremetal/Bare_Metal_micro:bit) - Low level programming examples and tutorials.
 
 ### 🦀 Rust
 
