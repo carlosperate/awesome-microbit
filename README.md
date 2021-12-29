@@ -57,7 +57,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
 	- [MakeCode Offline App](https://makecode.microbit.org/offline-app) - Stand alone offline app (note that MakeCode in the browser also works offline).
 	- [MakeCode Multi Editor](https://makecode.microbit.org/---multi) - Two MakeCode editors side by side to create, modify, and test two micro:bit programs at the same time, great for simulating radio with a transmitter and receiver.
-	- [MakeCode Streamer Beta](https://makecode.com/streamer/docs) - Experimental web app that simplifies the creation of interactive, high quality coding videos. Designed for teachers, students or generally anyone who would want to do any kind of online MakeCode coding.
 - [Scratch 3.0](https://scratch.mit.edu/microbit) - The new version of Scratch is officially compatible with the micro:bit via their Scratch Link plug-in.
 - [Code Kingdoms](https://microbit.codekingdoms.com) - (No longer maintained) Graphical interface that provides a transitioning experience from 'drag and drop' to text-based programming (JavaScript).
 - [Open Roberta Lab](https://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
@@ -327,6 +326,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 ## 🧰 micro:bit Tools
 
+- [MakeCode Streamer Beta](https://makecode.com/streamer/docs) - Web app that simplifies the creation of interactive, high quality coding videos. Designed for teachers, students, or anyone who would want to do online MakeCode coding.
 - [micro:bit USB Grapher](https://github.com/bsiever/microbit-usb-grapher) - A web page using WebUSB to graph, manipulate, and save data collected on the micro:bit.
 
 
@@ -629,7 +629,7 @@ Useful Articles for developing on the micro:bit.
 - [Getting Started with the micro:bit](https://www.oreilly.com/library/view/getting-started-with/9781680453010/) - Coding and Making with the BBC's Open Development Board.
 - [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro:bit+User+Guide+-p-9781119386735) - The go-to guide to getting started with the BBC micro:bit and exploring all of its amazing capabilities.
 - [Programming the BBC micro:bit](http://simonmonk.org/prog-mb/) - Getting Started with MicroPython.
-- [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/) - Presents a series of activities to teach the basics of computer networks.
+- [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/) - Presents a series of activities to teach the basics of computer networks with micro:bit.
     - [Prácticas de redes con placas micro:bit](https://github.com/jemole/microbit-networking-book) - Spanish translation.
 - [micro:bit in Wonderland](https://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html) - A project book for the BBC micro:bit inspired by the classic story of Alice in Wonderland.
 - [Beginning BBC micro:bit](https://www.apress.com/gb/book/9781484233597) - A Practical Introduction to micro:bit Development.
