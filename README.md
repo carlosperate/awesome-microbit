@@ -617,6 +617,7 @@ Useful Articles for developing on the micro:bit.
 - [Get started with the micro:bit](https://www.youtube.com/playlist?list=PLEo0hMrjdofusveMscRFN9FeqKzDBzuXr) - A set of videos that will take you from first use to micro:bit expert, exploring all the features of this tiny computer.
 - [A wide range of micro:bit videos](https://www.youtube.com/playlist?list=PL99_XE3drPZeUdLgZBOlZdGbJZ4XUXcmY) - A series of videos from beginning to expert with a wide range of topics, uses and add-ons.
 - [Building a mini sumo robot on a budget](https://www.youtube.com/watch?v=Y9WXdobs_vU) - Designing a mini sumo robot from scratch with micro:bit. From a simple sketch on paper, to component selection, hardware design, mechanical assembly, programming, and testing.
+- [MakeCode and Hardware](https://www.youtube.com/channel/UCYvU-GOQCX97aDu3o4bxl_Q/videos) - YouTube channel with a large collection of projects using micro:bit and MakeCode.
 
 ### 🎥 Conference Talks
 
