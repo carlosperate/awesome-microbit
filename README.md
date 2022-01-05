@@ -136,7 +136,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [HTU21D](https://github.com/ti-nspire/microbit-in-micropython-library-for-HTU21D-sensor) - Library to interface with a HTU21D digital humidity and temperature sensor.
 - [VEML6030](https://github.com/CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module) - Library for interfacing with a VEML6030 Ambient Light Sensor via I2C.
 - [TMP117](https://github.com/CoreElectronics/CE-PiicoDev-TMP117-MicroPython-Module) - Library to interface with a TMP117 high precision temperature sensor.
-- [BME280](https://github.com/CoreElectronics/CE-PiicoDev-BME280-MicroPython-Module) - Library to interface with a BME280 sensor measuring relative humidity, barometric pressure and ambient temperature via I2C.
+- [BME280](https://github.com/CoreElectronics/CE-PiicoDev-BME280-MicroPython-Module) - Library to interface with a BME280 humidity, pressure, and temperature sensor via I2C.
 
 ##### 🐍 Python Libraries
 
@@ -176,7 +176,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [BlueDot](https://github.com/Microsoft/pxt-bluedot) - PXT package to support the BlueDot app - beta.
 - [Kitronik Servo Lite](https://github.com/KitronikLtd/pxt-kitronik-servo-lite) - Blocks that support Kitronik Servo:Lite board for the micro:bit.
-- [Lego Power Functions](https://github.com/philipphenkel/pxt-powerfunctions) - Control your LEGO® Power Functions motors using your micro:bit with an infrared LED.
+- [Lego Power Functions](https://github.com/philipphenkel/pxt-powerfunctions) - Control LEGO® Power Functions motors using your micro:bit with an infrared LED.
 - [Invent robot](https://github.com/techcampuk/pxt-invent) - This library provides a Microsoft PXT package for Invent robot.
 - [ubirch NB-IoT](https://github.com/ubirch/pxt-ubirch) - Package for sending signed data messages to the ubirch backend.
 - [CCS811](https://github.com/ADataDate/pxt-airQuality) - Makecode Package for the CCS811 Air Quality Sensor.
@@ -187,11 +187,11 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [LumexOLED](https://github.com/lioujj/pxt-oled) - Package designed for Lumex OLED display.
 - [MakeCode Extensions](https://github.com/makecode-extensions) - Growing collection of packages, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307 RTC, APDS9930 Digital Proximity and Ambient Light Sensor, BH1750 digital ambient light sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
 - [BMP085](https://github.com/sabas1080/uBit_BMP085) - Package to control the BMP085 or BMP180 pressure and altitude sensors.
-- [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, enabling the micro:bit to obtain temperature and relative humidity from these sensors.
+- [SHT2X](https://github.com/Tinkertanker/microDriver_SHT2x) - Driver for SHT20, SHT21, SHT25 digital sensor, to measure temperature and relative humidity.
 - [VL53L0X](https://github.com/Tinkertanker/pxt-range-vl53l0x) - Package to calculate distances using a VL53L0X Time-of-Flight ranging sensor.
 - [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Package to control the PCA9685, a 16-channel PWM controller, with included servo support.
 - [dfplayer](https://github.com/lioujj/pxt-mp3) - Play MP3 files with a DFPlayer mini module.
-- [KeiganMotor](https://github.com/keigan-motor/pxt-KeiganMotor) - Controller for KeiganMotor KM-1 Series, an all-in-one brushless gearless electric motor module.
+- [KeiganMotor](https://github.com/keigan-motor/pxt-KeiganMotor) - Controller for KeiganMotor KM-1, an all-in-one brushless gearless electric motor module.
 - [MLX90614](https://github.com/DoraLC/pxt-MLX90614) - I2C driver for Infra Red Thermometer MLX90614.
 - [Adafruit Motor Driver Board](https://github.com/vijairaj/pxt-adafruit-motor-driver) - Driver to control the DC motors on the Adafruit Motor Shield v1.
 - [ESP-01](https://github.com/51bit/esp01) - Control an ESP8266 module via serial AT commands.
@@ -225,7 +225,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 ### ©️ C/C++
 
-- [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime. Bluetooth documentation includes a link to the original `*.hex` file that ships on the micro:bit devices.
+- [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the DAL runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime.
 - [Arduino nRF5](https://github.com/sandeepmistry/arduino-nRF5/) - Arduino Core for Nordic Semiconductor nRF5 based boards, including the micro:bit.
 - [MbedOS micro:bit V2 Starter](https://github.com/microbit-foundation/mbedos-microbit-v2-starter) - MbedOS template project that adds support for the micro:bit V2.
 
@@ -505,7 +505,7 @@ All these projects contain steps and resources required for reproduction.
 - [Simple gimbal with micro:bit and 2 servos](https://www.instructables.com/Simple-Gimbal-With-Microbit-and-2-Servos/) - How to make a simple gimbal stabiliser controlled by the micro:bit.
 - [Disaster Management with Smart Circuit Breaker](https://blog.adacore.com/make-with-ada-2020-disaster-management-smart-circuit-breaker) - Ensuring safety against electrical fire or shock during earthquake, flood, gas leakage & fire breakout by disconnecting mains with smart circuit breaker.
 - [micro:bit Corona Scanner](https://github.com/znuh/microbit-corona-scanner) - Using a micro:bit to listen to Bluetooth COVID-19 Exposure Notifications from COVID mobile apps.
-- [Hands-Free Cardboard Gumball Machine](https://www.instructables.com/Hands-Free-Cardboard-Gumball-Machine/) - A gumball machine using a micro:bit, Crazy Circuits Bit board, distance sensor, servo, and cardboard. It detects when you place your hand in the base of the rocket and the machine administers a gumball, without touching a thing.
+- [Hands-Free Cardboard Gumball Machine](https://www.instructables.com/Hands-Free-Cardboard-Gumball-Machine/) - A gumball machine using a micro:bit, it detects when you place your hand in the base of the rocket and the machine administers a gumball, without touching a thing.
 - [Automatic Plant Watering System Using a micro:bit](https://www.instructables.com/Automatic-Plant-Watering-System-Using-a-Microbit/) - How to build an automatic plant watering system using a micro:bit, moisture sensor, and some other small electronic components.
 - [Sorting the Object Using Ferb Detective Agent](https://www.instructables.com/Sorting-the-Object-Using-Ferb-Detective-Agent/) - How to design a DIY colour sorter that can sort black and white objects using an IR sensor.
 - [micro:bit Solar Tracker](https://www.instructables.com/Microbit-Solar-Tracker/) - How to build a solar tracker with a micro:bit, light sensors and servos.
@@ -516,7 +516,7 @@ All these projects contain steps and resources required for reproduction.
 - [Totally Useless Coffee Dispenser](https://www.instructables.com/Totally-Useless-Coffee-Dispenser/) - Designing and building a coffee dispenser with micro:bit, motors and 3D printed parts.
 - ["High-Fivey" the Cardboard Robot](https://www.instructables.com/High-Fivey-the-Cardboard-Microbit-Robot/) - Stuck at home but still have a need to high-five someone? Make a friendly little cardboard micro:bit robot to do just that.
 - [BBC micro:bit + WiFi + phone notifications](https://www.hackster.io/393644/bbc-micro-bit-wifi-phone-notifications-ddb90d) - How to connect BBC micro:bit to WiFi and send a phone notification when a sound is detected.
-- [Awaken the Force with micro:bit](https://www.okdo.com/project/awaken-the-force-with-microbit/) - For millennia people have used the force for good, evil, and just to lift things up and move them about. We have found quite a large amount of force inside the micro:bit, enough in fact to lift small, everyday objects.
+- [Awaken the Force with micro:bit](https://www.okdo.com/project/awaken-the-force-with-microbit/) - For millennia people have used the force for good, evil, and just to move things around. We have found quite a lot of force in the micro:bit, enough to lift small, everyday objects.
 - [Mechanical 7-segment digital clock](https://www.thingiverse.com/thing:4626956) - Digital clock with 23 segments, controlled by a single RC servo motor, with all segments and the carries between digits mechanically resolved.
 - [Mechanical digital clock](https://www.thingiverse.com/thing:4613624) - 4 digits, 24 hour-notation mechanical digital clock controlled by micro:bit and only one RC servo motor. Time adjustment from PC is possible via bluetooth.
 - [Robbit](https://github.com/Dealerpriest/robbit) - An open source telepresence robot with micro:bit and an Android phone for students who can not attend school in person.
@@ -556,7 +556,7 @@ Useful Articles for developing on the micro:bit.
 - [Debugging the micro:bit with pyOCD and GDB](https://os.mbed.com/docs/mbed-os/latest/debug-test/debug-microbit.html) - Shows how to debug a micro:bit program using PyOCD and GDB.
 - [Exploring the BBC micro:bit Software Stack](https://mattwarren.org/2017/11/28/Exploring-the-BBC-microbit-Software-Stack/) - What’s in it, what it does and how it all fits together.
 - [Building the 1,000 BBC micro:bit Display](https://www.kitronik.co.uk/blog/building-the-bbc-microbit-matrix-display/) - Building a screen to show images from a thousand BBC micro:bits.
-- [micro:bit Radio Packets](https://ukbaz.github.io/howto/ubit_radio.html) - Explanation of the MakeCode radio packet specification (built on top of the micro:bit runtime specification) and how to communicate between MakeCode and MicroPython programs via radio.
+- [micro:bit Radio Packets](https://ukbaz.github.io/howto/ubit_radio.html) - Explanation of the MakeCode radio packet specification (built on top of the micro:bit DAL spec) and how to communicate between MakeCode and MicroPython programs via radio.
 - [Synchronized Music on micro:bits](https://blog.flowblok.id.au/2018-02/synchronized-music-on-microbits.html) - Building a micro:bit mesh network so they can play music synchronized across a large area.
 - [Using the Built-in Sensors](https://learn.adafruit.com/micro-bit-lesson-1-using-the-built-in-sensors) - Learn how to use the micro:bit's built-in accelerometer and magnetometer.
 - [Read micro:bit data from Linux via Bluetooth (BLE)](https://github.com/alcir/microbit-ble) - Random notes and examples about micro:bit BLE and Linux.
@@ -578,7 +578,7 @@ Useful Articles for developing on the micro:bit.
 - [Read a PS/2 keyboard on a BBC micro:bit](http://www.suppertime.co.uk/blogmywiki/2020/08/ps2-keyboard-microbit/) - Learning how PS/2 keyboards work, their serial communication, and how to connect them to a micro:bit.
 - [Testing the micro:bit's ADC](http://www.doctormonk.com/2020/08/testing-microbits-analog-inputs.html) - The micro:bit can measure analog voltages, but you can't measure something without altering it & the best we can do is to make the measurement errors small. This article determines the micro:bit ADC measurement error.
 - [Make your own processor with a micro:bit](http://www.suppertime.co.uk/blogmywiki/2020/05/microbit-cpu/) - Coding a 5-bit CPU in the micro:bit, useful for understanding or teaching how CPUs and simple systems work.
-- [Embedded Python: Build a Game on the BBC micro:bit](https://realpython.com/embedded-python/) - In this tutorial you’ll learn what embedded development is, why you would use Python, and how to write a basic game on the BBC micro:bit with MicroPython.
+- [Embedded Python: Build a Game on the micro:bit](https://realpython.com/embedded-python/) - In this tutorial you’ll learn what embedded development is, why you would use Python, and how to write a basic game on the micro:bit with MicroPython.
 - [Build a snake game](https://www.cameronmacleod.com/blog/microbit-snake) - Learning how to make a snake game using MicroPython on the micro:bit.
 - [Using the micro:bit to detect electrical current](https://mattoppenheim.com/2021/07/16/using-the-microbit-to-detect-electrical-current/) - The micro:bit has a magnetometer on-board, when a current flows through a wire a magnetic field is produced and we can use the magnetometer to detect this.
 
@@ -616,7 +616,7 @@ Useful Articles for developing on the micro:bit.
 - [Code with Liam](https://www.youtube.com/channel/UCubWM52hsTe2eeiTWqRJICw/) - Video tutorials showing how to code with the micro:bit.
 - [Get started with the micro:bit](https://www.youtube.com/playlist?list=PLEo0hMrjdofusveMscRFN9FeqKzDBzuXr) - A set of videos that will take you from first use to micro:bit expert, exploring all the features of this tiny computer.
 - [A wide range of micro:bit videos](https://www.youtube.com/playlist?list=PL99_XE3drPZeUdLgZBOlZdGbJZ4XUXcmY) - A series of videos from beginning to expert with a wide range of topics, uses and add-ons.
-- [Building a mini sumo robot on a budget](https://www.youtube.com/watch?v=Y9WXdobs_vU) - Designing a mini sumo robot from scratch with micro:bit. From a simple sketch on paper, to component selection, hardware design, mechanical assembly, programming, and testing.
+- [Building a mini sumo robot on a budget](https://www.youtube.com/watch?v=Y9WXdobs_vU) - Designing a mini sumo robot from scratch with micro:bit. From a simple paper sketch, to component selection, hardware design, mechanical assembly, coding, and testing.
 - [MakeCode and Hardware](https://www.youtube.com/channel/UCYvU-GOQCX97aDu3o4bxl_Q/videos) - YouTube channel with a large collection of projects using micro:bit and MakeCode.
 
 ### 🎥 Conference Talks
@@ -646,7 +646,7 @@ Useful Articles for developing on the micro:bit.
 ## 🧑‍🏫 Teaching Resources
 
 - [microbit.org Lessons](https://microbit.org/lessons/) - Curriculum-linked units of work and design challenges for planning and teaching computing in primary and secondary schools.
-- [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14 years). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the first time.
+- [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the 1st time.
 - [Code Club micro:bit projects](https://projects.raspberrypi.org/en/codeclub/microbit)
 - [IET micro:bit Teaching Resources](https://archive.microbit.org/teach/iet/) - A series of resources created by the IET (Institution of Engineering and Technology) as part of their highly successful IET Faraday brand.
 - [IET micro:bit case studies](https://education.theiet.org/secondary/stem-activities/microbit/) - Booklets and video content to bring a variety of real-life applications of the micro:bit to life in your classroom.
@@ -657,7 +657,7 @@ Useful Articles for developing on the micro:bit.
 - [Year 7 micro:bit lessons](https://www.jonwitts.co.uk/year-7-microbit) - Lessons used to introduce students to the micro:bit and Python.
 - [UCL’s BBC micro:bit Tutorials](https://microbit-challenges.readthedocs.io/en/latest/) - Tutorial sheets that introduce micro:bit features with practical examples provided to invite students to design solutions to problems.
 - [BBC micro:bit and Kodu Interact](http://www.kodugamelab.com/resources/#microbit) - Kodu is a visual programming language made specifically for creating games and allow interaction with the micro:bit.
-- [Build A Robot Wars Buggy](https://www.kitronik.co.uk/blog/robot-buggy-part-1-build-robot-wars-buggy-introduction/) - This fun learning resource has been put together to provide teachers with an all in one design and technology challenge that you can set for your students over the course of a term or a year.
+- [Build A Robot Wars Buggy](https://www.kitronik.co.uk/blog/robot-buggy-part-1-build-robot-wars-buggy-introduction/) - This fun learning resource has been put together to provide teachers with an all in one design & technology challenge that you can set for your students.
 - [CPC UCreate micro:bit resources](https://warksjammy.blogspot.com/2017/04/cpc-ucreate-microbit-resources-all-in.html) - Collection of micro:bit resources made for CPC.
 - [Year 7 BBC micro:bit topic](https://bournetocode.com/projects/7-CS-micro/) - BBC micro:bit lessons from Bourne Grammar school.
 - [Kitronik Inventors Kit Resources](https://www.kitronik.co.uk/blog/kitronik-inventors-kit-resources) - A a great way to get started with programming and hardware interaction with the micro:bit. Includes 12 experiments using LEDs, motors, LDRs and capacitors.
@@ -715,7 +715,7 @@ Useful Articles for developing on the micro:bit.
 
 ## 📅 Events
 
-Do you know about any free event with micro:bits? Please add them here, PRs are encouraged!
+Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
 - No current events
 
@@ -733,7 +733,7 @@ Do you know about any free event with micro:bits? Please add them here, PRs are 
 - [Accessory Guide](https://microbit.org/buy/accessories/) - A constantly updated list of accessories for the micro:bit.
 - [pin:out](https://microbit.pinout.xyz) - A GPIO pinout interactive reference for the BBC micro:bit and accessories.
 - [Mewt](https://github.com/dakota-mewt/mewt/blob/main/README_Microbit.md) - Single button press to mute/unmute all system microphones, shows you status and when the microphone is actively broadcasting.
-- [Battery Pack Holder](https://microbit.org/get-started/user-guide/battery-pack-holder/) - The new micro:bit comes with a cardboard cut out to hold the micro:bit and battery pack, this is the template to create and customise your own battery holder.
+- [Cardboard Battery Pack Holder](https://microbit.org/get-started/user-guide/battery-pack-holder/) - The new micro:bit comes with a cardboard cut out to hold the micro:bit and battery pack, this is the template to create and customise your own battery holder.
 
 
 ## ⚖️ License
