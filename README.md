@@ -207,6 +207,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Bluetooth Gamepad](https://github.com/kshoji/pxt-bluetooth-gamepad) - MakeCode extension for BLE HID Gamepad module for micro:bit.
 - [SmartMatrix](https://github.com/Shorts1999/pxt-smartmatrix) - Easily control LED matrices/displays made from WS2812b/NeoPixel controllable RGB LEDs.
 - [Sonic Pi OSC](https://github.com/RBilsland/pxt-sonicpiosc) - Send OpenSound Control (OSC) messages to Sonic Pi from a micro:bit using an ESP8266.
+- [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as Bluetooth HID device, like a keyboard, mouse, or gamepad.
 
 ##### 🗿 Node.js and Browser
 
