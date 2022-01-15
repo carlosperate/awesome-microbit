@@ -395,6 +395,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [SparkFun gamer:bit](https://github.com/sparkfun/Micro_Bit_Gamer_Bit) - Open source files for the SparkFun gamer:bit, a board to provide a game system.
 - [NeoBit](https://github.com/ppelleti/NeoBit) - Open source board that lets you hook up NeoPixel and DotStar LEDs to a BBC micro:bit, also contains a headphone jack and a couple of slide potentiometers for input.
 - [LoRaWAN micro:bit](https://github.com/ribbotson/LoRaWAN_MicroBit) - This is a free open source LoRaWAN interface for BBC micro:bit including power control timer.
+- [PiicoDev Adapter](https://github.com/CoreElectronics/CE-PiicoDev-Adapter-for-Microbit) - Kicad files for a an adapter to experiment with sensors from the PiicoDev range.
 
 
 ## 🖨️ 3D Printing
