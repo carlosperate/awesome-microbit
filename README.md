@@ -622,7 +622,8 @@ Useful Articles for developing on the micro:bit.
 ### 🎥 Conference Talks
 
 - [Fun with Zephyr Project and BBC micro:bit](https://www.youtube.com/watch?v=ZZRbIpVJGns) - This presentation shows how Zephyr empowers the BBC micro:bit devices and its Bluetooth chip to do fun things.
-- [micro:bit LIVE 2020 virtual](https://www.youtube.com/playlist?list=PLEo0hMrjdofv9-M0IOyD8Q0VtsX8O__iW) - All the talks and sessions from the micro:bit LIVE 2020 Virtual online event.
+- [micro:bit LIVE 2020 online conference](https://www.youtube.com/playlist?list=PLEo0hMrjdofv9-M0IOyD8Q0VtsX8O__iW) - All the talks and sessions from the micro:bit LIVE 2020 online event.
+- [micro:bit LIVE 2021 online conference](https://www.youtube.com/playlist?list=PLEo0hMrjdofs-XgVXg-Oib1mduB6biIIC) - All the talks and sessions from the micro:bit LIVE 2021 online event.
 
 
 ## 📚 Books
