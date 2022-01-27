@@ -254,6 +254,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [nRF51 Radio](https://github.com/tipih/NRF51_Radio_library) - Arduino library based on the micro:bit DAL radio implementation.
 - [MMA8653](https://github.com/lfhohmann/MMA8653) - This Arduino library brings support for the NXP MMA8653 I2C accelerometer.
 - [micro:bit Video](https://github.com/blogmywiki/microbit-video) - C++ programs for generating NTSC video from a V1 micro:bit to connect to a TV.
+- [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as Bluetooth HID device, like a keyboard, mouse, or gamepad.
 
 ##### ©️ RTOS with micro:bit profile
 
