@@ -682,6 +682,7 @@ Useful Articles for developing on the micro:bit.
 - [DreamSpace TV](https://education.microsoft.com/en-us/resource/f7b52fd4) - Lessons to bring students, in school or at home, on a STEAM learning journey with a focus on computational thinking, creativity & problem-solving.
 - [MicroPython For micro:bit](https://github.com/mytechnotalent/MicroPython-For-micro-bit) - A free MicroPython course designed to teach MicroPython with specific application to the micro:bit V2.
 - [Scratch+micro:bit](https://plix.media.mit.edu/activities/scratch-microbit) - This activity combines storytelling, coding, and making to engage in physical tinkering while helping to bridge the gap between the physical and digital worlds with micro:bit.
+- [PC micro:bit MicroPython](https://pc-microbit-micropython.readthedocs.io/en/latest/introduction/introduction.html) - Lessons to help you code your micro:bit using MicroPython.
 
 ### 🧑‍🏫 BBC Teaching Resources
 
