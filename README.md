@@ -528,6 +528,7 @@ All these projects contain steps and resources required for reproduction.
 - [Lip Syncing Characters](https://www.instructables.com/Lip-Syncing-Characters-With-Microbit/) - Cute characters made with micro:bit that lip-sync to the sound of your voice to appear as if they are the ones doing the talking/singing.
 - [Spy Tech](https://www.instructables.com/Spy-tech-Intruder-Detection-Logging-System/) - Intruder detection and logging system with a micro:bit and a magnet.
 - [micro:bit OLED Game](https://www.instructables.com/Microbit-OLED-Game/) - Creating a Game & Watch homage handheld electronic game with a micro:bit, OLED screen, buttons, and MicroPython.
+- [Water Rocket](https://wikifactory.com/+fablabbratislava/a-microbit-water-rocket/) - Did you know you can create your own water rocket by using water pipes and a water bottle? You can even add a micro:bit and measure flight data, which can be stored and later visualised.
 
 ### 🏗️ Project Collections
 
