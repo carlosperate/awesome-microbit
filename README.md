@@ -256,6 +256,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [MMA8653](https://github.com/lfhohmann/MMA8653) - This Arduino library brings support for the NXP MMA8653 I2C accelerometer.
 - [micro:bit Video](https://github.com/blogmywiki/microbit-video) - C++ programs for generating NTSC video from a V1 micro:bit to connect to a TV.
 - [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as a Bluetooth HID device, like a keyboard, mouse, or gamepad.
+- [microbit-dal-ext-kit](https://github.com/softgraph/microbit-dal-ext-kit) - A set of components and utilities for C++ applications using micro:bit DAL (runtime).
 
 ##### ©️ RTOS with micro:bit profile
 
