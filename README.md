@@ -401,6 +401,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [NeoBit](https://github.com/ppelleti/NeoBit) - Open source board that lets you hook up NeoPixel and DotStar LEDs to a BBC micro:bit, also contains a headphone jack and a couple of slide potentiometers for input.
 - [LoRaWAN micro:bit](https://github.com/ribbotson/LoRaWAN_MicroBit) - This is a free open source LoRaWAN interface for BBC micro:bit including power control timer.
 - [PiicoDev Adapter](https://github.com/CoreElectronics/CE-PiicoDev-Adapter-for-Microbit) - Kicad files for an adapter to experiment with sensors from the PiicoDev range.
+- [Sumo Robot](https://github.com/hansj66/micro-bot) - Firmware and hardware design files for the TimeExpander.com micro:bit robot with 2 motor bridges, 3 time of flight sensors, 4 reflective object sensors, and a GPIO expander.
 
 
 ## 🖨️ 3D Printing
