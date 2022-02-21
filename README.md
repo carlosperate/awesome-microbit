@@ -280,6 +280,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Rust on the BBC micro:bit](https://blog.drogue.io/rust-and-microbit/) - How to get started using Rust and BLE on the micro:bit, exposing temperature data as a Bluetooth Environment Sensing Service, and publishing it to the Drogue Cloud via a Bluetooth gateway.
 - [Tock](https://github.com/tock/tock/blob/master/boards/microbit_v2/README.md) - An embedded operating system designed for running multiple concurrent, mutually distrustful applications on low-memory and low-power microcontrollers, with support for the BBC micro:bit.
 - [micro:bit Rust Demos](https://github.com/dtcristo/microbit-demos) - Multiple Rust language demos running on the BBC micro:bit.
+- [The Discovery book](https://docs.rust-embedded.org/discovery/microbit/) - This book is an introductory course on microcontroller-based embedded systems, using micro:bit, that uses Rust as the teaching language rather than the usual C/C++.
 
 ### 🐦 Ada
 
@@ -323,6 +324,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 ## 🛠️ Programming Tools
 
+- [Docker micro:bit Toolchain](https://github.com/carlosperate/docker-microbit-toolchain) - Docker image with the micro:bit toolchain, useful to easily compile C/C++ programmes like DAL & CODAL (the micro:bit runtime), MicroPython, DAPLink, etc.
 - [Vagrant Development Environment for C/C++, MicroPython and Makecode](https://github.com/carlosperate/microbit-dev-env) - Creates a virtual machine with the toolchain required to create C/C++ programs, develop/compile MicroPython, and create packages for MakeCode.
 - [micro:bit uploader](https://makecode.microbit.org/uploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 - [Hardware Simulation with QEMU](https://www.qemu.org/2019/05/22/microbit/) - Emulation support for the micro:bit is available from QEMU 4.0 and can be used for low-level software testing and development.
@@ -398,7 +400,8 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [SparkFun gamer:bit](https://github.com/sparkfun/Micro_Bit_Gamer_Bit) - Open source files for the SparkFun gamer:bit, a board to provide a game system.
 - [NeoBit](https://github.com/ppelleti/NeoBit) - Open source board that lets you hook up NeoPixel and DotStar LEDs to a BBC micro:bit, also contains a headphone jack and a couple of slide potentiometers for input.
 - [LoRaWAN micro:bit](https://github.com/ribbotson/LoRaWAN_MicroBit) - This is a free open source LoRaWAN interface for BBC micro:bit including power control timer.
-- [Sumo Robot](https://github.com/hansj66/micro-bot) - Firmware and hardware design files for the TimeExpander.com micro:bit based robot with 2 motor bridges, 3 time of flight sensors, 4 reflective object sensors, and a GPIO Expander.
+- [PiicoDev Adapter](https://github.com/CoreElectronics/CE-PiicoDev-Adapter-for-Microbit) - Kicad files for an adapter to experiment with sensors from the PiicoDev range.
+- [Sumo Robot](https://github.com/hansj66/micro-bot) - Firmware and hardware design files for the TimeExpander.com micro:bit robot with 2 motor bridges, 3 time of flight sensors, 4 reflective object sensors, and a GPIO expander.
 
 
 ## 🖨️ 3D Printing
@@ -526,7 +529,8 @@ All these projects contain steps and resources required for reproduction.
 - [PIR Movement Alarm](https://www.instructables.com/PIR-Movement-Alarm-With-BBC-Microbit-and-External-/) - How to make a simple movement alarm using MicroPython on a BBC micro:bit with a passive infrared (PIR) sensor module to play a low bitrate sound sample when a warm, moving object is detected.
 - [Lip Syncing Characters](https://www.instructables.com/Lip-Syncing-Characters-With-Microbit/) - Cute characters made with micro:bit that lip-sync to the sound of your voice to appear as if they are the ones doing the talking/singing.
 - [Spy Tech](https://www.instructables.com/Spy-tech-Intruder-Detection-Logging-System/) - Intruder detection and logging system with a micro:bit and a magnet.
-
+- [micro:bit OLED Game](https://www.instructables.com/Microbit-OLED-Game/) - Creating a Game & Watch homage handheld electronic game with a micro:bit, OLED screen, buttons, and MicroPython.
+- [Water Rocket](https://wikifactory.com/+fablabbratislava/a-microbit-water-rocket/) - Did you know you can create your own water rocket by using water pipes and a water bottle? You can even add a micro:bit and measure flight data, which can be stored and later visualised.
 
 ### 🏗️ Project Collections
 
@@ -722,7 +726,8 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- No current events
+- [LIVE code-a-long with micro:bit](https://www.eventbrite.co.uk/e/live-code-a-long-with-microbit-making-a-password-generator-tickets-266654911017) - Join this exciting code-a-long with micro:bit on the 2nd of March, and code your very own password generator (micro:bits not required).
+- [What’s a Microcontroller? with Python and micro:bit](https://www.parallax.com/whats-a-microcontroller-with-python-and-microbit-zoom-meeting-part-2/) - Workshops for educators on April 25, 27 and 29 to add a pre-engineering focus and to support career technology education (CTE) programs in coding, product design, and manufacturing.
 
 
 ## 🤷 Miscellaneous
@@ -730,7 +735,6 @@ Do you know about any free online event with micro:bits? Please add them here, P
 - [micro:bit broadcast](https://microbit-broadcast.embeddedlog.com) - (Discontinued, archived) newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [microbit.org Support](https://support.microbit.org) - The support pages from the micro:bit Foundation is a great source of information, containing an extensive collection of FAQs, articles, and guides.
 - [micro:bit Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/550) - Element14 has put together this detailed, beautifully rendered, cross-section micro:bit poster highlighting all of the device's key functions and components.
-- [Bluetooth troubleshooting guide](https://drive.google.com/uc?id=0B2Ud_NaMFsQSZWxVWWtqYksyRlE&export=download) - Tips on how to solve common and not so common micro:bit Bluetooth problems.
 - [Micro World Tour](https://microworldtour.github.io) - Before the micro:bit was released a few went on a tour to the world-wide Python community. A lot of interesting content and ideas on these micro:bit adventures.
 - [Parent's Complete Guide To The BBC micro:bit](https://www.kitronik.co.uk/blog/parents-complete-guide-bbc-microbit/) - Free resource to help parent's get actively involved in helping their children learn how to code, even with no prior coding experience.
 - [micro:mag](https://magazines.micromag.cc/) - The Unofficial micro:bit Community Magazine.
