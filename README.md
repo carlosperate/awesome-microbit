@@ -432,6 +432,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [BBC micro:bit V2 battery pack holder](https://www.prusaprinters.org/prints/46067-bbc-microbit-v2-battery-pack-holder) - A multi-purpose battery pack holder for BBC micro:bit that can stand on its own, be clipped on lanyard, or with use of velcro strap used as wearable.
 - [Stackable micro:bit LED Matrix Magnifier](https://www.thingiverse.com/thing:4756078) - Designed to be placed on top of the micro:bit to magnify the display, it can be combined with multiple micro:bits to create a larger screen to quadruple the LED matrix.
 - [Solderless micro:bit timer](https://www.thingiverse.com/thing:4790928) - A configurable timer made with a v2 micro:bit board, some electronics components and very few soldering.
+- [panQuad](https://www.prusaprinters.org/prints/135495-panquad) - Quadruped robot powered by the micro:bit, a robot:bit, and 8 servo motors.
 
 
 ## 📐 CAD
