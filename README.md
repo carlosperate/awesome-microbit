@@ -729,7 +729,6 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- [LIVE code-a-long with micro:bit](https://www.eventbrite.co.uk/e/live-code-a-long-with-microbit-making-a-password-generator-tickets-266654911017) - Join this exciting code-a-long with micro:bit on the 2nd of March, and code your very own password generator (micro:bits not required).
 - [What’s a Microcontroller? with Python and micro:bit](https://www.parallax.com/whats-a-microcontroller-with-python-and-microbit-zoom-meeting-part-2/) - Workshops for educators on April 25, 27 and 29 to add a pre-engineering focus and to support career technology education (CTE) programs in coding, product design, and manufacturing.
 
 
