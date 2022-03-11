@@ -533,7 +533,7 @@ All these projects contain steps and resources required for reproduction.
 - [Spy Tech](https://www.instructables.com/Spy-tech-Intruder-Detection-Logging-System/) - Intruder detection and logging system with a micro:bit and a magnet.
 - [micro:bit OLED Game](https://www.instructables.com/Microbit-OLED-Game/) - Creating a Game & Watch homage handheld electronic game with a micro:bit, OLED screen, buttons, and MicroPython.
 - [Water Rocket](https://wikifactory.com/+fablabbratislava/a-microbit-water-rocket/) - Did you know you can create your own water rocket by using water pipes and a water bottle? You can even add a micro:bit and measure flight data, which can be stored and later visualised.
-- [Tilting LEGO Maze](https://www.instructables.com/Tilting-LEGO-Maze-With-Microbit/) - A LEGO maze with knobs on two of the sides to allow you to tilt the top half and manoeuvrer a ball through the maze from start to finish. You can design your own mazes (it's LEGO!) so you can make them as easy or difficult as you wish.
+- [Tilting LEGO Maze](https://www.instructables.com/Tilting-LEGO-Maze-With-Microbit/) - A LEGO maze with knobs on two of the sides to allow you to tilt and manoeuvrer a ball through the maze. You can design your own mazes (it's LEGO!) so you can make them as easy or difficult as you wish.
 
 ### 🏗️ Project Collections
 
