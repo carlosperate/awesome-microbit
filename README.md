@@ -730,7 +730,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- [What’s a Microcontroller? with Python and micro:bit](https://www.parallax.com/whats-a-microcontroller-with-python-and-microbit-zoom-meeting-part-2/) - Workshops for educators on April 25, 27 and 29 to add a pre-engineering focus and to support career technology education (CTE) programs in coding, product design, and manufacturing.
+- No events at this time
 
 
 ## 🤷 Miscellaneous
