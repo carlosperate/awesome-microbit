@@ -658,6 +658,7 @@ Useful Articles for developing on the micro:bit.
 ## 🧑‍🏫 Teaching Resources
 
 - [microbit.org Lessons](https://microbit.org/lessons/) - Curriculum-linked units of work and design challenges for planning and teaching computing in primary and secondary schools.
+- [micro:bit Professional Development Courses](https://microbit.thinkific.com/) - Designed to take the stress out of your computing responsibilities. They are aimed at teachers and educators supporting primary/elementary students.
 - [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the 1st time.
 - [Code Club micro:bit projects](https://projects.raspberrypi.org/en/codeclub/microbit)
 - [IET micro:bit Teaching Resources](https://archive.microbit.org/teach/iet/) - A series of resources created by the IET (Institution of Engineering and Technology) as part of their highly successful IET Faraday brand.
