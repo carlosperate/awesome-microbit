@@ -730,7 +730,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- No events at this time
+- [Student code-alongs](https://microbit.org/news/events/webinars/) - On June the 15th or 29th you and your class can join a LIVE micro:bit coding session with other classes from across the UK, to make a fun summer activity picker.
 
 
 ## 🤷 Miscellaneous
