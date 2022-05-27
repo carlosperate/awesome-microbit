@@ -730,7 +730,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- No events at this time
+- [How to integrate micro:bit across the primary curriculum](https://us02web.zoom.us/webinar/register/WN_sYr6KWaFTg2TZPUYyjfX2w) - Teacher session on June 8th to broaden their micro:bit experience. We’ll provide ideas and inspiration for cross curricular work and show you where to find the resources to support you.
 
 
 ## 🤷 Miscellaneous
