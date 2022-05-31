@@ -731,7 +731,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- No events at this time
+- [Sorting Wizardry using the micro:bit](https://www.eventbrite.co.uk/e/sorting-wizardry-using-the-microbit-tickets-344029099297) - This online workshop on the 8th of June will take you through basic sorting tasks to use in the classroom and will demonstrate how to program this Sorting Hat from Harry Potter with the micro:bit.
 
 
 ## 🤷 Miscellaneous
