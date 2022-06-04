@@ -54,7 +54,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (part of Microsoft's PXT).
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
-	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
+	- [MakeCode Windows App](https://www.microsoft.com/en-gb/store/p/makecode-for-micro-bit/9pjc7sv48lcx) - Windows application for micro:bit MakeCode.
 	- [MakeCode Offline App](https://makecode.microbit.org/offline-app) - Stand alone offline app (note that MakeCode in the browser also works offline).
 	- [MakeCode Multi Editor](https://makecode.microbit.org/---multi) - Two MakeCode editors side by side to create, modify, and test two micro:bit programs at the same time, great for simulating radio with a transmitter and receiver.
 - [Scratch 3.0](https://scratch.mit.edu/microbit) - The new version of Scratch is officially compatible with the micro:bit via their Scratch Link plug-in.
@@ -155,7 +155,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 
 - [MakeCode](https://makecode.microbit.org) - This block and text editor for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
-	- [MakeCode Windows 10 App](https://www.microsoft.com/store/apps/9pjc7sv48lcx) - Windows 10 application for micro:bit MakeCode.
+	- [MakeCode Windows App](https://www.microsoft.com/en-gb/store/p/makecode-for-micro-bit/9pjc7sv48lcx) - Windows application for micro:bit MakeCode.
 	- [MakeCode Offline App](https://makecode.microbit.org/offline-app) - Stand alone offline app (note that MakeCode in the browser also works offline).
 	- [MakeCode Multi Editor](https://makecode.microbit.org/---multi) - Two MakeCode editors side by side to create, modify, and test two micro:bit programs at the same time, great for simulating radio with a transmitter and receiver.
 - [Espruino JavaScript](https://www.espruino.com/MicroBit) - JavaScript interpreter for microcontrollers, supports Bluetooth LE and wireless programming. Also offers a WebIDE for written code and blocks.
@@ -334,6 +334,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [MakeCode Streamer Beta](https://makecode.com/streamer/docs) - Web app that simplifies the creation of interactive, high quality coding videos. Designed for teachers, students, or anyone who would want to do online MakeCode coding.
 - [micro:bit USB Grapher](https://github.com/bsiever/microbit-usb-grapher) - A web page using WebUSB to graph, manipulate, and save data collected on the micro:bit.
 - [Fab Connect](https://beta.tfabconnect.com/en/) - Online tool & dashboard to bridge multiple micro:bits together via the internet using a WebUSB connection to the browser.
+- [My micro:bit](https://mymicrobit.000webhostapp.com) - Web app that communicates with the micro:bit via WebUSB or Web Bluetooth. You can control the micro:bit from your computer keyboard, send commands, and analyse sensor data in charts and gauges.
 
 
 ## 📱 Mobile Apps
@@ -658,6 +659,7 @@ Useful Articles for developing on the micro:bit.
 ## 🧑‍🏫 Teaching Resources
 
 - [microbit.org Lessons](https://microbit.org/lessons/) - Curriculum-linked units of work and design challenges for planning and teaching computing in primary and secondary schools.
+- [micro:bit Professional Development Courses](https://microbit.thinkific.com/) - Designed to take the stress out of your computing responsibilities. They are aimed at teachers and educators supporting primary/elementary students.
 - [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the 1st time.
 - [Code Club micro:bit projects](https://projects.raspberrypi.org/en/codeclub/microbit)
 - [IET micro:bit Teaching Resources](https://archive.microbit.org/teach/iet/) - A series of resources created by the IET (Institution of Engineering and Technology) as part of their highly successful IET Faraday brand.
@@ -730,7 +732,9 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Student code-alongs](https://microbit.org/news/events/webinars/) - On June the 15th or 29th you and your class can join a LIVE micro:bit coding session with other classes from across the UK, to make a fun summer activity picker.
+- [Sorting Wizardry using the micro:bit](https://www.eventbrite.co.uk/e/sorting-wizardry-using-the-microbit-tickets-344029099297) - This online workshop on the 8th of June will take you through basic sorting tasks to use in the classroom and will demonstrate how to program this Sorting Hat from Harry Potter with the micro:bit.
+- [How to integrate micro:bit across the primary curriculum](https://us02web.zoom.us/webinar/register/WN_sYr6KWaFTg2TZPUYyjfX2w) - Teacher session on June 8th to broaden their micro:bit experience. We’ll provide ideas and inspiration for cross curricular work and show you where to find the resources to support you.
+- [Student code-alongs](https://microbit.org/news/events/webinars/#student-code-alongs-2022) - On June the 15th or 29th you and your class can join a LIVE micro:bit coding session with other classes from across the UK, to make a fun summer activity picker.
 
 
 ## 🤷 Miscellaneous
