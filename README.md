@@ -734,8 +734,6 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Sorting Wizardry using the micro:bit](https://www.eventbrite.co.uk/e/sorting-wizardry-using-the-microbit-tickets-344029099297) - This online workshop on the 8th of June will take you through basic sorting tasks to use in the classroom and will demonstrate how to program this Sorting Hat from Harry Potter with the micro:bit.
-- [How to integrate micro:bit across the primary curriculum](https://us02web.zoom.us/webinar/register/WN_sYr6KWaFTg2TZPUYyjfX2w) - Teacher session on June 8th to broaden their micro:bit experience. We’ll provide ideas and inspiration for cross curricular work and show you where to find the resources to support you.
 - [Student code-alongs](https://microbit.org/news/events/webinars/#student-code-alongs-2022) - On June the 15th or 29th you and your class can join a LIVE micro:bit coding session with other classes from across the UK, to make a fun summer activity picker.
 
 
