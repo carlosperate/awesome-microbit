@@ -535,6 +535,7 @@ All these projects contain steps and resources required for reproduction.
 - [Water Rocket](https://wikifactory.com/+fablabbratislava/a-microbit-water-rocket/) - Did you know you can create your own water rocket by using water pipes and a water bottle? You can even add a micro:bit and measure flight data, which can be stored and later visualised.
 - [Tilting LEGO Maze](https://www.instructables.com/Tilting-LEGO-Maze-With-Microbit/) - A LEGO maze with knobs on two of the sides to allow you to tilt and manoeuvrer a ball through the maze. You can design your own mazes (it's LEGO!) so you can make them as easy or difficult as you wish.
 - [Companion Bot](https://microbit.hackster.io/laurentnaegelen/companion-bot-for-jr-steam-91221f) - A cute and interactive shoulder pet robot for Jr STEAM kids from 7 years old. Sewing, 3D printing, electronics, software and it's all open source.
+- [The Instant Star Guitar](https://learn.browndoggadgets.com/Guide/The+Instant+Star+Guitar/441) - Play thousands of rock songs with the press of a button on this electric instant rock star micro:bit guitar.
 
 ### 🏗️ Project Collections
 
