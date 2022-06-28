@@ -735,6 +735,7 @@ Useful Articles for developing on the micro:bit.
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
 - [Student code-alongs](https://microbit.org/news/events/webinars/#student-code-alongs-2022) - On June the 15th or 29th you and your class can join a LIVE micro:bit coding session with other classes from across the UK, to make a fun summer activity picker.
+- [Cybersecurity with Python & micro:bit](https://www.parallax.com/cybersecurity-with-python-microbit-three-session-educators-workshop-august-22-24-26-2022/) - Online workshop in August for Educators in the USA. Explore and apply basic cybersecurity concepts with physical computing on micro:bit, utilizing Python and radio communication.
 
 
 ## 🤷 Miscellaneous
