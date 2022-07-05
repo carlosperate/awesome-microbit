@@ -334,7 +334,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [MakeCode Streamer Beta](https://makecode.com/streamer/docs) - Web app that simplifies the creation of interactive, high quality coding videos. Designed for teachers, students, or anyone who would want to do online MakeCode coding.
 - [micro:bit USB Grapher](https://github.com/bsiever/microbit-usb-grapher) - A web page using WebUSB to graph, manipulate, and save data collected on the micro:bit.
 - [Fab Connect](https://beta.tfabconnect.com/en/) - Online tool & dashboard to bridge multiple micro:bits together via the internet using a WebUSB connection to the browser.
-- [My micro:bit](https://mymicrobit.000webhostapp.com) - Web app that communicates with the micro:bit via WebUSB or Web Bluetooth. You can control the micro:bit from your computer keyboard, send commands, and analyse sensor data in charts and gauges.
+- [My micro:bit](https://medlight.pl/mymicrobit) - Web app that communicates with the micro:bit via WebUSB or Web Bluetooth. You can control the micro:bit from your computer keyboard, send commands, and analyse sensor data in charts and gauges.
 
 
 ## 📱 Mobile Apps
