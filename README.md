@@ -536,7 +536,6 @@ All these projects contain steps and resources required for reproduction.
 - [Tilting LEGO Maze](https://www.instructables.com/Tilting-LEGO-Maze-With-Microbit/) - A LEGO maze with knobs on two of the sides to allow you to tilt and manoeuvrer a ball through the maze. You can design your own mazes (it's LEGO!) so you can make them as easy or difficult as you wish.
 - [Companion Bot](https://microbit.hackster.io/laurentnaegelen/companion-bot-for-jr-steam-91221f) - A cute and interactive shoulder pet robot for Jr STEAM kids from 7 years old. Sewing, 3D printing, electronics, software and it's all open source.
 - [The Instant Star Guitar](https://learn.browndoggadgets.com/Guide/The+Instant+Star+Guitar/441) - Play thousands of rock songs with the press of a button on this electric instant rock star micro:bit guitar.
-- [Magic Tune micro:bit Escape Room](https://microbit.hackster.io/VBB/escape-room-micro-bit-1-magic-tune-0f8552) - Code the micro:bit to play the magic tune exactly as the forest fairy demands to make your escape.
 
 ### 🏗️ Project Collections
 
