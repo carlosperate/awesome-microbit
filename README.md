@@ -731,7 +731,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- None yet.
+- [micro:bit code-along 8th of November](https://www.computingatschool.org.uk/events/2022/november/microbit-code-along-youve-got-this) - Create your 1st programs using the micro:bit across the curriculum, learn about its sensors, inputs/outputs & find out effective ways to teach using established pedagogic approaches.
 
 
 ## 🤷 Miscellaneous
