@@ -734,6 +734,7 @@ Useful Articles for developing on the micro:bit.
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
 - [micro:bit code-along 8th of November](https://www.computingatschool.org.uk/events/2022/november/microbit-code-along-youve-got-this) - Create your 1st programs using the micro:bit across the curriculum, learn about its sensors, inputs/outputs & find out effective ways to teach using established pedagogic approaches.
+- [Text-based coding with the new micro:bit Python Editor](https://us02web.zoom.us/webinar/register/WN_tLClPjewQeaeIRoPqf1txA) - Webinar on the 10th of November, using the new micro:bit Python Editor to teach text-based coding, with resources and tips for taking Python teaching further.
 - [Data logging with micro:bit](https://us02web.zoom.us/webinar/register/WN_wKZ8X7alShC_CW88G4FTag) - Webinar for teachers on the 16th of November to find out more about using the micro:bit to collect and analyse data from the world around you.
 - [micro:bit code-along 29th of November](https://www.computingatschool.org.uk/events/2022/november/microbit-code-along-health-and-wellbeing) - Know how to use the micro:bit to explore the 5 ways of wellbeing, develop a nature counter, send a smile, and explore other methods for use of the radio function.
 
