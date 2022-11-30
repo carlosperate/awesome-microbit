@@ -733,7 +733,8 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- [micro:bit code-along 29th of November](https://www.computingatschool.org.uk/events/2022/november/microbit-code-along-health-and-wellbeing) - Know how to use the micro:bit to explore the 5 ways of wellbeing, develop a nature counter, send a smile, and explore other methods for use of the radio function.
+- No current events available. More can be added here.
+
 
 ## 🤷 Miscellaneous
 
