@@ -5,6 +5,7 @@ on:
     branches:
     - master
     - action
+    - ci
 
 jobs:
   build:
