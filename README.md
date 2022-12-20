@@ -197,6 +197,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [TCS3200](https://github.com/DoraLC/pxt-tcs3200-color-sensor) - Control a TCS3200 colour sensor.
 - [IR](https://github.com/lioujj/pxt-IR) - Control IR (infrared) transmitter/receiver modules.
 - [DSTemp](https://github.com/bsiever/microbit-dstemp) - Read the temperature from one or multiple DS18B20 sensors.
+- [dstemp2wire](https://github.com/bsiever/microbit-dstemp-2wire) - This extension allows the micro:bit to use the Dallas Semiconductor DS18B20 temperature sensor with just two wires (parasitic power mode).
 - [DS18B20](https://github.com/DFRobot/pxt-ds18b20) - DFRobot extensions to read the temperature from a DS18B20 sensor.
 - [DS3231](https://github.com/gbraad/pxt-rtc-ds3231) - RTC (Real Time Clock) MakeCode extension for the micro:bit.
 - [timeanddate](https://github.com/bsiever/microbit-pxt-timeanddate) -  Software Based Real Time Clock (Time & Date) for the micro:bit.
