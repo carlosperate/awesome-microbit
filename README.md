@@ -113,6 +113,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [SSD1306 7seg](https://github.com/fizban99/microbit_ssd1306_7seg) - Library to use an SSD1306 OLED display as a 7 segment display.
 - [SSD1306 SPI](https://github.com/fizban99/microbit_ssd1306spi) - Library to control the OLED SSD1306 128x64 display with a micro:bit via SPI.
 - [SSD1306](https://github.com/Afantor/Microbit_SSD1306_OLED) - Library to control the SSD1306 display via I2C.
+- [HT16K33](https://github.com/mcauser/deshipu-micropython-ht16k33) - Library for the HT16K33 LED matrix driver in multiple configurations (16x8, 8x8 or 8x8x2).
 - [HC-SR04](https://github.com/fizban99/microbit_hcsr04) - Library to read the distance from a HC-SR04 ultrasonic sensor using the SPI peripheral.
 - [US-100](https://github.com/fizban99/microbit_us100) - Library to read the distance from a US-100 ultrasonic sensor via UART.
 - [KY038](https://github.com/fizban99/microbit_ky038) - Library to calibrate and use a sound sensor KY038, including clap counter functionality.
