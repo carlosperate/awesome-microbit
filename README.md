@@ -738,7 +738,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- No current events available. More can be added here.
+- [Data logging with micro:bit](https://microbit.org/news/events/webinars/#data-logging-with-micro:bit) - Webinar to find out more about using the BBC micro:bit to collect data on the world around you, using examples that map directly to classroom learning.
 
 
 ## 🤷 Miscellaneous
