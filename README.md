@@ -654,11 +654,11 @@ Useful Articles for developing on the micro:bit.
 - [Networking with the micro:bit (ebook)](https://microbit.nominetresearch.uk/networking-book/) - Presents a series of activities to teach the basics of computer networks with micro:bit.
     - [Prácticas de redes con placas micro:bit](https://github.com/jemole/microbit-networking-book) - Spanish translation.
 - [micro:bit in Wonderland](https://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html) - A project book for the BBC micro:bit inspired by the classic story of Alice in Wonderland.
-- [Beginning BBC micro:bit](https://www.apress.com/gb/book/9781484233597) - A Practical Introduction to micro:bit Development.
-- [BBC micro:bit Recipes](https://www.apress.com/gp/book/9781484249123) - Learn Programming with Microsoft MakeCode Blocks.
+- [Beginning BBC micro:bit](https://link.springer.com/book/10.1007/978-1-4842-3360-3) - A Practical Introduction to micro:bit Development.
+- [BBC micro:bit Recipes](https://link.springer.com/book/10.1007/978-1-4842-4913-0) - Learn Programming with Microsoft MakeCode Blocks.
 - [Micro:bit for Mad Scientists](https://nostarch.com/microbitformad) - The 30 simple projects and experiments in this book will show you how to use the micro:bit to build a secret science lab, as you learn basic coding and electronics skills.
-- [Save The World With Code](https://www.mhprofessional.com/9781260457599-usa-save-the-world-with-code-20-fun-projects-for-all-ages-using-raspberry-pi-microbit-and-circuit-playground-express-group) - Twenty fun projects for all ages using Raspberry Pi, micro:bit, and Circuit Playground Express.
-- [Beginning Data Science, IoT, and AI on Single Board Computers](https://www.apress.com/gp/book/9781484257654) - Core Skills and Real-World Application with the BBC micro:bit and XinaBox.
+- [Save The World With Code](https://www.mheducation.co.uk/save-the-world-with-code-20-fun-projects-for-all-ages-using-raspberry-pi-micro-bit-and-circuit-9781260457599-emea) - Twenty fun projects for all ages using Raspberry Pi, micro:bit, and Circuit Playground Express.
+- [Beginning Data Science, IoT, and AI on Single Board Computers](https://link.springer.com/book/10.1007/978-1-4842-5766-1) - Core Skills and Real-World Application with the BBC micro:bit and XinaBox.
 - [The Tinkerer's Guide to the micro:bit Galaxy](https://gethacking.com/products/the-tinkerers-guide-to-the-micro-bit-galaxy) - Get ready to make and code amazing projects that light up, make noise, move, and talk (via radio).
 - [BBC micro:bit in Practice](https://www.packtpub.com/product/bbc-microbit-in-practice/9781804610121) - A hands-on guide for building creative real-life projects with MicroPython and BBC micro:bit.
 - [The Invent To Learn Guide to the micro:bit](https://cmkpress.com/product/microbit/) - Create dozens of simple-to-complex, open-ended, hands-on projects using one or more micro:bits, upcycled junk, and craft supplies.
