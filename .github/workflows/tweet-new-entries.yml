@@ -8,10 +8,13 @@ on:
     - ci
 
 jobs:
-  build:
+  tweet:
+    name: Tweet new entries
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: '0'
     - name: Run tweet action tests
       uses: ./.github/actions/tweet-commit
       with:
@@ -20,6 +23,7 @@ jobs:
       uses: ./.github/actions/tweet-commit
       with:
         trigger_keyword: TweetMe!
+      env:
         twitter_api_key: "${{ secrets.twitter_api_key }}"
         twitter_api_secret_key: "${{ secrets.twitter_api_secret_key }}"
         twitter_access_token: "${{ secrets.twitter_access_token }}"
