@@ -361,6 +361,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [MicroPal Guide](https://www.notion.so/MicroPal-Guide-141a70906ea5432599e21cecda2a1fac) - Craft your own interactive micro:bit project that responds to your voice. Create a Teachable Machine Model, load it into the MicroPal website, and control the micro:bit via Web Bluetooth.
 - [micro:bit Gesture Recognizer](https://github.com/ttseng/microbit-ml) - An experimental gesture recognition tool using the micro:bit's accelerometer, built using ml5js, which is built on top of TensorFlow.js.
 - [Machine Learning Dance Move Detector](https://www.okdo.com/project/machine-learning-dance-move-detector/) - Builds a system running on the micro:bit which can identify TikTok dance routines using the onboard accelerometer.
+- [Face-Following Robot](https://microbit.hackster.io/petewarden/build-a-face-following-robot-77c4b7) - Build a face following robot with the micro:bit and a Useful Sensors Person Sensor, a small, low-cost hardware module that detects nearby faces.
 
 
 ## ♻️ Projects Using micro:bit as a Dev Board
