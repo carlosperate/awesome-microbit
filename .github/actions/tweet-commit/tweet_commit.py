@@ -155,7 +155,10 @@ def main():
         msg = format_tweet_msg(
             section, entry["title"], entry["url"], entry["description"]
         )
-        print('Tweet msg #{}:\n\t"{}"'.format(i, msg.replace("\n", "\n\t")), flush=True)
+        print(
+            'Tweet msg #{}:\n\t"{}"'.format(i, msg.replace("\n", "\n\t")),
+            flush=True,
+        )
         tweet_msg(msg)
         print("Tweeted #{}!".format(i))
 
