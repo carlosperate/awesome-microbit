@@ -1,6 +1,14 @@
 #!/bin/bash
 set -e
 
+# Required in CI, otherwise it errors with:
+#
+# fatal: detected dubious ownership in repository at '/github/workspace'
+# To add an exception for this directory, call:
+#
+#    git config --global --add safe.directory /github/workspace
+git config --global --add safe.directory /github/workspace
+
 if [[ "$1" == "test" ]]; then
     echo "Running the tests:"
     python .github/actions/tweet-commit/tests.py
