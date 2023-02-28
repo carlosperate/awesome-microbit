@@ -127,6 +127,16 @@ def format_tweet_msg(section, title, url, description):
 
 def tweet_msg(msg):
     """Tweet the given message content."""
+    if not all(
+        (
+            TWITTER_API_KEY,
+            TWITTER_API_SECRET_KEY,
+            TWITTER_ACCESS_TOKEN,
+            TWITTER_ACCESS_TOKEN_SECRET,
+        )
+    ):
+        print("Twitter access keys or tokens not available.")
+        sys.exit(1)
     # Authenticate to Twitter and create API object
     auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET_KEY)
     auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
