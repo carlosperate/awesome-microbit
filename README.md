@@ -739,7 +739,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Code Along, Networks and Radio Comms](https://blogs.glowscotland.org.uk/glowblogs/digilearn/2023/02/06/3rd-march-11-1145am-code-along-networks-and-radio-communication-with-microbit-second-level-learners/) - In tomorrow's live lesson, we'll send messages between two or more micro:bits and use a simple encryption to protect them.
+- No current events
 
 
 ## 🤷 Miscellaneous
