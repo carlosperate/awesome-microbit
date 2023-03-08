@@ -739,7 +739,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Code Along, Networks and Radio Comms](https://blogs.glowscotland.org.uk/glowblogs/digilearn/2023/02/06/3rd-march-11-1145am-code-along-networks-and-radio-communication-with-microbit-second-level-learners/) - In tomorrow's live lesson, we'll send messages between two or more micro:bits and use a simple encryption to protect them.
+- [micro:bit Python Editor](https://kitronik.co.uk/blogs/resources/tech-talk-micro-bit-python-editor-thurs-9th-march-10-30am) - Kitronik Tech Talk on the 9th of March to explore the basics of using the 🆕 micro:bit Python Editor. They'll explore the interface and get hands on with some simple code and examples.
 - [Getting started with micro:bit for teachers](https://microbit.org/news/events/webinars/#getting-started-with-micro:bit-for-teachers) - Webminar on March 28th, a beginners guide to using micro:bit in the primary classroom. If you are a teacher wanting to introduce physical computing for the first time, this is the session for you.
 
 
