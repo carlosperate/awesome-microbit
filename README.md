@@ -739,7 +739,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- No current events
+- [micro:bit Python Editor](https://kitronik.co.uk/blogs/resources/tech-talk-micro-bit-python-editor-thurs-9th-march-10-30am) - Kitronik Tech Talk on the 9th of March to explore the basics of using the 🆕 micro:bit Python Editor. They'll explore the interface and get hands on with some simple code and examples.
 
 
 ## 🤷 Miscellaneous
