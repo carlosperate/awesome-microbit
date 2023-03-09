@@ -276,7 +276,6 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [Board support crate for micro:bit](https://docs.rs/crate/microbit/) - Contains everything required to get started with the use of Rust to create firmwares for the BBC micro:bit board.
 - [Running Rust code on a BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Article describing the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
-- [MicroRust](https://droogmic.github.io/microrust/) - Discover the world of microcontrollers through Rust on the BBC micro:bit.
 - [Rust on the micro:bit 101](https://www.eggers-club.de/blog/2018/05/31/rust-on-the-microbit-101-part-1/) - How to get started using the board support crate and start programming the BBC micro:bit in Rust.
 - [Rust on the BBC micro:bit](https://blog.drogue.io/rust-and-microbit/) - How to get started using Rust and BLE on the micro:bit, exposing temperature data as a Bluetooth Environment Sensing Service, and publishing it to the Drogue Cloud via a Bluetooth gateway.
 - [Tock](https://github.com/tock/tock/blob/master/boards/microbit_v2/README.md) - An embedded operating system designed for running multiple concurrent, mutually distrustful applications on low-memory and low-power microcontrollers, with support for the BBC micro:bit.
