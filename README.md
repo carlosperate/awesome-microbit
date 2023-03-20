@@ -598,6 +598,7 @@ Useful Articles for developing on the micro:bit.
 - [Build a snake game](https://www.cameronmacleod.com/blog/microbit-snake) - Learning how to make a snake game using MicroPython on the micro:bit.
 - [Using the micro:bit to detect electrical current](https://mattoppenheim.com/2021/07/16/using-the-microbit-to-detect-electrical-current/) - The micro:bit has a magnetometer on-board, when a current flows through a wire a magnetic field is produced and we can use the magnetometer to detect this.
 - [micro:bit V2 Pager](https://devzone.nordicsemi.com/nordic/nordic-blog/b/blog/posts/micro-bit-v2-pager) - This blog post shows how to make a one-way BLE pager with a micro:bit V2 and nRF Connect SDK, to send text messages to the micro:bit using your smartphone or tablet.
+- [Character Design with micro:bit](https://scientiffic.medium.com/character-design-with-microbit-51c42586caa1) - Exploring how to display emotion on the micro:bit 5x5 LED matrix for character design.
 
 ### 🗞️ Article Collections
 
