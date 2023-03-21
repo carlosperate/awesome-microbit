@@ -668,7 +668,6 @@ Useful Articles for developing on the micro:bit.
 ## 🧑‍🏫 Teaching Resources
 
 - [microbit.org Lessons](https://microbit.org/lessons/) - Curriculum-linked units of work and design challenges for planning and teaching computing in primary and secondary schools.
-- [micro:bit Professional Development Courses](https://microbit.thinkific.com/) - Designed to take the stress out of your computing responsibilities. They are aimed at teachers and educators supporting primary/elementary students.
 - [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the 1st time.
 - [Code Club micro:bit projects](https://projects.raspberrypi.org/en/codeclub/microbit)
 - [IET micro:bit Teaching Resources](https://archive.microbit.org/teach/iet/) - A series of resources created by the IET (Institution of Engineering and Technology) as part of their highly successful IET Faraday brand.
@@ -717,9 +716,14 @@ Useful Articles for developing on the micro:bit.
 
 ## 🏫 Online Courses
 
-- [Teaching Physical Computing to 5-11 year olds](https://www.futurelearn.com/courses/teaching-physical-computing-to-5-to-11-year-olds) - Introduction to the world of physical computing with a Crumble or a BBC micro:bit, and learn how it can encourage learners to use their imaginations to solve problems and develop new ideas.
 - [Electronics, MicroPython, and BBC micro:bit Bootcamp](https://www.udemy.com/course/electronics-micropython-and-bbc-microbit-bootcamp/) - Learn the basics of electronics, MicroPython, and the BBC micro:bit in detail in a single course.
 - [Build a Physical Computing Prototype](https://www.futurelearn.com/courses/build-a-physical-computing-prototype) - On this course you’ll learn what’s inside the devices we all use every day, come to understand how they work, and ultimately learn to create your own physical computing prototype.
+
+
+### 🏫 Professional Development for Teachers
+
+- [Micro:bit Foundation Professional Development Courses](https://microbit.org/teach/professional-development/) - Designed to take the stress out of your computing responsibilities. They are aimed at teachers and educators supporting primary/elementary students.
+- [Teaching Physical Computing to 5-11 year olds](https://www.futurelearn.com/courses/teaching-physical-computing-to-5-to-11-year-olds) - Introduction to the world of physical computing with a Crumble or a BBC micro:bit, and learn how it can encourage learners to use their imaginations to solve problems and develop new ideas.
 - [Teaching with Physical Computing](https://www.edx.org/course/teaching-with-physical-computing-course-1-introduction-to-project-based-learning) - Introduces the fundamental concepts underpinning Project-Based Learning, and how you can apply it with programmable devices to bring STEM & Computing to life in the classroom.
 - [Pathfinders Professional Development Course](https://microbit.org/news/2021-12-06/microbit-lessons-for-cs-the-new-teacher-pd-course-is-launched-today/) - Created to bring the delight of physical computing to Elementary CS lessons & designed to support educators looking for ways to integrate CS into their classrooms.
 
