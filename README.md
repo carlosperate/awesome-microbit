@@ -726,6 +726,7 @@ Useful Articles for developing on the micro:bit.
 - [Teaching Physical Computing to 5-11 year olds](https://www.futurelearn.com/courses/teaching-physical-computing-to-5-to-11-year-olds) - Introduction to the world of physical computing with a Crumble or a BBC micro:bit, and learn how it can encourage learners to use their imaginations to solve problems and develop new ideas.
 - [Teaching with Physical Computing](https://www.edx.org/course/teaching-with-physical-computing-course-1-introduction-to-project-based-learning) - Introduces the fundamental concepts underpinning Project-Based Learning, and how you can apply it with programmable devices to bring STEM & Computing to life in the classroom.
 - [Pathfinders Professional Development Course](https://microbit.org/news/2021-12-06/microbit-lessons-for-cs-the-new-teacher-pd-course-is-launched-today/) - Created to bring the delight of physical computing to Elementary CS lessons & designed to support educators looking for ways to integrate CS into their classrooms.
+- [Coding for Your Classroom 4 - 10](https://www.edx.org/course/coding-for-your-classroom-4-10) - Course to build educators’ comfortability and confidence in digital literacy, through hands-on learning activities and demos in a variety of web-based platforms, including micro:bit.
 
 
 ## 👪 Community
