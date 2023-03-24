@@ -315,7 +315,6 @@ These languages do not program the micro:bit directly, but can be used to create
 - [Gobot](https://gobot.io/documentation/platforms/microbit/) - Framework for the Go programming language to program devices in the real world. It can access the micro:bit via Bluetooth LE.
 - [Haxe node BBC micro:bit](https://github.com/MatthijsKamstra/hx-node-bbc-microbit) - Control a BBC micro:bit from Node.js using BLE and the Haxe programming language.
 - [App Inventor + IoT](http://iot.appinventor.mit.edu/#/microbit/microbitintro) - Control a micro:bit via Bluetooth with App Inventor, a visual programming environment for Android applications.
-- [BlockyTalkyBLE](https://www.playfulcomputation.group/blockytalkyble.html) - MakeCode and App Inventor extension that makes it easy to connect AppInventor mobile phone apps with the BBC micro:bit wirelessly over Bluetooth.
 - [CBMicroBit](https://github.com/Louismac/CBMicroBit) - CoreBluetooth wrapper in C++ that connects a micro:bit to a computer running macOS using BLE and outputs over OSC (can be used standalone, or as a C++ or Objective C library).
 - [Swift](https://github.com/phwallen/microbit-swift) - An application programming interface written in Swift for use with the micro:bit. It allows programs written for Apple devices to communicate with the micro:bit using BLE.
 - [Node-RED](https://github.com/seanmtracey/node-red-contrib-bitio-wrapper) - A node-red (flow-based visual programming) module that wraps some of the functionality of the Python/MicroPython Bitio Library.
