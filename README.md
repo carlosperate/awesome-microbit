@@ -202,9 +202,9 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS3231](https://github.com/gbraad/pxt-rtc-ds3231) - RTC (Real Time Clock) MakeCode extension for the micro:bit.
 - [timeanddate](https://github.com/bsiever/microbit-pxt-timeanddate) -  Software Based Real Time Clock (Time & Date) for the micro:bit.
 - [MAX31855](https://github.com/bremoran/microDriver_max31855) - Driver for the MAX31855 Thermocouple Amplifier.
-- [Bluetooth Keyboard](https://github.com/kshoji/pxt-bluetooth-keyboard) - MakeCode extension for BLE HID Keyboard module for micro:bit.
-- [Bluetooth Mouse](https://github.com/kshoji/pxt-bluetooth-mouse) - MakeCode extension for BLE HID Mouse module for micro:bit.
-- [Bluetooth Gamepad](https://github.com/kshoji/pxt-bluetooth-gamepad) - MakeCode extension for BLE HID Gamepad module for micro:bit.
+- [Bluetooth Keyboard](https://github.com/kshoji/pxt-bluetooth-keyboard) - MakeCode extension for BLE HID Keyboard module for micro:bit V1.
+- [Bluetooth Mouse](https://github.com/kshoji/pxt-bluetooth-mouse) - MakeCode extension for BLE HID Mouse module for micro:bit V1.
+- [Bluetooth Gamepad](https://github.com/kshoji/pxt-bluetooth-gamepad) - MakeCode extension for BLE HID Gamepad module for micro:bit V1.
 - [SmartMatrix](https://github.com/Shorts1999/pxt-smartmatrix) - Easily control LED matrices/displays made from WS2812b/NeoPixel controllable RGB LEDs.
 - [Sonic Pi OSC](https://github.com/RBilsland/pxt-sonicpiosc) - Send OpenSound Control (OSC) messages to Sonic Pi from a micro:bit using an ESP8266.
 - [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as a Bluetooth HID device, like a keyboard, mouse, or gamepad.
