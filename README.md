@@ -716,9 +716,7 @@ Useful Articles for developing on the micro:bit.
 
 ## 🏫 Online Courses
 
-- [Electronics, MicroPython, and BBC micro:bit Bootcamp](https://www.udemy.com/course/electronics-micropython-and-bbc-microbit-bootcamp/) - Learn the basics of electronics, MicroPython, and the BBC micro:bit in detail in a single course.
 - [Build a Physical Computing Prototype](https://www.futurelearn.com/courses/build-a-physical-computing-prototype) - On this course you’ll learn what’s inside the devices we all use every day, come to understand how they work, and ultimately learn to create your own physical computing prototype.
-
 
 ### 🏫 Professional Development for Teachers
 
