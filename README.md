@@ -663,6 +663,7 @@ Useful Articles for developing on the micro:bit.
 - [The Tinkerer's Guide to the micro:bit Galaxy](https://gethacking.com/products/the-tinkerers-guide-to-the-micro-bit-galaxy) - Get ready to make and code amazing projects that light up, make noise, move, and talk (via radio).
 - [BBC micro:bit in Practice](https://www.packtpub.com/product/bbc-microbit-in-practice/9781804610121) - A hands-on guide for building creative real-life projects with MicroPython and BBC micro:bit.
 - [The Invent To Learn Guide to the micro:bit](https://cmkpress.com/product/microbit/) - Create dozens of simple-to-complex, open-ended, hands-on projects using one or more micro:bits, upcycled junk, and craft supplies.
+- [Coding with BBC micro:bit in easy steps](https://ineasysteps.com/products-page/coding-with-bbc-microbit/) - Teaches children how to use the BBC micro:bit, and guides them through 10 exciting projects designed to make learning fun.
 
 
 ## 🧑‍🏫 Teaching Resources
