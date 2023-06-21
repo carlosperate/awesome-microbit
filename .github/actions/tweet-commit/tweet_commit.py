@@ -17,15 +17,15 @@ import tweepy
 # Getting the Twitter secrets form local dev file or GH action secrets
 try:
     from twitter_secrets import (
-        TWITTER_API_KEY,
-        TWITTER_API_SECRET_KEY,
+        TWITTER_CONSUMER_KEY,
+        TWITTER_CONSUMER_SECRET,
         TWITTER_ACCESS_TOKEN,
         TWITTER_ACCESS_TOKEN_SECRET,
     )
 except ImportError:
-    TWITTER_API_KEY = os.environ.get("INPUT_TWITTER_API_KEY", None)
-    TWITTER_API_SECRET_KEY = os.environ.get(
-        "INPUT_TWITTER_API_SECRET_KEY", None
+    TWITTER_CONSUMER_KEY = os.environ.get("INPUT_TWITTER_CONSUMER_KEY", None)
+    TWITTER_CONSUMER_SECRET = os.environ.get(
+        "INPUT_TWITTER_CONSUMER_SECRET", None
     )
     TWITTER_ACCESS_TOKEN = os.environ.get("INPUT_TWITTER_ACCESS_TOKEN", None)
     TWITTER_ACCESS_TOKEN_SECRET = os.environ.get(
@@ -129,20 +129,22 @@ def tweet_msg(msg):
     """Tweet the given message content."""
     if not all(
         (
-            TWITTER_API_KEY,
-            TWITTER_API_SECRET_KEY,
+            TWITTER_CONSUMER_KEY,
+            TWITTER_CONSUMER_SECRET,
             TWITTER_ACCESS_TOKEN,
             TWITTER_ACCESS_TOKEN_SECRET,
         )
     ):
-        print("Twitter access keys or tokens not available.")
+        print("Twitter access or consumer keys not available.")
         sys.exit(1)
-    # Authenticate to Twitter and create API object
-    auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET_KEY)
-    auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
-    tw = tweepy.API(auth)
-    tw.verify_credentials()
-    tw.update_status(msg)
+
+    client = tweepy.Client(
+        consumer_key=TWITTER_CONSUMER_KEY,
+        consumer_secret=TWITTER_CONSUMER_SECRET,
+        access_token=TWITTER_ACCESS_TOKEN,
+        access_token_secret=TWITTER_ACCESS_TOKEN_SECRET,
+    )
+    client.create_tweet(text=msg)
 
 
 def main():

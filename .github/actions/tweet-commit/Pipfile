@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 gitpython = ">=3.1.14,<4"
-tweepy = "==3.8.*"
+tweepy = "==4.14.*"
 
 [dev-packages]
 flake8 = "*"

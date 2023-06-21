@@ -23,7 +23,7 @@ jobs:
       uses: ./.github/actions/tweet-commit
       with:
         trigger_keyword: TweetMe!
-        twitter_api_key: "${{ secrets.twitter_api_key }}"
-        twitter_api_secret_key: "${{ secrets.twitter_api_secret_key }}"
+        twitter_consumer_key: "${{ secrets.twitter_consumer_key }}"
+        twitter_consumer_secret: "${{ secrets.twitter_consumer_secret }}"
         twitter_access_token: "${{ secrets.twitter_access_token }}"
         twitter_access_token_secret: "${{ secrets.twitter_access_token_secret }}"
