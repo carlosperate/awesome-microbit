@@ -745,6 +745,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
+- [micro:bit code-along - You've got this!](https://www.computingatschool.org.uk/events/2023/july/microbit-code-along-youve-got-this) - Code along on the 5th of July to create your first micro:bit programmes, learn about its sensors and input/outputs & find effective ways to teach using established pedagogic approaches.
 - [Getting started with micro:bit for teachers](https://microbit.org/teach/events/#getting-started-with-the-micro:bit-for-teachers) - Webinar on September 26th, a beginners guide to using micro:bit in the primary classroom. If you are a teacher wanting to introduce physical computing for the first time, this is the session for you.
 
 
