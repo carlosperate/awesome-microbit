@@ -745,7 +745,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Getting started with micro:bit for teachers](https://microbit.org/news/events/webinars/#getting-started-with-micro:bit-for-teachers) - Webinar on September 26th, a beginners guide to using micro:bit in the primary classroom. If you are a teacher wanting to introduce physical computing for the first time, this is the session for you.
+- [Getting started with micro:bit for teachers](https://microbit.org/teach/events/#getting-started-with-the-micro:bit-for-teachers) - Webinar on September 26th, a beginners guide to using micro:bit in the primary classroom. If you are a teacher wanting to introduce physical computing for the first time, this is the session for you.
 
 
 ## 🤷 Miscellaneous
