@@ -643,6 +643,7 @@ Useful Articles for developing on the micro:bit.
 - [Hardware to browser communication](https://www.youtube.com/watch?v=gqA1xbsCOjk) - Web connecting hardware with Zephyr (RTOS), LitElement (Web Components), and a micro:bit.
 - [micro:bit LIVE 2020 online conference](https://www.youtube.com/playlist?list=PLEo0hMrjdofv9-M0IOyD8Q0VtsX8O__iW) - All the talks and sessions from the micro:bit LIVE 2020 online event.
 - [micro:bit LIVE 2021 online conference](https://www.youtube.com/playlist?list=PLEo0hMrjdofs-XgVXg-Oib1mduB6biIIC) - All the talks and sessions from the micro:bit LIVE 2021 online event.
+- [Create interactive games using MicroPython and electronics](https://www.youtube.com/watch?v=teALLngESw0) - Let's learn how to use electronics and programming to create games using MicroPython and a micro:bit board.
 
 
 ## 📚 Books
