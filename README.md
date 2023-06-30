@@ -358,6 +358,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 ### 🎓 Machine Learning Editors & Tools
 
+- [ML-Machine](https://ml-machine.org) - An interactive machine-learning platform, utilising the micro:bit sensors to generate data, train a model, and run the model with real time sensor data streamed from the micro:bit via Bluetooth.
 - [A micro:bit of AI](https://microbitai.inventor.city) - A tool to bridge the gap between the Teachable Machine AI and a micro:bit. Train an AI to make a prediction, and then code your micro:bit to use those predictions to activate motors, lights & more!
 
 ### 🎓 Machine Learning Resources & Projects
