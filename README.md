@@ -706,8 +706,8 @@ Useful Articles for developing on the micro:bit.
 - [Scratch+micro:bit](https://plix.media.mit.edu/activities/scratchmicrobit) - This activity combines storytelling, coding, and making to engage in physical tinkering while helping to bridge the gap between the physical and digital worlds with micro:bit.
 - [PC micro:bit MicroPython](https://pc-microbit-micropython.readthedocs.io/en/latest/introduction/introduction.html) - Lessons to help you code your micro:bit using MicroPython.
 - [Barefoot meets micro:bit](https://www.computingatschool.org.uk/news-and-blogs/2022/march/barefoot-meets-the-microbit) - Barefoot Computing latest set of resources, teamed up with the Micro:bit Foundation, to create three activities with an outdoors theme and making cross-curricular links to science.
-- [Code.org CS Fundamentals](https://code.org/maker/csf-microbit) - BBC micro:bit resources for CS Fundamentals. Each course has a guide containing everything needed to use the micro:bit to add the immersive power of physical computing to your teaching of Code.org’s CS Fundamentals Course.
 - [Intermediate Coding with micro:bit](https://csinschools.io/courses/intermediate-coding-with-microbit/) - CS in Schools materials with micro:bit designed to help teachers confidently deliver a fun, engaging, and industry-relevant programme.
+- [Code.org micro:bit Curriculum](https://code.org/maker/microbit) - Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
 
 ### 🧑‍🏫 BBC Teaching Resources
 
