@@ -50,6 +50,8 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 
 ## 👩‍💻 Programming
 
+- [micro:bit classroom](https://classroom.microbit.org) - Run and manage live code sessions with MakeCode or Python Editor. It makes it quick and easy for teachers to share code with students, track their progress, help them debug, and save their progress.
+
 ### 🆚 Visual Programming
 
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (part of Microsoft's PXT).
