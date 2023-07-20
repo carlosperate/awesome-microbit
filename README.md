@@ -548,6 +548,7 @@ All these projects contain steps and resources required for reproduction.
 - [The Instant Star Guitar](https://learn.browndoggadgets.com/Guide/The+Instant+Star+Guitar/441) - Play thousands of rock songs with the press of a button on this electric instant rock star micro:bit guitar.
 - [Low cost solar power source for micro:bit](https://microbits-projects.blogspot.com/2022/09/low-cost-solar-power-source-for.html) - A low-cost DIY solar power source aimed at school projects such as weather stations, to log readings at intervals, and upload them to a computer for analysis.
 - [Synced NeoPixel Mickey Mouse Ears](https://community.element14.com/challenges-projects/element14-presents/project-videos/w/documents/27785/episode-567-synced-neopixel-mickey-mouse-ears) - These light-up Mickey Ears made with micro:bit and neopixels, show colourful animations and sync with other ear hats for the ultimate Disney group attire.
+- [Hagrid's Interactive Lantern and Magic Wand](https://www.instructables.com/Hagrids-Interactive-Lantern-and-Magic-Wand-With-Ti/) - Using 3D printing, micro:bit and Tinkercad software to create your own magic wand and Hagrid's lantern, bringing the magic of Harry Potter to life.
 
 ### 🏗️ Project Collections
 
