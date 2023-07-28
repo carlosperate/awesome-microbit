@@ -552,6 +552,7 @@ All these projects contain steps and resources required for reproduction.
 - [Synced NeoPixel Mickey Mouse Ears](https://community.element14.com/challenges-projects/element14-presents/project-videos/w/documents/27785/episode-567-synced-neopixel-mickey-mouse-ears) - These light-up Mickey Ears made with micro:bit and neopixels, show colourful animations and sync with other ear hats for the ultimate Disney group attire.
 - [Hagrid's Interactive Lantern and Magic Wand](https://www.instructables.com/Hagrids-Interactive-Lantern-and-Magic-Wand-With-Ti/) - Using 3D printing, micro:bit and Tinkercad software to create your own magic wand and Hagrid's lantern, bringing the magic of Harry Potter to life.
 - [Vision Guided Explorer Robot](https://www.instructables.com/Vision-Guided-Explorer-Robot/) - A micro:bit robot with a mounted camera transmitting video to a mobile phone and controlled by a micro:bit gamepad.
+- [Air Quality Monitor](https://microbits-projects.blogspot.com/2023/07/air-quality-monitor.html) - Hacking the Ikea Vindriktning air quality monitor to show the sensor data on the micro:bit display.
 
 ### 🏗️ Project Collections
 
