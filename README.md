@@ -759,7 +759,7 @@ Useful Articles for developing on the micro:bit.
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
 - [Get started with BBC micro:bit - the next gen](https://microbit.org/teach/events/?event=get-started-with-bbc-microbit-the-next-gen&date=2023-09-14T15%3A00%3A00.000Z) - Webinar on the 14th of September to introduce UK teachers to the micro:bit and share the "BBC micro:bit - the next gen" campaign.
-- [Getting started with micro:bit for teachers](https://microbit.org/teach/events/#getting-started-with-the-micro:bit-for-teachers) - Webinar on September 26th, a beginners guide to using micro:bit in the primary classroom. If you are a teacher wanting to introduce physical computing for the first time, this is the session for you.
+- [Getting started with micro:bit for teachers](https://microbit.org/teach/events/?event=getting-started-with-the-microbit-for-teachers&date=2023-09-26T15%3A00%3A00.000Z) - Webinar on September 26th, a beginners guide to using micro:bit in the primary classroom. If you are a teacher wanting to introduce physical computing for the first time, this is the session for you.
 
 
 ## 🤷 Miscellaneous
