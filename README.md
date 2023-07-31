@@ -236,7 +236,6 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 ##### ©️ C/C++ Editors
 
 - [PlatformIO](https://docs.platformio.org/en/latest/boards/nordicnrf51/bbcmicrobit.html) - Embedded IDE with support for the micro:bit using the Arduino or Mbed software stack.
-- [COMPX318 micro:bit Compiler](https://peer-compile.cms.waikato.ac.nz) - Upload a single source file to be compiled online with the DAL C/C++ toolchain and download the resulting hex file.
 - [Eclipse Instructions](https://mattoppenheim.com/2018/05/04/eclipse-yotta-c-c-and-the-bbc-microbit/) - Setting up Eclipse with Yotta to build and debug with the BBC micro:bit.
 
 ##### ©️ C/C++ Libraries
