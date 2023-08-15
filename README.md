@@ -552,6 +552,7 @@ All these projects contain steps and resources required for reproduction.
 - [Hagrid's Interactive Lantern and Magic Wand](https://www.instructables.com/Hagrids-Interactive-Lantern-and-Magic-Wand-With-Ti/) - Using 3D printing, micro:bit and Tinkercad software to create your own magic wand and Hagrid's lantern, bringing the magic of Harry Potter to life.
 - [Vision Guided Explorer Robot](https://www.instructables.com/Vision-Guided-Explorer-Robot/) - A micro:bit robot with a mounted camera transmitting video to a mobile phone and controlled by a micro:bit gamepad.
 - [Air Quality Monitor](https://microbits-projects.blogspot.com/2023/07/air-quality-monitor.html) - Hacking the Ikea Vindriktning air quality monitor to show the sensor data on the micro:bit display.
+- [micro:bit Sensor Network](https://github.com/RBilsland/Microbit-Sensor-Network) - Using micro:bits as educational sensors that will wirelessly talk back to a Raspberry Pi via a micro:bit gateway.
 
 ### 🏗️ Project Collections
 
