@@ -96,6 +96,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [uPyCraft](https://dfrobot.gitbooks.io/upycraft/) - A micro:bit compatible MicroPython IDE for Windows/Mac, designed with a simple and convenient interface.
 - [CodeSpace](https://firialabs.com/pages/what-is-codespace) - From Firia Labs, an online MicroPython IDE for micro:bits, with bundled learning resources.
 - [micro:bit Python](https://marketplace.visualstudio.com/items?itemName=MAKinteract.micro-bit-python) - Visual Studio Code extension for micro:bit MicroPython with access to flash and edit example sketches and interact with the filesystem.
+- [Microbit Explorer](https://marketplace.visualstudio.com/items?itemName=electropol-fr.microbit-explorer) - A Visual Studio Code extension for students who code the BBC micro:bit with Python.
 
 ##### 🐍 MicroPython Blocks Editors
 
