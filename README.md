@@ -629,7 +629,6 @@ Useful Articles for developing on the micro:bit.
 
 ## 🎥 Videos
 
-- [MicroMonsters](https://www.youtube.com/channel/UCK2DviDexh_Er2QYZerZyZQ) - YouTube channel with tutorials to learn to code with your family.
 - [micro:bit and Bluetooth](https://www.youtube.com/playlist?list=PLYOCnwH2UtBzhJ2nvn_DM3itz6GNVwrDu) - YouTube playlist with Martin Woolley's Bluetooth videos.
 - [Video Series from The Maker Movies](https://www.youtube.com/playlist?list=PLD0HD_3AJljXDWoasq2x5gHmkKeV7cc-P) - List of short, introductory videos for anyone wanting to get started with the micro:bit.
 - [SparkFun video resources](https://sparkfuneducation.com/video-resources/microbit.html) - Growing list of video resources for the micro:bit.
@@ -640,14 +639,11 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit to Firebase](https://www.youtube.com/playlist?list=PLGYgoZPmYyek0eIEfVWyt3nK_J8iZ4OBP) - Send data from a BBC micro:bit to Google’s Firebase cloud database with a Python script. Retrieve the data and  create a simple IoT demo model.
 - [Scratch micro:bit Tutorials](https://www.youtube.com/playlist?list=PLSgUBfi51uldOnJU11lVkViTZBi0rE30L) - Tutorials and project ideas for the micro:bit with Scratch.
 - [The Learning Circuit](https://community.element14.com/learn/learning-center/stem-academy/microbit/microbit-tutorial-videos/) - Element14 video series to learn about basic electronics. Some of the episodes cover different ways to learn and explore with the BBC micro:bit.
-- [Online Learning with MakeCode](https://makecode.com/online-learning) - A list of helpful resources, including live video streams, that students can access to continue their computing education outside the classroom now that many schools are closed.
 - [Creative Coding with micro:bit](https://www.youtube.com/playlist?list=PLIRQWQAcfF037nji2jK6iiafMLubgJqUh) - Creative activities with the micro:bit from Kids Code Jeunesse.
 - [Video Tutorials for micro:bit](https://www.youtube.com/playlist?list=PLS9qLR8VoFA5jr14vzjJwqZ5DsBLFzuYn) - A playlist of video tutorials by Geek Tutorials, walking through a lot of the micro:bit features.
-- [Code with Liam](https://www.youtube.com/channel/UCubWM52hsTe2eeiTWqRJICw/) - Video tutorials showing how to code with the micro:bit.
 - [Get started with the micro:bit](https://www.youtube.com/playlist?list=PLEo0hMrjdofusveMscRFN9FeqKzDBzuXr) - A set of videos that will take you from first use to micro:bit expert, exploring all the features of this tiny computer.
 - [A wide range of micro:bit videos](https://www.youtube.com/playlist?list=PL99_XE3drPZeUdLgZBOlZdGbJZ4XUXcmY) - A series of videos from beginning to expert with a wide range of topics, uses and add-ons.
 - [Building a mini sumo robot on a budget](https://www.youtube.com/watch?v=Y9WXdobs_vU) - Designing a mini sumo robot from scratch with micro:bit. From a simple paper sketch, to component selection, hardware design, mechanical assembly, coding, and testing.
-- [MakeCode and Hardware](https://www.youtube.com/channel/UCYvU-GOQCX97aDu3o4bxl_Q/videos) - YouTube channel with a large collection of projects using micro:bit and MakeCode.
 - [The Engineering Design Process](https://www.youtube.com/playlist?list=PLCUVFFwr4MKe_qkWNozMlhvm5GJLzjjsD) - Jasmine is here to take you though the stages of planning, designing and building your micro:bit project following the engineering design process.
 - [micro:bit for Robotics](https://www.youtube.com/watch?v=iwaRidlm2RM) - Video introducing the BBC micro:bit, what you can can do with it, and how to use it with robots.
 
