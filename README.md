@@ -42,6 +42,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [📚 Books](#-books)
 - [🧑‍🏫 Teaching Resources](#-teaching-resources)
 - [🏫 Online Courses](#-online-courses)
+- [🖼️ Posters](#-posters)
 - [👪 Community](#-community)
 - [📅 Events](#-events)
 - [🤷 Miscellaneous](#-miscellaneous)
@@ -737,6 +738,11 @@ Useful Articles for developing on the micro:bit.
 - [Coding for Your Classroom 4 - 10](https://www.edx.org/course/coding-for-your-classroom-4-10) - Course to build educators’ comfortability and confidence in digital literacy, through hands-on learning activities and demos in a variety of web-based platforms, including micro:bit.
 
 
+## 🖼️ Posters
+
+- [micro:bit Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/2028) - Element14 has put together this detailed, beautifully rendered, cross-section micro:bit poster highlighting all of the device's key functions and components.
+
+
 ## 👪 Community
 
 - [Official micro:bit Slack Channel](https://tech.microbit.org/community/#join-us-on-the-microbit-community-slack-channel)
@@ -761,7 +767,6 @@ Do you know about any free online event with micro:bits? Please add them here, P
 
 - [micro:bit broadcast](https://microbit-broadcast.embeddedlog.com) - (Discontinued, archived) newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [microbit.org Support](https://support.microbit.org) - The support pages from the micro:bit Foundation is a great source of information, containing an extensive collection of FAQs, articles, and guides.
-- [micro:bit Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/2028) - Element14 has put together this detailed, beautifully rendered, cross-section micro:bit poster highlighting all of the device's key functions and components.
 - [Micro World Tour](https://microworldtour.github.io) - Before the micro:bit was released a few went on a tour to the world-wide Python community. A lot of interesting content and ideas on these micro:bit adventures.
 - [Parent's Complete Guide To The BBC micro:bit](https://www.kitronik.co.uk/blog/parents-complete-guide-bbc-microbit/) - Free resource to help parent's get actively involved in helping their children learn how to code, even with no prior coding experience.
 - [micro:mag](https://magazines.micromag.cc/) - The Unofficial micro:bit Community Magazine.
