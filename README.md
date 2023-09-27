@@ -42,7 +42,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [📚 Books](#-books)
 - [🧑‍🏫 Teaching Resources](#-teaching-resources)
 - [🏫 Online Courses](#-online-courses)
-- [🖼️ Posters](#-posters)
+- [🖼️ Posters](#%EF%B8%8F-posters)
 - [👪 Community](#-community)
 - [📅 Events](#-events)
 - [🤷 Miscellaneous](#-miscellaneous)
@@ -741,6 +741,7 @@ Useful Articles for developing on the micro:bit.
 ## 🖼️ Posters
 
 - [micro:bit Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/2028) - Element14 has put together this detailed, beautifully rendered, cross-section micro:bit poster highlighting all of the device's key functions and components.
+- [micro:bit Poster pack](https://microbit.org/teach/classroom-resources/microbit-posters/) - A pack of 3 posters from the Micro:bit Foundation with "What will you create?", "Yes I can", and "A labelled micro:bit".
 
 
 ## 👪 Community
