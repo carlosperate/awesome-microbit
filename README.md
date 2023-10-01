@@ -750,6 +750,7 @@ Useful Articles for developing on the micro:bit.
 
 - [Official micro:bit Slack Channel](https://tech.microbit.org/community/#join-us-on-the-microbit-community-slack-channel)
 - [`@microbit_edu` on twitter](https://twitter.com/microbit_edu)
+- [`microbit_edu` on Instagram](https://www.instagram.com/microbit_edu/)
 - [`microbitfoundation` on Facebook](https://www.facebook.com/microbitfoundation)
 - [Micro:bit Educational Foundation on YouTube](https://www.youtube.com/channel/UCJRGTnzeb0esPmsE-mFkPGg/)
 - [micro:bit Python mailing list (archived)](https://github.com/ntoll/microbit_mailman_archive)
