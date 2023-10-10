@@ -262,6 +262,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [micro:bit Video](https://github.com/blogmywiki/microbit-video) - C++ programs for generating NTSC video from a V1 micro:bit to connect to a TV.
 - [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as a Bluetooth HID device, like a keyboard, mouse, or gamepad.
 - [microbit-dal-ext-kit](https://github.com/softgraph/microbit-dal-ext-kit) - A set of components and utilities for C++ applications using micro:bit DAL (runtime).
+- [MicrobitV2-HHS Arduino Library](https://github.com/Grrtzm/MicrobitV2-HHS) - An Arduino library for micro:bit V2 for radio and PWM (including Servo and Tone libraries).
 
 ##### ©️ RTOS with micro:bit profile
 
