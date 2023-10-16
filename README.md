@@ -678,6 +678,7 @@ Useful Articles for developing on the micro:bit.
 - [BBC micro:bit in Practice](https://www.packtpub.com/product/bbc-microbit-in-practice/9781804610121) - A hands-on guide for building creative real-life projects with MicroPython and BBC micro:bit.
 - [The Invent To Learn Guide to the micro:bit](https://cmkpress.com/product/microbit/) - Create dozens of simple-to-complex, open-ended, hands-on projects using one or more micro:bits, upcycled junk, and craft supplies.
 - [Coding with BBC micro:bit in easy steps](https://ineasysteps.com/products-page/coding-with-bbc-microbit/) - Teaches children how to use the BBC micro:bit, and guides them through 10 exciting projects designed to make learning fun.
+- [micro:bit Projects with Python and Single Board Computers](https://link.springer.com/book/10.1007/978-1-4842-9197-9) - Building STEAM Projects with Code Club and Kids' Maker Groups.
 
 
 ## 🧑‍🏫 Teaching Resources
