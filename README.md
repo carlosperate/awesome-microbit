@@ -681,6 +681,7 @@ Useful Articles for developing on the micro:bit.
 - [The Invent To Learn Guide to the micro:bit](https://cmkpress.com/product/microbit/) - Create dozens of simple-to-complex, open-ended, hands-on projects using one or more micro:bits, upcycled junk, and craft supplies.
 - [Coding with BBC micro:bit in easy steps](https://ineasysteps.com/products-page/coding-with-bbc-microbit/) - Teaches children how to use the BBC micro:bit, and guides them through 10 exciting projects designed to make learning fun.
 - [micro:bit Projects with Python and Single Board Computers](https://link.springer.com/book/10.1007/978-1-4842-9197-9) - Building STEAM Projects with Code Club and Kids' Maker Groups.
+- [Make: AI Robots](https://www.makershed.com/products/make-ai-robots-print) - Introduces AI through exciting craft projects with a mechanical cardboard creations, fun electronic lights, motors, simple coding on a micro:bit, and then teaches how to train AI to create a spark of life.
 
 
 ## 🧑‍🏫 Teaching Resources
@@ -717,7 +718,6 @@ Useful Articles for developing on the micro:bit.
 - [Code.org micro:bit Curriculum](https://code.org/maker/microbit) - Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
 - [Sustainable Computing](https://www.digitall.charity/sustainablecomputing) - BBC micro:bit projects combining physical construction, coding, and environmental awareness to engage students in understanding the nature of the world around them.
 - [Out Of This World](https://www.digitall.charity/outofthisworldwiththemicrobit) - Combine BBC micro:bit coding concepts with practical applications, demonstrate the relevance of coding in various scenarios, and address the specific needs of astronauts with this set of activities.
-- [Make: AI Robots](https://www.makershed.com/products/make-ai-robots-print) - Introduces AI through exciting craft projects with a mechanical cardboard creations, fun electronic lights, motors, simple coding on a micro:bit, and then teaches how to train AI to create a spark of life.
 
 ### 🧑‍🏫 BBC Teaching Resources
 
