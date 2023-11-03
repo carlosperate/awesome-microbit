@@ -690,6 +690,7 @@ Useful Articles for developing on the micro:bit.
 - [microbit.org Lessons](https://microbit.org/lessons/) - Curriculum-linked units of work and design challenges for planning and teaching computing in primary and secondary schools.
 - [Microsoft 14 Week Curriculum](https://makecode.microbit.org/courses/csintro) - Targeted to middle school grades 6-8 (ages 11-14). It is also written for teachers who may not have a Computer Science background, or may be teaching an "Intro to CS" for the 1st time.
 - [Code Club micro:bit projects](https://projects.raspberrypi.org/en/codeclub/microbit)
+- [Raspberry Pi Foundation micro:bit Project Path](https://rpf.io/microbit-intro) - BBC micro:bit Projects that focus on wellbeing, including topics like mental health, relaxation, and exercise.
 - [IET micro:bit case studies](http://education.theiet.org/secondary/stem-activities/microbit/) - Booklets and video content to bring a variety of real-life applications of the micro:bit to life in your classroom.
 - [101 Computing BBC micro:bit category](https://www.101computing.net/category/bbc-microbit/) - Computing challenges with the micro:bit to boost your programming skills or spice up your teaching of computer science.
 - [micro:bit of Things](https://sites.google.com/view/microbitofthings/) - Notes on micro:bit project ideas for Key Stage 2 and 3.
