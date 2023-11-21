@@ -277,6 +277,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [ioprog Zephyr & micro:bit Articles](https://ioprog.com/tag/microbit-v2/) - A series of articles and tutorials using the micro:bit on board components with Zephyr.
 - [Bare metal examples](https://github.com/dwelch67/microbit) - C bare metal examples for the BBC micro:bit.
 - [Bare metal micro:bit](https://spivey.oriel.ox.ac.uk/baremetal/Bare_Metal_micro:bit) - Low level programming examples and tutorials.
+- [nu-microbit-base](https://github.com/nu-ce346/nu-microbit-base) - C bare metal environment using the Nordic SDK with example applications.
 
 ### 🦀 Rust
 
