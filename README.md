@@ -723,6 +723,7 @@ Useful Articles for developing on the micro:bit.
 - [Code.org micro:bit Curriculum](https://code.org/maker/microbit) - Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
 - [Sustainable Computing](https://www.digitall.charity/sustainablecomputing) - BBC micro:bit projects combining physical construction, coding, and environmental awareness to engage students in understanding the nature of the world around them.
 - [Out Of This World](https://www.digitall.charity/outofthisworldwiththemicrobit) - Combine BBC micro:bit coding concepts with practical applications, demonstrate the relevance of coding in various scenarios, and address the specific needs of astronauts with this set of activities.
+- [Mr Morrison's micro:bit Lessons](https://mrmorrison.co.uk/microbit/) - Starter lessons, beyond the basics, and data & sustainability, with lesson plans, worksheets,and videos.
 
 ### 🧑‍🏫 BBC Teaching Resources
 
