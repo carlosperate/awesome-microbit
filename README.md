@@ -334,6 +334,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [micro:bit uploader](https://makecode.microbit.org/uploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 - [Hardware Simulation with QEMU](https://www.qemu.org/2019/05/22/microbit/) - Emulation support for the micro:bit is available from QEMU 4.0 and can be used for low-level software testing and development.
 - [WebUSB flashing tool](https://microbit.org/tools/webusb-hex-flashing/) - Tool to flash (program) any BBC micro:bit hex file using the WebUSB technology available in Chrome and Edge browsers.
+- [micro:bit Explorer](https://microbit-explorer.ok-y.xyz) - Explore the BBC micro:bit sensor data and inputs over BLE with Web Bluetooth.
 
 
 ## 🧰 micro:bit Tools
