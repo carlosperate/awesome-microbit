@@ -455,6 +455,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Stackable micro:bit LED Matrix Magnifier](https://www.thingiverse.com/thing:4756078) - Designed to be placed on top of the micro:bit to magnify the display, it can be combined with multiple micro:bits to create a larger screen to quadruple the LED matrix.
 - [Solderless micro:bit timer](https://www.thingiverse.com/thing:4790928) - A configurable timer made with a v2 micro:bit board, some electronics components and very few soldering.
 - [panQuad](https://www.prusaprinters.org/prints/135495-panquad) - Quadruped robot powered by the micro:bit, a robot:bit, and 8 servo motors.
+- [Advent Ornament Case](https://www.printables.com/model/664681-microbit-advent-ornamet-case) - A star ornament to clip the micro:bit and its battery pack and hang it.
 
 
 ## 📐 CAD
