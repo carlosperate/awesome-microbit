@@ -139,6 +139,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [TMP117](https://github.com/CoreElectronics/CE-PiicoDev-TMP117-MicroPython-Module) - Library to interface with a TMP117 high precision temperature sensor.
 - [BME280](https://github.com/CoreElectronics/CE-PiicoDev-BME280-MicroPython-Module) - Library to interface with a BME280 humidity, pressure, and temperature sensor via I2C.
 - [bitbotxl](https://github.com/oivron/bitbotxl) - Module for the 4tronix Bit:Bot XL Robot for BBC micro:bit.
+- [DHT11](https://github.com/rhubarbdog/microbit-dht11) - Module for the Aosong DHT11 temperature and humidity sensor using the one wire protocol.
 
 ##### 🐍 Python Libraries
 
