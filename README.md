@@ -656,6 +656,7 @@ Useful Articles for developing on the micro:bit.
 - [The Engineering Design Process](https://www.youtube.com/playlist?list=PLCUVFFwr4MKe_qkWNozMlhvm5GJLzjjsD) - Jasmine is here to take you though the stages of planning, designing and building your micro:bit project following the engineering design process.
 - [micro:bit for Robotics](https://www.youtube.com/watch?v=iwaRidlm2RM) - Video introducing the BBC micro:bit, what you can can do with it, and how to use it with robots.
 - [MakeCode micro:bit Tutorials](https://www.youtube.com/playlist?list=PLMMBk9hE-SerTLN2D6NiI7v7DJ78IBIAq) - Short video tutorials to get started programming the BBC micro:bit with MakeCode.
+- [micro:bit for Beginners](https://www.youtube.com/watch?v=s_tTJGW98Ok) - A 2-hour educator workshop from Parallax with MakeCode and the Python Editor.
 
 ### 🎥 Conference Talks
 
