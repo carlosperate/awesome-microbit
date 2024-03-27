@@ -787,7 +787,6 @@ Do you know about any free online event with micro:bits? Please add them here, P
 - [microbit.org Support](https://support.microbit.org) - The support pages from the micro:bit Foundation is a great source of information, containing an extensive collection of FAQs, articles, and guides.
 - [Micro World Tour](https://microworldtour.github.io) - Before the micro:bit was released a few went on a tour to the world-wide Python community. A lot of interesting content and ideas on these micro:bit adventures.
 - [Parent's Complete Guide To The BBC micro:bit](https://www.kitronik.co.uk/blog/parents-complete-guide-bbc-microbit/) - Free resource to help parent's get actively involved in helping their children learn how to code, even with no prior coding experience.
-- [micro:mag](https://magazines.micromag.cc/) - The Unofficial micro:bit Community Magazine.
 - [micro:bit Out Of Box Experience](https://support.microbit.org/support/solutions/articles/19000021613-reset-the-micro-bit-to-factory-defaults) - ([Source Code](https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/out-of-box-experience)) The default program running on a brand new micro:bit.
 - [Accessory Guide](https://microbit.org/buy/accessories/) - A constantly updated list of accessories for the micro:bit.
 - [pin:out](https://microbit.pinout.xyz) - A GPIO pinout interactive reference for the BBC micro:bit and accessories.
