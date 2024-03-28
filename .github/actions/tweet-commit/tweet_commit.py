@@ -6,6 +6,7 @@ tokens.
 It also depends on running with the Current Working Directory set to the
 repository root.
 """
+
 import os
 import io
 import re
