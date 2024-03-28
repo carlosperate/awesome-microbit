@@ -10,7 +10,7 @@ tweepy = "==4.14.*"
 [dev-packages]
 flake8 = "*"
 flake8-bugbear = {version = "*",markers = "python_version >= '3.5'"}
-black = {version = "==22.8.0",markers = "python_version >= '3.6'"}
+black = {version = "==24.3.0",markers = "python_version >= '3.6'"}
 flake8-builtins = "*"
 flake8-docstrings = "*"
 
