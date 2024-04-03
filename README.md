@@ -727,6 +727,7 @@ Useful Articles for developing on the micro:bit.
 - [Sustainable Computing](https://www.digitall.charity/sustainablecomputing) - BBC micro:bit projects combining physical construction, coding, and environmental awareness to engage students in understanding the nature of the world around them.
 - [Out Of This World](https://www.digitall.charity/outofthisworldwiththemicrobit) - Combine BBC micro:bit coding concepts with practical applications, demonstrate the relevance of coding in various scenarios, and address the specific needs of astronauts with this set of activities.
 - [Mr Morrison's micro:bit Lessons](https://mrmorrison.co.uk/microbit/) - Starter lessons, beyond the basics, and data & sustainability, with lesson plans, worksheets, and videos.
+- [Oak National Academy Resources](https://classroom.thenational.academy/units/sensing-beda) - Key stage 2 computing resources on sensing the world with the BBC micro:bit.
 
 ### 🧑‍🏫 BBC Teaching Resources
 
