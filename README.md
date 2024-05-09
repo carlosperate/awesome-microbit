@@ -732,6 +732,7 @@ Useful Articles for developing on the micro:bit.
 ### 🧑‍🏫 BBC Teaching Resources
 
 - [The Next Gen](https://www.bbc.co.uk/teach/microbit) - Classroom resources, teacher support, articles, interviews, videos and more for the BBC micro:bit Next Gen Campaign.
+	- [BBC micro:bit playground survey](https://www.bbc.co.uk/teach/microbit/articles/zrnqp9q) - An an exciting investigation inviting school children from across the UK to survey their playground in a engaging whole class activity.
 
 **Resources from the original micro:bit V1 release:**
 
