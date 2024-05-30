@@ -731,6 +731,11 @@ Useful Articles for developing on the micro:bit.
 
 ### 🧑‍🏫 BBC Teaching Resources
 
+- [The Next Gen](https://www.bbc.co.uk/teach/microbit) - Classroom resources, teacher support, articles, interviews, videos and more for the BBC micro:bit Next Gen Campaign.
+	- [BBC micro:bit playground survey](https://www.bbc.co.uk/teach/microbit/articles/zrnqp9q) - An an exciting investigation inviting school children from across the UK to survey their playground in a engaging whole class activity.
+
+**Resources from the original micro:bit V1 release:**
+
 - [Welcome to the micro:bit - Live Lesson](https://www.bbc.co.uk/teach/live-lessons/articles/zhqwxyc) - Learn how to create games, animations and robots using simple code.
 - [Doctor Who and the micro:bit - Live Lesson](https://www.bbc.co.uk/teach/live-lessons/articles/z7ycwty) - The BBC micro:bit will be put to the test at the controls of the TARDIS in this special BBC Live Lesson in collaboration with the team behind Doctor Who.
 - [Strictly micro:bit - Live Lessons](https://www.bbc.co.uk/teach/live-lessons/articles/zkpty9q) - The full BBC Live Lesson exploring the basics of coding, with help from the stars of Strictly Come Dancing and the BBC micro:bit.
