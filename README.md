@@ -334,7 +334,6 @@ These languages do not program the micro:bit directly, but can be used to create
 - [micro:bit uploader](https://makecode.microbit.org/uploader) - Windows application that monitors your Downloads folder and flashes any new programs to the micro:bit.
 - [Hardware Simulation with QEMU](https://www.qemu.org/2019/05/22/microbit/) - Emulation support for the micro:bit is available from QEMU 4.0 and can be used for low-level software testing and development.
 - [WebUSB flashing tool](https://microbit.org/tools/webusb-hex-flashing/) - Tool to flash (program) any BBC micro:bit hex file using the WebUSB technology available in Chrome and Edge browsers.
-- [micro:bit Explorer](https://microbit-explorer.ok-y.xyz) - Explore the BBC micro:bit sensor data and inputs over BLE with Web Bluetooth.
 
 
 ## 🧰 micro:bit Tools
@@ -345,6 +344,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [My micro:bit](https://medlight.pl/mymicrobit) - Web app that communicates with the micro:bit via WebUSB or Web Bluetooth. You can control the micro:bit from your computer keyboard, send commands, and analyse sensor data in charts and gauges.
 - [midi2ubit](https://github.com/63rabbits/midi2ubit) - Convert MIDI notes to notes-string for micro:bit. The notes-string can then be played using a MakeCode extention.
 - [HOVER:BIT Bluetooth Controller](https://github.com/JakobST1n/microbit-gamepad) - A web app for sending DPAD events to micro:bit devices over Bluetooth.
+- [micro:bit Explorer](https://microbit-explorer.ok-y.xyz) - Explore the BBC micro:bit sensor data and inputs over BLE with Web Bluetooth.
 
 
 ## 📱 Mobile Apps
