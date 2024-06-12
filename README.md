@@ -472,6 +472,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit SVG](https://github.com/microbit-foundation/microbit-svg) - A detailed SVG (Scalable Vector Graphics) drawing of the BBC micro:bit.
 - [micro:bit artwork tool](https://microbit.org/design-your-microbit/v2/) - Online tool to create a bitmap or vector image of the BBC micro:bit board with custom LED display and micro:bit colour configuration.
 - [MonkMakes micro:bit Diagramming Kit](https://github.com/simonmonk/mm_mb_diagramming_kit) - An SVG file template for drawing BBC micro:bit wiring diagrams using alligator clips.
+- [MakeCode blocks cut-out cards](https://microbit.org/teach/classroom-resources/microbit-makecode-blocks-cutout-cards/) - Printable MakeCode blocks for unplugged activities.
 
 
 ## 🏗️ Projects
