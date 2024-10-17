@@ -18,6 +18,8 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.6'
+    # Temp fix for: SSL_connect returned=1 errno=0 state=error: certificate verify failed (unable to get local issuer certificate)
+    - run: sudo apt-get install -y ca-certificates
     - name: Install awesome_bot
       run: gem install awesome_bot
     - name: Load allow list to an env var to call in the next step
