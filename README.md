@@ -1,6 +1,6 @@
 # Awesome micro:bit
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Link Checker GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Check%20Links/badge.svg)](http://github.com/carlosperate/awesome-microbit/actions?workflow=Check+Links) [![Tweet GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg)](http://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-informational.svg)](https://creativecommons.org/publicdomain/zero/1.0/) [![Twitter Follow](https://img.shields.io/twitter/follow/awesomemicrobit?color=%231da1f2&label=Follow%20on%20Twitter&style=flat)](https://twitter.com/awesomemicrobit)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Link Checker GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Check%20Links/badge.svg)](https://github.com/carlosperate/awesome-microbit/actions?workflow=Check+Links) [![Tweet GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg)](http://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-informational.svg)](https://creativecommons.org/publicdomain/zero/1.0/) [![Twitter Follow](https://img.shields.io/twitter/follow/awesomemicrobit?color=%231da1f2&label=Follow%20on%20Twitter&style=flat)](https://twitter.com/awesomemicrobit)
 
 [![awesome micro:bit logo](https://user-images.githubusercontent.com/4189262/60908738-830bb780-a274-11e9-9d86-6b82ab89334f.png)](https://github.com/carlosperate/awesome-microbit)
 
@@ -370,7 +370,7 @@ These languages do not program the micro:bit directly, but can be used to create
 ### 🎓 Machine Learning Editors & Tools
 
 - [ML-Machine](https://ml-machine.org) - An interactive machine-learning platform, utilising the micro:bit sensors to generate data, train a model, and run the model with real time sensor data streamed from the micro:bit via Bluetooth.
-- [MAKE: AI Robots](https://makeairobots.com) - A tool to bridge the gap between the Teachable Machine AI and a micro:bit. Train an AI to make a prediction, and then code your micro:bit to use those predictions to activate motors, lights & more!
+- [MAKE: AI Robots](http://makeairobots.com) - A tool to bridge the gap between the Teachable Machine AI and a micro:bit. Train an AI to make a prediction, and then code your micro:bit to use those predictions to activate motors, lights & more!
 
 ### 🎓 Machine Learning Resources & Projects
 
@@ -584,7 +584,7 @@ All these projects contain steps and resources required for reproduction.
 
 Useful Articles for developing on the micro:bit.
 
-- [Offline C/C++ Development With The micro:bit](http://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
+- [Offline C/C++ Development With The micro:bit](https://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
 - [Sending 'commands' from a micro:bit over Bluetooth](https://bluetooth-developer.blogspot.com/2016/07/sending-commands-from-microbit-over.html)
 - [Getting Started with the micro:bit Bluetooth IO Pin Service](https://ukbaz.github.io/howto/ubit_ble_profile.html)
 - [Using MQTT-SN over BLE with the BBC micro:bit](https://blog.benjamin-cabe.com/2017/01/16/using-mqtt-sn-over-ble-with-the-bbc-microbit)
@@ -616,7 +616,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit & Vital Signs](https://medium.com/liki-blog/micro-bit-vital-signs-b76e495f6a59) - How to measure electrical pulses with the micro:bit, to build a pulse monitor with an optical heart rate detector.
 - [Measuring pendulum decay with BBC micro:bit and XinaBox](https://www.hackster.io/PragmaticPhil/measuring-pendulum-decay-with-bbc-micro-bit-and-xinabox-b836a2) - Collecting large data sets is key to applied data science, use the techniques in this project to collect data on your BBC micro:bit.
 - [Read a PS/2 keyboard on a BBC micro:bit](http://www.suppertime.co.uk/blogmywiki/2020/08/ps2-keyboard-microbit/) - Learning how PS/2 keyboards work, their serial communication, and how to connect them to a micro:bit.
-- [Testing the micro:bit's ADC](http://www.doctormonk.com/2020/08/testing-microbits-analog-inputs.html) - The micro:bit can measure analog voltages, but you can't measure something without altering it & the best we can do is to make the measurement errors small. This article determines the micro:bit ADC measurement error.
+- [Testing the micro:bit's ADC](https://www.doctormonk.com/2020/08/testing-microbits-analog-inputs.html) - The micro:bit can measure analog voltages, but you can't measure something without altering it & the best we can do is to make the measurement errors small. This article determines the micro:bit ADC measurement error.
 - [Make your own processor with a micro:bit](http://www.suppertime.co.uk/blogmywiki/2020/05/microbit-cpu/) - Coding a 5-bit CPU in the micro:bit, useful for understanding or teaching how CPUs and simple systems work.
 - [Embedded Python: Build a Game on the micro:bit](https://realpython.com/embedded-python/) - In this tutorial you’ll learn what embedded development is, why you would use Python, and how to write a basic game on the micro:bit with MicroPython.
 - [Build a snake game](https://www.cameronmacleod.com/blog/microbit-snake) - Learning how to make a snake game using MicroPython on the micro:bit.
