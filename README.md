@@ -75,7 +75,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 
 ##### 🆚 Unofficial Scratch Extensions
 
-- [Scratch for BBC micro:bit](http://picaxe.com/BBC-microbit) - Using micro:bit with Scratch 2 or Snap! as a Bluetooth 'games controller' (needs specific BLED112 Bluetooth dongle).
 - [ScratchX micro:bit extension](https://llk.github.io/microbit-extension/) - Lets you control your micro:bit wirelessly using Scratch programming blocks.
 - [s2m](https://github.com/MrYsLab/s2m) - A Python program that acts as a bridge between the Scratch 2 off-line editor and the micro:bit via USB.
 - [s2microbit BLE](https://github.com/memakura/s2microbit-ble#English) - Scratch 2 (offline) extension for BBC micro:bit bluetooth connection with a Windows PC.
@@ -683,7 +682,7 @@ Useful Articles for developing on the micro:bit.
 - [Beginning BBC micro:bit](https://link.springer.com/book/10.1007/978-1-4842-3360-3) - A Practical Introduction to micro:bit Development.
 - [BBC micro:bit Recipes](https://link.springer.com/book/10.1007/978-1-4842-4913-0) - Learn Programming with Microsoft MakeCode Blocks.
 - [Micro:bit for Mad Scientists](https://nostarch.com/microbitformad) - The 30 simple projects and experiments in this book will show you how to use the micro:bit to build a secret science lab, as you learn basic coding and electronics skills.
-- [Save The World With Code](https://www.mheducation.co.uk/save-the-world-with-code-20-fun-projects-for-all-ages-using-raspberry-pi-micro-bit-and-circuit-9781260457599-emea) - Twenty fun projects for all ages using Raspberry Pi, micro:bit, and Circuit Playground Express.
+- [Save The World With Code](https://www.mhprofessional.com/save-the-world-with-code-20-fun-projects-for-all-ages-using-raspberry-pi-micro-bit-and-circuit-9781260457599-usa-group) - Twenty fun projects for all ages using Raspberry Pi, micro:bit, and Circuit Playground Express.
 - [Beginning Data Science, IoT, and AI on Single Board Computers](https://link.springer.com/book/10.1007/978-1-4842-5766-1) - Core Skills and Real-World Application with the BBC micro:bit and XinaBox.
 - [The Tinkerer's Guide to the micro:bit Galaxy](https://gethacking.com/products/the-tinkerers-guide-to-the-micro-bit-galaxy) - Get ready to make and code amazing projects that light up, make noise, move, and talk (via radio).
 - [BBC micro:bit in Practice](https://www.packtpub.com/product/bbc-microbit-in-practice/9781804610121) - A hands-on guide for building creative real-life projects with MicroPython and BBC micro:bit.
