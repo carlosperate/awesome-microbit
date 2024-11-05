@@ -17,15 +17,15 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 
 ## 🗂️ Contents
 
-- [👩‍💻 Programming](#-programming)
-	- [🆚 Visual Programming](#-visual-programming)
-	- [🐍 Python](#-python)
-	- [🗿 JavaScript / MakeCode](#-javascript-and-makecode)
-	- [©️ C/C++](#%EF%B8%8F-cc)
-	- [🦀 Rust](#-rust)
-	- [🐦 Ada](#-ada)
-	- [🚩 Other Languages](#-other-languages)
-	- [🎚️ Interaction Languages](#%EF%B8%8F-interaction-languages)
+- [🆚 Visual Programming](#-visual-programming)
+- [🐍 Python](#-python)
+- [🗿 JavaScript / MakeCode](#-javascript-and-makecode)
+- [©️ C/C++](#%EF%B8%8F-cc)
+- [🦀 Rust](#-rust)
+- [🐦 Ada](#-ada)
+- [🚩 Other Languages](#-other-languages)
+- [🎚️ Interaction Languages](#%EF%B8%8F-interaction-languages)
+- [👩‍💻 Classroom Environments](#-classroom-environments)
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
 - [🧰 micro:bit Tools](#-microbit-tools)
 - [📱 Mobile Apps](#-mobile-apps)
@@ -49,11 +49,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [⚖️ License](#%EF%B8%8F-license)
 
 
-## 👩‍💻 Programming
-
-- [micro:bit classroom](https://classroom.microbit.org) - Run and manage live code sessions with MakeCode or Python Editor. It makes it quick and easy for teachers to share code with students, track their progress, help them debug, and save their progress.
-
-### 🆚 Visual Programming
+## 🆚 Visual Programming
 
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (part of Microsoft's PXT).
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
@@ -73,7 +69,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [OpenBlock](https://openblockcc.github.io/en/) - Block programming with hardware device support, including micro:bit, with code generation, compilation, flashing, and serial connection.
 - [MicroCode](https://microsoft.github.io/microcode/) - MicroCode is an icon-based (minimal text), editor for the micro:bit V2, which can also be used to write programmes directly on the micro:bit with an Arcade Shield. It is suitable for younger learners and users with variable accessibility needs.
 
-##### 🆚 Unofficial Scratch Extensions
+### 🆚 Unofficial Scratch Extensions
 
 - [ScratchX micro:bit extension](https://llk.github.io/microbit-extension/) - Lets you control your micro:bit wirelessly using Scratch programming blocks.
 - [s2m](https://github.com/MrYsLab/s2m) - A Python program that acts as a bridge between the Scratch 2 off-line editor and the micro:bit via USB.
@@ -81,11 +77,11 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [pyscrlink](https://github.com/kawasaki/pyscrlink) - A Scratch-link for Linux to connect Scratch 3.0 to Bluetooth devices such as the micro:bit.
 - [mbit-more](https://github.com/microbit-more/mbit-more-v2/) - A third party Scratch extension with extra features, including visualising sensor data and support for V1 and V2 micro:bit.
 
-### 🐍 Python
+## 🐍 Python
 
 - [MicroPython](https://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
 
-##### 🐍 MicroPython Editors
+### 🐍 MicroPython Editors
 
 - [microbit.org Python Editor](https://python.microbit.org) - The official online Python editor from the micro:bit foundation website.
 	- [microbit.org Python Editor Beta](https://python.microbit.org/v/beta) - Beta version of the Python editor to test the latest features.
@@ -98,14 +94,14 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [micro:bit Python](https://marketplace.visualstudio.com/items?itemName=MAKinteract.micro-bit-python) - Visual Studio Code extension for micro:bit MicroPython with access to flash and edit example sketches and interact with the filesystem.
 - [Microbit Explorer](https://marketplace.visualstudio.com/items?itemName=electropol-fr.microbit-explorer) - A Visual Studio Code extension for students who code the BBC micro:bit with Python.
 
-##### 🐍 MicroPython Blocks Editors
+### 🐍 MicroPython Blocks Editors
 
 - [EduBlocks](https://app.edublocks.org) - Blocks interface that provides a transitioning experience from Scratch to Python.
 - [Open Roberta Lab](https://lab.open-roberta.org) - Block programming environment design for programming robots, it also supports the micro:bit by generating MicroPython.
 - [Vittascience](https://vittascience.com/microbit/) - Block programming based on MicroPython for the micro:bit with a built-in simulator.
 - [Strype](https://www.strype.org) - A novel tool that combines the strengths of blocks and text programming with the use of Frames. Write real Python for the micro:bit with drag and drop features.
 
-##### 🐍 MicroPython Libraries
+### 🐍 MicroPython Libraries
 
 - [Servo](https://github.com/microbit-playground/microbit-servo-class) - Class for controlling servos on the micro:bit via PWM.
 - [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - Class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver via I2C.
@@ -141,7 +137,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [bitbotxl](https://github.com/oivron/bitbotxl) - Module for the 4tronix Bit:Bot XL Robot for BBC micro:bit.
 - [MPR121](https://github.com/rhubarbdog/microbit-mpr121-keypad) - Library for the MPR121 Capacitive Touch Sensor over I2C.
 
-##### 🐍 Python Libraries
+### 🐍 Python Libraries
 
 - [MicroPeri](https://github.com/ntoll/microperi) - Run Python programs on your computer with the same micro:bit MicroPython API and connecting a micro:bit as an external peripheral device or sensor.
 - [bluezero](https://github.com/ukBaz/python-bluezero) - Python package to interface with Bluetooth devices, with examples for the micro:bit.
@@ -149,7 +145,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [micro:bit Stubs](https://github.com/oivron/microbit-stubs) - Python stubs with type hints to provide autocompletion in code editors.
 - [Kasper's micro:bit](https://github.com/janickr/kaspersmicrobit) - A Python package to connect to the Bluetooth LE GATT services of paired BBC micro:bit devices. Use your micro:bit as a wireless game controller! 
 
-##### 🐍 Python Tools
+### 🐍 Python Tools
 
 - [uFlash](https://github.com/ntoll/uflash/) - Utility for flashing the micro:bit with Python scripts and the MicroPython runtime.
 - [MicroREPL](https://github.com/ntoll/microrepl) - A REPL client for MicroPython running on the BBC micro:bit.
@@ -158,7 +154,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [Combining micro:bit with TI calculators](https://education.ti.com/en/product-resources/microbit) - Connect and programme the BBC micro:bit in Python with several TI calculator models.
 - [micro:bit MicroPython stubs](https://github.com/microbit-foundation/micropython-microbit-stubs) - Type stubs for MicroPython for micro:bit to support the editor autocompletion.
 
-### 🗿 JavaScript and MakeCode
+## 🗿 JavaScript and MakeCode
 
 - [MakeCode](https://makecode.microbit.org) - This block and text editor for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
@@ -167,7 +163,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 	- [MakeCode Multi Editor](https://makecode.microbit.org/---multi) - Two MakeCode editors side by side to create, modify, and test two micro:bit programs at the same time, great for simulating radio with a transmitter and receiver.
 - [Espruino JavaScript](https://www.espruino.com/MicroBit) - JavaScript interpreter for microcontrollers, supports Bluetooth LE and wireless programming. Also offers a WebIDE for written code and blocks.
 
-##### 🗿 MakeCode Extensions
+### 🗿 MakeCode Extensions
 
 - [How to Build MakeCode Extensions](https://makecode.microbit.org/extensions/build-your-own) - Guide to create your own MakeCode extensions.
 
@@ -231,18 +227,18 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [PXT Command Line Tool](https://makecode.com/cli) - Use the command line to program the micro:bit with MakeCode JavaScript. You can also run a local version of the MakeCode online editor (part of Microsoft's PXT).
 
-### ©️ C/C++
+## ©️ C/C++
 
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the DAL runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime.
 - [Arduino nRF5](https://github.com/sandeepmistry/arduino-nRF5/) - Arduino Core for Nordic Semiconductor nRF5 based boards, including the micro:bit.
 - [MbedOS micro:bit V2 Starter](https://github.com/microbit-foundation/mbedos-microbit-v2-starter) - MbedOS template project that adds support for the micro:bit V2.
 
-##### ©️ C/C++ Editors
+### ©️ C/C++ Editors
 
 - [PlatformIO](https://docs.platformio.org/en/latest/boards/nordicnrf51/bbcmicrobit.html) - Embedded IDE with support for the micro:bit using the Arduino or Mbed software stack.
 - [Eclipse Instructions](https://mattoppenheim.com/2018/05/04/eclipse-yotta-c-c-and-the-bbc-microbit/) - Setting up Eclipse with Yotta to build and debug with the BBC micro:bit.
 
-##### ©️ C/C++ Libraries
+### ©️ C/C++ Libraries
 
 - [OneWire](https://github.com/adamboardman/microbit-onewire) - BBC micro:bit OneWire Library, based upon Erik Olieman's Mbed DS1820 lib.
 - [neopixel](https://github.com/elmorg/uBit_neopixel) - Library for using NeoPixels with the BBC micro:bit.
@@ -265,14 +261,14 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [microbit-dal-ext-kit](https://github.com/softgraph/microbit-dal-ext-kit) - A set of components and utilities for C++ applications using micro:bit DAL (runtime).
 - [MicrobitV2-HHS Arduino Library](https://github.com/Grrtzm/MicrobitV2-HHS) - An Arduino library for micro:bit V2 for radio and PWM (including Servo and Tone libraries).
 
-##### ©️ RTOS with micro:bit profile
+### ©️ RTOS with micro:bit profile
 
 - [ChibiOS](https://github.com/ChibiOS/ChibiOS-Contrib) - A complete development environment for embedded applications including RTOS, a HAL, peripheral drivers, support files, and tools.
 - [Mynewt](https://github.com/apache/mynewt-core) - Open-source operating system for tiny embedded devices. Its goal is to make it easy to develop applications for microcontroller environments where power and cost are driving factors.
 - [RIOT](https://doc.riot-os.org/group__boards__microbit.html) - A friendly, real-time, multi-threading operating system that supports a range of devices that are typically found in the Internet of Things (IoT).
 - [Zephyr](https://docs.zephyrproject.org/latest/boards/bbc/microbit_v2/doc/index.html) - A scalable real-time operating system (RTOS) supporting multiple hardware architectures, optimized for resource constrained devices, and built with security in mind.
 
-##### ©️ C/C++ Examples
+### ©️ C/C++ Examples
 
 - [Zephyr BBC micro:bit V2](https://github.com/fduignan/zephyr_bbc_microbit_v2) - Various examples for Zephyr RTOS running on the BBC micro:bit V2.
 - [ioprog Zephyr & micro:bit Articles](https://ioprog.com/tag/microbit-v2/) - A series of articles and tutorials using the micro:bit on board components with Zephyr.
@@ -280,7 +276,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Bare metal micro:bit](https://spivey.oriel.ox.ac.uk/baremetal/Bare_metal_micro:bit) - Low level programming examples and tutorials.
 - [nu-microbit-base](https://github.com/nu-ce346/nu-microbit-base) - C bare metal environment using the Nordic SDK with example applications.
 
-### 🦀 Rust
+## 🦀 Rust
 
 - [The Discovery book](https://docs.rust-embedded.org/discovery/microbit/) - This book is an introductory course on microcontroller-based embedded systems, using micro:bit, that uses Rust as the teaching language rather than the usual C/C++.
 - [Board support crate for micro:bit](https://docs.rs/crate/microbit/) - Contains everything required to get started with the use of Rust to create firmwares for the BBC micro:bit board.
@@ -291,7 +287,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [micro:bit Rust Demos](https://github.com/dtcristo/microbit-demos) - Multiple Rust language demos running on the BBC micro:bit.
 - [RGB LED Matrix](https://github.com/vhiribarren/microbit-led-matrix-lib-rust) - Rust project for the BBC micro:bit controlling a 64x32 matrix panel with some level shifters.
 
-### 🐦 Ada
+## 🐦 Ada
 
 - [Ada for micro:bit Getting Started](https://blog.adacore.com/ada-for-microbit-part-1-getting-started) -  How to setup an Ada development environment for the micro:bit.
 - [Ada Drivers](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/examples/MicroBit) - Drivers for the micro:bit on-board components and instruction on how to setup the Ada development environment.
@@ -299,7 +295,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Ada for micro:bit articles](https://blog.adacore.com/ada-for-microbit-part-2-push-buttons) - ([Part 3](https://blog.adacore.com/ada-for-microbit-part-3-pin-output), [Part 4](https://blog.adacore.com/ada-for-microbit-part-4-pin-input), [Part 5](https://blog.adacore.com/ada-for-microbit-part-5-analog-output), [Part 6](https://blog.adacore.com/ada-for-microbit-part-6-analog-input), [Part 7](https://blog.adacore.com/ada-for-microbit-part-7-accelerometer), [Part 8](https://blog.adacore.com/ada-for-microbit-part-8-music)) A series of articles and tutorials about using Ada on the micro:bit.
 - [Ada Accelerometer Driver + Stable Nerve Game](https://www.hackster.io/shakram02/ada-accelerometer-driver-stable-nerve-game-1393b4) - Tutorial to write a driver in Ada for the micro:bit LSM303AGR accelerometer and make a small nerve game.
 
-### 🚩 Other Languages
+## 🚩 Other Languages
 
 Other programming languages capable to program the micro:bit.
 
@@ -313,7 +309,7 @@ Other programming languages capable to program the micro:bit.
 - [MicroJIT](https://github.com/thomasdenney/microjit) - A Just-In-Time compiler for [Alex Roger's Stack Virtual Machine](http://www.cs.ox.ac.uk/people/alex.rogers/stack/) on the BBC micro:bit.
 - [BASICtools](https://www.coridium.us/coridium/blog/basic-for-microbit) - A BASIC dialect (similar to the original Microsoft BASIC, QBASIC, or early versions of Visual BASIC) ported to the micro:bit, with provided examples.
 
-### 🎚️ Interaction Languages
+## 🎚️ Interaction Languages
 
 These languages do not program the micro:bit directly, but can be used to create programs that interface with a micro:bit.
 
@@ -326,6 +322,11 @@ These languages do not program the micro:bit directly, but can be used to create
 - [CBMicroBit](https://github.com/Louismac/CBMicroBit) - CoreBluetooth wrapper in C++ that connects a micro:bit to a computer running macOS using BLE and outputs over OSC (can be used standalone, or as a C++ or Objective C library).
 - [Swift](https://github.com/phwallen/microbit-swift) - An application programming interface written in Swift for use with the micro:bit. It allows programs written for Apple devices to communicate with the micro:bit using BLE.
 - [Node-RED](https://github.com/seanmtracey/node-red-contrib-bitio-wrapper) - A node-red (flow-based visual programming) module that wraps some of the functionality of the Python/MicroPython Bitio Library.
+
+
+## 👩‍💻 Classroom Environments
+
+- [micro:bit classroom](https://classroom.microbit.org) - Run and manage live code sessions with MakeCode or Python Editor. It makes it quick and easy for teachers to share code with students, track their progress, help them debug, and save their progress.
 
 
 ## 🛠️ Programming Tools
