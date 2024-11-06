@@ -53,7 +53,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 
 - [MakeCode](https://makecode.microbit.org) - Provides an in-browser emulator and a Blocks interface that generates JavaScript (TypeScript) code (part of Microsoft's PXT).
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
-	- [MakeCode Windows App](https://www.microsoft.com/en-gb/store/p/makecode-for-micro-bit/9pjc7sv48lcx) - Windows application for micro:bit MakeCode.
 	- [MakeCode Offline App](https://makecode.microbit.org/offline-app) - Stand alone offline app (note that MakeCode in the browser also works offline).
 	- [MakeCode Multi Editor](https://makecode.microbit.org/---multi) - Two MakeCode editors side by side to create, modify, and test two micro:bit programs at the same time, great for simulating radio with a transmitter and receiver.
 - [Scratch 3.0](https://scratch.mit.edu/microbit) - The new version of Scratch is officially compatible with the micro:bit via their Scratch Link plug-in.
@@ -62,16 +61,13 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [MicroBlocks](https://microblocks.fun) - A visual programming language inspired by Scratch that runs right inside microcontroller boards such as the micro:bit.
 - [Mind+](http://mindplus.cc/en.html) - Desktop application to program hardware devices, like the micro:bit, with blocks, Python, or the C language.
 - [CodeMao Kitten Editor](https://kitten.codemao.cn) - Block programming platform to create games, includes micro:bit support.
-- [eBlock](https://github.com/distintiva/eBlock) - A Scratch 2 based application (forked from  mBlock 3) to visually code the BBC micro:bit and other devices.
 - [Vittascience](https://vittascience.com/microbit/) - Block programming based on MicroPython for the micro:bit with a built-in simulator.
-- [Espruino JavaScript](https://www.espruino.com/MicroBit) - Contains an in-browser Blocky editor that can program micro:bit wirelessly. Also supports Bluetooth LE functionality.
 - [Tinkercad Circuits](https://www.tinkercad.com/learn/circuits) - Create, code, and simulate electronic designs using common components with the micro:bit or Arduino, [related article](https://blog.tinkercad.com/explore-microbit-with-tinkercad).
 - [OpenBlock](https://openblockcc.github.io/en/) - Block programming with hardware device support, including micro:bit, with code generation, compilation, flashing, and serial connection.
 - [MicroCode](https://microsoft.github.io/microcode/) - MicroCode is an icon-based (minimal text), editor for the micro:bit V2, which can also be used to write programmes directly on the micro:bit with an Arcade Shield. It is suitable for younger learners and users with variable accessibility needs.
 
 ### 🆚 Unofficial Scratch Extensions
 
-- [ScratchX micro:bit extension](https://llk.github.io/microbit-extension/) - Lets you control your micro:bit wirelessly using Scratch programming blocks.
 - [s2m](https://github.com/MrYsLab/s2m) - A Python program that acts as a bridge between the Scratch 2 off-line editor and the micro:bit via USB.
 - [s2microbit BLE](https://github.com/memakura/s2microbit-ble#English) - Scratch 2 (offline) extension for BBC micro:bit bluetooth connection with a Windows PC.
 - [pyscrlink](https://github.com/kawasaki/pyscrlink) - A Scratch-link for Linux to connect Scratch 3.0 to Bluetooth devices such as the micro:bit.
@@ -89,8 +85,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [create.withcode.uk](https://create.withcode.uk) - Python online editor and simulator that supports the micro:bit MicroPython ([instructions](https://community.computingatschool.org.uk/resources/4479/single)).
 - [Thonny](https://thonny.org) - A Python IDE for beginners, with micro:bit support out of the box (previously via plugin).
 - [JetBrains IDEA/PyCharm IDE plugin](https://plugins.jetbrains.com/plugin/9777-micropython) - Support for MicroPython devices in IntelliJ IDEA and PyCharm.
-- [uPyCraft](https://dfrobot.gitbooks.io/upycraft/) - A micro:bit compatible MicroPython IDE for Windows/Mac, designed with a simple and convenient interface.
-- [CodeSpace](https://firialabs.com/pages/what-is-codespace) - From Firia Labs, an online MicroPython IDE for micro:bits, with bundled learning resources.
 - [micro:bit Python](https://marketplace.visualstudio.com/items?itemName=MAKinteract.micro-bit-python) - Visual Studio Code extension for micro:bit MicroPython with access to flash and edit example sketches and interact with the filesystem.
 - [Microbit Explorer](https://marketplace.visualstudio.com/items?itemName=electropol-fr.microbit-explorer) - A Visual Studio Code extension for students who code the BBC micro:bit with Python.
 
@@ -142,7 +136,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [MicroPeri](https://github.com/ntoll/microperi) - Run Python programs on your computer with the same micro:bit MicroPython API and connecting a micro:bit as an external peripheral device or sensor.
 - [bluezero](https://github.com/ukBaz/python-bluezero) - Python package to interface with Bluetooth devices, with examples for the micro:bit.
 - [bitio](https://github.com/whaleygeek/bitio) - BBC micro:bit I/O library for Python. It allows you to run code in Python on a PC/Mac/Linux/Raspberry Pi and interact directly with the micro:bit.
-- [micro:bit Stubs](https://github.com/oivron/microbit-stubs) - Python stubs with type hints to provide autocompletion in code editors.
 - [Kasper's micro:bit](https://github.com/janickr/kaspersmicrobit) - A Python package to connect to the Bluetooth LE GATT services of paired BBC micro:bit devices. Use your micro:bit as a wireless game controller! 
 
 ### 🐍 Python Tools
@@ -150,15 +143,14 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [uFlash](https://github.com/ntoll/uflash/) - Utility for flashing the micro:bit with Python scripts and the MicroPython runtime.
 - [MicroREPL](https://github.com/ntoll/microrepl) - A REPL client for MicroPython running on the BBC micro:bit.
 - [MicroFs](https://github.com/ntoll/microfs) - Simple command line tool and module for interacting with the limited file system provided by MicroPython on the micro:bit.
-- [Jupyter kernel for the micro:bit](https://github.com/takluyver/ubit_kernel) - Package that allows Jupyter interfaces to run MicroPython code directly on the micro:bit.
 - [Combining micro:bit with TI calculators](https://education.ti.com/en/product-resources/microbit) - Connect and programme the BBC micro:bit in Python with several TI calculator models.
+- [micro:bit Stubs](https://github.com/oivron/microbit-stubs) - Python stubs with type hints to provide autocompletion in code editors.
 - [micro:bit MicroPython stubs](https://github.com/microbit-foundation/micropython-microbit-stubs) - Type stubs for MicroPython for micro:bit to support the editor autocompletion.
 
 ## 🗿 JavaScript and MakeCode
 
 - [MakeCode](https://makecode.microbit.org) - This block and text editor for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
 	- [MakeCode Beta](https://makecode.microbit.org/beta) - Beta version of the MakeCode editor to test the latest features.
-	- [MakeCode Windows App](https://www.microsoft.com/en-gb/store/p/makecode-for-micro-bit/9pjc7sv48lcx) - Windows application for micro:bit MakeCode.
 	- [MakeCode Offline App](https://makecode.microbit.org/offline-app) - Stand alone offline app (note that MakeCode in the browser also works offline).
 	- [MakeCode Multi Editor](https://makecode.microbit.org/---multi) - Two MakeCode editors side by side to create, modify, and test two micro:bit programs at the same time, great for simulating radio with a transmitter and receiver.
 - [Espruino JavaScript](https://www.espruino.com/MicroBit) - JavaScript interpreter for microcontrollers, supports Bluetooth LE and wireless programming. Also offers a WebIDE for written code and blocks.
