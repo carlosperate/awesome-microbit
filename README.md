@@ -26,10 +26,10 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [🚩 Other Languages](#-other-languages)
 - [🎚️ Interaction Languages](#%EF%B8%8F-interaction-languages)
 - [👩‍💻 Classroom Environments](#-classroom-environments)
+- [🎓 Machine Learning](#-machine-learning)
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
 - [🧰 micro:bit Tools](#-microbit-tools)
 - [📱 Mobile Apps](#-mobile-apps)
-- [🎓 Machine Learning](#-machine-learning)
 - [♻️ Projects Utilising micro:bit](#%EF%B8%8F-projects-using-microbit-as-a-dev-board)
 - [↔️ Interface Chip](#%EF%B8%8F-interface-chip)
 - [🔩 Hardware](#-hardware)
@@ -46,7 +46,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [👪 Community](#-community)
 - [📅 Events](#-events)
 - [🤷 Miscellaneous](#-miscellaneous)
-- [⚖️ License](#%EF%B8%8F-license)
 
 
 ## 🆚 Visual Programming
@@ -321,6 +320,24 @@ These languages do not program the micro:bit directly, but can be used to create
 - [micro:bit classroom](https://classroom.microbit.org) - Run and manage live code sessions with MakeCode or Python Editor. It makes it quick and easy for teachers to share code with students, track their progress, help them debug, and save their progress.
 
 
+## 🎓 Machine Learning
+
+### 🎓 Machine Learning Editors & Tools
+
+- [ML-Machine](https://ml-machine.org) - An interactive machine-learning platform, utilising the micro:bit sensors to generate data, train a model, and run the model with real time sensor data streamed from the micro:bit via Bluetooth.
+- [MAKE: AI Robots](http://makeairobots.com) - A tool to bridge the gap between the Teachable Machine AI and a micro:bit. Train an AI to make a prediction, and then code your micro:bit to use those predictions to activate motors, lights & more!
+- [MicroPal](https://scientiffic.notion.site/scientiffic/MicroPal-Guide-141a70906ea5432599e21cecda2a1fac) - Craft your own interactive micro:bit project that responds to your voice. Create a Teachable Machine Model, load it into the MicroPal website, and control the micro:bit via Web Bluetooth.
+
+### 🎓 Machine Learning Resources & Projects
+
+- [Voice activated micro:bit with Machine Learning](https://www.edgeimpulse.com/blog/voice-activated-microbit) - How to make your micro:bit respond to a keyword, by training a machine learning model with Edge Impulse that recognizes your voice.
+- [Vibrational Anomaly Detection](https://github.com/Technica-Corporation/microbit-ml) - This project introduces a statistics-based, time-series Vibrational Anomaly Detection using Tri-Axial accelerometer data on a micro:bit.
+- [AlpacaML](https://github.com/LaboratoryForPlayfulComputation/AlpacaML) - Automated Learning and Prototyping for Athletics and Creative Activity with Machine Learning. A wearable micro:bit connected to an app that can graph the data and learn to classify actions based off of the users criteria.
+- [Machine Learning Dance Move Detector](https://www.okdo.com/project/machine-learning-dance-move-detector/) - Builds a system running on the micro:bit which can identify TikTok dance routines using the onboard accelerometer.
+- [micro:bit AI vehicle](https://microbit.hackster.io/lillian-brevik/micro-bit-ai-vehicle-3051f5) - A voice to controlled micro:bit vehicle using a Web App that recognizes 5 words and connects to the micro:bit via Web Bluetooth.
+- [Face-Following Robot](https://microbit.hackster.io/petewarden/build-a-face-following-robot-77c4b7) - Build a face following robot with the micro:bit and a Useful Sensors Person Sensor, a small, low-cost hardware module that detects nearby faces.
+
+
 ## 🛠️ Programming Tools
 
 - [Docker micro:bit Toolchain](https://github.com/carlosperate/docker-microbit-toolchain) - Docker image with the micro:bit toolchain, useful to easily compile C/C++ programmes like DAL & CODAL (the micro:bit runtime), MicroPython, DAPLink, etc.
@@ -355,26 +372,6 @@ These languages do not program the micro:bit directly, but can be used to create
 - [micro:bit Slither](https://github.com/novucs/microbit-slither) - Multiplayer snake game on Android, controlled with micro:bits via Bluetooth.
 - [Micro:bit Explorer](https://phwallen.github.io/microbit-explorer/) - A Swift Playground Book that introduces computer fundamentals in a visual way, it allows you to enter machine code or assembly and see how it executes and how the micro:bit registers are affected.
 - [BirdBlox](https://www.birdbraintechnologies.com/microbit-birdblox/) - A tablet-based programming option for the Hummingbird, a robotics board kit for the micro:bit.
-
-
-## 🎓 Machine Learning
-
-### 🎓 Machine Learning Editors & Tools
-
-- [ML-Machine](https://ml-machine.org) - An interactive machine-learning platform, utilising the micro:bit sensors to generate data, train a model, and run the model with real time sensor data streamed from the micro:bit via Bluetooth.
-- [MAKE: AI Robots](http://makeairobots.com) - A tool to bridge the gap between the Teachable Machine AI and a micro:bit. Train an AI to make a prediction, and then code your micro:bit to use those predictions to activate motors, lights & more!
-
-### 🎓 Machine Learning Resources & Projects
-
-- [Voice activated micro:bit with Machine Learning](https://www.edgeimpulse.com/blog/voice-activated-microbit) - How to make your micro:bit respond to a keyword, by training a machine learning model with Edge Impulse that recognizes your voice.
-- [Vibrational Anomaly Detection](https://github.com/Technica-Corporation/microbit-ml) - This project introduces a statistics-based, time-series Vibrational Anomaly Detection using Tri-Axial accelerometer data on a micro:bit.
-- [AlpacaML](https://github.com/LaboratoryForPlayfulComputation/AlpacaML) - Automated Learning and Prototyping for Athletics and Creative Activity with Machine Learning. A wearable micro:bit connected to an app that can graph the data and learn to classify actions based off of the users criteria.
-- [MicroPal Guide](https://scientiffic.notion.site/scientiffic/MicroPal-Guide-141a70906ea5432599e21cecda2a1fac) - Craft your own interactive micro:bit project that responds to your voice. Create a Teachable Machine Model, load it into the MicroPal website, and control the micro:bit via Web Bluetooth.
-- [micro:bit Gesture Recognizer](https://github.com/ttseng/microbit-ml) - An experimental gesture recognition tool using the micro:bit's accelerometer, built using ml5js, which is built on top of TensorFlow.js.
-- [Machine Learning Dance Move Detector](https://www.okdo.com/project/machine-learning-dance-move-detector/) - Builds a system running on the micro:bit which can identify TikTok dance routines using the onboard accelerometer.
-- [micro:bit AI vehicle](https://microbit.hackster.io/lillian-brevik/micro-bit-ai-vehicle-3051f5) - A voice to controlled micro:bit vehicle using a Web App that recognizes 5 words and connects to the micro:bit via Web Bluetooth.
-- [Face-Following Robot](https://microbit.hackster.io/petewarden/build-a-face-following-robot-77c4b7) - Build a face following robot with the micro:bit and a Useful Sensors Person Sensor, a small, low-cost hardware module that detects nearby faces.
-
 
 ## ♻️ Projects Using micro:bit as a Dev Board
 
