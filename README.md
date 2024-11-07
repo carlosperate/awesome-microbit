@@ -333,7 +333,6 @@ These languages do not program the micro:bit directly, but can be used to create
 - [Voice activated micro:bit with Machine Learning](https://www.edgeimpulse.com/blog/voice-activated-microbit) - How to make your micro:bit respond to a keyword, by training a machine learning model with Edge Impulse that recognizes your voice.
 - [Vibrational Anomaly Detection](https://github.com/Technica-Corporation/microbit-ml) - This project introduces a statistics-based, time-series Vibrational Anomaly Detection using Tri-Axial accelerometer data on a micro:bit.
 - [AlpacaML](https://github.com/LaboratoryForPlayfulComputation/AlpacaML) - Automated Learning and Prototyping for Athletics and Creative Activity with Machine Learning. A wearable micro:bit connected to an app that can graph the data and learn to classify actions based off of the users criteria.
-- [Machine Learning Dance Move Detector](https://www.okdo.com/project/machine-learning-dance-move-detector/) - Builds a system running on the micro:bit which can identify TikTok dance routines using the onboard accelerometer.
 - [micro:bit AI vehicle](https://microbit.hackster.io/lillian-brevik/micro-bit-ai-vehicle-3051f5) - A voice to controlled micro:bit vehicle using a Web App that recognizes 5 words and connects to the micro:bit via Web Bluetooth.
 - [Face-Following Robot](https://microbit.hackster.io/petewarden/build-a-face-following-robot-77c4b7) - Build a face following robot with the micro:bit and a Useful Sensors Person Sensor, a small, low-cost hardware module that detects nearby faces.
 
