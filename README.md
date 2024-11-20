@@ -334,8 +334,8 @@ These languages do not program the micro:bit directly, but can be used to create
 - [Voice activated micro:bit with Machine Learning](https://www.edgeimpulse.com/blog/voice-activated-microbit) - How to make your micro:bit respond to a keyword, by training a machine learning model with Edge Impulse that recognizes your voice.
 - [Vibrational Anomaly Detection](https://github.com/Technica-Corporation/microbit-ml) - This project introduces a statistics-based, time-series Vibrational Anomaly Detection using Tri-Axial accelerometer data on a micro:bit.
 - [AlpacaML](https://github.com/LaboratoryForPlayfulComputation/AlpacaML) - Automated Learning and Prototyping for Athletics and Creative Activity with Machine Learning. A wearable micro:bit connected to an app that can graph the data and learn to classify actions based off of the users criteria.
-- [micro:bit AI vehicle](https://microbit.hackster.io/lillian-brevik/micro-bit-ai-vehicle-3051f5) - A voice to controlled micro:bit vehicle using a Web App that recognizes 5 words and connects to the micro:bit via Web Bluetooth.
-- [Face-Following Robot](https://microbit.hackster.io/petewarden/build-a-face-following-robot-77c4b7) - Build a face following robot with the micro:bit and a Useful Sensors Person Sensor, a small, low-cost hardware module that detects nearby faces.
+- [micro:bit AI vehicle](https://www.hackster.io/lillian-brevik/micro-bit-ai-vehicle-3051f5) - A voice to controlled micro:bit vehicle using a Web App that recognizes 5 words and connects to the micro:bit via Web Bluetooth.
+- [Face-Following Robot](https://www.hackster.io/petewarden/build-a-face-following-robot-77c4b7) - Build a face following robot with the micro:bit and a Useful Sensors Person Sensor, a small, low-cost hardware module that detects nearby faces.
 
 
 ## 🛠️ Programming Tools
@@ -547,7 +547,7 @@ All these projects contain steps and resources required for reproduction.
 - [micro:bit OLED Game](https://www.instructables.com/Microbit-OLED-Game/) - Creating a Game & Watch homage handheld electronic game with a micro:bit, OLED screen, buttons, and MicroPython.
 - [Water Rocket](https://wikifactory.com/+fablabbratislava/a-microbit-water-rocket/) - Did you know you can create your own water rocket by using water pipes and a water bottle? You can even add a micro:bit and measure flight data, which can be stored and later visualised.
 - [Tilting LEGO Maze](https://www.instructables.com/Tilting-LEGO-Maze-With-Microbit/) - A LEGO maze with knobs on two of the sides to allow you to tilt and manoeuvrer a ball through the maze. You can design your own mazes (it's LEGO!) so you can make them as easy or difficult as you wish.
-- [Companion Bot](https://microbit.hackster.io/laurentnaegelen/companion-bot-for-jr-steam-91221f) - A cute and interactive shoulder pet robot for Jr STEAM kids from 7 years old. Sewing, 3D printing, electronics, software and it's all open source.
+- [Companion Bot](https://www.hackster.io/laurentnaegelen/companion-bot-for-jr-steam-91221f) - A cute and interactive shoulder pet robot for Jr STEAM kids from 7 years old. Sewing, 3D printing, electronics, software and it's all open source.
 - [The Instant Star Guitar](https://learn.browndoggadgets.com/Guide/The+Instant+Star+Guitar/441) - Play thousands of rock songs with the press of a button on this electric instant rock star micro:bit guitar.
 - [Low cost solar power source for micro:bit](https://microbits-projects.blogspot.com/2022/09/low-cost-solar-power-source-for.html) - A low-cost DIY solar power source aimed at school projects such as weather stations, to log readings at intervals, and upload them to a computer for analysis.
 - [Synced NeoPixel Mickey Mouse Ears](https://community.element14.com/challenges-projects/element14-presents/project-videos/w/documents/27785/episode-567-synced-neopixel-mickey-mouse-ears) - These light-up Mickey Ears made with micro:bit and neopixels, show colourful animations and sync with other ear hats for the ultimate Disney group attire.
@@ -559,7 +559,7 @@ All these projects contain steps and resources required for reproduction.
 
 ### 🏗️ Project Collections
 
-- [hackster micro:bit community](https://hackster.io/microbit) - This hackster community contains user submitted projects for the micro:bit.
+- [hackster micro:bit community](https://www.hackster.io/microbit) - This hackster community contains user submitted projects for the micro:bit.
 - [MakeCode Projects](https://makecode.microbit.org/projects/) - List of micro:bit projects you can do with the MakeCode editor.
 - [Tinkercademy Projects](https://tinkercademy.com/microbit/) - Collection of projects using the micro:bit and Tinkercademy Tinker Kit.
 - [Raspberry Pi micro:bit Projects](https://projects.raspberrypi.org/en/projects?hardware%5B%5D=microbit) - Collection of Raspberry Pi and micro:bit projects from the Raspberry Pi Foundation.
