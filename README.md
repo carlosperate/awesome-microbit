@@ -431,7 +431,6 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Laser Cut micro:bit Box](https://www.thingiverse.com/thing:3433129) - Two laser cut designs, one for 10 micro:bits and another for 20.
 - [Shiun robot (micro:bit biped robot)](https://www.thingiverse.com/thing:3469886) - Using micro:bit as control board and very simple 3D design, you can easy to assembly and program the biped robot.
 - [miniPOW](https://github.com/GeorgeChiou/miniPOW) [[Bulldozer](https://www.thingiverse.com/thing:3330288)], [[Tank Base](https://www.thingiverse.com/thing:3341546)], [[WALL-E](https://www.thingiverse.com/thing:3456871)] - Models using a Power Board for the BBC micro:bit.
-- [micro:bit pinball](https://www.myminifactory.com/object/3d-print-micro-bit-pinball-22965) - A 3D printed pinball machine with one or more micro:bits controlling it.
 - [micro:bit class rack](https://www.thingiverse.com/thing:3631044) - Stand that holds 14 micro:bits and battery packs.
 - [micro:bit Hand Controller](https://www.thingiverse.com/thing:3728487) - Nunchuck style single-hand controller for a micro:bit with an external thumb joystick and two buttons.
 - [WalkerBot:bit](https://www.thingiverse.com/thing:2746171) - Two servo walking robot controlled by a BBC micro:bit.
@@ -474,8 +473,7 @@ All these projects contain steps and resources required for reproduction.
 - [Alexa Weather On micro:bit](https://www.hackster.io/chen-tiebiao/weather-on-micro-bit-c79c19) - Creating an Amazon Alexa skill where the current weather can be asked and the result displayed on the micro:bit.
 - [BBC micro:bit Balloon Tracker](https://www.daveakerman.com/?p=2019) - Making a balloon tracker with a micro:bit connected to GPS and a LoRa transceiver to track and transmit its position.
 - [SonicPixels](https://github.com/jrmedd/SonicPixels) - BBC micro:bit and Max frameworks for triggering multiple speakers in a grid arrangement.
-- [Little Bug Bit](https://goo.gl/eEFhcy) - Low cost micro:bit buggy.
-- [HandShake](https://sites.google.com/site/hardwaremonkey/home/handshake) - Project designed to enable unique gesture recognition for people with limited control of their motion.
+- [HandShake](https://github.com/mattoppenheim/microbit_hand_shake) - Project designed to enable unique gesture recognition for people with limited control of their motion.
 - [Scrolling display](https://meanderingpi.wordpress.com/2017/09/16/bbc-microbit-scrolling-display/) - Create a display screen using a number of micro:bits communicating via radio.
 - [Ironman Arc Reactor](https://www.kitronik.co.uk/blog/halo-ween-ironman-arc-reactor) - Choose between two different versions (Mk I and Mk II) ready to 3D print and build.
 - [microbit-beacon-finder](https://github.com/kshoji/microbit-beacon-finder) - The micro:bit finds various types of BLE Beacons, and displays their ID to the LEDs.
@@ -532,7 +530,6 @@ All these projects contain steps and resources required for reproduction.
 - [Totally Useless Coffee Dispenser](https://www.instructables.com/Totally-Useless-Coffee-Dispenser/) - Designing and building a coffee dispenser with micro:bit, motors and 3D printed parts.
 - ["High-Fivey" the Cardboard Robot](https://www.instructables.com/High-Fivey-the-Cardboard-Microbit-Robot/) - Stuck at home but still have a need to high-five someone? Make a friendly little cardboard micro:bit robot to do just that.
 - [BBC micro:bit + WiFi + phone notifications](https://www.hackster.io/393644/bbc-micro-bit-wifi-phone-notifications-ddb90d) - How to connect BBC micro:bit to WiFi and send a phone notification when a sound is detected.
-- [Awaken the Force with micro:bit](https://www.okdo.com/project/awaken-the-force-with-microbit/) - For millennia people have used the force for good, evil, and just to move things around. We have found quite a lot of force in the micro:bit, enough to lift small, everyday objects.
 - [Mechanical 7-segment digital clock](https://www.thingiverse.com/thing:4626956) - Digital clock with 23 segments, controlled by a single RC servo motor, with all segments and the carries between digits mechanically resolved.
 - [Mechanical digital clock](https://www.thingiverse.com/thing:4613624) - 4 digits, 24 hour-notation mechanical digital clock controlled by micro:bit and only one RC servo motor. Time adjustment from PC is possible via bluetooth.
 - [Robbit](https://github.com/Dealerpriest/robbit) - An open source telepresence robot with micro:bit and an Android phone for students who can not attend school in person.
