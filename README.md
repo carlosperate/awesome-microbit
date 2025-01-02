@@ -317,6 +317,7 @@ These languages do not program the micro:bit directly, but can be used to create
 ## 👩‍💻 Classroom Environments
 
 - [micro:bit classroom](https://classroom.microbit.org) - Run and manage live code sessions with MakeCode or Python Editor. It makes it quick and easy for teachers to share code with students, track their progress, help them debug, and save their progress.
+- [MakeCode classroom assignments](https://makecode.microbit.org/online-learning) - Information on how to create classroom assignments for MakeCode with Google classroom, Microsoft Teams, and other classroom environments.
 
 
 ## 🎓 Machine Learning
