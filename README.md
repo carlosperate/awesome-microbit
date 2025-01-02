@@ -30,6 +30,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
 - [🧰 micro:bit Tools](#-microbit-tools)
 - [📱 Mobile Apps](#-mobile-apps)
+- [🅰️ Accessibility](#-accessibility)
 - [♻️ Projects Utilising micro:bit](#%EF%B8%8F-projects-using-microbit-as-a-dev-board)
 - [↔️ Interface Chip](#%EF%B8%8F-interface-chip)
 - [🔩 Hardware](#-hardware)
@@ -368,6 +369,12 @@ These languages do not program the micro:bit directly, but can be used to create
 - [Micro:bit Explorer](https://phwallen.github.io/microbit-explorer/) - A Swift Playground Book that introduces computer fundamentals in a visual way, it allows you to enter machine code or assembly and see how it executes and how the micro:bit registers are affected.
 - [BirdBlox](https://www.birdbraintechnologies.com/microbit-birdblox/) - A tablet-based programming option for the Hummingbird, a robotics board kit for the micro:bit.
 
+
+## 🅰️ Accessibility
+
+- [HandShake](https://github.com/mattoppenheim/microbit_hand_shake) - Project designed to enable unique gesture recognition for people with limited control of their motion.
+
+
 ## ♻️ Projects Using micro:bit as a Dev Board
 
 - [Radiobit, a BBC micro:Bit RF firmware](https://github.com/virtualabs/radiobit) - Custom MicroPython & tools allowing security researchers to sniff, receive and send data over Nordic's ShockBurst protocol, Bluetooth Smart Link Layer, and more.
@@ -472,7 +479,6 @@ All these projects contain steps and resources required for reproduction.
 - [Alexa Weather On micro:bit](https://www.hackster.io/chen-tiebiao/weather-on-micro-bit-c79c19) - Creating an Amazon Alexa skill where the current weather can be asked and the result displayed on the micro:bit.
 - [BBC micro:bit Balloon Tracker](https://www.daveakerman.com/?p=2019) - Making a balloon tracker with a micro:bit connected to GPS and a LoRa transceiver to track and transmit its position.
 - [SonicPixels](https://github.com/jrmedd/SonicPixels) - BBC micro:bit and Max frameworks for triggering multiple speakers in a grid arrangement.
-- [HandShake](https://github.com/mattoppenheim/microbit_hand_shake) - Project designed to enable unique gesture recognition for people with limited control of their motion.
 - [Scrolling display](https://meanderingpi.wordpress.com/2017/09/16/bbc-microbit-scrolling-display/) - Create a display screen using a number of micro:bits communicating via radio.
 - [Ironman Arc Reactor](https://www.kitronik.co.uk/blog/halo-ween-ironman-arc-reactor) - Choose between two different versions (Mk I and Mk II) ready to 3D print and build.
 - [microbit-beacon-finder](https://github.com/kshoji/microbit-beacon-finder) - The micro:bit finds various types of BLE Beacons, and displays their ID to the LEDs.
