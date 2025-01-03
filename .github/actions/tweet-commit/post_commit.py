@@ -90,7 +90,7 @@ def get_entry_section(readme_str, list_entry):
         raise Exception("Could not find a section for the Awesome List entry.")
 
 
-def format_tweet_msg(section, title, url, description):
+def format_post_msg(section, title, url, description):
     """Format a tweet combining the title, description and URL.
 
     It ensures the total size does not exceed the tweet max characters limit.
@@ -151,12 +151,12 @@ def tweet_msg(msg):
 def main():
     """Entry point."""
     commit_hash = os.environ["GITHUB_SHA"]
-    tweet_trigger_str = os.environ["INPUT_TRIGGER_KEYWORD"]
-    print("Commit: {}\nTrigger: {}".format(commit_hash, tweet_trigger_str))
+    post_trigger_str = os.environ["INPUT_TRIGGER_KEYWORD"]
+    print("Commit: {}\nTrigger: {}".format(commit_hash, post_trigger_str))
 
     repo = Repo(os.getcwd())
     commit = repo.commit(commit_hash)
-    if tweet_trigger_str not in commit.message:
+    if post_trigger_str not in commit.message:
         print("Tweet trigger keyword not found, exiting...")
         sys.exit(0)
 
@@ -165,7 +165,7 @@ def main():
     readme = get_commit_readme(commit)
     for i, entry in enumerate(entries):
         section = get_entry_section(readme, entry["entry"])
-        msg = format_tweet_msg(
+        msg = format_post_msg(
             section, entry["title"], entry["url"], entry["description"]
         )
         print(

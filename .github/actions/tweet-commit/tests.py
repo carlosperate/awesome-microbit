@@ -1,4 +1,4 @@
-"""Tests for tweet_commit."""
+"""Tests for post_commit."""
 
 import os
 import unittest
@@ -6,10 +6,10 @@ import unittest
 from git import Repo
 
 try:
-    import tweet_commit
+    import post_commit as post_commit
 except ImportError:
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
-    import tweet_commit
+    import post_commit as post_commit
 
 
 class TestCommitTweet(unittest.TestCase):
@@ -25,8 +25,8 @@ class TestCommitTweet(unittest.TestCase):
         repository_path = os.getcwd()
         repo = Repo(repository_path)
         commit = repo.commit(commit_hash)
-        entries = tweet_commit.get_commit_list_entries(commit)
-        readme = tweet_commit.get_commit_readme(commit)
+        entries = post_commit.get_commit_list_entries(commit)
+        readme = post_commit.get_commit_readme(commit)
         return entries, readme
 
     def test_commit_1(self):
@@ -34,8 +34,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "2c58c69cd5ea09fe15726d60c40faaccc6735921"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -60,8 +60,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "401d6c4ee70d21dd86631eb377433b319cbb88d1"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -87,8 +87,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "2faac881c36435b45a454989ca915f50fe919c94"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -120,8 +120,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "d8eaa108e6fbb635f282f341e64b7b36507f0788"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -150,8 +150,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "5652ef8bf0d617a3d4085429f4d39007b44ef09d"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -194,15 +194,15 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "749861108e6f65751c4ec0927ef40d495e56dad5"
         )
-        section_0 = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet_0 = tweet_commit.format_tweet_msg(
+        section_0 = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet_0 = post_commit.format_post_msg(
             section_0,
             entries[0]["title"],
             entries[0]["url"],
             entries[0]["description"],
         )
-        section_1 = tweet_commit.get_entry_section(readme, entries[1]["entry"])
-        tweet_1 = tweet_commit.format_tweet_msg(
+        section_1 = post_commit.get_entry_section(readme, entries[1]["entry"])
+        tweet_1 = post_commit.format_post_msg(
             section_1,
             entries[1]["title"],
             entries[1]["url"],
@@ -244,8 +244,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "76deb0040093492197732ba1839ba52beb2e70fc"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -271,8 +271,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "a05ffd323e0cce48119ba78a35478fd18dee359c"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -296,7 +296,7 @@ class TestCommitTweet(unittest.TestCase):
     def test_msg_format_max_length(self):
         """Check that tweet formatting keeps the max characters permitted."""
         # 280 characters total, 23 for the shortned URL, 5 characters formating
-        tweet = tweet_commit.format_tweet_msg(
+        tweet = post_commit.format_post_msg(
             "s" * 9, "t" * 12, "u" * 23, ("d" * 230) + "."
         )
 
@@ -318,7 +318,7 @@ class TestCommitTweet(unittest.TestCase):
         truncates the text to nearest word.
         """
         # 280 characters total, 23 for the shortned URL, 4 characters formating
-        tweet = tweet_commit.format_tweet_msg(
+        tweet = post_commit.format_post_msg(
             "s" * 9, "t" * 12, "u" * 23, "dd " * 1000
         )
 
@@ -339,8 +339,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "8e74b6730578c24c650b375f9490a08eb7d42bdf"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -374,8 +374,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "efeffb853b72a6df40cb2a0dad45c1b3384aba2f"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -405,8 +405,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "10d7622864d9dd6cdd81546e3514bfc945af7396"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -434,8 +434,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "67fb7bcb010e62982201c2c365028586e14fab70"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -465,8 +465,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "b7a6767a088a47450019c5cacf9469533a087efa"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -494,8 +494,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "96e29b83d0c7ee1c0e387a2c06aea06bf1ad8929"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -520,8 +520,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "e767f02151131335392957c5cf6038df9deffc6f"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -551,8 +551,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "ac8791c560dcfffdfa80fc09dfa218556c98bebe"
         )
-        section = tweet_commit.get_entry_section(readme, entries[1]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[1]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[1]["title"],
             entries[1]["url"],
@@ -580,8 +580,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "7014b106374048fc18bb1604673e07c8208c6bc3"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -607,8 +607,8 @@ class TestCommitTweet(unittest.TestCase):
         entries, readme = self.get_commit_data(
             "b0bb85c5d2477100e34e53c5662acc71867bf6d0"
         )
-        section = tweet_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = tweet_commit.format_tweet_msg(
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        tweet = post_commit.format_post_msg(
             section,
             entries[0]["title"],
             entries[0]["url"],
