@@ -16,7 +16,8 @@ import sys
 
 from git import Repo
 import tweepy
-from atproto import Client, client_utils
+from atproto import Client, client_utils, models
+import httpx
 
 
 # Getting the Twitter secrets form local dev file or GH action secrets
@@ -27,10 +28,6 @@ try:
         TWITTER_ACCESS_TOKEN,
         TWITTER_ACCESS_TOKEN_SECRET,
     )
-    from bluesky_secrets import (
-        BLUESKY_USERNAME,
-        BLUESKY_TOKEN,
-    )
 except ImportError:
     TWITTER_CONSUMER_KEY = os.environ.get("INPUT_TWITTER_CONSUMER_KEY", None)
     TWITTER_CONSUMER_SECRET = os.environ.get(
@@ -40,6 +37,12 @@ except ImportError:
     TWITTER_ACCESS_TOKEN_SECRET = os.environ.get(
         "INPUT_TWITTER_ACCESS_TOKEN_SECRET", None
     )
+try:
+    from bluesky_secrets import (
+        BLUESKY_USERNAME,
+        BLUESKY_TOKEN,
+    )
+except ImportError:
     BLUESKY_USERNAME = os.environ.get("INPUT_BLUESKY_USERNAME", None)
     BLUESKY_TOKEN = os.environ.get("INPUT_BLUESKY_TOKEN", None)
 
@@ -181,7 +184,7 @@ def format_msg_bluesky(section, title, url, description):
     description = format_use_hashtags(description)
 
     # Now let's make sure we don't exceed the max character limit
-    msg = "{}\n\n{}\n{}".format(section, title, description)
+    msg = "{} - {}\n\n{}".format(section, title, description)
     if len(msg) > BLUESKY_MAX_CHARS:
         ellipsis = "..."
         characters_over = len(msg) - BLUESKY_MAX_CHARS + len(ellipsis)
@@ -190,20 +193,62 @@ def format_msg_bluesky(section, title, url, description):
         )
 
     text_builder = client_utils.TextBuilder()
-    text_builder.text(section + "\n\n")
+    text_builder.text(section + " - ")
     text_builder.link(title, url)
-    text_builder.text("\n" + description)
+    text_builder.text("\n\n" + description)
     return text_builder
 
 
-def skeet_msg(text_builder):
+def skeet_msg(text_builder, url):
     """Post to BluSky the given message content."""
     if not all((BLUESKY_USERNAME, BLUESKY_TOKEN)):
         print("BlueSky username or token not available.")
         sys.exit(1)
+
+    # Posting Open Graph Protocol (OGP) social media cards, based on example:
+    # https://github.com/MarshalX/atproto/blob/v0.0.56/examples/advanced_usage/send_ogp_link_card.py
+    _META_PATTERN = re.compile(r'<meta property="og:.*?>')
+    _CONTENT_PATTERN = re.compile(r'<meta[^>]+content="([^"]+)"')
+
+    def _get_og_tag_value(og_tags, tag_name):
+        # tag = _find_tag(og_tags, tag_name)
+        for tag in og_tags:
+            if tag_name in tag:
+                match = _CONTENT_PATTERN.match(tag)
+                if match:
+                    return match.group(1)
+        return None
+
+    def _get_og_tags(url):
+        response = httpx.get(url)
+        response.raise_for_status()
+        og_tags = _META_PATTERN.findall(response.text)
+        og_image = _get_og_tag_value(og_tags, "og:image")
+        og_title = _get_og_tag_value(og_tags, "og:title")
+        og_description = _get_og_tag_value(og_tags, "og:description")
+        return og_image, og_title, og_description
+
     client = Client()
     client.login(BLUESKY_USERNAME, BLUESKY_TOKEN)
-    client.send_post(text_builder)
+
+    # Process social media card
+    img_url, title, description = _get_og_tags(url)
+    if title and description:
+        thumb_blob = None
+        if img_url:
+            # Download image from og:image url and upload it as a blob
+            img_data = httpx.get(img_url).content
+            thumb_blob = client.upload_blob(img_data).blob
+
+        # AppBskyEmbedExternal is the same as "link card" in the app
+        embed_external = models.AppBskyEmbedExternal.Main(
+            external=models.AppBskyEmbedExternal.External(
+                title=title, description=description, uri=url, thumb=thumb_blob
+            )
+        )
+        client.send_post(text=text_builder, embed=embed_external)
+    else:
+        client.send_post(text_builder)
 
 
 def main():
@@ -239,7 +284,7 @@ def main():
             flush=True,
         )
         tweet_msg(formatted_tweet)
-        skeet_msg(formatted_skeet)
+        skeet_msg(formatted_skeet, entry["url"])
         print("Sent Tweet and Skeet #{}!".format(i))
 
 

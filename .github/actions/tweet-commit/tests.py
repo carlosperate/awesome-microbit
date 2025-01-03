@@ -62,8 +62,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             skeet.build_text(),
-            "MicroPython Libraries\n\n"
-            "MB1013\n"
+            "MicroPython Libraries - MB1013\n\n"
             "Module for the MB1013 ultrasonic sensor controlled via UART.",
         )
 
@@ -197,8 +196,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             skeet.build_text(),
-            "📱 Mobile Apps\n\n"
-            "Official Swift Playgrounds\n"
+            "📱 Mobile Apps - Official Swift Playgrounds\n\n"
             "([Source Code](https://github.com/microbit-foundation/"
             "microbit-swift-playgrounds)) "
             "Swift Playgrounds is an app for the iPad that helps teach people "
@@ -327,7 +325,7 @@ class TestCommitTweet(unittest.TestCase):
             "s" * 9, "t" * 12, "u" * 23, ("d" * 230) + "."
         )
         skeet = post_commit.format_msg_bluesky(
-            "s" * 8, "t" * 9, "u" * 100, ("d" * 279) + "."
+            "s" * 7, "t" * 8, "u" * 100, ("d" * 279) + "."
         )
 
         self.assertEqual(len(tweet), 280)
@@ -343,7 +341,7 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(len(skeet.build_text()), 300)
         self.assertEqual(
             skeet.build_text(),
-            ("s" * 8) + "\n\n" + ("t" * 9) + "\n" + ("d" * 279) + ".",
+            ("s" * 7) + " - " + ("t" * 8) + "\n\n" + ("d" * 279) + ".",
         )
 
     def test_msg_format_over_length(self):
@@ -357,7 +355,7 @@ class TestCommitTweet(unittest.TestCase):
             "s" * 9, "t" * 12, "u" * 23, "dd " * 1000
         )
         skeet = post_commit.format_msg_bluesky(
-            "s" * 8, "t" * 9, "u" * 100, "dd " * 1000
+            "s" * 7, "t" * 8, "u" * 100, "dd " * 1000
         )
 
         self.assertEqual(len(tweet), 279)
@@ -374,7 +372,7 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(len(skeet.build_text()), 298)
         self.assertEqual(
             skeet.build_text(),
-            ("s" * 8) + "\n\n" + ("t" * 9) + "\n" + ("dd " * 91) + "dd...",
+            ("s" * 7) + " - " + ("t" * 8) + "\n\n" + ("dd " * 91) + "dd...",
         )
 
     def test_long_tweet(self):
@@ -419,8 +417,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             skeet.build_text(),
-            "Miscellaneous\n\n"
-            "Radiobit, a BBC Micro:Bit RF firmware\n"
+            "Miscellaneous - Radiobit, a BBC Micro:Bit RF firmware\n\n"
             "Radiobit is composed of a dedicated #MicroPython-based firmware "
             "and a set of tools allowing security researchers to sniff, "
             "receive and send data over Nordic's ShockBurst protocol, "
@@ -693,8 +690,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             skeet.build_text(),
-            "MakeCode Libraries\n\n"
-            "CCS811\n"
+            "MakeCode Libraries - CCS811\n\n"
             "#MakeCode Package for the CCS811 Air Quality Sensor.",
         )
 
