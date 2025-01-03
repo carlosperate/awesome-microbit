@@ -35,7 +35,13 @@ class TestCommitTweet(unittest.TestCase):
             "2c58c69cd5ea09fe15726d60c40faaccc6735921"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+        skeet = post_commit.format_msg_bluesky(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -54,6 +60,12 @@ class TestCommitTweet(unittest.TestCase):
             "Module for the MB1013 ultrasonic sensor controlled via UART.\n"
             "https://github.com/liamkinne/microbit-mb1013",
         )
+        self.assertEqual(
+            skeet.build_text(),
+            "MicroPython Libraries\n\n"
+            "MB1013\n"
+            "Module for the MB1013 ultrasonic sensor controlled via UART.",
+        )
 
     def test_commit_2(self):
         """Merge commit."""
@@ -61,7 +73,7 @@ class TestCommitTweet(unittest.TestCase):
             "401d6c4ee70d21dd86631eb377433b319cbb88d1"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -88,7 +100,7 @@ class TestCommitTweet(unittest.TestCase):
             "2faac881c36435b45a454989ca915f50fe919c94"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -121,7 +133,7 @@ class TestCommitTweet(unittest.TestCase):
             "d8eaa108e6fbb635f282f341e64b7b36507f0788"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -151,7 +163,13 @@ class TestCommitTweet(unittest.TestCase):
             "5652ef8bf0d617a3d4085429f4d39007b44ef09d"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+        skeet = post_commit.format_msg_bluesky(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -177,6 +195,15 @@ class TestCommitTweet(unittest.TestCase):
             "to code in the Swift language using interactive 'books'.\n"
             "https://microbit.org/guide/swift-playgrounds/",
         )
+        self.assertEqual(
+            skeet.build_text(),
+            "📱 Mobile Apps\n\n"
+            "Official Swift Playgrounds\n"
+            "([Source Code](https://github.com/microbit-foundation/"
+            "microbit-swift-playgrounds)) "
+            "Swift Playgrounds is an app for the iPad that helps teach people "
+            "to code in the Swift language using interactive 'books'.",
+        )
 
     def test_invalid_no_description(self):
         """Invalid awesome list entry: No description."""
@@ -195,14 +222,14 @@ class TestCommitTweet(unittest.TestCase):
             "749861108e6f65751c4ec0927ef40d495e56dad5"
         )
         section_0 = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet_0 = post_commit.format_post_msg(
+        tweet_0 = post_commit.format_msg_twitter(
             section_0,
             entries[0]["title"],
             entries[0]["url"],
             entries[0]["description"],
         )
         section_1 = post_commit.get_entry_section(readme, entries[1]["entry"])
-        tweet_1 = post_commit.format_post_msg(
+        tweet_1 = post_commit.format_msg_twitter(
             section_1,
             entries[1]["title"],
             entries[1]["url"],
@@ -245,7 +272,7 @@ class TestCommitTweet(unittest.TestCase):
             "76deb0040093492197732ba1839ba52beb2e70fc"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -272,7 +299,7 @@ class TestCommitTweet(unittest.TestCase):
             "a05ffd323e0cce48119ba78a35478fd18dee359c"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -296,8 +323,11 @@ class TestCommitTweet(unittest.TestCase):
     def test_msg_format_max_length(self):
         """Check that tweet formatting keeps the max characters permitted."""
         # 280 characters total, 23 for the shortned URL, 5 characters formating
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             "s" * 9, "t" * 12, "u" * 23, ("d" * 230) + "."
+        )
+        skeet = post_commit.format_msg_bluesky(
+            "s" * 8, "t" * 9, "u" * 100, ("d" * 279) + "."
         )
 
         self.assertEqual(len(tweet), 280)
@@ -310,6 +340,11 @@ class TestCommitTweet(unittest.TestCase):
             "ddddddddddddddddddddddddddddddddddd.\n"
             "uuuuuuuuuuuuuuuuuuuuuuu",
         )
+        self.assertEqual(len(skeet.build_text()), 300)
+        self.assertEqual(
+            skeet.build_text(),
+            ("s" * 8) + "\n\n" + ("t" * 9) + "\n" + ("d" * 279) + ".",
+        )
 
     def test_msg_format_over_length(self):
         """Check that long tweet messages get truncated.
@@ -318,8 +353,11 @@ class TestCommitTweet(unittest.TestCase):
         truncates the text to nearest word.
         """
         # 280 characters total, 23 for the shortned URL, 4 characters formating
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             "s" * 9, "t" * 12, "u" * 23, "dd " * 1000
+        )
+        skeet = post_commit.format_msg_bluesky(
+            "s" * 8, "t" * 9, "u" * 100, "dd " * 1000
         )
 
         self.assertEqual(len(tweet), 279)
@@ -333,6 +371,11 @@ class TestCommitTweet(unittest.TestCase):
             "dd dd dd dd dd dd dd dd dd dd dd dd dd...\n"
             "uuuuuuuuuuuuuuuuuuuuuuu",
         )
+        self.assertEqual(len(skeet.build_text()), 298)
+        self.assertEqual(
+            skeet.build_text(),
+            ("s" * 8) + "\n\n" + ("t" * 9) + "\n" + ("dd " * 91) + "dd...",
+        )
 
     def test_long_tweet(self):
         """An entry that is too long to fit in a tweet."""
@@ -340,7 +383,13 @@ class TestCommitTweet(unittest.TestCase):
             "8e74b6730578c24c650b375f9490a08eb7d42bdf"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+        skeet = post_commit.format_msg_bluesky(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -368,6 +417,15 @@ class TestCommitTweet(unittest.TestCase):
             "Enhanced...\n"
             "https://github.com/virtualabs/radiobit",
         )
+        self.assertEqual(
+            skeet.build_text(),
+            "Miscellaneous\n\n"
+            "Radiobit, a BBC Micro:Bit RF firmware\n"
+            "Radiobit is composed of a dedicated #MicroPython-based firmware "
+            "and a set of tools allowing security researchers to sniff, "
+            "receive and send data over Nordic's ShockBurst protocol, "
+            "Enhanced ShockBurst protocol, Bluetooth Smart Link Layer and...",
+        )
 
     def test_commit_replace_microbit_1(self):
         """Replace "microbit" for "#microbit" in description."""
@@ -375,7 +433,7 @@ class TestCommitTweet(unittest.TestCase):
             "efeffb853b72a6df40cb2a0dad45c1b3384aba2f"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -406,7 +464,7 @@ class TestCommitTweet(unittest.TestCase):
             "10d7622864d9dd6cdd81546e3514bfc945af7396"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -435,7 +493,7 @@ class TestCommitTweet(unittest.TestCase):
             "67fb7bcb010e62982201c2c365028586e14fab70"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -466,7 +524,7 @@ class TestCommitTweet(unittest.TestCase):
             "b7a6767a088a47450019c5cacf9469533a087efa"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -495,7 +553,7 @@ class TestCommitTweet(unittest.TestCase):
             "96e29b83d0c7ee1c0e387a2c06aea06bf1ad8929"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -521,7 +579,7 @@ class TestCommitTweet(unittest.TestCase):
             "e767f02151131335392957c5cf6038df9deffc6f"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -552,7 +610,7 @@ class TestCommitTweet(unittest.TestCase):
             "ac8791c560dcfffdfa80fc09dfa218556c98bebe"
         )
         section = post_commit.get_entry_section(readme, entries[1]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[1]["title"],
             entries[1]["url"],
@@ -581,7 +639,7 @@ class TestCommitTweet(unittest.TestCase):
             "7014b106374048fc18bb1604673e07c8208c6bc3"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -608,7 +666,13 @@ class TestCommitTweet(unittest.TestCase):
             "b0bb85c5d2477100e34e53c5662acc71867bf6d0"
         )
         section = post_commit.get_entry_section(readme, entries[0]["entry"])
-        tweet = post_commit.format_post_msg(
+        tweet = post_commit.format_msg_twitter(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+        skeet = post_commit.format_msg_bluesky(
             section,
             entries[0]["title"],
             entries[0]["url"],
@@ -626,6 +690,12 @@ class TestCommitTweet(unittest.TestCase):
             "MakeCode Libraries - CCS811\n"
             "#MakeCode Package for the CCS811 Air Quality Sensor.\n"
             "https://github.com/ADataDate/pxt-airQuality",
+        )
+        self.assertEqual(
+            skeet.build_text(),
+            "MakeCode Libraries\n\n"
+            "CCS811\n"
+            "#MakeCode Package for the CCS811 Air Quality Sensor.",
         )
 
 

@@ -1,8 +1,10 @@
-"""GH Action entry point to tweet new entries to the Awesome micro:bit list.
+"""GH Action entry point to post new entries to the Awesome micro:bit list.
+
+It will post the same content to Twitter and BlueSky.
 
 This script depends on environmental variables set by GitHub for the action,
 including secrets set in the Awesome micro:bit repository for the Twitter
-tokens.
+and BlueSky API access tokens.
 It also depends on running with the Current Working Directory set to the
 repository root.
 """
@@ -14,6 +16,8 @@ import sys
 
 from git import Repo
 import tweepy
+from atproto import Client, client_utils
+
 
 # Getting the Twitter secrets form local dev file or GH action secrets
 try:
@@ -22,6 +26,10 @@ try:
         TWITTER_CONSUMER_SECRET,
         TWITTER_ACCESS_TOKEN,
         TWITTER_ACCESS_TOKEN_SECRET,
+    )
+    from bluesky_secrets import (
+        BLUESKY_USERNAME,
+        BLUESKY_TOKEN,
     )
 except ImportError:
     TWITTER_CONSUMER_KEY = os.environ.get("INPUT_TWITTER_CONSUMER_KEY", None)
@@ -32,6 +40,14 @@ except ImportError:
     TWITTER_ACCESS_TOKEN_SECRET = os.environ.get(
         "INPUT_TWITTER_ACCESS_TOKEN_SECRET", None
     )
+    BLUESKY_USERNAME = os.environ.get("INPUT_BLUESKY_USERNAME", None)
+    BLUESKY_TOKEN = os.environ.get("INPUT_BLUESKY_TOKEN", None)
+
+
+TWITTER_LINK_LENGTH = 24  # Includes an extra character for a '\n'
+TWITTER_MAX_CHARS = 280
+BLUESKY_MAX_CHARS = 300
+POST_MAX_CHARS = min(TWITTER_MAX_CHARS, BLUESKY_MAX_CHARS)
 
 
 def get_commit_list_entries(commit):
@@ -90,13 +106,8 @@ def get_entry_section(readme_str, list_entry):
         raise Exception("Could not find a section for the Awesome List entry.")
 
 
-def format_post_msg(section, title, url, description):
-    """Format a tweet combining the title, description and URL.
-
-    It ensures the total size does not exceed the tweet max characters limit.
-    And it also replaces common words in the description to use hashtags.
-    """
-    # First let's introduce hashtags to the description
+def format_use_hashtags(description):
+    """Replace keywords in the content with hashtags."""
     description = description.replace(" microbit", " #microbit")
     description = description.replace(" micro:bit", " #microbit")
     description = description.replace(" Python", " #Python")
@@ -115,9 +126,21 @@ def format_post_msg(section, title, url, description):
     description = description.replace("MakeCode", "#MakeCode")
     description = description.replace("makecode", "#MakeCode")
     description = description.replace("Makecode", "#MakeCode")
+    return description
+
+
+def format_msg_twitter(section, title, url, description):
+    """Format a tweet combining the title, description and URL.
+
+    It ensures the total size does not exceed the tweet max characters limit.
+    And it also replaces common words in the description to use hashtags.
+    """
+    # First let's introduce hashtags to the description
+    description = format_use_hashtags(description)
+
     # Now let's make sure we don't exceed the 280 character limit
-    max_characters = 280
-    link_length = 24  # Includes an extra character for a '\n'
+    max_characters = TWITTER_MAX_CHARS
+    link_length = TWITTER_LINK_LENGTH
     msg = "{} - {}\n{}".format(section, title, description)
     if len(msg) > (max_characters - link_length):
         ellipsis = "..."
@@ -148,6 +171,41 @@ def tweet_msg(msg):
     client.create_tweet(text=msg)
 
 
+def format_msg_bluesky(section, title, url, description):
+    """Format a skeet combining the title, description and URL.
+
+    It ensures the total size does not exceed the tweet max characters limit.
+    And it also replaces common words in the description to use hashtags.
+    """
+    # First let's introduce hashtags to the description
+    description = format_use_hashtags(description)
+
+    # Now let's make sure we don't exceed the max character limit
+    msg = "{}\n\n{}\n{}".format(section, title, description)
+    if len(msg) > BLUESKY_MAX_CHARS:
+        ellipsis = "..."
+        characters_over = len(msg) - BLUESKY_MAX_CHARS + len(ellipsis)
+        description = (
+            description[:-characters_over].rsplit(" ", 1)[0] + ellipsis
+        )
+
+    text_builder = client_utils.TextBuilder()
+    text_builder.text(section + "\n\n")
+    text_builder.link(title, url)
+    text_builder.text("\n" + description)
+    return text_builder
+
+
+def skeet_msg(text_builder):
+    """Post to BluSky the given message content."""
+    if not all((BLUESKY_USERNAME, BLUESKY_TOKEN)):
+        print("BlueSky username or token not available.")
+        sys.exit(1)
+    client = Client()
+    client.login(BLUESKY_USERNAME, BLUESKY_TOKEN)
+    client.send_post(text_builder)
+
+
 def main():
     """Entry point."""
     commit_hash = os.environ["GITHUB_SHA"]
@@ -157,23 +215,32 @@ def main():
     repo = Repo(os.getcwd())
     commit = repo.commit(commit_hash)
     if post_trigger_str not in commit.message:
-        print("Tweet trigger keyword not found, exiting...")
+        print("Tweet/Skeet trigger keyword not found, exiting...")
         sys.exit(0)
 
-    print("Tweet trigger detected, let's tweet!")
+    print("Post trigger detected, let's tweet and skeet!")
     entries = get_commit_list_entries(commit)
     readme = get_commit_readme(commit)
     for i, entry in enumerate(entries):
         section = get_entry_section(readme, entry["entry"])
-        msg = format_post_msg(
+        formatted_tweet = format_msg_twitter(
+            section, entry["title"], entry["url"], entry["description"]
+        )
+        formatted_skeet = format_msg_bluesky(
             section, entry["title"], entry["url"], entry["description"]
         )
         print(
-            'Tweet msg #{}:\n\t"{}"'.format(i, msg.replace("\n", "\n\t")),
+            'Tweet msg #{}:\n\t"{}"'.format(
+                i, formatted_tweet.replace("\n", "\n\t")
+            )
+            + '\nSkeet msg #{}:\n\t"{}"'.format(
+                i, formatted_skeet.build_text().replace("\n", "\n\t")
+            ),
             flush=True,
         )
-        tweet_msg(msg)
-        print("Tweeted #{}!".format(i))
+        tweet_msg(formatted_tweet)
+        skeet_msg(formatted_skeet)
+        print("Sent Tweet and Skeet #{}!".format(i))
 
 
 if __name__ == "__main__":
