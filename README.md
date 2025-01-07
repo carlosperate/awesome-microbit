@@ -442,11 +442,11 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit Hand Controller](https://www.thingiverse.com/thing:3728487) - Nunchuck style single-hand controller for a micro:bit with an external thumb joystick and two buttons.
 - [WalkerBot:bit](https://www.thingiverse.com/thing:2746171) - Two servo walking robot controlled by a BBC micro:bit.
 - [Jump Lead Adapter](https://www.thingiverse.com/thing:3919130) - 3D print part for the micro:bit to insert the male end of jumper cables to the edge connector.
-- [Gamer Case](https://www.prusaprinters.org/prints/20112-gamer-case-for-bbc-microbit) - A gamer case for your BBC micro:bit that is easy to print, handle and can attach the battery box at the back.
-- [BBC micro:bit V2 battery pack holder](https://www.prusaprinters.org/prints/46067-bbc-microbit-v2-battery-pack-holder) - A multi-purpose battery pack holder for BBC micro:bit that can stand on its own, be clipped on lanyard, or with use of velcro strap used as wearable.
+- [Gamer Case](https://www.printables.com/prints/20112-gamer-case-for-bbc-microbit) - A gamer case for your BBC micro:bit that is easy to print, handle and can attach the battery box at the back.
+- [BBC micro:bit V2 battery pack holder](https://www.printables.com/prints/46067-bbc-microbit-v2-battery-pack-holder) - A multi-purpose battery pack holder for BBC micro:bit that can stand on its own, be clipped on lanyard, or with use of velcro strap used as wearable.
 - [Stackable micro:bit LED Matrix Magnifier](https://www.thingiverse.com/thing:4756078) - Designed to be placed on top of the micro:bit to magnify the display, it can be combined with multiple micro:bits to create a larger screen to quadruple the LED matrix.
 - [Solderless micro:bit timer](https://www.thingiverse.com/thing:4790928) - A configurable timer made with a v2 micro:bit board, some electronics components and very few soldering.
-- [panQuad](https://www.prusaprinters.org/prints/135495-panquad) - Quadruped robot powered by the micro:bit, a robot:bit, and 8 servo motors.
+- [panQuad](https://www.printables.com/prints/135495-panquad) - Quadruped robot powered by the micro:bit, a robot:bit, and 8 servo motors.
 - [Advent Ornament Case](https://www.printables.com/model/664681-microbit-advent-ornamet-case) - A star ornament to clip the micro:bit and its battery pack and hang it.
 
 
