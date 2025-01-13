@@ -30,7 +30,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [🛠️ Programming Tools](#%EF%B8%8F-programming-tools)
 - [🧰 micro:bit Tools](#-microbit-tools)
 - [📱 Mobile Apps](#-mobile-apps)
-- [🅰️ Accessibility](#-accessibility)
+- [🅰️ Accessibility](#🅰%EF%B8%8F-accessibility)
 - [♻️ Projects Utilising micro:bit](#%EF%B8%8F-projects-using-microbit-as-a-dev-board)
 - [↔️ Interface Chip](#%EF%B8%8F-interface-chip)
 - [🔩 Hardware](#-hardware)
@@ -708,7 +708,7 @@ Useful Articles for developing on the micro:bit.
 - [DreamSpace TV](https://www.rte.ie/learn/dreamspace-tv/) - Lessons to bring students, in school or at home, on a STEAM learning journey with a focus on computational thinking, creativity & problem-solving.
 - [Scratch+micro:bit](https://plix.mit.edu/activities/scratchmicrobit) - This activity combines storytelling, coding, and making to engage in physical tinkering while helping to bridge the gap between the physical and digital worlds with micro:bit.
 - [PC micro:bit MicroPython](https://pc-microbit-micropython.readthedocs.io/en/latest/introduction/introduction.html) - Lessons to help you code your micro:bit using MicroPython.
-- [Barefoot meets micro:bit](https://www.computingatschool.org.uk/news-and-blogs/2022/march/barefoot-meets-the-microbit) - Barefoot Computing latest set of resources, teamed up with the Micro:bit Foundation, to create three activities with an outdoors theme and making cross-curricular links to science.
+- [Barefoot meets micro:bit](https://www.computingatschool.org.uk/news-blogs/2022/march/barefoot-meets-the-microbit/) - Barefoot Computing latest set of resources, teamed up with the Micro:bit Foundation, to create three activities with an outdoors theme and making cross-curricular links to science.
 - [Intermediate Coding with micro:bit](https://csinschools.io/courses/intermediate-coding-with-microbit/) - CS in Schools materials with micro:bit designed to help teachers confidently deliver a fun, engaging, and industry-relevant programme.
 - [Code.org micro:bit Curriculum](https://code.org/maker/microbit) - Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
 - [Sustainable Computing](https://www.digitall.charity/sustainablecomputing) - BBC micro:bit projects combining physical construction, coding, and environmental awareness to engage students in understanding the nature of the world around them.
