@@ -338,6 +338,7 @@ These languages do not program the micro:bit directly, but can be used to create
 - [AlpacaML](https://github.com/LaboratoryForPlayfulComputation/AlpacaML) - Automated Learning and Prototyping for Athletics and Creative Activity with Machine Learning. A wearable micro:bit connected to an app that can graph the data and learn to classify actions based off of the users criteria.
 - [micro:bit AI vehicle](https://www.hackster.io/lillian-brevik/micro-bit-ai-vehicle-3051f5) - A voice to controlled micro:bit vehicle using a Web App that recognizes 5 words and connects to the micro:bit via Web Bluetooth.
 - [Face-Following Robot](https://www.hackster.io/petewarden/build-a-face-following-robot-77c4b7) - Build a face following robot with the micro:bit and a Useful Sensors Person Sensor, a small, low-cost hardware module that detects nearby faces.
+- [Dance Detector](https://projects.raspberrypi.org/en/projects/dance-detector/) - Use CreateAI and micro:bit to train a Machine Learning model to identify your dance moves.
 
 
 ## 🛠️ Programming Tools
