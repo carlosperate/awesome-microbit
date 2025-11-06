@@ -278,6 +278,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Tock](https://github.com/tock/tock/blob/master/boards/microbit_v2/README.md) - An embedded operating system designed for running multiple concurrent, mutually distrustful applications on low-memory and low-power microcontrollers, with support for the BBC micro:bit.
 - [micro:bit Rust Demos](https://github.com/dtcristo/microbit-demos) - Multiple Rust language demos running on the BBC micro:bit.
 - [RGB LED Matrix](https://github.com/vhiribarren/microbit-led-matrix-lib-rust) - Rust project for the BBC micro:bit controlling a 64x32 matrix panel with some level shifters.
+- [impl Rust for micro:bit Book](https://mb2.implrust.com/) - Open source book teaches embedded Rust using micro:bit by building simple and fun projects like clap-to-smile, shake detector, smart LED, send data to phone via Bluetooth, and more.
 
 ## 🐦 Ada
 
