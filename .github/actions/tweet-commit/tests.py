@@ -694,13 +694,77 @@ class TestCommitTweet(unittest.TestCase):
             "#MakeCode Package for the CCS811 Air Quality Sensor.",
         )
 
+    def test_bluesky_hashtag_tags(self):
+        """Hashtags converted to proper Bluesky tags with facets."""
+        from atproto import client_utils
+
+        # Test the build_text_with_tags function
+        text = "This is a test with #MakeCode and #Python hashtags"
+        text_builder = client_utils.TextBuilder()
+        post_commit.build_text_with_tags(text_builder, text)
+
+        # Check that the text is correct
+        self.assertEqual(text_builder.build_text(), text)
+
+        # Check that we have 2 facets (one for each hashtag)
+        self.assertEqual(len(text_builder._facets), 2)
+
+        # Check the first hashtag (#MakeCode)
+        facet1 = text_builder._facets[0]
+        self.assertEqual(facet1.index.byte_start, 20)
+        self.assertEqual(facet1.index.byte_end, 29)
+        self.assertEqual(len(facet1.features), 1)
+        self.assertEqual(facet1.features[0].tag, "MakeCode")
+
+        # Check the second hashtag (#Python)
+        facet2 = text_builder._facets[1]
+        self.assertEqual(facet2.index.byte_start, 34)
+        self.assertEqual(facet2.index.byte_end, 41)
+        self.assertEqual(len(facet2.features), 1)
+        self.assertEqual(facet2.features[0].tag, "Python")
+
+    def test_bluesky_format_with_hashtags(self):
+        """format_msg_bluesky properly converts hashtags to tags."""
+        # Use an existing test case that has hashtags
+        entries, readme = self.get_commit_data(
+            "b0bb85c5d2477100e34e53c5662acc71867bf6d0"
+        )
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        skeet = post_commit.format_msg_bluesky(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        # Check that the text is correct
+        self.assertEqual(
+            skeet.build_text(),
+            "MakeCode Libraries - CCS811\n\n"
+            "#MakeCode Package for the CCS811 Air Quality Sensor.",
+        )
+
+        # Check that we have facets for the link and the hashtag
+        # The link facet is for the title, and we should have a
+        # tag facet for #MakeCode
+        has_makecode_tag = False
+        for facet in skeet._facets:
+            if (
+                hasattr(facet.features[0], "tag")
+                and facet.features[0].tag == "MakeCode"
+            ):
+                has_makecode_tag = True
+                break
+
+        self.assertTrue(
+            has_makecode_tag, "Should have a tag facet for #MakeCode"
+        )
+
 
 if __name__ == "__main__":
     # Project root is up 3 levels from this file
     project_root_dir = os.path.dirname(
-        os.path.dirname(
-            os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-        )
+        os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
     )
     os.chdir(project_root_dir)
     unittest.main()
