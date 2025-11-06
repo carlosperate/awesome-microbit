@@ -177,6 +177,9 @@ def build_text_with_tags(text_builder, text):
     for hashtags and TextBuilder.text() for regular text.
     """
     # Pattern to match hashtags: # followed by alphanumeric characters
+    # Note: Uses \w+ which matches ASCII alphanumeric and underscore.
+    # This is sufficient for our use case as format_use_hashtags() only
+    # creates hashtags from ASCII keywords (MakeCode, Python, etc.)
     # Split text by hashtags while keeping the delimiter
     parts = re.split(r"(#\w+)", text)
 

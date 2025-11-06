@@ -707,6 +707,8 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(text_builder.build_text(), text)
 
         # Check that we have 2 facets (one for each hashtag)
+        # Note: We use _facets (private) because TextBuilder doesn't expose
+        # a public API for inspecting facets in version 0.0.56
         self.assertEqual(len(text_builder._facets), 2)
 
         # Check the first hashtag (#MakeCode)
@@ -750,7 +752,8 @@ class TestCommitTweet(unittest.TestCase):
         has_makecode_tag = False
         for facet in skeet._facets:
             if (
-                hasattr(facet.features[0], "tag")
+                facet.features
+                and hasattr(facet.features[0], "tag")
                 and facet.features[0].tag == "MakeCode"
             ):
                 has_makecode_tag = True
