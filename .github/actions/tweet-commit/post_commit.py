@@ -132,65 +132,25 @@ def format_use_hashtags(description):
     return description
 
 
-def format_use_hashtags_bluesky(text_builder, description):
-    """Replace keywords with hashtags and add them as Bluesky tags.
-    
-    This function performs the same replacements as format_use_hashtags()
-    but builds the text with proper Bluesky rich text tags using TextBuilder.
+def build_text_with_tags(text_builder, text):
+    """Build text with proper hashtag tags for Bluesky.
+
+    Parse text for hashtags (words starting with #) and use TextBuilder.tag()
+    for hashtags and TextBuilder.text() for regular text.
     """
-    # Define replacements in order (same as format_use_hashtags)
-    replacements = [
-        (" microbit", " ", "microbit"),
-        (" micro:bit", " ", "microbit"),
-        (" Python", " ", "Python"),
-        (" python", " ", "Python"),
-        ("MicroPython", "", "MicroPython"),
-        ("Micropython", "", "MicroPython"),
-        ("micropython", "", "MicroPython"),
-        ("Scratch", "", "Scratch"),
-        ("scratch", "", "Scratch"),
-        ("Raspberry Pi", " ", "RaspberryPi"),
-        ("raspberry pi", " ", "RaspberryPi"),
-        ("Raspberry pi", " ", "RaspberryPi"),
-        ("raspberry Pi", " ", "RaspberryPi"),
-        ("Arduino", "", "Arduino"),
-        ("arduino", "", "Arduino"),
-        ("MakeCode", "", "MakeCode"),
-        ("makecode", "", "MakeCode"),
-        ("Makecode", "", "MakeCode"),
-    ]
-    
-    # Process description by finding and replacing keywords with tags
-    remaining = description
-    while remaining:
-        # Find the earliest match
-        earliest_pos = len(remaining)
-        earliest_match = None
-        
-        for old_text, prefix, tag_value in replacements:
-            pos = remaining.find(old_text)
-            if pos != -1 and pos < earliest_pos:
-                earliest_pos = pos
-                earliest_match = (old_text, prefix, tag_value)
-        
-        if earliest_match is None:
-            # No more matches, add remaining text
-            text_builder.text(remaining)
-            break
-        else:
-            old_text, prefix, tag_value = earliest_match
-            # Add text before the match
-            if earliest_pos > 0:
-                text_builder.text(remaining[:earliest_pos])
-            
-            # Add prefix (space or empty) and tag
-            if prefix:
-                text_builder.text(prefix)
-            text_builder.tag("#" + tag_value, tag_value)
-            
-            # Continue with remaining text
-            remaining = remaining[earliest_pos + len(old_text):]
-    
+    # Pattern to match hashtags: # followed by alphanumeric characters
+    # Split text by hashtags while keeping the delimiter
+    parts = re.split(r"(#\w+)", text)
+
+    for part in parts:
+        if part.startswith("#") and len(part) > 1:
+            # This is a hashtag - use tag() method
+            # tag() takes display text (with #) and tag value (without #)
+            text_builder.tag(part, part[1:])
+        elif part:  # Skip empty strings
+            # Regular text
+            text_builder.text(part)
+
     return text_builder
 
 
@@ -242,25 +202,23 @@ def format_msg_bluesky(section, title, url, description):
     It ensures the total size does not exceed the tweet max characters limit.
     And it also replaces common words in the description to use hashtags.
     """
-    # First create the text with hashtags to calculate length
-    description_with_hashtags = format_use_hashtags(description)
+    # First let's introduce hashtags to the description
+    description = format_use_hashtags(description)
 
     # Now let's make sure we don't exceed the max character limit
-    msg = "{} - {}\n\n{}".format(section, title, description_with_hashtags)
+    msg = "{} - {}\n\n{}".format(section, title, description)
     if len(msg) > BLUESKY_MAX_CHARS:
         ellipsis = "..."
         characters_over = len(msg) - BLUESKY_MAX_CHARS + len(ellipsis)
-        # Truncate the original description before adding hashtags
         description = (
-            description[: -(characters_over)].rsplit(" ", 1)[0] + ellipsis
+            description[:-characters_over].rsplit(" ", 1)[0] + ellipsis
         )
 
     text_builder = client_utils.TextBuilder()
     text_builder.text(section + " - ")
     text_builder.link(title, url)
     text_builder.text("\n\n")
-    # Use Bluesky-specific function to add hashtags as tags
-    format_use_hashtags_bluesky(text_builder, description)
+    build_text_with_tags(text_builder, description)
     return text_builder
 
 
