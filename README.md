@@ -131,6 +131,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [BME280](https://github.com/CoreElectronics/CE-PiicoDev-BME280-MicroPython-Module) - Library to interface with a BME280 humidity, pressure, and temperature sensor via I2C.
 - [bitbotxl](https://github.com/oivron/bitbotxl) - Module for the 4tronix Bit:Bot XL Robot for BBC micro:bit.
 - [MPR121](https://github.com/rhubarbdog/microbit-mpr121-keypad) - Library for the MPR121 Capacitive Touch Sensor over I2C.
+- [Decimal Numbers](https://github.com/rhubarbdog/decimal-numbers) - A Class to perform mathematics using actual decimal numbers (not floating point numbers).
 
 ### 🐍 Python Libraries
 
