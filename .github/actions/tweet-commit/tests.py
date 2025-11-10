@@ -694,6 +694,44 @@ class TestCommitTweet(unittest.TestCase):
             "#MakeCode Package for the CCS811 Air Quality Sensor.",
         )
 
+    def test_bluesky_format_with_hashtag_tags(self):
+        """format_msg_bluesky properly converts hashtags to Bluesky tags."""
+        # Use an existing test case that has hashtags
+        entries, readme = self.get_commit_data(
+            "b0bb85c5d2477100e34e53c5662acc71867bf6d0"
+        )
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        skeet = post_commit.format_msg_bluesky(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        # Check that the text is correct
+        self.assertEqual(
+            skeet.build_text(),
+            "MakeCode Libraries - CCS811\n\n"
+            "#MakeCode Package for the CCS811 Air Quality Sensor.",
+        )
+
+        # Check that we have facets for the link and the hashtag
+        # The link facet is for the title, and we should have a
+        # tag facet for #MakeCode
+        has_makecode_tag = False
+        for facet in skeet._facets:
+            if (
+                facet.features
+                and hasattr(facet.features[0], "tag")
+                and facet.features[0].tag == "MakeCode"
+            ):
+                has_makecode_tag = True
+                break
+
+        self.assertTrue(
+            has_makecode_tag, "Should have a tag facet for #MakeCode"
+        )
+
 
 if __name__ == "__main__":
     # Project root is up 3 levels from this file

@@ -131,6 +131,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [BME280](https://github.com/CoreElectronics/CE-PiicoDev-BME280-MicroPython-Module) - Library to interface with a BME280 humidity, pressure, and temperature sensor via I2C.
 - [bitbotxl](https://github.com/oivron/bitbotxl) - Module for the 4tronix Bit:Bot XL Robot for BBC micro:bit.
 - [MPR121](https://github.com/rhubarbdog/microbit-mpr121-keypad) - Library for the MPR121 Capacitive Touch Sensor over I2C.
+- [Decimal Numbers](https://github.com/rhubarbdog/decimal-numbers) - A Class to perform mathematics using actual decimal numbers (not floating point numbers).
 
 ### 🐍 Python Libraries
 
@@ -278,6 +279,8 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Tock](https://github.com/tock/tock/blob/master/boards/microbit_v2/README.md) - An embedded operating system designed for running multiple concurrent, mutually distrustful applications on low-memory and low-power microcontrollers, with support for the BBC micro:bit.
 - [micro:bit Rust Demos](https://github.com/dtcristo/microbit-demos) - Multiple Rust language demos running on the BBC micro:bit.
 - [RGB LED Matrix](https://github.com/vhiribarren/microbit-led-matrix-lib-rust) - Rust project for the BBC micro:bit controlling a 64x32 matrix panel with some level shifters.
+- [impl Rust for micro:bit Book](https://mb2.implrust.com/) - Open source book teaches embedded Rust using micro:bit by building simple and fun projects like clap-to-smile, shake detector, smart LED, send data to phone via Bluetooth, and more.
+- [Welcome to Bare Metal Rust](https://google.github.io/comprehensive-rust/bare-metal.html) - Part of Google Android's team's [Comprehensive Rust](https://google.github.io/comprehensive-rust/index.html) course uses the micro:bit v2.
 
 ## 🐦 Ada
 

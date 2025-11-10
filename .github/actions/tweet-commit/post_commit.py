@@ -132,6 +132,28 @@ def format_use_hashtags(description):
     return description
 
 
+def build_text_with_tags(text_builder, text):
+    """Build text with proper hashtag tags for Bluesky.
+
+    Parse text for hashtags (words starting with #) and use TextBuilder.tag()
+    for hashtags and TextBuilder.text() for regular text.
+    """
+    # Pattern to match hashtags: # followed by alphanumeric characters
+    # Split text by hashtags while keeping the delimiter
+    parts = re.split(r"(#\w+)", text)
+
+    for part in parts:
+        if part.startswith("#") and len(part) > 1:
+            # This is a hashtag - use tag() method
+            # tag() takes display text (with #) and tag value (without #)
+            text_builder.tag(part, part[1:])
+        elif part:  # Skip empty strings
+            # Regular text
+            text_builder.text(part)
+
+    return text_builder
+
+
 def format_msg_twitter(section, title, url, description):
     """Format a tweet combining the title, description and URL.
 
@@ -195,7 +217,8 @@ def format_msg_bluesky(section, title, url, description):
     text_builder = client_utils.TextBuilder()
     text_builder.text(section + " - ")
     text_builder.link(title, url)
-    text_builder.text("\n\n" + description)
+    text_builder.text("\n\n")
+    build_text_with_tags(text_builder, description)
     return text_builder
 
 
