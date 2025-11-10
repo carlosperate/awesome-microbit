@@ -229,7 +229,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 ### ©️ C/C++ Editors
 
 - [PlatformIO](https://docs.platformio.org/en/latest/boards/nordicnrf51/bbcmicrobit.html) - Embedded IDE with support for the micro:bit using the Arduino or Mbed software stack.
-- [Eclipse Instructions](https://mattoppenheim.com/2018/05/04/eclipse-yotta-c-c-and-the-bbc-microbit/) - Setting up Eclipse with Yotta to build and debug with the BBC micro:bit.
+- [Eclipse Instructions](https://mattoppenheim.com/blog/2018/05/eclipse-yotta-c-c-and-the-bbc-microbit/) - Setting up Eclipse with Yotta to build and debug with the BBC micro:bit.
 
 ### ©️ C/C++ Libraries
 
@@ -594,7 +594,7 @@ Useful Articles for developing on the micro:bit.
 - [IoT Cloud Access with micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program BBC micro:bit with mbed OS and remotely send data to cloud by utilizing BLE to smartphone/PC IoT cloud gateway.
 - [Network Rivalry: a Low-Latency Game for the BBC micro:bit](https://www.instructables.com/id/Network-Rivalry-a-Low-Latency-Game-for-the-BBC-Mic/) - Tutorial explaining how to implement a basic multiplayer game on the BBC micro:bit.
 - [Circuit Lumber Punking](https://www.instructables.com/id/Circuit-Lumber-Punking/) - Creating micro:bit circuit boards in timber.
-- [Measuring the BBC micro:bit LED current draw](https://mattoppenheim.com/2019/03/06/measuring-the-bbc-microbit-led-current-draw/) - Looking at the voltage and current supplied to the BBC micro:bit for different numbers of active LEDs.
+- [Measuring the BBC micro:bit LED current draw](https://mattoppenheim.com/blog/2019/03/measuring-the-bbc-microbit-led-current-draw/) - Looking at the voltage and current supplied to the BBC micro:bit for different numbers of active LEDs.
 - [micro:bit <-> Raspberry Pi](https://ukbaz.github.io/howto/ubit_workshop.html) - An introduction on how you can exchange information between a micro:bit and a Raspberry Pi using Bluetooth Low Energy (BLE).
 - [WiFi Web Server on BBC micro:bit and ESP-01](https://www.hackster.io/alankrantas/wifi-web-server-on-bbc-micro-bit-and-esp-01-esp8266-498e0d) - Create a micro:bit web server via AT commands to an ESP8266 which can respond to web browser requests over WiFi.
 - [IoT Cloud Access with micro:bit over BLE for Remote Sensing](https://www.hackster.io/PSoC_Rocks/iot-cloud-access-with-micro-bit-over-ble-for-remote-sensing-351938) - Program the BBC micro:bit with Mbed OS and remotely send data to the cloud by utilizing BLE to smartphone/PC IoT Cloud Gateway.
@@ -610,7 +610,7 @@ Useful Articles for developing on the micro:bit.
 - [Make your own processor with a micro:bit](http://www.suppertime.co.uk/blogmywiki/2020/05/microbit-cpu/) - Coding a 5-bit CPU in the micro:bit, useful for understanding or teaching how CPUs and simple systems work.
 - [Embedded Python: Build a Game on the micro:bit](https://realpython.com/embedded-python/) - In this tutorial you’ll learn what embedded development is, why you would use Python, and how to write a basic game on the micro:bit with MicroPython.
 - [Build a snake game](https://www.cameronmacleod.com/blog/microbit-snake) - Learning how to make a snake game using MicroPython on the micro:bit.
-- [Using the micro:bit to detect electrical current](https://mattoppenheim.com/2021/07/16/using-the-microbit-to-detect-electrical-current/) - The micro:bit has a magnetometer on-board, when a current flows through a wire a magnetic field is produced and we can use the magnetometer to detect this.
+- [Using the micro:bit to detect electrical current](https://mattoppenheim.com/blog/2021/07/using-the-microbit-to-detect-electrical-current/) - The micro:bit has a magnetometer on-board, when a current flows through a wire a magnetic field is produced and we can use the magnetometer to detect this.
 - [micro:bit V2 Pager](https://devzone.nordicsemi.com/nordic/nordic-blog/b/blog/posts/micro-bit-v2-pager) - This blog post shows how to make a one-way BLE pager with a micro:bit V2 and nRF Connect SDK, to send text messages to the micro:bit using your smartphone or tablet.
 - [Character Design with micro:bit](https://scientiffic.medium.com/character-design-with-microbit-51c42586caa1) - Exploring how to display emotion on the micro:bit 5x5 LED matrix for character design.
 
