@@ -294,7 +294,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 Other programming languages capable to program the micro:bit.
 
-- [Forth](https://wiki.forth-ev.de/doku.php/en:projects:microbit:start) - Forth, a stack-based language, for the BBC micro:bit.
+- [Forth](https://forth-ev.de/wiki/en:projects:microbit:start) - Forth for the BBC micro:bit
 - [Pascal](https://wiki.freepascal.org/micro:bit) - Free Pascal compiler that can target the ARM embedded platform, including the micro:bit.
 - [uLisp](http://www.ulisp.com/show?3CXJ) - A Lisp interpreter for the classic AI programming language for the BBC micro:bit.
 - [C# / F#](https://github.com/kekyo/IL2C) - IL2C is a translator implementation of .NET intermediate language to C language, with C# and F# examples for the micro:bit.
