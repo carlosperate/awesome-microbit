@@ -65,7 +65,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [CodeMao Kitten Editor](https://kitten.codemao.cn) - Block programming platform to create games, includes micro:bit support.
 - [Vittascience](https://vittascience.com/microbit/) - Block programming based on MicroPython for the micro:bit with a built-in simulator.
 - [Tinkercad Circuits](https://www.tinkercad.com/learn/circuits) - Create, code, and simulate electronic designs using common components with the micro:bit or Arduino, [related article](https://blog.tinkercad.com/explore-microbit-with-tinkercad).
-- [OpenBlock](https://openblockcc.github.io/en/) - Block programming with hardware device support, including micro:bit, with code generation, compilation, flashing, and serial connection.
+- [OpenBlock](https://github.com/openblockcc/openblock-desktop) - Block programming with hardware device support, including micro:bit, with code generation, compilation, flashing, and serial connection.
 - [MicroCode](https://microsoft.github.io/microcode/) - MicroCode is an icon-based (minimal text), editor for the micro:bit V2, which can also be used to write programmes directly on the micro:bit with an Arcade Shield. It is suitable for younger learners and users with variable accessibility needs.
 
 ### 🆚 Unofficial Scratch Extensions
