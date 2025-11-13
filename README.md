@@ -777,8 +777,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- [Getting started with micro:bit for teachers](https://microbit.org/teach/events/?event=getting-started-with-the-microbit-for-teachers&date=2023-11-29T16%3A00%3A00.000Z) - Webinar on November 29th, a beginners guide to using micro:bit in the primary classroom. If you are a teacher wanting to introduce physical computing for the first time, this is the session for you.
-- [micro:bit Live California 2025](https://microbit.org/teach/events/microbit-live-california-2025/) - Hands-on micro:bit learning, sharing best practices, and shaping the future of digital education. Presented by the Micro:bit Foundation, supported by Amazon & hosted by Parallax.
+- No events at the moment.
 
 
 ## 🤷 Miscellaneous
