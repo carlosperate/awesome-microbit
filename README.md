@@ -777,7 +777,7 @@ Useful Articles for developing on the micro:bit.
 
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
-- No events at the moment.
+- [Micro:bit Foundation Events](https://microbit.org/teach/events/) - Micro:bit Educational Foundation list of events, webminars and code-alongs.
 
 
 ## 🤷 Miscellaneous
