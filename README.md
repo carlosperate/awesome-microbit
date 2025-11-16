@@ -715,8 +715,8 @@ Useful Articles for developing on the micro:bit.
 - [Barefoot meets micro:bit](https://www.computingatschool.org.uk/news-blogs/2022/march/barefoot-meets-the-microbit/) - Barefoot Computing latest set of resources, teamed up with the Micro:bit Foundation, to create three activities with an outdoors theme and making cross-curricular links to science.
 - [Intermediate Coding with micro:bit](https://csinschools.io/courses/intermediate-coding-with-microbit/) - CS in Schools materials with micro:bit designed to help teachers confidently deliver a fun, engaging, and industry-relevant programme.
 - [Code.org micro:bit Curriculum](https://code.org/maker/microbit) - Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
-- [Sustainable Computing](https://www.digitall.charity/sustainablecomputing) - BBC micro:bit projects combining physical construction, coding, and environmental awareness to engage students in understanding the nature of the world around them.
-- [Out Of This World](https://www.digitall.charity/outofthisworldwiththemicrobit) - Combine BBC micro:bit coding concepts with practical applications, demonstrate the relevance of coding in various scenarios, and address the specific needs of astronauts with this set of activities.
+- [Sustainable Computing](https://www.digitall.charity/ecocode) - BBC micro:bit projects combining physical construction, coding, and environmental awareness to engage students in understanding the nature of the world around them.
+- [Coding for Climate Action](https://www.digitall.charity/outofthisworldwiththemicrobit) - KS2 & KS3 micro:bit units to investigate natural hazards, design early warning systems, and address climate change through hands-on, project-based coding.
 - [Mr Morrison's micro:bit Lessons](https://mrmorrison.co.uk/microbit/) - Starter lessons, beyond the basics, and data & sustainability, with lesson plans, worksheets, and videos.
 - [Oak National Academy Resources](https://classroom.thenational.academy/units/sensing-beda) - Key stage 2 computing resources on sensing the world with the BBC micro:bit.
 
