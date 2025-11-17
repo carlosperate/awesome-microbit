@@ -86,7 +86,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [Mu](https://codewith.mu) - "Micro" editor for MicroPython and the BBC micro:bit.
 - [Thonny](https://thonny.org) - A Python IDE for beginners, with micro:bit support out of the box (previously via plugin).
 - [JetBrains IDEA/PyCharm IDE plugin](https://plugins.jetbrains.com/plugin/9777-micropython) - Support for MicroPython devices in IntelliJ IDEA and PyCharm.
-- [micro:bit Python](https://marketplace.visualstudio.com/items?itemName=MAKinteract.micro-bit-python) - Visual Studio Code extension for micro:bit MicroPython with access to flash and edit example sketches and interact with the filesystem.
 - [Microbit Explorer](https://marketplace.visualstudio.com/items?itemName=electropol-fr.microbit-explorer) - A Visual Studio Code extension for students who code the BBC micro:bit with Python.
 
 ### 🐍 MicroPython Blocks Editors
@@ -716,7 +715,7 @@ Useful Articles for developing on the micro:bit.
 - [Intermediate Coding with micro:bit](https://csinschools.io/courses/intermediate-coding-with-microbit/) - CS in Schools materials with micro:bit designed to help teachers confidently deliver a fun, engaging, and industry-relevant programme.
 - [Code.org micro:bit Curriculum](https://code.org/maker/microbit) - Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
 - [Sustainable Computing](https://www.digitall.charity/ecocode) - BBC micro:bit projects combining physical construction, coding, and environmental awareness to engage students in understanding the nature of the world around them.
-- [Coding for Climate Action](https://www.digitall.charity/outofthisworldwiththemicrobit) - KS2 & KS3 micro:bit units to investigate natural hazards, design early warning systems, and address climate change through hands-on, project-based coding.
+- [Coding for Climate Action](https://www.digitall.charity/codingforclimateaction) - KS2 & KS3 micro:bit units to investigate natural hazards, design early warning systems, and address climate change through hands-on, project-based coding.
 - [Mr Morrison's micro:bit Lessons](https://mrmorrison.co.uk/microbit/) - Starter lessons, beyond the basics, and data & sustainability, with lesson plans, worksheets, and videos.
 - [Oak National Academy Resources](https://classroom.thenational.academy/units/sensing-beda) - Key stage 2 computing resources on sensing the world with the BBC micro:bit.
 
