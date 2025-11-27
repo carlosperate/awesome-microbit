@@ -308,7 +308,7 @@ Other programming languages capable to program the micro:bit.
 These languages do not program the micro:bit directly, but can be used to create programs that interface with a micro:bit.
 
 - [Kodu Controller](https://www.kodugamelab.com/resources/bbc_microbit/microbit) - Enables interacting with the micro:bit from Kodu Game Lab.
-- [Simulink Coder Support Package](https://www.mathworks.com/help/rtw/microbit-spkg.html) - Package that enables you to create Matlab and Simulink models and automatically generate and deploy code on the micro:bit. More info on [this link](https://www.mathworks.com/academia/courseware/microbit.html).
+- [Simulink Coder Support Package](https://mathworks.com/help/rtw/microbit-spkg.html) - Package that enables you to create Matlab and Simulink models and automatically generate and deploy code on the micro:bit. More info on [this link](https://mathworks.com/academia/courseware/microbit.html).
 - [micro:bit for Dyalog APL on the Pi](https://github.com/APLPi/microbit) - Tools for using the micro:bit (via MicroPython serial connection) with the Dyalog APL programming language on the Raspberry Pi.
 - [Gobot](https://gobot.io/documentation/platforms/microbit/) - Framework for the Go programming language to program devices in the real world. It can access the micro:bit via Bluetooth LE.
 - [Haxe node BBC micro:bit](https://github.com/MatthijsKamstra/hx-node-bbc-microbit) - Control a BBC micro:bit from Node.js using BLE and the Haxe programming language.
@@ -623,7 +623,7 @@ Useful Articles for developing on the micro:bit.
 - [BBC micro:bit - Kitronik University](https://kitronik.co.uk/blogs/resources/bbc-microbit-kitronik-university/) - A varied collection of micro:bit resources by Kitronik.
 - [DF Robot micro:bit blog section](https://www.dfrobot.com/blog-tag-micro:bit.html) - Blog posts and articles about micro:bit from DF Robot.
 - [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
-- [Little Bird Guides](https://littlebirdelectronics.com.au/guides/microbit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
+- [Little Bird Guides](https://learn.littlebirdelectronics.com.au/categories/microbit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
 
 
 ## 🎥 Videos
@@ -705,7 +705,7 @@ Useful Articles for developing on the micro:bit.
 - [Arm School Program Resources for Schools](https://www.arm.com/resources/education/schools/content) - A suite of teaching and learning resources to help teachers deliver engaging and inspirational lessons in Computing (K-12).
 - [NCCE KS2 Sensing movement](https://teachcomputing.org/curriculum/key-stage-2/programming-b-sensing) - Final KS2 programming unit that brings together elements of all previously covered programming constructs in a different, but familiar environment, with the micro:bit.
 - [NCCE KS3 Physical computing](https://teachcomputing.org/curriculum/key-stage-3/physical-computing) - This unit applies and enhances the learners’ programming skills in a new engaging context: physical computing, using the BBC micro:bit.
-- [Remote Learning with micro:bit](https://www.sparkfun.com/3304) - Webinar showing how to remotely teach students all about micro:bit in less than one hour.
+- [Remote Learning with micro:bit](https://news.sparkfun.com/3304) - Webinar showing how to remotely teach students all about micro:bit in less than one hour.
 - [Coding with micro:bit video series for teachers](https://www.youtube.com/playlist?list=PLmqeu38gRdJVCMUhgmF8OrjOhYpYtoh9U) - Videos series resource for teachers and students with an introduction to coding with micro:bit to build inventions and make creations integrating LEDs, motors, servos and speakers.
 - [Python For Kids](https://github.com/mytechnotalent/Python-For-Kids) - A comprehensive online Python development course for kids utilizing a BBC micro:bit going step-by-step into the world of Python for microcontrollers.
 - [DreamSpace TV](https://www.rte.ie/learn/dreamspace-tv/) - Lessons to bring students, in school or at home, on a STEAM learning journey with a focus on computational thinking, creativity & problem-solving.
