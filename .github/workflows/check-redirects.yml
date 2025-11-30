@@ -17,3 +17,4 @@ jobs:
       uses: ./.github/actions/url-redirect
       with:
         file: README.md
+        redirect_fail: false

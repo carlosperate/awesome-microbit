@@ -9,8 +9,10 @@ Uses async requests for fast parallel checking.
 # ///
 import argparse
 import asyncio
+import os
 import re
 import sys
+from functools import lru_cache
 from pathlib import Path
 from typing import List, Tuple, Optional
 
@@ -58,6 +60,34 @@ def extract_urls_from_markdown(text: str) -> List[str]:
     return urls
 
 
+@lru_cache()
+def _split_lines(text: str) -> tuple[str, ...]:
+    """Cache the split lines operation since we use the same text repeatedly."""
+    return tuple(text.split('\n'))
+
+
+def find_line_number(text: str, url: str) -> int:
+    """Find the line number where a URL first appears in the text."""
+    lines = _split_lines(text)
+    for line_num, line in enumerate(lines, 1):
+        if url in line:
+            return line_num
+    return 0
+
+
+def create_github_line_link(line_num: int, markdown_file: str) -> str:
+    """Create a GitHub link to a specific line in a file, or just the line number if not in GitHub Actions."""
+    github_server = os.getenv('GITHUB_SERVER_URL', 'https://github.com')
+    github_repo = os.getenv('GITHUB_REPOSITORY', '')
+    github_sha = os.getenv('GITHUB_SHA', '')
+
+    if github_repo and github_sha:
+        file_link = f"{github_server}/{github_repo}/blob/{github_sha}/{markdown_file}?plain=1#L{line_num}"
+        return f"[L{line_num}]({file_link})"
+    else:
+        return f"L{line_num}"
+
+
 async def check_redirect(client: httpx.AsyncClient, url: str, index: int) -> Tuple[int, str, Optional[str], Optional[str]]:
     """
     Perform an async HEAD request to check if URL redirects.
@@ -92,7 +122,7 @@ async def check_all_redirects(urls: List[str]) -> List[Tuple[int, str, Optional[
         return results
 
 
-def main():
+def parse_cli_args():
     parser = argparse.ArgumentParser(
         description='Check for redirects in all URLs found in a Markdown file.'
     )
@@ -102,16 +132,27 @@ def main():
         default='README.md',
         help='Path to the Markdown file to scan (default: README.md)'
     )
-    args = parser.parse_args()
+    parser.add_argument(
+        '--fail-on-redirect',
+        action='store_true',
+        help='Fail if redirects are found (default: only fail on errors)'
+    )
+    return parser.parse_args()
+
+
+def main():
+    print_title = lambda msg: print(f"\n{'='*80}\n{msg}\n{'='*80}")
+    gh_summary_file = os.getenv('GITHUB_STEP_SUMMARY')
+
+    args = parse_cli_args()
     markdown_file = args.markdown_file
+    fail_on_redirect = args.fail_on_redirect
 
     try:
         print(f"🔍 Extracting URLs from {markdown_file}...")
-        urls = extract_urls_from_markdown(Path(markdown_file).read_text(encoding='utf-8'))
+        text = Path(markdown_file).read_text(encoding='utf-8')
+        urls = extract_urls_from_markdown(text)
         print(f"Found {len(urls)} unique URLs")
-    except FileNotFoundError:
-        print(f"❌ Error: File '{markdown_file}' not found.")
-        sys.exit(1)
     except Exception as e:
         print(f"❌ Error reading file: {e}")
         sys.exit(1)
@@ -120,11 +161,7 @@ def main():
         print("No URLs found in the file.")
         sys.exit(0)
 
-    print_title = lambda s: print(f"\n{'='*80}\n{s}\n{'='*80}")
-
     print_title("🔗 Checking for redirects...")
-
-    # Run async checks & store results by index
     results = asyncio.run(check_all_redirects(urls))
     results.sort(key=lambda x: x[0])
 
@@ -143,8 +180,20 @@ def main():
 
     print_title(f"📋 SUMMARY OF REDIRECTS")
     if redirects:
-        print(f"Found {len(redirects)} redirect(s):\n")
+        print(f"Found {len(redirects)} redirect(s)\n")
+        if gh_summary_file:
+            with open(gh_summary_file, 'a', encoding='utf-8') as f:
+                f.write(f"## 🔗 URL Redirects Found ({len(redirects)})\n\n")
+                for original, redirected in redirects:
+                    f.write(f"- Original:  {original}\n")
+                    f.write(f"  Redirect:  {redirected}\n")
+                    line_num = find_line_number(text, original)
+                    line_link = create_github_line_link(line_num, markdown_file)
+                    f.write(f"  Line:      {line_link}\n")
+                f.write("\n")
+
         for original, redirected in redirects:
+            line_num = find_line_number(text, original)
             print(f"Original:  {original}")
             print(f"Redirect:  {redirected}\n")
     else:
@@ -153,12 +202,21 @@ def main():
     print_title(f"❗ ERRORS ENCOUNTERED")
     if error_count > 0:
         print(f"{error_count} URL(s) had errors during checking")
+        if gh_summary_file:
+            with open(gh_summary_file, 'a', encoding='utf-8') as f:
+                f.write(f"## ❌ Errors Encountered ({error_count})\n\n")
+                for url, error in errors:
+                    line_num = find_line_number(text, url)
+                    # Escape pipe characters in error message
+                    line_link = create_github_line_link(line_num, markdown_file)
+                    f.write(f"- Error for {url}: {error}\n  Line: {line_link}\n")
+                f.write("\n")
         for url, error in errors:
-            print(f"- {url}\n  Error: {error}\n")
+            print(f"{url}\n  Error: {error}\n\n")
     else:
         print("✅ No errors encountered!")
 
-    if redirects or error_count > 0:
+    if error_count > 0 or (redirects and fail_on_redirect):
         sys.exit(1)
 
 

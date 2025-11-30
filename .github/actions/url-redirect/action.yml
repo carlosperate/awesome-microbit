@@ -6,7 +6,10 @@ inputs:
   file:
     description: 'Path to the Markdown file to scan'
     required: true
-    default: 'README.md'
+  redirect_fail:
+    description: 'Whether to fail the step if redirects are found'
+    required: false
+    default: 'true'
 
 runs:
   using: 'composite'
@@ -19,7 +22,11 @@ runs:
     - name: Run redirect checker
       shell: bash
       run: |
-        uv run ${{ github.action_path }}/check_redirects.py "${{ inputs.file }}"
+        if [ "${{ inputs.redirect_fail }}" = "true" ]; then
+          uv run ${{ github.action_path }}/check_redirects.py "${{ inputs.file }}" --fail-on-redirect
+        else
+          uv run ${{ github.action_path }}/check_redirects.py "${{ inputs.file }}"
+        fi
 
 branding:
   icon: 'external-link'
