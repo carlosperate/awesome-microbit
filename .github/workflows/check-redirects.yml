@@ -1,0 +1,21 @@
+name: Check URL Redirects
+
+on:
+  push:
+    branches: '*'
+  pull_request:
+    branches: '*'
+
+jobs:
+  check_redirects:
+    runs-on: ubuntu-latest
+    name: Check Redirects
+    steps:
+    - uses: actions/checkout@v6
+    - name: Install the latest version of uv
+      uses: astral-sh/setup-uv@v7
+      with:
+        python-version: "3.14"
+        enable-cache: true
+    - name: Check redirects
+      run: uv run .github/actions/url-redirect/check_redirects.py README.md

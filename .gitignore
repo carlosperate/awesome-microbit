@@ -3,6 +3,7 @@
 ###########
 node_modules/
 site/
+.vscode/*
 
 ###################
 # Python Specific #
