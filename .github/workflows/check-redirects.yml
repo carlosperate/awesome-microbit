@@ -12,10 +12,8 @@ jobs:
     name: Check Redirects
     steps:
     - uses: actions/checkout@v6
-    - name: Install the latest version of uv
-      uses: astral-sh/setup-uv@v7
-      with:
-        python-version: "3.14"
-        enable-cache: true
+    
     - name: Check redirects
-      run: uv run .github/actions/url-redirect/check_redirects.py README.md
+      uses: ./.github/actions/url-redirect
+      with:
+        file: README.md

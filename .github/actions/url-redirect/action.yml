@@ -1,0 +1,26 @@
+name: 'Check URL Redirects'
+description: 'Check for redirects in all URLs found in a Markdown file'
+author: 'Carlos Pereira Atencio'
+
+inputs:
+  file:
+    description: 'Path to the Markdown file to scan'
+    required: true
+    default: 'README.md'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install uv
+      uses: astral-sh/setup-uv@v7
+      with:
+        enable-cache: true
+
+    - name: Run redirect checker
+      shell: bash
+      run: |
+        uv run ${{ github.action_path }}/check_redirects.py "${{ inputs.file }}"
+
+branding:
+  icon: 'external-link'
+  color: 'blue'
