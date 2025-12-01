@@ -24,3 +24,14 @@ jobs:
       run: echo "BOT_ALLOW_LIST=$(cat .github/workflows/allow-list.txt)" >> $GITHUB_ENV
     - name: Run awesome_bot
       run: awesome_bot README.md --allow-redirect --allow-dupe --set-timeout 60 --skip-save-results --allow 429 --white-list ${{ env.BOT_ALLOW_LIST }}
+
+  check_redirects:
+    runs-on: ubuntu-latest
+    name: Check Redirects
+    steps:
+    - uses: actions/checkout@v6
+    - name: Check redirects
+      uses: ./.github/actions/url-redirect
+      with:
+        file: README.md
+        redirect_fail: false

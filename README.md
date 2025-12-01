@@ -1,6 +1,14 @@
 # Awesome micro:bit
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Link Checker GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Check%20Links/badge.svg)](https://github.com/carlosperate/awesome-microbit/actions?workflow=Check+Links) [![Tweet GH Action Status](https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg)](http://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-informational.svg)](https://creativecommons.org/publicdomain/zero/1.0/) [![Twitter Follow](https://img.shields.io/badge/X%20(Twitter)-@awesomemicrobit-blue)](https://x.com/awesomemicrobit) [![Bluesky Follow](https://img.shields.io/badge/Bluesky-@awesomemicrobit-blue)](https://bsky.app/profile/awesomemicrobit.bsky.social)
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+  <a href="https://github.com/carlosperate/awesome-microbit/actions?workflow=Check+Links"><img src="https://github.com/carlosperate/awesome-microbit/workflows/Check%20Links/badge.svg" alt="Link Checker GH Action Status"></a>
+  <a href="http://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries"><img src="https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg" alt="Tweet GH Action Status"></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0%201.0-informational.svg" alt="License: CC0-1.0"></a>
+  <br>
+  <a href="https://x.com/awesomemicrobit"><img src="https://img.shields.io/badge/X%20(Twitter)-@awesomemicrobit-blue" alt="Twitter Follow"></a>
+  <a href="https://bsky.app/profile/awesomemicrobit.bsky.social"><img src="https://img.shields.io/badge/Bluesky-@awesomemicrobit-blue" alt="Bluesky Follow"></a>
+</p>
 
 [![awesome micro:bit logo](https://user-images.githubusercontent.com/4189262/60908738-830bb780-a274-11e9-9d86-6b82ab89334f.png)](https://github.com/carlosperate/awesome-microbit)
 
