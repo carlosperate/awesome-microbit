@@ -3,8 +3,26 @@
 
 [redirect_ignore]
 urls = [
-    # YouTube consent pages - these are expected redirects based on region/cookies
+    # These domains are URL shorteners or redirection services
+    "rpf.io",
+    # Social media consent pages - these are expected redirects based on region/cookies
     "youtube.com",
+    "instagram.com",
+    # These direct, but the final URL fails when checked by awesome-bot
+    "https://mathworks.com/help/rtw/microbit-spkg.html",
+    "https://mathworks.com/academia/courseware/microbit.html",
+    "http://blog.flowblok.id.au/2018-02/synchronized-music-on-microbits.html",
+    "http://simonmonk.org/prog-mb",
+    # Redirects to specific languages, versions, or initial page
+    "https://vittascience.com/microbit/",
+    "https://microbit-micropython.readthedocs.io",
+    "https://python.microbit.org",
+    "https://os.mbed.com/docs/mbed-os/latest/debug-test/debug-microbit.html",
+    "https://www.birdbraintechnologies.com/microbit-birdblox/",
+    # Other redirects we want to ignore
+    "https://support.microbit.org",
+    "https://awesome.re",
+    "https://www.segger.com/bbc-micro-bit.html",
 ]
 
 [error_ignore]

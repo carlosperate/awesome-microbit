@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
   <a href="https://github.com/carlosperate/awesome-microbit/actions?workflow=Check+Links"><img src="https://github.com/carlosperate/awesome-microbit/workflows/Check%20Links/badge.svg" alt="Link Checker GH Action Status"></a>
-  <a href="http://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries"><img src="https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg" alt="Tweet GH Action Status"></a>
+  <a href="https://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries"><img src="https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg" alt="Tweet GH Action Status"></a>
   <a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0%201.0-informational.svg" alt="License: CC0-1.0"></a>
   <br>
   <a href="https://x.com/awesomemicrobit"><img src="https://img.shields.io/badge/X%20(Twitter)-@awesomemicrobit-blue" alt="Twitter Follow"></a>
@@ -279,7 +279,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 ## 🦀 Rust
 
 - [The Discovery book](https://docs.rust-embedded.org/discovery/microbit/) - This book is an introductory course on microcontroller-based embedded systems, using micro:bit, that uses Rust as the teaching language rather than the usual C/C++.
-- [Board support crate for micro:bit](https://docs.rs/crate/microbit/) - Contains everything required to get started with the use of Rust to create firmwares for the BBC micro:bit board.
+- [Board support crate for micro:bit](https://docs.rs/crate/microbit/latest) - Contains everything required to get started with the use of Rust to create firmwares for the BBC micro:bit board.
 - [Running Rust code on a BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Article describing the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
 - [Rust on the micro:bit 101](https://www.eggers-club.de/blog/2018/05/31/rust-on-the-microbit-101-part-1/) - How to get started using the board support crate and start programming the BBC micro:bit in Rust.
 - [Rust on the BBC micro:bit](https://blog.drogue.io/rust-and-microbit/) - How to get started using Rust and BLE on the micro:bit, exposing temperature data as a Bluetooth Environment Sensing Service, and publishing it to the Drogue Cloud via a Bluetooth gateway.
@@ -416,15 +416,15 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit V1 Hardware Design](https://github.com/bbcmicrobit/hardware) - Schematics and bill of materials for the BBC micro:bit.
 - [micro:bit V1 Reference Design](https://github.com/microbit-foundation/microbit-reference-design) - Hardware design files for a board 100% binary compatible with the micro:bit. Created to help make your own micro:bit derived designs.
 - [micro:bit V2 Hardware Design](https://github.com/microbit-foundation/microbit-v2-hardware) - Schematics and bill of materials for the BBC micro:bit V2.
-- [micro:bit Badge](https://github.com/make-zurich/micro-bit-badge) - Open Source PCB for the micro:bit with a battery holder, buzzer, extension edge connector and pins breaks out.
+- [micro:bit Badge](https://github.com/makezurich/micro-bit-badge) - Open Source PCB for the micro:bit with a battery holder, buzzer, extension edge connector and pins breaks out.
 - [Eagle micro:bit Edge Part](https://github.com/proto-pic/micro-bit-eagle-libraries) - Eagle library from Proto-Pic for the micro:bit edge connectors.
 - [Kicad micro:bit Connector](https://github.com/anthonykirby/kicad_microbit_connector) - KiCad component library and footprint library for a micro:bit edge-connector socket.
 - [micro:bit Kicad Edge Connector](https://github.com/JordanElectronics/kicad-microbit-edge-connector) - BBC micro:bit Edge Connector component library and PCB footprint for Kicad.
 - [SparkFun Breakout Board](https://github.com/sparkfun/Micro_Bit_Breakout) - Open source files for the SparkFun micro:bit Breakout Board.
 - [SparkFun moto:bit](https://github.com/sparkfun/Micro_Bit_Moto_Bit) - Open source files for the SparkFun moto:bit, a board to provide a robotics platform.
 - [SparkFun weather:bit](https://github.com/sparkfun/Micro_Bit_Weather_Bit) - Open source files for the SparkFun weather:bit, a board to provide a weather station.
-- [SparkFun gamer:bit](https://github.com/sparkfun/Micro_Bit_Gamer_Bit) - Open source files for the SparkFun gamer:bit, a board to provide a game system.
-- [NeoBit](https://github.com/ppelleti/NeoBit) - Open source board that lets you hook up NeoPixel and DotStar LEDs to a BBC micro:bit, also contains a headphone jack and a couple of slide potentiometers for input.
+- [SparkFun gamer:bit](https://github.com/sparkfun/Micro_Bit_Controller_Bit) - Open source files for the SparkFun gamer:bit, a board to provide a game system.
+- [NeoBit](https://github.com/mignon-p/NeoBit) - Open source board that lets you hook up NeoPixel and DotStar LEDs to a BBC micro:bit, also contains a headphone jack and a couple of slide potentiometers for input.
 - [LoRaWAN micro:bit](https://github.com/ribbotson/LoRaWAN_MicroBit) - This is a free open source LoRaWAN interface for BBC micro:bit including power control timer.
 - [PiicoDev Adapter](https://github.com/CoreElectronics/CE-PiicoDev-Adapter-for-Microbit) - Kicad files for an adapter to experiment with sensors from the PiicoDev range.
 - [Sumo Robot](https://github.com/hansj66/micro-bot) - Firmware and hardware design files for the TimeExpander.com micro:bit robot with 2 motor bridges, 3 time of flight sensors, 4 reflective object sensors, and a GPIO expander.
@@ -492,7 +492,7 @@ All these projects contain steps and resources required for reproduction.
 - [Alexa Weather On micro:bit](https://www.hackster.io/chen-tiebiao/weather-on-micro-bit-c79c19) - Creating an Amazon Alexa skill where the current weather can be asked and the result displayed on the micro:bit.
 - [BBC micro:bit Balloon Tracker](https://www.daveakerman.com/?p=2019) - Making a balloon tracker with a micro:bit connected to GPS and a LoRa transceiver to track and transmit its position.
 - [SonicPixels](https://github.com/jrmedd/SonicPixels) - BBC micro:bit and Max frameworks for triggering multiple speakers in a grid arrangement.
-- [Scrolling display](https://meanderingpi.wordpress.com/2017/09/16/bbc-microbit-scrolling-display/) - Create a display screen using a number of micro:bits communicating via radio.
+- [Scrolling display](https://meanderingpi.com/2017/09/16/bbc-microbit-scrolling-display/) - Create a display screen using a number of micro:bits communicating via radio.
 - [Ironman Arc Reactor](https://kitronik.co.uk/blogs/resources/halo-ween-ironman-arc-reactor) - Choose between two different versions (Mk I and Mk II) ready to 3D print and build.
 - [microbit-beacon-finder](https://github.com/kshoji/microbit-beacon-finder) - The micro:bit finds various types of BLE Beacons, and displays their ID to the LEDs.
 - [Build A Klawsome micro:bit Controlled Tank](https://kitronik.co.uk/blogs/resources/klawsome-microbit-controlled-tank/) - Tutorial on how to design a build a perspex micro:bit tank.
@@ -504,16 +504,16 @@ All these projects contain steps and resources required for reproduction.
 - [micro:bit spectrum](https://github.com/linker3000/micro-bit_spectrum) - Circuit and code to display an audio spectrum bar chart on the BBC micro:bit.
 - [micro:bit TVPong](https://github.com/linker3000/Microbit-TVPong) - Play the classic Pong game on a TV - using BBC micro:bits as paddles, Bluetooth also supported.
 - [Bluetooth Low Energy Remote Control for Spotify](https://www.hackster.io/josejuansanchez/bluetooth-low-energy-remote-control-for-spotify-3438d1) - This project allows you to configure your micro:bit to work as a Bluetooth Low Energy remote control for Spotify on macOS.
-- [Stirling Blue](https://www.element14.com/community/community/design-challenges/bluetoothunleashed/blog/2018/05/07/stirling-blue-project-description-blog-1) - An extensive project to examine Stirling engine operation and performance. A micro:bit is used to create a custom keyboard and LCD interface that communicates with other parts of the project.
+- [Stirling Blue](https://community.element14.com/challenges-projects/design-challenges/bluetoothunleashed/b/blog/posts/stirling-blue---project-description---blog-1) - An extensive project to examine Stirling engine operation and performance. A micro:bit is used to create a custom keyboard and LCD interface that communicates with other parts of the project.
 - [Micro:Gamer](https://hackaday.io/project/47760-microgamer) - A portable game console based on the micro:bit board. It features a 128x64 monochrome OLED screen, six buttons, a buzzer for sound, and a 2xAAA battery holder.
-- [µBOSS](https://www.element14.com/community/community/project14/test-instrumentation/blog/2018/10/12/%C2%B5boss-test-instrumentation-microbit) - Turning a BBC micro:bit into a test instrument by displaying all the sensor readings on an LCD and packaging it into a 3D printed box.
+- [µBOSS](https://community.element14.com/challenges-projects/project14/test-instrumentation/b/blog/posts/boss-test-instrumentation-micro-bit) - Turning a BBC micro:bit into a test instrument by displaying all the sensor readings on an LCD and packaging it into a 3D printed box.
 - [DIY 3D Virtual Reality System](https://sites.google.com/site/colinord/Home/3d-virtual-reality-hmd-and-controller-project) - Using two micro:bits for head and hand orientation tracking.
 - [Robot Arm Rover](https://github.com/AMoazeni/Robot-Arm-Rover) - A gesture controlled Robot Arm Buggy using the micro:bit accelerometer and radio.
 - [Musical Instrument Controller](https://phwallen.github.io/microbit-music-controller/) - A micro:bit instrument that communities with an iPad via Bluetooth into MIDI controller app that can play music via GarageBand.
 - [Inexpensive Remote Controlled Robot](https://mryslab.github.io/microbit-robot/) - Guide to create an inexpensive robot, easily assembled from a set of off the shelf parts.
 - [Natural Disaster Sensor](https://core-electronics.com.au/guides/natural-disaster-sensor-project-for-the-microbit-stem/) - Wind, seismic, and temperature data monitoring from remote micro:bits.
 - [Bike Light](https://kitronik.co.uk/blogs/resources/zip-tile-microbit-bike-light-isaac-gorsani/) - A rear bike light with a Kitronik Zip Tile (8x8 RGB LED matrix) and 3D printed case.
-- [IoT Pill Reminders with SAP Cloud Foundry and Google Sheets](https://blogs.sap.com/2019/02/25/iot-pill-reminders-with-sap-cloud-foundry-google-sheets-and-microbit/) - How to build an IoT “Pill Reminder” device to remind the patient to take their pills and update their status in Google Sheets.
+- [IoT Pill Reminders with SAP Cloud Foundry and Google Sheets](https://community.sap.com/t5/technology-blog-posts-by-members/iot-pill-reminders-with-sap-cloud-foundry-google-sheets-and-micro-bit/ba-p/13397437) - How to build an IoT “Pill Reminder” device to remind the patient to take their pills and update their status in Google Sheets.
 - [Pong-Like Retro Clock Using TinyGo and micro:bit](https://www.hackster.io/_conejo/pong-like-retro-clock-using-tinygo-and-microbit-682736) - Use an RGB matrix and a micro:bit to display the time with an awesome game of PONG. Made with love and TinyGo.
 - [Racing Car Timing Gate](https://github.com/astrotutor9/Microbit-Racing-Car-Timing-Gate) - Create a speed trap for toy cars with three micro:bits, torches, radio and the MicroPython REPL.
 - [Robot Unicorn](https://github.com/helenleigh/robot-unicorn) - Gesture controlled robot unicorn made of cardboard, glitter, a 3D printed horn, and micro:bits.
@@ -532,7 +532,7 @@ All these projects contain steps and resources required for reproduction.
 - [MIDI CC Wireless Controller](https://www.instructables.com/Microbit-Midi-CC-Wireless-Controller/) - A wireless MIDI CC controller, allowing you to use your micro:bit as a MIDI controller and connect it to your favourite music production software.
 - [Smart Garden Ornaments](https://github.com/jimbobbennett/smart-garden-ornaments) - Track things happening in your garden, neighbourhood, or school using smart ornaments with the BBC micro:bit, Raspberry Pi, and a cloud-based IoT service.
 - [micro:bit + Spotify (macOS)](https://www.hackster.io/samelhusseini/micro-bit-spotify-mac-5ac6d7) - ([Windows version](https://www.hackster.io/samelhusseini/microbit-spotify-windows-8a8551)) Allows you to control a Spotify playlist with 2 micro:bits.
-- [Delightfully Delirious Day Clock](https://www.hackster.io/8bitsandabyte/delightfully-delirious-day-clock-b8cd6c) - Also wondering what day it is today? This delightfully delirious day clock narrows it down to roughly eight different possibilities.
+- [Delightfully Delirious Day Clock](https://www.hackster.io/8_Bits_and_a_Byte/delightfully-delirious-day-clock-b8cd6c) - Also wondering what day it is today? This delightfully delirious day clock narrows it down to roughly eight different possibilities.
 - [micro:bit Air Guitar](https://www.instructables.com/Microbit-Air-Guitar-DMP/) - How to make your very own customisable guitar controller paired with micro:bit.
 - [Simple gimbal with micro:bit and 2 servos](https://www.instructables.com/Simple-Gimbal-With-Microbit-and-2-Servos/) - How to make a simple gimbal stabiliser controlled by the micro:bit.
 - [Disaster Management with Smart Circuit Breaker](https://www.adacore.com/blog/make-with-ada-2020-disaster-management-smart-circuit-breaker) - Ensuring safety against electrical fire or shock during earthquake, flood, gas leakage & fire breakout by disconnecting mains with smart circuit breaker.
@@ -550,7 +550,7 @@ All these projects contain steps and resources required for reproduction.
 - [BBC micro:bit + WiFi + phone notifications](https://www.hackster.io/393644/bbc-micro-bit-wifi-phone-notifications-ddb90d) - How to connect BBC micro:bit to WiFi and send a phone notification when a sound is detected.
 - [Mechanical 7-segment digital clock](https://www.thingiverse.com/thing:4626956) - Digital clock with 23 segments, controlled by a single RC servo motor, with all segments and the carries between digits mechanically resolved.
 - [Mechanical digital clock](https://www.thingiverse.com/thing:4613624) - 4 digits, 24 hour-notation mechanical digital clock controlled by micro:bit and only one RC servo motor. Time adjustment from PC is possible via bluetooth.
-- [Robbit](https://github.com/Dealerpriest/robbit) - An open source telepresence robot with micro:bit and an Android phone for students who can not attend school in person.
+- [Robbit](https://github.com/gunhaxxor/robbit) - An open source telepresence robot with micro:bit and an Android phone for students who can not attend school in person.
 - [PIR Movement Alarm](https://www.instructables.com/PIR-Movement-Alarm-With-BBC-Microbit-and-External-/) - How to make a simple movement alarm using MicroPython on a BBC micro:bit with a passive infrared (PIR) sensor module to play a low bitrate sound sample when a warm, moving object is detected.
 - [Lip Syncing Characters](https://www.instructables.com/Lip-Syncing-Characters-With-Microbit/) - Cute characters made with micro:bit that lip-sync to the sound of your voice to appear as if they are the ones doing the talking/singing.
 - [Spy Tech](https://www.instructables.com/Spy-tech-Intruder-Detection-Logging-System/) - Intruder detection and logging system with a micro:bit and a magnet.
@@ -571,7 +571,7 @@ All these projects contain steps and resources required for reproduction.
 
 - [hackster micro:bit community](https://www.hackster.io/microbit) - This hackster community contains user submitted projects for the micro:bit.
 - [MakeCode Projects](https://makecode.microbit.org/projects/) - List of micro:bit projects you can do with the MakeCode editor.
-- [Tinkercademy Projects](https://tinkercademy.com/microbit/) - Collection of projects using the micro:bit and Tinkercademy Tinker Kit.
+- [Tinkercademy Projects](https://tinkercademy.com/microbit) - Collection of projects using the micro:bit and Tinkercademy Tinker Kit.
 - [Raspberry Pi micro:bit Projects](https://projects.raspberrypi.org/en/projects?hardware%5B%5D=microbit) - Collection of Raspberry Pi and micro:bit projects from the Raspberry Pi Foundation.
 - [Electromaker micro:bit projects](https://www.electromaker.io/projects?platform=microbit) - All the micro:bit projects posted to Electromaker, a platform for makers to showcase their projects.
 - [Saturday Science & BBC micro:bits](https://saturdayscience.org/bbc-microbit/) - Practical science and engineering projects with the micro:bit, explore physical properties with cool experiments.
@@ -719,7 +719,7 @@ Useful Articles for developing on the micro:bit.
 - [DreamSpace TV](https://www.rte.ie/learn/dreamspace-tv/) - Lessons to bring students, in school or at home, on a STEAM learning journey with a focus on computational thinking, creativity & problem-solving.
 - [Scratch+micro:bit](https://plix.mit.edu/activities/scratchmicrobit) - This activity combines storytelling, coding, and making to engage in physical tinkering while helping to bridge the gap between the physical and digital worlds with micro:bit.
 - [PC micro:bit MicroPython](https://pc-microbit-micropython.readthedocs.io/en/latest/introduction/introduction.html) - Lessons to help you code your micro:bit using MicroPython.
-- [Barefoot meets micro:bit](https://www.computingatschool.org.uk/news-blogs/2022/march/barefoot-meets-the-microbit/) - Barefoot Computing latest set of resources, teamed up with the Micro:bit Foundation, to create three activities with an outdoors theme and making cross-curricular links to science.
+- [Barefoot meets micro:bit](https://www.computingatschool.org.uk/forum-news-blogs/2022/march/barefoot-meets-the-microbit/) - Barefoot Computing latest set of resources, teamed up with the Micro:bit Foundation, to create three activities with an outdoors theme and making cross-curricular links to science.
 - [Intermediate Coding with micro:bit](https://csinschools.io/courses/intermediate-coding-with-microbit/) - CS in Schools materials with micro:bit designed to help teachers confidently deliver a fun, engaging, and industry-relevant programme.
 - [Code.org micro:bit Curriculum](https://code.org/maker/microbit) - Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
 - [Sustainable Computing](https://www.digitall.charity/ecocode) - BBC micro:bit projects combining physical construction, coding, and environmental awareness to engage students in understanding the nature of the world around them.
@@ -752,7 +752,7 @@ Useful Articles for developing on the micro:bit.
 
 - [Micro:bit Foundation Professional Development Courses](https://microbit.org/teach/professional-development/) - Designed to take the stress out of your computing responsibilities. They are aimed at teachers and educators supporting primary/elementary students.
 - [Teaching Physical Computing to 5-11 year olds](https://www.futurelearn.com/courses/teaching-physical-computing-to-5-to-11-year-olds) - Introduction to the world of physical computing with a Crumble or a BBC micro:bit, and learn how it can encourage learners to use their imaginations to solve problems and develop new ideas.
-- [Teaching with Physical Computing](https://www.edx.org/course/teaching-with-physical-computing-course-1-introduction-to-project-based-learning) - Introduces the fundamental concepts underpinning Project-Based Learning, and how you can apply it with programmable devices to bring STEM & Computing to life in the classroom.
+- [Teaching with Physical Computing](https://www.edx.org/learn/project-based-learning/arm-education-teaching-with-physical-computing-introduction-to-project-based-learning) - Introduces the fundamental concepts underpinning Project-Based Learning, and how you can apply it with programmable devices to bring STEM & Computing to life in the classroom.
 - [Practical application and classroom strategies for PBL](https://www.edx.org/course/teaching-with-physical-computing-course-2-practical-application-and-classroom-strategies-for-pbl) - Course using real-world problems to spark your learners’ creativity and empower them to develop their own solutions using Physical Computing and Project Based Learning.
 - [Pathfinders Professional Development Course](https://microbit.org/news/2021-12-06/microbit-lessons-for-cs-the-new-teacher-pd-course-is-launched-today/) - Created to bring the delight of physical computing to Elementary CS lessons & designed to support educators looking for ways to integrate CS into their classrooms.
 - [Coding for Your Classroom 4 - 10](https://www.edx.org/course/coding-for-your-classroom-4-10) - Course to build educators’ comfortability and confidence in digital literacy, through hands-on learning activities and demos in a variety of web-based platforms, including micro:bit.
