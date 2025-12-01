@@ -1,0 +1,14 @@
+# Exception lists for URL redirect checker
+# URLs listed here will not trigger warnings or errors
+
+[redirect_ignore]
+urls = [
+    # YouTube consent pages - these are expected redirects based on region/cookies
+    "youtube.com",
+]
+
+[error_ignore]
+urls = [
+    # Website with SSL certificate chain issues (incomplete intermediate certs)
+    "makeairobots.com",
+]

@@ -12,11 +12,46 @@ import asyncio
 import os
 import re
 import sys
+import tomllib
 from functools import lru_cache
 from pathlib import Path
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Optional, Set
 
 import httpx
+
+
+@lru_cache()
+def load_ignore_lists() -> Tuple[Set[str], Set[str]]:
+    """
+    Load ignore lists from exceptions.toml file.
+
+    :returns: Tuple of sets (redirect_ignore, error_ignore)
+    """
+    script_dir = Path(__file__).parent
+    exceptions_file = script_dir / "ignore.toml"
+    if exceptions_file.exists():
+        data = tomllib.loads(exceptions_file.read_text(encoding='utf-8'))
+        return (set(data.get('redirect_ignore', {}).get('urls', [])),
+                set(data.get('error_ignore', {}).get('urls', [])))
+    return set(), set()
+
+
+def should_ignore_redirect(url: str) -> bool:
+    """Check if a URL redirect should be ignored based on exception list."""
+    redirect_ignore, _ = load_ignore_lists()
+    if url in redirect_ignore:
+        return True
+    # Check if URL is contained within exception (for domain-level ignores)
+    return any(ignore_domain in url for ignore_domain in redirect_ignore)
+
+
+def should_ignore_error(url: str) -> bool:
+    """Check if a URL error should be ignored based on exception list."""
+    _, error_ignore = load_ignore_lists()
+    if url in error_ignore:
+        return True
+    # Check if URL is contained with any exception (for domain-level ignores)
+    return any(ignore_domain in url for ignore_domain in error_ignore)
 
 
 def extract_urls_from_markdown(text: str) -> List[str]:
@@ -113,9 +148,7 @@ async def check_redirect(client: httpx.AsyncClient, url: str, index: int) -> Tup
 
 
 async def check_all_redirects(urls: List[str]) -> List[Tuple[int, str, Optional[str], Optional[str]]]:
-    """
-    Check all URLs for redirects asynchronously.
-    """
+    """Check all URLs for redirects asynchronously."""
     async with httpx.AsyncClient() as client:
         tasks = [check_redirect(client, url, i) for i, url in enumerate(urls, 1)]
         results = await asyncio.gather(*tasks)
@@ -148,15 +181,14 @@ def main():
     markdown_file = args.markdown_file
     fail_on_redirect = args.fail_on_redirect
 
+    print_title(f"🔍 Extracting URLs from {markdown_file}...")
     try:
-        print(f"🔍 Extracting URLs from {markdown_file}...")
         text = Path(markdown_file).read_text(encoding='utf-8')
         urls = extract_urls_from_markdown(text)
-        print(f"Found {len(urls)} unique URLs")
     except Exception as e:
         print(f"❌ Error reading file: {e}")
         sys.exit(1)
-
+    print(f"Found {len(urls)} unique URLs")
     if not urls:
         print("No URLs found in the file.")
         sys.exit(0)
@@ -167,29 +199,52 @@ def main():
 
     redirects = []
     errors = []
+    ignored_redirects = []
+    ignored_errors = []
     error_count = 0
     for index, url, final_url, error in results:
         print(f"{index}. {url}")
         if error:
-            error_count += 1
-            print(f"\t❌ Error: {error}")
-            errors.append((url, error))
-        elif final_url:
-            redirects.append((url, final_url))
-            print(f"\t↪️  Redirects to: {final_url}")
+            if should_ignore_error(url):
+                print(f"\t⚠️  Error (ignored): {error}")
+                ignored_errors.append((url, error))
+            else:
+                error_count += 1
+                print(f"\t❌ Error: {error}")
+                errors.append((url, error))
+        if final_url:
+            if should_ignore_redirect(url):
+                print(f"\t↪️⚠️ (ignored) Redirects to: {final_url}")
+                ignored_redirects.append((url, final_url))
+            else:
+                redirects.append((url, final_url))
+                print(f"\t↪️  Redirects to: {final_url}")
 
-    print_title(f"📋 SUMMARY OF REDIRECTS")
+    if ignored_redirects or ignored_errors:
+        print_title(f"🫣  IGNORED EXCEPTIONS")
+        if ignored_redirects:
+            print(f"⚠️ Ignored {len(ignored_redirects)} redirect(s) (in exception list)\n")
+            for url, final_url in ignored_redirects:
+                print(f"  {url}\n    → {final_url}\n")
+            print()
+        if ignored_errors:
+            print(f"⚠️ Ignored {len(ignored_errors)} error(s) (in exception list)\n")
+            for url, error in ignored_errors:
+                print(f"  {url}: {error}\n")
+            print()
+
+    print_title(f"↪️ SUMMARY OF REDIRECTS")
     if redirects:
         print(f"Found {len(redirects)} redirect(s)\n")
         if gh_summary_file:
             with open(gh_summary_file, 'a', encoding='utf-8') as f:
                 f.write(f"## 🔗 URL Redirects Found ({len(redirects)})\n\n")
                 for original, redirected in redirects:
-                    f.write(f"- Original:  {original}\n")
-                    f.write(f"  Redirect:  {redirected}\n")
+                    f.write(f"- Original:\t{original}\n")
+                    f.write(f"  Redirect:\t{redirected}\n")
                     line_num = find_line_number(text, original)
                     line_link = create_github_line_link(line_num, markdown_file)
-                    f.write(f"  Line:      {line_link}\n")
+                    f.write(f"  Line: {line_link}\n")
                 f.write("\n")
 
         for original, redirected in redirects:
@@ -199,7 +254,7 @@ def main():
     else:
         print("✅ No redirects found!")
 
-    print_title(f"❗ ERRORS ENCOUNTERED")
+    print_title(f"❌ ERRORS ENCOUNTERED")
     if error_count > 0:
         print(f"{error_count} URL(s) had errors during checking")
         if gh_summary_file:
