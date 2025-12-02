@@ -20,7 +20,6 @@ from typing import List, Tuple, Optional, Set
 import httpx
 
 
-@lru_cache()
 def load_ignore_lists() -> Tuple[Set[str], Set[str]]:
     """
     Load ignore lists from exceptions.toml file.
@@ -36,22 +35,22 @@ def load_ignore_lists() -> Tuple[Set[str], Set[str]]:
     return set(), set()
 
 
+# Load ignore lists only once at module level
+REDIRECT_IGNORE, ERROR_IGNORE = load_ignore_lists()
+
+
 def should_ignore_redirect(url: str) -> bool:
     """Check if a URL redirect should be ignored based on exception list."""
-    redirect_ignore, _ = load_ignore_lists()
-    if url in redirect_ignore:
+    if url in REDIRECT_IGNORE:
         return True
-    # Check if URL is contained within exception (for domain-level ignores)
-    return any(ignore_domain in url for ignore_domain in redirect_ignore)
+    return any(ignore_domain in url for ignore_domain in REDIRECT_IGNORE)
 
 
 def should_ignore_error(url: str) -> bool:
     """Check if a URL error should be ignored based on exception list."""
-    _, error_ignore = load_ignore_lists()
-    if url in error_ignore:
+    if url in ERROR_IGNORE:
         return True
-    # Check if URL is contained with any exception (for domain-level ignores)
-    return any(ignore_domain in url for ignore_domain in error_ignore)
+    return any(ignore_domain in url for ignore_domain in ERROR_IGNORE)
 
 
 def extract_urls_from_markdown(text: str) -> List[str]:
@@ -223,12 +222,12 @@ def main():
     if ignored_redirects or ignored_errors:
         print_title(f"🫣  IGNORED EXCEPTIONS")
         if ignored_redirects:
-            print(f"⚠️ Ignored {len(ignored_redirects)} redirect(s) (in exception list)\n")
+            print(f"⚠️ Ignored {len(ignored_redirects)} redirect(s) (in exception list):\n")
             for url, final_url in ignored_redirects:
                 print(f"  {url}\n    → {final_url}\n")
             print()
         if ignored_errors:
-            print(f"⚠️ Ignored {len(ignored_errors)} error(s) (in exception list)\n")
+            print(f"⚠️ Ignored {len(ignored_errors)} error(s) (in exception list):\n")
             for url, error in ignored_errors:
                 print(f"  {url}: {error}\n")
             print()
@@ -254,7 +253,7 @@ def main():
     else:
         print("✅ No redirects found!")
 
-    print_title(f"❌ ERRORS ENCOUNTERED")
+    print_title(f"‼️ ERRORS ENCOUNTERED")
     if error_count > 0:
         print(f"{error_count} URL(s) had errors during checking")
         if gh_summary_file:
