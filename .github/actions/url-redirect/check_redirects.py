@@ -220,7 +220,7 @@ def main():
                 print(f"\t↪️  Redirects to: {final_url}")
 
     if ignored_redirects or ignored_errors:
-        print_title(f"🫣  IGNORED EXCEPTIONS")
+        print_title(f"🫣 IGNORED EXCEPTIONS")
         if ignored_redirects:
             print(f"⚠️ Ignored {len(ignored_redirects)} redirect(s) (in exception list):\n")
             for url, final_url in ignored_redirects:

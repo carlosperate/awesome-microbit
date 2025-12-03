@@ -19,6 +19,7 @@ urls = [
     "https://python.microbit.org",
     "https://os.mbed.com/docs/mbed-os/latest/debug-test/debug-microbit.html",
     "https://www.birdbraintechnologies.com/microbit-birdblox/",
+    "https://code.org/maker/microbit",
     # Other redirects we want to ignore
     "https://support.microbit.org",
     "https://awesome.re",
