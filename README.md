@@ -801,6 +801,10 @@ Do you know about any free online event with micro:bits? Please add them here, P
 - [Cardboard Battery Pack Holder](https://microbit.org/get-started/user-guide/battery-pack-holder/) - The new micro:bit comes with a cardboard cut out to hold the micro:bit and battery pack, this is the template to create and customise your own battery holder.
 - [Interactive Lesson](https://cardboard.lofirobot.com/microbit-intro-interactive-lesson/) - An interactive lesson as a web app that communicates with the micro:bit via Web Bluetooth. It showcases the micro:bit features as a multimedia presentation exploring all the sensors, display, and more.
 
+- [GTK Press Micro:bit Kits](https://gtkpress.com/products/stem-now-micro-bit-sensor-kit?_pos=2&_psq=micro%3Abit&_ss=e&_v=1.0/) - a micro:bit kit that includes fun projects to do! (Ships Worldwide)
+
+- [Freenove micro:bit Starter Kit](https://www.amazon.ca/Freenove-Ultimate-Starter-Kit-Micro/dp/B081GKJ3WB/ref=sr_1_1_sspa?crid=3UVKC0UKX8NLD&dib=eyJ2IjoiMSJ9._Rx4webd0X7frOT4arIZAH3jYDS70l_vaRASZG0Zl71RK_4VGjAmKtbAv4RQGfJn0aNssGnnieQJPVHpqG41U3oXABcven2Atph9lWt9BRcKKiWzD3NJ86CmAslFbGRgcuoOIdkaG0RuDm80F3MrEsc_Ya09XMyUNDCQ6C0irqoduZT61wXd48z5AfaFB7JQmve4IvFktA9iRjsB1wSNBMWtVM3SROPRXlpLJJ8hdq1lg96qEnyFxmPQvSrRP8SzrjYrDNSMeyS2cADnTSEI59By_PgBL0Y23XSjTH4MRA8.f4Nk4QFVk9gNMA9OA-BiUw_XxxlJd5qqwf760snBLaQ&dib_tag=se&keywords=micro%3Abit%2Bkit&qid=1768402637&sprefix=micro%2Bbit%2Bkit%2Caps%2C148&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1) - also a micro:bit kit  that has more stuff in my opinion and its a V2 (Canada Only)
+
 
 ## ⚖️ License
 
