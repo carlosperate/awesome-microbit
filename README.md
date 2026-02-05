@@ -790,6 +790,7 @@ Useful Articles for developing on the micro:bit.
 Do you know about any free online event with micro:bits? Please add them here, PRs are encouraged!
 
 - [Micro:bit Foundation Events](https://microbit.org/teach/events/) - Micro:bit Educational Foundation list of events, webminars and code-alongs.
+- [micro:bit Live Global 2026](https://microbit.org/microbit-live-global-2026/) - Explore innovative approaches and powerful collaborations to unlock creative insights into computer science education in this Barcelona event on 27 & 28 of February 2026.
 
 
 ## 🤷 Miscellaneous
