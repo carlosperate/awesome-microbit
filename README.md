@@ -661,6 +661,7 @@ Useful Articles for developing on the micro:bit.
 
 - [micro:bit LIVE 2020 online conference](https://www.youtube.com/playlist?list=PLEo0hMrjdofv9-M0IOyD8Q0VtsX8O__iW) - All the talks and sessions from the micro:bit LIVE 2020 online event.
 - [micro:bit LIVE 2021 online conference](https://www.youtube.com/playlist?list=PLEo0hMrjdofs-XgVXg-Oib1mduB6biIIC) - All the talks and sessions from the micro:bit LIVE 2021 online event.
+- [micro:bit LIVE Barcelona 2023](https://www.microbitlivemadrid.org/en/edicion-barcelona-2023/barcelona-2023) - Event description and session recordings from the in-person Barcelona 2023 event.
 
 ### 🎥 Other Conference Talks
 
