@@ -3,7 +3,7 @@ name: Tweet New Entries
 on:
   push:
     branches:
-    - master
+    - main
     - action
     - ci
 
