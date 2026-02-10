@@ -752,8 +752,6 @@ Useful Articles for developing on the micro:bit.
 
 ## 🏫 Online Courses
 
-- [Build a Physical Computing Prototype](https://www.futurelearn.com/courses/build-a-physical-computing-prototype) - On this course you’ll learn what’s inside the devices we all use every day, come to understand how they work, and ultimately learn to create your own physical computing prototype.
-
 ### 🏫 Professional Development for Teachers
 
 - [Micro:bit Foundation Professional Development Courses](https://microbit.org/teach/professional-development/) - Designed to take the stress out of your computing responsibilities. They are aimed at teachers and educators supporting primary/elementary students.
