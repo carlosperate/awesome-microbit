@@ -752,6 +752,8 @@ Useful Articles for developing on the micro:bit.
 
 ## 🏫 Online Courses
 
+- [Python and Block-Coding Through Projects](https://www.udemy.com/course/bbc-microbit-within-python-and-block-coding-through-projects/) - Learn hardware control with the BBC micro:bit by coding in blocks and Python. See your code come alive on real devices while building core programming skills.
+
 ### 🏫 Professional Development for Teachers
 
 - [Micro:bit Foundation Professional Development Courses](https://microbit.org/teach/professional-development/) - Designed to take the stress out of your computing responsibilities. They are aimed at teachers and educators supporting primary/elementary students.
