@@ -731,7 +731,7 @@ Useful Articles for developing on the micro:bit.
 - [Sustainable Computing](https://www.digitall.charity/ecocode) - BBC micro:bit projects combining physical construction, coding, and environmental awareness to engage students in understanding the nature of the world around them.
 - [Coding for Climate Action](https://www.digitall.charity/codingforclimateaction) - KS2 & KS3 micro:bit units to investigate natural hazards, design early warning systems, and address climate change through hands-on, project-based coding.
 - [Mr Morrison's micro:bit Lessons](https://mrmorrison.co.uk/microbit/) - Starter lessons, beyond the basics, and data & sustainability, with lesson plans, worksheets, and videos.
-- [Oak National Academy Resources](https://www.thenational.academy/pupils/programmes/computing-primary-year-6-l/units/sensing-beda/lessons) - Key stage 2 computing resources on sensing the world with the BBC micro:bit.
+- [Sensing movement with physical computing](https://www.thenational.academy/pupils/programmes/computing-primary-year-6/units/sensing-movement-with-physical-computing/lessons) - Key stage 2 computing resources from Oak National Academy on sensing the world with the BBC micro:bit.
 
 ### 🧑‍🏫 BBC Teaching Resources
 
