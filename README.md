@@ -764,6 +764,7 @@ Useful Articles for developing on the micro:bit.
 
 ## 🖼️ Posters
 
+- [microbit.org Posters](https://www.microbit.org/teach/classroom-resources/?filters=9891baf2-873c-4c17-9550-798cbd9842e0) - All the posters from microbit.org, showcasing the device, editors, and projects.
 - [micro:bit V1 Element 14 Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/550) - Detailed, beautifully rendered, cross-section micro:bit poster highlighting all of the V1 key functions and components.
 - [micro:bit V2 Element 14 Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/2028) - Updated micro:bit V2 poster highlighting all of the device key functions, components, and example projects.
 
