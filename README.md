@@ -338,7 +338,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 - [ML-Machine](https://ml-machine.org) - An interactive machine-learning platform, utilising the micro:bit sensors to generate data, train a model, and run the model with real time sensor data streamed from the micro:bit via Bluetooth.
 - [MAKE: AI Robots](http://makeairobots.com) - A tool to bridge the gap between the Teachable Machine AI and a micro:bit. Train an AI to make a prediction, and then code your micro:bit to use those predictions to activate motors, lights & more!
-- [MicroPal](https://scientiffic.notion.site/scientiffic/MicroPal-Guide-141a70906ea5432599e21cecda2a1fac) - Craft your own interactive micro:bit project that responds to your voice. Create a Teachable Machine Model, load it into the MicroPal website, and control the micro:bit via Web Bluetooth.
+- [MicroPal](https://scientiffic.notion.site/MicroPal-Guide-141a70906ea5432599e21cecda2a1fac) - Craft your own interactive micro:bit project that responds to your voice. Create a Teachable Machine Model, load it into the MicroPal website, and control the micro:bit via Web Bluetooth.
 - [PlushPal](https://www.plushpal.app) - An online tool for creating interactive toys. Record custom gestures, and the micro:bit will react to them using machine learning.
 
 ### 🎓 Machine Learning Resources & Projects
