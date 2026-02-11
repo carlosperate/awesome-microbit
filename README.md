@@ -764,9 +764,8 @@ Useful Articles for developing on the micro:bit.
 
 ## 🖼️ Posters
 
-- [micro:bit Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/2028) - Element14 has put together this detailed, beautifully rendered, cross-section micro:bit poster highlighting all of the device's key functions and components.
-- [micro:bit Poster pack](https://microbit.org/teach/classroom-resources/inspiration-posters/) - A pack of 3 posters from the Micro:bit Foundation with "What will you create?", "Yes I can", and "A labelled micro:bit".
-- [Python Editor poster](https://microbit.org/teach/classroom-resources/python-editor-poster-creativity/) - A poster of the micro:bit Python Editor illustrating its features.
+- [micro:bit V1 Element 14 Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/550) - Detailed, beautifully rendered, cross-section micro:bit poster highlighting all of the V1 key functions and components.
+- [micro:bit V2 Element 14 Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/2028) - Updated micro:bit V2 poster highlighting all of the device key functions, components, and example projects.
 
 
 ## 👪 Community
