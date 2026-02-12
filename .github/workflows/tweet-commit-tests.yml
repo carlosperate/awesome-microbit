@@ -1,4 +1,4 @@
-name: Tweet Commit Action Tests
+name: "GH Action Test: tweet-commit"
 
 on:
   push:
