@@ -9,8 +9,41 @@ inputs:
     description: Trigger keyword to tweet a specific commit
     required: false
     default: Tweet!
+  twitter_consumer_key:
+    description: Twitter API consumer key
+    required: false
+  twitter_consumer_secret:
+    description: Twitter API consumer secret
+    required: false
+  twitter_access_token:
+    description: Twitter API access token
+    required: false
+  twitter_access_token_secret:
+    description: Twitter API access token secret
+    required: false
+  bluesky_username:
+    description: BlueSky username
+    required: false
+  bluesky_token:
+    description: BlueSky app token
+    required: false
 runs:
-  using: docker
-  image: Dockerfile
-  args:
-    - ${{ inputs.args }}
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.12'
+    - name: Install dependencies
+      shell: bash
+      run: pip install -r ${{ github.action_path }}/requirements.txt
+    - name: Run post_commit.py
+      shell: bash
+      env:
+        INPUT_TWITTER_CONSUMER_KEY: ${{ inputs.twitter_consumer_key }}
+        INPUT_TWITTER_CONSUMER_SECRET: ${{ inputs.twitter_consumer_secret }}
+        INPUT_TWITTER_ACCESS_TOKEN: ${{ inputs.twitter_access_token }}
+        INPUT_TWITTER_ACCESS_TOKEN_SECRET: ${{ inputs.twitter_access_token_secret }}
+        INPUT_BLUESKY_USERNAME: ${{ inputs.bluesky_username }}
+        INPUT_BLUESKY_TOKEN: ${{ inputs.bluesky_token }}
+      run: python ${{ github.action_path }}/post_commit.py --commit-hash ${{ github.sha }} --trigger-keyword "${{ inputs.trigger_keyword }}"

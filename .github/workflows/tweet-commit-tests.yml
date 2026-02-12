@@ -1,0 +1,34 @@
+name: Tweet Commit Action Tests
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - '.github/actions/tweet-commit/**'
+  pull_request:
+    paths:
+    - '.github/actions/tweet-commit/**'
+
+jobs:
+  test:
+    name: Run tests & linters
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+      with:
+        # Fetch all history to ensure the action can access all test commit messages
+        fetch-depth: '0'
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.12'
+    - name: Install dependencies
+      working-directory: .github/actions/tweet-commit
+      run: pip install -r requirements.txt -r requirements-test.txt
+    - name: Run tests
+      run: python .github/actions/tweet-commit/tests.py
+    - name: Run flake8
+      run: flake8 .github/actions/tweet-commit/
+    - name: Run black
+      run: black .github/actions/tweet-commit/ --check --diff --line-length 79

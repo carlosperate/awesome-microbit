@@ -2,8 +2,7 @@
 
 It will post the same content to Twitter and BlueSky.
 
-This script depends on environmental variables set by GitHub for the action,
-including secrets set in the Awesome micro:bit repository for the Twitter
+This script depends on environmental variables set for the Twitter
 and BlueSky API access tokens.
 It also depends on running with the Current Working Directory set to the
 repository root.
@@ -13,12 +12,12 @@ import os
 import io
 import re
 import sys
+import argparse
 
 from git import Repo
 import tweepy
 from atproto import Client, client_utils, models
 import httpx
-
 
 # Getting the Twitter secrets form local dev file or GH action secrets
 try:
@@ -274,10 +273,29 @@ def skeet_msg(text_builder, url):
         client.send_post(text_builder)
 
 
+def parse_cli_args():
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(
+        description="Post new Awesome List entries to Twitter and BlueSky."
+    )
+    parser.add_argument(
+        "--commit-hash",
+        required=True,
+        help="The git commit hash to process.",
+    )
+    parser.add_argument(
+        "--trigger-keyword",
+        required=True,
+        help="Keyword to look for in the commit message.",
+    )
+    return parser.parse_args()
+
+
 def main():
     """Entry point."""
-    commit_hash = os.environ["GITHUB_SHA"]
-    post_trigger_str = os.environ["INPUT_TRIGGER_KEYWORD"]
+    args = parse_cli_args()
+    commit_hash = args.commit_hash
+    post_trigger_str = args.trigger_keyword
     print("Commit: {}\nTrigger: {}".format(commit_hash, post_trigger_str))
 
     repo = Repo(os.getcwd())

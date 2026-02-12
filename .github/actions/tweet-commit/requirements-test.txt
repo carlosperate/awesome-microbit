@@ -1,0 +1,5 @@
+flake8
+flake8-bugbear
+flake8-builtins
+flake8-docstrings
+black==26.1.0

@@ -12,13 +12,10 @@ jobs:
     name: Tweet new entries
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v6
       with:
+        # Fetch all history to ensure the action can access the commit message
         fetch-depth: '0'
-    - name: Run tweet action tests
-      uses: ./.github/actions/tweet-commit
-      with:
-        args: test
     - name: Send Tweet if requested in commit message
       uses: ./.github/actions/tweet-commit
       with:
