@@ -468,6 +468,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 
 - [Kitronik CAD Resources](https://kitronik.co.uk/blogs/resources/bbc-microbit-cad-resources/) - BBC micro:bit CAD model from Kitronik.
 - [micro:bit 3D Model](https://sketchfab.com/3d-models/microbit-b453f11ad77a4545a33b3e0ecfba6fc5) - A 3D asset of the BBC micro:bit V1.
+- [80 Pin Edge Connector](https://grabcad.com/library/80-pin-card-edge-connector-1) - A CAD 3D model of the micro:bit through-hole 80 pin card edge connector for micro:bit.
 
 
 ## 🎨 2D Design
