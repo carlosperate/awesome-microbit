@@ -762,6 +762,7 @@ Useful Articles for developing on the micro:bit.
 - [Pathfinders Professional Development Course](https://microbit.org/news/2021-12-06/microbit-lessons-for-cs-the-new-teacher-pd-course-is-launched-today/) - Created to bring the delight of physical computing to Elementary CS lessons & designed to support educators looking for ways to integrate CS into their classrooms.
 - [Coding for Your Classroom 4 - 10](https://www.edx.org/learn/coding/university-of-british-columbia-coding-for-your-classroom-4-10) - Course to build educators’ comfortability and confidence in digital literacy, through hands-on learning activities and demos in a variety of web-based platforms, including micro:bit.
 - [Teaching programming with the micro:bit](https://teachcomputing.org/courses/CO018/teaching-programming-with-the-micro-bit) -  Explore how to use the micro:bit to teach programming across key stage 2, making sure you are using the devices to their full potential.
+- [Teach computing: Introducing physical computing](https://www.edx.org/learn/computer-science/raspberry-pi-foundation-teach-computing-introducing-physical-computing) - Bring physical computing to the classroom with the micro:bit, using MakeCode or Python and control external devices like sensors, RGB LEDs, and buzzers.
 
 
 ## 🖼️ Posters
