@@ -173,8 +173,11 @@ def format_msg_twitter(section, title, url, description):
     return "{}\n{}".format(msg, url)
 
 
-def tweet_msg(msg):
+def tweet_msg(msg, dry_run=False):
     """Tweet the given message content."""
+    if dry_run:
+        print("Dry run: skipping Tweet.\n")
+        return
     if not all(
         (
             TWITTER_CONSUMER_KEY,
@@ -221,12 +224,8 @@ def format_msg_bluesky(section, title, url, description):
     return text_builder
 
 
-def skeet_msg(text_builder, url):
-    """Post to BluSky the given message content."""
-    if not all((BLUESKY_USERNAME, BLUESKY_TOKEN)):
-        print("BlueSky username or token not available.")
-        sys.exit(1)
-
+def skeet_msg(text_builder, url, dry_run=False):
+    """Post to BlueSky the given message content."""
     # Posting Open Graph Protocol (OGP) social media cards, based on example:
     # https://github.com/MarshalX/atproto/blob/v0.0.56/examples/advanced_usage/send_ogp_link_card.py
     _META_PATTERN = re.compile(r'<meta property="og:.*?>')
@@ -250,11 +249,25 @@ def skeet_msg(text_builder, url):
         og_description = _get_og_tag_value(og_tags, "og:description")
         return og_image, og_title, og_description
 
+    # Always fetch OG content, even in dry run
+    img_url, title, description = _get_og_tags(url)
+
+    if dry_run:
+        print(f"Dry run: skipping BlueSky post ({'with' if title and description else 'without'} embed).")
+        if title and description:
+            print("BlueSky Embed content:\n\tTitle: {}\n\tDescription: {}\n\tURL: {}\n\tImage URL: {}".format(
+                title, description, url, img_url
+            ))
+        else:
+            print("BlueSky post content:\nText:\n{}".format(text_builder.build_text()))
+        return
+
+    if not all((BLUESKY_USERNAME, BLUESKY_TOKEN)):
+        print("BlueSky username or token not available.")
+        sys.exit(1)
     client = Client()
     client.login(BLUESKY_USERNAME, BLUESKY_TOKEN)
 
-    # Process social media card
-    img_url, title, description = _get_og_tags(url)
     if title and description:
         thumb_blob = None
         if img_url:
@@ -288,6 +301,12 @@ def parse_cli_args():
         required=True,
         help="Keyword to look for in the commit message.",
     )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        default=False,
+        help="Print the messages without posting to Twitter or BlueSky.",
+    )
     return parser.parse_args()
 
 
@@ -296,15 +315,18 @@ def main():
     args = parse_cli_args()
     commit_hash = args.commit_hash
     post_trigger_str = args.trigger_keyword
+    dry_run = args.dry_run
     print("Commit: {}\nTrigger: {}".format(commit_hash, post_trigger_str))
+    if dry_run:
+        print("Dry run mode enabled, will not post.")
 
     repo = Repo(os.getcwd())
     commit = repo.commit(commit_hash)
     if post_trigger_str not in commit.message:
-        print("Tweet/Skeet trigger keyword not found, exiting...")
+        print("\n🤷 Tweet/Skeet trigger keyword not found, exiting...")
         sys.exit(0)
 
-    print("Post trigger detected, let's tweet and skeet!")
+    print(f"\n{'-' * 50}\n🚀 Post trigger detected, let's tweet and skeet!\n{'-' * 50}\n")
     entries = get_commit_list_entries(commit)
     readme = get_commit_readme(commit)
     for i, entry in enumerate(entries):
@@ -319,14 +341,16 @@ def main():
             'Tweet msg #{}:\n\t"{}"'.format(
                 i, formatted_tweet.replace("\n", "\n\t")
             )
-            + '\nSkeet msg #{}:\n\t"{}"'.format(
+            + '\n\nSkeet msg #{}:\n\t"{}"'.format(
                 i, formatted_skeet.build_text().replace("\n", "\n\t")
             ),
             flush=True,
         )
-        tweet_msg(formatted_tweet)
-        skeet_msg(formatted_skeet, entry["url"])
-        print("Sent Tweet and Skeet #{}!".format(i))
+        print(f"\n{'-' * 50}\nPosting #{i} to Twitter and BlueSky...\n{'-' * 50}\n")
+        tweet_msg(formatted_tweet, dry_run=dry_run)
+        skeet_msg(formatted_skeet, entry["url"], dry_run=dry_run)
+        if not dry_run:
+            print("✅ Sent Tweet and Skeet #{}!".format(i))
 
 
 if __name__ == "__main__":
