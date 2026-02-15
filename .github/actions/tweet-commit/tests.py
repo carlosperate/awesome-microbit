@@ -1,7 +1,9 @@
 """Tests for post_commit."""
 
+import io
 import os
 import unittest
+import unittest.mock
 
 from git import Repo
 
@@ -731,6 +733,347 @@ class TestCommitTweet(unittest.TestCase):
         self.assertTrue(
             has_makecode_tag, "Should have a tag facet for #MakeCode"
         )
+
+
+class TestDryRun(unittest.TestCase):
+    """Test that the --dry-run flag prevents posting."""
+
+    def get_commit_data(self, commit_hash):
+        """Get the list entries and readme from a commit hash."""
+        repository_path = os.getcwd()
+        repo = Repo(repository_path)
+        commit = repo.commit(commit_hash)
+        entries = post_commit.get_commit_list_entries(commit)
+        readme = post_commit.get_commit_readme(commit)
+        return entries, readme
+
+    @unittest.mock.patch("sys.stdout", new_callable=io.StringIO)
+    def test_tweet_msg_dry_run_does_not_post(self, _mock_stdout):
+        """tweet_msg with dry_run=True should not create a Twitter client."""
+        with unittest.mock.patch.object(
+            post_commit.tweepy, "Client"
+        ) as mock_client:
+            post_commit.tweet_msg("Test tweet message", dry_run=True)
+            mock_client.assert_not_called()
+
+    def test_tweet_msg_dry_run_prints_message(self):
+        """tweet_msg with dry_run=True should print a dry run message."""
+        from contextlib import redirect_stdout
+
+        f = io.StringIO()
+        with redirect_stdout(f):
+            post_commit.tweet_msg("Test tweet message", dry_run=True)
+        output = f.getvalue()
+        self.assertIn("Dry run", output)
+
+    @unittest.mock.patch("sys.stdout", new_callable=io.StringIO)
+    def test_skeet_msg_dry_run_does_not_login(self, _mock_stdout):
+        """skeet_msg with dry_run=True should not create a BlueSky client."""
+        entries, readme = self.get_commit_data(
+            "2c58c69cd5ea09fe15726d60c40faaccc6735921"
+        )
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        skeet = post_commit.format_msg_bluesky(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        with unittest.mock.patch.object(post_commit, "Client") as mock_client:
+            with unittest.mock.patch.object(
+                post_commit.httpx, "get"
+            ) as mock_httpx_get:
+                mock_response = unittest.mock.MagicMock()
+                mock_response.text = (
+                    '<meta property="og:title"'
+                    ' content="Test Title">'
+                    '<meta property="og:description"'
+                    ' content="Test Desc">'
+                )
+                mock_httpx_get.return_value = mock_response
+                post_commit.skeet_msg(skeet, entries[0]["url"], dry_run=True)
+            mock_client.assert_not_called()
+
+    @unittest.mock.patch("sys.stdout", new_callable=io.StringIO)
+    def test_skeet_msg_dry_run_still_fetches_og_tags(self, _mock_stdout):
+        """skeet_msg with dry_run=True should still fetch OGP content."""
+        entries, readme = self.get_commit_data(
+            "2c58c69cd5ea09fe15726d60c40faaccc6735921"
+        )
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        skeet = post_commit.format_msg_bluesky(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        with unittest.mock.patch.object(
+            post_commit.httpx, "get"
+        ) as mock_httpx_get:
+            mock_response = unittest.mock.MagicMock()
+            mock_response.text = '<meta property="og:title" content="Test">'
+            mock_httpx_get.return_value = mock_response
+            post_commit.skeet_msg(skeet, entries[0]["url"], dry_run=True)
+            mock_httpx_get.assert_called_once_with(entries[0]["url"])
+
+    def test_skeet_msg_dry_run_prints_embed_info(self):
+        """skeet_msg dry_run=True prints embed info with OG tags."""
+        from contextlib import redirect_stdout
+
+        entries, readme = self.get_commit_data(
+            "2c58c69cd5ea09fe15726d60c40faaccc6735921"
+        )
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        skeet = post_commit.format_msg_bluesky(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        with unittest.mock.patch.object(
+            post_commit.httpx, "get"
+        ) as mock_httpx_get, unittest.mock.patch.object(
+            post_commit.httpx, "head"
+        ) as mock_httpx_head:
+            mock_response = unittest.mock.MagicMock()
+            mock_response.text = (
+                '<meta property="og:title"'
+                ' content="OG Title">'
+                '<meta property="og:description"'
+                ' content="OG Desc">'
+                '<meta property="og:image"'
+                ' content="https://example.com/img.png">'
+            )
+            mock_httpx_get.return_value = mock_response
+            mock_httpx_head.return_value = unittest.mock.MagicMock()
+
+            f = io.StringIO()
+            with redirect_stdout(f):
+                post_commit.skeet_msg(skeet, entries[0]["url"], dry_run=True)
+            output = f.getvalue()
+            self.assertIn("Dry run", output)
+            self.assertIn("OG Title", output)
+            self.assertIn("OG Desc", output)
+
+    def test_parse_cli_args_dry_run_flag(self):
+        """parse_cli_args should parse --dry-run flag."""
+        with unittest.mock.patch(
+            "sys.argv",
+            [
+                "prog",
+                "--commit-hash",
+                "abc123",
+                "--trigger-keyword",
+                "Tweet",
+                "--dry-run",
+            ],
+        ):
+            args = post_commit.parse_cli_args()
+            self.assertTrue(args.dry_run)
+
+    def test_parse_cli_args_no_dry_run_flag(self):
+        """parse_cli_args should default dry_run to False."""
+        with unittest.mock.patch(
+            "sys.argv",
+            ["prog", "--commit-hash", "abc123", "--trigger-keyword", "Tweet"],
+        ):
+            args = post_commit.parse_cli_args()
+            self.assertFalse(args.dry_run)
+
+
+class TestOgTagFixes(unittest.TestCase):
+    """Test OG tag parsing fixes in skeet_msg.
+
+    These tests mock httpx to simulate the specific OG tag issues
+    found in commits ed36386, 6be256b, and 8894326.
+    """
+
+    def get_commit_data(self, commit_hash):
+        """Get the list entries and readme from a commit hash."""
+        repository_path = os.getcwd()
+        repo = Repo(repository_path)
+        commit = repo.commit(commit_hash)
+        entries = post_commit.get_commit_list_entries(commit)
+        readme = post_commit.get_commit_readme(commit)
+        return entries, readme
+
+    @unittest.mock.patch("sys.stdout", new_callable=io.StringIO)
+    def test_og_image_alt_before_og_image(self, mock_stdout):
+        """og:image:alt before og:image should not confuse parsing.
+
+        Commit 8894326: The page has og:image:alt before og:image,
+        so a substring match on 'og:image' would match the alt tag
+        first and return its content instead of the actual image URL.
+        """
+        entries, readme = self.get_commit_data("8894326")
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        skeet = post_commit.format_msg_bluesky(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        og_html = (
+            '<meta property="og:image:alt"'
+            ' content="Oak National Academy">'
+            '<meta property="og:title"'
+            ' content="Physical computing">'
+            '<meta property="og:description"'
+            ' content="Free lessons">'
+            '<meta property="og:image"'
+            ' content="https://example.com/real-image.png">'
+        )
+        with unittest.mock.patch.object(
+            post_commit.httpx, "get"
+        ) as mock_get, unittest.mock.patch.object(
+            post_commit.httpx, "head"
+        ) as mock_head:
+            mock_page = unittest.mock.MagicMock()
+            mock_page.text = og_html
+            mock_get.return_value = mock_page
+            mock_head.return_value = unittest.mock.MagicMock()
+
+            post_commit.skeet_msg(skeet, entries[0]["url"], dry_run=True)
+
+        output = mock_stdout.getvalue()
+        # Should find the real og:image, not the og:image:alt
+        self.assertIn("https://example.com/real-image.png", output)
+        self.assertNotIn("Image URL: Oak National Academy", output)
+
+    @unittest.mock.patch("sys.stdout", new_callable=io.StringIO)
+    def test_og_image_relative_url(self, mock_stdout):
+        """Relative og:image URLs should be resolved to absolute.
+
+        Commit ed36386: The og:image content is a relative path like
+        '/packs/media/images/courses/courses-xxx.png' which needs to
+        be resolved against the page URL.
+        """
+        entries, readme = self.get_commit_data("ed36386")
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        skeet = post_commit.format_msg_bluesky(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+        page_url = entries[0]["url"]
+
+        og_html = (
+            '<meta property="og:title"'
+            ' content="Teaching programming">'
+            '<meta property="og:description"'
+            ' content="Explore how to use the micro:bit">'
+            '<meta property="og:image"'
+            ' content="/packs/media/images/courses.png">'
+        )
+        with unittest.mock.patch.object(
+            post_commit.httpx, "get"
+        ) as mock_get, unittest.mock.patch.object(
+            post_commit.httpx, "head"
+        ) as mock_head:
+            mock_page = unittest.mock.MagicMock()
+            mock_page.text = og_html
+            mock_get.return_value = mock_page
+            mock_head.return_value = unittest.mock.MagicMock()
+
+            post_commit.skeet_msg(skeet, page_url, dry_run=True)
+
+        output = mock_stdout.getvalue()
+        # The relative URL should be resolved to an absolute URL
+        self.assertIn(
+            "https://teachcomputing.org/packs/media/images/courses.png",
+            output,
+        )
+        # Should NOT contain just the relative path
+        self.assertNotIn("Image URL: /packs/media", output)
+
+    @unittest.mock.patch("sys.stdout", new_callable=io.StringIO)
+    def test_og_tags_page_fetch_error(self, mock_stdout):
+        """Page returning 403/404 should not crash the script.
+
+        Commit 6be256b: The page URL returns a 403 Forbidden,
+        so _get_og_tags should handle the error gracefully and
+        return None values instead of raising an exception.
+        """
+        entries, readme = self.get_commit_data("6be256b")
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        skeet = post_commit.format_msg_bluesky(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        with unittest.mock.patch.object(post_commit.httpx, "get") as mock_get:
+            mock_response = unittest.mock.MagicMock()
+            mock_response.raise_for_status.side_effect = (
+                post_commit.httpx.HTTPStatusError(
+                    "403 Forbidden",
+                    request=unittest.mock.MagicMock(),
+                    response=unittest.mock.MagicMock(),
+                )
+            )
+            mock_get.return_value = mock_response
+
+            # Should not raise an exception
+            post_commit.skeet_msg(skeet, entries[0]["url"], dry_run=True)
+
+        output = mock_stdout.getvalue()
+        self.assertIn("Dry run", output)
+        self.assertIn("Warning", output)
+
+    @unittest.mock.patch("sys.stdout", new_callable=io.StringIO)
+    def test_og_image_inaccessible(self, mock_stdout):
+        """Inaccessible og:image URL should be set to None.
+
+        When the og:image URL returns a 403/404 on HEAD request,
+        the image should be set to None and a warning printed.
+        """
+        entries, readme = self.get_commit_data("8894326")
+        section = post_commit.get_entry_section(readme, entries[0]["entry"])
+        skeet = post_commit.format_msg_bluesky(
+            section,
+            entries[0]["title"],
+            entries[0]["url"],
+            entries[0]["description"],
+        )
+
+        og_html = (
+            '<meta property="og:title"'
+            ' content="Test Title">'
+            '<meta property="og:description"'
+            ' content="Test Desc">'
+            '<meta property="og:image"'
+            ' content="https://example.com/broken.png">'
+        )
+        with unittest.mock.patch.object(
+            post_commit.httpx, "get"
+        ) as mock_get, unittest.mock.patch.object(
+            post_commit.httpx, "head"
+        ) as mock_head:
+            mock_page = unittest.mock.MagicMock()
+            mock_page.text = og_html
+            mock_get.return_value = mock_page
+
+            mock_head_resp = unittest.mock.MagicMock()
+            mock_head_resp.raise_for_status.side_effect = (
+                post_commit.httpx.HTTPStatusError(
+                    "404 Not Found",
+                    request=unittest.mock.MagicMock(),
+                    response=unittest.mock.MagicMock(),
+                )
+            )
+            mock_head.return_value = mock_head_resp
+
+            post_commit.skeet_msg(skeet, entries[0]["url"], dry_run=True)
+
+        output = mock_stdout.getvalue()
+        self.assertIn("Warning: og:image URL not accessible", output)
+        self.assertIn("Image URL: None", output)
 
 
 if __name__ == "__main__":

@@ -13,6 +13,7 @@ import io
 import re
 import sys
 import argparse
+from urllib.parse import urljoin
 
 from git import Repo
 import tweepy
@@ -232,34 +233,46 @@ def skeet_msg(text_builder, url, dry_run=False):
     _CONTENT_PATTERN = re.compile(r'<meta[^>]+content="([^"]+)"')
 
     def _get_og_tag_value(og_tags, tag_name):
-        # tag = _find_tag(og_tags, tag_name)
         for tag in og_tags:
-            if tag_name in tag:
+            if f'property="{tag_name}"' in tag:
                 match = _CONTENT_PATTERN.match(tag)
                 if match:
                     return match.group(1)
         return None
 
     def _get_og_tags(url):
-        response = httpx.get(url)
-        response.raise_for_status()
+        try:
+            response = httpx.get(url)
+            response.raise_for_status()
+        except (httpx.HTTPStatusError, httpx.RequestError) as e:
+            print(f"Warning: Could not fetch URL: {e}")
+            return None, None, None
         og_tags = _META_PATTERN.findall(response.text)
         og_image = _get_og_tag_value(og_tags, "og:image")
         og_title = _get_og_tag_value(og_tags, "og:title")
         og_description = _get_og_tag_value(og_tags, "og:description")
+        # Resolve relative image URLs to absolute URLs and validate final URL
+        if og_image and not og_image.startswith(("http://", "https://")):
+            og_image = urljoin(url, og_image)
+        if og_image:
+            try:
+                img_resp = httpx.head(og_image, follow_redirects=True)
+                img_resp.raise_for_status()
+            except (httpx.HTTPStatusError, httpx.RequestError):
+                print(f"Warning: og:image URL not accessible: {og_image}")
+                og_image = None
         return og_image, og_title, og_description
 
     # Always fetch OG content, even in dry run
     img_url, title, description = _get_og_tags(url)
 
     if dry_run:
-        print(f"Dry run: skipping BlueSky post ({'with' if title and description else 'without'} embed).")
+        print("Dry run: skipping BlueSky post.")
         if title and description:
-            print("BlueSky Embed content:\n\tTitle: {}\n\tDescription: {}\n\tURL: {}\n\tImage URL: {}".format(
-                title, description, url, img_url
-            ))
-        else:
-            print("BlueSky post content:\nText:\n{}".format(text_builder.build_text()))
+            print(
+                f"BlueSky Embed content:\n\tTitle: {title}\n\tDescription: "
+                f"{description}\n\tURL: {url}\n\tImage URL: {img_url}"
+            )
         return
 
     if not all((BLUESKY_USERNAME, BLUESKY_TOKEN)):
@@ -316,17 +329,18 @@ def main():
     commit_hash = args.commit_hash
     post_trigger_str = args.trigger_keyword
     dry_run = args.dry_run
-    print("Commit: {}\nTrigger: {}".format(commit_hash, post_trigger_str))
+    print(f"Commit: {commit_hash}\nTrigger: {post_trigger_str}")
     if dry_run:
         print("Dry run mode enabled, will not post.")
 
     repo = Repo(os.getcwd())
     commit = repo.commit(commit_hash)
+    print(f"Commit message:\n{commit.message}")
     if post_trigger_str not in commit.message:
         print("\n🤷 Tweet/Skeet trigger keyword not found, exiting...")
         sys.exit(0)
 
-    print(f"\n{'-' * 50}\n🚀 Post trigger detected, let's tweet and skeet!\n{'-' * 50}\n")
+    print(f"\n{'-' * 50}\n🚀 Post trigger detected!\n{'-' * 50}\n")
     entries = get_commit_list_entries(commit)
     readme = get_commit_readme(commit)
     for i, entry in enumerate(entries):
@@ -346,7 +360,7 @@ def main():
             ),
             flush=True,
         )
-        print(f"\n{'-' * 50}\nPosting #{i} to Twitter and BlueSky...\n{'-' * 50}\n")
+        print(f"\n{'-' * 50}\nPosting #{i} to Social Media...\n{'-' * 50}\n")
         tweet_msg(formatted_tweet, dry_run=dry_run)
         skeet_msg(formatted_skeet, entry["url"], dry_run=dry_run)
         if not dry_run:
