@@ -467,7 +467,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 
 ## 📐 CAD
 
-- [Kitronik CAD Resources](https://kitronik.co.uk/blogs/resources/bbc-microbit-cad-resources/) - BBC micro:bit CAD model from Kitronik.
+- [Kitronik CAD Resources](https://kitronik.co.uk/blogs/resources/bbc-microbit-cad-resources-kitronik-university) - BBC micro:bit CAD model from Kitronik.
 - [micro:bit 3D Model](https://sketchfab.com/3d-models/microbit-b453f11ad77a4545a33b3e0ecfba6fc5) - A 3D asset of the BBC micro:bit V1.
 
 
@@ -497,7 +497,7 @@ All these projects contain steps and resources required for reproduction.
 - [Scrolling display](https://meanderingpi.com/2017/09/16/bbc-microbit-scrolling-display/) - Create a display screen using a number of micro:bits communicating via radio.
 - [Ironman Arc Reactor](https://kitronik.co.uk/blogs/resources/halo-ween-ironman-arc-reactor) - Choose between two different versions (Mk I and Mk II) ready to 3D print and build.
 - [microbit-beacon-finder](https://github.com/kshoji/microbit-beacon-finder) - The micro:bit finds various types of BLE Beacons, and displays their ID to the LEDs.
-- [Build A Klawsome micro:bit Controlled Tank](https://kitronik.co.uk/blogs/resources/klawsome-microbit-controlled-tank/) - Tutorial on how to design a build a perspex micro:bit tank.
+- [Build A Klawsome micro:bit Controlled Tank](https://kitronik.co.uk/blogs/resources/klawsome-microbit-controlled-tank) - Tutorial on how to design a build a perspex micro:bit tank.
 - [micro:bit Hovercraft](https://www.instructables.com/Make-a-Cool-Microbit-Hovercraft-Together/) - A hovercraft, which runs both in the water and on the ground. Uses 2 motors to blow air underneath to support the hovercraft body and 2 motors in the end to control its direction.
 - [ZIP Halo Compass](https://kitronik.co.uk/blogs/resources/bbc-microbit-zip-halo-compass) - A Christmas themed micro:bit ZIP Halo Compass, with a 3D printed and laser cut case.
 - [Micro:Boy](https://hackaday.io/project/27757-microboy) - Hardware project to code and play arcade games on the micro:bit.
@@ -514,13 +514,13 @@ All these projects contain steps and resources required for reproduction.
 - [Musical Instrument Controller](https://phwallen.github.io/microbit-music-controller/) - A micro:bit instrument that communities with an iPad via Bluetooth into MIDI controller app that can play music via GarageBand.
 - [Inexpensive Remote Controlled Robot](https://mryslab.github.io/microbit-robot/) - Guide to create an inexpensive robot, easily assembled from a set of off the shelf parts.
 - [Natural Disaster Sensor](https://core-electronics.com.au/guides/natural-disaster-sensor-project-for-the-microbit-stem/) - Wind, seismic, and temperature data monitoring from remote micro:bits.
-- [Bike Light](https://kitronik.co.uk/blogs/resources/zip-tile-microbit-bike-light-isaac-gorsani/) - A rear bike light with a Kitronik Zip Tile (8x8 RGB LED matrix) and 3D printed case.
+- [Bike Light](https://kitronik.co.uk/blogs/resources/zip-tile-microbit-bike-light-isaac-gorsani) - A rear bike light with a Kitronik Zip Tile (8x8 RGB LED matrix) and 3D printed case.
 - [IoT Pill Reminders with SAP Cloud Foundry and Google Sheets](https://community.sap.com/t5/technology-blog-posts-by-members/iot-pill-reminders-with-sap-cloud-foundry-google-sheets-and-micro-bit/ba-p/13397437) - How to build an IoT “Pill Reminder” device to remind the patient to take their pills and update their status in Google Sheets.
 - [Pong-Like Retro Clock Using TinyGo and micro:bit](https://www.hackster.io/_conejo/pong-like-retro-clock-using-tinygo-and-microbit-682736) - Use an RGB matrix and a micro:bit to display the time with an awesome game of PONG. Made with love and TinyGo.
 - [Racing Car Timing Gate](https://github.com/astrotutor9/Microbit-Racing-Car-Timing-Gate) - Create a speed trap for toy cars with three micro:bits, torches, radio and the MicroPython REPL.
 - [Robot Unicorn](https://github.com/helenleigh/robot-unicorn) - Gesture controlled robot unicorn made of cardboard, glitter, a 3D printed horn, and micro:bits.
 - [The Christmas Joy Spreading Machine](https://www.hackster.io/balearicdynamics/the-christmas-joy-spreading-machine-3d3559) - Project inside a box representing a metaphor of the most popular Christmas symbols. Maybe it's a bit dystopian but it moves, lights and reacts to music.
-- [micro:bit Guitar](https://kitronik.co.uk/blogs/resources/microbit-guitar-noise-pack-inventors-kit/) - A micro:bit guitar using the Noise Pack Add-on for the Kitronik Inventors Kit.
+- [micro:bit Guitar](https://kitronik.co.uk/blogs/resources/microbit-guitar-noise-pack-inventors-kit) - A micro:bit guitar using the Noise Pack Add-on for the Kitronik Inventors Kit.
 - [Gesture Controlled Lamp](https://manoj.ninja/articles/2019/09/19/building-a-gesture-controlled-lamp) - Building a colourful 3D printed lamp with the BBC micro:bit that responds to gestures.
 - [micro:bit Magic Wand](https://www.instructables.com/Microbit-Magic-Wand-Beginner/) - This project uses two micro:bit, a few small electronic parts, and some everyday objects from around the house to create our very own magical wand.
 - [MicroBike](https://github.com/musabkilic/MicroBike) - Turn your micro:bit into a game controller.
@@ -594,7 +594,7 @@ Useful Articles for developing on the micro:bit.
 - [Become a Time Lord with the BBC micro:bit](https://medium.com/groklearning/become-a-time-lord-with-the-bbc-micro-bit-c4b8b4e2d747 ) - Using different timing mechanisms to run multiple things in MicroPython.
 - [Debugging the micro:bit with pyOCD and GDB](https://os.mbed.com/docs/mbed-os/latest/debug-test/debug-microbit.html) - Shows how to debug a micro:bit program using PyOCD and GDB.
 - [Exploring the BBC micro:bit Software Stack](https://mattwarren.org/2017/11/28/Exploring-the-BBC-microbit-Software-Stack/) - What’s in it, what it does and how it all fits together.
-- [Building the 1,000 BBC micro:bit Display](https://kitronik.co.uk/blogs/resources/building-the-bbc-microbit-matrix-display/) - Building a screen to show images from a thousand BBC micro:bits.
+- [Building the 1,000 BBC micro:bit Display](https://kitronik.co.uk/blogs/resources/building-the-bbc-microbit-matrix-display) - Building a screen to show images from a thousand BBC micro:bits.
 - [micro:bit Radio Packets](https://ukbaz.github.io/howto/ubit_radio.html) - Explanation of the MakeCode radio packet specification (built on top of the micro:bit DAL spec) and how to communicate between MakeCode and MicroPython programs via radio.
 - [Synchronized Music on micro:bits](http://blog.flowblok.id.au/2018-02/synchronized-music-on-microbits.html) - Building a micro:bit mesh network so they can play music synchronized across a large area.
 - [Using the Built-in Sensors](https://learn.adafruit.com/micro-bit-lesson-1-using-the-built-in-sensors) - Learn how to use the micro:bit's built-in accelerometer and magnetometer.
@@ -630,7 +630,7 @@ Useful Articles for developing on the micro:bit.
 - [BitIO blogs](https://warksjammy.blogspot.com/2017/07/bitio-blogs-in-one-place.html) - Collection of blogs written about using the BitIO Python module to control the micro:bit.
 - [micro:bit learning](http://www.microbitlearning.com/tag/microbit) - Blog with a section for articles showing how to use a wide selection of sensors with the micro:bit and the Arduino software.
 - [Adafruit Learn micro:bit section](https://learn.adafruit.com/category/micro-bit) - Adafruit Learning System section for the BBC micro:bit.
-- [BBC micro:bit - Kitronik University](https://kitronik.co.uk/blogs/resources/bbc-microbit-kitronik-university/) - A varied collection of micro:bit resources by Kitronik.
+- [BBC micro:bit - Kitronik University](https://kitronik.co.uk/blogs/resources/bbc-microbit-kitronik-university) - A varied collection of micro:bit resources by Kitronik.
 - [DF Robot micro:bit blog section](https://www.dfrobot.com/blog-tag-micro:bit.html) - Blog posts and articles about micro:bit from DF Robot.
 - [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
 - [Little Bird Guides](https://learn.littlebirdelectronics.com.au/categories/microbit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
@@ -708,7 +708,7 @@ Useful Articles for developing on the micro:bit.
 - [Year 7 micro:bit lessons](https://www.jonwitts.co.uk/year-7-microbit) - Lessons used to introduce students to the micro:bit and Python.
 - [UCL’s BBC micro:bit Tutorials](https://microbit-challenges.readthedocs.io/en/latest/) - Tutorial sheets that introduce micro:bit features with practical examples provided to invite students to design solutions to problems.
 - [BBC micro:bit and Kodu Interact](http://www.kodugamelab.com/resources/#microbit) - Kodu is a visual programming language made specifically for creating games and allow interaction with the micro:bit.
-- [Build A Robot Wars Buggy](https://kitronik.co.uk/blogs/resources/robot-buggy-part-1-build-robot-wars-buggy-introduction/) - This fun learning resource has been put together to provide teachers with an all in one design & technology challenge that you can set for your students.
+- [Build A Robot Wars Buggy](https://kitronik.co.uk/blogs/resources/robot-buggy-part-1-build-robot-wars-buggy-introduction) - This fun learning resource has been put together to provide teachers with an all in one design & technology challenge that you can set for your students.
 - [Kitronik Inventors Kit Resources](https://kitronik.co.uk/blogs/resources/kitronik-inventors-kit-resources) - A a great way to get started with programming and hardware interaction with the micro:bit. Includes 12 experiments using LEDs, motors, LDRs and capacitors.
 - [CLOQQ Activities](https://cloqq.com/newtomorrowtogether2017) - ([more](https://cloqq.com/tecnologia?id=14777677)) Activities with different difficulty levels, target age, and duration.
 - [Learn micro:bit](https://github.com/LearnToProgramRoanoke/Learn-microbit) - Code and materials for learning to program with the BBC micro:bit.
@@ -801,7 +801,7 @@ Do you know about any free online event with micro:bits? Please add them here, P
 - [micro:bit broadcast](https://microbit-broadcast.embeddedlog.com) - (Discontinued, archived) newsletter to stay up-to-date with the latest micro:bit news, articles, projects, and resources.
 - [microbit.org Support](https://support.microbit.org) - The support pages from the micro:bit Foundation is a great source of information, containing an extensive collection of FAQs, articles, and guides.
 - [Micro World Tour](https://microworldtour.github.io) - Before the micro:bit was released a few went on a tour to the world-wide Python community. A lot of interesting content and ideas on these micro:bit adventures.
-- [Parent's Complete Guide To The BBC micro:bit](https://kitronik.co.uk/blogs/resources/parents-complete-guide-bbc-microbit/) - Free resource to help parent's get actively involved in helping their children learn how to code, even with no prior coding experience.
+- [Parent's Complete Guide To The BBC micro:bit](https://kitronik.co.uk/blogs/resources/parents-complete-guide-bbc-microbit) - Free resource to help parent's get actively involved in helping their children learn how to code, even with no prior coding experience.
 - [micro:bit Out Of Box Experience](https://support.microbit.org/support/solutions/articles/19000021613-reset-the-micro-bit-to-factory-defaults) - The default program running on a brand new micro:bit and its source code.
 - [Accessory Guide](https://microbit.org/buy/accessories/) - A constantly updated list of accessories for the micro:bit.
 - [pin:out](https://microbit.pinout.xyz) - A GPIO pinout interactive reference for the BBC micro:bit and accessories.
