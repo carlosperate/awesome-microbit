@@ -261,7 +261,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [microbit-dal-ext-kit](https://github.com/softgraph/microbit-dal-ext-kit) - A set of components and utilities for C++ applications using micro:bit DAL (runtime).
 - [MicrobitV2-HHS Arduino Lib](https://github.com/Grrtzm/MicrobitV2-HHS) - Arduino library for micro:bit V2 for radio and PWM (including Servo and Tone).
 
-### ©️ RTOS targeting micro:bit
+### ©️ C/C++ RTOS targeting micro:bit
 
 - [ChibiOS](https://github.com/ChibiOS/ChibiOS-Contrib) - A complete development environment for embedded applications including RTOS, a HAL, peripheral drivers, support files, and tools.
 - [Mynewt](https://github.com/apache/mynewt-core) - Open-source operating system for tiny embedded devices. Its goal is to make it easy to develop applications for microcontroller environments where power and cost are driving factors.
@@ -278,16 +278,23 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 ## 🦀 Rust
 
+### 🦀 Rust Guides
+
 - [The Discovery book](https://docs.rust-embedded.org/discovery/microbit/) - This book is an introductory course on microcontroller-based embedded systems, using micro:bit, that uses Rust as the teaching language rather than the usual C/C++.
-- [Board support crate for micro:bit](https://docs.rs/crate/microbit/latest) - Contains everything required to get started with the use of Rust to create firmwares for the BBC micro:bit board.
-- [Running Rust code on a BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Article describing the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
 - [Rust on the micro:bit 101](https://www.eggers-club.de/blog/2018/05/31/rust-on-the-microbit-101-part-1/) - How to get started using the board support crate and start programming the BBC micro:bit in Rust.
+- [Running Rust code on a BBC micro:bit](https://github.com/SimonSapin/rust-on-bbc-microbit) - Article describing the experience and steps of compiling Rust code for the micro:bit with and without interaction with the runtime DAL.
 - [Rust on the BBC micro:bit](https://blog.drogue.io/rust-and-microbit/) - How to get started using Rust and BLE on the micro:bit, exposing temperature data as a Bluetooth Environment Sensing Service, and publishing it to the Drogue Cloud via a Bluetooth gateway.
-- [Tock](https://github.com/tock/tock/blob/master/boards/microbit_v2/README.md) - An embedded operating system designed for running multiple concurrent, mutually distrustful applications on low-memory and low-power microcontrollers, with support for the BBC micro:bit.
+- [Welcome to Bare Metal Rust](https://google.github.io/comprehensive-rust/bare-metal.html) - Part of Google Android's team's [Comprehensive Rust](https://google.github.io/comprehensive-rust/index.html) course uses the micro:bit v2.
+- [impl Rust for micro:bit Book](https://mb2.implrust.com/) - Open source book teaches embedded Rust using micro:bit by building simple and fun projects like clap-to-smile, shake detector, smart LED, send data to phone via Bluetooth, and more.
+
+### 🦀 Rust Libraries & Examples
+- [Board support crate for micro:bit](https://docs.rs/crate/microbit/latest) - Contains everything required to get started with the use of Rust to create firmwares for the BBC micro:bit board.
 - [micro:bit Rust Demos](https://github.com/dtcristo/microbit-demos) - Multiple Rust language demos running on the BBC micro:bit.
 - [RGB LED Matrix](https://github.com/vhiribarren/nrf52833-rgb-led-matrix-lib-rust) - Rust project for the BBC micro:bit controlling a 64x32 matrix panel with some level shifters.
-- [impl Rust for micro:bit Book](https://mb2.implrust.com/) - Open source book teaches embedded Rust using micro:bit by building simple and fun projects like clap-to-smile, shake detector, smart LED, send data to phone via Bluetooth, and more.
-- [Welcome to Bare Metal Rust](https://google.github.io/comprehensive-rust/bare-metal.html) - Part of Google Android's team's [Comprehensive Rust](https://google.github.io/comprehensive-rust/index.html) course uses the micro:bit v2.
+
+### 🦀 Rust RTOS targeting micro:bit
+
+- [Tock](https://github.com/tock/tock/blob/master/boards/microbit_v2/README.md) - An embedded operating system designed for running multiple concurrent, mutually distrustful applications on low-memory and low-power microcontrollers, with support for the BBC micro:bit.
 
 ## 🐦 Ada
 
