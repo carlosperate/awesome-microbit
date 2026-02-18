@@ -470,6 +470,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [Solderless micro:bit timer](https://www.thingiverse.com/thing:4790928) - A configurable timer made with a v2 micro:bit board, some electronics components and very few soldering.
 - [panQuad](https://www.printables.com/model/135495-panquad) - Quadruped robot powered by the micro:bit, a robot:bit, and 8 servo motors.
 - [Advent Ornament Case](https://www.printables.com/model/664681-microbit-advent-ornamet-case) - A star ornament to clip the micro:bit and its battery pack and hang it.
+- [3D Printed micro:bit Holders for the Classroom](https://forwardedu.com/blogs/blog/3d-printed-micro-bit-holders-for-the-classroom) - Forward Education 3D printed, tested and reviewed 7 different micro:bit holders to use in the classroom.
 
 
 ## 📐 CAD
