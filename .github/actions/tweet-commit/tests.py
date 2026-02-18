@@ -1050,30 +1050,32 @@ class TestOgTagFixes(unittest.TestCase):
             '<meta property="og:image"'
             ' content="https://example.com/broken.png">'
         )
-        with unittest.mock.patch.object(
-            post_commit.httpx, "get"
-        ) as mock_get, unittest.mock.patch.object(
-            post_commit.httpx, "head"
-        ) as mock_head:
+        with unittest.mock.patch.object(post_commit.httpx, "get") as mock_get:
             mock_page = unittest.mock.MagicMock()
             mock_page.text = og_html
-            mock_get.return_value = mock_page
 
-            mock_head_resp = unittest.mock.MagicMock()
-            mock_head_resp.raise_for_status.side_effect = (
+            mock_img_resp = unittest.mock.MagicMock()
+            mock_img_resp.raise_for_status.side_effect = (
                 post_commit.httpx.HTTPStatusError(
                     "404 Not Found",
                     request=unittest.mock.MagicMock(),
                     response=unittest.mock.MagicMock(),
                 )
             )
-            mock_head.return_value = mock_head_resp
+
+            def get_side_effect(url, **kwargs):
+                if url == "https://example.com/broken.png":
+                    return mock_img_resp
+                return mock_page
+
+            mock_get.side_effect = get_side_effect
 
             post_commit.skeet_msg(skeet, entries[0]["url"], dry_run=True)
 
         output = mock_stdout.getvalue()
         self.assertIn("Warning: og:image URL not accessible", output)
-        self.assertIn("Image URL: None", output)
+        self.assertIn("Image URL: https://example.com/broken.png", output)
+        self.assertIn("Image type: None", output)
 
 
 if __name__ == "__main__":

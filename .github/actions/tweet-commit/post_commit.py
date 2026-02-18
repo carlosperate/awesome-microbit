@@ -225,8 +225,19 @@ def format_msg_bluesky(section, title, url, description):
     return text_builder
 
 
-def skeet_msg(text_builder, url, dry_run=False):
-    """Post to BlueSky the given message content."""
+def _get_og_tags(url):
+    """Fetch OGP tags from a URL, download og:image.
+
+    :param url: URL to fetch OGP tags from.
+    :return: A tuple containing:
+        - img_data: The og:image binary data, or None.
+        - img_content_type: The og:image content type,
+          or None.
+        - og_image: The og:image URL, or None.
+        - og_title: The og:title content, or None.
+        - og_description: The og:description content,
+          or None.
+    """
     # Posting Open Graph Protocol (OGP) social media cards, based on example:
     # https://github.com/MarshalX/atproto/blob/v0.0.56/examples/advanced_usage/send_ogp_link_card.py
     _META_PATTERN = re.compile(r'<meta property="og:.*?>')
@@ -240,31 +251,58 @@ def skeet_msg(text_builder, url, dry_run=False):
                     return match.group(1)
         return None
 
-    def _get_og_tags(url):
-        try:
-            response = httpx.get(url)
-            response.raise_for_status()
-        except (httpx.HTTPStatusError, httpx.RequestError) as e:
-            print(f"Warning: Could not fetch URL: {e}")
-            return None, None, None
-        og_tags = _META_PATTERN.findall(response.text)
-        og_image = _get_og_tag_value(og_tags, "og:image")
-        og_title = _get_og_tag_value(og_tags, "og:title")
-        og_description = _get_og_tag_value(og_tags, "og:description")
-        # Resolve relative image URLs to absolute URLs and validate final URL
-        if og_image and not og_image.startswith(("http://", "https://")):
-            og_image = urljoin(url, og_image)
-        if og_image:
-            try:
-                img_resp = httpx.head(og_image, follow_redirects=True)
-                img_resp.raise_for_status()
-            except (httpx.HTTPStatusError, httpx.RequestError):
-                print(f"Warning: og:image URL not accessible: {og_image}")
-                og_image = None
-        return og_image, og_title, og_description
+    def _detect_image_content_type(img_data, response_content_type):
+        """Detect image content type from response header or magic bytes."""
+        content_type = response_content_type.split(";")[0].strip()
+        if not content_type.startswith("image/"):
+            # Detect from magic bytes if header is missing/wrong
+            if img_data[:8].startswith(b"\x89PNG\r\n\x1a\n"):
+                content_type = "image/png"
+            elif img_data[:2] in (b"\xff\xd8",):
+                content_type = "image/jpeg"
+            elif img_data[:4] == b"RIFF" and img_data[8:12] == b"WEBP":
+                content_type = "image/webp"
+            elif img_data[:6] in (b"GIF87a", b"GIF89a"):
+                content_type = "image/gif"
+            else:
+                content_type = "image/jpeg"
+        return content_type
 
+    try:
+        response = httpx.get(url)
+        response.raise_for_status()
+    except (httpx.HTTPStatusError, httpx.RequestError) as e:
+        print(f"Warning: Could not fetch URL: {e}")
+        return None, None, None, None, None
+    og_tags = _META_PATTERN.findall(response.text)
+    og_image = _get_og_tag_value(og_tags, "og:image")
+    og_title = _get_og_tag_value(og_tags, "og:title")
+    og_description = _get_og_tag_value(og_tags, "og:description")
+
+    # Resolve relative image URLs to absolute URLs
+    if og_image and not og_image.startswith(("http://", "https://")):
+        og_image = urljoin(url, og_image)
+
+    # Download the og:image and detect its content type
+    img_data = None
+    img_content_type = None
+    if og_image:
+        try:
+            img_resp = httpx.get(og_image, follow_redirects=True)
+            img_resp.raise_for_status()
+            img_data = img_resp.content
+            img_content_type = _detect_image_content_type(
+                img_data, img_resp.headers.get("content-type", "")
+            )
+        except (httpx.HTTPStatusError, httpx.RequestError):
+            print(f"Warning: og:image URL not accessible: {og_image}")
+    return img_data, img_content_type, og_image, og_title, og_description
+
+
+def skeet_msg(text_builder, url, dry_run=False):
+    """Post to BlueSky the given message content."""
     # Always fetch OG content, even in dry run
-    img_url, title, description = _get_og_tags(url)
+    img_data, img_content_type, img_url, title, description = _get_og_tags(url)
 
     if dry_run:
         print("Dry run: skipping BlueSky post.")
@@ -272,6 +310,7 @@ def skeet_msg(text_builder, url, dry_run=False):
             print(
                 f"BlueSky Embed content:\n\tTitle: {title}\n\tDescription: "
                 f"{description}\n\tURL: {url}\n\tImage URL: {img_url}"
+                f"\n\tImage type: {img_content_type or 'None'}"
             )
         return
 
@@ -283,10 +322,12 @@ def skeet_msg(text_builder, url, dry_run=False):
 
     if title and description:
         thumb_blob = None
-        if img_url:
-            # Download image from og:image url and upload it as a blob
-            img_data = httpx.get(img_url).content
-            thumb_blob = client.upload_blob(img_data).blob
+        if img_data:
+            # Override Content-Type header (default is */* from the lexicon)
+            # as BlueSky now requires image/* for blob uploads
+            thumb_blob = client.com.atproto.repo.upload_blob(
+                img_data, headers={"Content-Type": img_content_type}
+            ).blob
 
         # AppBskyEmbedExternal is the same as "link card" in the app
         embed_external = models.AppBskyEmbedExternal.Main(
