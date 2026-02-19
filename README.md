@@ -479,6 +479,7 @@ The USB Interface Chip is the microcontroller placed close to the battery connec
 - [micro:bit 3D Model](https://sketchfab.com/3d-models/microbit-b453f11ad77a4545a33b3e0ecfba6fc5) - A 3D asset of the BBC micro:bit V1.
 - [80 Pin Edge Connector](https://grabcad.com/library/80-pin-card-edge-connector-1) - A CAD 3D model of the micro:bit through-hole 80 pin card edge connector for micro:bit.
 - [40 Pin Horizontal SMT Edge Connector](https://grabcad.com/library/edge-connector-for-bbc-micro-bit-microbit-1-27mm-pitch-40-way-horizontal-smt-type-card-edge-connector-1) - A CAD 3D model of the CYLCONN surface mount 40 pin horizontal edge connector for micro:bit.
+- [40 Pin Vertical SMT Edge Connector](https://grabcad.com/library/edge-connector-for-bbc-micro-bit-microbit-1-27mm-pitch-40-way-vertical-smt-type-card-edge-connector-1) - A CAD 3D model of the CYLCONN surface mount 40 pin vertical edge connector for micro:bit.
 
 
 ## 🎨 2D Design
