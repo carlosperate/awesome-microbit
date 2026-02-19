@@ -166,7 +166,7 @@ def format_msg_twitter(section, title, url, description):
     # Now let's make sure we don't exceed the 280 character limit
     max_characters = TWITTER_MAX_CHARS
     link_length = TWITTER_LINK_LENGTH
-    msg = "{} - {}\n{}".format(section, title, description)
+    msg = "{} - {}\n\n{}".format(section, title, description)
     if len(msg) > (max_characters - link_length):
         ellipsis = "..."
         cut_msg_len = max_characters - link_length - len(ellipsis)

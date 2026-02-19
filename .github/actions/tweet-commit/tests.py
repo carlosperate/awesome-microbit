@@ -58,7 +58,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "MicroPython Libraries - MB1013\n"
+            "MicroPython Libraries - MB1013\n\n"
             "Module for the MB1013 ultrasonic sensor controlled via UART.\n"
             "https://github.com/liamkinne/microbit-mb1013",
         )
@@ -90,7 +90,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "MakeCode Extensions - ESP8266/ThingSpeak\n"
+            "MakeCode Extensions - ESP8266/ThingSpeak\n\n"
             "Use a ESP8266 wifi module to upload data to ThingSpeak.com.\n"
             "https://github.com/alankrantas/pxt-ESP8266_ThingSpeak",
         )
@@ -120,7 +120,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "🏗️ Projects - The Christmas Joy Spreading Machine\n"
+            "🏗️ Projects - The Christmas Joy Spreading Machine\n\n"
             "Project inside a box representing a metaphor of the most popular "
             "Christmas symbols. Maybe it's a bit distopyc but it moves, "
             "lights and reacts to music.\n"
@@ -152,7 +152,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "Projects - Ironman Arc Reactor\n"
+            "Projects - Ironman Arc Reactor\n\n"
             "Choose between two different versions (Mk I and Mk II) ready to "
             "3D print and build.\n"
             "https://www.kitronik.co.uk/blog/halo-ween-ironman-arc-reactor",
@@ -189,7 +189,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "📱 Mobile Apps - Official Swift Playgrounds\n"
+            "📱 Mobile Apps - Official Swift Playgrounds\n\n"
             "([Source Code](https://github.com/microbit-foundation/"
             "microbit-swift-playgrounds)) "
             "Swift Playgrounds is an app for the iPad that helps teach people "
@@ -247,7 +247,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet_0,
-            "CAD & 3D Printing - Robottillo:bit\n"
+            "CAD & 3D Printing - Robottillo:bit\n\n"
             "A 3D printed case which looks like a small robot. Two versions "
             "available, with a rear protective cover or with a perforated "
             "cover for the pins.\n"
@@ -261,7 +261,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet_1,
-            "CAD & 3D Printing - Battery pack holder\n"
+            "CAD & 3D Printing - Battery pack holder\n\n"
             "Simple 3D printed battery pack holder for BBC #microbit.\n"
             "https://www.thingiverse.com/thing:2666671",
         )
@@ -287,7 +287,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "🆚 Visual - EduBlocks\n"
+            "🆚 Visual - EduBlocks\n\n"
             "Blocks interface that provides a transitioning experience from "
             "#Scratch to #Python.\n"
             "https://app.edublocks.org",
@@ -315,16 +315,16 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "MicroPython Editors - JetBrains IDEA/PyCharm IDE plugin\n"
+            "MicroPython Editors - JetBrains IDEA/PyCharm IDE plugin\n\n"
             "Support for #MicroPython devices in IntelliJ IDEA and PyCharm.\n"
             "https://plugins.jetbrains.com/plugin/9777-micropython-support",
         )
 
     def test_msg_format_max_length(self):
         """Check that tweet formatting keeps the max characters permitted."""
-        # 280 characters total, 23 for the shortned URL, 5 characters formating
+        # 280 characters total, 23 for the shortned URL, 6 characters formating
         tweet = post_commit.format_msg_twitter(
-            "s" * 9, "t" * 12, "u" * 23, ("d" * 230) + "."
+            "s" * 9, "t" * 12, "u" * 23, ("d" * 229) + "."
         )
         skeet = post_commit.format_msg_bluesky(
             "s" * 7, "t" * 8, "u" * 100, ("d" * 279) + "."
@@ -333,11 +333,11 @@ class TestCommitTweet(unittest.TestCase):
         self.assertEqual(len(tweet), 280)
         self.assertEqual(
             tweet,
-            "sssssssss - tttttttttttt\n"
+            "sssssssss - tttttttttttt\n\n"
             "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
             "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
             "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-            "ddddddddddddddddddddddddddddddddddd.\n"
+            "dddddddddddddddddddddddddddddddddd.\n"
             "uuuuuuuuuuuuuuuuuuuuuuu",
         )
         self.assertEqual(len(skeet.build_text()), 300)
@@ -352,7 +352,7 @@ class TestCommitTweet(unittest.TestCase):
         When the tweet content exceeds the twitter character limit, it
         truncates the text to nearest word.
         """
-        # 280 characters total, 23 for the shortned URL, 4 characters formating
+        # 280 characters total, 23 for the shortned URL, 5 characters formating
         tweet = post_commit.format_msg_twitter(
             "s" * 9, "t" * 12, "u" * 23, "dd " * 1000
         )
@@ -360,15 +360,15 @@ class TestCommitTweet(unittest.TestCase):
             "s" * 7, "t" * 8, "u" * 100, "dd " * 1000
         )
 
-        self.assertEqual(len(tweet), 279)
+        self.assertEqual(len(tweet), 277)
         self.maxDiff = None
         self.assertEqual(
             tweet,
-            "sssssssss - tttttttttttt\n"
+            "sssssssss - tttttttttttt\n\n"
             "dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd "
             "dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd "
             "dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd "
-            "dd dd dd dd dd dd dd dd dd dd dd dd dd...\n"
+            "dd dd dd dd dd dd dd dd dd dd dd dd...\n"
             "uuuuuuuuuuuuuuuuuuuuuuu",
         )
         self.assertEqual(len(skeet.build_text()), 298)
@@ -410,7 +410,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "Miscellaneous - Radiobit, a BBC Micro:Bit RF firmware\n"
+            "Miscellaneous - Radiobit, a BBC Micro:Bit RF firmware\n\n"
             "Radiobit is composed of a dedicated #MicroPython-based firmware "
             "and a set of tools allowing security researchers to sniff, "
             "receive and send data over Nordic's ShockBurst protocol, "
@@ -448,7 +448,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "3D Printing - Otto Robot\n"
+            "3D Printing - Otto Robot\n\n"
             "Otto chassis for the #microbit to make a bidepad robot with a "
             "robitbit accessory.\n"
             "https://www.thingiverse.com/thing:2786066",
@@ -480,7 +480,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "Programming Tools - Haxe node BBC micro:bit\n"
+            "Programming Tools - Haxe node BBC micro:bit\n\n"
             "Control a BBC #microbit from Node.js using BLE and the Haxe "
             "programming language.\n"
             "https://github.com/MatthijsKamstra/hx-node-bbc-microbit",
@@ -508,7 +508,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "🏫 Teaching Resources - micro:bit Lessons\n"
+            "🏫 Teaching Resources - micro:bit Lessons\n\n"
             "Basic lessons on #Python programming with a BBC #microbit.\n"
             "https://github.com/PhonicCanine/microbit-lessons",
         )
@@ -540,7 +540,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "Miscellaneous - BBC Micro:bit composer\n"
+            "Miscellaneous - BBC Micro:bit composer\n\n"
             "Write music and get the corresponding #microbit #MicroPython "
             "code, a tool made with #Scratch.\n"
             "https://scratch.mit.edu/projects/201592887/",
@@ -567,7 +567,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "Python Programming Tools - MicroREPL\n"
+            "Python Programming Tools - MicroREPL\n\n"
             "A REPL client for #MicroPython running on the BBC #microbit.\n"
             "https://github.com/ntoll/microrepl",
         )
@@ -596,7 +596,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "Project Collections - Raspberry Pi micro:bit Projects\n"
+            "Project Collections - Raspberry Pi micro:bit Projects\n\n"
             "Collection of #RaspberryPi and #microbit projects from the "
             "#RaspberryPi Foundation.\n"
             "https://projects.raspberrypi.org/en/projects?technologies%5B%5D="
@@ -626,7 +626,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "C/C++ - Arduino nRF5\n"
+            "C/C++ - Arduino nRF5\n\n"
             "#Arduino Core for Nordic Semiconductor nRF5 based boards, "
             "including the #microbit.\n"
             "https://github.com/sandeepmistry/arduino-nRF5/",
@@ -653,7 +653,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "🆚 Visual - MakeCode Beta\n"
+            "🆚 Visual - MakeCode Beta\n\n"
             "Beta version of the #MakeCode editor to test the latest "
             "features.\n"
             "https://makecode.microbit.org/beta",
@@ -686,7 +686,7 @@ class TestCommitTweet(unittest.TestCase):
         )
         self.assertEqual(
             tweet,
-            "MakeCode Libraries - CCS811\n"
+            "MakeCode Libraries - CCS811\n\n"
             "#MakeCode Package for the CCS811 Air Quality Sensor.\n"
             "https://github.com/ADataDate/pxt-airQuality",
         )
@@ -1054,18 +1054,13 @@ class TestOgTagFixes(unittest.TestCase):
             mock_page = unittest.mock.MagicMock()
             mock_page.text = og_html
 
-            mock_img_resp = unittest.mock.MagicMock()
-            mock_img_resp.raise_for_status.side_effect = (
-                post_commit.httpx.HTTPStatusError(
-                    "404 Not Found",
-                    request=unittest.mock.MagicMock(),
-                    response=unittest.mock.MagicMock(),
-                )
-            )
-
             def get_side_effect(url, **kwargs):
                 if url == "https://example.com/broken.png":
-                    return mock_img_resp
+                    raise post_commit.httpx.HTTPStatusError(
+                        "404 Not Found",
+                        request=unittest.mock.MagicMock(),
+                        response=unittest.mock.MagicMock(),
+                    )
                 return mock_page
 
             mock_get.side_effect = get_side_effect
