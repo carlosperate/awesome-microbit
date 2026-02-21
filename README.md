@@ -668,6 +668,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit for Robotics](https://www.youtube.com/watch?v=iwaRidlm2RM) - Video introducing the BBC micro:bit, what you can can do with it, and how to use it with robots.
 - [MakeCode micro:bit Tutorials](https://www.youtube.com/playlist?list=PLMMBk9hE-SerTLN2D6NiI7v7DJ78IBIAq) - Short video tutorials to get started programming the BBC micro:bit with MakeCode.
 - [micro:bit for Beginners](https://www.youtube.com/watch?v=s_tTJGW98Ok) - A 2-hour educator workshop from Parallax with MakeCode and the Python Editor.
+- [micro:bit Science Projects](https://www.youtube.com/playlist?list=PLlBVuTSjOrclB5jkYe-BcQyUyYlSnU7gS) - YouTube playlist with fun science projects you can do with a micro:bit. Great for students new to programming and electronics.
 
 ### 🎥 micro:bit LIVE
 
