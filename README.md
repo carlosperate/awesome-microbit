@@ -83,6 +83,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [pyscrlink](https://github.com/kawasaki/pyscrlink) - A Scratch-link for Linux to connect Scratch 3.0 to Bluetooth devices such as the micro:bit.
 - [mbit-more](https://github.com/microbit-more/mbit-more-v2/) - A third party Scratch extension with extra features, including visualising sensor data and support for V1 and V2 micro:bit.
 
+
 ## 🐍 Python
 
 - [MicroPython](https://microbit-micropython.readthedocs.io) - Port of MicroPython, a Python 3 implementation for microcontrollers and constrained environments.
@@ -156,6 +157,7 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [micro:bit Stubs](https://github.com/oivron/microbit-stubs) - Python stubs with type hints to provide autocompletion in code editors.
 - [micro:bit MicroPython stubs](https://github.com/microbit-foundation/micropython-microbit-stubs) - Type stubs for MicroPython for micro:bit to support the editor autocompletion.
 
+
 ## 🗿 JavaScript and MakeCode
 
 - [MakeCode](https://makecode.microbit.org) - This block and text editor for the micro:bit provides an in-browser emulator, a Blocks interface, and JavaScript (TypeScript) editor.
@@ -227,6 +229,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [PXT Command Line Tool](https://makecode.com/cli) - Use the command line to program the micro:bit with MakeCode JavaScript. You can also run a local version of the MakeCode online editor (part of Microsoft's PXT).
 
+
 ## ©️ C/C++
 
 - [C/C++ runtime](https://lancaster-university.github.io/microbit-docs/) - Guidance on how to start using the DAL runtime in C/C++ including full documentation of the APIs, drivers, and types that make up the micro:bit runtime.
@@ -276,6 +279,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Bare metal micro:bit](https://spivey.oriel.ox.ac.uk/baremetal/Bare_metal_micro:bit) - Low level programming examples and tutorials.
 - [nu-microbit-base](https://github.com/nu-ce346/nu-microbit-base) - C bare metal environment using the Nordic SDK with example applications.
 
+
 ## 🦀 Rust
 
 ### 🦀 Rust Guides
@@ -296,6 +300,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 - [Tock](https://github.com/tock/tock/blob/master/boards/microbit_v2/README.md) - An embedded operating system designed for running multiple concurrent, mutually distrustful applications on low-memory and low-power microcontrollers, with support for the BBC micro:bit.
 
+
 ## 🐦 Ada
 
 - [Ada for micro:bit Getting Started](https://www.adacore.com/blog/ada-for-microbit-part-1-getting-started) -  How to setup an Ada development environment for the micro:bit.
@@ -303,6 +308,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [Ada micro:bit Examples](https://github.com/Fabien-Chouteau/microbit_examples) - Examples and tutorials for Ada on the BBC micro:bit.
 - [Ada for micro:bit articles](https://www.adacore.com/blog/ada-for-microbit-part-2-push-buttons) - ([Part 3](https://www.adacore.com/blog/ada-for-microbit-part-3-pin-output), [Part 4](https://www.adacore.com/blog/ada-for-microbit-part-4-pin-input), [Part 5](https://www.adacore.com/blog/ada-for-microbit-part-5-analog-output), [Part 6](https://www.adacore.com/blog/ada-for-microbit-part-6-analog-input), [Part 7](https://www.adacore.com/blog/ada-for-microbit-part-7-accelerometer), [Part 8](https://www.adacore.com/blog/ada-for-microbit-part-8-music)) A series of articles and tutorials about using Ada on the micro:bit.
 - [Ada Accelerometer Driver + Stable Nerve Game](https://www.hackster.io/shakram02/ada-accelerometer-driver-stable-nerve-game-1393b4) - Tutorial to write a driver in Ada for the micro:bit LSM303AGR accelerometer and make a small nerve game.
+
 
 ## 🚩 Other Languages
 
@@ -317,6 +323,7 @@ Other programming languages capable to program the micro:bit.
 - [Zig](https://github.com/markfirmware/zig-bare-metal-microbit) - A BBC micro:bit bare metal example in the Zig language.
 - [MicroJIT](https://github.com/thomasdenney/microjit) - A Just-In-Time compiler for [Alex Roger's Stack Virtual Machine](http://www.cs.ox.ac.uk/people/alex.rogers/stack/) on the BBC micro:bit.
 - [BASICtools](https://www.coridium.us/coridium/blog/basic-for-microbit) - A BASIC dialect (similar to the original Microsoft BASIC, QBASIC, or early versions of Visual BASIC) ported to the micro:bit, with provided examples.
+
 
 ## 🎚️ Interaction Languages
 
@@ -672,8 +679,8 @@ Useful Articles for developing on the micro:bit.
 
 ### 🎥 micro:bit LIVE
 
-- [micro:bit Live 2020](https://www.youtube.com/playlist?list=PLEo0hMrjdofv9-M0IOyD8Q0VtsX8O__iW) - Playlist with all the talks and sessions from the micro:bit Live 2020 online conference.
-- [micro:bit Live 2021](https://www.youtube.com/playlist?list=PLEo0hMrjdofs-XgVXg-Oib1mduB6biIIC) - Playlist with all the talks and sessions from the micro:bit Live 2021 online conference.
+- [micro:bit Live Global 2020](https://www.youtube.com/playlist?list=PLEo0hMrjdofv9-M0IOyD8Q0VtsX8O__iW) - Playlist with all the talks and sessions from the micro:bit Live 2020 online conference.
+- [micro:bit Live Global 2021](https://www.youtube.com/playlist?list=PLEo0hMrjdofs-XgVXg-Oib1mduB6biIIC) - Playlist with all the talks and sessions from the micro:bit Live 2021 online conference.
 - [micro:bit Live Barcelona 2023](https://www.microbitlivemadrid.org/en/edicion-barcelona-2023/barcelona-2023) - Event description and session recordings from the in-person Barcelona 2023 event.
 - [micro:bit Live Madrid 2024](https://www.microbitlivemadrid.org/en) - Programme and session recordings from the in-person Madrid 2024 event.
 
