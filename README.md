@@ -401,6 +401,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 ## 🅰️ Accessibility
 
+- [microbit.org Accessibility](https://microbit.org/accessibility/) - Micro:bit Educational Foundation guides and resources to help teachers support students with different needs when using the micro:bit.
 - [HandShake](https://github.com/mattoppenheim/microbit_hand_shake) - Project designed to enable unique gesture recognition for people with limited control of their motion.
 - [micro:bit Switch Access](https://weareprintlab.com/courses/at-dual-switch/) - Project instructions to design and 3D print a custom micro:bit Bluetooth switch accessibility device for people with physical or cognitive impairments.
 
