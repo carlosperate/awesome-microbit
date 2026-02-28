@@ -106,6 +106,11 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 
 ### 🐍 MicroPython Libraries
 
+- [Micropython-MakeCode compatible Radio](https://github.com/rhubarbdog/microbit-radio) - Class MakeRadio which includes all the functionality of the MicroPython radio module, while being compatible with MakeCode blocks.
+- [Decimal Numbers](https://github.com/rhubarbdog/decimal-numbers) - A Class to perform mathematics using actual decimal numbers (not floating point numbers).
+
+### 🐍 MicroPython Libraries - Hardware drivers
+
 - [Servo](https://github.com/microbit-playground/microbit-servo-class) - Class for controlling servos on the micro:bit via PWM.
 - [PCA9685](https://github.com/gingemonster/PCA9685-Python-Microbit) - Class for using the PCA9685 16-Channel 12-bit PWM/Servo Driver via I2C.
 - [MAX7219 7-segment](https://github.com/microbit-playground/matrix7seg) - Module for using a 7-segment display driven by a MAX7219 chip via SPI.
@@ -130,7 +135,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [Kitronik Motor Driver Board](https://github.com/MrYsLab/kitronik_motor_board) - Class to control the Kitronik motor driver board.
 - [micro:bit python libs](https://github.com/shaoziyang/microbit-lib) - Growing collection of modules, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307/DS3231 RTC, NeoPixel drivers, APDS9930 Digital Proximity and Ambient Light Sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
 - [RAK811](https://github.com/PiSupply/rak811-python) - RAK811 Python library for use with LoRa pHAT & micro:bit Node.
-- [Micropython-MakeCode compatible Radio](https://github.com/rhubarbdog/microbit-radio) - Class MakeRadio which includes all the functionality of the MicroPython radio module, while being compatible with MakeCode blocks.
 - [Cutebot](https://github.com/Krakenus/microbit-cutebot-micropython) - Library providing functions to work with Cutebot kit for BBC micro:bit.
 - [MCP3008](https://github.com/ti-nspire/microbit_MicroPython_MCP3008) - Library to interface with a MCP3008 10-bit Analog-to-Digital Converter (ADC).
 - [HTU21D](https://github.com/ti-nspire/microbit-in-micropython-library-for-HTU21D-sensor) - Library to interface with a HTU21D digital humidity and temperature sensor.
@@ -139,7 +143,6 @@ Contributions are welcome! Not sure how to submit a contribution? Have a look at
 - [BME280](https://github.com/CoreElectronics/CE-PiicoDev-BME280-MicroPython-Module) - Library to interface with a BME280 humidity, pressure, and temperature sensor via I2C.
 - [bitbotxl](https://github.com/oivron/bitbotxl) - Module for the 4tronix Bit:Bot XL Robot for BBC micro:bit.
 - [MPR121](https://github.com/rhubarbdog/microbit-mpr121-keypad) - Library for the MPR121 Capacitive Touch Sensor over I2C.
-- [Decimal Numbers](https://github.com/rhubarbdog/decimal-numbers) - A Class to perform mathematics using actual decimal numbers (not floating point numbers).
 
 ### 🐍 Python Libraries
 
@@ -179,6 +182,16 @@ The link below contains a list of the officially approved extensions, and they c
 The following extensions can be added into MakeCode by copying the GitHub URL and pasting it into the search box of the "Extensions" screen.
 
 - [BlueDot](https://github.com/Microsoft/pxt-bluedot) - PXT package to support the BlueDot app - beta.
+- [Bluetooth beacons](https://github.com/kshoji/pxt-bluetooth-beacons) - Allows the micro:bit to act as iBeacon / AltBeacon advertiser.
+- [timeanddate](https://github.com/bsiever/microbit-pxt-timeanddate) -  Software Based Real Time Clock (Time & Date) for the micro:bit.
+- [Bluetooth Keyboard](https://github.com/kshoji/pxt-bluetooth-keyboard) - MakeCode extension for BLE HID Keyboard module for micro:bit V1.
+- [Bluetooth Mouse](https://github.com/kshoji/pxt-bluetooth-mouse) - MakeCode extension for BLE HID Mouse module for micro:bit V1.
+- [Bluetooth Gamepad](https://github.com/kshoji/pxt-bluetooth-gamepad) - MakeCode extension for BLE HID Gamepad module for micro:bit V1.
+- [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as a Bluetooth HID device, like a keyboard, mouse, or gamepad.
+- [Sonic Pi OSC](https://github.com/RBilsland/pxt-sonicpiosc) - Send OpenSound Control (OSC) messages to Sonic Pi from a micro:bit using an ESP8266.
+
+### 🗿 MakeCode Extensions - Hardware drivers
+
 - [Lego Power Functions](https://github.com/philipphenkel/pxt-powerfunctions) - Control LEGO® Power Functions motors using your micro:bit with an infrared LED.
 - [Invent robot](https://github.com/techcampuk/pxt-invent) - This library provides a Microsoft PXT package for Invent robot.
 - [ubirch NB-IoT](https://github.com/ubirch/pxt-ubirch) - Package for sending signed data messages to the ubirch backend.
@@ -186,7 +199,6 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [DS1307](https://github.com/Tinkertanker/pxt-realtimeclock-ds1307) - Tinkercademy MakeCode package for using the DS1307 RTC (Real-Time Clock).
 - [HT16K33](https://github.com/Tinkertanker/pxt-alphanumeric-ht16k33) - Tinkercademy MakeCode Package for the HT16K33 I2C Alphanumeric Display (beta).
 - [HoneyBit](https://github.com/HoneycombKits/pxt-HoneyBit) - A Honeycomb kits package for micro:bit MakeCode.
-- [Bluetooth beacons](https://github.com/kshoji/pxt-bluetooth-beacons) - Allows the micro:bit to act as iBeacon / AltBeacon advertiser.
 - [LumexOLED](https://github.com/lioujj/pxt-oled) - Package designed for Lumex OLED display.
 - [MakeCode Extensions](https://github.com/makecode-extensions) - Growing collection of packages, including TM1637/TM1650 7-seg LEDs, OLED 128x64, LCD1602, AT24XX EEPROM, DS1302/DS1307 RTC, APDS9930 Digital Proximity and Ambient Light Sensor, BH1750 digital ambient light sensor, BME280 humidity and pressure sensor, BMP280/BMP180 pressure sensors.
 - [BMP085](https://github.com/sabas1080/uBit_BMP085) - Package to control the BMP085 or BMP180 pressure and altitude sensors.
@@ -204,14 +216,8 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [dstemp2wire](https://github.com/bsiever/microbit-dstemp-2wire) - This extension allows the micro:bit to use the Dallas Semiconductor DS18B20 temperature sensor with just two wires (parasitic power mode).
 - [DS18B20](https://github.com/DFRobot/pxt-ds18b20) - DFRobot extensions to read the temperature from a DS18B20 sensor.
 - [DS3231](https://github.com/gbraad/pxt-rtc-ds3231) - RTC (Real Time Clock) MakeCode extension for the micro:bit.
-- [timeanddate](https://github.com/bsiever/microbit-pxt-timeanddate) -  Software Based Real Time Clock (Time & Date) for the micro:bit.
 - [MAX31855](https://github.com/bremoran/microDriver_max31855) - Driver for the MAX31855 Thermocouple Amplifier.
-- [Bluetooth Keyboard](https://github.com/kshoji/pxt-bluetooth-keyboard) - MakeCode extension for BLE HID Keyboard module for micro:bit V1.
-- [Bluetooth Mouse](https://github.com/kshoji/pxt-bluetooth-mouse) - MakeCode extension for BLE HID Mouse module for micro:bit V1.
-- [Bluetooth Gamepad](https://github.com/kshoji/pxt-bluetooth-gamepad) - MakeCode extension for BLE HID Gamepad module for micro:bit V1.
 - [SmartMatrix](https://github.com/Shorts1999/pxt-smartmatrix) - Easily control LED matrices/displays made from WS2812b/NeoPixel controllable RGB LEDs.
-- [Sonic Pi OSC](https://github.com/RBilsland/pxt-sonicpiosc) - Send OpenSound Control (OSC) messages to Sonic Pi from a micro:bit using an ESP8266.
-- [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as a Bluetooth HID device, like a keyboard, mouse, or gamepad.
 - [MCP23017](https://github.com/CaptainCredible/pxt-MCP23017) - MakeCode driver for the MCP23017 16-Bit I2C I/O Expander.
 
 ### 🗿 Node.js and Browser
@@ -243,9 +249,18 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 
 ### ©️ C/C++ Libraries
 
+- [micro:bit Screen](https://github.com/ht-deko/microbit_Screen) - Arduino LED Screen library for micro:bit.
+- [Distintiva micro:bit library](https://github.com/distintiva/distintiva_microbit_lib) - Arduino library to code the micro:bit on-board features using the Arduino IDE.
+- [nRF51 Radio](https://github.com/tipih/NRF51_Radio_library) - Arduino library based on the micro:bit DAL radio implementation.
+- [micro:bit Video](https://github.com/blogmywiki/microbit-video) - C++ programs for generating NTSC video from a V1 micro:bit to connect to a TV.
+- [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as a Bluetooth HID device, like a keyboard, mouse, or gamepad.
+- [microbit-dal-ext-kit](https://github.com/softgraph/microbit-dal-ext-kit) - A set of components and utilities for C++ applications using micro:bit DAL (runtime).
+- [MicrobitV2-HHS Arduino Lib](https://github.com/Grrtzm/MicrobitV2-HHS) - Arduino library for micro:bit V2 for radio and PWM (including Servo and Tone).
+
+### ©️ C/C++ Libraries - Hardware Drivers
+
 - [OneWire](https://github.com/adamboardman/microbit-onewire) - BBC micro:bit OneWire Library, based upon Erik Olieman's Mbed DS1820 lib.
 - [neopixel](https://github.com/elmorg/uBit_neopixel) - Library for using NeoPixels with the BBC micro:bit.
-- [micro:bit Screen](https://github.com/ht-deko/microbit_Screen) - Arduino LED Screen library for micro:bit.
 - [Adafruit Arduino micro:bit library](https://github.com/adafruit/Adafruit_Microbit) - Wrapper code and examples for using micro:bit with Arduino IDE.
 - [RTCC MCP7941X](https://os.mbed.com/users/euxton/code/microbit-RTCC-MCP7941X/) - Program to interface with a MCP79410 RTCC (Real Time Clock Calendar).
 - [AS-289R2](https://os.mbed.com/users/MACRUM/code/microbit_AS-289R2/) - AS-289R2 thermal printer Mbed library for micro:bit.
@@ -255,14 +270,8 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [PCA9685](https://github.com/Tinkertanker/uDriver_PCA9585) - Driver for the PCA9685, a 16-channel PWM controller, with included servo support.
 - [DS3234](https://os.mbed.com/users/jsa1969/code/microbit-DS3234/) - Driver in example project using the DS3234 RTC via SPI.
 - [HTU21D](https://github.com/ti-nspire/microbit-in-mbed-library-for-HTU21D-sensor) - Mbed library for the HTU21D digital humidity and temperature sensor.
-- [Distintiva micro:bit library](https://github.com/distintiva/distintiva_microbit_lib) - Arduino library to code the micro:bit using the Arduino IDE.
 - [micro:Maqueen Arduino Lib](https://github.com/kd8bxp/micro-Maqueen-Arduino-Library) - Arduino library for the DF Robot micro:bit Maqueen robot and controller.
-- [nRF51 Radio](https://github.com/tipih/NRF51_Radio_library) - Arduino library based on the micro:bit DAL radio implementation.
 - [MMA8653](https://github.com/lfhohmann/MMA8653) - This Arduino library brings support for the NXP MMA8653 I2C accelerometer.
-- [micro:bit Video](https://github.com/blogmywiki/microbit-video) - C++ programs for generating NTSC video from a V1 micro:bit to connect to a TV.
-- [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as a Bluetooth HID device, like a keyboard, mouse, or gamepad.
-- [microbit-dal-ext-kit](https://github.com/softgraph/microbit-dal-ext-kit) - A set of components and utilities for C++ applications using micro:bit DAL (runtime).
-- [MicrobitV2-HHS Arduino Lib](https://github.com/Grrtzm/MicrobitV2-HHS) - Arduino library for micro:bit V2 for radio and PWM (including Servo and Tone).
 
 ### ©️ C/C++ RTOS targeting micro:bit
 
