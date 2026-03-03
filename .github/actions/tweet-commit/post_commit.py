@@ -47,6 +47,9 @@ except ImportError:
     BLUESKY_TOKEN = os.environ.get("INPUT_BLUESKY_TOKEN", None)
 
 
+SEND_TWEET = False
+SEND_SKEET = True
+
 TWITTER_LINK_LENGTH = 24  # Includes an extra character for a '\n'
 TWITTER_MAX_CHARS = 280
 BLUESKY_MAX_CHARS = 300
@@ -197,6 +200,7 @@ def tweet_msg(msg, dry_run=False):
         access_token_secret=TWITTER_ACCESS_TOKEN_SECRET,
     )
     client.create_tweet(text=msg)
+    print("🐦 Tweet sent successfully.")
 
 
 def format_msg_bluesky(section, title, url, description):
@@ -338,6 +342,7 @@ def skeet_msg(text_builder, url, dry_run=False):
         client.send_post(text=text_builder, embed=embed_external)
     else:
         client.send_post(text_builder)
+    print("🦋 BlueSky post sent successfully.")
 
 
 def parse_cli_args():
@@ -402,10 +407,14 @@ def main():
             flush=True,
         )
         print(f"\n{'-' * 50}\nPosting #{i} to Social Media...\n{'-' * 50}\n")
-        tweet_msg(formatted_tweet, dry_run=dry_run)
-        skeet_msg(formatted_skeet, entry["url"], dry_run=dry_run)
-        if not dry_run:
-            print("✅ Sent Tweet and Skeet #{}!".format(i))
+        if SEND_TWEET:
+            tweet_msg(formatted_tweet, dry_run=dry_run)
+        elif not dry_run:
+            print("❌🐦 Skipping Tweet as SEND_TWEET is disabled.")
+        if SEND_SKEET:
+            skeet_msg(formatted_skeet, entry["url"], dry_run=dry_run)
+        elif not dry_run:
+            print("❌🦋 Skipping Skeet as SEND_SKEET is disabled.")
 
 
 if __name__ == "__main__":

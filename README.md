@@ -2,12 +2,11 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="https://github.com/carlosperate/awesome-microbit/actions?workflow=Check+Links"><img src="https://github.com/carlosperate/awesome-microbit/workflows/Check%20Links/badge.svg" alt="Link Checker GH Action Status"></a>
-  <a href="https://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries"><img src="https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg" alt="Tweet GH Action Status"></a>
+  <a href="https://bsky.app/profile/awesomemicrobit.bsky.social"><img src="https://img.shields.io/badge/Bluesky-@awesomemicrobit-blue" alt="Bluesky Follow"></a>
   <a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0%201.0-informational.svg" alt="License: CC0-1.0"></a>
   <br>
-  <a href="https://x.com/awesomemicrobit"><img src="https://img.shields.io/badge/X%20(Twitter)-@awesomemicrobit-blue" alt="Twitter Follow"></a>
-  <a href="https://bsky.app/profile/awesomemicrobit.bsky.social"><img src="https://img.shields.io/badge/Bluesky-@awesomemicrobit-blue" alt="Bluesky Follow"></a>
+  <a href="https://github.com/carlosperate/awesome-microbit/actions?workflow=Check+Links"><img src="https://github.com/carlosperate/awesome-microbit/workflows/Check%20Links/badge.svg" alt="Link Checker GH Action Status"></a>
+  <a href="https://github.com/carlosperate/awesome-microbit/actions?workflow=Tweet+New+Entries"><img src="https://github.com/carlosperate/awesome-microbit/workflows/Tweet%20New%20Entries/badge.svg" alt="Tweet GH Action Status"></a>
 </p>
 
 [![awesome micro:bit logo](https://user-images.githubusercontent.com/4189262/60908738-830bb780-a274-11e9-9d86-6b82ab89334f.png)](https://github.com/carlosperate/awesome-microbit)
@@ -16,7 +15,6 @@ A curated list of resources for the [BBC micro:bit](https://microbit.org), a tin
 This embedded board has a Bluetooth capable microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and GPIO accessible via the edge connector.
 
 - [![watch badge](https://img.shields.io/github/watchers/carlosperate/awesome-microbit.svg?label=Watch&style=social)](https://github.com/carlosperate/awesome-microbit/watchers) "Watch" this repository if you'd like to get notifications when a new entry is added to the list.
-- [![Twitter Follow](https://img.shields.io/badge/(Twitter)-@awesomemicrobit-8A2BE2?style=social&logo=x)](https://x.com/awesomemicrobit) Follow [@awesomemicrobit](https://x.com/awesomemicrobit) on X/Twitter to get updates in your timeline!
 - [![Bluesky Follow](https://img.shields.io/badge/(Bluesky)-@awesomemicrobit-8A2BE2?style=social&logo=bluesky)](https://bsky.app/profile/awesomemicrobit.bsky.social) Or follow [@awesomemicrobit.bsky.social](https://bsky.app/profile/awesomemicrobit.bsky.social) on Bluesky. 📣
 
 
