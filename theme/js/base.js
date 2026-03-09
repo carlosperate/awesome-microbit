@@ -24,31 +24,38 @@ function applyTopPadding() {
 
 document.addEventListener("DOMContentLoaded", function () {
     var search_term = getSearchTerm();
-    var search_modal = new bootstrap.Modal(document.getElementById('mkdocs_search_modal'));
-    var keyboard_modal = new bootstrap.Modal(document.getElementById('mkdocs_keyboard_modal'));
 
-    if (search_term) {
+    var search_modal_el = document.getElementById('mkdocs_search_modal');
+    var keyboard_modal_el = document.getElementById('mkdocs_keyboard_modal');
+    var search_modal = search_modal_el ? new bootstrap.Modal(search_modal_el) : null;
+    var keyboard_modal = keyboard_modal_el ? new bootstrap.Modal(keyboard_modal_el) : null;
+
+    if (search_term && search_modal) {
         search_modal.show();
     }
 
     // make sure search input gets autofocus every time modal opens.
-    document.getElementById('mkdocs_search_modal').addEventListener('shown.bs.modal', function() {
-        document.getElementById('mkdocs-search-query').focus();
-    });
+    if (search_modal_el) {
+        search_modal_el.addEventListener('shown.bs.modal', function() {
+            document.getElementById('mkdocs-search-query').focus();
+        });
 
-    // Close search modal when result is selected
-    // The links get added later so listen to parent
-    document.getElementById('mkdocs-search-results').addEventListener('click', function(e) {
-        if (e.target.tagName === 'A') {
-            search_modal.hide();
-        }
-    });
+        // Close search modal when result is selected
+        // The links get added later so listen to parent
+        document.getElementById('mkdocs-search-results').addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                search_modal.hide();
+            }
+        });
+    }
 
     // Populate keyboard modal with proper Keys
-    document.querySelector('.help.shortcut kbd').innerHTML = keyCodes[shortcuts.help];
-    document.querySelector('.prev.shortcut kbd').innerHTML = keyCodes[shortcuts.previous];
-    document.querySelector('.next.shortcut kbd').innerHTML = keyCodes[shortcuts.next];
-    document.querySelector('.search.shortcut kbd').innerHTML = keyCodes[shortcuts.search];
+    if (keyboard_modal_el) {
+        document.querySelector('.help.shortcut kbd').innerHTML = keyCodes[shortcuts.help];
+        document.querySelector('.prev.shortcut kbd').innerHTML = keyCodes[shortcuts.previous];
+        document.querySelector('.next.shortcut kbd').innerHTML = keyCodes[shortcuts.next];
+        document.querySelector('.search.shortcut kbd').innerHTML = keyCodes[shortcuts.search];
+    }
 
     // Keyboard navigation
     document.addEventListener("keydown", function(e) {
@@ -64,18 +71,19 @@ document.addEventListener("DOMContentLoaded", function () {
               break;
           case shortcuts.search:
               e.preventDefault();
-              keyboard_modal.hide();
-              search_modal.show();
-              document.getElementById('mkdocs-search-query').focus();
+              if (keyboard_modal) keyboard_modal.hide();
+              if (search_modal) search_modal.show();
+              var searchQuery = document.getElementById('mkdocs-search-query');
+              if (searchQuery) searchQuery.focus();
               break;
           case shortcuts.help:
-              search_modal.hide();
-              keyboard_modal.show();
+              if (search_modal) search_modal.hide();
+              if (keyboard_modal) keyboard_modal.show();
               break;
           default: break;
       }
       if (page && page.hasAttribute('href')) {
-          keyboard_modal.hide();
+          if (keyboard_modal) keyboard_modal.hide();
           window.location.href = page.getAttribute('href');
       }
     });

@@ -21,16 +21,19 @@ p {
 
 a,
 a code {
-    color: #8D689C;
+    color: #8D689C !important;
 }
-a:hover, a:focus {
-    color: #562769;
+a:hover,
+a:focus {
+    color: #562769 !important;
 }
+
 .main-content li a {
     font-weight: bold;
 }
 
-h1, h2 {
+h1,
+h2 {
     border-bottom: 1px solid #EEEEEE;
     padding-bottom: 12px;
     margin-top: 32px;
@@ -53,19 +56,31 @@ h5 {
 ul.navbar-nav {
     line-height: 2.5;
 }
-.navbar .navbar-nav>.active>a,
-.navbar .navbar-nav>.active>a:hover,
-.navbar .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: #7E789C;
+
+.navbar-brand,
+.navbar .navbar-nav>li>a {
+    color: #fff !important;
+}
+.navbar .navbar-nav>li>.active>a,
+.navbar .navbar-nav>li>.active>a:hover,
+.navbar .navbar-nav>li>.active>a:focus {
+    color: #fff !important;
 }
 .navbar .navbar-nav>li>a:hover,
 .navbar .navbar-nav>li>a:focus {
-    color: #fff;
-    background-color: #B1A9DB;
+    color: #fff !important;
+    background-color: #7E789C !important;
 }
-.navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
+
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
     background-color: #7E789C;
+}
+
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item:hover {
+    background-color: #7E789C;
+    color: #fff !important;
 }
 
 .navbar .navbar-collapse,
@@ -73,13 +88,37 @@ ul.navbar-nav {
     border-color: #7E789C;
 }
 
+
+
 /* ToC Sidebar */
-.main-toc {
-}
 #toc-collapse {
     background-color: #f5f5f5 !important;
     border: none;
     border-right: 1px solid #EEEEEE;
+    padding-top: 0;
+}
+
+#toc-collapse>.nav {
+    padding-top: 15px;
+}
+
+#toc-collapse .nav > li > a {
+    font-weight: 300;
+}
+#toc-collapse .nav > li > a:hover,
+#toc-collapse .nav > li > a:focus {
+    font-weight: 500;
+}
+
+.bs-sidebar .nav > li > a {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+    border-right-width: 3px;
+    padding-left: 10px;
+    padding-right: 17px;
 }
 
 /* Additional classes for the main container */
@@ -89,8 +128,35 @@ ul.navbar-nav {
     margin-top: 0px !important;
 }
 
-.bs-sidebar {
-    height: 100%;
+.bs-sidebar,
+.bs-sidebar.affix {
+    position: sticky;
+    top: 3.5rem;
+    height: calc(100vh - 3.5rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.bs-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.bs-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bs-sidebar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+.bs-sidebar:hover {
+    scrollbar-color: #c1c1c1 transparent;
+}
+
+.bs-sidebar:hover::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
 }
 
 /* Footer */
