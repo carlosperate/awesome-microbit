@@ -2,8 +2,17 @@
 
 /* Default HTML elements */
 body {
-    padding-top: 50px;
     background-color: #f5f5f5;
+}
+body::before {
+    background: none;
+}
+
+img {
+    margin: 0 !important;
+    background: none !important;
+    padding: 0 !important;
+    border: none !important;
 }
 
 p {
@@ -31,49 +40,57 @@ h5 {
     font-size: 19px;
 }
 
-/* Navigation bar*/
-.navbar-default {
+/* Top Navigation bar*/
+.navbar {
     color: #fff;
-    background-color: #696482;
-    border-color: #B1A9DB;
+    background-color: #696482 !important;
+    border: none;
+    padding: 0;
 }
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
+.navbar.bg-primary {
+    background-image: linear-gradient(#746e92, #696482 60%, #5a5578) !important;
+}
+ul.navbar-nav {
+    line-height: 2.5;
+}
+.navbar .navbar-nav>.active>a,
+.navbar .navbar-nav>.active>a:hover,
+.navbar .navbar-nav>.active>a:focus {
     color: #fff;
     background-color: #7E789C;
 }
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus {
+.navbar .navbar-nav>li>a:hover,
+.navbar .navbar-nav>li>a:focus {
     color: #fff;
     background-color: #B1A9DB;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+.navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
     background-color: #7E789C;
 }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
+.navbar .navbar-collapse,
+.navbar .navbar-form {
     border-color: #7E789C;
+}
+
+/* ToC Sidebar */
+.main-toc {
+}
+#toc-collapse {
+    background-color: #f5f5f5 !important;
+    border: none;
+    border-right: 1px solid #EEEEEE;
 }
 
 /* Additional classes for the main container */
 .main-container {
     background-color: white;
     padding-left: 0;
+    margin-top: 0px !important;
 }
 
 .bs-sidebar {
     height: 100%;
-    top: 50px !important;
-    padding-top: 20px !important;
-    border-left: none;
-}
-
-@media(max-width: 991px) {
-    .main-toc {
-        display: none;
-    }
 }
 
 /* Footer */
@@ -87,5 +104,5 @@ footer {
 
 footer hr {
     margin-top: 0;
-    paddin-top: 0;
+    padding-top: 0;
 }
