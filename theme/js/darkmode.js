@@ -3,12 +3,14 @@ function setColorMode(mode) {
     var hljs_light = document.getElementById('hljs-light'),
         hljs_dark = document.getElementById('hljs-dark');
     document.documentElement.setAttribute('data-bs-theme', mode);
-    if (mode == 'dark') {
-        hljs_light.disabled = true;
-        hljs_dark.disabled = false;
-    } else {
-        hljs_dark.disabled = true;
-        hljs_light.disabled = false;
+    if (hljs_light && hljs_dark) {
+        if (mode == 'dark') {
+            hljs_light.disabled = true;
+            hljs_dark.disabled = false;
+        } else {
+            hljs_dark.disabled = true;
+            hljs_light.disabled = false;
+        }
     }
 }
 
