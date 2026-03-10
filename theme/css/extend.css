@@ -1,12 +1,19 @@
 /**
  * Overwrites the original theme CSS for this project.
  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /*****************************************************************************/
 /* Default HTML elements                                                     */
 /*****************************************************************************/
 body {
     background-color: #f5f5f5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 body::before {
     background: none;
 }
@@ -25,7 +32,9 @@ p {
 a,
 a code {
     color: #8D689C !important;
+    transition: color 0.2s ease;
 }
+
 a:hover,
 a:focus {
     color: #562769 !important;
@@ -35,13 +44,44 @@ a:focus {
     font-weight: bold;
 }
 
-h1,
-h2 {
-    border-bottom: 1px solid #EEEEEE;
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(303deg, #4d475e, #8779c9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     padding-bottom: 12px;
     margin-top: 32px;
+    margin-bottom: 12px;
+    text-align: center;
+    border-bottom: none;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: radial-gradient(ellipse at center, #8779c9 0%, transparent 80%);
+    margin-top: 6px;
+}
+
+h2 {
+    border-bottom: none;
+    border-image: linear-gradient(to right, #bca7c8 0%, transparent 80%) 1;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-bottom: 12px;
+    margin-top: 48px;
     margin-bottom: 24px;
 }
+
+h3 {
+    font-size: 1.4rem;
+    padding-top: 16px;
+}
+
 h5 {
     font-size: 19px;
 }
@@ -51,26 +91,40 @@ h5 {
 /*****************************************************************************/
 .navbar {
     color: #fff;
-    background-color: #696482 !important;
+    background-color: rgba(90, 85, 120, 0.83) !important;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
     border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 0;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
 }
+
 .navbar.bg-primary {
-    background-image: linear-gradient(#746e92, #696482 60%, #5a5578) !important;
+    background-image: none !important;
+    background-color: rgba(90, 85, 120, 0.85) !important;
 }
+
 ul.navbar-nav {
     line-height: 2.5;
 }
 
-.navbar-brand,
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
 .navbar .navbar-nav>li>a {
     color: #fff !important;
 }
+
 .navbar .navbar-nav>li>.active>a,
 .navbar .navbar-nav>li>.active>a:hover,
 .navbar .navbar-nav>li>.active>a:focus {
     color: #fff !important;
 }
+
 .navbar .navbar-nav>li>a:hover,
 .navbar .navbar-nav>li>a:focus {
     color: #fff !important;
@@ -107,23 +161,25 @@ ul.navbar-nav {
     padding-top: 15px;
 }
 
-#toc-collapse .nav > li > a {
-    font-weight: 300;
-}
-#toc-collapse .nav > li > a:hover,
-#toc-collapse .nav > li > a:focus,
-#toc-collapse .nav > li > a:active {
-    font-weight: 500;
+#toc-collapse .nav>li>a {
+    font-weight: 400;
 }
 
-.bs-sidebar .nav > li > a {
+#toc-collapse .nav>li>a:hover,
+#toc-collapse .nav>li>a:focus,
+#toc-collapse .nav>li>a:active {
+    font-weight: 600;
+}
+
+.bs-sidebar .nav>li>a {
     padding-left: 10px;
     padding-right: 20px;
 }
-.bs-sidebar .nav > li > a:hover,
-.bs-sidebar .nav > li > a:focus,
-.bs-sidebar .nav > li > a:active,
-.bs-sidebar .nav > li > a:active:focus {
+
+.bs-sidebar .nav>li>a:hover,
+.bs-sidebar .nav>li>a:focus,
+.bs-sidebar .nav>li>a:active,
+.bs-sidebar .nav>li>a:active:focus {
     border-right-width: 3px !important;
     padding-left: 10px;
     padding-right: 17px;
@@ -177,10 +233,14 @@ footer {
     margin-bottom: 0;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
+    font-size: 0.82rem;
+    color: #999;
+    letter-spacing: 0.01em;
 }
 
 footer hr {
     margin-top: 0;
     padding-top: 0;
+    border-color: #eee;
 }
