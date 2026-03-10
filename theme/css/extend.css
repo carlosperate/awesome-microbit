@@ -1,6 +1,9 @@
-/* Overwrites the original theme CSS for this project. */
-
-/* Default HTML elements */
+/**
+ * Overwrites the original theme CSS for this project.
+ */
+/*****************************************************************************/
+/* Default HTML elements                                                     */
+/*****************************************************************************/
 body {
     background-color: #f5f5f5;
 }
@@ -43,7 +46,9 @@ h5 {
     font-size: 19px;
 }
 
-/* Top Navigation bar*/
+/*****************************************************************************/
+/* Top Navigation bar                                                        */
+/*****************************************************************************/
 .navbar {
     color: #fff;
     background-color: #696482 !important;
@@ -88,9 +93,9 @@ ul.navbar-nav {
     border-color: #7E789C;
 }
 
-
-
-/* ToC Sidebar */
+/*****************************************************************************/
+/* ToC Sidebar                                                               */
+/*****************************************************************************/
 #toc-collapse {
     background-color: #f5f5f5 !important;
     border: none;
@@ -106,7 +111,8 @@ ul.navbar-nav {
     font-weight: 300;
 }
 #toc-collapse .nav > li > a:hover,
-#toc-collapse .nav > li > a:focus {
+#toc-collapse .nav > li > a:focus,
+#toc-collapse .nav > li > a:active {
     font-weight: 500;
 }
 
@@ -115,13 +121,17 @@ ul.navbar-nav {
     padding-right: 20px;
 }
 .bs-sidebar .nav > li > a:hover,
-.bs-sidebar .nav > li > a:focus {
-    border-right-width: 3px;
+.bs-sidebar .nav > li > a:focus,
+.bs-sidebar .nav > li > a:active,
+.bs-sidebar .nav > li > a:active:focus {
+    border-right-width: 3px !important;
     padding-left: 10px;
     padding-right: 17px;
 }
 
-/* Additional classes for the main container */
+/*****************************************************************************/
+/* Additional classes for the main container                                 */
+/*****************************************************************************/
 .main-container {
     background-color: white;
     padding-left: 0;
@@ -159,7 +169,9 @@ ul.navbar-nav {
     background-color: #c1c1c1;
 }
 
-/* Footer */
+/*****************************************************************************/
+/* Footer                                                                    */
+/*****************************************************************************/
 footer {
     margin-top: 0;
     margin-bottom: 0;

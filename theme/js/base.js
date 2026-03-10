@@ -163,13 +163,106 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     applyTopPadding();
+
+    /* ── Manual scroll-spy: highlight TOC link for the section in view ── */
+    (function initScrollSpy() {
+        var tocEl = document.getElementById('toc-collapse');
+        if (!tocEl) return;
+
+        var tocLinks = Array.prototype.slice.call(
+            tocEl.querySelectorAll('a.nav-link[href^="#"]')
+        );
+        if (tocLinks.length === 0) return;
+
+        /* Build a set of IDs that the TOC actually links to */
+        var tocIds = {};
+        tocLinks.forEach(function (link) {
+            var id = decodeURIComponent(link.getAttribute('href').substring(1));
+            tocIds[id] = true;
+        });
+
+        /* Collect only content elements whose IDs match a TOC entry.
+           This avoids h3+ subheadings (not in the TOC) from creating
+           gaps where nothing would be highlighted. */
+        var contentSections = Array.prototype.slice.call(
+            document.querySelectorAll('.main-content [id]')
+        ).filter(function (el) {
+            return tocIds[decodeURIComponent(el.getAttribute('id'))] === true;
+        });
+        if (contentSections.length === 0) return;
+
+        var OFFSET = 100; /* px added to scrollY – roughly navbar + margin */
+        var ticking = false;
+
+        function clearAllActive() {
+            tocLinks.forEach(function (link) {
+                link.classList.remove('active');
+            });
+        }
+
+        /* Walk up the TOC DOM tree from a link and mark all parent
+           nav-links as active too (e.g. when a h3 is current, its
+           parent h2 entry should also be highlighted). */
+        function activateParents(link) {
+            var li = link.parentElement;          /* li.nav-item */
+            while (li) {
+                var parentUl = li.parentElement;  /* ul.nav */
+                if (!parentUl || parentUl.id === 'toc-collapse') break;
+                var parentLi = parentUl.parentElement; /* li.nav-item (parent level) */
+                if (!parentLi || parentLi === tocEl) break;
+                var parentLink = parentLi.querySelector(':scope > a.nav-link');
+                if (parentLink) parentLink.classList.add('active');
+                li = parentLi;
+            }
+        }
+
+        function highlightCurrent() {
+            var scrollPos = (window.scrollY || document.documentElement.scrollTop) + OFFSET;
+            var activeId = null;
+            var maxTop = -1;
+
+            /* Find the deepest section whose top is above the scroll line */
+            contentSections.forEach(function (section) {
+                if (section.offsetTop <= scrollPos && section.offsetTop > maxTop) {
+                    maxTop = section.offsetTop;
+                    activeId = section.getAttribute('id');
+                }
+            });
+
+            clearAllActive();
+
+            if (activeId) {
+                /* Match against TOC links using decodeURIComponent so that
+                   emoji / special-char IDs compare correctly. */
+                var decodedActive = decodeURIComponent(activeId);
+                tocLinks.forEach(function (link) {
+                    var href = link.getAttribute('href');
+                    if (href) {
+                        var hrefId = decodeURIComponent(href.substring(1));
+                        if (hrefId === decodedActive) {
+                            link.classList.add('active');
+                            activateParents(link);
+                        }
+                    }
+                });
+            }
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                window.requestAnimationFrame(highlightCurrent);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        /* Run once on load so the right item is highlighted immediately */
+        highlightCurrent();
+    })();
 });
 
 window.addEventListener('resize', applyTopPadding);
-
-var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    target: '.bs-sidebar'
-});
 
 /* Prevent disabled links from causing a page reload */
 document.querySelectorAll("li.disabled a").forEach(function(item) {
