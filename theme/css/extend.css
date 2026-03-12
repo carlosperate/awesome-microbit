@@ -62,7 +62,7 @@ h1 {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: -0.02em;
-    background: linear-gradient(303deg, var(--awesomemb-colour-7), var(--awesomemb-colour-2));
+    background: linear-gradient(303deg,  var(--awesomemb-colour-7), #c187d9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -115,7 +115,7 @@ h5 {
 
 .navbar.bg-primary {
     background-image: none !important;
-    background-color: rgba(var(--awesomemb-colour-7-rgb), 0.85) !important;
+    background-color: rgba(49, 38, 74, 0.75) !important;
 }
 
 ul.navbar-nav {
@@ -180,7 +180,7 @@ ul.navbar-nav {
 
 #toc-collapse .nav>li>a {
     font-weight: 400;
-    color: var(--awesomemb-colour-6) !important;
+    color: var(--awesomemb-colour-5) !important;
 }
 
 #toc-collapse .nav>li>a:hover,
