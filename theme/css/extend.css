@@ -3,11 +3,25 @@
  */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* CSS Variables generated from Kigen.design */
+:root {
+    --awesomemb-colour-background: #f5f5f5;
+    --awesomemb-colour-1: #cbb8d4;
+    --awesomemb-colour-2: #b69ac2;
+    --awesomemb-colour-3: #a37fb2;
+    --awesomemb-colour-4: #8d689c;    /* Primary colour */
+    --awesomemb-colour-5: #765783;
+    --awesomemb-colour-6: #583f62;
+    --awesomemb-colour-6-rgb: 88, 63, 98;
+    --awesomemb-colour-7: #423149;
+    --awesomemb-colour-7-rgb: 55, 39, 62;
+}
+
 /*****************************************************************************/
 /* Default HTML elements                                                     */
 /*****************************************************************************/
 body {
-    background-color: #f5f5f5;
+    background-color: var(--awesomemb-colour-background);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -31,13 +45,13 @@ p {
 
 a,
 a code {
-    color: #8D689C !important;
+    color: var(--awesomemb-colour-4) !important;
     transition: color 0.2s ease;
 }
 
 a:hover,
 a:focus {
-    color: #562769 !important;
+    color: var(--awesomemb-colour-6) !important;
 }
 
 .main-content li a {
@@ -48,7 +62,7 @@ h1 {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: -0.02em;
-    background: linear-gradient(303deg, #4d475e, #8779c9);
+    background: linear-gradient(303deg, var(--awesomemb-colour-7), var(--awesomemb-colour-2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -63,13 +77,13 @@ h1::after {
     content: '';
     display: block;
     height: 1px;
-    background: radial-gradient(ellipse at center, #8779c9 0%, transparent 80%);
+    background: radial-gradient(ellipse at center, var(--awesomemb-colour-3) 0%, transparent 80%);
     margin-top: 6px;
 }
 
 h2 {
     border-bottom: none;
-    border-image: linear-gradient(to right, #bca7c8 0%, transparent 80%) 1;
+    border-image: linear-gradient(to right, var(--awesomemb-colour-2) 0%, transparent 80%) 1;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     padding-bottom: 12px;
@@ -91,7 +105,6 @@ h5 {
 /*****************************************************************************/
 .navbar {
     color: #fff;
-    background-color: rgba(90, 85, 120, 0.83) !important;
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
     border: none;
@@ -102,7 +115,7 @@ h5 {
 
 .navbar.bg-primary {
     background-image: none !important;
-    background-color: rgba(90, 85, 120, 0.85) !important;
+    background-color: rgba(var(--awesomemb-colour-7-rgb), 0.85) !important;
 }
 
 ul.navbar-nav {
@@ -115,7 +128,10 @@ ul.navbar-nav {
     letter-spacing: -0.02em;
 }
 
-.navbar .navbar-nav>li>a {
+.navbar .navbar-nav>li>a,
+.navbar .navbar-nav>li>.active>a,
+.navbar .navbar-nav>li>.active>a:hover,
+.navbar .navbar-nav>li>.active>a:focus {
     color: #fff !important;
 }
 
@@ -128,32 +144,33 @@ ul.navbar-nav {
 .navbar .navbar-nav>li>a:hover,
 .navbar .navbar-nav>li>a:focus {
     color: #fff !important;
-    background-color: #7E789C !important;
+    background-color: var(--awesomemb-colour-4) !important;
 }
 
 .navbar .navbar-toggle:hover,
 .navbar .navbar-toggle:focus {
-    background-color: #7E789C;
+    background-color: var(--awesomemb-colour-4);
 }
 
 .navbar .dropdown-item:focus,
 .navbar .dropdown-item:hover {
-    background-color: #7E789C;
+    background-color: var(--awesomemb-colour-4);
     color: #fff !important;
 }
 
 .navbar .navbar-collapse,
 .navbar .navbar-form {
-    border-color: #7E789C;
+    border-color: var(--awesomemb-colour-4);
 }
 
 /*****************************************************************************/
 /* ToC Sidebar                                                               */
 /*****************************************************************************/
 #toc-collapse {
-    background-color: #f5f5f5 !important;
+    background-color: var(--awesomemb-colour-background) !important;
     border: none;
-    border-right: 1px solid #EEEEEE;
+    border-right: 1px solid var(--awesomemb-colour-1);
+    border-radius: 0;
     padding-top: 0;
 }
 
@@ -163,6 +180,7 @@ ul.navbar-nav {
 
 #toc-collapse .nav>li>a {
     font-weight: 400;
+    color: var(--awesomemb-colour-6) !important;
 }
 
 #toc-collapse .nav>li>a:hover,
@@ -182,7 +200,7 @@ ul.navbar-nav {
 .bs-sidebar .nav>li>a:active:focus {
     border-right-width: 3px !important;
     padding-left: 10px;
-    padding-right: 17px;
+    padding-right: 15px;
 }
 
 /*****************************************************************************/
@@ -218,11 +236,11 @@ ul.navbar-nav {
 }
 
 .bs-sidebar:hover {
-    scrollbar-color: #c1c1c1 transparent;
+    scrollbar-color: var(--awesomemb-colour-2) transparent;
 }
 
 .bs-sidebar:hover::-webkit-scrollbar-thumb {
-    background-color: #c1c1c1;
+    background-color: var(--awesomemb-colour-2);
 }
 
 /*****************************************************************************/
@@ -235,12 +253,12 @@ footer {
     padding-right: 0 !important;
     padding-bottom: 16px;
     font-size: 0.82rem;
-    color: #999;
+    color: var(--awesomemb-colour-7);
     letter-spacing: 0.01em;
 }
 
 footer hr {
     margin-top: 0;
     padding-top: 0;
-    border-color: #eee;
+    border-color: var(--awesomemb-colour-1);
 }
