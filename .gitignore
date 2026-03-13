@@ -3,7 +3,9 @@
 ###########
 node_modules/
 site/
+site_src/
 .vscode/*
+theme-old/
 
 ###################
 # Python Specific #

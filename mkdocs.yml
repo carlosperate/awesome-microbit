@@ -1,0 +1,29 @@
+site_name: Awesome micro:bit
+site_description: Project documentation with Markdown.
+site_author: Carlos Pereira Atencio
+site_url: https://awesomemicrobit.embeddeddlog.com
+repo_url: https://github.com/carlosperate/awesome-microbit
+copyright: "©️ 2026 Awesome micro:bit contributors"
+site_dir: site/
+# This directory is created by the build.py script
+docs_dir: site_src/
+
+theme:
+  name: mkdocs
+  custom_dir: theme/
+  user_color_mode_toggle: true
+  color_mode: light
+  locale: en
+  next_prev: false
+
+nav:
+#  - ""
+  - Home: README.md
+  - About:
+    - Contributing: contributing.md
+    - Code of Conduct: code-of-conduct.md
+
+plugins:
+  - awesome-list:
+      debug-log: false
+      card-style: replace  # "append" (default) or "replace" 
