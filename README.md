@@ -726,6 +726,7 @@ Useful Articles for developing on the micro:bit.
 - [Coding with BBC micro:bit in easy steps](https://ineasysteps.com/products-page/coding-with-the-microbit-create-cool-programming-projects/) - Teaches children how to use the BBC micro:bit, and guides them through 10 exciting projects designed to make learning fun.
 - [micro:bit Projects with Python and Single Board Computers](https://link.springer.com/book/10.1007/978-1-4842-9197-9) - Building STEAM Projects with Code Club and Kids' Maker Groups.
 - [Make: AI Robots](https://www.makershed.com/products/make-ai-robots-print) - Introduces AI through exciting craft projects with a mechanical cardboard creations, fun electronic lights, motors, simple coding on a micro:bit, and then teaches how to train AI to create a spark of life.
+- [Make the most of your micro:bit](https://mrmorrison.co.uk/books/) - Explore the micro:bit features with 50 hands on projects for all ages, with clear instructions to code a range of exciting and creative projects to make your own.
 
 
 ## 🧑‍🏫 Teaching Resources
