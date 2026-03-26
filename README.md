@@ -696,6 +696,7 @@ Useful Articles for developing on the micro:bit.
 - [micro:bit Live Global 2021](https://www.youtube.com/playlist?list=PLEo0hMrjdofs-XgVXg-Oib1mduB6biIIC) - Playlist with all the talks and sessions from the micro:bit Live 2021 online conference.
 - [micro:bit Live Barcelona 2023](https://www.microbitlivemadrid.org/en/edicion-barcelona-2023/barcelona-2023) - Event description and session recordings from the in-person Barcelona 2023 event.
 - [micro:bit Live Madrid 2024](https://www.microbitlivemadrid.org/en) - Programme and session recordings from the in-person Madrid 2024 event.
+- [micro:bit Live Athens 2024](https://www.youtube.com/watch?v=6kUNeXXJOac) - Recording of the live stream from the local micro:bit Live Athens 2024 event.
 
 ### 🎥 Other Conference Talks
 
