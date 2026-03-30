@@ -617,7 +617,6 @@ Useful Articles for developing on the micro:bit.
 - [Offline C/C++ Development With The micro:bit](https://www.i-programmer.info/programming/hardware/9654-offline-cc-development-with-the-microbit-.html)
 - [Sending 'commands' from a micro:bit over Bluetooth](https://bluetooth-developer.blogspot.com/2016/07/sending-commands-from-microbit-over.html)
 - [Getting Started with the micro:bit Bluetooth IO Pin Service](https://ukbaz.github.io/howto/ubit_ble_profile.html)
-- [Using MQTT-SN over BLE with the BBC micro:bit](https://blog.benjamin-cabe.com/2017/01/16/using-mqtt-sn-over-ble-with-the-bbc-microbit)
 - [The First Video Game on the BBC micro:bit [probably]](https://hackernoon.com/the-first-video-game-on-the-bbc-micro-bit-probably-4175fab44da8) - Creating a game for the micro:bit, the MicroPython changes needed to increase performance and a general profile of its resources.
 - [Custom BLE services with micro:bit](https://www.hackster.io/pelikhan/custom-ble-services-with-micro-bit-6c9879) - Build your own Bluetooth low energy services and bundle them as PXT/MakeCode blocks that beginners can use.
 - [Writing the second video game for the micro:bit in Rust](https://hackernoon.com/writing-the-second-video-game-for-the-micro-bit-in-rust-3cd8b5ab22d3) - Updating a micro:bit game and porting it to the Rust language.
