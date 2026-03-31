@@ -188,6 +188,7 @@ The following extensions can be added into MakeCode by copying the GitHub URL an
 - [blehid](https://github.com/bsiever/microbit-pxt-blehid) - Set up the micro:bit V2 as a Bluetooth HID device, like a keyboard, mouse, or gamepad.
 - [Sonic Pi OSC](https://github.com/RBilsland/pxt-sonicpiosc) - Send OpenSound Control (OSC) messages to Sonic Pi from a micro:bit using an ESP8266.
 - [micro:bit Timers](https://github.com/robo-technical-group/pxt-microbit-timers/) - Provides timer based functions for debouncing, throttling, delaying and running code in the background.
+- [Music Helpers](https://github.com/jaustin/pxt-musichelpers/) - Modify how the original music blocks play notes, adding interesting capabilities like pentatonic scales, or custom tweaks to simulate other instruments.
 
 ### 🗿 MakeCode Extensions - Hardware drivers
 
