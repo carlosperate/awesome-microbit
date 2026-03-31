@@ -3,7 +3,7 @@ name: "GH Action Test: tweet-commit"
 on:
   push:
     branches:
-    - main
+    - "*"
     paths:
     - '.github/actions/tweet-commit/**'
   pull_request:

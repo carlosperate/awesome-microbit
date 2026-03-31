@@ -1,3 +1,4 @@
 gitpython>=3.1.14,<4
 tweepy==4.16.*
 atproto==0.0.65
+Pillow>=10.0,<12

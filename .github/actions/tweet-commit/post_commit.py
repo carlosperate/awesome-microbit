@@ -19,6 +19,7 @@ from git import Repo
 import tweepy
 from atproto import Client, client_utils, models
 import httpx
+from PIL import Image
 
 # Getting the Twitter secrets form local dev file or GH action secrets
 try:
@@ -49,6 +50,8 @@ except ImportError:
 
 SEND_TWEET = False
 SEND_SKEET = True
+
+BLUESKY_MAX_BLOB_SIZE = 1_000_000
 
 TWITTER_LINK_LENGTH = 24  # Includes an extra character for a '\n'
 TWITTER_MAX_CHARS = 280
@@ -229,6 +232,28 @@ def format_msg_bluesky(section, title, url, description):
     return text_builder
 
 
+def _compress_image(img_data, max_size=BLUESKY_MAX_BLOB_SIZE):
+    """Compress an image to fit within max_size bytes.
+
+    Converts to JPEG and progressively reduces dimensions until it fits.
+    """
+    img = Image.open(io.BytesIO(img_data))
+    img = img.convert("RGB")
+
+    # Try progressively smaller scale factors
+    for scale in (1.0, 0.75, 0.5, 0.35, 0.25, 0.15, 0.1):
+        w = int(img.width * scale)
+        h = int(img.height * scale)
+        resized = img.resize((w, h), Image.LANCZOS)
+        buf = io.BytesIO()
+        resized.save(buf, format="JPEG", quality=85, optimize=True)
+        if buf.tell() <= max_size:
+            print(f"Compressed image to {w}x{h} ({buf.tell()} bytes).")
+            return buf.getvalue(), "image/jpeg"
+
+    raise Exception(f"Could not compress image to under {max_size} bytes.")
+
+
 def _get_og_tags(url):
     """Fetch OGP tags from a URL, download og:image.
 
@@ -305,8 +330,12 @@ def _get_og_tags(url):
 
 def skeet_msg(text_builder, url, dry_run=False):
     """Post to BlueSky the given message content."""
-    # Always fetch OG content, even in dry run
+    # Always fetch OG content and compress image, even in dry run
     img_data, img_content_type, img_url, title, description = _get_og_tags(url)
+
+    if img_data and len(img_data) > BLUESKY_MAX_BLOB_SIZE:
+        print(f"Image too large ({len(img_data)} bytes), compressing...")
+        img_data, img_content_type = _compress_image(img_data)
 
     if dry_run:
         print("Dry run: skipping BlueSky post.")
@@ -315,6 +344,7 @@ def skeet_msg(text_builder, url, dry_run=False):
                 f"BlueSky Embed content:\n\tTitle: {title}\n\tDescription: "
                 f"{description}\n\tURL: {url}\n\tImage URL: {img_url}"
                 f"\n\tImage type: {img_content_type or 'None'}"
+                f"\n\tImage size: {len(img_data) if img_data else 0} bytes"
             )
         return
 

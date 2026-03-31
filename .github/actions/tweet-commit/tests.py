@@ -884,6 +884,127 @@ class TestDryRun(unittest.TestCase):
             self.assertFalse(args.dry_run)
 
 
+class TestCompressImage(unittest.TestCase):
+    """Test image compression for BlueSky blob size limit."""
+
+    _noisy_img = None  # Shared PIL Image with random noise
+
+    @classmethod
+    def _get_noisy_img(cls):
+        """Generate a noisy 2000x2000 RGB image once and cache it."""
+        if cls._noisy_img is None:
+            from PIL import Image as PILImage
+            import random
+
+            random.seed(42)
+            img = PILImage.new("RGB", (2000, 2000))
+            pixels = [
+                (
+                    random.randint(0, 255),
+                    random.randint(0, 255),
+                    random.randint(0, 255),
+                )
+                for _ in range(2000 * 2000)
+            ]
+            img.putdata(pixels)
+            cls._noisy_img = img
+        return cls._noisy_img
+
+    def _make_image(self, fmt, mode="RGB", noise=False, size=2000):
+        """Create an image in the given format and return its bytes."""
+        from PIL import Image as PILImage
+
+        if noise:
+            img = self._get_noisy_img()
+            if mode == "RGBA":
+                img = img.convert("RGBA")
+        else:
+            img = PILImage.new(mode, (size, size), color="red")
+        buf = io.BytesIO()
+        if fmt == "JPEG" and mode != "RGB":
+            img = img.convert("RGB")
+        img.save(buf, format=fmt)
+        return buf.getvalue()
+
+    def test_large_images_compressed_under_limit(self):
+        """Large images in common formats are compressed under the limit."""
+        # Noise needed for compressed formats, solid color enough for raw
+        formats = [
+            ("PNG", "RGB", True),
+            ("JPEG", "RGB", True),
+            ("WEBP", "RGB", True),
+            ("BMP", "RGB", False),
+            ("TIFF", "RGB", False),
+            ("PNG", "RGBA", True),
+        ]
+        for fmt, mode, noise in formats:
+            with self.subTest(format=fmt, mode=mode):
+                img_data = self._make_image(
+                    fmt, mode, noise=noise, size=2000 if noise else 1000
+                )
+
+                with unittest.mock.patch.object(
+                    post_commit.Image,
+                    "open",
+                    wraps=post_commit.Image.open,
+                ) as mock_open:
+                    result_data, result_type = post_commit._compress_image(
+                        img_data
+                    )
+                    mock_open.assert_called_once()
+
+                self.assertEqual(result_type, "image/jpeg")
+                self.assertLessEqual(
+                    len(result_data), post_commit.BLUESKY_MAX_BLOB_SIZE
+                )
+
+    @unittest.mock.patch("sys.stdout", new_callable=io.StringIO)
+    def test_skeet_msg_compresses_large_og_image(self, mock_stdout):
+        """skeet_msg compresses an oversized og:image via _compress_image."""
+        from atproto import client_utils
+
+        text_builder = client_utils.TextBuilder()
+        text_builder.text("Test post")
+
+        large_img_bytes = self._make_image("PNG", noise=True)
+        self.assertGreater(
+            len(large_img_bytes), post_commit.BLUESKY_MAX_BLOB_SIZE
+        )
+
+        with unittest.mock.patch.object(
+            post_commit.httpx, "get"
+        ) as mock_get, unittest.mock.patch.object(
+            post_commit, "_compress_image", wraps=post_commit._compress_image
+        ) as mock_compress:
+            mock_page = unittest.mock.MagicMock()
+            mock_page.text = (
+                '<meta property="og:title" content="Title">'
+                '<meta property="og:description" content="Desc">'
+                '<meta property="og:image"'
+                ' content="https://example.com/big.png">'
+            )
+            mock_img = unittest.mock.MagicMock()
+            mock_img.content = large_img_bytes
+            mock_img.headers = {"content-type": "image/png"}
+
+            def get_side_effect(url, **kwargs):
+                if "example.com/big.png" in url:
+                    return mock_img
+                return mock_page
+
+            mock_get.side_effect = get_side_effect
+            post_commit.skeet_msg(
+                text_builder, "https://example.com", dry_run=True
+            )
+
+            mock_compress.assert_called_once()
+
+        output = mock_stdout.getvalue()
+        self.assertIn("Image too large", output)
+        self.assertIn("Compressed image to", output)
+        self.assertIn("image/jpeg", output)
+
+
 class TestOgTagFixes(unittest.TestCase):
     """Test OG tag parsing fixes in skeet_msg.
 
