@@ -360,6 +360,7 @@ These languages do not program the micro:bit directly, but can be used to create
 
 ### 🎓 Machine Learning Editors & Tools
 
+- [CreateAI](https://microbit.org/createai/) - Create AI on your BBC micro:bit using movement and machine learning. Train and test a model from your own movement data, and create a MakeCode programme with the model to run it on your micro:bit.
 - [ML-Machine](https://ml-machine.org) - This project was the foundation for CreateAI, an interactive machine-learning platform by Aarhus university. Streaming the micro:bit accelerometer data via Bluetooth to train and run a model in-browser.
 - [MAKE: AI Robots](http://makeairobots.com) - A tool to bridge the gap between the Teachable Machine AI and a micro:bit. Train an AI to make a prediction, and then code your micro:bit to use those predictions to activate motors, lights & more!
 - [MicroPal](https://scientiffic.notion.site/MicroPal-Guide-141a70906ea5432599e21cecda2a1fac) - Craft your own interactive micro:bit project that responds to your voice. Create a Teachable Machine Model, load it into the MicroPal website, and control the micro:bit via Web Bluetooth.
