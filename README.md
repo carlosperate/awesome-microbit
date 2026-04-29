@@ -328,7 +328,7 @@ Other programming languages capable to program the micro:bit.
 - [Pascal](https://wiki.freepascal.org/micro:bit) - Free Pascal compiler that can target the ARM embedded platform, including the micro:bit.
 - [uLisp](http://www.ulisp.com/show?3CXJ) - A Lisp interpreter for the classic AI programming language for the BBC micro:bit.
 - [C# / F#](https://github.com/kekyo/IL2C) - IL2C is a translator implementation of .NET intermediate language to C language, with C# and F# examples for the micro:bit.
-- [TinyGo](https://tinygo.org/docs/reference/microcontrollers/microbit/) - ([examples](https://github.com/tinygo-org/tinygo-zoo)) Project to bring Go to microcontrollers and small systems, with out-of-box support for the BBC micro:bit.
+- [TinyGo](https://tinygo.org/docs/reference/microcontrollers/boards/microbit/) - Go Language for microcontrollers and small systems, with out-of-box support for the BBC micro:bit ([examples](https://github.com/tinygo-org/tinygo-zoo)).
 - [Tiny BASIC](https://github.com/Tamakichi/ttbasic_microbit) - Port for the micro:bit, including commands to use the on-board features, based on the Arduino port of the Tiny BASIC dialect.
 - [Zig](https://github.com/markfirmware/zig-bare-metal-microbit) - A BBC micro:bit bare metal example in the Zig language.
 - [MicroJIT](https://github.com/thomasdenney/microjit) - A Just-In-Time compiler for [Alex Roger's Stack Virtual Machine](http://www.cs.ox.ac.uk/people/alex.rogers/stack/) on the BBC micro:bit.
