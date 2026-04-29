@@ -269,15 +269,31 @@ def _get_og_tags(url):
     """
     # Posting Open Graph Protocol (OGP) social media cards, based on example:
     # https://github.com/MarshalX/atproto/blob/v0.0.56/examples/advanced_usage/send_ogp_link_card.py
-    _META_PATTERN = re.compile(r'<meta property="og:.*?>')
-    _CONTENT_PATTERN = re.compile(r'<meta[^>]+content="([^"]+)"')
+    _META_TAG_PATTERN = re.compile(r"<meta\b[^>]*>", re.IGNORECASE)
+    _ATTR_PATTERN = re.compile(
+        r"([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*([\"'])(.*?)\2",
+        re.DOTALL,
+    )
 
-    def _get_og_tag_value(og_tags, tag_name):
-        for tag in og_tags:
-            if f'property="{tag_name}"' in tag:
-                match = _CONTENT_PATTERN.match(tag)
-                if match:
-                    return match.group(1)
+    def _extract_meta_tags(html):
+        meta_tags = []
+        for tag in _META_TAG_PATTERN.findall(html):
+            attrs = {
+                key.lower(): value.strip()
+                for key, _quote, value in _ATTR_PATTERN.findall(tag)
+            }
+            if attrs:
+                meta_tags.append(attrs)
+        return meta_tags
+
+    def _get_tag_value(meta_tags, attr_name, attr_value):
+        attr_name = attr_name.lower()
+        attr_value = attr_value.lower()
+        for attrs in meta_tags:
+            if attrs.get(attr_name, "").lower() == attr_value:
+                value = attrs.get("content")
+                if value:
+                    return value
         return None
 
     def _detect_image_content_type(img_data, response_content_type):
@@ -303,10 +319,20 @@ def _get_og_tags(url):
     except (httpx.HTTPStatusError, httpx.RequestError) as e:
         print(f"Warning: Could not fetch URL: {e}")
         return None, None, None, None, None
-    og_tags = _META_PATTERN.findall(response.text)
-    og_image = _get_og_tag_value(og_tags, "og:image")
-    og_title = _get_og_tag_value(og_tags, "og:title")
-    og_description = _get_og_tag_value(og_tags, "og:description")
+    meta_tags = _extract_meta_tags(response.text)
+    og_image = _get_tag_value(meta_tags, "property", "og:image")
+    og_title = _get_tag_value(meta_tags, "property", "og:title")
+    og_description = _get_tag_value(meta_tags, "property", "og:description")
+
+    # Fallback to Twitter card metadata when OG tags are missing.
+    if not og_image:
+        og_image = _get_tag_value(meta_tags, "name", "twitter:image")
+    if not og_title:
+        og_title = _get_tag_value(meta_tags, "name", "twitter:title")
+    if not og_description:
+        og_description = _get_tag_value(
+            meta_tags, "name", "twitter:description"
+        )
 
     # Resolve relative image URLs to absolute URLs
     if og_image and not og_image.startswith(("http://", "https://")):

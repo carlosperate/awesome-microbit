@@ -1021,6 +1021,43 @@ class TestOgTagFixes(unittest.TestCase):
         readme = post_commit.get_commit_readme(commit)
         return entries, readme
 
+    def test_get_og_tags_multiline_and_single_quote_content(self):
+        """_get_og_tags should parse multiline and single-quoted content."""
+        page_url = "https://example.com/docs/page"
+        og_html = (
+            "<meta content='Example Title' property='og:title'>"
+            "<meta property='og:description' "
+            "content='First line.\nSecond line.'>"
+            "<meta property='og:image' content='/images/share.png'>"
+        )
+
+        with unittest.mock.patch.object(post_commit.httpx, "get") as mock_get:
+            mock_page = unittest.mock.MagicMock()
+            mock_page.text = og_html
+            mock_page.raise_for_status.return_value = None
+
+            mock_img = unittest.mock.MagicMock()
+            mock_img.content = b"\x89PNG\r\n\x1a\nimg"
+            mock_img.headers = {"content-type": "application/octet-stream"}
+            mock_img.raise_for_status.return_value = None
+
+            def get_side_effect(url, **kwargs):
+                if url == "https://example.com/images/share.png":
+                    return mock_img
+                return mock_page
+
+            mock_get.side_effect = get_side_effect
+
+            img_data, img_content_type, img_url, title, description = (
+                post_commit._get_og_tags(page_url)
+            )
+
+        self.assertEqual(title, "Example Title")
+        self.assertEqual(description, "First line.\nSecond line.")
+        self.assertEqual(img_url, "https://example.com/images/share.png")
+        self.assertEqual(img_content_type, "image/png")
+        self.assertEqual(img_data, b"\x89PNG\r\n\x1a\nimg")
+
     @unittest.mock.patch("sys.stdout", new_callable=io.StringIO)
     def test_og_image_alt_before_og_image(self, mock_stdout):
         """og:image:alt before og:image should not confuse parsing.
