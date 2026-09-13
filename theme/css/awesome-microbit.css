@@ -1,0 +1,144 @@
+/*
+ * Awesome micro:bit look for the awesome-list plugin cards, on top of the plugin's default
+ * layout (site/assets/awesome-list/awesome-list.css).
+ */
+
+.awesome-list {
+    --awesome-list-border: #e7e1ea;
+    /* Behind logos and favicons, many of them are black, so it stays light in dark mode */
+    --awesome-list-tint: #f4f0f6;
+    --awesome-list-radius: 14px;
+    --awesome-entry-bg: #ffffff;
+    --awesome-entry-text: #3d4248;
+    --awesome-entry-muted: #5f6670;
+    --awesome-entry-title: var(--awesomemb-colour-6);
+    --awesome-entry-chip: #f3eef6;
+    --awesome-entry-chip-hover: #e9dff0;
+}
+
+[data-bs-theme="dark"] .awesome-list {
+    --awesome-list-border: #3a3340;
+    --awesome-list-tint: #e9e4ec;
+    --awesome-entry-bg: #1f1b22;
+    --awesome-entry-text: #d6d0da;
+    --awesome-entry-muted: #a59dab;
+    --awesome-entry-title: var(--awesomemb-colour-1);
+    --awesome-entry-chip: #2c2631;
+    --awesome-entry-chip-hover: #3a3340;
+}
+
+.awesome-list .awesome-entry {
+    background: var(--awesome-entry-bg);
+    color: var(--awesome-entry-text);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+/* extend.css forces the colour and weight of every link */
+.awesome-list .awesome-entry__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--awesome-entry-title) !important;
+    text-decoration: none;
+}
+
+.awesome-list .awesome-entry__title:hover,
+.awesome-list .awesome-entry__sub a:hover {
+    text-decoration: underline;
+}
+
+.awesome-list .awesome-entry__domain {
+    font-size: 0.78rem;
+    color: var(--awesome-entry-muted);
+    opacity: 1;
+}
+
+.awesome-list .awesome-entry__icon {
+    color: var(--awesomemb-colour-6);
+}
+
+/*****************************************************************************/
+/* "media" style                                                             */
+/*****************************************************************************/
+.awesome-list--media .awesome-entry {
+    column-gap: 18px;
+    box-shadow: 0 1px 2px rgba(66, 49, 73, 0.05);
+}
+
+.awesome-list--media .awesome-entry__desc {
+    margin-top: 4px;
+}
+
+/* A blurred copy of the picture fills the frame, set by js/awesome-microbit.js */
+.awesome-list--media .awesome-entry[data-image="picture"] .awesome-entry__media {
+    position: relative;
+    isolation: isolate;
+}
+
+.awesome-list--media .awesome-entry[data-image="picture"] .awesome-entry__media::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--awesome-image, none) center / cover;
+    filter: blur(14px) saturate(1.2);
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+.awesome-list--media .awesome-entry__subs {
+    gap: 6px;
+}
+
+.awesome-list--media .awesome-entry__sub a {
+    padding: 3px 10px;
+    background: var(--awesome-entry-chip);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--awesome-entry-title) !important;
+    text-decoration: none;
+}
+
+.awesome-list--media .awesome-entry__sub a:hover {
+    background: var(--awesome-entry-chip-hover);
+    text-decoration: none;
+}
+
+/*****************************************************************************/
+/* "index" style                                                             */
+/*****************************************************************************/
+.awesome-list--index .awesome-entry {
+    padding: 14px 4px;
+}
+
+.awesome-list--index .awesome-entry__title {
+    font-size: 1rem;
+}
+
+.awesome-list--index .awesome-entry__domain {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+}
+
+.awesome-list--index .awesome-entry__icon {
+    border-radius: 9px;
+}
+
+.awesome-list--index .awesome-entry__desc {
+    margin-top: 3px;
+}
+
+.awesome-list--index .awesome-entry__subs {
+    margin-top: 8px;
+    font-size: 0.85rem;
+}
+
+.awesome-list--index .awesome-entry__sub::before {
+    color: var(--awesomemb-colour-3);
+    opacity: 1;
+}
+
+.awesome-list--index .awesome-entry__sub a {
+    font-weight: 500;
+    text-decoration: none;
+}

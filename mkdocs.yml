@@ -26,4 +26,16 @@ nav:
 plugins:
   - awesome-list:
       debug-log: false
-      card-style: replace  # "append" (default) or "replace" 
+      # "media" cards with the preview image, or compact "index" rows with the favicon
+      default-style: media
+      # Keyed by heading anchor, for sections that are mostly GitHub repos
+      section-styles:
+        micropython-libraries: index
+        micropython-libraries-hardware-drivers: index
+        python-libraries: index
+        makecode-extensions: index
+        makecode-extensions-hardware-drivers: index
+        nodejs-and-browser: index
+        cc-libraries: index
+        cc-libraries-hardware-drivers: index
+        rust-libraries-examples: index
