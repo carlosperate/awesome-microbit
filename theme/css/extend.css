@@ -212,6 +212,13 @@ ul.navbar-nav {
     margin-top: 0px !important;
 }
 
+/* The sidebar stacks above the content here, so the content needs Bootstrap's left gutter back */
+@media (max-width: 767.98px) {
+    .main-container {
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+    }
+}
+
 .bs-sidebar,
 .bs-sidebar.affix {
     position: sticky;

@@ -3,30 +3,55 @@
  * layout (site/assets/awesome-list/awesome-list.css).
  */
 
+/*****************************************************************************/
+/* Section colours                                                           */
+/*****************************************************************************/
+/* The site's purple, for lists outside a numbered section */
+:root {
+    --awesome-section-hue: 318deg;
+}
+
+/* content.html numbers each h2 section; the golden angle keeps neighbouring hues apart */
+.awesome-section {
+    --awesome-section-hue: calc(var(--awesome-section) * 137.5deg);
+}
+
+.awesome-section:has(.awesome-list) > h2 {
+    border-image: linear-gradient(to right, oklch(0.78 0.09 var(--awesome-section-hue)) 0%, transparent 80%) 1;
+}
+
+/* oklch keeps the same contrast whatever the hue */
 .awesome-list {
-    --awesome-list-border: #e7e1ea;
+    --awesome-list-border: oklch(0.91 0.035 var(--awesome-section-hue));
     /* Behind logos and favicons, many of them are black, so it stays light in dark mode */
-    --awesome-list-tint: #f4f0f6;
+    --awesome-list-tint: oklch(0.965 0.018 var(--awesome-section-hue));
     --awesome-list-radius: 14px;
     --awesome-entry-bg: #ffffff;
     --awesome-entry-text: #3d4248;
     --awesome-entry-muted: #5f6670;
-    --awesome-entry-title: var(--awesomemb-colour-6);
-    --awesome-entry-chip: #f3eef6;
-    --awesome-entry-chip-hover: #e9dff0;
+    --awesome-entry-title: oklch(0.47 0.12 var(--awesome-section-hue));
+    --awesome-entry-accent: oklch(0.8 0.08 var(--awesome-section-hue));
+    --awesome-entry-chip: var(--awesome-list-tint);
+    --awesome-entry-chip-hover: oklch(0.92 0.045 var(--awesome-section-hue));
+    --awesome-entry-hover-bg: oklch(0.975 0.012 var(--awesome-section-hue));
 }
 
 [data-bs-theme="dark"] .awesome-list {
-    --awesome-list-border: #3a3340;
-    --awesome-list-tint: #e9e4ec;
+    --awesome-list-border: oklch(0.36 0.03 var(--awesome-section-hue));
+    --awesome-list-tint: oklch(0.93 0.02 var(--awesome-section-hue));
     --awesome-entry-bg: #1f1b22;
     --awesome-entry-text: #d6d0da;
     --awesome-entry-muted: #a59dab;
-    --awesome-entry-title: var(--awesomemb-colour-1);
-    --awesome-entry-chip: #2c2631;
-    --awesome-entry-chip-hover: #3a3340;
+    --awesome-entry-title: oklch(0.83 0.08 var(--awesome-section-hue));
+    --awesome-entry-accent: oklch(0.55 0.08 var(--awesome-section-hue));
+    --awesome-entry-chip: oklch(0.3 0.03 var(--awesome-section-hue));
+    --awesome-entry-chip-hover: oklch(0.36 0.04 var(--awesome-section-hue));
+    --awesome-entry-hover-bg: oklch(0.26 0.02 var(--awesome-section-hue));
 }
 
+/*****************************************************************************/
+/* All styles                                                                */
+/*****************************************************************************/
 .awesome-list .awesome-entry {
     background: var(--awesome-entry-bg);
     color: var(--awesome-entry-text);
@@ -42,9 +67,19 @@
     text-decoration: none;
 }
 
+/* The title covers the card, so this is hovering anywhere on it */
 .awesome-list .awesome-entry__title:hover,
 .awesome-list .awesome-entry__sub a:hover {
     text-decoration: underline;
+}
+
+/* extend.css also resets the margin of every image */
+.awesome-list .awesome-entry__favicon {
+    width: 16px;
+    height: 16px;
+    margin-right: 7px !important;
+    border-radius: 3px;
+    vertical-align: -2px;
 }
 
 .awesome-list .awesome-entry__domain {
@@ -53,8 +88,9 @@
     opacity: 1;
 }
 
+/* On the light tint in both modes */
 .awesome-list .awesome-entry__icon {
-    color: var(--awesomemb-colour-6);
+    color: oklch(0.47 0.12 var(--awesome-section-hue));
 }
 
 /*****************************************************************************/
@@ -104,9 +140,63 @@
     text-decoration: none;
 }
 
+@media (hover: hover) {
+    .awesome-list--media .awesome-entry {
+        isolation: isolate;
+        transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out;
+    }
+
+    .awesome-list--media .awesome-entry:hover {
+        border-color: var(--awesome-entry-accent);
+        box-shadow: 0 4px 14px rgba(66, 49, 73, 0.08);
+        transform: translateY(-1px);
+    }
+
+    .awesome-list--media .awesome-entry__media img {
+        transition: transform 0.5s ease-out;
+    }
+
+    .awesome-list--media .awesome-entry:hover .awesome-entry__media img {
+        transform: scale(1.02);
+    }
+
+    /* The picture's colours bleed out of the thumbnail and towards the pointer; js/awesome-microbit.js
+       sets the image and the pointer position. Only on hover, to keep the blur off other cards. */
+    .awesome-list--media .awesome-entry:hover::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: var(--awesome-image, none) center / cover, var(--awesome-entry-accent);
+        filter: blur(40px) saturate(1.4);
+        clip-path: inset(0 round var(--awesome-list-radius));
+        -webkit-mask:
+            linear-gradient(to right, #000 12%, rgba(0, 0, 0, 0.35) 45%, transparent 80%),
+            radial-gradient(ellipse 45% 260% at var(--awesome-x, 50%) var(--awesome-y, 50%), rgba(0, 0, 0, 0.8), transparent);
+        mask:
+            linear-gradient(to right, #000 12%, rgba(0, 0, 0, 0.35) 45%, transparent 80%),
+            radial-gradient(ellipse 45% 260% at var(--awesome-x, 50%) var(--awesome-y, 50%), rgba(0, 0, 0, 0.8), transparent);
+        opacity: 0.45;
+        animation: awesome-glow-in 0.25s ease;
+    }
+}
+
+@keyframes awesome-glow-in {
+    from {
+        opacity: 0;
+    }
+}
+
 /*****************************************************************************/
 /* "index" style                                                             */
 /*****************************************************************************/
+/* Two columns where there's room for them, one on narrower screens */
+.awesome-list--index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+    column-gap: 32px;
+}
+
 .awesome-list--index .awesome-entry {
     padding: 14px 4px;
 }
@@ -134,11 +224,17 @@
 }
 
 .awesome-list--index .awesome-entry__sub::before {
-    color: var(--awesomemb-colour-3);
-    opacity: 1;
+    color: var(--awesome-entry-title);
+    opacity: 0.6;
 }
 
 .awesome-list--index .awesome-entry__sub a {
     font-weight: 500;
     text-decoration: none;
+}
+
+@media (hover: hover) {
+    .awesome-list--index .awesome-entry:hover {
+        background: var(--awesome-entry-hover-bg);
+    }
 }

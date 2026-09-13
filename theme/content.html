@@ -6,4 +6,15 @@
 </div>
 {% endif %}
 
+{#- Numbers each h2 section of the list pages, so css/awesome-microbit.css can colour each one #}
+{%- if 'class="awesome-list' in page.content %}
+{%- for part in page.content.split('<h2') %}
+{%- if loop.first %}
+{{ part }}
+{%- else %}
+<section class="awesome-section" style="--awesome-section: {{ loop.index0 }}"><h2{{ part }}</section>
+{%- endif %}
+{%- endfor %}
+{%- else %}
 {{ page.content }}
+{%- endif %}

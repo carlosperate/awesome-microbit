@@ -39,3 +39,4 @@ plugins:
         cc-libraries: index
         cc-libraries-hardware-drivers: index
         rust-libraries-examples: index
+        community: index
