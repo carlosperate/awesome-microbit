@@ -29,3 +29,17 @@ document.addEventListener('pointermove', function (event) {
     entry.style.setProperty('--awesome-x', (event.clientX - rect.left) + 'px');
     entry.style.setProperty('--awesome-y', (event.clientY - rect.top) + 'px');
 }, {passive: true});
+
+// The open menu pushes the page down, so close it before jumping to a table of contents entry
+document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('.navbar-toc a');
+    var menu = document.getElementById('navbar-collapse');
+    var target = link && document.getElementById(decodeURIComponent(link.hash.slice(1)));
+    if (!target || !menu.classList.contains('show')) return;
+    event.preventDefault();
+    menu.addEventListener('hidden.bs.collapse', function () {
+        history.pushState(null, '', link.hash);
+        target.scrollIntoView();
+    }, {once: true});
+    bootstrap.Collapse.getOrCreateInstance(menu).hide();
+});

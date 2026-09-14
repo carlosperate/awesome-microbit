@@ -70,7 +70,8 @@
                     {%- if nav|length>1 %}
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                        {%- for nav_item in nav %}
+                        {#- No home entry, the site name links there #}
+                        {%- for nav_item in nav if not nav_item.is_homepage %}
                         {%- if nav_item.children %}
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle{% if nav_item.active %} active" aria-current="page{% endif %}" role="button" data-bs-toggle="dropdown"  aria-expanded="false">{{ nav_item.title }}</a>
@@ -120,12 +121,10 @@
                         {%- if config.repo_url %}
                             <li class="nav-item">
                                 <a href="{{ config.repo_url }}" class="nav-link">
-                                    {%- if config.repo_name == 'GitHub' -%}
-                                        <i class="fa-brands fa-github"></i>
-                                    {%- elif config.repo_name == 'Bitbucket' -%}
-                                        <i class="fa-brands fa-bitbucket"></i>
-                                    {%- elif config.repo_name == 'GitLab' -%}
-                                        <i class="fa-brands fa-gitlab"></i>
+                                    {%- if config.repo_name in ['GitHub', 'Bitbucket', 'GitLab'] -%}
+                                        <i class="fa-brands fa-{{ config.repo_name|lower }} fa-fw"></i>
+                                        {#- Labelled like the theme toggle in the collapsed menu #}
+                                        <span class="d-lg-none ms-2">{{ config.repo_name }}</span>
                                     {%- else -%}
                                     {{ config.repo_name }}
                                     {%- endif -%}
@@ -165,6 +164,19 @@
                             </li>
                     {%- endif %}
                     </ul>
+                    {#- Phones hide the sidebar, so its table of contents is in this menu instead #}
+                    {%- if page and page.toc %}
+                    <div class="navbar-toc d-md-none">
+                        <p class="navbar-toc-title">{% trans %}Table of Contents{% endtrans %}</p>
+                        <ul class="nav navbar-nav">
+                        {%- for item in page.toc %}
+                        {%- for entry in ([item] if item.level > 1 else item.children) %}
+                            <li class="nav-item"><a href="{{ entry.url }}" class="nav-link">{{ entry.title }}</a></li>
+                        {%- endfor %}
+                        {%- endfor %}
+                        </ul>
+                    </div>
+                    {%- endif %}
                 </div>
             </div>
         </div>
@@ -175,7 +187,7 @@
         <div class="container main-container">
             <div class="row">
                 {%- block content %}
-                    <div class="col-md-3 main-toc">{% include "toc.html" %}</div>
+                    <div class="col-md-3 main-toc d-none d-md-block">{% include "toc.html" %}</div>
                     <div class="col-md-9 main-content" role="main">{% include "content.html" %}</div>
                 {%- endblock %}
             </div>

@@ -58,8 +58,9 @@ a:focus {
     font-weight: bold;
 }
 
+/* Small enough below 992px for the site name to fit on one line */
 h1 {
-    font-size: 4rem;
+    font-size: clamp(2.25rem, 9vw, 3.25rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     background: linear-gradient(303deg,  var(--awesomemb-colour-7), #c187d9);
@@ -81,19 +82,51 @@ h1::after {
     margin-top: 6px;
 }
 
+@media (min-width: 992px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Keeps headings off the navbar when jumping to them */
+h1, h2, h3 {
+    scroll-margin-top: 24px;
+}
+
+/* A new section gets clearly more space than a subsection (h3) */
 h2 {
     border-bottom: none;
     border-image: linear-gradient(to right, var(--awesomemb-colour-2) 0%, transparent 80%) 1;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     padding-bottom: 12px;
-    margin-top: 48px;
+    margin-top: 64px;
     margin-bottom: 24px;
 }
 
 h3 {
-    font-size: 1.4rem;
-    padding-top: 16px;
+    font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.5rem);
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+h2 + h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 767.98px) {
+    h2 {
+        margin-top: 48px;
+    }
+
+    h3 {
+        margin-top: 32px;
+    }
+}
+
+code {
+    border-radius: 4px;
 }
 
 h5 {
@@ -126,6 +159,18 @@ ul.navbar-nav {
     color: #fff !important;
     font-weight: 600;
     letter-spacing: -0.02em;
+    transition: text-shadow 0.25s ease;
+}
+
+/* Stays white, the dark link hover colour is unreadable here; the glow matches the menu hover */
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #fff !important;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus-visible {
+    text-shadow: 0 0 6px var(--awesomemb-colour-4), 0 0 14px var(--awesomemb-colour-4);
 }
 
 .navbar .navbar-nav>li>a,
@@ -163,6 +208,28 @@ ul.navbar-nav {
     border-color: var(--awesomemb-colour-4);
 }
 
+/* The table of contents in the menu, on phones instead of the sidebar */
+.navbar-toc {
+    margin-top: 4px;
+    padding: 8px 0 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar-toc-title {
+    margin: 4px 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Wrapped titles stay together, with the rows as tall as the other menu items */
+.navbar-toc .nav-link {
+    padding: 9px 0;
+    line-height: 1.35;
+}
+
 /*****************************************************************************/
 /* ToC Sidebar                                                               */
 /*****************************************************************************/
@@ -178,15 +245,20 @@ ul.navbar-nav {
     padding-top: 15px;
 }
 
+/* Tighter lines than the body text, so wrapped items read as one */
 #toc-collapse .nav>li>a {
     font-weight: 400;
+    line-height: 1.35;
+    padding-top: 8px;
+    padding-bottom: 8px;
     color: var(--awesomemb-colour-5) !important;
 }
 
+/* A colour change rather than bold, which re-wraps long items */
 #toc-collapse .nav>li>a:hover,
 #toc-collapse .nav>li>a:focus,
 #toc-collapse .nav>li>a:active {
-    font-weight: 600;
+    color: var(--awesomemb-colour-7) !important;
 }
 
 .bs-sidebar .nav>li>a {
@@ -212,7 +284,11 @@ ul.navbar-nav {
     margin-top: 0px !important;
 }
 
-/* The sidebar stacks above the content here, so the content needs Bootstrap's left gutter back */
+.main-content {
+    padding-bottom: 16px;
+}
+
+/* Phones hide the sidebar (base.html), so the content needs Bootstrap's left gutter back */
 @media (max-width: 767.98px) {
     .main-container {
         padding-left: calc(var(--bs-gutter-x) * 0.5);
@@ -227,6 +303,11 @@ ul.navbar-nav {
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
+}
+
+/* Fills the sidebar's height on pages with a short table of contents */
+#toc-collapse {
+    min-height: 100%;
 }
 
 .bs-sidebar::-webkit-scrollbar {

@@ -67,6 +67,14 @@
     text-decoration: none;
 }
 
+/* Handles like `@microbit_edu` keep their font, but not the box or extend.css's link colour */
+.awesome-list .awesome-entry__title code {
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit !important;
+}
+
 /* The title covers the card, so this is hovering anywhere on it */
 .awesome-list .awesome-entry__title:hover,
 .awesome-list .awesome-entry__sub a:hover {
@@ -190,11 +198,13 @@
 /*****************************************************************************/
 /* "index" style                                                             */
 /*****************************************************************************/
-/* Two columns where there's room for them, one on narrower screens */
+/* Two columns where there's room for them. The negative margin takes up the first row's padding,
+   so the list sits as close to its heading as a card does. */
 .awesome-list--index {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
     column-gap: 32px;
+    margin-top: -10px;
 }
 
 .awesome-list--index .awesome-entry {

@@ -19,6 +19,7 @@ function applyTopPadding() {
     document.documentElement.style.scrollPaddingTop = offset + 'px';
     document.querySelectorAll('.bs-sidebar.affix').forEach(function(sidebar) {
         sidebar.style.top = offset + 'px';
+        sidebar.style.height = 'calc(100vh - ' + offset + 'px)';
     });
 }
 
