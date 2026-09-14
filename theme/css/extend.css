@@ -17,11 +17,43 @@
     --awesomemb-colour-7-rgb: 55, 39, 62;
 }
 
+/* What each part of the page uses, so dark mode only has to change these */
+:root {
+    --awesomemb-page-bg: var(--awesomemb-colour-background);
+    --awesomemb-content-bg: #ffffff;
+    --awesomemb-rule: var(--awesomemb-colour-1);
+    --awesomemb-link: var(--awesomemb-colour-4);
+    --awesomemb-link-hover: var(--awesomemb-colour-6);
+    --awesomemb-toc-link: var(--awesomemb-colour-5);
+    --awesomemb-toc-link-hover: var(--awesomemb-colour-7);
+    --awesomemb-footer-text: var(--awesomemb-colour-7);
+    --awesomemb-h1-start: var(--awesomemb-colour-7);
+}
+
+/* Purple-tinted darks: the content a step above the page, and the cards (awesome-microbit.css) above that */
+[data-bs-theme="dark"] {
+    --awesomemb-page-bg: #110e13;
+    --awesomemb-content-bg: #18141b;
+    --awesomemb-rule: #3a2f40;
+    --awesomemb-link: var(--awesomemb-colour-2);
+    --awesomemb-link-hover: var(--awesomemb-colour-1);
+    --awesomemb-toc-link: #b3a4ba;
+    --awesomemb-toc-link-hover: #ece3f0;
+    --awesomemb-footer-text: #a59dab;
+    --awesomemb-h1-start: #f3e9f7;
+    /* Bootstrap's own surfaces (menus, dialogs, inline code) and text, in the same tones */
+    --bs-body-bg: #18141b;
+    --bs-body-bg-rgb: 24, 20, 27;
+    --bs-body-color: #ddd6e0;
+    --bs-body-color-rgb: 221, 214, 224;
+    --bs-border-color: #3a2f40;
+}
+
 /*****************************************************************************/
 /* Default HTML elements                                                     */
 /*****************************************************************************/
 body {
-    background-color: var(--awesomemb-colour-background);
+    background-color: var(--awesomemb-page-bg);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -39,19 +71,25 @@ img {
     border: none !important;
 }
 
+/* Pictures on their own, like the README logo, are white, so round and soften them like the cards */
+[data-bs-theme="dark"] .main-content p > a:only-child > img:only-child:not([src$=".svg"]) {
+    border-radius: 14px;
+    filter: brightness(0.92);
+}
+
 p {
     margin: 0px 0px 16px 0px;
 }
 
 a,
 a code {
-    color: var(--awesomemb-colour-4) !important;
+    color: var(--awesomemb-link) !important;
     transition: color 0.2s ease;
 }
 
 a:hover,
 a:focus {
-    color: var(--awesomemb-colour-6) !important;
+    color: var(--awesomemb-link-hover) !important;
 }
 
 .main-content li a {
@@ -63,7 +101,7 @@ h1 {
     font-size: clamp(2.25rem, 9vw, 3.25rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    background: linear-gradient(303deg,  var(--awesomemb-colour-7), #c187d9);
+    background: linear-gradient(303deg, var(--awesomemb-h1-start), #c187d9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -234,9 +272,9 @@ ul.navbar-nav {
 /* ToC Sidebar                                                               */
 /*****************************************************************************/
 #toc-collapse {
-    background-color: var(--awesomemb-colour-background) !important;
+    background-color: var(--awesomemb-page-bg) !important;
     border: none;
-    border-right: 1px solid var(--awesomemb-colour-1);
+    border-right: 1px solid var(--awesomemb-rule);
     border-radius: 0;
     padding-top: 0;
 }
@@ -251,14 +289,14 @@ ul.navbar-nav {
     line-height: 1.35;
     padding-top: 8px;
     padding-bottom: 8px;
-    color: var(--awesomemb-colour-5) !important;
+    color: var(--awesomemb-toc-link) !important;
 }
 
 /* A colour change rather than bold, which re-wraps long items */
 #toc-collapse .nav>li>a:hover,
 #toc-collapse .nav>li>a:focus,
 #toc-collapse .nav>li>a:active {
-    color: var(--awesomemb-colour-7) !important;
+    color: var(--awesomemb-toc-link-hover) !important;
 }
 
 .bs-sidebar .nav>li>a {
@@ -279,7 +317,7 @@ ul.navbar-nav {
 /* Additional classes for the main container                                 */
 /*****************************************************************************/
 .main-container {
-    background-color: white;
+    background-color: var(--awesomemb-content-bg);
     padding-left: 0;
     margin-top: 0px !important;
 }
@@ -341,12 +379,12 @@ footer {
     padding-right: 0 !important;
     padding-bottom: 16px;
     font-size: 0.82rem;
-    color: var(--awesomemb-colour-7);
+    color: var(--awesomemb-footer-text);
     letter-spacing: 0.01em;
 }
 
 footer hr {
     margin-top: 0;
     padding-top: 0;
-    border-color: var(--awesomemb-colour-1);
+    border-color: var(--awesomemb-rule);
 }
