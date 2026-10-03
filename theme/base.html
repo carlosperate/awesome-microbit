@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {#- The browser's own bar in the navbar's colour over the page, js/darkmode.js picks the mode's #}
+        <meta name="theme-color" content="#625974" data-light="#625974" data-dark="#2a1f3d">
         {% if page and page.is_homepage %}<meta name="description" content="{{ config.site_description }}">{% endif %}
         {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
         {% if page and page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}

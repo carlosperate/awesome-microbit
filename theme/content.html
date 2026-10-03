@@ -10,6 +10,11 @@
 {%- if 'class="awesome-list' in page.content %}
 {%- set parts = page.content.split('<h2') %}
 {%- set tiles_id = config.theme.contents_tiles %}
+{#- The current section, under the navbar from the first section on (js/awesome-microbit.js) #}
+<div class="awesome-where"><a class="awesome-where__bar" href="#">
+    <span class="awesome-where__name"></span><span class="awesome-where__count"></span>
+    <i class="fa-solid fa-chevron-down awesome-where__menu" aria-hidden="true"></i>
+</a></div>
 {{ parts[0] }}
 {%- for part in parts[1:] %}
 <section class="awesome-section" style="--awesome-section: {{ loop.index }}"><h2

@@ -271,15 +271,30 @@ ul.navbar-nav {
     line-height: 1.35;
 }
 
+/* The current section (js/awesome-microbit.js), tinted in its colour around the text */
+.navbar-toc .nav-link.active {
+    margin: 0 -10px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    background-color: oklch(0.62 0.15 var(--awesome-section-hue) / 0.35);
+}
+
+/* Room for that tint, which the open menu would clip as it scrolls */
+@media (max-width: 991.98px) {
+    .navbar .navbar-collapse {
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+}
+
 /*****************************************************************************/
 /* ToC Sidebar                                                               */
 /*****************************************************************************/
-/* At least as tall as the sidebar, for pages with a short table of contents */
+/* The sidebar (.bs-sidebar) draws the background and border */
 #toc-collapse {
-    min-height: 100%;
-    background-color: var(--awesomemb-page-bg) !important;
+    position: relative;
+    background-color: transparent !important;
     border: none;
-    border-right: 1px solid var(--awesomemb-rule);
     border-radius: 0;
     padding-top: 0;
 }
@@ -299,7 +314,7 @@ ul.navbar-nav {
     font-weight: 400;
     line-height: 1.35;
     color: var(--awesomemb-toc-link) !important;
-    transition: background-color 0.15s ease, color 0.15s ease;
+    transition: background-color 0.15s ease, color 0.3s ease;
 }
 
 /* A background rather than bold, which re-wraps long items */
@@ -320,7 +335,7 @@ ul.navbar-nav {
     position: absolute;
     top: 5px;
     bottom: 5px;
-    right: -11px;
+    right: -10px;
     width: 4px;
     border-radius: 4px 0 0 4px;
     background: oklch(0.62 0.15 var(--awesome-section-hue));
@@ -332,6 +347,69 @@ ul.navbar-nav {
 
 [data-bs-theme="dark"] #toc-collapse .nav>li>a.active::after {
     background: oklch(0.72 0.15 var(--awesome-section-hue));
+}
+
+/* Without anchor positioning, the entry keeps its own bar */
+.toc-current-bg,
+.toc-current-bar {
+    display: none;
+}
+
+/* A background and bar (toc.html) glide to the current entry, in its hue (js/base.js). Elements
+   rather than pseudo-elements, as Safari stops animating those when the hue changes. Firefox moves
+   them without the animation. */
+@supports (anchor-name: --toc-current) {
+    #toc-collapse .nav>li>a.active {
+        anchor-name: --toc-current;
+    }
+
+    #toc-collapse .nav>li>a.active::after {
+        content: none;
+    }
+
+    .toc-current-bg,
+    .toc-current-bar {
+        display: block;
+        position: absolute;
+        position-anchor: --toc-current;
+        transition: top 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), bottom 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+            background-color 0.3s ease;
+    }
+
+    .toc-current-bg {
+        top: anchor(top);
+        bottom: anchor(bottom);
+        left: anchor(left);
+        right: anchor(right);
+        border-radius: 8px;
+        background: oklch(0.93 0.04 var(--toc-current-hue, var(--awesome-section-hue)));
+    }
+
+    /* Where the entry's own bar was */
+    .toc-current-bar {
+        z-index: 2;
+        top: calc(anchor(top) + 5px);
+        bottom: calc(anchor(bottom) + 5px);
+        right: calc(anchor(right) - 10px);
+        width: 4px;
+        border-radius: 4px 0 0 4px;
+        background: oklch(0.62 0.15 var(--toc-current-hue, var(--awesome-section-hue)));
+    }
+
+    [data-bs-theme="dark"] .toc-current-bg {
+        background: oklch(0.3 0.05 var(--toc-current-hue, var(--awesome-section-hue)));
+    }
+
+    [data-bs-theme="dark"] .toc-current-bar {
+        background: oklch(0.72 0.15 var(--toc-current-hue, var(--awesome-section-hue)));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .toc-current-bg,
+    .toc-current-bar {
+        transition: none;
+    }
 }
 
 /*****************************************************************************/
@@ -353,12 +431,17 @@ ul.navbar-nav {
     padding-bottom: 16px;
 }
 
+/* The background and border are on the scrolling element, as the overscroll bounce in Chrome and
+   Safari moves the entries and shows what's behind them. An inset shadow, so the current section's
+   bar can cover it. */
 .bs-sidebar,
 .bs-sidebar.affix {
     position: sticky;
     top: 3.5rem;
     height: calc(100vh - 3.5rem);
     overflow-y: auto;
+    background-color: var(--awesomemb-page-bg);
+    box-shadow: inset -1px 0 0 var(--awesomemb-rule);
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
 }

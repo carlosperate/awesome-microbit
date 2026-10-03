@@ -44,13 +44,61 @@ document.addEventListener('click', function (event) {
     bootstrap.Collapse.getOrCreateInstance(menu).hide();
 });
 
-// Sidebar entries take their section's colour, for the current section's style in extend.css
+// The hue of a section with lists, for elements outside it; the others keep the site's purple
+function awesomeSectionHue(section) {
+    return section && section.querySelector('.awesome-list')
+        ? getComputedStyle(section).getPropertyValue('--awesome-section-hue') : '';
+}
+
+// Sidebar and phone menu entries take their section's colour, for the current section's style in extend.css
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('#toc-collapse .nav-link').forEach(function (link) {
+    document.querySelectorAll('#toc-collapse .nav-link, .navbar-toc .nav-link').forEach(function (link) {
         var heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
-        var section = heading && heading.closest('.awesome-section');
-        if (section && section.querySelector('.awesome-list')) {
-            link.style.setProperty('--awesome-section-hue', getComputedStyle(section).getPropertyValue('--awesome-section-hue'));
-        }
+        var hue = awesomeSectionHue(heading && heading.closest('.awesome-section'));
+        if (hue) link.style.setProperty('--awesome-section-hue', hue);
+    });
+});
+
+// The bar under the navbar (content.html) names the section the scrollspy (js/base.js) finds, and
+// its line shows how far down the page that is
+document.addEventListener('DOMContentLoaded', function () {
+    var where = document.querySelector('.awesome-where');
+    if (!where) return;
+    var bar = where.firstElementChild, current = null;
+    var menuLinks = document.querySelectorAll('.navbar-toc .nav-link');
+
+    document.addEventListener('scrollspy', function (event) {
+        var heading = event.detail ? document.getElementById(event.detail) : null;
+        // Above the first section there's nothing to name
+        var section = heading && heading.tagName === 'H2' ? heading.closest('.awesome-section') : null;
+        var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        where.classList.toggle('awesome-where--shown', !!section);
+        bar.style.setProperty('--awesome-where-progress', scrollable > 0 ? window.scrollY / scrollable : 0);
+        if (section === current) return;
+        current = section;
+        menuLinks.forEach(function (link) {
+            link.classList.toggle('active', !!section && link.hash === '#' + heading.id);
+        });
+        // While it fades out, it keeps the last section
+        if (!section) return;
+        var count = section.querySelectorAll('.awesome-entry').length, hue = awesomeSectionHue(section);
+        bar.href = '#' + heading.id;
+        if (hue) bar.style.setProperty('--awesome-section-hue', hue);
+        else bar.style.removeProperty('--awesome-section-hue');
+        where.querySelector('.awesome-where__name').textContent = heading.textContent;
+        where.querySelector('.awesome-where__count').textContent = count ? count + ' resource' + (count === 1 ? '' : 's') : '';
+    });
+
+    // Phones have no sidebar, so the bar opens the menu at the current section instead of jumping
+    bar.addEventListener('click', function (event) {
+        var toc = document.querySelector('.navbar-toc');
+        var entry = toc && toc.querySelector('.nav-link.active');
+        if (!entry || getComputedStyle(toc).display === 'none') return;
+        event.preventDefault();
+        var menu = document.getElementById('navbar-collapse');
+        menu.addEventListener('shown.bs.collapse', function () {
+            menu.scrollTop += entry.getBoundingClientRect().top - menu.getBoundingClientRect().top - menu.clientHeight / 3;
+        }, {once: true});
+        bootstrap.Collapse.getOrCreateInstance(menu).show();
     });
 });

@@ -15,8 +15,11 @@ function applyTopPadding() {
     // that pushes the main container down.
     var container = document.querySelector('body > .container');
     var offset = container.offsetTop;
+    // The current section's bar (content.html) sits under the navbar, so jumps clear it too
+    var where = document.querySelector('.awesome-where');
+    if (where) where.style.top = offset + 'px';
 
-    document.documentElement.style.scrollPaddingTop = offset + 'px';
+    document.documentElement.style.scrollPaddingTop = offset + (where ? where.firstElementChild.offsetHeight : 0) + 'px';
     document.querySelectorAll('.bs-sidebar.affix').forEach(function(sidebar) {
         sidebar.style.top = offset + 'px';
         sidebar.style.height = 'calc(100vh - ' + offset + 'px)';
@@ -192,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         if (contentSections.length === 0) return;
 
-        var OFFSET = 100; /* px added to scrollY – roughly navbar + margin */
         var ticking = false;
 
         function clearAllActive() {
@@ -202,7 +204,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function highlightCurrent() {
-            var scrollPos = (window.scrollY || document.documentElement.scrollTop) + OFFSET;
+            /* Below where a jump puts a heading (the scroll padding, plus the headings' 24px scroll
+               margin), so the section jumped to is the current one */
+            var offset = (parseFloat(document.documentElement.style.scrollPaddingTop) || 0) + 44;
+            var scrollPos = (window.scrollY || document.documentElement.scrollTop) + offset;
             var activeId = null;
             var maxTop = -1;
 
@@ -226,11 +231,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         var hrefId = decodeURIComponent(href.substring(1));
                         if (hrefId === decodedActive) {
                             link.classList.add('active');
+                            /* For the background and bar that glide to it (extend.css) */
+                            tocEl.style.setProperty('--toc-current-hue', link.style.getPropertyValue('--awesome-section-hue'));
                         }
                     }
                 });
             }
 
+            /* For the current section's bar (js/awesome-microbit.js) */
+            document.dispatchEvent(new CustomEvent('scrollspy', { detail: activeId }));
             ticking = false;
         }
 

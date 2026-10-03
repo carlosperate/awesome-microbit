@@ -2,13 +2,15 @@ function setColorMode(mode) {
     // Switch between light/dark theme. `mode` is a string value of either 'dark' or 'light'.
     var root = document.documentElement,
         hljs_light = document.getElementById('hljs-light'),
-        hljs_dark = document.getElementById('hljs-dark');
+        hljs_dark = document.getElementById('hljs-dark'),
+        theme_color = document.querySelector('meta[name="theme-color"]');
     // No transitions for a frame, or every link and card would animate to its new colour
     root.classList.add('theme-switching');
     requestAnimationFrame(function () {
         requestAnimationFrame(function () { root.classList.remove('theme-switching'); });
     });
     root.setAttribute('data-bs-theme', mode);
+    if (theme_color) theme_color.content = theme_color.dataset[mode];
     if (hljs_light && hljs_dark) {
         if (mode == 'dark') {
             hljs_light.disabled = true;

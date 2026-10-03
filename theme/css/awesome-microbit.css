@@ -22,10 +22,11 @@
     border-image: linear-gradient(to right, oklch(0.78 0.09 var(--awesome-section-hue)) 0%, transparent 80%) 1;
 }
 
-/* oklch keeps the same contrast whatever the hue. The tiles take their own hue, so they need the
-   tokens declared on them too. */
+/* oklch keeps the same contrast whatever the hue. The tiles and the current section's bar take
+   their own hue, so they need the tokens declared on them too. */
 .awesome-list,
-.awesome-contents__tile {
+.awesome-contents__tile,
+.awesome-where__bar {
     --awesome-list-border: oklch(0.91 0.035 var(--awesome-section-hue));
     /* Behind logos and favicons, many of them are black, so it stays light in dark mode */
     --awesome-list-tint: oklch(0.965 0.018 var(--awesome-section-hue));
@@ -41,7 +42,8 @@
 }
 
 [data-bs-theme="dark"] .awesome-list,
-[data-bs-theme="dark"] .awesome-contents__tile {
+[data-bs-theme="dark"] .awesome-contents__tile,
+[data-bs-theme="dark"] .awesome-where__bar {
     --awesome-list-border: oklch(0.36 0.03 var(--awesome-section-hue));
     --awesome-list-tint: oklch(0.93 0.02 var(--awesome-section-hue));
     --awesome-entry-bg: #1f1b22;
@@ -334,5 +336,117 @@
         border-color: var(--awesome-entry-accent);
         box-shadow: 0 4px 14px rgba(66, 49, 73, 0.08);
         transform: translateY(-1px);
+    }
+}
+
+/*****************************************************************************/
+/* Current section bar (content.html)                                        */
+/*****************************************************************************/
+/* Sticks under the navbar (js/base.js sets its top) without taking up space, so it stays out of
+   the way above the first section */
+.awesome-where {
+    position: sticky;
+    top: 3.5rem;
+    z-index: 10;
+    height: 0;
+}
+
+/* Over the content column's padding too, so on phones it spans the screen. A fixed height, as
+   js/base.js adds it to the scroll padding before the bar has any text. */
+.awesome-where__bar {
+    position: absolute;
+    top: 0;
+    left: calc(var(--bs-gutter-x) * -0.5);
+    right: calc(var(--bs-gutter-x) * -0.5);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 2.5rem;
+    padding: 0 calc(var(--bs-gutter-x) * 0.5);
+    border-bottom: 1px solid var(--awesome-list-border);
+    background: color-mix(in srgb, var(--awesome-entry-hover-bg) 92%, transparent);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    font-size: 0.92rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s,
+        color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Over the theme's link colours */
+.awesome-where .awesome-where__bar {
+    color: var(--awesome-entry-title) !important;
+}
+
+.awesome-where--shown .awesome-where__bar {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+}
+
+.awesome-where__bar:focus-visible {
+    outline: 2px solid oklch(0.6 0.12 var(--awesome-section-hue));
+    outline-offset: -2px;
+}
+
+/* How far down the page, in the colour of the sidebar's bar */
+.awesome-where__bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: oklch(0.62 0.15 var(--awesome-section-hue));
+    transform: scaleX(var(--awesome-where-progress, 0));
+    transform-origin: left;
+}
+
+[data-bs-theme="dark"] .awesome-where__bar::after {
+    background: oklch(0.72 0.15 var(--awesome-section-hue));
+}
+
+.awesome-where__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.awesome-where__count {
+    flex: none;
+    font-weight: 400;
+    color: var(--awesome-entry-muted);
+}
+
+.awesome-where__count:not(:empty)::before {
+    content: '\00b7';
+    margin-right: 8px;
+}
+
+/* Phones only, where the bar opens the menu */
+.awesome-where__menu {
+    margin-left: auto;
+    font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+    .awesome-where__menu {
+        display: none;
+    }
+
+    /* Over the sidebar column's padding as well, so it meets the sidebar's border */
+    .awesome-where__bar {
+        left: calc(var(--bs-gutter-x) * -1);
+        padding-left: var(--bs-gutter-x);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .awesome-where__bar {
+        transition: none;
     }
 }

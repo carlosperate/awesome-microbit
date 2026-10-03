@@ -22,5 +22,8 @@
             {{ toc_item(item) }}
         {%- endfor %}
         </ul>
+        {#- The current entry's background and bar, which glide between entries (css/extend.css) #}
+        <span class="toc-current-bg" aria-hidden="true"></span>
+        <span class="toc-current-bar" aria-hidden="true"></span>
     </div>
 </div>
