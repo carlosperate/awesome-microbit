@@ -11,8 +11,10 @@
     --awesome-section-hue: 318deg;
 }
 
-/* content.html numbers each h2 section; the golden angle keeps neighbouring hues apart */
-.awesome-section {
+/* content.html numbers each h2 section, and each Contents tile like its section; the golden angle
+   keeps neighbouring hues apart */
+.awesome-section,
+.awesome-contents__tile {
     --awesome-section-hue: calc(var(--awesome-section) * 137.5deg);
 }
 
@@ -20,8 +22,10 @@
     border-image: linear-gradient(to right, oklch(0.78 0.09 var(--awesome-section-hue)) 0%, transparent 80%) 1;
 }
 
-/* oklch keeps the same contrast whatever the hue */
-.awesome-list {
+/* oklch keeps the same contrast whatever the hue. The tiles take their own hue, so they need the
+   tokens declared on them too. */
+.awesome-list,
+.awesome-contents__tile {
     --awesome-list-border: oklch(0.91 0.035 var(--awesome-section-hue));
     /* Behind logos and favicons, many of them are black, so it stays light in dark mode */
     --awesome-list-tint: oklch(0.965 0.018 var(--awesome-section-hue));
@@ -36,7 +40,8 @@
     --awesome-entry-hover-bg: oklch(0.975 0.012 var(--awesome-section-hue));
 }
 
-[data-bs-theme="dark"] .awesome-list {
+[data-bs-theme="dark"] .awesome-list,
+[data-bs-theme="dark"] .awesome-contents__tile {
     --awesome-list-border: oklch(0.36 0.03 var(--awesome-section-hue));
     --awesome-list-tint: oklch(0.93 0.02 var(--awesome-section-hue));
     --awesome-entry-bg: #1f1b22;
@@ -246,5 +251,88 @@
 @media (hover: hover) {
     .awesome-list--index .awesome-entry:hover {
         background: var(--awesome-entry-hover-bg);
+    }
+}
+
+/*****************************************************************************/
+/* Contents tiles (contents-tiles.html)                                      */
+/*****************************************************************************/
+.awesome-contents {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.awesome-contents__tile {
+    display: grid;
+    grid-template: "emoji name" auto "emoji count" auto / auto 1fr;
+    align-content: center;
+    align-items: center;
+    column-gap: 12px;
+    padding: 10px 14px;
+    border: 1px solid var(--awesome-list-border);
+    border-radius: 12px;
+    background: var(--awesome-entry-hover-bg);
+    text-decoration: none;
+}
+
+/* The colour emoji, as Inter would draw symbols like ©️ in the text colour */
+.awesome-contents__emoji {
+    grid-area: emoji;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 1.45rem;
+    line-height: 1;
+}
+
+.awesome-contents__name {
+    grid-area: name;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--awesome-entry-title);
+}
+
+.awesome-contents__count {
+    grid-area: count;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--awesome-entry-muted);
+}
+
+/* Two columns on phones, with the emoji above the name so the name gets the tile's width */
+@media (max-width: 575.98px) {
+    .awesome-contents {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .awesome-contents__tile {
+        grid-template: "emoji" auto "name" auto "count" auto / 1fr;
+        align-content: start;
+        row-gap: 2px;
+        padding: 10px 12px;
+    }
+
+    .awesome-contents__emoji {
+        margin-bottom: 4px;
+        font-size: 1.25rem;
+    }
+}
+
+.awesome-contents__tile:focus-visible {
+    outline: 2px solid oklch(0.6 0.12 var(--awesome-section-hue));
+    outline-offset: 2px;
+}
+
+@media (hover: hover) {
+    .awesome-contents__tile {
+        transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+    }
+
+    .awesome-contents__tile:hover {
+        border-color: var(--awesome-entry-accent);
+        box-shadow: 0 4px 14px rgba(66, 49, 73, 0.08);
+        transform: translateY(-1px);
     }
 }

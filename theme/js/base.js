@@ -201,22 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        /* Walk up the TOC DOM tree from a link and mark all parent
-           nav-links as active too (e.g. when a h3 is current, its
-           parent h2 entry should also be highlighted). */
-        function activateParents(link) {
-            var li = link.parentElement;          /* li.nav-item */
-            while (li) {
-                var parentUl = li.parentElement;  /* ul.nav */
-                if (!parentUl || parentUl.id === 'toc-collapse') break;
-                var parentLi = parentUl.parentElement; /* li.nav-item (parent level) */
-                if (!parentLi || parentLi === tocEl) break;
-                var parentLink = parentLi.querySelector(':scope > a.nav-link');
-                if (parentLink) parentLink.classList.add('active');
-                li = parentLi;
-            }
-        }
-
         function highlightCurrent() {
             var scrollPos = (window.scrollY || document.documentElement.scrollTop) + OFFSET;
             var activeId = null;
@@ -242,7 +226,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         var hrefId = decodeURIComponent(href.substring(1));
                         if (hrefId === decodedActive) {
                             link.classList.add('active');
-                            activateParents(link);
                         }
                     }
                 });

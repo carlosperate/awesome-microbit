@@ -43,3 +43,14 @@ document.addEventListener('click', function (event) {
     }, {once: true});
     bootstrap.Collapse.getOrCreateInstance(menu).hide();
 });
+
+// Sidebar entries take their section's colour, for the current section's style in extend.css
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('#toc-collapse .nav-link').forEach(function (link) {
+        var heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+        var section = heading && heading.closest('.awesome-section');
+        if (section && section.querySelector('.awesome-list')) {
+            link.style.setProperty('--awesome-section-hue', getComputedStyle(section).getPropertyValue('--awesome-section-hue'));
+        }
+    });
+});

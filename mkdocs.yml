@@ -1,7 +1,7 @@
 site_name: Awesome micro:bit
-site_description: Project documentation with Markdown.
+site_description: "A curated list of resources for the BBC micro:bit: editors, libraries, projects, teaching resources and more."
 site_author: Carlos Pereira Atencio
-site_url: https://awesomemicrobit.embeddeddlog.com
+site_url: https://awesomemicrobit.embeddedlog.com
 repo_url: https://github.com/carlosperate/awesome-microbit
 copyright: "©️ 2026 Awesome micro:bit contributors"
 site_dir: site/
@@ -15,6 +15,8 @@ theme:
   color_mode: light
   locale: en
   next_prev: false
+  # The section that content.html shows as colour tiles instead of its list, by heading anchor
+  contents_tiles: contents
 
 nav:
 #  - ""
@@ -22,6 +24,10 @@ nav:
   - About:
     - Contributing: contributing.md
     - Code of Conduct: code-of-conduct.md
+
+hooks:
+  - hooks/github_anchors.py
+  - hooks/contents_tiles.py
 
 plugins:
   - awesome-list:
@@ -39,4 +45,9 @@ plugins:
         cc-libraries: index
         cc-libraries-hardware-drivers: index
         rust-libraries-examples: index
+        rust-rtos-targeting-microbit: index
+        programming-tools: index
+        projects-using-microbit-as-a-dev-board: index
+        interface-chip: index
+        hardware: index
         community: index

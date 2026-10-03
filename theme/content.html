@@ -8,12 +8,18 @@
 
 {#- Numbers each h2 section of the list pages, so css/awesome-microbit.css can colour each one #}
 {%- if 'class="awesome-list' in page.content %}
-{%- for part in page.content.split('<h2') %}
-{%- if loop.first %}
-{{ part }}
+{%- set parts = page.content.split('<h2') %}
+{%- set tiles_id = config.theme.contents_tiles %}
+{{ parts[0] }}
+{%- for part in parts[1:] %}
+<section class="awesome-section" style="--awesome-section: {{ loop.index }}"><h2
+{%- if tiles_id and part.startswith(' id="' ~ tiles_id ~ '"') %}
+{#- Keeps the heading, the tiles replace the rest of the section #}
+{{- part.split('</h2>')[0] }}</h2>
+{% include "contents-tiles.html" %}
 {%- else %}
-<section class="awesome-section" style="--awesome-section: {{ loop.index0 }}"><h2{{ part }}</section>
-{%- endif %}
+{{- part }}
+{%- endif %}</section>
 {%- endfor %}
 {%- else %}
 {{ page.content }}

@@ -1,0 +1,21 @@
+{#- A tile for each section with entries, named from its heading so the link matches the MkDocs id,
+    and numbered like content.html's sections for the same colour. Needs `parts` and `tiles_id`
+    (content.html) and `toc_sections` (base.html). #}
+<nav class="awesome-contents" aria-labelledby="{{ tiles_id }}">
+{%- for part in parts[1:] %}
+{%- set entry = toc_sections.get(part.split('"', 2)[1]) if part.startswith(' id="') %}
+{%- set count = part.count('class="awesome-entry"') %}
+{%- if entry and count %}
+{%- set words = entry.title.split(' ', 1) %}
+{#- The first word is an emoji if it has no letters or digits, in any script #}
+{%- set emoji = namespace(found=words|length > 1) %}
+{%- for character in words[0] if character.isalnum() %}{% set emoji.found = false %}{% endfor %}
+{%- set has_emoji = emoji.found %}
+    <a class="awesome-contents__tile" href="{{ entry.url }}" style="--awesome-section: {{ loop.index }}">
+        <span class="awesome-contents__emoji" aria-hidden="true">{{ words[0] if has_emoji }}</span>
+        <span class="awesome-contents__name">{{ words[1] if has_emoji else entry.title }}</span>
+        <span class="awesome-contents__count">{{ count }} resource{{ 's' if count != 1 }}</span>
+    </a>
+{%- endif %}
+{%- endfor %}
+</nav>

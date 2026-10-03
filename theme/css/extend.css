@@ -26,6 +26,7 @@
     --awesomemb-link-hover: var(--awesomemb-colour-6);
     --awesomemb-toc-link: var(--awesomemb-colour-5);
     --awesomemb-toc-link-hover: var(--awesomemb-colour-7);
+    --awesomemb-toc-hover-bg: color-mix(in srgb, var(--awesomemb-colour-4) 15%, transparent);
     --awesomemb-footer-text: var(--awesomemb-colour-7);
     --awesomemb-h1-start: var(--awesomemb-colour-7);
 }
@@ -39,14 +40,21 @@
     --awesomemb-link-hover: var(--awesomemb-colour-1);
     --awesomemb-toc-link: #b3a4ba;
     --awesomemb-toc-link-hover: #ece3f0;
+    --awesomemb-toc-hover-bg: color-mix(in srgb, var(--awesomemb-colour-2) 16%, transparent);
     --awesomemb-footer-text: #a59dab;
     --awesomemb-h1-start: #f3e9f7;
     /* Bootstrap's own surfaces (menus, dialogs, inline code) and text, in the same tones */
-    --bs-body-bg: #18141b;
+    --bs-body-bg: var(--awesomemb-content-bg);
     --bs-body-bg-rgb: 24, 20, 27;
     --bs-body-color: #ddd6e0;
     --bs-body-color-rgb: 221, 214, 224;
-    --bs-border-color: #3a2f40;
+    --bs-border-color: var(--awesomemb-rule);
+}
+
+/* Set by js/darkmode.js while it switches theme */
+.theme-switching,
+.theme-switching * {
+    transition: none !important;
 }
 
 /*****************************************************************************/
@@ -109,7 +117,6 @@ h1 {
     margin-top: 32px;
     margin-bottom: 12px;
     text-align: center;
-    border-bottom: none;
 }
 
 h1::after {
@@ -133,10 +140,8 @@ h1, h2, h3 {
 
 /* A new section gets clearly more space than a subsection (h3) */
 h2 {
-    border-bottom: none;
+    border-bottom: 1px solid;
     border-image: linear-gradient(to right, var(--awesomemb-colour-2) 0%, transparent 80%) 1;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
     padding-bottom: 12px;
     margin-top: 64px;
     margin-bottom: 24px;
@@ -193,19 +198,17 @@ ul.navbar-nav {
     line-height: 2.5;
 }
 
-.navbar-brand {
+/* Stays white on hover too, the dark link hover colour is unreadable here */
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus {
     color: #fff !important;
     font-weight: 600;
     letter-spacing: -0.02em;
     transition: text-shadow 0.25s ease;
 }
 
-/* Stays white, the dark link hover colour is unreadable here; the glow matches the menu hover */
-.navbar-brand:hover,
-.navbar-brand:focus {
-    color: #fff !important;
-}
-
+/* The glow matches the menu hover */
 .navbar-brand:hover,
 .navbar-brand:focus-visible {
     text-shadow: 0 0 6px var(--awesomemb-colour-4), 0 0 14px var(--awesomemb-colour-4);
@@ -271,7 +274,9 @@ ul.navbar-nav {
 /*****************************************************************************/
 /* ToC Sidebar                                                               */
 /*****************************************************************************/
+/* At least as tall as the sidebar, for pages with a short table of contents */
 #toc-collapse {
+    min-height: 100%;
     background-color: var(--awesomemb-page-bg) !important;
     border: none;
     border-right: 1px solid var(--awesomemb-rule);
@@ -283,34 +288,50 @@ ul.navbar-nav {
     padding-top: 15px;
 }
 
-/* Tighter lines than the body text, so wrapped items read as one */
+/* Tighter lines than the body text, so wrapped items read as one. No borders in any state, the
+   current section's bar replaces them, so the text never moves. */
 #toc-collapse .nav>li>a {
+    position: relative;
+    margin-right: 10px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
     font-weight: 400;
     line-height: 1.35;
-    padding-top: 8px;
-    padding-bottom: 8px;
     color: var(--awesomemb-toc-link) !important;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-/* A colour change rather than bold, which re-wraps long items */
+/* A background rather than bold, which re-wraps long items */
 #toc-collapse .nav>li>a:hover,
-#toc-collapse .nav>li>a:focus,
-#toc-collapse .nav>li>a:active {
+#toc-collapse .nav>li>a:focus-visible {
+    background-color: var(--awesomemb-toc-hover-bg);
     color: var(--awesomemb-toc-link-hover) !important;
 }
 
-.bs-sidebar .nav>li>a {
-    padding-left: 10px;
-    padding-right: 20px;
+/* The current section in its colour (js/awesome-microbit.js), or the site's purple */
+#toc-collapse .nav>li>a.active {
+    color: oklch(0.45 0.13 var(--awesome-section-hue)) !important;
 }
 
-.bs-sidebar .nav>li>a:hover,
-.bs-sidebar .nav>li>a:focus,
-.bs-sidebar .nav>li>a:active,
-.bs-sidebar .nav>li>a:active:focus {
-    border-right-width: 3px !important;
-    padding-left: 10px;
-    padding-right: 15px;
+/* A bar over the sidebar's border */
+#toc-collapse .nav>li>a.active::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: -11px;
+    width: 4px;
+    border-radius: 4px 0 0 4px;
+    background: oklch(0.62 0.15 var(--awesome-section-hue));
+}
+
+[data-bs-theme="dark"] #toc-collapse .nav>li>a.active {
+    color: oklch(0.87 0.08 var(--awesome-section-hue)) !important;
+}
+
+[data-bs-theme="dark"] #toc-collapse .nav>li>a.active::after {
+    background: oklch(0.72 0.15 var(--awesome-section-hue));
 }
 
 /*****************************************************************************/
@@ -318,19 +339,18 @@ ul.navbar-nav {
 /*****************************************************************************/
 .main-container {
     background-color: var(--awesomemb-content-bg);
-    padding-left: 0;
     margin-top: 0px !important;
+}
+
+/* Beside the sidebar only, phones hide it (base.html) and keep Bootstrap's gutter */
+@media (min-width: 768px) {
+    .main-container {
+        padding-left: 0;
+    }
 }
 
 .main-content {
     padding-bottom: 16px;
-}
-
-/* Phones hide the sidebar (base.html), so the content needs Bootstrap's left gutter back */
-@media (max-width: 767.98px) {
-    .main-container {
-        padding-left: calc(var(--bs-gutter-x) * 0.5);
-    }
 }
 
 .bs-sidebar,
@@ -341,11 +361,6 @@ ul.navbar-nav {
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
-}
-
-/* Fills the sidebar's height on pages with a short table of contents */
-#toc-collapse {
-    min-height: 100%;
 }
 
 .bs-sidebar::-webkit-scrollbar {
