@@ -600,7 +600,7 @@ All these projects contain steps and resources required for reproduction.
 
 - [hackster micro:bit community](https://www.hackster.io/microbit) - This hackster community contains user submitted projects for the micro:bit.
 - [MakeCode Projects](https://makecode.microbit.org/projects/) - List of micro:bit projects you can do with the MakeCode editor.
-- [Tinkercademy Projects](https://tinkercademy.com/microbit) - Collection of projects using the micro:bit and Tinkercademy Tinker Kit.
+- [Tinkercademy Projects](https://tinkercademy.com/microbit/) - Collection of projects using the micro:bit and Tinkercademy Tinker Kit.
 - [Raspberry Pi micro:bit Projects](https://projects.raspberrypi.org/en/projects?hardware%5B%5D=microbit) - Collection of Raspberry Pi and micro:bit projects from the Raspberry Pi Foundation.
 - [Electromaker micro:bit projects](https://www.electromaker.io/projects?platform=microbit) - All the micro:bit projects posted to Electromaker, a platform for makers to showcase their projects.
 - [Saturday Science & BBC micro:bits](https://saturdayscience.org/bbc-microbit/) - Practical science and engineering projects with the micro:bit, explore physical properties with cool experiments.
@@ -659,7 +659,7 @@ Useful Articles for developing on the micro:bit.
 - [BBC micro:bit - Kitronik University](https://kitronik.co.uk/blogs/resources/bbc-microbit-kitronik-university) - A varied collection of micro:bit resources by Kitronik.
 - [DF Robot micro:bit blog section](https://www.dfrobot.com/blog-tag-micro:bit.html) - Blog posts and articles about micro:bit from DF Robot.
 - [ElecFreaks Learn](https://www.elecfreaks.com/learn-en/) - ElecFreaks collection of experiments, tutorials and material for the micro:bit.
-- [Little Bird Guides](https://learn.littlebirdelectronics.com.au/categories/microbit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
+- [Little Bird Guides](https://littlebirdelectronics.com.au/projects?platform=micro-bit) - Detailed tutorials showing how to use a wide range of sensors and accessories with the micro:bit.
 
 
 ## 🎥 Videos
@@ -801,7 +801,7 @@ Useful Articles for developing on the micro:bit.
 - [microbit.org Posters](https://www.microbit.org/teach/classroom-resources/?filters=9891baf2-873c-4c17-9550-798cbd9842e0) - All the posters from microbit.org, showcasing the device, editors, and projects.
 - [micro:bit V1 Element 14 Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/550) - Detailed, beautifully rendered, cross-section micro:bit poster highlighting all of the V1 key functions and components.
 - [micro:bit V2 Element 14 Poster](https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/2028) - Updated micro:bit V2 poster highlighting all of the device key functions, components, and example projects.
-- [Tactile micro:bit poster](https://microbit.org/accessibility/tactile-poster/) - Print this poster on swell paper or edit the tactile graphic to help your students with visual impairments familiarise themselves with the features of the BBC micro:bit.
+- [Tactile micro:bit poster](https://microbit.org/teach/classroom-resources/microbit-tactile-diagram/) - Print this poster on swell paper or edit the tactile graphic to help your students with visual impairments familiarise themselves with the features of the BBC micro:bit.
 
 
 ## 👪 Community
