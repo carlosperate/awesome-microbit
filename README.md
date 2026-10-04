@@ -536,7 +536,6 @@ All these projects contain steps and resources required for reproduction.
 - [Micro:Gamer](https://hackaday.io/project/47760-microgamer) - A portable game console based on the micro:bit board. It features a 128x64 monochrome OLED screen, six buttons, a buzzer for sound, and a 2xAAA battery holder.
 - [µBOSS](https://community.element14.com/challenges-projects/project14/test-instrumentation/b/blog/posts/boss-test-instrumentation-micro-bit) - Turning a BBC micro:bit into a test instrument by displaying all the sensor readings on an LCD and packaging it into a 3D printed box.
 - [DIY 3D Virtual Reality System](https://sites.google.com/site/colinord/Home/3d-virtual-reality-hmd-and-controller-project) - Using two micro:bits for head and hand orientation tracking.
-- [Robot Arm Rover](https://github.com/AMoazeni/Robot-Arm-Rover) - A gesture controlled Robot Arm Buggy using the micro:bit accelerometer and radio.
 - [Musical Instrument Controller](https://phwallen.github.io/microbit-music-controller/) - A micro:bit instrument that communities with an iPad via Bluetooth into MIDI controller app that can play music via GarageBand.
 - [Inexpensive Remote Controlled Robot](https://mryslab.github.io/microbit-robot/) - Guide to create an inexpensive robot, easily assembled from a set of off the shelf parts.
 - [Natural Disaster Sensor](https://core-electronics.com.au/guides/natural-disaster-sensor-project-for-the-microbit-stem/) - Wind, seismic, and temperature data monitoring from remote micro:bits.
@@ -699,7 +698,7 @@ Useful Articles for developing on the micro:bit.
 
 ## 📚 Books
 
-- [micro:bit IoT In C](https://www.iot-programmer.com/index.php/books/micro-bit-iot-in-c) - Using the C langague to gain full access to the micro:bit features and external devices.
+- [micro:bit IoT In C](https://iot-programmer.com/index.php/books/micro-bit-iot-in-c) - Using the C langague to gain full access to the micro:bit features and external devices.
 - [Programming with MicroPython](https://www.oreilly.com/library/view/programming-with-micropython/9781491972724/) - Embedded Programming with Microcontrollers and Python.
 - [Getting Started with the micro:bit](https://www.oreilly.com/library/view/getting-started-with/9781680453010/) - Coding and Making with the BBC's Open Development Board.
 - [The Official BBC micro:bit User Guide](https://www.wiley.com/en-gb/The+Official+BBC+micro%3Abit+User+Guide+-p-9781119386735) - The go-to guide to getting started with the BBC micro:bit and exploring all of its amazing capabilities.
