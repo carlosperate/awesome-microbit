@@ -39,6 +39,8 @@
     --awesome-entry-chip: var(--awesome-list-tint);
     --awesome-entry-chip-hover: oklch(0.92 0.045 var(--awesome-section-hue));
     --awesome-entry-hover-bg: oklch(0.975 0.012 var(--awesome-section-hue));
+    --awesome-entry-sticker: oklch(0.62 0.15 var(--awesome-section-hue));
+    --awesome-entry-sticker-hot: oklch(0.72 0.16 calc(var(--awesome-section-hue) + 20deg));
 }
 
 [data-bs-theme="dark"] .awesome-list,
@@ -54,6 +56,8 @@
     --awesome-entry-chip: oklch(0.3 0.03 var(--awesome-section-hue));
     --awesome-entry-chip-hover: oklch(0.36 0.04 var(--awesome-section-hue));
     --awesome-entry-hover-bg: oklch(0.26 0.02 var(--awesome-section-hue));
+    --awesome-entry-sticker: oklch(0.6 0.12 var(--awesome-section-hue));
+    --awesome-entry-sticker-hot: oklch(0.7 0.13 calc(var(--awesome-section-hue) + 20deg));
 }
 
 /*****************************************************************************/
@@ -155,52 +159,6 @@
     text-decoration: none;
 }
 
-@media (hover: hover) {
-    .awesome-list--media .awesome-entry {
-        isolation: isolate;
-        transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out;
-    }
-
-    .awesome-list--media .awesome-entry:hover {
-        border-color: var(--awesome-entry-accent);
-        box-shadow: 0 4px 14px rgba(66, 49, 73, 0.08);
-        transform: translateY(-1px);
-    }
-
-    .awesome-list--media .awesome-entry__media img {
-        transition: transform 0.5s ease-out;
-    }
-
-    .awesome-list--media .awesome-entry:hover .awesome-entry__media img {
-        transform: scale(1.02);
-    }
-
-    /* The picture's colours bleed out of the thumbnail and towards the pointer; js/awesome-microbit.js
-       sets the image and the pointer position. Only on hover, to keep the blur off other cards. */
-    .awesome-list--media .awesome-entry:hover::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        background: var(--awesome-image, none) center / cover, var(--awesome-entry-accent);
-        filter: blur(40px) saturate(1.4);
-        clip-path: inset(0 round var(--awesome-list-radius));
-        -webkit-mask:
-            linear-gradient(to right, #000 12%, rgba(0, 0, 0, 0.35) 45%, transparent 80%),
-            radial-gradient(ellipse 45% 260% at var(--awesome-x, 50%) var(--awesome-y, 50%), rgba(0, 0, 0, 0.8), transparent);
-        mask:
-            linear-gradient(to right, #000 12%, rgba(0, 0, 0, 0.35) 45%, transparent 80%),
-            radial-gradient(ellipse 45% 260% at var(--awesome-x, 50%) var(--awesome-y, 50%), rgba(0, 0, 0, 0.8), transparent);
-        opacity: 0.45;
-        animation: awesome-glow-in 0.25s ease;
-    }
-}
-
-@keyframes awesome-glow-in {
-    from {
-        opacity: 0;
-    }
-}
 
 /*****************************************************************************/
 /* "index" style                                                             */
@@ -327,15 +285,94 @@
     outline-offset: 2px;
 }
 
+
+/*****************************************************************************/
+/* Hover: a sticker shadow on the cards and Contents tiles                   */
+/*****************************************************************************/
+/* The card nudges up and left over a hard shadow in its section's colour, brighter where the
+   pointer is (js/awesome-microbit.js sets --awesome-x and --awesome-y). The shadow is a layer
+   behind the card, as box-shadow can't take a gradient, and the card moves with top and left, as a
+   transform would put that layer in front of the card's background. Keyboard focus does the same. */
 @media (hover: hover) {
-    .awesome-contents__tile {
-        transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+    /* Keeps the shadow layers above the content's background */
+    .awesome-list--media,
+    .awesome-contents {
+        isolation: isolate;
     }
 
-    .awesome-contents__tile:hover {
-        border-color: var(--awesome-entry-accent);
-        box-shadow: 0 4px 14px rgba(66, 49, 73, 0.08);
-        transform: translateY(-1px);
+    .awesome-list--media .awesome-entry,
+    .awesome-contents__tile {
+        --sticker-lift: 2px;
+        --sticker-offset: 3px;
+        --sticker-reach: 260px;
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: top 0.12s ease-out, left 0.12s ease-out, border-color 0.12s ease-out;
+    }
+
+    .awesome-contents__tile {
+        --sticker-lift: 1px;
+        --sticker-offset: 2px;
+        --sticker-reach: 140px;
+    }
+
+    .awesome-list--media .awesome-entry::before,
+    .awesome-contents__tile::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        z-index: -1;
+        border-radius: inherit;
+        background: radial-gradient(circle var(--sticker-reach)
+            at calc(var(--awesome-x, 50%) - var(--sticker-offset)) calc(var(--awesome-y, 50%) - var(--sticker-offset)),
+            var(--awesome-entry-sticker-hot), var(--awesome-entry-sticker));
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.12s ease-out, opacity 0.12s ease-out;
+    }
+
+    .awesome-list--media .awesome-entry:hover,
+    .awesome-list--media .awesome-entry:has(.awesome-entry__title:focus-visible),
+    .awesome-contents__tile:hover,
+    .awesome-contents__tile:focus-visible {
+        top: calc(var(--sticker-lift) * -1);
+        left: calc(var(--sticker-lift) * -1);
+        border-color: var(--awesome-entry-sticker);
+    }
+
+    .awesome-list--media .awesome-entry:hover::before,
+    .awesome-list--media .awesome-entry:has(.awesome-entry__title:focus-visible)::before,
+    .awesome-contents__tile:hover::before,
+    .awesome-contents__tile:focus-visible::before {
+        opacity: 1;
+        transform: translate(var(--sticker-offset), var(--sticker-offset));
+    }
+
+    /* Pressed down on click */
+    .awesome-list--media .awesome-entry:active,
+    .awesome-contents__tile:active {
+        top: 0;
+        left: 0;
+    }
+
+    .awesome-list--media .awesome-entry:active::before,
+    .awesome-contents__tile:active::before {
+        transform: translate(1px, 1px);
+    }
+
+    /* The focus outline clears the shadow */
+    .awesome-contents__tile:focus-visible {
+        outline-offset: 4px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .awesome-list--media .awesome-entry,
+    .awesome-list--media .awesome-entry::before,
+    .awesome-contents__tile,
+    .awesome-contents__tile::before {
+        transition: none;
     }
 }
 

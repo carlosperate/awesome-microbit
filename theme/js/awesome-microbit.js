@@ -6,8 +6,8 @@ function awesomeEntryOf(img) {
         ? media.parentElement : null;
 }
 
-// The picture is the frame's blurred backdrop and the card's hover glow. Set once loaded, as a
-// CSS background would make the browser download every lazy-loaded image up front.
+// The picture is also the frame's blurred backdrop. Set once loaded, as a CSS background would
+// make the browser download every lazy-loaded image up front.
 document.addEventListener('load', function (event) {
     var img = event.target, entry = awesomeEntryOf(img);
     if (!entry || entry.dataset.image !== 'picture') return;
@@ -21,9 +21,9 @@ document.addEventListener('error', function (event) {
     if (entry) entry.dataset.image = 'none';
 }, true);
 
-// Moves the hover glow with the pointer
+// Moves the bright part of the hover shadow with the pointer, on cards and Contents tiles
 document.addEventListener('pointermove', function (event) {
-    var entry = event.target.closest && event.target.closest('.awesome-list--media .awesome-entry');
+    var entry = event.target.closest && event.target.closest('.awesome-list--media .awesome-entry, .awesome-contents__tile');
     if (!entry) return;
     var rect = entry.getBoundingClientRect();
     entry.style.setProperty('--awesome-x', (event.clientX - rect.left) + 'px');
