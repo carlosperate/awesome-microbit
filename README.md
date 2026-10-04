@@ -827,6 +827,7 @@ Do you know about any free online event with micro:bits? Please add them here, P
 
 - [Micro:bit Foundation Events](https://microbit.org/teach/events/) - Micro:bit Educational Foundation list of events, webminars and code-alongs.
 - [micro:bit Live Global 2026](https://microbit.org/microbit-live-global-2026/) - Explore innovative approaches and powerful collaborations to unlock creative insights into computer science education in this Barcelona event on 27 & 28 of February 2026.
+- [micro:bit LIVE USA South 2026](https://weteachcs.org/catalogue/microbit-live/) - Conference for educators on teaching computer science through physical computing, with keynotes, workshops and hands-on sessions, in Austin, Texas on 7 & 8 of December 2026.
 
 
 ## 🤷 Miscellaneous
