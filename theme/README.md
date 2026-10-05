@@ -9,9 +9,9 @@ from 20th October 2025.
 - **`css/extend.css`**: Added a sticky Table of Contents sidebar with internal scrolling, hidden scrollbar until hover, and active state highlights for the active scrollspy element (`.nav-link.active`).
 - **`js/base.js`**: Replaced Bootstrap's native ScrollSpy with a custom implementation to properly track layout hashes matching emojis inside IDs (since MkDocs encodes emojis in anchors).
 - **`base.html`**: Updated the repo link in the navbar to show only the icon (GitHub, GitLab, or Bitbucket) without text.
-- **`css/awesome-microbit.css`**: Awesome micro:bit colours and details for the awesome-list plugin cards, on top of the plugin's default layout, for light and dark mode. Each section of a list page gets its own hue, and index lists use two columns where there is room.
+- **`css/awesome-microbit.css`**: Awesome micro:bit colours and details for the awesome_list hook's cards, on top of the hook's default layout, for light and dark mode. Each section of a list page gets its own hue, and index lists use two columns where there is room.
 - **`js/awesome-microbit.js`**: Sets each card picture as its own blurred backdrop once it loads, gives the cards and Contents tiles the pointer's position for their hover shadow, and switches a card to its favicon when its image fails to load in the browser.
-- **`base.html`**: Loads `css/awesome-microbit.css` and `js/awesome-microbit.js` in the `<head>`, after `extra_css` so the CSS overrides the plugin's default card styles.
+- **`base.html`**: Loads `css/awesome-microbit.css` and `js/awesome-microbit.js` in the `<head>`, after `extra_css` so the CSS overrides the hook's default card styles.
 - **`content.html`**: On pages with awesome lists, wraps each `h2` section in a `<section class="awesome-section">` with its number in `--awesome-section`, used for the section colours.
 - **`css/extend.css`**: Restored Bootstrap's left gutter on the main container below 768px, where the sidebar is hidden, so the content no longer touches the left edge on phones.
 - **`base.html`**: Below 768px the sidebar is hidden and its table of contents is at the end of the navbar menu instead. The navbar has no "Home" entry, as the site name links there, and the repository icon gets a label in the collapsed menu, like the theme toggle.

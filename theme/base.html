@@ -45,7 +45,7 @@
         {%- for path in config.extra_css %}
         <link href="{{ path|url }}" rel="stylesheet">
         {%- endfor %}
-        {#- After extra_css, so it overrides the awesome-list plugin's default card styles #}
+        {#- After extra_css, so it overrides the awesome_list hook's default card styles #}
         <link href="{{ 'css/awesome-microbit.css'|url }}" rel="stylesheet">
         <script src="{{ 'js/awesome-microbit.js'|url }}"></script>
       {%- endblock %}
