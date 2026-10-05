@@ -15,7 +15,8 @@ This embedded board has a Bluetooth microcontroller, USB interface, acceleromete
 - [![Bluesky Follow](https://img.shields.io/badge/(Bluesky)-@awesomemicrobit-8A2BE2?style=social&logo=bluesky)](https://bsky.app/profile/awesomemicrobit.bsky.social) Follow [@awesomemicrobit.bsky.social](https://bsky.app/profile/awesomemicrobit.bsky.social) on Bluesky. 📣
 
 
-Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome).
+Inspired by the [Awesome lists](https://github.com/sindresorhus/awesome),
+specialised collections of resources around a theme and organised by categories.
 
 Contributions are welcome! Not sure how to submit a contribution? Have a look at our [guide](contributing.md#adding-something-to-an-awesome-list).
 

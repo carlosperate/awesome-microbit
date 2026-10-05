@@ -22,7 +22,16 @@ Entries are top-level list items that start with a web link, usually written as
 card of their own.
 
 During the build the hook fetches each entry's OpenGraph image and the site's favicon, then
-adds classes and that data to the list Markdown renders.
+adds classes and that data to the list Markdown renders. Requests are retried on connection
+errors, rate limits and server errors, and repeated with the hook's own user agent when a site
+blocks Python's default one.
+
+The site serves its own copy of each image, shrunk to fit 600x315 (three times the card's frame) and
+saved as WebP, so huge originals and links that break later don't affect it. SVGs, and formats
+Pillow can't read, still link the original.
+
+`assets/awesome-list/thumbnails/` on the built site shows every card image on one page, to check
+them by eye. Nothing links to it, and it asks search engines not to index it.
 
 ### Options
 
@@ -78,6 +87,6 @@ Any other style name only adds its class, for the theme to style.
   one click target; other links in it stay clickable above it.
 - `awesome-entry__subs` holds the indented sub-entries, if any.
 
-The stylesheet and favicons are written to `site/assets/awesome-list/`. The stylesheet comes
+The stylesheet, favicons and thumbnails are written to `site/assets/awesome-list/`. The stylesheet comes
 first in `extra_css`, and `theme/base.html` loads `css/awesome-microbit.css` after it, to override
 its CSS custom properties or any rule.

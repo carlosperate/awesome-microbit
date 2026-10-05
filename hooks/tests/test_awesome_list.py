@@ -13,11 +13,14 @@ from PIL import Image
 from awesome_list import (
     AwesomeList,
     AwesomeListExtension,
+    USER_AGENTS,
     Preview,
     _domain_label,
+    _fetch_image,
     _fetch_preview,
+    _get,
+    _image_filename,
     _image_kind,
-    _probe_image,
     _resolve_image_url,
 )
 
@@ -26,6 +29,12 @@ def _png_bytes(width, height):
     buffer = io.BytesIO()
     Image.new("RGB", (width, height)).save(buffer, "PNG")
     return buffer.getvalue()
+
+
+def _webp_size(data):
+    with Image.open(io.BytesIO(data)) as img:
+        assert img.format == "WEBP"
+        return img.size
 
 
 def _image_response(status=200, content_type="image/png", body=b""):
@@ -94,84 +103,117 @@ class TestImageKind:
         assert _image_kind(*size) == kind
 
 
-@patch("awesome_list.requests.get")
-class TestProbeImage:
+@patch("awesome_list.SESSION.get")
+class TestGet:
 
-    def test_wide_image_is_picture(self, mock_get):
-        mock_get.return_value = _image_response(body=_png_bytes(1200, 630))
-        assert _probe_image("https://example.com/og.png") == "picture"
+    def test_next_user_agent_while_blocked(self, mock_get):
+        mock_get.side_effect = [MagicMock(status_code=403), MagicMock(status_code=200)]
+        assert _get("https://example.com").status_code == 200
+        agents = [c.kwargs["headers"]["User-Agent"] for c in mock_get.call_args_list]
+        assert agents == list(USER_AGENTS)
 
-    def test_small_image_is_logo(self, mock_get):
+    def test_other_errors_keep_the_user_agent(self, mock_get):
+        mock_get.return_value = MagicMock(status_code=404)
+        assert _get("https://example.com").status_code == 404
+        assert mock_get.call_count == 1
+
+
+@patch("awesome_list.SESSION.get")
+class TestFetchImage:
+
+    @pytest.mark.parametrize(
+        "size, shrunk",
+        [((1200, 630), (600, 315)), ((600, 1200), (157, 315)), ((4000, 1000), (600, 150))],
+    )
+    def test_picture_shrunk_keeping_its_ratio(self, mock_get, size, shrunk):
+        mock_get.return_value = _image_response(body=_png_bytes(*size))
+        preview = _fetch_image("https://example.com/og.png")
+        assert preview == Preview("https://example.com/og.png", "picture")
+        assert _webp_size(preview.data) == shrunk
+
+    def test_logo_keeps_its_size(self, mock_get):
         mock_get.return_value = _image_response(body=_png_bytes(180, 180))
-        assert _probe_image("https://example.com/icon.png") == "logo"
+        preview = _fetch_image("https://example.com/icon.png")
+        assert preview == Preview("https://example.com/icon.png", "logo")
+        assert _webp_size(preview.data) == (180, 180)
 
-    def test_svg_is_logo(self, mock_get):
+    def test_photo_rotated_by_its_exif_orientation(self, mock_get):
+        exif = Image.Exif()
+        exif[0x0112] = 6  # Orientation: rotate 90°
+        buffer = io.BytesIO()
+        Image.new("RGB", (300, 600)).save(buffer, "JPEG", exif=exif)
+        mock_get.return_value = _image_response(content_type="image/jpeg", body=buffer.getvalue())
+        assert _webp_size(_fetch_image("https://example.com/photo.jpg").data) == (600, 300)
+
+    def test_svg_is_linked(self, mock_get):
         body = b'\n<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg"></svg>'
         mock_get.return_value = _image_response(content_type="image/svg+xml", body=body)
-        assert _probe_image("https://example.com/logo.svg") == "logo"
+        preview = _fetch_image("https://example.com/logo.svg")
+        assert preview == Preview("https://example.com/logo.svg", "logo")
+        assert preview.data is None
 
     def test_broken_svg(self, mock_get):
         body = b'?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg"></svg>'
         mock_get.return_value = _image_response(content_type="image/svg+xml", body=body)
-        assert _probe_image("https://example.com/logo.svg") is None
+        assert _fetch_image("https://example.com/logo.svg") == Preview()
+
+    def test_unreadable_image_format_is_linked(self, mock_get):
+        mock_get.return_value = _image_response(content_type="image/jxl", body=b"...")
+        preview = _fetch_image("https://example.com/img.jxl")
+        assert preview == Preview("https://example.com/img.jxl", "picture")
+        assert preview.data is None
 
     def test_http_error(self, mock_get):
         mock_get.return_value = _image_response(status=404)
-        assert _probe_image("https://example.com/missing.png") is None
-
-    @patch("awesome_list.time.sleep")
-    def test_rate_limited_then_ok(self, _mock_sleep, mock_get):
-        mock_get.side_effect = [
-            _image_response(status=429),
-            _image_response(body=_png_bytes(1200, 630)),
-        ]
-        assert _probe_image("https://example.com/og.png") == "picture"
+        assert _fetch_image("https://example.com/missing.png") == Preview()
 
     def test_network_error(self, mock_get):
         mock_get.side_effect = requests.ConnectionError("refused")
-        assert _probe_image("https://example.com/img.png") is None
-
-    def test_unreadable_image_format(self, mock_get):
-        mock_get.return_value = _image_response(content_type="image/avif", body=b"...")
-        assert _probe_image("https://example.com/img.avif") == "picture"
+        assert _fetch_image("https://example.com/img.png") == Preview()
 
     def test_empty_image(self, mock_get):
         mock_get.return_value = _image_response(body=b"")
-        assert _probe_image("https://example.com/og.png") is None
+        assert _fetch_image("https://example.com/og.png") == Preview()
+
+    @patch("awesome_list.IMAGE_MAX_BYTES", 10)
+    def test_image_too_big(self, mock_get):
+        mock_get.return_value = _image_response(body=_png_bytes(1200, 630))
+        assert _fetch_image("https://example.com/og.png") == Preview()
 
     def test_not_an_image(self, mock_get):
         mock_get.return_value = _image_response(content_type="text/html", body=b"<html>")
-        assert _probe_image("https://example.com/page") is None
+        assert _fetch_image("https://example.com/page") == Preview()
 
 
-@patch("awesome_list._probe_image")
+@patch("awesome_list._fetch_image")
 @patch("awesome_list.web_preview")
+@patch("awesome_list.SESSION.get")
 class TestFetchPreview:
 
-    def test_image_found(self, mock_preview, mock_probe):
+    def test_image_found(self, mock_get, mock_preview, mock_image):
         mock_preview.return_value = ("Title", "Desc", "/og.png")
-        mock_probe.return_value = "picture"
-        result = _fetch_preview("https://example.com/page")
-        assert result == Preview("https://example.com/og.png", "picture")
+        mock_image.return_value = Preview("https://example.com/og.png", "picture")
 
-    def test_no_image(self, mock_preview, mock_probe):
+        assert _fetch_preview("https://example.com/page") == mock_image.return_value
+        mock_preview.assert_called_once_with(
+            "https://example.com/page", content=mock_get.return_value.text
+        )
+        mock_image.assert_called_once_with("https://example.com/og.png")
+
+    def test_no_image(self, mock_get, mock_preview, mock_image):
         mock_preview.return_value = ("Title", "Desc", None)
         assert _fetch_preview("https://example.com") == Preview()
-        mock_probe.assert_not_called()
+        mock_image.assert_not_called()
 
-    def test_broken_image(self, mock_preview, mock_probe):
-        mock_preview.return_value = ("Title", "Desc", "https://example.com/og.png")
-        mock_probe.return_value = None
-        assert _fetch_preview("https://example.com") == Preview()
-
-    def test_malformed_image_url(self, mock_preview, mock_probe):
+    def test_malformed_image_url(self, mock_get, mock_preview, mock_image):
         mock_preview.return_value = ("Title", "Desc", "http://[broken")
         assert _fetch_preview("https://example.com") == Preview()
-        mock_probe.assert_not_called()
+        mock_image.assert_not_called()
 
-    def test_page_error(self, mock_preview, mock_probe):
-        mock_preview.side_effect = Exception("timeout")
+    def test_page_error(self, mock_get, mock_preview, mock_image):
+        mock_get.return_value.raise_for_status.side_effect = requests.HTTPError("404")
         assert _fetch_preview("https://example.com") == Preview()
+        mock_preview.assert_not_called()
 
 
 class TestDomainLabel:
@@ -208,6 +250,15 @@ class TestRenderedEntries:
         assert '<a class="awesome-entry__title" href="https://example.com">Example</a>' in html
         assert '<span class="awesome-entry__domain">example.com</span>' in html
         assert '<span class="awesome-entry__desc">An example site.</span>' in html
+
+    def test_shrunk_picture_served_by_the_site(self):
+        plugin = _make_plugin()
+        image_url = "https://example.com/og.png"
+        plugin.previews["https://example.com"] = Preview(image_url, "picture", b"webp")
+        plugin.page_url = "about/"
+        html = _render(plugin, "- [Example](https://example.com) - An example site.")
+
+        assert f'src="../assets/awesome-list/thumbnails/{_image_filename(image_url)}"' in html
 
     def test_entry_without_image(self):
         plugin = _make_plugin()
@@ -429,9 +480,40 @@ def test_on_config_rejects_invalid_options():
 def test_on_post_build_writes_assets(tmp_path):
     plugin = _make_plugin()
     plugin.favicons = {"example.com": b"png", "no-icon.com": None}
+    plugin.previews = {
+        "https://a.example.com": Preview("https://a.example.com/og.png", "picture", b"webp"),
+        "https://b.example.com": Preview("https://b.example.com/logo.svg", "logo"),
+    }
     plugin.on_post_build(SimpleNamespace(site_dir=str(tmp_path)))
 
     assets = tmp_path / "assets" / "awesome-list"
     assert (assets / "awesome-list.css").is_file()
     assert (assets / "favicons" / "example.com.png").read_bytes() == b"png"
     assert not (assets / "favicons" / "no-icon.com.png").exists()
+    thumbnail = _image_filename("https://a.example.com/og.png")
+    assert (assets / "thumbnails" / thumbnail).read_bytes() == b"webp"
+    files = sorted(p.name for p in (assets / "thumbnails").iterdir())
+    assert files == sorted([thumbnail, "index.html"])
+
+
+def test_thumbnails_page_lists_card_images_in_list_order(tmp_path):
+    plugin = _make_plugin()
+    plugin.names = {
+        "https://b.example.com": "Logo",
+        "https://a.example.com": "A & B",
+        "https://c.example.com": "No image",
+    }
+    plugin.previews = {
+        "https://a.example.com": Preview("https://a.example.com/og.png", "picture", b"webp"),
+        "https://b.example.com": Preview("https://b.example.com/logo.svg", "logo"),
+        "https://c.example.com": Preview(),
+    }
+    plugin.on_post_build(SimpleNamespace(site_dir=str(tmp_path)))
+    page = (tmp_path / "assets" / "awesome-list" / "thumbnails" / "index.html").read_text()
+
+    assert '<meta name="robots" content="noindex, nofollow' in page
+    assert page.index('src="https://b.example.com/logo.svg"') < page.index(
+        f'src="{_image_filename("https://a.example.com/og.png")}"'
+    )
+    assert ">A &amp; B</a>" in page
+    assert "No image" not in page

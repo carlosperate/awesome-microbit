@@ -7,7 +7,7 @@ dependencies = []
 
 # Groups, as pip can install them without building the site as a package
 [dependency-groups]
-site = ["mkdocs>=1.6", "Pillow", "requests", "webpreview>=1.6.0"]
+site = ["mkdocs>=1.6", "Pillow>=10.1", "requests", "webpreview>=1.6.0"]
 dev = [{include-group = "site"}, "pytest"]
 
 [tool.pytest.ini_options]

@@ -3,16 +3,17 @@ Turns each awesome-list entry into a card with the linked page's preview image a
 The options and the markup the theme styles are in hooks/README.md.
 """
 
+import hashlib
+import html
 import io
 import logging
 import os
 import re
 import shutil
 import sys
-import time
 import xml.etree.ElementTree as etree
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional
 from urllib.parse import urljoin, urlparse
 
@@ -23,7 +24,8 @@ from mkdocs.config import config_options
 from mkdocs.config.base import LegacyConfig
 from mkdocs.exceptions import ConfigurationError
 from mkdocs.utils import get_relative_url
-from PIL import Image
+from PIL import Image, ImageOps
+from requests.adapters import HTTPAdapter, Retry
 from webpreview import web_preview
 
 log = logging.getLogger("mkdocs.hooks.awesome_list")
@@ -37,12 +39,86 @@ CONFIG_SCHEME = (
 # A top-level item starting with a web link; image links (badges) and in-page links aren't entries
 ENTRY_RE = re.compile(r"^- \[(?!!)(.*?)\]\(\s*(https?://[^)\s]+)\s*\)", re.MULTILINE)
 ASSETS_DIR = "assets/awesome-list"
+THUMBNAILS_DIR = f"{ASSETS_DIR}/thumbnails"
 CSS_FILE = "awesome-list.css"
 FAVICON_URL = "https://www.google.com/s2/favicons?domain={host}&sz=64"
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; mkdocs-awesomelist)"}
-# Enough for Pillow to read the dimensions; images with bigger headers aren't logos anyway
-IMAGE_PROBE_BYTES = 64 * 1024
+# Tried in turn while a site answers as if it blocks the client. Python's default goes first, as
+# some sites (YouTube, Springer) serve the other a page without the preview tags.
+USER_AGENTS = (
+    requests.utils.default_user_agent(),
+    "Mozilla/5.0 (compatible; mkdocs-awesomelist)",
+)
+# 999 is LinkedIn's answer to bots
+BLOCKED_STATUSES = (403, 405, 406, 999)
+# Three times the media frame in awesome-list.css (200px wide, 1.91:1): 3x screens, or 2x zoomed in
+IMAGE_MAX_SIZE = (600, 315)
+# The biggest preview in the list was 14MB
+IMAGE_MAX_BYTES = 25 * 1024 * 1024
 CODE_HOSTS = ("github.com", "gitlab.com")
+
+# Every card image, smaller than on the cards, to check them by eye; nothing on the site links to it
+THUMBNAILS_PAGE = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<title>Card images</title>
+<style>
+body {{ margin: 16px; font: 13px/1.4 system-ui, sans-serif; color: #222; background: #fff; }}
+ol {{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}}
+img {{ display: block; width: 100%; aspect-ratio: 1.91; object-fit: contain; background: #eee; }}
+a {{ color: inherit; overflow-wrap: anywhere; }}
+</style>
+</head>
+<body>
+<h1>{count} card images</h1>
+<ol>
+{items}
+</ol>
+</body>
+</html>
+"""
+THUMBNAIL_ITEM = (
+    '<li><a href="{src}"><img src="{src}" alt="" loading="lazy"></a><a href="{url}">{name}</a></li>'
+)
+
+
+def _session():
+    # Retries after 0s, 2s and 4s; slow sites stay slow, so a timed out read only once
+    retry = Retry(
+        total=3,
+        read=1,
+        backoff_factor=1,
+        status_forcelist=(429, 500, 502, 503, 504),
+        # A long Retry-After would hold up the build
+        respect_retry_after_header=False,
+        raise_on_status=False,
+    )
+    session = requests.Session()
+    session.mount("http://", HTTPAdapter(max_retries=retry))
+    session.mount("https://", HTTPAdapter(max_retries=retry))
+    return session
+
+
+SESSION = _session()
+
+
+def _get(url, **kwargs):
+    """GET the URL, switching user agent while the site blocks it."""
+    for user_agent in USER_AGENTS[:-1]:
+        resp = SESSION.get(url, timeout=10, headers={"User-Agent": user_agent}, **kwargs)
+        if resp.status_code not in BLOCKED_STATUSES:
+            return resp
+        resp.close()
+    return SESSION.get(url, timeout=10, headers={"User-Agent": USER_AGENTS[-1]}, **kwargs)
 
 
 @dataclass
@@ -50,6 +126,8 @@ class Preview:
     image: Optional[str] = None
     # "picture", "logo" or "none"; tells the theme how to frame the image
     image_kind: str = "none"
+    # The shrunk WebP copy the site serves; without one the page links the original
+    data: Optional[bytes] = field(default=None, repr=False, compare=False)
 
 
 def _resolve_image_url(image, page_url):
@@ -66,62 +144,82 @@ def _image_kind(width, height):
     return "logo" if max(width, height) <= 200 else "picture"
 
 
-def _get_image(image_url):
-    """Stream an image, backing off when rate limited (GitHub's OG images often are)."""
-    for delay in (1, 2, 4):
-        resp = requests.get(image_url, timeout=10, stream=True, headers=HEADERS)
-        if resp.status_code != 429:
-            return resp
-        resp.close()
-        time.sleep(delay)
-    return requests.get(image_url, timeout=10, stream=True, headers=HEADERS)
+def _image_filename(image_url):
+    return hashlib.sha1(image_url.encode()).hexdigest()[:16] + ".webp"
 
 
-def _probe_image(image_url):
-    """Return the image kind, or None if it can't be loaded."""
+def _download_image(image_url):
+    """Return the image's bytes and content type, or None if it can't be loaded."""
     try:
-        with _get_image(image_url) as resp:
+        with _get(image_url, stream=True) as resp:
             if resp.status_code >= 400:
                 print(f"\n  WARNING: Image returned {resp.status_code}: {image_url}")
                 return None
             content_type = resp.headers.get("Content-Type", "")
-            data = resp.raw.read(IMAGE_PROBE_BYTES, decode_content=True)
+            data = resp.raw.read(IMAGE_MAX_BYTES + 1, decode_content=True)
     except Exception as e:
         print(f"\n  WARNING: Could not reach image: {image_url} ({e})")
         return None
     if not data:
         print(f"\n  WARNING: Empty image: {image_url}")
         return None
+    if len(data) > IMAGE_MAX_BYTES:
+        print(f"\n  WARNING: Image over {IMAGE_MAX_BYTES // 2**20}MB: {image_url}")
+        return None
+    return data, content_type
+
+
+def _shrink_image(data):
+    """Return the image's size, and the image as WebP shrunk to fit IMAGE_MAX_SIZE."""
+    with Image.open(io.BytesIO(data)) as img:
+        # Browsers rotate photos by their EXIF orientation, which a re-encoded copy loses
+        img = ImageOps.exif_transpose(img)
+    size = img.size
+    img = img.convert("RGBA" if img.has_transparency_data else "RGB")
+    img.thumbnail(IMAGE_MAX_SIZE)
+    out = io.BytesIO()
+    # Logos are already small enough, so they keep every pixel
+    img.save(out, "WEBP", quality=80, lossless=_image_kind(*size) == "logo")
+    return size, out.getvalue()
+
+
+def _fetch_image(image_url):
+    """Download an image and work out how to frame it."""
+    downloaded = _download_image(image_url)
+    if not downloaded:
+        return Preview()
+    data, content_type = downloaded
     if "svg" in content_type:
         # Browsers won't render a broken SVG, and some sites serve one
         if not data.lstrip(b"\xef\xbb\xbf \t\r\n").startswith(b"<"):
             print(f"\n  WARNING: Invalid SVG image: {image_url}")
-            return None
-        return "logo"
+            return Preview()
+        return Preview(image_url, "logo")
     try:
-        with Image.open(io.BytesIO(data)) as img:
-            return _image_kind(*img.size)
+        size, webp = _shrink_image(data)
     except Exception:
-        # Pillow can't read every format a browser can (e.g. AVIF)
-        return "picture" if content_type.startswith("image/") else None
+        # Pillow can't read every format a browser can
+        return Preview(image_url, "picture") if content_type.startswith("image/") else Preview()
+    return Preview(image_url, _image_kind(*size), webp)
 
 
 def _fetch_preview(url):
     """Fetch the OpenGraph image of a page and work out how to frame it."""
     try:
-        _title, _description, image = web_preview(url, timeout=10)
+        resp = _get(url)
+        resp.raise_for_status()
+        _title, _description, image = web_preview(url, content=resp.text)
         image = _resolve_image_url(image, url)
     except Exception as e:
         print(f"\n[AwesomeList] Error fetching preview for {url}: {e}")
         return Preview()
-    kind = _probe_image(image) if image else None
-    return Preview(image, kind) if kind else Preview()
+    return _fetch_image(image) if image else Preview()
 
 
 def _fetch_favicon(host):
     """Return the site's favicon as PNG bytes, or None."""
     try:
-        resp = requests.get(FAVICON_URL.format(host=host), timeout=10, headers=HEADERS)
+        resp = _get(FAVICON_URL.format(host=host))
     except Exception:
         return None
     # The service answers 404 with a generic globe when a site has no favicon
@@ -273,7 +371,11 @@ class _EntryTreeprocessor(Treeprocessor):
             "a",
             {"class": "awesome-entry__media", "href": url, "tabindex": "-1", "aria-hidden": "true"},
         )
-        etree.SubElement(media, "img", {"src": preview.image, "alt": "", "loading": "lazy"})
+        src = preview.image
+        if preview.data is not None:
+            path = f"{THUMBNAILS_DIR}/{_image_filename(preview.image)}"
+            src = get_relative_url(path, self.plugin.page_url)
+        etree.SubElement(media, "img", {"src": src, "alt": "", "loading": "lazy"})
         return media
 
     def _favicon_src(self, url):
@@ -322,6 +424,8 @@ class AwesomeList:
         self.config = {}
         self.previews = {}
         self.favicons = {}
+        # Entry names by URL, in list order, for the thumbnails page
+        self.names = {}
         self.page_url = ""
 
     def on_config(self, config):
@@ -343,7 +447,9 @@ class AwesomeList:
 
     def on_page_markdown(self, markdown, page=None, **kwargs):
         self.page_url = page.url if page else ""
-        urls = {m.group(2) for m in ENTRY_RE.finditer(markdown)}.difference(self.previews)
+        for m in ENTRY_RE.finditer(markdown):
+            self.names.setdefault(m.group(2), m.group(1))
+        urls = set(self.names).difference(self.previews)
         hosts = {_host(url) for url in urls}.difference(self.favicons)
         if not urls:
             return markdown
@@ -374,6 +480,28 @@ class AwesomeList:
             if data:
                 with open(os.path.join(favicons_dir, _favicon_filename(host)), "wb") as f:
                     f.write(data)
+        thumbnails_dir = os.path.join(config.site_dir, *THUMBNAILS_DIR.split("/"))
+        os.makedirs(thumbnails_dir, exist_ok=True)
+        for preview in self.previews.values():
+            if preview.data is not None:
+                with open(os.path.join(thumbnails_dir, _image_filename(preview.image)), "wb") as f:
+                    f.write(preview.data)
+        with open(os.path.join(thumbnails_dir, "index.html"), "w", encoding="utf-8") as f:
+            f.write(self._thumbnails_page())
+
+    def _thumbnails_page(self):
+        items = []
+        for url, name in self.names.items():
+            preview = self.previews.get(url)
+            if not preview or not preview.image:
+                continue
+            src = preview.image if preview.data is None else _image_filename(preview.image)
+            items.append(
+                THUMBNAIL_ITEM.format(
+                    src=html.escape(src), url=html.escape(url), name=html.escape(name)
+                )
+            )
+        return THUMBNAILS_PAGE.format(count=len(items), items="\n".join(items))
 
 
 # MkDocs calls a hook's module functions, so they share one instance

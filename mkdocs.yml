@@ -15,6 +15,7 @@ theme:
   color_mode: light
   locale: en
   next_prev: false
+  highlightjs: false
   # The section that content.html shows as colour tiles instead of its list, by heading anchor
   contents_tiles: contents
 
