@@ -34,14 +34,14 @@ CONFIG_SCHEME = (
     ("debug-log", config_options.Type(bool, default=False)),
     ("default-style", config_options.Type(str, default="media")),
     ("section-styles", config_options.Type(dict, default={})),
-    ("images", config_options.Type(dict, default={})),
+    ("images", config_options.DictOfItems(config_options.File(exists=True), default={})),
 )
 
 # A top-level item starting with a web link; image links (badges) and in-page links aren't entries
 ENTRY_RE = re.compile(r"^- \[(?!!)(.*?)\]\(\s*(https?://[^)\s]+)\s*\)", re.MULTILINE)
 ASSETS_DIR = "assets/awesome-list"
 THUMBNAILS_DIR = f"{ASSETS_DIR}/thumbnails"
-IMAGES_DIR = f"{ASSETS_DIR}/books"
+IMAGES_DIR = f"{ASSETS_DIR}/images"
 CSS_FILE = "awesome-list.css"
 FAVICON_URL = "https://www.google.com/s2/favicons?domain={host}&sz=64"
 # Tried in turn while a site answers as if it blocks the client. Python's default goes first, as
@@ -128,8 +128,10 @@ class Preview:
     image: Optional[str] = None
     # "picture", "logo" or "none"; tells the theme how to frame the image
     image_kind: str = "none"
-    # The shrunk WebP copy the site serves; without one the page links the original
+    # The copy the site serves; without one the page links the original
     data: Optional[bytes] = field(default=None, repr=False, compare=False)
+    # Where the site serves `data`, from the site's root
+    path: Optional[str] = field(default=None, compare=False)
     # Width and height, for the images from the `images` option
     size: Optional[tuple] = field(default=None, compare=False)
 
@@ -146,6 +148,11 @@ def _resolve_image_url(image, page_url):
 def _image_kind(width, height):
     """Small images are logos, shown at their own size; anything else is a picture."""
     return "logo" if max(width, height) <= 200 else "picture"
+
+
+def _image_src(preview, page_url):
+    """The site's copy of the image, relative to the page, or else the original."""
+    return get_relative_url(preview.path, page_url) if preview.path else preview.image
 
 
 def _image_filename(image_url):
@@ -177,13 +184,16 @@ def _shrink_image(data):
     """Return the image's size, and the image as WebP shrunk to fit IMAGE_MAX_SIZE."""
     with Image.open(io.BytesIO(data)) as img:
         # Browsers rotate photos by their EXIF orientation, which a re-encoded copy loses
-        img = ImageOps.exif_transpose(img)
-    size = img.size
-    img = img.convert("RGBA" if img.has_transparency_data else "RGB")
-    img.thumbnail(IMAGE_MAX_SIZE)
-    out = io.BytesIO()
-    # Logos are already small enough, so they keep every pixel
-    img.save(out, "WEBP", quality=80, lossless=_image_kind(*size) == "logo")
+        ImageOps.exif_transpose(img, in_place=True)
+        size = img.size
+        mode = "RGBA" if img.has_transparency_data else "RGB"
+        # convert() copies the full-size image even when it's already in that mode
+        if img.mode != mode:
+            img = img.convert(mode)
+        img.thumbnail(IMAGE_MAX_SIZE)
+        out = io.BytesIO()
+        # Logos are already small enough, so they keep every pixel
+        img.save(out, "WEBP", quality=80, lossless=_image_kind(*size) == "logo")
     return size, out.getvalue()
 
 
@@ -204,7 +214,8 @@ def _fetch_image(image_url):
     except Exception:
         # Pillow can't read every format a browser can
         return Preview(image_url, "picture") if content_type.startswith("image/") else Preview()
-    return Preview(image_url, _image_kind(*size), webp)
+    path = f"{THUMBNAILS_DIR}/{_image_filename(image_url)}"
+    return Preview(image_url, _image_kind(*size), webp, path)
 
 
 def _fetch_preview(url):
@@ -212,6 +223,9 @@ def _fetch_preview(url):
     try:
         resp = _get(url)
         resp.raise_for_status()
+        # web_preview downloads an empty page again itself, with no timeout
+        if not resp.content:
+            raise ValueError("empty page")
         _title, _description, image = web_preview(url, content=resp.text)
         image = _resolve_image_url(image, url)
     except Exception as e:
@@ -220,21 +234,17 @@ def _fetch_preview(url):
     return _fetch_image(image) if image else Preview()
 
 
-def _local_image(path, root):
+def _local_image(path):
     """Load an image from the `images` option, which the site serves as it is."""
     try:
-        with open(os.path.join(root, path), "rb") as f:
+        with open(path, "rb") as f:
             data = f.read()
         with Image.open(io.BytesIO(data)) as img:
             size = img.size
     except OSError as e:
         raise ConfigurationError(f"extra.awesome_list.images: can't read {path} ({e})")
-    return Preview(path, _image_kind(*size), data, size)
-
-
-def _local_image_path(path):
-    """Where the site serves an image from the `images` option."""
-    return f"{IMAGES_DIR}/{os.path.basename(path)}"
+    site_path = f"{IMAGES_DIR}/{os.path.basename(path)}"
+    return Preview(path, _image_kind(*size), data, site_path, size)
 
 
 def _fetch_favicon(host):
@@ -400,29 +410,22 @@ class _EntryTreeprocessor(Treeprocessor):
         return True
 
     def _preview(self, link, style):
-        """The entry's image from the `images` option, or its page's preview, or None if neither."""
+        """The entry's preview, or None if the link isn't an entry."""
         url = link.get("href")
-        image = self.plugin.images.get(url)
-        if image or url not in self.plugin.previews:
-            return image
-        if style == "shelf":
+        preview = self.plugin.previews.get(url)
+        if preview and style == "shelf" and url not in self.plugin.config["images"]:
             # A page's preview isn't always the cover, so shelves only show the given images
             name = _plain_text(link)
             log.warning('No cover in extra.awesome_list.images for "%s": %s', name, url)
             return Preview()
-        return self.plugin.previews[url]
+        return preview
 
     def _media(self, url, preview):
         media = etree.Element(
             "a",
             {"class": "awesome-entry__media", "href": url, "tabindex": "-1", "aria-hidden": "true"},
         )
-        src = preview.image
-        if url in self.plugin.images:
-            src = get_relative_url(_local_image_path(preview.image), self.plugin.page_url)
-        elif preview.data is not None:
-            path = f"{THUMBNAILS_DIR}/{_image_filename(preview.image)}"
-            src = get_relative_url(path, self.plugin.page_url)
+        src = _image_src(preview, self.plugin.page_url)
         img = etree.SubElement(media, "img", {"src": src, "alt": "", "loading": "lazy"})
         if preview.size:
             # So the browser can lay it out before it loads
@@ -474,9 +477,8 @@ class AwesomeList:
 
     def __init__(self):
         self.config = {}
+        # By URL, with the `images` option's images in place of their pages' previews
         self.previews = {}
-        # The `images` option's images, by URL
-        self.images = {}
         self.favicons = {}
         # Entry names by URL, in list order, for the thumbnails page
         self.names = {}
@@ -484,7 +486,8 @@ class AwesomeList:
 
     def on_config(self, config):
         # Hooks take no options of their own, so they live under `extra:` in mkdocs.yml
-        self.config = LegacyConfig(CONFIG_SCHEME)
+        # The config file's path resolves the `images` option's files next to it
+        self.config = LegacyConfig(CONFIG_SCHEME, config_file_path=config.config_file_path)
         self.config.load_dict(config.extra.get("awesome_list") or {})
         errors, warnings = self.config.validate()
         for key, message in warnings:
@@ -494,12 +497,13 @@ class AwesomeList:
                 "; ".join(f"extra.awesome_list.{key}: {message}" for key, message in errors)
             )
 
-        root = os.path.dirname(config.config_file_path)
-        self.images = {url: _local_image(path, root) for url, path in self.config["images"].items()}
         # The site serves them from one folder, by file name
         names = [os.path.basename(path) for path in self.config["images"].values()]
         if len(set(names)) < len(names):
             raise ConfigurationError("extra.awesome_list.images: two files have the same name")
+        self.previews.update(
+            (url, _local_image(path)) for url, path in self.config["images"].items()
+        )
 
         config.markdown_extensions.append(AwesomeListExtension(self))
         # First, so the theme's and the user's CSS can override it
@@ -510,7 +514,7 @@ class AwesomeList:
         self.page_url = page.url if page else ""
         for m in ENTRY_RE.finditer(markdown):
             self.names.setdefault(m.group(2), m.group(1))
-        urls = set(self.names).difference(self.previews, self.images)
+        urls = set(self.names).difference(self.previews)
         hosts = {_host(url) for url in self.names}.difference(self.favicons)
         if not urls and not hosts:
             return markdown
@@ -541,35 +545,26 @@ class AwesomeList:
             if data:
                 with open(os.path.join(favicons_dir, _favicon_filename(host)), "wb") as f:
                     f.write(data)
+        for preview in self.previews.values():
+            if preview.path:
+                dest = os.path.join(config.site_dir, *preview.path.split("/"))
+                os.makedirs(os.path.dirname(dest), exist_ok=True)
+                with open(dest, "wb") as f:
+                    f.write(preview.data)
         thumbnails_dir = os.path.join(config.site_dir, *THUMBNAILS_DIR.split("/"))
         os.makedirs(thumbnails_dir, exist_ok=True)
-        for preview in self.previews.values():
-            if preview.data is not None:
-                with open(os.path.join(thumbnails_dir, _image_filename(preview.image)), "wb") as f:
-                    f.write(preview.data)
-        images_dir = os.path.join(config.site_dir, *IMAGES_DIR.split("/"))
-        os.makedirs(images_dir, exist_ok=True)
-        for preview in self.images.values():
-            with open(os.path.join(images_dir, os.path.basename(preview.image)), "wb") as f:
-                f.write(preview.data)
         with open(os.path.join(thumbnails_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(self._thumbnails_page())
-        for url in self.images.keys() - self.names.keys():
+        for url in self.config["images"].keys() - self.names.keys():
             log.warning("extra.awesome_list.images: no entry links to %s", url)
 
     def _thumbnails_page(self):
         items = []
         for url, name in self.names.items():
-            preview = self.images.get(url) or self.previews.get(url)
+            preview = self.previews.get(url)
             if not preview or not preview.image:
                 continue
-            if url in self.images:
-                page = f"{THUMBNAILS_DIR}/index.html"
-                src = get_relative_url(_local_image_path(preview.image), page)
-            elif preview.data is None:
-                src = preview.image
-            else:
-                src = _image_filename(preview.image)
+            src = _image_src(preview, f"{THUMBNAILS_DIR}/index.html")
             items.append(
                 THUMBNAIL_ITEM.format(
                     src=html.escape(src), url=html.escape(url), name=html.escape(name)

@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // A book's details go above its cover, or below it where the navbar and section bar would hide them
 function awesomePlaceDetails(entry) {
-    var hidden = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+    // js/base.js sets it inline, which reads without a style recalculation
+    var hidden = parseFloat(document.documentElement.style.scrollPaddingTop) || 0;
     var open = entry.classList.contains('awesome-entry--open');
     delete entry.dataset.details;
     // Shown while measured, as Firefox only applies the hover after the event
@@ -95,22 +96,27 @@ function awesomePlaceDetails(entry) {
 });
 
 // Touch screens can't hover, so the first tap on a cover shows the book's details, which link to it
-// like a second tap does
+// like a second tap does. A book without a cover image has a plain one with no link, so its details
+// are the only way to it.
+var awesomeOpenBook = null;
+
 document.addEventListener('click', function (event) {
-    var cover = event.target.closest && event.target.closest('.awesome-list--shelf .awesome-entry__media');
+    var cover = event.target.closest &&
+        event.target.closest('.awesome-list--shelf :is(.awesome-entry__media, .awesome-entry__icon)');
     if (!cover || !matchMedia('(hover: none)').matches) return;
     var entry = cover.parentElement;
-    if (entry.classList.contains('awesome-entry--open')) return;
+    if (entry === awesomeOpenBook) return;
     event.preventDefault();
     entry.classList.add('awesome-entry--open');
+    awesomeOpenBook = entry;
     awesomePlaceDetails(entry);
 });
 
 // A tap anywhere else closes them
 document.addEventListener('pointerdown', function (event) {
-    document.querySelectorAll('.awesome-entry--open').forEach(function (entry) {
-        if (!entry.contains(event.target)) entry.classList.remove('awesome-entry--open');
-    });
+    if (!awesomeOpenBook || awesomeOpenBook.contains(event.target)) return;
+    awesomeOpenBook.classList.remove('awesome-entry--open');
+    awesomeOpenBook = null;
 });
 
 // The open menu pushes the page down, so close it before jumping to a table of contents entry
@@ -133,6 +139,16 @@ function awesomeSectionHue(section) {
         ? getComputedStyle(section).getPropertyValue('--awesome-section-hue') : '';
 }
 
+// The entries under a section's or subsection's heading, up to the next one
+function awesomeEntryCount(heading) {
+    if (heading.tagName === 'H2') return heading.parentElement.querySelectorAll('.awesome-entry').length;
+    var count = 0;
+    for (var el = heading.nextElementSibling; el && !/^H[23]$/.test(el.tagName); el = el.nextElementSibling) {
+        count += el.querySelectorAll('.awesome-entry').length;
+    }
+    return count;
+}
+
 // Sidebar and phone menu entries take their section's colour, for the current section's style in extend.css
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('#toc-collapse .nav-link, .navbar-toc .nav-link').forEach(function (link) {
@@ -142,34 +158,61 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Scrolls the sidebar, which scrolls on its own, when the current section's subsections open below
+// its visible part. Only then, as it would otherwise move the entries as the page scrolls.
+document.addEventListener('DOMContentLoaded', function () {
+    var sidebar = document.querySelector('.bs-sidebar'), heading = null, current = null;
+    if (!sidebar) return;
+    document.addEventListener('scrollspy', function (event) {
+        if (event.detail === heading) return;
+        heading = event.detail;
+        var link = sidebar.querySelector('li:not([data-bs-level="3"]) > .nav-link.active');
+        if (!link || link === current) return;
+        current = link;
+        // Only sections with subsections have a list after their link
+        if (!link.nextElementSibling) return;
+        var item = link.parentElement.getBoundingClientRect(), view = sidebar.getBoundingClientRect();
+        var room = 16, by = 0;
+        // The whole item if it fits, otherwise its top
+        if (item.top < view.top + room || item.height > view.height - 2 * room) by = item.top - view.top - room;
+        else if (item.bottom > view.bottom - room) by = item.bottom - view.bottom + room;
+        if (!by) return;
+        var smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+        sidebar.scrollBy({top: by, behavior: smooth ? 'smooth' : 'instant'});
+    });
+});
+
 // The bar under the navbar (content.html) names the section the scrollspy (js/base.js) finds, and
 // its line shows how far down the page that is
 document.addEventListener('DOMContentLoaded', function () {
     var where = document.querySelector('.awesome-where');
     if (!where) return;
     var bar = where.firstElementChild, current = null;
-    var menuLinks = document.querySelectorAll('.navbar-toc .nav-link');
+    var name = where.querySelector('.awesome-where__name'), subName = where.querySelector('.awesome-where__sub');
+    var countText = where.querySelector('.awesome-where__count');
 
     document.addEventListener('scrollspy', function (event) {
         var heading = event.detail ? document.getElementById(event.detail) : null;
         // Above the first section there's nothing to name
-        var section = heading && heading.tagName === 'H2' ? heading.closest('.awesome-section') : null;
+        var section = heading && /^H[23]$/.test(heading.tagName) ? heading.closest('.awesome-section') : null;
         var scrollable = document.documentElement.scrollHeight - window.innerHeight;
         where.classList.toggle('awesome-where--shown', !!section);
         bar.style.setProperty('--awesome-where-progress', scrollable > 0 ? window.scrollY / scrollable : 0);
-        if (section === current) return;
-        current = section;
-        menuLinks.forEach(function (link) {
-            link.classList.toggle('active', !!section && link.hash === '#' + heading.id);
-        });
+        if (heading === current) return;
+        current = heading;
         // While it fades out, it keeps the last section
         if (!section) return;
-        var count = section.querySelectorAll('.awesome-entry').length, hue = awesomeSectionHue(section);
+        var count = awesomeEntryCount(heading), hue = awesomeSectionHue(section);
         bar.href = '#' + heading.id;
         if (hue) bar.style.setProperty('--awesome-section-hue', hue);
         else bar.style.removeProperty('--awesome-section-hue');
-        where.querySelector('.awesome-where__name').textContent = heading.textContent;
-        where.querySelector('.awesome-where__count').textContent = count ? count + ' resource' + (count === 1 ? '' : 's') : '';
+        name.textContent = section.querySelector('h2').textContent;
+        // The current subsection's link, which the scrollspy has marked, has its name without its
+        // section's emoji (macros.html), which phones show in front of it instead of the section
+        var subLink = document.querySelector('[data-bs-level="3"] > .nav-link.active');
+        subName.textContent = subLink ? subLink.textContent : '';
+        subName.dataset.emoji = subLink ? subLink.dataset.emoji : '';
+        countText.textContent = count ? count + ' resource' + (count === 1 ? '' : 's') : '';
     });
 
     // Phones have no sidebar, so the bar opens the menu at the current section instead of jumping

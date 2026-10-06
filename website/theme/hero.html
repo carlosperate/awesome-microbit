@@ -1,0 +1,22 @@
+{#- The home page's header, in place of what the README has before its first section (its title,
+    badges, logo and links). Keeps the README's title and its id, for the sidebar's link, and takes
+    the text and the Bluesky link from `hero` under `theme:` in mkdocs.yml. #}
+{%- set hero = config.theme.hero %}
+{%- set title = page.toc|first %}
+<header class="awesome-hero">
+    <img class="awesome-hero__mascot" src="{{ 'img/mascot.webp'|url }}" width="560" height="375" alt="">
+    <div class="awesome-hero__text">
+        <h1 id="{{ title.id }}">{{ title.title }}</h1>
+        <p class="awesome-hero__lead">{{ hero.lead }}</p>
+        <p class="awesome-hero__stats">
+            <span><strong>{{ page.content.count('class="awesome-entry"') }}</strong> resources</span>
+            <span>Updated <time datetime="{{ build_date_utc.strftime('%Y-%m-%d') }}">{{ build_date_utc.day }} {{ build_date_utc.strftime('%B %Y') }}</time></span>
+        </p>
+        <div class="awesome-hero__actions">
+            <a class="awesome-hero__button awesome-hero__button--main" href="{{ config.repo_url }}"><i class="fa-brands fa-github" aria-hidden="true"></i> Watch on GitHub</a>
+            <a class="awesome-hero__button" href="{{ hero.bluesky }}"><span aria-hidden="true">🦋</span> <span><span class="awesome-hero__wide">Follow on </span>Bluesky</span></a>
+            <a class="awesome-hero__button" href="{{ 'contributing/'|url }}#adding-something-to-an-awesome-list"><i class="fa-solid fa-plus" aria-hidden="true"></i> Add a resource</a>
+        </div>
+    </div>
+    <p class="awesome-hero__about">{{ hero.about }}</p>
+</header>

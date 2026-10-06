@@ -26,15 +26,9 @@ from awesome_list import (
 )
 
 
-def _png_bytes(width, height):
+def _image_bytes(width, height, fmt="PNG", **save_options):
     buffer = io.BytesIO()
-    Image.new("RGB", (width, height)).save(buffer, "PNG")
-    return buffer.getvalue()
-
-
-def _webp_bytes(width, height):
-    buffer = io.BytesIO()
-    Image.new("RGB", (width, height)).save(buffer, "WEBP")
+    Image.new("RGB", (width, height)).save(buffer, fmt, **save_options)
     return buffer.getvalue()
 
 
@@ -52,16 +46,25 @@ def _image_response(status=200, content_type="image/png", body=b""):
 
 
 # An image from the `images` option
-COVER = Preview("images/a.webp", "picture", b"webp", (300, 400))
+COVER = Preview(
+    "images/a.webp", "picture", b"webp", "assets/awesome-list/images/a.webp", (300, 400)
+)
+# A preview shrunk by _fetch_image
+THUMBNAIL = "assets/awesome-list/thumbnails/a.webp"
+SHRUNK = Preview("https://a.example.com/og.png", "picture", b"og", THUMBNAIL)
 
 
-def _make_plugin(default_style="media", section_styles=None):
+def _make_plugin(default_style="media", section_styles=None, images=None):
+    """A plugin as on_config leaves it, with `images` as the option's previews by URL."""
     plugin = AwesomeList()
+    images = images or {}
     plugin.config = {
         "debug-log": False,
         "default-style": default_style,
         "section-styles": section_styles or {},
+        "images": {url: preview.image for url, preview in images.items()},
     }
+    plugin.previews.update(images)
     return plugin
 
 
@@ -137,13 +140,15 @@ class TestFetchImage:
         [((1200, 630), (600, 315)), ((600, 1200), (157, 315)), ((4000, 1000), (600, 150))],
     )
     def test_picture_shrunk_keeping_its_ratio(self, mock_get, size, shrunk):
-        mock_get.return_value = _image_response(body=_png_bytes(*size))
+        mock_get.return_value = _image_response(body=_image_bytes(*size))
         preview = _fetch_image("https://example.com/og.png")
         assert preview == Preview("https://example.com/og.png", "picture")
         assert _webp_size(preview.data) == shrunk
+        thumbnail = _image_filename("https://example.com/og.png")
+        assert preview.path == f"assets/awesome-list/thumbnails/{thumbnail}"
 
     def test_logo_keeps_its_size(self, mock_get):
-        mock_get.return_value = _image_response(body=_png_bytes(180, 180))
+        mock_get.return_value = _image_response(body=_image_bytes(180, 180))
         preview = _fetch_image("https://example.com/icon.png")
         assert preview == Preview("https://example.com/icon.png", "logo")
         assert _webp_size(preview.data) == (180, 180)
@@ -151,9 +156,8 @@ class TestFetchImage:
     def test_photo_rotated_by_its_exif_orientation(self, mock_get):
         exif = Image.Exif()
         exif[0x0112] = 6  # Orientation: rotate 90°
-        buffer = io.BytesIO()
-        Image.new("RGB", (300, 600)).save(buffer, "JPEG", exif=exif)
-        mock_get.return_value = _image_response(content_type="image/jpeg", body=buffer.getvalue())
+        body = _image_bytes(300, 600, "JPEG", exif=exif)
+        mock_get.return_value = _image_response(content_type="image/jpeg", body=body)
         assert _webp_size(_fetch_image("https://example.com/photo.jpg").data) == (600, 300)
 
     def test_svg_is_linked(self, mock_get):
@@ -188,7 +192,7 @@ class TestFetchImage:
 
     @patch("awesome_list.IMAGE_MAX_BYTES", 10)
     def test_image_too_big(self, mock_get):
-        mock_get.return_value = _image_response(body=_png_bytes(1200, 630))
+        mock_get.return_value = _image_response(body=_image_bytes(1200, 630))
         assert _fetch_image("https://example.com/og.png") == Preview()
 
     def test_not_an_image(self, mock_get):
@@ -226,25 +230,27 @@ class TestFetchPreview:
         assert _fetch_preview("https://example.com") == Preview()
         mock_preview.assert_not_called()
 
+    def test_empty_page(self, mock_get, mock_preview, mock_image):
+        mock_get.return_value.content = b""
+        assert _fetch_preview("https://example.com") == Preview()
+        mock_preview.assert_not_called()
+
 
 class TestLocalImage:
 
     def test_webp_served_as_it_is(self, tmp_path):
-        data = _webp_bytes(300, 400)
-        (tmp_path / "cover.webp").write_bytes(data)
-        preview = _local_image("cover.webp", str(tmp_path))
-        assert preview == Preview("cover.webp", "picture")
-        assert preview.data == data
+        path = tmp_path / "cover.webp"
+        path.write_bytes(_image_bytes(300, 400, "WEBP"))
+        preview = _local_image(str(path))
+        assert preview == Preview(str(path), "picture")
+        assert preview.data == path.read_bytes()
+        assert preview.path == "assets/awesome-list/images/cover.webp"
         assert preview.size == (300, 400)
 
     def test_not_an_image(self, tmp_path):
         (tmp_path / "cover.webp").write_bytes(b"<html>")
-        with pytest.raises(ConfigurationError, match="can't read cover.webp"):
-            _local_image("cover.webp", str(tmp_path))
-
-    def test_missing_file(self, tmp_path):
-        with pytest.raises(ConfigurationError, match="can't read missing.webp"):
-            _local_image("missing.webp", str(tmp_path))
+        with pytest.raises(ConfigurationError, match="can't read .*cover.webp"):
+            _local_image(str(tmp_path / "cover.webp"))
 
 
 class TestDomainLabel:
@@ -284,12 +290,11 @@ class TestRenderedEntries:
 
     def test_shrunk_picture_served_by_the_site(self):
         plugin = _make_plugin()
-        image_url = "https://example.com/og.png"
-        plugin.previews["https://example.com"] = Preview(image_url, "picture", b"webp")
+        plugin.previews["https://example.com"] = SHRUNK
         plugin.page_url = "about/"
         html = _render(plugin, "- [Example](https://example.com) - An example site.")
 
-        assert f'src="../assets/awesome-list/thumbnails/{_image_filename(image_url)}"' in html
+        assert f'src="../{THUMBNAIL}"' in html
 
     def test_entry_without_image(self):
         plugin = _make_plugin()
@@ -413,21 +418,17 @@ class TestRenderedEntries:
         assert "awesome-list--media" in editors
         assert "awesome-list--index" in libraries
 
-    def test_image_from_the_option_instead_of_the_preview(self):
-        plugin = _make_plugin()
-        plugin.previews["https://example.com"] = Preview("https://example.com/og.png", "picture")
-        plugin.images["https://example.com"] = COVER
+    def test_image_from_the_option(self):
+        plugin = _make_plugin(images={"https://example.com": COVER})
         html = _render(plugin, "- [Example](https://example.com) - An example site.")
 
         assert (
             '<img alt="" height="400" loading="lazy" '
-            'src="assets/awesome-list/books/a.webp" width="300" />'
+            'src="assets/awesome-list/images/a.webp" width="300" />'
         ) in html
-        assert "og.png" not in html
 
     def test_shelf_puts_the_details_in_one_element(self):
-        plugin = _make_plugin(default_style="shelf")
-        plugin.images["https://example.com"] = COVER
+        plugin = _make_plugin(default_style="shelf", images={"https://example.com": COVER})
         text = "- [Book](https://example.com) - A book.\n\t- [Part 2](https://example.com/2) - 2.\n"
         html = _render(plugin, text)
 
@@ -502,8 +503,7 @@ class TestOnPageMarkdown:
 
     def test_images_from_the_option_not_fetched(self, mock_preview, mock_favicon):
         mock_favicon.return_value = b"png"
-        plugin = _make_plugin()
-        plugin.images["https://example.com/a"] = Preview("images/a.webp", "picture", b"webp")
+        plugin = _make_plugin(images={"https://example.com/a": COVER})
         plugin.on_page_markdown("- [A](https://example.com/a) - Description A")
 
         mock_preview.assert_not_called()
@@ -550,18 +550,26 @@ def test_on_config_reads_options_from_extra():
 
 def test_on_config_loads_images_next_to_the_config(tmp_path):
     (tmp_path / "images").mkdir()
-    (tmp_path / "images" / "a.webp").write_bytes(_webp_bytes(300, 400))
+    (tmp_path / "images" / "a.webp").write_bytes(_image_bytes(300, 400, "WEBP"))
     options = {"images": {"https://example.com": "images/a.webp"}}
     plugin = AwesomeList()
     plugin.on_config(_mkdocs_config({"awesome_list": options}, str(tmp_path / "mkdocs.yml")))
 
-    assert plugin.images["https://example.com"] == Preview("images/a.webp", "picture")
+    path = str(tmp_path / "images" / "a.webp")
+    assert plugin.previews["https://example.com"] == Preview(path, "picture")
+
+
+def test_on_config_rejects_missing_images(tmp_path):
+    options = {"images": {"https://example.com": "images/missing.webp"}}
+    config = _mkdocs_config({"awesome_list": options}, str(tmp_path / "mkdocs.yml"))
+    with pytest.raises(ConfigurationError, match="missing.webp' isn't an existing file"):
+        AwesomeList().on_config(config)
 
 
 def test_on_config_rejects_images_with_the_same_file_name(tmp_path):
     for folder in ("a", "b"):
         (tmp_path / folder).mkdir()
-        (tmp_path / folder / "cover.webp").write_bytes(_webp_bytes(300, 400))
+        (tmp_path / folder / "cover.webp").write_bytes(_image_bytes(300, 400, "WEBP"))
     images = {"https://a.example.com": "a/cover.webp", "https://b.example.com": "b/cover.webp"}
     config = _mkdocs_config({"awesome_list": {"images": images}}, str(tmp_path / "mkdocs.yml"))
     with pytest.raises(ConfigurationError, match="same name"):
@@ -577,8 +585,9 @@ def test_on_post_build_writes_assets(tmp_path):
     plugin = _make_plugin()
     plugin.favicons = {"example.com": b"png", "no-icon.com": None}
     plugin.previews = {
-        "https://a.example.com": Preview("https://a.example.com/og.png", "picture", b"webp"),
+        "https://a.example.com": SHRUNK,
         "https://b.example.com": Preview("https://b.example.com/logo.svg", "logo"),
+        "https://c.example.com": COVER,
     }
     plugin.on_post_build(SimpleNamespace(site_dir=str(tmp_path)))
 
@@ -586,22 +595,17 @@ def test_on_post_build_writes_assets(tmp_path):
     assert (assets / "awesome-list.css").is_file()
     assert (assets / "favicons" / "example.com.png").read_bytes() == b"png"
     assert not (assets / "favicons" / "no-icon.com.png").exists()
-    thumbnail = _image_filename("https://a.example.com/og.png")
-    assert (assets / "thumbnails" / thumbnail).read_bytes() == b"webp"
-    files = sorted(p.name for p in (assets / "thumbnails").iterdir())
-    assert files == sorted([thumbnail, "index.html"])
+    assert sorted(p.name for p in (assets / "thumbnails").iterdir()) == ["a.webp", "index.html"]
+    assert (assets / "thumbnails" / "a.webp").read_bytes() == b"og"
+    assert (assets / "images" / "a.webp").read_bytes() == b"webp"
 
 
-def test_on_post_build_writes_images_and_warns_about_unused_ones(tmp_path, caplog):
-    plugin = _make_plugin()
+def test_on_post_build_warns_about_unused_images(tmp_path, caplog):
+    gone = Preview("images/gone.webp", "picture", b"gone", "assets/awesome-list/images/gone.webp")
+    plugin = _make_plugin(images={"https://a.example.com": COVER, "https://gone.example.com": gone})
     plugin.names = {"https://a.example.com": "A"}
-    plugin.images = {
-        "https://a.example.com": Preview("images/a.webp", "picture", b"cover"),
-        "https://gone.example.com": Preview("images/gone.webp", "picture", b"gone"),
-    }
     plugin.on_post_build(SimpleNamespace(site_dir=str(tmp_path)))
 
-    assert (tmp_path / "assets" / "awesome-list" / "books" / "a.webp").read_bytes() == b"cover"
     assert "no entry links to https://gone.example.com" in caplog.text
     assert "https://a.example.com" not in caplog.text
 
@@ -612,21 +616,19 @@ def test_thumbnails_page_lists_card_images_in_list_order(tmp_path):
         "https://b.example.com": "Logo",
         "https://a.example.com": "A & B",
         "https://c.example.com": "No image",
+        "https://d.example.com": "Book",
     }
     plugin.previews = {
-        "https://a.example.com": Preview("https://a.example.com/og.png", "picture", b"webp"),
+        "https://a.example.com": SHRUNK,
         "https://b.example.com": Preview("https://b.example.com/logo.svg", "logo"),
         "https://c.example.com": Preview(),
+        "https://d.example.com": COVER,
     }
-    plugin.names["https://d.example.com"] = "Book"
-    plugin.images = {"https://d.example.com": Preview("images/book.webp", "picture", b"cover")}
     plugin.on_post_build(SimpleNamespace(site_dir=str(tmp_path)))
     page = (tmp_path / "assets" / "awesome-list" / "thumbnails" / "index.html").read_text()
 
     assert '<meta name="robots" content="noindex, nofollow' in page
-    assert page.index('src="https://b.example.com/logo.svg"') < page.index(
-        f'src="{_image_filename("https://a.example.com/og.png")}"'
-    )
+    assert page.index('src="https://b.example.com/logo.svg"') < page.index('src="a.webp"')
     assert ">A &amp; B</a>" in page
     assert "No image" not in page
-    assert 'src="../books/book.webp"' in page
+    assert 'src="../images/a.webp"' in page

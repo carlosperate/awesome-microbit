@@ -223,9 +223,15 @@
    js/awesome-microbit.js spreads the covers evenly over the rows. */
 .awesome-list--shelf {
     --awesome-list-cover-height: 184px;
+    /* A picked book lifts and leans on its corner; its reflection doesn't tilt */
     --shelf-lift: 8px;
-    /* Clears the lifted cover by the same 12px as the details below a cover */
-    --awesome-list-details-gap: calc(var(--shelf-lift) + 12px);
+    --shelf-tilt: -2deg;
+    --shelf-cover-lifted: translateY(calc(-1 * var(--shelf-lift))) rotate(var(--shelf-tilt));
+    --shelf-cover-lifted-shadow: 0 1px 1px rgba(0, 0, 0, 0.18), 6px 12px 18px rgba(40, 20, 50, 0.3);
+    --shelf-reflection-lifted: translateY(var(--shelf-lift)) scaleY(-1);
+    /* Clears the lifted cover by the same 12px as the details below a cover, plus about 4px the
+       tilt raises its far corner */
+    --awesome-list-details-gap: calc(var(--shelf-lift) + 16px);
     --shelf-above: 26px;
     --shelf-glass: 12px;
     --shelf-below: 36px;
@@ -260,7 +266,8 @@
     overflow: hidden;
     border-radius: 2px 5px 5px 2px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.18), 3px 6px 12px rgba(40, 20, 50, 0.25);
-    transition: transform 0.15s ease-out;
+    transform-origin: 15% 100%;
+    transition: transform 0.3s cubic-bezier(0.3, 1.25, 0.5, 1), box-shadow 0.3s ease;
 }
 
 /* The cover's foot reflected in the shelf: the picture js/awesome-microbit.js sets once it loads,
@@ -276,7 +283,7 @@
     -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), transparent);
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), transparent);
     transform: scaleY(-1);
-    transition: transform 0.15s ease-out;
+    transition: transform 0.3s cubic-bezier(0.3, 1.25, 0.5, 1), opacity 0.3s ease;
     pointer-events: none;
 }
 
@@ -305,21 +312,26 @@
     background: #fff;
 }
 
-.awesome-list--shelf :is(.awesome-entry--open, :has(.awesome-entry__title:focus-visible)) :is(.awesome-entry__media, .awesome-entry__icon) {
-    transform: translateY(calc(-1 * var(--shelf-lift)));
+/* A picked book. Hovering only counts where devices can hover (below), as it would stick after a tap. */
+.awesome-list--shelf .awesome-entry:is(.awesome-entry--open, :has(.awesome-entry__title:focus-visible)) :is(.awesome-entry__media, .awesome-entry__icon) {
+    transform: var(--shelf-cover-lifted);
+    box-shadow: var(--shelf-cover-lifted-shadow);
 }
 
-.awesome-list--shelf :is(.awesome-entry--open, :has(.awesome-entry__title:focus-visible))::after {
-    transform: translateY(var(--shelf-lift)) scaleY(-1);
+.awesome-list--shelf .awesome-entry:is(.awesome-entry--open, :has(.awesome-entry__title:focus-visible))::after {
+    transform: var(--shelf-reflection-lifted);
+    opacity: 0.6;
 }
 
 @media (hover: hover) {
     .awesome-list--shelf .awesome-entry:hover :is(.awesome-entry__media, .awesome-entry__icon) {
-        transform: translateY(calc(-1 * var(--shelf-lift)));
+        transform: var(--shelf-cover-lifted);
+        box-shadow: var(--shelf-cover-lifted-shadow);
     }
 
     .awesome-list--shelf .awesome-entry:hover::after {
-        transform: translateY(var(--shelf-lift)) scaleY(-1);
+        transform: var(--shelf-reflection-lifted);
+        opacity: 0.6;
     }
 }
 
@@ -551,6 +563,256 @@
 }
 
 /*****************************************************************************/
+/* Home page header (hero.html)                                              */
+/*****************************************************************************/
+/* A band from the sidebar to the edge of the page, under the navbar: near white, with a pink glow
+   behind the micro:bit. The title's gradient spans the words only, so no letter is too light. Links
+   are darker than the site's, too faint on the band, through extend.css's link tokens. */
+.awesome-hero {
+    --hero-band: linear-gradient(180deg, oklch(0.99 0.006 318deg), oklch(0.975 0.014 300deg));
+    --hero-glow: oklch(0.92 0.07 350deg);
+    --hero-muted: oklch(0.45 0.03 318deg);
+    --hero-title-end: oklch(0.55 0.18 320deg);
+    --hero-button-bg: var(--bs-body-bg);
+    --hero-button-border: oklch(0.85 0.05 318deg);
+    --hero-button-text: oklch(0.42 0.1 318deg);
+    --hero-button-hover-bg: oklch(0.95 0.035 318deg);
+    --hero-button-hover-border: oklch(0.72 0.09 318deg);
+    --hero-button-hover-text: oklch(0.36 0.11 318deg);
+    --hero-main: #625974;
+    --hero-main-hover: #4a4159;
+    --awesomemb-link: oklch(0.45 0.13 318deg);
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 10px 44px;
+    align-items: center;
+    margin: 0 calc(-1 * var(--awesomemb-bleed-right)) 44px calc(-1 * var(--awesomemb-bleed-left));
+    padding: 56px 48px 46px 40px;
+    overflow: hidden;
+    container-type: inline-size;
+    border-bottom: 1px solid oklch(0.92 0.03 318deg);
+    background: radial-gradient(circle at 13% 46%, var(--hero-glow), transparent 38%), var(--hero-band);
+}
+
+[data-bs-theme="dark"] .awesome-hero {
+    --hero-band: linear-gradient(180deg, oklch(0.22 0.02 318deg), oklch(0.19 0.02 300deg));
+    --hero-glow: oklch(0.36 0.1 350deg);
+    --hero-muted: var(--bs-secondary-color);
+    --hero-title-end: oklch(0.78 0.14 320deg);
+    --hero-button-bg: oklch(0.2 0.02 318deg);
+    --hero-button-border: oklch(0.42 0.05 318deg);
+    --hero-button-text: oklch(0.86 0.06 318deg);
+    --hero-button-hover-bg: oklch(0.28 0.04 318deg);
+    --hero-button-hover-border: oklch(0.58 0.08 318deg);
+    --hero-button-hover-text: oklch(0.93 0.04 318deg);
+    --hero-main: oklch(0.55 0.1 318deg);
+    --hero-main-hover: oklch(0.47 0.1 318deg);
+    /* The site's own, which reads well on the dark band */
+    --awesomemb-link: inherit;
+    border-bottom-color: oklch(0.32 0.04 318deg);
+}
+
+.awesome-hero__mascot {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 12px 16px rgba(60, 20, 60, 0.28));
+}
+
+.awesome-hero h1 {
+    width: fit-content;
+    margin: 0 0 12px;
+    padding: 0;
+    font-size: 3.1rem;
+    text-align: left;
+    background-image: linear-gradient(90deg, var(--awesomemb-h1-start), var(--hero-title-end));
+    /* Jumping to it from the sidebar shows the whole header, as the page can't scroll above it */
+    scroll-margin-top: 100vh;
+}
+
+.awesome-hero h1::after {
+    content: none;
+}
+
+.awesome-hero__lead {
+    max-width: 40em;
+    margin: 0 0 12px;
+    font-size: 1.16rem;
+    line-height: 1.6;
+}
+
+.awesome-hero__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    margin: 0 0 22px;
+    font-size: 0.94rem;
+    color: var(--hero-muted);
+}
+
+.awesome-hero__stats strong {
+    color: var(--bs-body-color);
+}
+
+.awesome-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* The text colours go through extend.css's link tokens, as it forces every link's colour */
+.awesome-hero__button {
+    --awesomemb-link: var(--hero-button-text);
+    --awesomemb-link-hover: var(--hero-button-hover-text);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border: 1px solid var(--hero-button-border);
+    border-radius: 999px;
+    background: var(--hero-button-bg);
+    font-size: 0.96rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.awesome-hero__button--main {
+    --hero-button-bg: var(--hero-main);
+    --hero-button-border: var(--hero-main);
+    --hero-button-text: #fff;
+    --hero-button-hover-bg: var(--hero-main-hover);
+    --hero-button-hover-border: var(--hero-main-hover);
+    --hero-button-hover-text: #fff;
+}
+
+.awesome-hero__button:is(:hover, :focus) {
+    border-color: var(--hero-button-hover-border);
+    background: var(--hero-button-hover-bg);
+}
+
+.awesome-hero__button:focus-visible {
+    outline: 2px solid oklch(0.6 0.12 var(--awesome-section-hue));
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .awesome-hero__button {
+        transition: none;
+    }
+}
+
+.awesome-hero__about {
+    grid-column: 1 / -1;
+    margin: 18px 0 0;
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: var(--hero-muted);
+}
+
+/* Until the container is at its widest, a smaller micro:bit beside the title, with the rest under
+   them, as the text beside a large one would wrap. The glow is a layer on that first row, so it
+   stays centred on the micro:bit and title whatever their height. */
+@media (max-width: 1399.98px) {
+    .awesome-hero {
+        grid-template-columns: 120px 1fr;
+        gap: 6px 20px;
+        padding: 36px 28px 30px;
+        background: var(--hero-band);
+    }
+
+    .awesome-hero::before {
+        content: "";
+        grid-row: 1;
+        grid-column: 1 / -1;
+        align-self: stretch;
+        margin: -100px -70px;
+        background: radial-gradient(ellipse closest-side at 38% 50%, var(--hero-glow), transparent);
+        pointer-events: none;
+    }
+
+    .awesome-hero__mascot {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .awesome-hero__text {
+        display: contents;
+    }
+
+    .awesome-hero h1 {
+        grid-row: 1;
+        grid-column: 2;
+        margin: 0;
+        font-size: 2.4rem;
+        line-height: 1.1;
+    }
+
+    .awesome-hero__lead,
+    .awesome-hero__stats,
+    .awesome-hero__actions {
+        grid-column: 1 / -1;
+    }
+
+    .awesome-hero__lead {
+        margin-top: 14px;
+    }
+}
+
+/* Tablets: smaller buttons, so the three fit on a line */
+@media (max-width: 991.98px) {
+    .awesome-hero__button {
+        padding: 8px 14px;
+        font-size: 0.92rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .awesome-hero {
+        grid-template-columns: 96px 1fr;
+        gap: 6px 16px;
+        padding: 30px 18px 26px;
+        margin-bottom: 30px;
+    }
+
+    .awesome-hero h1 {
+        font-size: 2rem;
+    }
+
+    .awesome-hero__lead {
+        margin-top: 12px;
+        font-size: 1.04rem;
+    }
+
+    .awesome-hero__stats {
+        gap: 2px 14px;
+        margin-bottom: 14px;
+        font-size: 0.88rem;
+    }
+
+    .awesome-hero__button {
+        flex: 1 1 40%;
+        justify-content: center;
+        padding: 9px 10px;
+        font-size: 0.9rem;
+    }
+
+    .awesome-hero__button--main {
+        flex-basis: 100%;
+    }
+
+    .awesome-hero__about {
+        display: none;
+    }
+}
+
+/* "Bluesky" alone where the three buttons wouldn't fit on a line with "Follow on" */
+@container (max-width: 560px) {
+    .awesome-hero__wide {
+        display: none;
+    }
+}
+
+/*****************************************************************************/
 /* Current section bar (content.html)                                        */
 /*****************************************************************************/
 /* Sticks under the navbar (js/base.js sets its top) without taking up space, so it stays out of
@@ -562,18 +824,18 @@
     height: 0;
 }
 
-/* Over the content column's padding too, so on phones it spans the screen. A fixed height, as
-   js/base.js adds it to the scroll padding before the bar has any text. */
+/* Over the content's padding too (extend.css). A fixed height, as js/base.js adds it to the scroll
+   padding before the bar has any text. */
 .awesome-where__bar {
     position: absolute;
     top: 0;
-    left: calc(var(--bs-gutter-x) * -0.5);
-    right: calc(var(--bs-gutter-x) * -0.5);
+    left: calc(-1 * var(--awesomemb-bleed-left));
+    right: calc(-1 * var(--awesomemb-bleed-right));
     display: flex;
     align-items: center;
     gap: 8px;
     height: 2.5rem;
-    padding: 0 calc(var(--bs-gutter-x) * 0.5);
+    padding: 0 var(--awesomemb-bleed-right) 0 var(--awesomemb-bleed-left);
     border-bottom: 1px solid var(--awesome-list-border);
     background: color-mix(in srgb, var(--awesome-entry-hover-bg) 92%, transparent);
     -webkit-backdrop-filter: blur(8px);
@@ -627,6 +889,37 @@
     text-overflow: ellipsis;
 }
 
+/* In a subsection, the section's name stays whole and the subsection's gives way */
+.awesome-where__bar:has(.awesome-where__sub:not(:empty)) .awesome-where__name {
+    flex: none;
+}
+
+.awesome-where__sub {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+
+.awesome-where__sub:not(:empty)::before {
+    content: '\203a';
+    margin-right: 8px;
+    opacity: 0.6;
+}
+
+/* Phones only have room for the subsection, with its section's emoji (js/awesome-microbit.js) */
+@media (max-width: 767.98px) {
+    .awesome-where__bar:has(.awesome-where__sub:not(:empty)) .awesome-where__name {
+        display: none;
+    }
+
+    .awesome-where__sub:not(:empty)::before {
+        content: attr(data-emoji) ' ';
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
 .awesome-where__count {
     flex: none;
     font-weight: 400;
@@ -647,12 +940,6 @@
 @media (min-width: 768px) {
     .awesome-where__menu {
         display: none;
-    }
-
-    /* Over the sidebar column's padding as well, so it meets the sidebar's border */
-    .awesome-where__bar {
-        left: calc(var(--bs-gutter-x) * -1);
-        padding-left: var(--bs-gutter-x);
     }
 }
 

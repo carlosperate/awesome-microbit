@@ -5,17 +5,7 @@
         </button>
     </div>
 
-    {% macro toc_item(item) %}
-        {%- if item.level <= config.theme.navigation_depth %}
-            <li class="nav-item" data-bs-level="{{ item.level }}"><a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
-              <ul class="nav flex-column">
-                {%- for child in item.children %}
-                    {{- toc_item(child) }}
-                {%- endfor %}
-              </ul>
-            </li>
-        {%- endif %}
-    {%- endmacro %}
+    {%- from "macros.html" import toc_item with context %}
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
         {%- for item in page.toc %}

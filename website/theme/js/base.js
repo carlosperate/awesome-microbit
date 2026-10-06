@@ -173,8 +173,9 @@ document.addEventListener("DOMContentLoaded", function () {
         var tocEl = document.getElementById('toc-collapse');
         if (!tocEl) return;
 
+        /* The sidebar's, and the phone menu's (base.html) */
         var tocLinks = Array.prototype.slice.call(
-            tocEl.querySelectorAll('a.nav-link[href^="#"]')
+            document.querySelectorAll(':is(#toc-collapse, .navbar-toc) a.nav-link[href^="#"]')
         );
         if (tocLinks.length === 0) return;
 
@@ -186,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         /* Collect only content elements whose IDs match a TOC entry.
-           This avoids h3+ subheadings (not in the TOC) from creating
+           This avoids h4+ subheadings (not in the TOC) from creating
            gaps where nothing would be highlighted. */
         var contentSections = Array.prototype.slice.call(
             document.querySelectorAll('.main-content [id]')
@@ -195,12 +196,39 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         if (contentSections.length === 0) return;
 
-        var ticking = false;
+        var ticking = false, lastActiveId;
 
         function clearAllActive() {
             tocLinks.forEach(function (link) {
                 link.classList.remove('active');
             });
+        }
+
+        function markCurrent(activeId) {
+            clearAllActive();
+
+            if (activeId) {
+                /* Match against TOC links using decodeURIComponent so that
+                   emoji / special-char IDs compare correctly. */
+                var decodedActive = decodeURIComponent(activeId);
+                tocLinks.forEach(function (link) {
+                    var href = link.getAttribute('href');
+                    if (href) {
+                        var hrefId = decodeURIComponent(href.substring(1));
+                        if (hrefId === decodedActive) {
+                            link.classList.add('active');
+                            /* A subsection's section stays current too, which shows its subsections */
+                            var item = link.parentElement;
+                            if (item.dataset.bsLevel === '3') {
+                                link = item.parentElement.closest('li').firstElementChild;
+                                link.classList.add('active');
+                            }
+                            /* For the background and bar that glide to it (extend.css) */
+                            tocEl.style.setProperty('--toc-current-hue', link.style.getPropertyValue('--awesome-section-hue'));
+                        }
+                    }
+                });
+            }
         }
 
         function highlightCurrent() {
@@ -219,23 +247,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            clearAllActive();
-
-            if (activeId) {
-                /* Match against TOC links using decodeURIComponent so that
-                   emoji / special-char IDs compare correctly. */
-                var decodedActive = decodeURIComponent(activeId);
-                tocLinks.forEach(function (link) {
-                    var href = link.getAttribute('href');
-                    if (href) {
-                        var hrefId = decodeURIComponent(href.substring(1));
-                        if (hrefId === decodedActive) {
-                            link.classList.add('active');
-                            /* For the background and bar that glide to it (extend.css) */
-                            tocEl.style.setProperty('--toc-current-hue', link.style.getPropertyValue('--awesome-section-hue'));
-                        }
-                    }
-                });
+            /* The classes only change with the current heading, the event goes out on every frame for
+               the section bar's progress line */
+            if (activeId !== lastActiveId) {
+                lastActiveId = activeId;
+                markCurrent(activeId);
             }
 
             /* For the current section's bar (js/awesome-microbit.js) */

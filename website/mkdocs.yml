@@ -15,9 +15,16 @@ theme:
   color_mode: light
   locale: en
   next_prev: false
+  # Sections and their subsections in the sidebar
+  navigation_depth: 3
   highlightjs: false
   # The section that content.html shows as colour tiles instead of its list, by heading anchor
   contents_tiles: contents
+  # The home page's header (hero.html), in place of the README's title, badges, logo and links
+  hero:
+    lead: 'A curated list of resources for the <a href="https://microbit.org">BBC micro:bit</a>, a tiny programmable computer designed to make learning and teaching easy and fun!'
+    about: 'The micro:bit board has a Bluetooth microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and GPIO accessible via the edge connector.'
+    bluesky: https://bsky.app/profile/awesomemicrobit.bsky.social
 
 nav:
   - Home: README.md

@@ -237,10 +237,7 @@
     gap: 24px;
 }
 
-.awesome-list--shelf .awesome-entry {
-    display: block;
-}
-
+.awesome-list--shelf .awesome-entry,
 .awesome-list--shelf .awesome-entry__media {
     display: block;
 }

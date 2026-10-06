@@ -271,12 +271,32 @@ ul.navbar-nav {
     line-height: 1.35;
 }
 
-/* The current section (js/awesome-microbit.js), tinted in its colour around the text */
+/* The current section and subsection (js/base.js), tinted in their colour */
 .navbar-toc .nav-link.active {
-    margin: 0 -10px;
-    padding: 9px 10px;
     border-radius: 8px;
     background-color: oklch(0.62 0.15 var(--awesome-section-hue) / 0.35);
+}
+
+/* Around the section's text */
+.navbar-toc li[data-bs-level="2"] > .nav-link.active {
+    margin: 0 -10px;
+    padding: 9px 10px;
+}
+
+/* The current section's subsections (hidden with the sidebar's, below) */
+.navbar-toc-subs {
+    margin: 2px 0 8px 12px;
+}
+
+.navbar-toc .navbar-toc-subs .nav-link {
+    padding: 7px 10px;
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+}
+
+.navbar-toc .navbar-toc-subs .nav-link.active {
+    border-radius: 0 8px 8px 0;
+    border-left-color: oklch(0.8 0.12 var(--awesome-section-hue));
 }
 
 /* Room for that tint, which the open menu would clip as it scrolls */
@@ -329,8 +349,8 @@ ul.navbar-nav {
     color: oklch(0.45 0.13 var(--awesome-section-hue)) !important;
 }
 
-/* A bar over the sidebar's border */
-#toc-collapse .nav>li>a.active::after {
+/* A bar over the sidebar's border, for the section rather than its current subsection */
+#toc-collapse li:not([data-bs-level="3"]) > a.active::after {
     content: '';
     position: absolute;
     top: 5px;
@@ -345,8 +365,39 @@ ul.navbar-nav {
     color: oklch(0.87 0.08 var(--awesome-section-hue)) !important;
 }
 
-[data-bs-theme="dark"] #toc-collapse .nav>li>a.active::after {
+[data-bs-theme="dark"] #toc-collapse li:not([data-bs-level="3"]) > a.active::after {
     background: oklch(0.72 0.15 var(--awesome-section-hue));
+}
+
+/* The current section's subsections, here and in the phone menu (js/base.js marks the section too),
+   smaller and on a line in its colour, which the current one darkens */
+:is(#toc-collapse, .navbar-toc) li[data-bs-level="2"]:not(:has(> .nav-link.active)) > .nav {
+    display: none;
+}
+
+#toc-collapse li[data-bs-level="2"] > .nav {
+    margin: 2px 0 8px 22px;
+}
+
+#toc-collapse li[data-bs-level="3"] > a {
+    padding: 4px 10px;
+    border-left: 2px solid oklch(0.88 0.04 var(--awesome-section-hue));
+    border-radius: 0 6px 6px 0;
+    font-size: 0.86rem;
+}
+
+#toc-collapse li[data-bs-level="3"] > a.active {
+    border-left-color: oklch(0.62 0.15 var(--awesome-section-hue));
+    background-color: oklch(0.96 0.025 var(--awesome-section-hue));
+}
+
+[data-bs-theme="dark"] #toc-collapse li[data-bs-level="3"] > a {
+    border-left-color: oklch(0.38 0.05 var(--awesome-section-hue));
+}
+
+[data-bs-theme="dark"] #toc-collapse li[data-bs-level="3"] > a.active {
+    border-left-color: oklch(0.72 0.15 var(--awesome-section-hue));
+    background-color: oklch(0.27 0.04 var(--awesome-section-hue));
 }
 
 /* Without anchor positioning, the entry keeps its own bar */
@@ -359,11 +410,11 @@ ul.navbar-nav {
    rather than pseudo-elements, as Safari stops animating those when the hue changes. Firefox moves
    them without the animation. */
 @supports (anchor-name: --toc-current) {
-    #toc-collapse .nav>li>a.active {
+    #toc-collapse li:not([data-bs-level="3"]) > a.active {
         anchor-name: --toc-current;
     }
 
-    #toc-collapse .nav>li>a.active::after {
+    #toc-collapse li:not([data-bs-level="3"]) > a.active::after {
         content: none;
     }
 
@@ -420,15 +471,23 @@ ul.navbar-nav {
     margin-top: 0px !important;
 }
 
+/* How far full-width parts (the home page's header and the section bar) reach past the content's
+   padding: to the screen's edges on phones, and to the sidebar's border beside it */
+.main-content {
+    --awesomemb-bleed-left: calc(var(--bs-gutter-x) * 0.5);
+    --awesomemb-bleed-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-bottom: 16px;
+}
+
 /* Beside the sidebar only, phones hide it (base.html) and keep Bootstrap's gutter */
 @media (min-width: 768px) {
     .main-container {
         padding-left: 0;
     }
-}
 
-.main-content {
-    padding-bottom: 16px;
+    .main-content {
+        --awesomemb-bleed-left: var(--bs-gutter-x);
+    }
 }
 
 /* The background and border are on the scrolling element, as the overscroll bounce in Chrome and

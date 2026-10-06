@@ -65,6 +65,7 @@
     </head>
 
     <body{% if page and page.is_homepage %} class="homepage"{% endif %}>
+        {%- from "macros.html" import toc_item with context %}
         {#- The page's sections by id: the h1's children, or the top headings of a page without one #}
         {%- set toc_sections = {} %}
         {%- for item in (page.toc if page else []) %}
@@ -192,7 +193,7 @@
                         <p class="navbar-toc-title">{% trans %}Table of Contents{% endtrans %}</p>
                         <ul class="nav navbar-nav">
                         {%- for entry in toc_sections.values() %}
-                            <li class="nav-item"><a href="{{ entry.url }}" class="nav-link">{{ entry.title }}</a></li>
+                            {{ toc_item(entry, 'nav navbar-nav navbar-toc-subs') }}
                         {%- endfor %}
                         </ul>
                     </div>
