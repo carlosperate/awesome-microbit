@@ -30,6 +30,9 @@ The site serves its own copy of each image, shrunk to fit 600x315 (three times t
 saved as WebP, so huge originals and links that break later don't affect it. SVGs, and formats
 Pillow can't read, still link the original.
 
+An entry can have its own image instead of its page's preview, from the `images` option. The
+site serves those as they are, and the build doesn't fetch the preview for them.
+
 `assets/awesome-list/thumbnails/` on the built site shows every card image on one page, to check
 them by eye. Nothing links to it, and it asks search engines not to index it.
 
@@ -46,13 +49,26 @@ extra:
     # Per-section styles, keyed by the heading anchor
     section-styles:
       libraries: index
+      books: shelf
+    # Images to show instead of the page's preview, keyed by the entry's link, with paths
+    # relative to mkdocs.yml
+    images:
+      "https://example.com/book": images/book.webp
 ```
+
+The site serves them unchanged from `assets/awesome-list/images/`, under their own file names, so
+two can't share a name. The build stops if one is missing or can't be read as an image, and warns
+about images no entry links to.
 
 `awesome-list.css` includes two styles:
 
 - `media`: a card per entry, with the preview image on the left. In lists narrower
   than 600px the description goes under the image instead.
 - `index`: compact rows with the site's favicon, useful for long lists of repositories.
+- `shelf`: covers side by side, like books on a shelf, with the details over the cover on hover,
+  keyboard focus, or when a theme script adds `awesome-entry--open` (on touch screens, which can't
+  hover). It only shows images from the `images` option, as a page's preview isn't always
+  its cover: an entry without one gets a plain cover with its favicon, and a build warning.
 
 Any other style name only adds its class, for the theme to style.
 
@@ -86,7 +102,12 @@ Any other style name only adds its class, for the theme to style.
 - The default CSS stretches the title link over the entry, so the whole card is
   one click target; other links in it stay clickable above it.
 - `awesome-entry__subs` holds the indented sub-entries, if any.
+- Images from the `images` option also have `width` and `height`, so the browser can lay them out
+  before they load.
+- In `shelf` lists, the header, description and sub-entries are in a
+  `<div class="awesome-entry__details">`, after the icon.
 
-The stylesheet, favicons and thumbnails are written to `site/assets/awesome-list/`. The stylesheet comes
+The stylesheet, favicons, thumbnails and the `images` option's images are written to
+`site/assets/awesome-list/`. The stylesheet comes
 first in `extra_css`, and `theme/base.html` loads `css/awesome-microbit.css` after it, to override
 its CSS custom properties or any rule.

@@ -223,3 +223,89 @@
     content: "↳ ";
     opacity: 0.6;
 }
+
+/*****************************************************************************/
+/* "shelf" style: covers side by side, with the details over the cover        */
+/*****************************************************************************/
+.awesome-list--shelf {
+    --awesome-list-cover-height: 180px;
+    --awesome-list-details-gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+.awesome-list--shelf .awesome-entry {
+    display: block;
+}
+
+.awesome-list--shelf .awesome-entry__media {
+    display: block;
+}
+
+.awesome-list--shelf .awesome-entry__media img {
+    display: block;
+    width: auto;
+    height: var(--awesome-list-cover-height);
+}
+
+.awesome-list--shelf .awesome-entry__icon {
+    display: none;
+}
+
+/* Without an image, a plain cover with the favicon */
+.awesome-list--shelf .awesome-entry[data-image="none"] .awesome-entry__icon {
+    display: flex;
+    width: calc(var(--awesome-list-cover-height) * 0.7);
+    height: var(--awesome-list-cover-height);
+}
+
+.awesome-list--shelf .awesome-entry[data-image="none"] .awesome-entry__media {
+    display: none;
+}
+
+.awesome-list--shelf .awesome-entry__details {
+    position: absolute;
+    z-index: 2;
+    bottom: calc(100% + var(--awesome-list-details-gap));
+    left: 50%;
+    width: 260px;
+    padding: 12px 14px;
+    border: 1px solid var(--awesome-list-border);
+    border-radius: var(--awesome-list-radius);
+    background: Canvas;
+    transform: translateX(-50%);
+}
+
+/* Keeps the pointer on the entry while it moves from the cover to the details */
+.awesome-list--shelf .awesome-entry__details::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: var(--awesome-list-details-gap);
+}
+
+/* Out of sight, but still read out and focusable, until the entry is hovered, focused with the
+   keyboard, or opened (a theme script can add awesome-entry--open, e.g. on a tap) */
+@media (hover: hover) {
+    .awesome-list--shelf .awesome-entry:not(:hover, .awesome-entry--open, :has(.awesome-entry__title:focus-visible)) .awesome-entry__details {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+    }
+}
+
+/* Touch screens get no hover, which would stick to the last cover tapped */
+@media (hover: none) {
+    .awesome-list--shelf .awesome-entry:not(.awesome-entry--open, :has(.awesome-entry__title:focus-visible)) .awesome-entry__details {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+    }
+}

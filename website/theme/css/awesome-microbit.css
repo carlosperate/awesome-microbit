@@ -64,7 +64,6 @@
 /* All styles                                                                */
 /*****************************************************************************/
 .awesome-list .awesome-entry {
-    background: var(--awesome-entry-bg);
     color: var(--awesome-entry-text);
     font-size: 0.9rem;
     line-height: 1.55;
@@ -116,6 +115,7 @@
 /* "media" style                                                             */
 /*****************************************************************************/
 .awesome-list--media .awesome-entry {
+    background: var(--awesome-entry-bg);
     column-gap: 18px;
     box-shadow: 0 1px 2px rgba(66, 49, 73, 0.05);
 }
@@ -173,6 +173,7 @@
 }
 
 .awesome-list--index .awesome-entry {
+    background: var(--awesome-entry-bg);
     padding: 14px 4px;
 }
 
@@ -211,6 +212,179 @@
 @media (hover: hover) {
     .awesome-list--index .awesome-entry:hover {
         background: var(--awesome-entry-hover-bg);
+    }
+}
+
+/*****************************************************************************/
+/* "shelf" style: book covers on glass shelves                               */
+/*****************************************************************************/
+/* The shelves are the list's background, one per row, as the rows all have the same height. Each
+   row has room above it for the cover's lift and below its shelf for the reflection.
+   js/awesome-microbit.js spreads the covers evenly over the rows. */
+.awesome-list--shelf {
+    --awesome-list-cover-height: 184px;
+    --shelf-lift: 8px;
+    /* Clears the lifted cover by the same 12px as the details below a cover */
+    --awesome-list-details-gap: calc(var(--shelf-lift) + 12px);
+    --shelf-above: 26px;
+    --shelf-glass: 12px;
+    --shelf-below: 36px;
+    --shelf-top: calc(var(--shelf-above) + var(--awesome-list-cover-height));
+    --shelf-glass-shine: rgba(255, 255, 255, 0.95);
+    --shelf-glass-bg: oklch(0.86 0.06 var(--awesome-section-hue) / 0.8);
+    --shelf-glass-edge: oklch(0.74 0.07 var(--awesome-section-hue) / 0.9);
+    --shelf-glass-shadow: oklch(0.45 0.08 var(--awesome-section-hue) / 0.2);
+    row-gap: calc(var(--shelf-glass) + var(--shelf-below) + var(--shelf-above));
+    column-gap: 22px;
+    padding-block: var(--shelf-above) calc(var(--shelf-glass) + 10px);
+    background: linear-gradient(to bottom,
+            transparent var(--shelf-top),
+            var(--shelf-glass-shine) var(--shelf-top) calc(var(--shelf-top) + 2px),
+            var(--shelf-glass-bg) calc(var(--shelf-top) + 2px) calc(var(--shelf-top) + var(--shelf-glass) - 1px),
+            var(--shelf-glass-edge) calc(var(--shelf-top) + var(--shelf-glass) - 1px) calc(var(--shelf-top) + var(--shelf-glass)),
+            var(--shelf-glass-shadow) calc(var(--shelf-top) + var(--shelf-glass)),
+            transparent calc(var(--shelf-top) + var(--shelf-glass) + 10px))
+        center top / calc(100% - 8px) calc(var(--shelf-top) + var(--shelf-glass) + var(--shelf-below)) repeat-y;
+}
+
+[data-bs-theme="dark"] .awesome-list--shelf {
+    --shelf-glass-shine: rgba(255, 255, 255, 0.35);
+    --shelf-glass-bg: rgba(255, 255, 255, 0.14);
+    --shelf-glass-edge: rgba(255, 255, 255, 0.24);
+    --shelf-glass-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.awesome-list--shelf .awesome-entry__media,
+.awesome-list--shelf .awesome-entry[data-image="none"] .awesome-entry__icon {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px 5px 5px 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.18), 3px 6px 12px rgba(40, 20, 50, 0.25);
+    transition: transform 0.15s ease-out;
+}
+
+/* The cover's foot reflected in the shelf: the picture js/awesome-microbit.js sets once it loads,
+   flipped, under the glass. It moves down as the cover lifts. */
+.awesome-list--shelf .awesome-entry::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + var(--shelf-glass));
+    left: 0;
+    right: 0;
+    height: calc(var(--awesome-list-cover-height) * 0.22);
+    background: var(--awesome-image, none) center bottom / 100% var(--awesome-list-cover-height) no-repeat;
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), transparent);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), transparent);
+    transform: scaleY(-1);
+    transition: transform 0.15s ease-out;
+    pointer-events: none;
+}
+
+/* Light along the spine */
+.awesome-list--shelf .awesome-entry__media::after,
+.awesome-list--shelf .awesome-entry[data-image="none"] .awesome-entry__icon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.2) 3%, rgba(0, 0, 0, 0.05) 6%, transparent 12%);
+    pointer-events: none;
+}
+
+/* A book without a cover image yet: the section's colour, with the favicon */
+.awesome-list--shelf .awesome-entry[data-image="none"] .awesome-entry__icon {
+    background: oklch(0.47 0.11 var(--awesome-section-hue));
+    font: 600 2.5rem Georgia, serif;
+    color: #fff;
+}
+
+.awesome-list--shelf .awesome-entry__icon img {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.awesome-list--shelf :is(.awesome-entry--open, :has(.awesome-entry__title:focus-visible)) :is(.awesome-entry__media, .awesome-entry__icon) {
+    transform: translateY(calc(-1 * var(--shelf-lift)));
+}
+
+.awesome-list--shelf :is(.awesome-entry--open, :has(.awesome-entry__title:focus-visible))::after {
+    transform: translateY(var(--shelf-lift)) scaleY(-1);
+}
+
+@media (hover: hover) {
+    .awesome-list--shelf .awesome-entry:hover :is(.awesome-entry__media, .awesome-entry__icon) {
+        transform: translateY(calc(-1 * var(--shelf-lift)));
+    }
+
+    .awesome-list--shelf .awesome-entry:hover::after {
+        transform: translateY(var(--shelf-lift)) scaleY(-1);
+    }
+}
+
+/* Below the cover when the navbar and section bar would hide them (js/awesome-microbit.js) */
+.awesome-list--shelf .awesome-entry[data-details="below"] {
+    --awesome-list-details-gap: 12px;
+}
+
+.awesome-list--shelf .awesome-entry[data-details="below"] .awesome-entry__details {
+    top: calc(100% + var(--awesome-list-details-gap));
+    bottom: auto;
+}
+
+.awesome-list--shelf .awesome-entry[data-details="below"] .awesome-entry__details::after {
+    top: auto;
+    bottom: 100%;
+}
+
+.awesome-list--shelf .awesome-entry__details {
+    background: var(--awesome-entry-bg);
+    box-shadow: 0 12px 30px rgba(40, 20, 50, 0.22);
+    font-size: 0.86rem;
+    line-height: 1.45;
+}
+
+/* js/awesome-microbit.js marks each row's first and last cover */
+.awesome-list--shelf .awesome-entry[data-shelf-edge="start"] .awesome-entry__details {
+    left: 0;
+    transform: none;
+}
+
+.awesome-list--shelf .awesome-entry[data-shelf-edge="end"] .awesome-entry__details {
+    left: auto;
+    right: 0;
+    transform: none;
+}
+
+.awesome-list--shelf .awesome-entry__title {
+    font-size: 0.98rem;
+}
+
+.awesome-list--shelf .awesome-entry__desc {
+    display: block;
+    margin-top: 4px;
+}
+
+.awesome-list--shelf .awesome-entry__subs {
+    margin-top: 8px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 575.98px) {
+    .awesome-list--shelf {
+        --awesome-list-cover-height: 124px;
+        --shelf-above: 18px;
+        --shelf-below: 26px;
+        column-gap: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .awesome-list--shelf .awesome-entry__media,
+    .awesome-list--shelf .awesome-entry__icon,
+    .awesome-list--shelf .awesome-entry::after {
+        transition: none;
     }
 }
 

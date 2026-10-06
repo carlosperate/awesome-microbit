@@ -30,6 +30,89 @@ document.addEventListener('pointermove', function (event) {
     entry.style.setProperty('--awesome-y', (event.clientY - rect.top) + 'px');
 }, {passive: true});
 
+// Spreads a shelf's covers evenly over the rows they wrap to, as the last row would otherwise get
+// whatever is left over. Margins on each row's first and last cover fill the row, so the next wraps,
+// and those two covers' details line up with them instead of hanging over the list's edge.
+function awesomeBalanceShelf(list) {
+    var books = [].slice.call(list.children);
+    books.forEach(function (li) {
+        li.style.marginInline = '';
+        delete li.dataset.shelfEdge;
+    });
+    var rows = new Set(books.map(function (li) { return li.offsetTop; })).size;
+    var gap = parseFloat(getComputedStyle(list).columnGap) || 0;
+    // A pixel short of full, so rounding can't push a row's last cover onto the next row
+    var room = list.clientWidth - 1;
+    var per = Math.floor(books.length / rows), extra = books.length % rows, plan = [];
+    for (var row = 0, start = 0; row < rows; row++) {
+        var end = start + per + (row < extra ? 1 : 0);
+        var width = books.slice(start, end).reduce(function (sum, li) {
+            return sum + li.getBoundingClientRect().width + gap;
+        }, -gap);
+        if (width > room) return;
+        plan.push([books[start], books[end - 1], (room - width) / 2 + 'px']);
+        start = end;
+    }
+    plan.forEach(function (row) {
+        row[1].style.marginInlineEnd = row[2];
+        row[1].dataset.shelfEdge = 'end';
+        row[0].style.marginInlineStart = row[2];
+        row[0].dataset.shelfEdge = 'start';
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var shelves = document.querySelectorAll('.awesome-list--shelf');
+    if (!shelves.length) return;
+    var width;
+    var balance = function () {
+        // Phones resize the window as their toolbars hide while scrolling, keeping its width
+        if (document.documentElement.clientWidth === width) return;
+        width = document.documentElement.clientWidth;
+        shelves.forEach(awesomeBalanceShelf);
+    };
+    balance();
+    window.addEventListener('resize', balance);
+});
+
+// A book's details go above its cover, or below it where the navbar and section bar would hide them
+function awesomePlaceDetails(entry) {
+    var hidden = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+    var open = entry.classList.contains('awesome-entry--open');
+    delete entry.dataset.details;
+    // Shown while measured, as Firefox only applies the hover after the event
+    entry.classList.add('awesome-entry--open');
+    var top = entry.querySelector('.awesome-entry__details').getBoundingClientRect().top;
+    entry.classList.toggle('awesome-entry--open', open);
+    if (top < hidden) entry.dataset.details = 'below';
+}
+
+['pointerover', 'focusin'].forEach(function (type) {
+    document.addEventListener(type, function (event) {
+        var entry = event.target.closest && event.target.closest('.awesome-list--shelf .awesome-entry');
+        if (entry && !entry.contains(event.relatedTarget)) awesomePlaceDetails(entry);
+    });
+});
+
+// Touch screens can't hover, so the first tap on a cover shows the book's details, which link to it
+// like a second tap does
+document.addEventListener('click', function (event) {
+    var cover = event.target.closest && event.target.closest('.awesome-list--shelf .awesome-entry__media');
+    if (!cover || !matchMedia('(hover: none)').matches) return;
+    var entry = cover.parentElement;
+    if (entry.classList.contains('awesome-entry--open')) return;
+    event.preventDefault();
+    entry.classList.add('awesome-entry--open');
+    awesomePlaceDetails(entry);
+});
+
+// A tap anywhere else closes them
+document.addEventListener('pointerdown', function (event) {
+    document.querySelectorAll('.awesome-entry--open').forEach(function (entry) {
+        if (!entry.contains(event.target)) entry.classList.remove('awesome-entry--open');
+    });
+});
+
 // The open menu pushes the page down, so close it before jumping to a table of contents entry
 document.addEventListener('click', function (event) {
     var link = event.target.closest && event.target.closest('.navbar-toc a');

@@ -36,6 +36,18 @@ python mkdocs-build.py
 python -m http.server 8000 --directory site
 ```
 
+## Book covers
+
+The Books section shows each book's cover on a shelf. The covers are prepared by hand, as a page's
+preview picture isn't always the cover, so a new book needs one:
+
+1. Find the cover on the publisher's page, or on Open Library, as large as possible.
+2. Crop it to the cover if it's part of a bigger picture, and resize it to 400px tall.
+3. Save it in `images/` as WebP (the smallest), named after the book, e.g. `images/micro-bit-recipes.webp`.
+4. Add the book's link and the file under `images:` in `mkdocs.yml`, in the README's order.
+
+Until then the book gets a plain cover, and the build warns about it.
+
 ## Test
 
 ```bash
