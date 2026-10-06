@@ -4,15 +4,15 @@ on:
   push:
     branches: '*'
     paths:
-    - 'hooks/**'
-    - 'pyproject.toml'
-    - 'uv.lock'
+    - 'website/hooks/**'
+    - 'website/pyproject.toml'
+    - 'website/uv.lock'
     - '.github/workflows/test-hooks.yml'
   pull_request:
     paths:
-    - 'hooks/**'
-    - 'pyproject.toml'
-    - 'uv.lock'
+    - 'website/hooks/**'
+    - 'website/pyproject.toml'
+    - 'website/uv.lock'
     - '.github/workflows/test-hooks.yml'
 
 jobs:
@@ -30,4 +30,5 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Run tests
+        working-directory: website
         run: uv run --locked pytest -v

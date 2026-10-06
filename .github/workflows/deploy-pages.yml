@@ -24,11 +24,12 @@ jobs:
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
       - name: Build site
+        working-directory: website
         run: uv run --locked python mkdocs-build.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: site
+          path: website/site
 
   deploy:
     name: Deploy

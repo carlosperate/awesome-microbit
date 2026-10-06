@@ -6,6 +6,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
+# The pages stay at the repository root, where GitHub shows them
+PAGES_DIR = ROOT.parent
 SOURCE_DIR = ROOT / "site_src"
 SOURCE_FILES = (
     "README.md",
@@ -21,7 +23,7 @@ def main() -> int:
     SOURCE_DIR.mkdir(parents=True, exist_ok=True)
 
     for file_name in SOURCE_FILES:
-        source_path = ROOT / file_name
+        source_path = PAGES_DIR / file_name
         if not source_path.is_file():
             print(f"Missing source file: {source_path}", file=sys.stderr)
             exit(1)

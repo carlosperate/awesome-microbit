@@ -1,5 +1,8 @@
 # Developer Documentation
 
+Run these commands from this `website/` folder. The site's pages, `README.md`, `contributing.md`
+and `code-of-conduct.md`, are at the repository root.
+
 ## Install
 
 Install the dependencies in a `.venv`:
