@@ -158,8 +158,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Scrolls the sidebar, which scrolls on its own, when the current section's subsections open below
-// its visible part. Only then, as it would otherwise move the entries as the page scrolls.
+// Scrolls the sidebar, which scrolls on its own, when the current section or its subsections are
+// outside its visible part. Only then, as it would otherwise move the entries as the page scrolls.
 document.addEventListener('DOMContentLoaded', function () {
     var sidebar = document.querySelector('.bs-sidebar'), heading = null, current = null;
     if (!sidebar) return;
@@ -169,8 +169,6 @@ document.addEventListener('DOMContentLoaded', function () {
         var link = sidebar.querySelector('li:not([data-bs-level="3"]) > .nav-link.active');
         if (!link || link === current) return;
         current = link;
-        // Only sections with subsections have a list after their link
-        if (!link.nextElementSibling) return;
         var item = link.parentElement.getBoundingClientRect(), view = sidebar.getBoundingClientRect();
         var room = 16, by = 0;
         // The whole item if it fits, otherwise its top

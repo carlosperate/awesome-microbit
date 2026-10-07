@@ -95,6 +95,15 @@ a code {
     transition: color 0.2s ease;
 }
 
+/* Clear of descenders, rather than touching them */
+a {
+    text-underline-offset: 0.18em;
+}
+
+::selection {
+    background-color: color-mix(in srgb, var(--awesomemb-colour-3) 40%, transparent);
+}
+
 a:hover,
 a:focus {
     color: var(--awesomemb-link-hover) !important;

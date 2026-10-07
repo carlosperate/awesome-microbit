@@ -363,6 +363,9 @@ class _EntryTreeprocessor(Treeprocessor):
                 found = True
         if found:
             _add_class(ul, "awesome-list")
+            # Gallery cards are media cards in columns, so they get the media rules too
+            if style == "gallery":
+                _add_class(ul, "awesome-list--media")
             _add_class(ul, f"awesome-list--{style}")
 
     def _process_entry(self, li, style):

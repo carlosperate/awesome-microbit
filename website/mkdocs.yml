@@ -3,7 +3,6 @@ site_description: "A curated list of resources for the BBC micro:bit: editors, l
 site_author: Carlos Pereira Atencio
 site_url: https://awesomemicrobit.embeddedlog.com
 repo_url: https://github.com/carlosperate/awesome-microbit
-copyright: "©️ 2026 Awesome micro:bit contributors"
 site_dir: site/
 # This directory is created by the build.py script
 docs_dir: site_src/
@@ -18,13 +17,20 @@ theme:
   # Sections and their subsections in the sidebar
   navigation_depth: 3
   highlightjs: false
-  # The section that content.html shows as colour tiles instead of its list, by heading anchor
-  contents_tiles: contents
+  # The home page's Contents tiles after its header (contents-tiles.html), one per section with
+  # entries. The README's own Contents is under hidden_sections, below.
+  contents_tiles:
+    id: contents
+    title: "🗂️ Contents"
   # The home page's header (hero.html), in place of the README's title, badges, logo and links
   hero:
     lead: 'A curated list of resources for the <a href="https://microbit.org">BBC micro:bit</a>, a tiny programmable computer designed to make learning and teaching easy and fun!'
     about: 'The micro:bit board has a Bluetooth microcontroller, USB interface, accelerometer, magnetometer, light and temperature sensors, 5x5 LED matrix, buttons, and GPIO accessible via the edge connector.'
     bluesky: https://bsky.app/profile/awesomemicrobit.bsky.social
+  # The panel at the end of the home page (end.html), after the list
+  end:
+    title: "Something missing?"
+    text: "Help the list grow! Awesome micro:bit is curated by its community. Suggest a resource, or follow us for new entries."
 
 nav:
   - Home: README.md
@@ -33,15 +39,19 @@ nav:
     - Code of Conduct: code-of-conduct.md
 
 hooks:
+  - hooks/hidden_sections.py
   - hooks/github_anchors.py
   - hooks/awesome_list.py
-  - hooks/contents_tiles.py
   - hooks/heading_emoji.py
 
 # Empty, as leaving it out turns on MkDocs' search plugin
 plugins: []
 
 extra:
+  # README sections (## headings) the site leaves out, by anchor (hooks/hidden_sections.py)
+  hidden_sections:
+    - contents
+    - license
   # Options for hooks/awesome_list.py
   awesome_list:
     debug-log: false
@@ -64,7 +74,14 @@ extra:
       projects-using-microbit-as-a-dev-board: index
       interface-chip: index
       hardware: index
+      project-collections: index
+      article-collections: index
       community: index
+      # "gallery" shows the cards in columns, with their pictures on top
+      microbit-live: gallery
+      other-conference-talks: gallery
+      3d-printing: gallery
+      posters: gallery
       # "shelf" is a special style designed to display book covers on shelves
       books: shelf
     # Images to show instead of a link's own preview, keyed by link.

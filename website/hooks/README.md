@@ -2,12 +2,12 @@
 
 Loaded from the `hooks:` list in `mkdocs.yml`.
 
+- **`hidden_sections.py`**: Leaves the sections (`##` headings) listed under
+  `extra: hidden_sections:` (by heading anchor) out of the site, along with their subsections.
 - **`github_anchors.py`**: Rewrites the README's in-page links from GitHub's heading anchors
   (`#-cad`) to the ids MkDocs generates (`#cad`).
 - **`awesome_list.py`**: Turns each awesome-list entry into a card with the linked page's
   preview image and favicon. Its default stylesheet is `awesome-list.css`.
-- **`contents_tiles.py`**: Warns when the section the theme shows as tiles (`contents_tiles`
-  under `theme:`) has anything besides its list, as the tiles leave it out.
 - **`heading_emoji.py`**: Wraps the emoji a heading starts with in a span hidden from screen
   readers, which announce them by name.
 
@@ -62,10 +62,13 @@ The site serves them unchanged from `assets/awesome-list/images/`, under their o
 two can't share a name. The build stops if one is missing or can't be read as an image, and warns
 about images no entry links to.
 
-`awesome-list.css` includes two styles:
+`awesome-list.css` includes these styles:
 
 - `media`: a card per entry, with the preview image on the left. In lists narrower
   than 600px the description goes under the image instead.
+- `gallery`: the same cards as `media` (its lists get both classes), in columns with the preview
+  image on top, for sections where the pictures matter most. Lists too narrow for two columns
+  use the `media` layout.
 - `index`: compact rows with the site's favicon, useful for long lists of repositories.
 - `shelf`: covers side by side, like books on a shelf, with the details over the cover on hover,
   keyboard focus, or when a theme script adds `awesome-entry--open` (on touch screens, which can't

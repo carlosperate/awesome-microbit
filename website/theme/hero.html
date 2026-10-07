@@ -1,6 +1,7 @@
 {#- The home page's header, in place of what the README has before its first section (its title,
     badges, logo and links). Keeps the README's title and its id, for the sidebar's link, and takes
     the text and the Bluesky link from `hero` under `theme:` in mkdocs.yml. #}
+{%- from "macros.html" import add_resource_button, bluesky_button with context %}
 {%- set hero = config.theme.hero %}
 {%- set title = page.toc|first %}
 <header class="awesome-hero">
@@ -14,8 +15,8 @@
         </p>
         <div class="awesome-hero__actions">
             <a class="awesome-hero__button awesome-hero__button--main" href="{{ config.repo_url }}"><i class="fa-brands fa-github" aria-hidden="true"></i> Watch on GitHub</a>
-            <a class="awesome-hero__button" href="{{ hero.bluesky }}"><span aria-hidden="true">🦋</span> <span><span class="awesome-hero__wide">Follow on </span>Bluesky</span></a>
-            <a class="awesome-hero__button" href="{{ 'contributing/'|url }}#adding-something-to-an-awesome-list"><i class="fa-solid fa-plus" aria-hidden="true"></i> Add a resource</a>
+            {{- bluesky_button(hero.bluesky) }}
+            {{- add_resource_button() }}
         </div>
     </div>
     <p class="awesome-hero__about">{{ hero.about }}</p>

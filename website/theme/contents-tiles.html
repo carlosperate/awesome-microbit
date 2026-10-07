@@ -1,13 +1,13 @@
 {#- A tile for each section with entries, named from its heading so the link matches the MkDocs id,
-    and numbered like content.html's sections for the same colour. Needs `parts` and `tiles_id`
-    (content.html) and `toc_sections` (base.html). #}
+    and numbered like content.html's sections for the same colour. Needs `parts` and `offset`
+    (content.html), and `tiles` and `toc_sections` (base.html). #}
 {%- from "macros.html" import title_emoji, without_emoji %}
-<nav class="awesome-contents" aria-labelledby="{{ tiles_id }}">
+<nav class="awesome-contents" aria-labelledby="{{ tiles.id }}">
 {%- for part in parts[1:] %}
 {%- set entry = toc_sections.get(part.split('"', 2)[1]) if part.startswith(' id="') %}
 {%- set count = part.count('class="awesome-entry"') %}
 {%- if entry and count %}
-    <a class="awesome-contents__tile" href="{{ entry.url }}" style="--awesome-section: {{ loop.index }}">
+    <a class="awesome-contents__tile" href="{{ entry.url }}" style="--awesome-section: {{ loop.index + offset }}">
         <span class="awesome-contents__emoji" aria-hidden="true">{{ title_emoji(entry.title) }}</span>
         <span class="awesome-contents__name">{{ without_emoji(entry.title) }}</span>
         <span class="awesome-contents__count">{{ count }} resource{{ 's' if count != 1 }}</span>

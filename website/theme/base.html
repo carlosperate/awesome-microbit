@@ -74,6 +74,11 @@
         {%- set _ = toc_sections.update({entry.id: entry}) %}
         {%- endfor %}
         {%- endfor %}
+        {#- The Contents tiles (content.html), and their entry first among the sections. A plain
+            string is just the id, with the heading named after it. #}
+        {%- set tiles = config.theme.contents_tiles if page and page.is_homepage and 'class="awesome-list' in page.content %}
+        {%- if tiles is string %}{% set tiles = {'id': tiles, 'title': tiles|replace('-', ' ')|capitalize} %}{% endif %}
+        {%- set contents_entry = {'title': tiles.title, 'url': '#' ~ tiles.id, 'level': 2, 'children': []} if tiles %}
         <div class="navbar fixed-top navbar-expand-lg navbar-{% if config.theme.nav_style == "light" %}light{% else %}dark{% endif %} bg-{{ config.theme.nav_style }}">
             <div class="container">
 
@@ -193,7 +198,7 @@
                     <div class="navbar-toc d-md-none">
                         <p class="navbar-toc-title">{% trans %}Table of Contents{% endtrans %}</p>
                         <ul class="nav navbar-nav">
-                        {%- for entry in toc_sections.values() %}
+                        {%- for entry in ([contents_entry] if contents_entry else []) + toc_sections.values()|list %}
                             {{ toc_item(entry, 'nav navbar-nav navbar-toc-subs') }}
                         {%- endfor %}
                         </ul>
@@ -221,7 +226,12 @@
             {%- if config.copyright %}
                 <p>{{ config.copyright }}</p>
             {%- endif %}
-            <p>{% trans mkdocs_link='<a href="https://www.mkdocs.org/">MkDocs</a>' %}Documentation built with {{ mkdocs_link }}.{% endtrans %}</p>
+            <p>
+              This project is not endorsed, sponsored or associated with the BBC. "BBC", "micro:bit", and their logos are trademarks of the BBC.
+            </p>
+            <p>
+              💜 Thanks to all the <a href="https://github.com/carlosperate/awesome-microbit/graphs/contributors?all=1">Awesome micro:bit contributors</a>.<br>
+            </p>
           {%- endblock %}
         </footer>
 

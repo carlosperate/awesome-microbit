@@ -6,10 +6,12 @@
 </div>
 {% endif %}
 
-{#- Numbers each h2 section of the list pages, so css/awesome-microbit.css can colour each one #}
+{#- Numbers each h2 section of the list pages, so css/awesome-microbit.css can colour each one.
+    The home page's Contents tiles are the first, so the sections keep their colours. #}
 {%- if 'class="awesome-list' in page.content %}
+{%- from "macros.html" import title_emoji, without_emoji %}
 {%- set parts = page.content.split('<h2') %}
-{%- set tiles_id = config.theme.contents_tiles %}
+{%- set offset = 1 if tiles else 0 %}
 {#- The current section, under the navbar from the first section on (js/awesome-microbit.js) #}
 <div class="awesome-where"><a class="awesome-where__bar" href="#">
     <span class="awesome-where__name"></span><span class="awesome-where__sub"></span><span class="awesome-where__count"></span>
@@ -20,16 +22,19 @@
 {%- else %}
 {{ parts[0] }}
 {%- endif %}
-{%- for part in parts[1:] %}
-<section class="awesome-section" style="--awesome-section: {{ loop.index }}"><h2
-{%- if tiles_id and part.startswith(' id="' ~ tiles_id ~ '"') %}
-{#- Keeps the heading, the tiles replace the rest of the section #}
-{{- part.split('</h2>')[0] }}</h2>
+{%- if tiles %}
+{%- set emoji = title_emoji(tiles.title) %}
+<section class="awesome-section" style="--awesome-section: 1"><h2 id="{{ tiles.id }}">
+    {%- if emoji %}<span class="heading-emoji" aria-hidden="true">{{ emoji }}</span> {% endif %}{{ without_emoji(tiles.title) }}</h2>
 {% include "contents-tiles.html" %}
-{%- else %}
-{{- part }}
-{%- endif %}</section>
+</section>
+{%- endif %}
+{%- for part in parts[1:] %}
+<section class="awesome-section" style="--awesome-section: {{ loop.index + offset }}"><h2{{ part }}</section>
 {%- endfor %}
+{%- if page.is_homepage and config.theme.end %}
+{% include "end.html" %}
+{%- endif %}
 {%- else %}
 {{ page.content }}
 {%- endif %}

@@ -15,8 +15,8 @@
 {#- A table of contents entry, for the sidebar and the phone menu, with its children down to
     `navigation_depth`. Sections hide their emoji from screen readers, and subsections leave out the
     one they repeat from their section, which js/awesome-microbit.js reads from `data-emoji`.
-    Needs `import ... with context`, for `config`. #}
-{%- macro toc_item(item, list_class='nav flex-column') %}
+    `first` is an extra entry before its children. Needs `import ... with context`, for `config`. #}
+{%- macro toc_item(item, list_class='nav flex-column', first=none) %}
 {%- if item.level <= config.theme.navigation_depth %}
 {%- set sub = item.level > 2 %}
 {%- set emoji = title_emoji(item.title) %}
@@ -24,13 +24,24 @@
     {%- if sub %} data-emoji="{{ emoji }}"{% endif %}>
     {%- if emoji and not sub %}<span class="toc-emoji" aria-hidden="true">{{ emoji }}</span>{% endif -%}
     {{ without_emoji(item.title) }}</a>
-{%- if item.children and item.level < config.theme.navigation_depth %}
+{%- set children = ([first] if first else []) + item.children|list %}
+{%- if children and item.level < config.theme.navigation_depth %}
 <ul class="{{ list_class }}">
-{%- for child in item.children %}
+{%- for child in children %}
 {{- toc_item(child, list_class) }}
 {%- endfor %}
 </ul>
 {%- endif %}
 </li>
 {%- endif %}
+{%- endmacro %}
+
+{#- Buttons in both the header (hero.html) and the end panel (end.html). Need `import ... with
+    context`, for the `url` filter. #}
+{%- macro add_resource_button(main=false) %}
+<a class="awesome-hero__button{{ ' awesome-hero__button--main' if main }}" href="{{ 'contributing/'|url }}#adding-something-to-an-awesome-list"><i class="fa-solid fa-plus" aria-hidden="true"></i> Add a resource</a>
+{%- endmacro %}
+
+{%- macro bluesky_button(href) %}
+<a class="awesome-hero__button" href="{{ href }}"><span aria-hidden="true">🦋</span> <span><span class="awesome-hero__wide">Follow on </span>Bluesky</span></a>
 {%- endmacro %}

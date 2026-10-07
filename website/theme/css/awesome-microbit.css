@@ -112,7 +112,7 @@
 }
 
 /*****************************************************************************/
-/* "media" style                                                             */
+/* "media" and "gallery" styles                                              */
 /*****************************************************************************/
 .awesome-list--media .awesome-entry {
     background: var(--awesome-entry-bg);
@@ -566,7 +566,8 @@
 /* A band from the sidebar to the edge of the page, under the navbar: near white, with a pink glow
    behind the micro:bit. The title's gradient spans the words only, so no letter is too light. Links
    are darker than the site's, too faint on the band, through extend.css's link tokens. */
-.awesome-hero {
+.awesome-hero,
+.awesome-end {
     --hero-band: linear-gradient(180deg, oklch(0.99 0.006 318deg), oklch(0.975 0.014 300deg));
     --hero-glow: oklch(0.92 0.07 350deg);
     --hero-muted: oklch(0.45 0.03 318deg);
@@ -579,7 +580,11 @@
     --hero-button-hover-text: oklch(0.36 0.11 318deg);
     --hero-main: #625974;
     --hero-main-hover: #4a4159;
+    --hero-rule: oklch(0.92 0.03 318deg);
     --awesomemb-link: oklch(0.45 0.13 318deg);
+}
+
+.awesome-hero {
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 10px 44px;
@@ -588,11 +593,11 @@
     padding: 56px 48px 46px 40px;
     overflow: hidden;
     container-type: inline-size;
-    border-bottom: 1px solid oklch(0.92 0.03 318deg);
+    border-bottom: 1px solid var(--hero-rule);
     background: radial-gradient(circle at 13% 46%, var(--hero-glow), transparent 38%), var(--hero-band);
 }
 
-[data-bs-theme="dark"] .awesome-hero {
+[data-bs-theme="dark"] :is(.awesome-hero, .awesome-end) {
     --hero-band: linear-gradient(180deg, oklch(0.22 0.02 318deg), oklch(0.19 0.02 300deg));
     --hero-glow: oklch(0.36 0.1 350deg);
     --hero-muted: var(--bs-secondary-color);
@@ -605,9 +610,9 @@
     --hero-button-hover-text: oklch(0.93 0.04 318deg);
     --hero-main: oklch(0.55 0.1 318deg);
     --hero-main-hover: oklch(0.47 0.1 318deg);
+    --hero-rule: oklch(0.32 0.04 318deg);
     /* The site's own, which reads well on the dark band */
     --awesomemb-link: inherit;
-    border-bottom-color: oklch(0.32 0.04 318deg);
 }
 
 .awesome-hero__mascot {
@@ -811,6 +816,67 @@
 }
 
 /*****************************************************************************/
+/* Panel at the end of the home page (end.html)                              */
+/*****************************************************************************/
+/* In the header's colours, with its buttons */
+.awesome-end {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 6px 28px;
+    align-items: center;
+    margin-top: 40px;
+    padding: 32px 36px;
+    container-type: inline-size;
+    border: 1px solid var(--hero-rule);
+    border-radius: 18px;
+    background: radial-gradient(circle at 10% 50%, var(--hero-glow), transparent 32%), var(--hero-band);
+}
+
+.awesome-end__mascot {
+    grid-row: span 3;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 8px 12px rgba(60, 20, 60, 0.25));
+}
+
+/* Not a section of the list, so none of extend.css's h2 rule and spacing */
+.awesome-end__title {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.awesome-end__text {
+    margin: 0;
+    color: var(--hero-muted);
+}
+
+.awesome-end .awesome-hero__actions {
+    margin-top: 10px;
+}
+
+@media (max-width: 575.98px) {
+    .awesome-end {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 26px 18px;
+        text-align: center;
+        background: radial-gradient(circle at 50% 70px, var(--hero-glow), transparent 120px), var(--hero-band);
+    }
+
+    .awesome-end__mascot {
+        grid-row: auto;
+        width: 110px;
+    }
+
+    .awesome-end .awesome-hero__actions {
+        justify-content: center;
+    }
+}
+
+/*****************************************************************************/
 /* Current section bar (content.html)                                        */
 /*****************************************************************************/
 /* Sticks under the navbar (js/base.js sets its top) without taking up space, so it stays out of
@@ -885,6 +951,11 @@
 .awesome-where__name {
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* The emoji's font leaves the space after it too narrow at this size */
+.awesome-where__name .heading-emoji {
+    margin-right: 0.25em;
 }
 
 /* In a subsection, the section's name stays whole and the subsection's gives way */
@@ -974,10 +1045,14 @@
 
 /* Black and grey emoji (©️, 🎓, 🛠️) vanish on the dark surfaces, so they sit on a light chip */
 [data-bs-theme="dark"] :is(.awesome-contents__emoji, .toc-emoji, .heading-emoji) {
-    display: inline-block;
+    display: inline-grid;
+    place-items: center;
     /* The tiles' emoji is a grid item, which phones would stretch across the tile */
     justify-self: start;
-    padding: 0.14em;
+    width: 1.3em;
+    height: 1.3em;
+    /* Emoji fonts draw high in their line */
+    padding-top: 0.08em;
     border-radius: 0.3em;
     background: oklch(0.82 0.04 var(--awesome-section-hue));
     line-height: 1;

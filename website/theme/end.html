@@ -1,0 +1,22 @@
+{#- The panel at the end of the home page, after the list: its text is `end` under `theme:` in
+    mkdocs.yml, the links are the header's (hero.html). #}
+{%- from "macros.html" import add_resource_button, bluesky_button with context %}
+{%- set end = config.theme.end %}
+<section class="awesome-end">
+    <img class="awesome-end__mascot" src="{{ 'img/mascot.webp'|url }}" width="560" height="375" alt="">
+    {%- if end.title %}
+    <h2 class="awesome-end__title">{{ end.title }}</h2>
+    {%- endif %}
+    {%- if end.text %}
+    <p class="awesome-end__text">{{ end.text }}</p>
+    {%- endif %}
+    <div class="awesome-hero__actions">
+        {{- add_resource_button(main=true) }}
+        {%- if config.theme.hero and config.theme.hero.bluesky %}
+        {{- bluesky_button(config.theme.hero.bluesky) }}
+        {%- endif %}
+        {%- if tiles %}
+        <a class="awesome-hero__button" href="#{{ tiles.id }}"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+        {%- endif %}
+    </div>
+</section>

@@ -96,6 +96,7 @@
 /*****************************************************************************/
 /* "media" style: a card per entry, with the preview image on the left        */
 /*****************************************************************************/
+/* Gallery lists also have this class, so these rules style their cards too */
 .awesome-list--media {
     display: flex;
     flex-direction: column;
@@ -180,6 +181,31 @@
             "media header"
             "desc desc"
             "subs subs";
+        row-gap: 8px;
+    }
+}
+
+/*****************************************************************************/
+/* "gallery" style: media cards with the preview image on top, in columns     */
+/*****************************************************************************/
+/* Columns of at least 220px, and never more than three */
+.awesome-list--gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, max(220px, (100% - 24px) / 3)), 1fr));
+}
+
+/* From two columns (2 x 220px and the gap), narrower lists keep the media layout */
+@container (min-width: 452px) {
+    .awesome-list--gallery .awesome-entry {
+        --awesome-list-media-width: 200px;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto 1fr;
+        grid-template-areas:
+            "media"
+            "header"
+            "desc"
+            "subs";
+        align-content: start;
         row-gap: 8px;
     }
 }

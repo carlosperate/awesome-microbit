@@ -9,7 +9,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
         {%- for item in page.toc %}
-            {{ toc_item(item) }}
+            {{ toc_item(item, first=contents_entry if item.level == 1) }}
         {%- endfor %}
         </ul>
         {#- The current entry's background and bar, which glide between entries (css/extend.css) #}
