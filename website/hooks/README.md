@@ -8,6 +8,8 @@ Loaded from the `hooks:` list in `mkdocs.yml`.
   preview image and favicon. Its default stylesheet is `awesome-list.css`.
 - **`contents_tiles.py`**: Warns when the section the theme shows as tiles (`contents_tiles`
   under `theme:`) has anything besides its list, as the tiles leave it out.
+- **`heading_emoji.py`**: Wraps the emoji a heading starts with in a span hidden from screen
+  readers, which announce them by name.
 
 The tests are in `tests/`:
 

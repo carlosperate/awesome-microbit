@@ -65,6 +65,7 @@
     </head>
 
     <body{% if page and page.is_homepage %} class="homepage"{% endif %}>
+        <a class="skip-link" href="#main-content">Skip to content</a>
         {%- from "macros.html" import toc_item with context %}
         {#- The page's sections by id: the h1's children, or the top headings of a page without one #}
         {%- set toc_sections = {} %}
@@ -209,7 +210,7 @@
             <div class="row">
                 {%- block content %}
                     <div class="col-md-3 main-toc d-none d-md-block">{% include "toc.html" %}</div>
-                    <div class="col-md-9 main-content" role="main">{% include "content.html" %}</div>
+                    <div class="col-md-9 main-content" id="main-content" tabindex="-1" role="main">{% include "content.html" %}</div>
                 {%- endblock %}
             </div>
         </div>

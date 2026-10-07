@@ -206,7 +206,8 @@ document.addEventListener('DOMContentLoaded', function () {
         bar.href = '#' + heading.id;
         if (hue) bar.style.setProperty('--awesome-section-hue', hue);
         else bar.style.removeProperty('--awesome-section-hue');
-        name.textContent = section.querySelector('h2').textContent;
+        // A copy keeps the emoji's span (hooks/heading_emoji.py), hidden from screen readers
+        name.replaceChildren.apply(name, section.querySelector('h2').cloneNode(true).childNodes);
         // The current subsection's link, which the scrollspy has marked, has its name without its
         // section's emoji (macros.html), which phones show in front of it instead of the section
         var subLink = document.querySelector('[data-bs-level="3"] > .nav-link.active');

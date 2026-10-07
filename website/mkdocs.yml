@@ -36,6 +36,7 @@ hooks:
   - hooks/github_anchors.py
   - hooks/awesome_list.py
   - hooks/contents_tiles.py
+  - hooks/heading_emoji.py
 
 # Empty, as leaving it out turns on MkDocs' search plugin
 plugins: []

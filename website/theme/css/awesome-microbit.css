@@ -423,10 +423,8 @@
     text-decoration: none;
 }
 
-/* The colour emoji, as Inter would draw symbols like ©️ in the text colour */
 .awesome-contents__emoji {
     grid-area: emoji;
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
     font-size: 1.45rem;
     line-height: 1;
 }
@@ -914,8 +912,10 @@
     }
 
     .awesome-where__sub:not(:empty)::before {
-        content: attr(data-emoji) ' ';
-        margin-right: 0;
+        content: attr(data-emoji);
+        /* Empty alt text, so screen readers skip the emoji, where browsers support it */
+        content: attr(data-emoji) / '';
+        margin-right: 0.35em;
         opacity: 1;
     }
 }
@@ -948,3 +948,38 @@
         transition: none;
     }
 }
+
+
+/*****************************************************************************/
+/* Section emoji                                                             */
+/*****************************************************************************/
+/* In the tiles, the sidebar, the phone menu and the headings (hooks/heading_emoji.py). The colour
+   emoji, as Inter would draw symbols like ©️ in the text colour. */
+.awesome-contents__emoji,
+.toc-emoji,
+.heading-emoji {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+
+/* Wrapped names hang after the emoji, which would otherwise wrap onto a line of its own */
+:is(#toc-collapse, .navbar-toc) .nav-link:has(> .toc-emoji) {
+    display: flex;
+    align-items: first baseline;
+}
+
+.toc-emoji {
+    flex: none;
+    margin-right: 0.5em;
+}
+
+/* Black and grey emoji (©️, 🎓, 🛠️) vanish on the dark surfaces, so they sit on a light chip */
+[data-bs-theme="dark"] :is(.awesome-contents__emoji, .toc-emoji, .heading-emoji) {
+    display: inline-block;
+    /* The tiles' emoji is a grid item, which phones would stretch across the tile */
+    justify-self: start;
+    padding: 0.14em;
+    border-radius: 0.3em;
+    background: oklch(0.82 0.04 var(--awesome-section-hue));
+    line-height: 1;
+}
+

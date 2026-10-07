@@ -13,13 +13,17 @@
 {%- endmacro %}
 
 {#- A table of contents entry, for the sidebar and the phone menu, with its children down to
-    `navigation_depth`. Subsections leave out the emoji they repeat from their section, which
-    js/awesome-microbit.js reads from `data-emoji`. Needs `import ... with context`, for `config`. #}
+    `navigation_depth`. Sections hide their emoji from screen readers, and subsections leave out the
+    one they repeat from their section, which js/awesome-microbit.js reads from `data-emoji`.
+    Needs `import ... with context`, for `config`. #}
 {%- macro toc_item(item, list_class='nav flex-column') %}
 {%- if item.level <= config.theme.navigation_depth %}
 {%- set sub = item.level > 2 %}
+{%- set emoji = title_emoji(item.title) %}
 <li class="nav-item" data-bs-level="{{ item.level }}"><a href="{{ item.url }}" class="nav-link"
-    {%- if sub %} data-emoji="{{ title_emoji(item.title) }}"{% endif %}>{{ without_emoji(item.title) if sub else item.title }}</a>
+    {%- if sub %} data-emoji="{{ emoji }}"{% endif %}>
+    {%- if emoji and not sub %}<span class="toc-emoji" aria-hidden="true">{{ emoji }}</span>{% endif -%}
+    {{ without_emoji(item.title) }}</a>
 {%- if item.children and item.level < config.theme.navigation_depth %}
 <ul class="{{ list_class }}">
 {%- for child in item.children %}

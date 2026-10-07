@@ -104,6 +104,31 @@ a:focus {
     font-weight: bold;
 }
 
+/* Out of sight until keyboard focus, then over the fixed navbar */
+.skip-link {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 1040;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: var(--awesomemb-content-bg);
+    font-weight: 600;
+    text-decoration: none;
+    transform: translateY(calc(-100% - 16px));
+}
+
+.skip-link:focus {
+    transform: none;
+    outline: 2px solid var(--awesomemb-colour-4);
+    outline-offset: 2px;
+}
+
+/* The skip link's target, which takes focus only so the next Tab starts there */
+#main-content:focus {
+    outline: none;
+}
+
 /* Small enough below 992px for the site name to fit on one line */
 h1 {
     font-size: clamp(2.25rem, 9vw, 3.25rem);
@@ -208,9 +233,8 @@ ul.navbar-nav {
     transition: text-shadow 0.25s ease;
 }
 
-/* The glow matches the menu hover */
-.navbar-brand:hover,
-.navbar-brand:focus-visible {
+/* The glow matches the menu hover, keyboard focus gets the outline below instead */
+.navbar-brand:hover {
     text-shadow: 0 0 6px var(--awesomemb-colour-4), 0 0 14px var(--awesomemb-colour-4);
 }
 
@@ -242,6 +266,19 @@ ul.navbar-nav {
 .navbar .dropdown-item:hover {
     background-color: var(--awesomemb-colour-4);
     color: #fff !important;
+}
+
+/* Keyboard focus as a white outline, Bootstrap's faint glow barely shows on the purple */
+.navbar :is(.navbar-brand, .nav-link, .navbar-toggler):focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.navbar .dropdown-item:focus-visible {
+    outline: 2px solid var(--awesomemb-colour-4);
+    outline-offset: -2px;
 }
 
 .navbar .navbar-collapse,
@@ -342,6 +379,16 @@ ul.navbar-nav {
 #toc-collapse .nav>li>a:focus-visible {
     background-color: var(--awesomemb-toc-hover-bg);
     color: var(--awesomemb-toc-link-hover) !important;
+}
+
+#toc-collapse .nav>li>a:focus-visible {
+    outline: 2px solid oklch(0.6 0.12 var(--awesome-section-hue));
+    outline-offset: -2px;
+    box-shadow: none;
+}
+
+[data-bs-theme="dark"] #toc-collapse .nav>li>a:focus-visible {
+    outline-color: oklch(0.75 0.12 var(--awesome-section-hue));
 }
 
 /* The current section in its colour (js/awesome-microbit.js), or the site's purple */
