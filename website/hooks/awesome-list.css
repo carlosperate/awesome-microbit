@@ -188,10 +188,10 @@
 /*****************************************************************************/
 /* "gallery" style: media cards with the preview image on top, in columns     */
 /*****************************************************************************/
-/* Columns of at least 220px, and never more than three */
+/* Columns of at least 220px, and never more than four */
 .awesome-list--gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, max(220px, (100% - 24px) / 3)), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, max(220px, (100% - 36px) / 4)), 1fr));
 }
 
 /* From two columns (2 x 220px and the gap), narrower lists keep the media layout */

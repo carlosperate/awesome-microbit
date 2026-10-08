@@ -36,6 +36,15 @@ python mkdocs-build.py
 python -m http.server 8000 --directory site
 ```
 
+## CSS Screen sizes
+
+- Phone: below 576px
+- Small tablet: from 576px to 767px
+- Tablet: from 768px to 991px 
+- Small desktop: from 992px to 1199px
+- Desktop: from 1200px to 1399px
+- Large desktop: from 1400px
+
 ## Book covers
 
 The Books section shows each book's cover on a shelf. The covers are prepared by hand, as a page's

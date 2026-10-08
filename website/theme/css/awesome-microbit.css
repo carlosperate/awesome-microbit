@@ -71,8 +71,9 @@
 
 /* extend.css forces the colour and weight of every link */
 .awesome-list .awesome-entry__title {
+    font-family: var(--awesomemb-title-font);
     font-size: 1.05rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--awesome-entry-title) !important;
     text-decoration: none;
 }
@@ -114,9 +115,20 @@
 /*****************************************************************************/
 /* "media" and "gallery" styles                                              */
 /*****************************************************************************/
+/* Just tall enough (99.5px) for a title and three lines of description, which most cards fit in */
+.awesome-list--media {
+    --awesome-list-media-width: 190px;
+}
+
+/* Galleries keep the hook's 12px, which their columns and layout switch are worked out from */
+.awesome-list--media:not(.awesome-list--gallery) {
+    gap: 8px;
+}
+
 .awesome-list--media .awesome-entry {
     background: var(--awesome-entry-bg);
-    column-gap: 18px;
+    column-gap: 14px;
+    padding: 10px 12px;
     box-shadow: 0 1px 2px rgba(66, 49, 73, 0.05);
 }
 
@@ -163,18 +175,19 @@
 /*****************************************************************************/
 /* "index" style                                                             */
 /*****************************************************************************/
-/* Two columns where there's room for them. The negative margin takes up the first row's padding,
-   so the list sits as close to its heading as a card does. */
+/* Two columns where there's room for them. The negative margin takes up all but 4px of the first
+   row's padding, so the list sits close to its heading. */
 .awesome-list--index {
+    --awesome-index-row-padding: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
     column-gap: 32px;
-    margin-top: -10px;
+    margin-top: calc(4px - var(--awesome-index-row-padding));
 }
 
 .awesome-list--index .awesome-entry {
     background: var(--awesome-entry-bg);
-    padding: 14px 4px;
+    padding: var(--awesome-index-row-padding) 4px;
 }
 
 .awesome-list--index .awesome-entry__title {
@@ -222,7 +235,7 @@
    row has room above it for the cover's lift and below its shelf for the reflection.
    js/awesome-microbit.js spreads the covers evenly over the rows. */
 .awesome-list--shelf {
-    --awesome-list-cover-height: 184px;
+    --awesome-list-cover-height: 150px;
     /* A picked book lifts and leans on its corner; its reflection doesn't tilt */
     --shelf-lift: 8px;
     --shelf-tilt: -2deg;
@@ -431,8 +444,9 @@
 
 .awesome-contents__name {
     grid-area: name;
+    font-family: var(--awesomemb-title-font);
     font-size: 0.92rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25;
     color: var(--awesome-entry-title);
 }
@@ -586,11 +600,11 @@
 
 .awesome-hero {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 190px 1fr;
     gap: 10px 44px;
     align-items: center;
-    margin: 0 calc(-1 * var(--awesomemb-bleed-right)) 44px calc(-1 * var(--awesomemb-bleed-left));
-    padding: 56px 48px 46px 40px;
+    margin: 0 calc(-1 * var(--awesomemb-bleed-right)) 24px calc(-1 * var(--awesomemb-bleed-left));
+    padding: 34px 40px 28px 32px;
     overflow: hidden;
     container-type: inline-size;
     border-bottom: 1px solid var(--hero-rule);
@@ -706,7 +720,7 @@
 
 .awesome-hero__about {
     grid-column: 1 / -1;
-    margin: 18px 0 0;
+    margin: 10px 0 0;
     font-size: 0.94rem;
     line-height: 1.6;
     color: var(--hero-muted);
@@ -774,7 +788,6 @@
         grid-template-columns: 96px 1fr;
         gap: 6px 16px;
         padding: 30px 18px 26px;
-        margin-bottom: 30px;
     }
 
     .awesome-hero h1 {
@@ -845,7 +858,6 @@
     padding: 0;
     border: none;
     font-size: 1.5rem;
-    font-weight: 600;
 }
 
 .awesome-end__text {
@@ -905,7 +917,7 @@
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     font-size: 0.92rem;
-    font-weight: 600;
+    font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
     visibility: hidden;
@@ -948,6 +960,12 @@
     background: oklch(0.72 0.15 var(--awesome-section-hue));
 }
 
+/* The section's and subsection's names in the titles' face, the count in the text's */
+.awesome-where__name,
+.awesome-where__sub {
+    font-family: var(--awesomemb-title-font);
+}
+
 .awesome-where__name {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -967,7 +985,6 @@
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-weight: 500;
 }
 
 .awesome-where__sub:not(:empty)::before {

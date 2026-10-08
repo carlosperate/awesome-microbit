@@ -31,6 +31,9 @@
       {%- endblock %}
 
       {%- block styles %}
+        {#- The Latin files every page uses, so text doesn't wait for the stylesheets to find them #}
+        <link rel="preload" href="{{ 'webfonts/inter-latin.woff2'|url }}" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{ 'webfonts/lexend-latin.woff2'|url }}" as="font" type="font/woff2" crossorigin>
         <link href="{{ 'css/bootstrap.min.css'|url }}" rel="stylesheet">
         <link href="{{ 'css/fontawesome.min.css'|url }}" rel="stylesheet">
         <link href="{{ 'css/brands.min.css'|url }}" rel="stylesheet">

@@ -67,8 +67,8 @@ about images no entry links to.
 - `media`: a card per entry, with the preview image on the left. In lists narrower
   than 600px the description goes under the image instead.
 - `gallery`: the same cards as `media` (its lists get both classes), in columns with the preview
-  image on top, for sections where the pictures matter most. Lists too narrow for two columns
-  use the `media` layout.
+  image on top, for sections where the pictures matter most: up to four columns of at least
+  220px. Lists too narrow for two columns use the `media` layout.
 - `index`: compact rows with the site's favicon, useful for long lists of repositories.
 - `shelf`: covers side by side, like books on a shelf, with the details over the cover on hover,
   keyboard focus, or when a theme script adds `awesome-entry--open` (on touch screens, which can't
