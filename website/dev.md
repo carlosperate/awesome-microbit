@@ -52,10 +52,25 @@ preview picture isn't always the cover, so a new book needs one:
 
 1. Find the cover on the publisher's page, or on Open Library, as large as possible.
 2. Crop it to the cover if it's part of a bigger picture, and resize it to 400px tall.
-3. Save it in `images/` as WebP (the smallest), named after the book, e.g. `images/micro-bit-recipes.webp`.
+3. Save it in `images/books/` as WebP (the smallest), named after the book, e.g. `images/books/micro-bit-recipes.webp`.
 4. Add the book's link and the file under `images:` in `mkdocs.yml`, in the README's order.
 
 Until then the book gets a plain cover, and the build warns about it.
+
+## Blocked previews
+
+Some sites put their pages behind a Cloudflare challenge, which only a browser can pass, so the
+build can't fetch their previews and lists them as `Page returned 403` in its summary. Their
+previews are saved in `images/previews/` instead:
+
+1. Open the page in a browser and copy the `og:image` link from its source.
+2. Download the image and shrink it to WebP as the build would, named after the site and the page:
+
+   ```bash
+   python -c "import sys; sys.path.insert(0, 'hooks'); from awesome_list import _shrink_image; open(sys.argv[2], 'wb').write(_shrink_image(open(sys.argv[1], 'rb').read())[1])" ~/Downloads/robots-buggy1.jpg images/previews/kitronik-robot-buggy.webp
+   ```
+
+3. Add the link and the file under `images:` in `mkdocs.yml`, after the Books covers.
 
 ## Test
 

@@ -25,8 +25,14 @@ card of their own.
 
 During the build the hook fetches each entry's OpenGraph image and the site's favicon, then
 adds classes and that data to the list Markdown renders. Requests are retried on connection
-errors, rate limits and server errors, and repeated with the hook's own user agent when a site
-blocks Python's default one.
+errors, rate limits and server errors, waiting as long as a site's `Retry-After` asks, up to 15
+minutes: GitHub's preview images allow 100 an IP every 15 minutes, so a build with more uncached
+ones than that waits once. Requests go to each site at most three at a time, and are repeated with
+the hook's own user agent when a site blocks Python's default one. After fetching, the build prints
+a summary of the entries without an image, grouped by why, and the ones found only after a retry.
+YouTube videos and GitHub repositories skip the page: their preview image's URL follows from the
+link, and YouTube leaves it out of the page it sends servers like GitHub Actions'. The tests marked `network` fetch those URLs from the real sites, to
+catch a change to their format; `pytest -m "not network"` leaves them out.
 
 The site serves its own copy of each image, shrunk to fit 600x315 (three times the card's frame) and
 saved as WebP, so huge originals and links that break later don't affect it. SVGs, and formats

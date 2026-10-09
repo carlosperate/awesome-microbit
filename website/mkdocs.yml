@@ -85,24 +85,46 @@ extra:
       # "shelf" is a special style designed to display book covers on shelves
       books: shelf
     # Images to show instead of a link's own preview, keyed by link.
-    # Currently used to ensure we are displaying the Books covers.
     images:
-      "https://iot-programmer.com/index.php/books/micro-bit-iot-in-c": images/microbit-iot-in-c.webp
-      "https://www.oreilly.com/library/view/programming-with-micropython/9781491972724/": images/programming-with-micropython.webp
-      "https://www.oreilly.com/library/view/getting-started-with/9781680453010/": images/getting-started-with-the-microbit.webp
-      "https://www.wiley.com/en-gb/The+Official+BBC+micro%3Abit+User+Guide+-p-9781119386735": images/the-official-bbc-microbit-user-guide.webp
-      "http://simonmonk.org/prog-mb": images/programming-the-bbc-microbit.webp
-      "https://github.com/nominetresearch/microbit-networking-book": images/networking-with-the-microbit-ebook.webp
-      "https://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html": images/microbit-in-wonderland.webp
-      "https://link.springer.com/book/10.1007/978-1-4842-3360-3": images/beginning-bbc-microbit.webp
-      "https://link.springer.com/book/10.1007/978-1-4842-4913-0": images/bbc-microbit-recipes.webp
-      "https://nostarch.com/microbitformad": images/microbit-for-mad-scientists.webp
-      "https://www.mheducation.com/highered/mhp/product/save-world-code-20-fun-projects-all-ages-using-raspberry-pi-micro-bit-circuit-playground-express": images/save-the-world-with-code.webp
-      "https://link.springer.com/book/10.1007/978-1-4842-5766-1": images/beginning-data-science-iot-and-ai-on-single-board-computers.webp
-      "https://gethacking.com/products/the-tinkerers-guide-to-the-micro-bit-galaxy": images/the-tinkerers-guide-to-the-microbit-galaxy.webp
-      "https://www.packtpub.com/en-us/product/bbc-microbit-in-practice-9781804610121": images/bbc-microbit-in-practice.webp
-      "https://cmkpress.com/product/microbit/": images/the-invent-to-learn-guide-to-the-microbit.webp
-      "https://ineasysteps.com/products-page/coding-with-the-microbit-create-cool-programming-projects/": images/coding-with-bbc-microbit-in-easy-steps.webp
-      "https://link.springer.com/book/10.1007/978-1-4842-9197-9": images/microbit-projects-with-python-and-single-board-computers.webp
-      "https://www.makershed.com/products/make-ai-robots-print": images/make-ai-robots.webp
-      "https://mrmorrison.co.uk/books/": images/make-the-most-of-your-microbit.webp
+      # The Books covers, as a page's preview isn't always the cover
+      "https://iot-programmer.com/index.php/books/micro-bit-iot-in-c": images/books/microbit-iot-in-c.webp
+      "https://www.oreilly.com/library/view/programming-with-micropython/9781491972724/": images/books/programming-with-micropython.webp
+      "https://www.oreilly.com/library/view/getting-started-with/9781680453010/": images/books/getting-started-with-the-microbit.webp
+      "https://www.wiley.com/en-gb/The+Official+BBC+micro%3Abit+User+Guide+-p-9781119386735": images/books/the-official-bbc-microbit-user-guide.webp
+      "http://simonmonk.org/prog-mb": images/books/programming-the-bbc-microbit.webp
+      "https://github.com/nominetresearch/microbit-networking-book": images/books/networking-with-the-microbit-ebook.webp
+      "https://www.techagekids.com/2017/11/our-beginner-bbc-microbit-coding-craft-project-book-microbit-in-wonderland.html": images/books/microbit-in-wonderland.webp
+      "https://link.springer.com/book/10.1007/978-1-4842-3360-3": images/books/beginning-bbc-microbit.webp
+      "https://link.springer.com/book/10.1007/978-1-4842-4913-0": images/books/bbc-microbit-recipes.webp
+      "https://nostarch.com/microbitformad": images/books/microbit-for-mad-scientists.webp
+      "https://www.mheducation.com/highered/mhp/product/save-world-code-20-fun-projects-all-ages-using-raspberry-pi-micro-bit-circuit-playground-express": images/books/save-the-world-with-code.webp
+      "https://link.springer.com/book/10.1007/978-1-4842-5766-1": images/books/beginning-data-science-iot-and-ai-on-single-board-computers.webp
+      "https://gethacking.com/products/the-tinkerers-guide-to-the-micro-bit-galaxy": images/books/the-tinkerers-guide-to-the-microbit-galaxy.webp
+      "https://www.packtpub.com/en-us/product/bbc-microbit-in-practice-9781804610121": images/books/bbc-microbit-in-practice.webp
+      "https://cmkpress.com/product/microbit/": images/books/the-invent-to-learn-guide-to-the-microbit.webp
+      "https://ineasysteps.com/products-page/coding-with-the-microbit-create-cool-programming-projects/": images/books/coding-with-bbc-microbit-in-easy-steps.webp
+      "https://link.springer.com/book/10.1007/978-1-4842-9197-9": images/books/microbit-projects-with-python-and-single-board-computers.webp
+      "https://www.makershed.com/products/make-ai-robots-print": images/books/make-ai-robots.webp
+      "https://mrmorrison.co.uk/books/": images/books/make-the-most-of-your-microbit.webp
+      # Previews of pages behind Cloudflare challenges, which the build can't fetch
+      "https://www.printables.com/model/20112-gamer-case-for-bbc-microbit": images/previews/printables-gamer-case.webp
+      "https://www.printables.com/model/46067-bbc-microbit-v2-battery-pack-holder": images/previews/printables-battery-pack-holder.webp
+      "https://www.printables.com/model/135495-panquad": images/previews/printables-panquad.webp
+      "https://www.printables.com/model/664681-microbit-advent-ornamet-case": images/previews/printables-advent-ornament-case.webp
+      "https://kitronik.co.uk/blogs/resources/bbc-microbit-cad-resources-kitronik-university": images/previews/kitronik-microbit-cad-resources.webp
+      "https://kitronik.co.uk/blogs/resources/halo-ween-ironman-arc-reactor": images/previews/kitronik-ironman-arc-reactor.webp
+      "https://kitronik.co.uk/blogs/resources/klawsome-microbit-controlled-tank": images/previews/kitronik-klawsome-tank.webp
+      "https://kitronik.co.uk/blogs/resources/bbc-microbit-zip-halo-compass": images/previews/kitronik-zip-halo-compass.webp
+      "https://medium.com/@ferrygunawan/alexa-ask-microbit-to-turn-led-light-61ed668a0321": images/previews/medium-alexa-microbit-led.webp
+      "https://kitronik.co.uk/blogs/resources/zip-tile-microbit-bike-light-isaac-gorsani": images/previews/kitronik-zip-tile-bike-light.webp
+      "https://community.sap.com/t5/technology-blog-posts-by-members/iot-pill-reminders-with-sap-cloud-foundry-google-sheets-and-micro-bit/ba-p/13397437": images/previews/sap-iot-pill-reminders.webp
+      "https://kitronik.co.uk/blogs/resources/microbit-guitar-noise-pack-inventors-kit": images/previews/kitronik-microbit-guitar.webp
+      "https://medium.com/groklearning/become-a-time-lord-with-the-bbc-micro-bit-c4b8b4e2d747": images/previews/medium-time-lord.webp
+      "https://kitronik.co.uk/blogs/resources/building-the-bbc-microbit-matrix-display": images/previews/kitronik-microbit-matrix-display.webp
+      "https://medium.com/liki-blog/micro-bit-vital-signs-b76e495f6a59": images/previews/medium-vital-signs.webp
+      "https://devzone.nordicsemi.com/nordic/nordic-blog/b/blog/posts/micro-bit-v2-pager": images/previews/nordic-microbit-v2-pager.webp
+      "https://scientiffic.medium.com/character-design-with-microbit-51c42586caa1": images/previews/medium-character-design.webp
+      "https://kitronik.co.uk/blogs/resources/bbc-microbit-kitronik-university": images/previews/kitronik-university.webp
+      "https://kitronik.co.uk/blogs/resources/robot-buggy-part-1-build-robot-wars-buggy-introduction": images/previews/kitronik-robot-buggy.webp
+      "https://kitronik.co.uk/blogs/resources/kitronik-inventors-kit-resources": images/previews/kitronik-inventors-kit-resources.webp
+      "https://kitronik.co.uk/blogs/resources/parents-complete-guide-bbc-microbit": images/previews/kitronik-parents-guide.webp

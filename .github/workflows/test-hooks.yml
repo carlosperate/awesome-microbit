@@ -1,13 +1,9 @@
 name: Test MkDocs hooks
 
 on:
+  # Every push, as the network tests check real sites, whose formats can change before a deploy
   push:
-    branches: '*'
-    paths:
-    - 'website/hooks/**'
-    - 'website/pyproject.toml'
-    - 'website/uv.lock'
-    - '.github/workflows/test-hooks.yml'
+    branches: '**'
   pull_request:
     paths:
     - 'website/hooks/**'

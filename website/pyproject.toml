@@ -14,3 +14,4 @@ dev = [{include-group = "site"}, "pytest"]
 testpaths = ["hooks/tests"]
 # MkDocs loads the hooks by path, so the tests import them from there too
 pythonpath = ["hooks"]
+markers = ["network: fetches real sites, to catch a change to a format the hook relies on"]

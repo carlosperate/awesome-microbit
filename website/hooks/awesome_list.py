@@ -10,12 +10,13 @@ import logging
 import os
 import re
 import shutil
-import sys
+import threading
 import xml.etree.ElementTree as etree
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from typing import Optional
-from urllib.parse import urljoin, urlparse
+from urllib.parse import parse_qs, urljoin, urlparse
 
 import requests
 from markdown.extensions import Extension
@@ -26,6 +27,8 @@ from mkdocs.exceptions import ConfigurationError
 from mkdocs.utils import get_relative_url
 from PIL import Image, ImageOps
 from requests.adapters import HTTPAdapter, Retry
+from urllib3.exceptions import InvalidHeader, MaxRetryError, ResponseError
+from urllib3.exceptions import TimeoutError as Urllib3Timeout
 from webpreview import web_preview
 
 log = logging.getLogger("mkdocs.hooks.awesome_list")
@@ -52,6 +55,11 @@ USER_AGENTS = (
 )
 # 999 is LinkedIn's answer to bots
 BLOCKED_STATUSES = (403, 405, 406, 999)
+# Requests at once to one site, as bursts from the build's ten threads get rate limited (429)
+SITE_MAX_REQUESTS = 3
+# The longest Retry-After worth waiting for: GitHub's preview images allow 100 an IP every 15
+# minutes, and ask for 900s
+RETRY_AFTER_MAX = 15 * 60
 # Three times the media frame in awesome-list.css (200px wide, 1.91:1): 3x screens, or 2x zoomed in
 IMAGE_MAX_SIZE = (600, 315)
 # The biggest preview in the list was 14MB
@@ -93,15 +101,33 @@ THUMBNAIL_ITEM = (
 )
 
 
+class _Retry(Retry):
+    def parse_retry_after(self, retry_after):
+        # A malformed one counts as none, rather than fail the request
+        try:
+            return super().parse_retry_after(retry_after)
+        except InvalidHeader:
+            return None
+
+    def increment(self, method=None, url=None, response=None, error=None, _pool=None, **kwargs):
+        seconds = (response is not None and self.get_retry_after(response)) or 0
+        if seconds > RETRY_AFTER_MAX:
+            # Returns the answer at once (raise_on_status is off), rather than retry into it early
+            reason = ResponseError(f"{response.status} with a long Retry-After")
+            raise MaxRetryError(_pool, url, reason)
+        if seconds >= 60:
+            # So the build doesn't look stuck
+            print(f"\n[AwesomeList] {_pool.host} rate limited, waiting {seconds:.0f}s...", flush=True)
+        return super().increment(method, url, response, error, _pool, **kwargs)
+
+
 def _session():
-    # Retries after 0s, 2s and 4s; slow sites stay slow, so a timed out read only once
-    retry = Retry(
+    # Retries after 0s, 4s and 8s, or as long as Retry-After asks; a timed out read only once
+    retry = _Retry(
         total=3,
         read=1,
-        backoff_factor=1,
+        backoff_factor=2,
         status_forcelist=(429, 500, 502, 503, 504),
-        # A long Retry-After would hold up the build
-        respect_retry_after_header=False,
         raise_on_status=False,
     )
     session = requests.Session()
@@ -111,16 +137,73 @@ def _session():
 
 
 SESSION = _session()
+SITE_SLOTS = {}
+# What the current preview's requests were retried for, as urllib3 retries them out of sight
+_retries = threading.local()
+
+
+def _site(url):
+    """The host's last two labels, or three for names like example.co.uk: what rate limits go by."""
+    labels = (urlparse(url).hostname or "").split(".")
+    count = 3 if len(labels) > 2 and len(labels[-1]) == 2 and len(labels[-2]) <= 3 else 2
+    return ".".join(labels[-count:])
+
+
+def _note_retries(resp):
+    """Record what urllib3 retried the request for."""
+    reasons = getattr(_retries, "reasons", None)
+    if reasons is None:
+        return
+    for attempt in getattr(resp.raw.retries, "history", None) or ():
+        timeout = isinstance(attempt.error, Urllib3Timeout)
+        reasons.append(str(attempt.status or ("timeout" if timeout else "connection error")))
 
 
 def _get(url, **kwargs):
     """GET the URL, switching user agent while the site blocks it."""
-    for user_agent in USER_AGENTS[:-1]:
-        resp = SESSION.get(url, timeout=10, headers={"User-Agent": user_agent}, **kwargs)
-        if resp.status_code not in BLOCKED_STATUSES:
-            return resp
-        resp.close()
-    return SESSION.get(url, timeout=10, headers={"User-Agent": USER_AGENTS[-1]}, **kwargs)
+    # Held through the retries' waits too, so a rate-limited site gets fewer requests
+    with SITE_SLOTS.setdefault(_site(url), threading.Semaphore(SITE_MAX_REQUESTS)):
+        for user_agent in USER_AGENTS:
+            resp = SESSION.get(url, timeout=10, headers={"User-Agent": user_agent}, **kwargs)
+            _note_retries(resp)
+            if resp.status_code not in BLOCKED_STATUSES or user_agent == USER_AGENTS[-1]:
+                return resp
+            resp.close()
+
+
+def _failure(what, error):
+    """The summary's heading for a request that raised, like "Image timed out"."""
+    # requests wraps what urllib3 gave up on after its retries
+    if error.args and isinstance(error.args[0], MaxRetryError):
+        error = error.args[0].reason
+    if isinstance(error, (requests.Timeout, Urllib3Timeout)):
+        return f"{what} timed out"
+    return f"{what} failed ({type(error).__name__})"
+
+
+def _known_image_urls(url):
+    """Preview images that follow from the link, best first: YouTube leaves its own out of the
+    page it sends servers like the CI's, and GitHub's saves a request to a site that rate limits."""
+    parsed = urlparse(url)
+    host = _host(url)
+    path = [part for part in parsed.path.split("/") if part]
+    video = None
+    if host in ("youtube.com", "m.youtube.com"):
+        if path == ["watch"]:
+            video = parse_qs(parsed.query).get("v", [None])[0]
+        elif len(path) == 2 and path[0] in ("shorts", "embed", "live"):
+            video = path[1]
+    elif host == "youtu.be" and len(path) == 1:
+        video = path[0]
+    if video:
+        # Only HD videos have the first, which the page shares when it exists
+        names = ("maxresdefault", "hqdefault")
+        return [f"https://i.ytimg.com/vi/{video}/{name}.jpg" for name in names]
+    if host == "github.com" and len(path) >= 2:
+        # The page's has a hash for the 1, which only busts GitHub's cache (or, rarely, the repo's
+        # own picture, lost here)
+        return [f"https://opengraph.githubassets.com/1/{path[0]}/{path[1]}"]
+    return []
 
 
 @dataclass
@@ -134,6 +217,10 @@ class Preview:
     path: Optional[str] = field(default=None, compare=False)
     # Width and height, for the images from the `images` option
     size: Optional[tuple] = field(default=None, compare=False)
+    # Why there's no image, which the build's summary groups the entries by
+    problem: Optional[str] = field(default=None, compare=False)
+    # What its requests were retried for, as in _note_retries
+    retries: tuple = field(default=(), compare=False)
 
 
 def _resolve_image_url(image, page_url):
@@ -159,27 +246,6 @@ def _image_filename(image_url):
     return hashlib.sha1(image_url.encode()).hexdigest()[:16] + ".webp"
 
 
-def _download_image(image_url):
-    """Return the image's bytes and content type, or None if it can't be loaded."""
-    try:
-        with _get(image_url, stream=True) as resp:
-            if resp.status_code >= 400:
-                print(f"\n  WARNING: Image returned {resp.status_code}: {image_url}")
-                return None
-            content_type = resp.headers.get("Content-Type", "")
-            data = resp.raw.read(IMAGE_MAX_BYTES + 1, decode_content=True)
-    except Exception as e:
-        print(f"\n  WARNING: Could not reach image: {image_url} ({e})")
-        return None
-    if not data:
-        print(f"\n  WARNING: Empty image: {image_url}")
-        return None
-    if len(data) > IMAGE_MAX_BYTES:
-        print(f"\n  WARNING: Image over {IMAGE_MAX_BYTES // 2**20}MB: {image_url}")
-        return None
-    return data, content_type
-
-
 def _shrink_image(data):
     """Return the image's size, and the image as WebP shrunk to fit IMAGE_MAX_SIZE."""
     with Image.open(io.BytesIO(data)) as img:
@@ -199,39 +265,68 @@ def _shrink_image(data):
 
 def _fetch_image(image_url):
     """Download an image and work out how to frame it."""
-    downloaded = _download_image(image_url)
-    if not downloaded:
-        return Preview()
-    data, content_type = downloaded
+    try:
+        with _get(image_url, stream=True) as resp:
+            if resp.status_code >= 400:
+                return Preview(problem=f"Image returned {resp.status_code}")
+            content_type = resp.headers.get("Content-Type", "")
+            data = resp.raw.read(IMAGE_MAX_BYTES + 1, decode_content=True)
+    except Exception as e:
+        return Preview(problem=_failure("Image", e))
+    if not data:
+        return Preview(problem="Empty image")
+    if len(data) > IMAGE_MAX_BYTES:
+        return Preview(problem=f"Image over {IMAGE_MAX_BYTES // 2**20}MB")
     if "svg" in content_type:
         # Browsers won't render a broken SVG, and some sites serve one
         if not data.lstrip(b"\xef\xbb\xbf \t\r\n").startswith(b"<"):
-            print(f"\n  WARNING: Invalid SVG image: {image_url}")
-            return Preview()
+            return Preview(problem="Invalid SVG image")
         return Preview(image_url, "logo")
     try:
         size, webp = _shrink_image(data)
     except Exception:
         # Pillow can't read every format a browser can
-        return Preview(image_url, "picture") if content_type.startswith("image/") else Preview()
+        if content_type.startswith("image/"):
+            return Preview(image_url, "picture")
+        return Preview(problem="Image link isn't an image")
     path = f"{THUMBNAILS_DIR}/{_image_filename(image_url)}"
     return Preview(image_url, _image_kind(*size), webp, path)
 
 
 def _fetch_preview(url):
     """Fetch the OpenGraph image of a page and work out how to frame it."""
+    _retries.reasons = []
+    preview = _find_preview(url)
+    preview.retries = tuple(_retries.reasons)
+    # A dot each, as fetching them all takes minutes
+    print(".", end="", flush=True)
+    return preview
+
+
+def _find_preview(url):
+    known = _known_image_urls(url)
+    if known:
+        # The page would only point at the same images, so it isn't worth a request
+        for image in known:
+            preview = _fetch_image(image)
+            if preview.image:
+                return preview
+        return preview
     try:
         resp = _get(url)
-        resp.raise_for_status()
-        # web_preview downloads an empty page again itself, with no timeout
-        if not resp.content:
-            raise ValueError("empty page")
+    except Exception as e:
+        return Preview(problem=_failure("Page", e))
+    if not resp.ok:
+        return Preview(problem=f"Page returned {resp.status_code}")
+    # web_preview downloads an empty page again itself, with no timeout
+    if not resp.content:
+        return Preview(problem="Empty page")
+    try:
         _title, _description, image = web_preview(url, content=resp.text)
         image = _resolve_image_url(image, url)
     except Exception as e:
-        print(f"\n[AwesomeList] Error fetching preview for {url}: {e}")
-        return Preview()
-    return _fetch_image(image) if image else Preview()
+        return Preview(problem=f"Couldn't read the page ({type(e).__name__})")
+    return _fetch_image(image) if image else Preview(problem="No preview image on the page")
 
 
 def _local_image(path):
@@ -250,7 +345,8 @@ def _local_image(path):
 def _fetch_favicon(host):
     """Return the site's favicon as PNG bytes, or None."""
     try:
-        resp = _get(FAVICON_URL.format(host=host))
+        # Not _get: every favicon comes from Google's service, which doesn't need limiting
+        resp = SESSION.get(FAVICON_URL.format(host=host), timeout=10)
     except Exception:
         return None
     # The service answers 404 with a generic globe when a site has no favicon
@@ -522,8 +618,7 @@ class AwesomeList:
         if not urls and not hosts:
             return markdown
 
-        print(f"\n[AwesomeList] Fetching {len(urls)} previews...", end=" ")
-        sys.stdout.flush()
+        print(f"\n[AwesomeList] Fetching {len(urls)} previews...", end=" ", flush=True)
         urls, hosts = sorted(urls), sorted(hosts)
         with ThreadPoolExecutor(max_workers=10) as executor:
             previews = executor.map(_fetch_preview, urls)
@@ -531,12 +626,43 @@ class AwesomeList:
             self.previews.update(zip(urls, previews))
             self.favicons.update(zip(hosts, favicons))
         print()
+        print(self._summary(urls, hosts))
 
         if self.config["debug-log"]:
             for url in urls:
                 preview = self.previews[url]
                 print(f"  {url}\n    Image: {preview.image} ({preview.image_kind})")
         return markdown
+
+    def _summary(self, urls, hosts):
+        """What the fetching found, with the entries without an image by why, and the retried ones."""
+        kinds = [self.previews[url].image_kind for url in urls]
+        favicons = sum(1 for host in hosts if self.favicons[host])
+        lines = [
+            f"[AwesomeList] {len(urls)} previews: {kinds.count('picture')} pictures, "
+            f"{kinds.count('logo')} logos, {kinds.count('none')} without an image. "
+            f"Favicons for {favicons} of {len(hosts)} sites."
+        ]
+        groups, retried = {}, []
+        for url in urls:
+            preview = self.previews[url]
+            if preview.image_kind == "none":
+                groups.setdefault(preview.problem or "No image", []).append(url)
+            elif preview.retries:
+                retried.append(url)
+        # The biggest groups first, and the ones that worked out last
+        order = sorted(groups, key=lambda h: (-len(groups[h]), h))
+        sections = [(heading, groups[heading], "") for heading in order]
+        if retried:
+            past = Counter(r for url in retried for r in self.previews[url].retries)
+            tally = ", ".join(f"{r} x{n}" for r, n in past.most_common())
+            sections.append(("Found after retrying", retried, f", past {tally}"))
+        for heading, group, extra in sections:
+            lines.append(f"  {heading} ({len(group)}){extra}:")
+            for url in group:
+                retries = self.previews[url].retries
+                lines.append(f"    {url}" + (f" (after {', '.join(retries)})" if retries else ""))
+        return "\n".join(lines)
 
     def on_post_build(self, config):
         assets_dir = os.path.join(config.site_dir, *ASSETS_DIR.split("/"))

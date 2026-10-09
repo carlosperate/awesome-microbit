@@ -1,6 +1,10 @@
 """Tests for the awesome_list MkDocs hook."""
 
 import io
+import re
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
 from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
@@ -9,20 +13,30 @@ import pytest
 import requests
 from mkdocs.exceptions import ConfigurationError
 from PIL import Image
+from urllib3 import HTTPResponse
+from urllib3.exceptions import MaxRetryError, ReadTimeoutError
+from urllib3.util.retry import RequestHistory
+from webpreview import web_preview
 
 from awesome_list import (
     AwesomeList,
     AwesomeListExtension,
+    RETRY_AFTER_MAX,
+    SITE_MAX_REQUESTS,
     USER_AGENTS,
     Preview,
+    _Retry,
     _domain_label,
+    _failure,
     _fetch_image,
     _fetch_preview,
     _get,
     _image_filename,
     _image_kind,
+    _known_image_urls,
     _local_image,
     _resolve_image_url,
+    _site,
 )
 
 
@@ -131,6 +145,113 @@ class TestGet:
         assert _get("https://example.com").status_code == 404
         assert mock_get.call_count == 1
 
+    def test_requests_to_one_site_at_once_are_limited(self, mock_get):
+        running, most = 0, 0
+        lock = threading.Lock()
+
+        def get(*args, **kwargs):
+            nonlocal running, most
+            with lock:
+                running += 1
+                most = max(most, running)
+            time.sleep(0.02)
+            with lock:
+                running -= 1
+            return MagicMock(status_code=200)
+
+        mock_get.side_effect = get
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            list(executor.map(_get, [f"https://a{i}.limited.example" for i in range(10)]))
+        assert most == SITE_MAX_REQUESTS
+
+
+class TestRetry:
+
+    def test_short_retry_after_is_retried(self, capsys):
+        response = HTTPResponse(status=429, headers={"Retry-After": str(RETRY_AFTER_MAX)})
+        pool = MagicMock(host="example.com")
+        retry = _Retry(total=3, status_forcelist=(429,)).increment("GET", "/", response, _pool=pool)
+        assert retry.total == 2
+        assert retry.get_retry_after(response) == RETRY_AFTER_MAX
+        assert f"example.com rate limited, waiting {RETRY_AFTER_MAX}s" in capsys.readouterr().out
+
+    def test_malformed_retry_after_ignored(self):
+        response = HTTPResponse(status=503, headers={"Retry-After": "soon"})
+        retry = _Retry(total=3, status_forcelist=(503,)).increment("GET", "/", response)
+        assert retry.get_retry_after(response) is None
+
+    def test_long_retry_after_gives_up(self):
+        response = HTTPResponse(status=429, headers={"Retry-After": str(RETRY_AFTER_MAX + 1)})
+        with pytest.raises(MaxRetryError):
+            _Retry(total=3, status_forcelist=(429,)).increment("GET", "/", response)
+
+
+class TestFailure:
+
+    def test_timeout_after_retries(self):
+        error = requests.ConnectionError(MaxRetryError(None, "/", ReadTimeoutError(None, "/", "")))
+        assert _failure("Page", error) == "Page timed out"
+
+    def test_other_errors_named(self):
+        assert _failure("Page", requests.ConnectionError("refused")) == "Page failed (ConnectionError)"
+
+
+class TestSite:
+
+    @pytest.mark.parametrize(
+        "url, site",
+        [
+            ("https://github.com/owner/repo", "github.com"),
+            ("https://opengraph.githubassets.com/1/owner/repo", "githubassets.com"),
+            ("https://someone.blogspot.com/2017/post.html", "blogspot.com"),
+            ("https://kitronik.co.uk/blogs/resources", "kitronik.co.uk"),
+            ("https://core-electronics.com.au/guides/", "core-electronics.com.au"),
+            ("https://cdn.hackaday.io/images/a.jpg", "hackaday.io"),
+        ],
+    )
+    def test_site(self, url, site):
+        assert _site(url) == site
+
+
+class TestKnownImageUrls:
+
+    @pytest.mark.parametrize(
+        "url",
+        [
+            "https://www.youtube.com/watch?v=abc123",
+            "https://youtube.com/watch?v=abc123&t=42",
+            "https://m.youtube.com/watch?v=abc123",
+            "https://youtu.be/abc123",
+            "https://www.youtube.com/shorts/abc123",
+            "https://www.youtube.com/embed/abc123",
+        ],
+    )
+    def test_youtube_video(self, url):
+        assert _known_image_urls(url) == [
+            "https://i.ytimg.com/vi/abc123/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/abc123/hqdefault.jpg",
+        ]
+
+    @pytest.mark.parametrize(
+        "url",
+        ["https://github.com/owner/repo", "https://github.com/owner/repo/tree/main/docs#readme"],
+    )
+    def test_github_repository(self, url):
+        assert _known_image_urls(url) == ["https://opengraph.githubassets.com/1/owner/repo"]
+
+    @pytest.mark.parametrize(
+        "url",
+        [
+            "https://www.youtube.com/playlist?list=PL123",
+            "https://www.youtube.com/@microbit_edu",
+            "https://www.youtube.com/watch",
+            "https://github.com/owner",
+            "https://example.com/watch?v=abc123",
+        ],
+    )
+    def test_others_need_their_page(self, url):
+        assert _known_image_urls(url) == []
+
 
 @patch("awesome_list.SESSION.get")
 class TestFetchImage:
@@ -170,7 +291,9 @@ class TestFetchImage:
     def test_broken_svg(self, mock_get):
         body = b'?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg"></svg>'
         mock_get.return_value = _image_response(content_type="image/svg+xml", body=body)
-        assert _fetch_image("https://example.com/logo.svg") == Preview()
+        preview = _fetch_image("https://example.com/logo.svg")
+        assert preview == Preview()
+        assert preview.problem == "Invalid SVG image"
 
     def test_unreadable_image_format_is_linked(self, mock_get):
         mock_get.return_value = _image_response(content_type="image/jxl", body=b"...")
@@ -180,15 +303,21 @@ class TestFetchImage:
 
     def test_http_error(self, mock_get):
         mock_get.return_value = _image_response(status=404)
-        assert _fetch_image("https://example.com/missing.png") == Preview()
+        preview = _fetch_image("https://example.com/missing.png")
+        assert preview == Preview()
+        assert preview.problem == "Image returned 404"
 
     def test_network_error(self, mock_get):
         mock_get.side_effect = requests.ConnectionError("refused")
-        assert _fetch_image("https://example.com/img.png") == Preview()
+        preview = _fetch_image("https://example.com/img.png")
+        assert preview == Preview()
+        assert preview.problem == "Image failed (ConnectionError)"
 
     def test_empty_image(self, mock_get):
         mock_get.return_value = _image_response(body=b"")
-        assert _fetch_image("https://example.com/og.png") == Preview()
+        preview = _fetch_image("https://example.com/og.png")
+        assert preview == Preview()
+        assert preview.problem == "Empty image"
 
     @patch("awesome_list.IMAGE_MAX_BYTES", 10)
     def test_image_too_big(self, mock_get):
@@ -197,7 +326,9 @@ class TestFetchImage:
 
     def test_not_an_image(self, mock_get):
         mock_get.return_value = _image_response(content_type="text/html", body=b"<html>")
-        assert _fetch_image("https://example.com/page") == Preview()
+        preview = _fetch_image("https://example.com/page")
+        assert preview == Preview()
+        assert preview.problem == "Image link isn't an image"
 
 
 @patch("awesome_list._fetch_image")
@@ -217,7 +348,9 @@ class TestFetchPreview:
 
     def test_no_image(self, mock_get, mock_preview, mock_image):
         mock_preview.return_value = ("Title", "Desc", None)
-        assert _fetch_preview("https://example.com") == Preview()
+        preview = _fetch_preview("https://example.com")
+        assert preview == Preview()
+        assert preview.problem == "No preview image on the page"
         mock_image.assert_not_called()
 
     def test_malformed_image_url(self, mock_get, mock_preview, mock_image):
@@ -226,14 +359,54 @@ class TestFetchPreview:
         mock_image.assert_not_called()
 
     def test_page_error(self, mock_get, mock_preview, mock_image):
-        mock_get.return_value.raise_for_status.side_effect = requests.HTTPError("404")
-        assert _fetch_preview("https://example.com") == Preview()
+        mock_get.return_value.ok = False
+        mock_get.return_value.status_code = 404
+        preview = _fetch_preview("https://example.com")
+        assert preview == Preview()
+        assert preview.problem == "Page returned 404"
         mock_preview.assert_not_called()
 
     def test_empty_page(self, mock_get, mock_preview, mock_image):
         mock_get.return_value.content = b""
-        assert _fetch_preview("https://example.com") == Preview()
+        preview = _fetch_preview("https://example.com")
+        assert preview == Preview()
+        assert preview.problem == "Empty page"
         mock_preview.assert_not_called()
+
+    def test_known_image_skips_the_page(self, mock_get, mock_preview, mock_image):
+        mock_image.return_value = Preview("https://i.ytimg.com/vi/abc/maxresdefault.jpg", "picture")
+        assert _fetch_preview("https://youtu.be/abc") == mock_image.return_value
+        mock_image.assert_called_once_with("https://i.ytimg.com/vi/abc/maxresdefault.jpg")
+        mock_get.assert_not_called()
+
+    def test_next_known_image_when_one_is_missing(self, mock_get, mock_preview, mock_image):
+        hq = Preview("https://i.ytimg.com/vi/abc/hqdefault.jpg", "picture")
+        mock_image.side_effect = [Preview(), hq]
+        assert _fetch_preview("https://youtu.be/abc") == hq
+        mock_get.assert_not_called()
+
+    def test_no_page_when_known_images_fail(self, mock_get, mock_preview, mock_image):
+        mock_image.return_value = Preview(problem="Image returned 429")
+        assert _fetch_preview("https://github.com/owner/repo").problem == "Image returned 429"
+        mock_get.assert_not_called()
+
+    def test_retries_recorded(self, mock_get, mock_preview, mock_image):
+        mock_get.return_value.raw.retries.history = (
+            RequestHistory("GET", "/", None, 429, None),
+            RequestHistory("GET", "/", ReadTimeoutError(None, "/", ""), None, None),
+        )
+        mock_preview.return_value = ("Title", "Desc", "/og.png")
+        mock_image.return_value = Preview("https://example.com/og.png", "picture")
+        preview = _fetch_preview("https://example.com")
+        assert preview.retries == ("429", "timeout")
+
+    def test_retries_before_a_blocked_answer_recorded(self, mock_get, mock_preview, mock_image):
+        blocked = MagicMock(status_code=403)
+        blocked.raw.retries.history = (RequestHistory("GET", "/", None, 503, None),)
+        mock_get.side_effect = [blocked, MagicMock(status_code=200)]
+        mock_preview.return_value = ("Title", "Desc", "/og.png")
+        mock_image.return_value = Preview("https://example.com/og.png", "picture")
+        assert _fetch_preview("https://example.com").retries == ("503",)
 
 
 class TestLocalImage:
@@ -520,6 +693,30 @@ class TestOnPageMarkdown:
         assert mock_favicon.call_count == 1
 
 
+def test_summary_groups_entries_by_problem():
+    plugin = _make_plugin()
+    plugin.previews.update({
+        "https://a.example.com": Preview("https://a.example.com/og.png", "picture"),
+        "https://b.example.com": Preview("https://b.example.com/og.png", "logo", retries=("429",)),
+        "https://c.example.com": Preview(problem="Page returned 403"),
+        "https://d.example.com": Preview(problem="No preview image on the page"),
+        "https://e.example.com": Preview(problem="Page returned 403", retries=("timeout",)),
+    })
+    plugin.favicons.update({"a.example.com": b"png", "b.example.com": None})
+    summary = plugin._summary(sorted(plugin.previews), ["a.example.com", "b.example.com"])
+    assert summary.splitlines() == [
+        "[AwesomeList] 5 previews: 1 pictures, 1 logos, 3 without an image. "
+        "Favicons for 1 of 2 sites.",
+        "  Page returned 403 (2):",
+        "    https://c.example.com",
+        "    https://e.example.com (after timeout)",
+        "  No preview image on the page (1):",
+        "    https://d.example.com",
+        "  Found after retrying (1), past 429 x1:",
+        "    https://b.example.com (after 429)",
+    ]
+
+
 def _mkdocs_config(extra=None, config_file_path="mkdocs.yml"):
     return SimpleNamespace(
         markdown_extensions=["toc"],
@@ -632,3 +829,67 @@ def test_thumbnails_page_lists_card_images_in_list_order(tmp_path):
     assert ">A &amp; B</a>" in page
     assert "No image" not in page
     assert 'src="../images/a.webp"' in page
+
+
+# ---------------------------------------------------------------------------
+# The real sites, to catch a change to the formats _known_image_urls relies on
+# ---------------------------------------------------------------------------
+
+HD_VIDEO = "https://www.youtube.com/watch?v=teALLngESw0"
+NON_HD_VIDEO = "https://www.youtube.com/watch?v=Y9WXdobs_vU"
+REPOSITORY = "https://github.com/microbit-foundation/microbit-fs"
+
+
+def _page_image(url):
+    resp = _get(url)
+    if resp.status_code == 429:
+        pytest.skip(f"{url} was rate limited, so its preview tag couldn't be checked")
+    assert resp.ok, f"{url} returned {resp.status_code}, so its preview tag couldn't be checked"
+    return web_preview(url, content=resp.text)[2]
+
+
+def _assert_picture(image_url, site):
+    preview = _fetch_image(image_url)
+    if preview.problem == "Image returned 429":
+        pytest.skip(f"{site} rate limited the request, so its format couldn't be checked")
+    assert preview.image_kind == "picture", (
+        f"{site}'s preview image URL format may have changed: {image_url} gave no picture "
+        f"({preview.problem}). Update _known_image_urls in awesome_list.py to the format the "
+        "site's pages use in their og:image tag."
+    )
+
+
+@pytest.mark.network
+class TestKnownImageFormats:
+
+    def test_youtube_hd_video(self):
+        _assert_picture(_known_image_urls(HD_VIDEO)[0], "YouTube")
+
+    def test_youtube_video_without_hd(self):
+        maxres, hq = _known_image_urls(NON_HD_VIDEO)
+        assert not _fetch_image(maxres).image, (
+            f"{maxres} now gives a picture for a video without HD, so YouTube may have changed "
+            "which thumbnails it makes; check the order in _known_image_urls in awesome_list.py."
+        )
+        _assert_picture(hq, "YouTube")
+
+    @pytest.mark.parametrize("url", [HD_VIDEO, NON_HD_VIDEO])
+    def test_youtube_page_shares_the_same_image(self, url):
+        image = _page_image(url)
+        if not image:
+            pytest.skip("YouTube left the preview tags out, as it does for some servers")
+        assert image.split("?")[0] in _known_image_urls(url), (
+            f"YouTube's page shares {image}, which isn't one of the URLs _known_image_urls in "
+            "awesome_list.py builds, so update it to this format."
+        )
+
+    def test_github_repository(self):
+        _assert_picture(_known_image_urls(REPOSITORY)[0], "GitHub")
+
+    def test_github_page_shares_the_same_image(self):
+        image = _page_image(REPOSITORY)
+        expected = re.escape(_known_image_urls(REPOSITORY)[0]).replace("/1/", "/[0-9a-f]+/")
+        assert image and re.fullmatch(expected, image, re.IGNORECASE), (
+            f"GitHub's page shares {image}, which doesn't match the URL _known_image_urls in "
+            "awesome_list.py builds, so update it to this format."
+        )
