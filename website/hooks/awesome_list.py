@@ -40,8 +40,8 @@ CONFIG_SCHEME = (
     ("images", config_options.DictOfItems(config_options.File(exists=True), default={})),
 )
 
-# A top-level item starting with a web link; image links (badges) and in-page links aren't entries
-ENTRY_RE = re.compile(r"^- \[(?!!)(.*?)\]\(\s*(https?://[^)\s]+)\s*\)", re.MULTILINE)
+# Styles without a preview image: index shows the favicon, and shelf only the `images` covers
+NO_PREVIEW_STYLES = {"index", "shelf"}
 ASSETS_DIR = "assets/awesome-list"
 THUMBNAILS_DIR = f"{ASSETS_DIR}/thumbnails"
 IMAGES_DIR = f"{ASSETS_DIR}/images"
@@ -380,7 +380,7 @@ def _add_class(element, name):
 
 
 def _entry_link(li):
-    """The link an item starts with, unless it's an image link (a badge), or None."""
+    """The web link an item starts with, unless it's an image link (a badge), or None."""
     container = li
     # Loose lists (blank lines between items) wrap each item's text in a <p>
     if len(li) and li[0].tag == "p" and not (li.text or "").strip():
@@ -390,7 +390,7 @@ def _entry_link(li):
     link = container[0]
     if link.tag != "a" or (not (link.text or "").strip() and len(link) and link[0].tag == "img"):
         return None
-    return link
+    return link if re.match(r"https?://", link.get("href", "")) else None
 
 
 def _unwrap_paragraph(li):
@@ -458,11 +458,20 @@ class _EntryTreeprocessor(Treeprocessor):
         default_style = self.plugin.config["default-style"]
         section_styles = self.plugin.config["section-styles"]
         style = default_style
+        lists = []
         for element in root:
             if re.fullmatch(r"h[1-6]", element.tag):
                 style = section_styles.get(element.get("id"), default_style)
             elif element.tag == "ul":
-                self._process_list(element, style)
+                lists.append((element, style))
+        # Fetched here, where each list's style says what its entries show
+        entries = []
+        for ul, style in lists:
+            links = (_entry_link(li) for li in ul)
+            entries += [(a.get("href"), _plain_text(a), style) for a in links if a is not None]
+        self.plugin.fetch(entries)
+        for ul, style in lists:
+            self._process_list(ul, style)
 
     def _process_list(self, ul, style):
         found = False
@@ -479,9 +488,9 @@ class _EntryTreeprocessor(Treeprocessor):
     def _process_entry(self, ul, li, style):
         """Turn `<a>Name</a> - Description` into the card markup."""
         link = _entry_link(li)
-        preview = None if link is None else self._preview(link, style)
-        if preview is None:
+        if link is None:
             return False
+        preview = self._preview(link, style)
         url = link.get("href")
 
         _unwrap_paragraph(li)
@@ -516,15 +525,14 @@ class _EntryTreeprocessor(Treeprocessor):
         return True
 
     def _preview(self, link, style):
-        """The entry's preview, or None if the link isn't an entry."""
+        """The entry's preview, an empty one for styles that don't show it."""
         url = link.get("href")
-        preview = self.plugin.previews.get(url)
-        if preview and style == "shelf" and url not in self.plugin.config["images"]:
+        if style == "shelf" and url not in self.plugin.config["images"]:
             # A page's preview isn't always the cover, so shelves only show the given images
             name = _plain_text(link)
             log.warning('No cover in extra.awesome_list.images for "%s": %s', name, url)
             return Preview()
-        return preview
+        return self.plugin.previews.get(url, Preview())
 
     def _media(self, url, preview):
         media = etree.Element(
@@ -631,13 +639,20 @@ class AwesomeList:
         return config
 
     def on_page_markdown(self, markdown, page=None, **kwargs):
+        # For the treeprocessor's relative links
         self.page_url = page.url if page else ""
-        for m in ENTRY_RE.finditer(markdown):
-            self.names.setdefault(m.group(2), m.group(1))
-        urls = set(self.names).difference(self.previews)
-        hosts = {_host(url) for url in self.names}.difference(self.favicons)
+        return markdown
+
+    def fetch(self, entries):
+        """Fetch the previews of the (url, name, style) entries whose style shows one, and every
+        entry's favicon, skipping what's already fetched."""
+        for url, name, _ in entries:
+            self.names.setdefault(url, name)
+        urls = {url for url, _, style in entries if style not in NO_PREVIEW_STYLES}
+        urls.difference_update(self.previews)
+        hosts = {_host(url) for url, _, _ in entries}.difference(self.favicons)
         if not urls and not hosts:
-            return markdown
+            return
 
         print(f"\n[AwesomeList] Fetching {len(urls)} previews...", end=" ", flush=True)
         urls, hosts = sorted(urls), sorted(hosts)
@@ -653,7 +668,6 @@ class AwesomeList:
             for url in urls:
                 preview = self.previews[url]
                 print(f"  {url}\n    Image: {preview.image} ({preview.image_kind})")
-        return markdown
 
     def _summary(self, urls, hosts):
         """What the fetching found, with the entries without an image by why, and the retried ones."""

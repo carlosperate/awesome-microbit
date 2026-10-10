@@ -25,7 +25,8 @@ card of their own, but in `media` lists they move to an item after their entry, 
 under its.
 
 During the build the hook fetches each entry's OpenGraph image and the site's favicon, then
-adds classes and that data to the list Markdown renders. Requests are retried on connection
+adds classes and that data to the list Markdown renders. Entries in `index` and `shelf` lists only
+fetch the favicon, as those styles don't show the preview. Requests are retried on connection
 errors, rate limits and server errors, waiting as long as a site's `Retry-After` asks, up to 15
 minutes: GitHub's preview images allow 100 an IP every 15 minutes, so a build with more uncached
 ones than that waits once. Requests go to each site at most three at a time, and are repeated with

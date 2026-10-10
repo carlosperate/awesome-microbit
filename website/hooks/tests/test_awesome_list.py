@@ -448,6 +448,13 @@ class TestDomainLabel:
 
 class TestRenderedEntries:
 
+    @pytest.fixture(autouse=True)
+    def no_fetching(self):
+        # Each test puts the previews it needs in the plugin
+        with patch("awesome_list._fetch_preview", return_value=Preview()), \
+                patch("awesome_list._fetch_favicon", return_value=None):
+            yield
+
     def test_entry_with_picture(self):
         plugin = _make_plugin()
         plugin.previews["https://example.com"] = Preview("https://example.com/og.png", "picture")
@@ -650,11 +657,6 @@ class TestRenderedEntries:
         assert "og.png" not in html
         assert 'images for "Book": https://example.com' in caplog.text
 
-    def test_entries_without_preview_data_unchanged(self):
-        plugin = _make_plugin()
-        text = "- [Example](https://example.com) - An example site."
-        assert _render(plugin, text) == markdown.markdown(text)
-
     def test_plain_lists_unchanged(self):
         plugin = _make_plugin()
         text = "- plain item\n- [Contents](#contents)"
@@ -666,15 +668,20 @@ class TestRenderedEntries:
 # ---------------------------------------------------------------------------
 
 
+def test_on_page_markdown_keeps_the_page_url():
+    plugin = _make_plugin()
+    assert plugin.on_page_markdown("text", page=SimpleNamespace(url="about/")) == "text"
+    assert plugin.page_url == "about/"
+
+
 @patch("awesome_list._fetch_favicon")
 @patch("awesome_list._fetch_preview")
-class TestOnPageMarkdown:
+class TestFetch:
 
     def test_no_entries(self, mock_preview, mock_favicon):
-        plugin = _make_plugin()
-        md = "# Hello\n\n- plain item"
-        assert plugin.on_page_markdown(md) == md
+        _render(_make_plugin(), "# Hello\n\n- plain item")
         mock_preview.assert_not_called()
+        mock_favicon.assert_not_called()
 
     def test_fetches_previews_and_favicons(self, mock_preview, mock_favicon):
         mock_preview.return_value = Preview("https://example.com/og.png", "picture")
@@ -682,14 +689,14 @@ class TestOnPageMarkdown:
         plugin = _make_plugin()
         md = (
             "- [A](https://example.com/a) - Description A\n"
-            "- [B](https://www.example.com/b) - Description B\n"
+            "- [`B`](https://www.example.com/b) - Description B\n"
             "\t- [Sub](https://example.com/sub) - Not fetched"
         )
+        _render(plugin, md)
 
-        assert plugin.on_page_markdown(md, page=SimpleNamespace(url="about/")) == md
         assert set(plugin.previews) == {"https://example.com/a", "https://www.example.com/b"}
         assert plugin.favicons == {"example.com": b"png"}
-        assert plugin.page_url == "about/"
+        assert plugin.names == {"https://example.com/a": "A", "https://www.example.com/b": "B"}
 
     def test_only_web_links_are_entries(self, mock_preview, mock_favicon):
         mock_preview.return_value = Preview()
@@ -700,14 +707,28 @@ class TestOnPageMarkdown:
             "- [Title only](https://example.com/title)\n"
             "- [Spaced](https://example.com/spaced ) - Space before the bracket.\n"
         )
-        plugin.on_page_markdown(md)
+        _render(plugin, md)
 
         assert set(plugin.previews) == {"https://example.com/title", "https://example.com/spaced"}
+
+    def test_only_styles_with_a_preview_fetch_it(self, mock_preview, mock_favicon):
+        mock_preview.return_value = Preview()
+        mock_favicon.return_value = b"png"
+        plugin = _make_plugin(section_styles={"libraries": "index", "books": "shelf"})
+        md = (
+            "- [A](https://a.example.com) - Card.\n\n"
+            "## Libraries\n\n- [B](https://b.example.com) - Index row.\n\n"
+            "## Books\n\n- [C](https://c.example.com) - Book.\n"
+        )
+        _render(plugin, md)
+
+        assert set(plugin.previews) == {"https://a.example.com"}
+        assert set(plugin.favicons) == {"a.example.com", "b.example.com", "c.example.com"}
 
     def test_images_from_the_option_not_fetched(self, mock_preview, mock_favicon):
         mock_favicon.return_value = b"png"
         plugin = _make_plugin(images={"https://example.com/a": COVER})
-        plugin.on_page_markdown("- [A](https://example.com/a) - Description A")
+        _render(plugin, "- [A](https://example.com/a) - Description A")
 
         mock_preview.assert_not_called()
         assert plugin.favicons == {"example.com": b"png"}
@@ -716,8 +737,8 @@ class TestOnPageMarkdown:
         mock_preview.return_value = Preview()
         plugin = _make_plugin()
         md = "- [A](https://example.com) - Description A"
-        plugin.on_page_markdown(md)
-        plugin.on_page_markdown(md)
+        _render(plugin, md)
+        _render(plugin, md)
 
         assert mock_preview.call_count == 1
         assert mock_favicon.call_count == 1
