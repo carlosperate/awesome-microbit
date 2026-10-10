@@ -36,8 +36,6 @@
     --awesome-entry-muted: #5f6670;
     --awesome-entry-title: oklch(0.47 0.12 var(--awesome-section-hue));
     --awesome-entry-accent: oklch(0.8 0.08 var(--awesome-section-hue));
-    --awesome-entry-chip: var(--awesome-list-tint);
-    --awesome-entry-chip-hover: oklch(0.92 0.045 var(--awesome-section-hue));
     --awesome-entry-hover-bg: oklch(0.975 0.012 var(--awesome-section-hue));
     --awesome-entry-sticker: oklch(0.62 0.15 var(--awesome-section-hue));
     --awesome-entry-sticker-hot: oklch(0.72 0.16 calc(var(--awesome-section-hue) + 20deg));
@@ -53,8 +51,6 @@
     --awesome-entry-muted: #a59dab;
     --awesome-entry-title: oklch(0.83 0.08 var(--awesome-section-hue));
     --awesome-entry-accent: oklch(0.55 0.08 var(--awesome-section-hue));
-    --awesome-entry-chip: oklch(0.3 0.03 var(--awesome-section-hue));
-    --awesome-entry-chip-hover: oklch(0.36 0.04 var(--awesome-section-hue));
     --awesome-entry-hover-bg: oklch(0.26 0.02 var(--awesome-section-hue));
     --awesome-entry-sticker: oklch(0.6 0.12 var(--awesome-section-hue));
     --awesome-entry-sticker-hot: oklch(0.7 0.13 calc(var(--awesome-section-hue) + 20deg));
@@ -70,7 +66,8 @@
 }
 
 /* extend.css forces the colour and weight of every link */
-.awesome-list .awesome-entry__title {
+.awesome-list .awesome-entry__title,
+.awesome-subs .awesome-entry__sub > a {
     font-family: var(--awesomemb-title-font);
     font-size: 1.05rem;
     font-weight: 500;
@@ -153,22 +150,52 @@
     opacity: 0.8;
 }
 
-.awesome-list--media .awesome-entry__subs {
-    gap: 6px;
+/* Sub-entries' cards, joined to their entry's by a line to the first */
+.awesome-subs {
+    position: relative;
+    margin: -2px 0 0 24px;
+    padding-left: 16px;
 }
 
-.awesome-list--media .awesome-entry__sub a {
-    padding: 3px 10px;
-    background: var(--awesome-entry-chip);
+.awesome-subs::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -6px;
+    width: 10px;
+    height: 29px;
+    border-left: 1.5px solid var(--awesome-entry-accent);
+    border-bottom: 1.5px solid var(--awesome-entry-accent);
+    border-bottom-left-radius: 6px;
+}
+
+.awesome-subs .awesome-entry__sub {
+    padding: 7px 10px 8px;
+    background: var(--awesome-entry-bg);
     font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--awesome-entry-title) !important;
-    text-decoration: none;
+    line-height: 1.45;
+    color: var(--awesome-entry-text);
 }
 
-.awesome-list--media .awesome-entry__sub a:hover {
-    background: var(--awesome-entry-chip-hover);
-    text-decoration: none;
+.awesome-subs .awesome-entry__sub > a {
+    margin-bottom: 2px;
+    font-size: 0.88rem;
+}
+
+.awesome-subs .awesome-entry__favicon {
+    width: 14px;
+    height: 14px;
+}
+
+.awesome-subs .awesome-entry__sub-desc {
+    color: var(--awesome-entry-muted);
+}
+
+@container (max-width: 599px) {
+    .awesome-subs {
+        margin-left: 10px;
+        padding-left: 14px;
+    }
 }
 
 
@@ -499,6 +526,7 @@
     }
 
     .awesome-list--media .awesome-entry,
+    .awesome-subs .awesome-entry__sub,
     .awesome-contents__tile {
         --sticker-lift: 2px;
         --sticker-offset: 3px;
@@ -509,6 +537,7 @@
         transition: top 0.12s ease-out, left 0.12s ease-out, border-color 0.12s ease-out;
     }
 
+    .awesome-subs .awesome-entry__sub,
     .awesome-contents__tile {
         --sticker-lift: 1px;
         --sticker-offset: 2px;
@@ -516,6 +545,7 @@
     }
 
     .awesome-list--media .awesome-entry::before,
+    .awesome-subs .awesome-entry__sub::before,
     .awesome-contents__tile::before {
         content: "";
         position: absolute;
@@ -532,6 +562,8 @@
 
     .awesome-list--media .awesome-entry:hover,
     .awesome-list--media .awesome-entry:has(.awesome-entry__title:focus-visible),
+    .awesome-subs .awesome-entry__sub:hover,
+    .awesome-subs .awesome-entry__sub:has(> a:focus-visible),
     .awesome-contents__tile:hover,
     .awesome-contents__tile:focus-visible {
         top: calc(var(--sticker-lift) * -1);
@@ -541,6 +573,8 @@
 
     .awesome-list--media .awesome-entry:hover::before,
     .awesome-list--media .awesome-entry:has(.awesome-entry__title:focus-visible)::before,
+    .awesome-subs .awesome-entry__sub:hover::before,
+    .awesome-subs .awesome-entry__sub:has(> a:focus-visible)::before,
     .awesome-contents__tile:hover::before,
     .awesome-contents__tile:focus-visible::before {
         opacity: 1;
@@ -549,12 +583,14 @@
 
     /* Pressed down on click */
     .awesome-list--media .awesome-entry:active,
+    .awesome-subs .awesome-entry__sub:active,
     .awesome-contents__tile:active {
         top: 0;
         left: 0;
     }
 
     .awesome-list--media .awesome-entry:active::before,
+    .awesome-subs .awesome-entry__sub:active::before,
     .awesome-contents__tile:active::before {
         transform: translate(1px, 1px);
     }
@@ -568,6 +604,8 @@
 @media (prefers-reduced-motion: reduce) {
     .awesome-list--media .awesome-entry,
     .awesome-list--media .awesome-entry::before,
+    .awesome-subs .awesome-entry__sub,
+    .awesome-subs .awesome-entry__sub::before,
     .awesome-contents__tile,
     .awesome-contents__tile::before {
         transition: none;

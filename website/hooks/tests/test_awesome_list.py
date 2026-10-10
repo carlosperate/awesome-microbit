@@ -525,10 +525,40 @@ class TestRenderedEntries:
         )
         html = _render(plugin, text)
 
-        assert '<ul class="awesome-entry__subs">' in html
         assert '<li class="awesome-entry__sub">' in html
-        assert '<a href="https://a.example.com/beta" title="Beta version.">A Beta</a>' in html
+        assert '<a href="https://a.example.com/beta">A Beta</a>' in html
         assert '<span class="awesome-entry__sub-desc">Beta version.</span>' in html
+
+    def test_media_sub_entries_follow_their_entry(self):
+        plugin = _make_plugin()
+        plugin.previews["https://a.example.com"] = Preview()
+        plugin.favicons["a.example.com"] = b"png"
+        text = (
+            "- [A](https://a.example.com) - Main entry.\n"
+            "\t- [A Beta](https://a.example.com/beta) - Beta version.\n"
+            "- [B](https://a.example.com/b) - Next entry.\n"
+        )
+        plugin.previews["https://a.example.com/b"] = Preview()
+        html = _render(plugin, text)
+
+        entry_end = html.index("</li>", html.index("awesome-entry__desc"))
+        row = html.index('<li class="awesome-subs"><ul aria-label="Related to A" class="awesome-entry__subs">')
+        assert entry_end < row < html.index(">B</a>")
+        assert '<a href="https://a.example.com/beta"><img alt="" class="awesome-entry__favicon"' in html
+
+    def test_index_sub_entries_stay_in_their_entry(self):
+        plugin = _make_plugin(default_style="index")
+        plugin.previews["https://a.example.com"] = Preview()
+        text = (
+            "- [A](https://a.example.com) - Main entry.\n"
+            "\t- [A Beta](https://a.example.com/beta) - Beta version.\n"
+        )
+        html = _render(plugin, text)
+
+        assert '<ul class="awesome-entry__subs">' in html
+        assert 'class="awesome-subs"' not in html
+        # Index lists hide the description, so it's the tooltip
+        assert '<a href="https://a.example.com/beta" title="Beta version.">A Beta</a>' in html
 
     def test_nested_sub_entries_kept_out_of_description(self):
         plugin = _make_plugin()

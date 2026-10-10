@@ -14,7 +14,7 @@
 }
 
 /* Items that don't start with a link aren't entries, and keep a plain bullet */
-.awesome-list > li:not(.awesome-entry) {
+.awesome-list > li:not(.awesome-entry, .awesome-subs) {
     list-style: disc;
     margin-left: 1.5em;
 }
@@ -35,12 +35,14 @@
     gap: 0 10px;
 }
 
-.awesome-entry__title {
+.awesome-entry__title,
+.awesome-subs .awesome-entry__sub > a {
     font-weight: 600;
 }
 
-/* Stretched over the entry, so the whole card is one click target */
-.awesome-entry__title::after {
+/* Stretched over the entry or sub-entry, so the whole card is one click target */
+.awesome-entry__title::after,
+.awesome-subs .awesome-entry__sub > a::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -164,12 +166,44 @@
     height: 32px;
 }
 
-.awesome-list--media .awesome-entry__sub a {
+/* Galleries keep sub-entries in the card; media lists put them in smaller cards under it */
+.awesome-list--gallery .awesome-entry__sub a {
     display: inline-block;
     padding: 2px 10px;
     border-radius: 999px;
     background: var(--awesome-list-tint);
     font-size: 0.85em;
+}
+
+.awesome-subs {
+    padding-left: 24px;
+}
+
+.awesome-subs .awesome-entry__subs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+    gap: 6px;
+    margin: 0;
+}
+
+.awesome-subs .awesome-entry__sub {
+    position: relative;
+    padding: 8px 10px;
+    border: 1px solid var(--awesome-list-border);
+    border-radius: calc(var(--awesome-list-radius) - 4px);
+}
+
+/* Not positioned, so its stretched link covers the card; description links stay above it */
+.awesome-subs .awesome-entry__sub > a {
+    position: static;
+    display: block;
+}
+
+.awesome-subs .awesome-entry__sub-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Narrow lists (phones, or tablets beside a sidebar) put the description under the image */

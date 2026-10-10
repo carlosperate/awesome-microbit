@@ -430,6 +430,18 @@ def _wrap_details(li, header):
     li.append(details)
 
 
+def _move_sub_entries(ul, li, sub_lists, name):
+    """Move an entry's sub-entries to an item of their own after it, for smaller cards under its."""
+    row = etree.Element("li", {"class": "awesome-subs"})
+    for sub_list in sub_lists:
+        li.remove(sub_list)
+        sub_list.tail = None
+        # Out of the entry, so the list says whose they are
+        sub_list.set("aria-label", f"Related to {name}")
+        row.append(sub_list)
+    ul.insert(list(ul).index(li) + 1, row)
+
+
 def _plain_text(element):
     """Text content with Python-Markdown's inline placeholders resolved or dropped."""
     text = "".join(element.itertext())
@@ -454,8 +466,8 @@ class _EntryTreeprocessor(Treeprocessor):
 
     def _process_list(self, ul, style):
         found = False
-        for li in ul:
-            if li.tag == "li" and self._process_entry(li, style):
+        for li in list(ul):
+            if li.tag == "li" and self._process_entry(ul, li, style):
                 found = True
         if found:
             _add_class(ul, "awesome-list")
@@ -464,7 +476,7 @@ class _EntryTreeprocessor(Treeprocessor):
                 _add_class(ul, "awesome-list--media")
             _add_class(ul, f"awesome-list--{style}")
 
-    def _process_entry(self, li, style):
+    def _process_entry(self, ul, li, style):
         """Turn `<a>Name</a> - Description` into the card markup."""
         link = _entry_link(li)
         preview = None if link is None else self._preview(link, style)
@@ -474,21 +486,14 @@ class _EntryTreeprocessor(Treeprocessor):
 
         _unwrap_paragraph(li)
         _wrap_description(li, "awesome-entry__desc")
-        for child in li:
-            if child.tag in ("ul", "ol"):
-                self._process_sub_entries(child)
+        sub_lists = [child for child in li if child.tag in ("ul", "ol")]
+        as_cards = style == "media"
+        for sub_list in sub_lists:
+            self._process_sub_entries(sub_list, as_cards)
         li.remove(link)
 
         icon = self._icon(url, link)
-        favicon = self._favicon_src(url)
-        if favicon:
-            img = etree.Element(
-                "img",
-                {"class": "awesome-entry__favicon", "src": favicon, "alt": "", "loading": "lazy"},
-            )
-            img.tail = link.text
-            link.text = None
-            link.insert(0, img)
+        self._add_favicon(link)
 
         header = etree.Element("span", {"class": "awesome-entry__header"})
         _add_class(link, "awesome-entry__title")
@@ -506,6 +511,8 @@ class _EntryTreeprocessor(Treeprocessor):
             li.insert(i, child)
         if style == "shelf":
             _wrap_details(li, header)
+        elif as_cards and sub_lists:
+            _move_sub_entries(ul, li, sub_lists, _plain_text(link))
         return True
 
     def _preview(self, link, style):
@@ -539,6 +546,17 @@ class _EntryTreeprocessor(Treeprocessor):
         path = f"{ASSETS_DIR}/favicons/{_favicon_filename(host)}"
         return get_relative_url(path, self.plugin.page_url)
 
+    def _add_favicon(self, link):
+        favicon = self._favicon_src(link.get("href"))
+        if favicon:
+            img = etree.Element(
+                "img",
+                {"class": "awesome-entry__favicon", "src": favicon, "alt": "", "loading": "lazy"},
+            )
+            img.tail = link.text
+            link.text = None
+            link.insert(0, img)
+
     def _icon(self, url, link):
         icon = etree.Element("span", {"class": "awesome-entry__icon", "aria-hidden": "true"})
         favicon = self._favicon_src(url)
@@ -548,7 +566,7 @@ class _EntryTreeprocessor(Treeprocessor):
             icon.text = _plain_text(link)[:1].upper()
         return icon
 
-    def _process_sub_entries(self, sub_list):
+    def _process_sub_entries(self, sub_list, as_cards):
         _add_class(sub_list, "awesome-entry__subs")
         for li in sub_list:
             _add_class(li, "awesome-entry__sub")
@@ -557,7 +575,10 @@ class _EntryTreeprocessor(Treeprocessor):
                 continue
             _unwrap_paragraph(li)
             desc = _wrap_description(li, "awesome-entry__sub-desc")
-            if _plain_text(desc):
+            if as_cards:
+                # Their cards show the description, and the favicon if the build has it for an entry
+                self._add_favicon(link)
+            elif _plain_text(desc):
                 link.set("title", _plain_text(desc))
 
 

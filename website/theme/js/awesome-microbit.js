@@ -23,7 +23,8 @@ document.addEventListener('error', function (event) {
 
 // Moves the bright part of the hover shadow with the pointer, on cards and Contents tiles
 document.addEventListener('pointermove', function (event) {
-    var entry = event.target.closest && event.target.closest('.awesome-list--media .awesome-entry, .awesome-contents__tile');
+    var entry = event.target.closest &&
+        event.target.closest('.awesome-list--media .awesome-entry, .awesome-subs .awesome-entry__sub, .awesome-contents__tile');
     if (!entry) return;
     var rect = entry.getBoundingClientRect();
     entry.style.setProperty('--awesome-x', (event.clientX - rect.left) + 'px');

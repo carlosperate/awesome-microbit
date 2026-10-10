@@ -21,7 +21,8 @@ pytest -v
 
 Entries are top-level list items that start with a web link, usually written as
 `- [Name](url) - Description` (the description is optional). Indented sub-entries never get a
-card of their own.
+card of their own, but in `media` lists they move to an item after their entry, for smaller cards
+under its.
 
 During the build the hook fetches each entry's OpenGraph image and the site's favicon, then
 adds classes and that data to the list Markdown renders. Requests are retried on connection
@@ -71,7 +72,8 @@ about images no entry links to.
 `awesome-list.css` includes these styles:
 
 - `media`: a card per entry, with the preview image on the left. In lists narrower
-  than 600px the description goes under the image instead.
+  than 600px the description goes under the image instead. Sub-entries are smaller cards under
+  their entry's, with the site's favicon when it also has an entry.
 - `gallery`: the same cards as `media` (its lists get both classes), in columns with the preview
   image on top, for sections where the pictures matter most: up to four columns of at least
   220px. Lists too narrow for two columns use the `media` layout.
@@ -95,9 +97,11 @@ Any other style name only adds its class, for the theme to style.
       <span class="awesome-entry__domain">example.com</span>
     </span>
     <span class="awesome-entry__desc">Description</span>
-    <ul class="awesome-entry__subs">
+  </li>
+  <li class="awesome-subs">
+    <ul class="awesome-entry__subs" aria-label="Related to Name">
       <li class="awesome-entry__sub">
-        <a href="…" title="Description">Name</a>
+        <a href="…"><img class="awesome-entry__favicon" src="…">Name</a>
         <span class="awesome-entry__sub-desc">Description</span>
       </li>
     </ul>
@@ -112,7 +116,11 @@ Any other style name only adds its class, for the theme to style.
   site has none. The same favicon is also in the title, when there is one.
 - The default CSS stretches the title link over the entry, so the whole card is
   one click target; other links in it stay clickable above it.
-- `awesome-entry__subs` holds the indented sub-entries, if any.
+- `awesome-entry__subs` holds the indented sub-entries, if any. In `media` lists it's in an item of
+  its own after the entry, as above, labelled for screen readers, and the favicon is only there
+  when the build fetched it for an entry, as it doesn't fetch sub-entries'. Other styles keep it
+  at the end of the entry, without the label or favicons, and the links get the description as
+  their `title`.
 - Images from the `images` option also have `width` and `height`, so the browser can lay them out
   before they load.
 - In `shelf` lists, the header, description and sub-entries are in a
