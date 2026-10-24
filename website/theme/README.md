@@ -9,7 +9,7 @@ from 20th October 2025.
 - **`css/extend.css`**: Added a sticky Table of Contents sidebar with internal scrolling, hidden scrollbar until hover, and active state highlights for the active scrollspy element (`.nav-link.active`).
 - **`js/base.js`**: Replaced Bootstrap's native ScrollSpy with a custom implementation to properly track layout hashes matching emojis inside IDs (since MkDocs encodes emojis in anchors).
 - **`base.html`**: Updated the repo link in the navbar to show only the icon (GitHub, GitLab, or Bitbucket) without text.
-- **`css/awesome-microbit.css`**: Awesome micro:bit colours and details for the awesome_list hook's cards, on top of the hook's default layout, for light and dark mode. Each section of a list page gets its own hue, and index lists use two columns where there is room.
+- **`css/awesome-microbit.css`**: Awesome micro:bit colours and details for the awesome_list hook's cards, on top of the hook's default layout, for light and dark mode. Each section of a list page gets its own hue, and index lists use two columns where there is room. Also includes CSS for the books and poster formats.
 - **`js/awesome-microbit.js`**: Sets each card picture as its own blurred backdrop once it loads, gives the cards and Contents tiles the pointer's position for their hover shadow, and switches a card to its favicon when its image fails to load in the browser.
 - **`base.html`**: Loads `css/awesome-microbit.css` and `js/awesome-microbit.js` in the `<head>`, after `extra_css` so the CSS overrides the hook's default card styles.
 - **`content.html`**: On pages with awesome lists, wraps each `h2` section in a `<section class="awesome-section">` with its number in `--awesome-section`, used for the section colours.

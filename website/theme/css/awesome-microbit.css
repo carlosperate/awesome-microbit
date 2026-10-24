@@ -200,6 +200,104 @@
 
 
 /*****************************************************************************/
+/* Posters: fitted frames, with captions in the site's normal type            */
+/*****************************************************************************/
+.awesome-list--posters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.awesome-list--posters .awesome-entry {
+    grid-template: "media" 240px "header" auto "desc" 1fr "subs" auto / minmax(0, 1fr);
+    gap: 12px 0;
+    padding: 12px;
+}
+
+.awesome-list--posters :is(.awesome-entry__media, .awesome-entry__icon) {
+    grid-area: media;
+    place-self: center;
+    max-width: 100%;
+}
+
+.awesome-list--posters .awesome-entry__media {
+    padding: 5px;
+    border: 3px solid var(--awesome-entry-muted);
+    background: #fff;
+    box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
+    transition: transform 0.16s ease, filter 0.16s ease;
+}
+
+.awesome-list--posters .awesome-entry__media img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 194px;
+}
+
+.awesome-list--posters .awesome-entry__header {
+    display: block;
+    padding-top: 12px;
+    border-top: 1px solid var(--awesome-list-border);
+}
+
+.awesome-list--posters .awesome-entry__domain {
+    display: block;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.awesome-list--posters .awesome-entry:not([data-image="none"]) .awesome-entry__icon,
+.awesome-list--posters .awesome-entry[data-image="none"] .awesome-entry__media,
+.awesome-list--posters .awesome-entry__favicon {
+    display: none;
+}
+
+.awesome-list--posters .awesome-entry:has(:focus-visible) {
+    outline: 2px solid var(--awesome-entry-title);
+    outline-offset: 3px;
+}
+
+.awesome-list--posters .awesome-entry:has(:focus-visible) .awesome-entry__media {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+}
+
+@media (hover: hover) {
+    .awesome-list--posters .awesome-entry:hover .awesome-entry__media {
+        transform: translateY(-3px);
+        filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+    }
+}
+
+@media (min-width: 1200px) {
+    .awesome-list--posters {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.98px) {
+    .awesome-list--posters .awesome-entry {
+        grid-template-rows: 180px auto 1fr auto;
+    }
+
+    .awesome-list--posters .awesome-entry__media img {
+        max-height: 146px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .awesome-list--posters .awesome-entry__media {
+        transition: none;
+        transform: none !important;
+        filter: none !important;
+    }
+}
+
+/*****************************************************************************/
 /* "index" style                                                             */
 /*****************************************************************************/
 /* Two columns where there's room for them. The negative margin takes up all but 4px of the first

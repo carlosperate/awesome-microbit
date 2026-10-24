@@ -25,7 +25,7 @@ card of their own, but in `media` lists they move to an item after their entry, 
 under its.
 
 During the build the hook fetches each entry's OpenGraph image and the site's favicon, then
-adds classes and that data to the list Markdown renders. Entries in `index` and `shelf` lists only
+adds classes and that data to the list Markdown renders. Entries in `index`, `shelf` and `posters` lists only
 fetch the favicon, as those styles don't show the preview. Requests are retried on connection
 errors, rate limits and server errors, waiting as long as a site's `Retry-After` asks, up to 15
 minutes: GitHub's preview images allow 100 an IP every 15 minutes, so a build with more uncached
@@ -79,6 +79,9 @@ about images no entry links to.
   image on top, for sections where the pictures matter most: up to four columns of at least
   220px. Lists too narrow for two columns use the `media` layout.
 - `index`: compact rows with the site's favicon, useful for long lists of repositories.
+- `posters`: framed prints in a borderless grid supplied by the theme, with two columns on phones
+  and four from 1200px. Only shows images from the `images` option, since a social preview need
+  not show the poster. Missing artwork gets a favicon and a build warning.
 - `shelf`: covers side by side, like books on a shelf, with the details over the cover on hover,
   keyboard focus, or when a theme script adds `awesome-entry--open` (on touch screens, which can't
   hover). It only shows images from the `images` option, as a page's preview isn't always

@@ -40,8 +40,9 @@ CONFIG_SCHEME = (
     ("images", config_options.DictOfItems(config_options.File(exists=True), default={})),
 )
 
-# Styles without a preview image: index shows the favicon, and shelf only the `images` covers
-NO_PREVIEW_STYLES = {"index", "shelf"}
+# What explicitly supplied artwork each style needs, rather than the page's social preview.
+LOCAL_IMAGE_STYLES = {"shelf": "cover", "posters": "poster"}
+NO_PREVIEW_STYLES = {"index", *LOCAL_IMAGE_STYLES}
 ASSETS_DIR = "assets/awesome-list"
 THUMBNAILS_DIR = f"{ASSETS_DIR}/thumbnails"
 IMAGES_DIR = f"{ASSETS_DIR}/images"
@@ -480,7 +481,6 @@ class _EntryTreeprocessor(Treeprocessor):
                 found = True
         if found:
             _add_class(ul, "awesome-list")
-            # Gallery cards are media cards in columns, so they get the media rules too
             if style == "gallery":
                 _add_class(ul, "awesome-list--media")
             _add_class(ul, f"awesome-list--{style}")
@@ -527,10 +527,11 @@ class _EntryTreeprocessor(Treeprocessor):
     def _preview(self, link, style):
         """The entry's preview, an empty one for styles that don't show it."""
         url = link.get("href")
-        if style == "shelf" and url not in self.plugin.config["images"]:
-            # A page's preview isn't always the cover, so shelves only show the given images
+        if style in LOCAL_IMAGE_STYLES and url not in self.plugin.config["images"]:
+            # Social previews need not contain the book cover or poster itself.
             name = _plain_text(link)
-            log.warning('No cover in extra.awesome_list.images for "%s": %s', name, url)
+            artwork = LOCAL_IMAGE_STYLES[style]
+            log.warning('No %s in extra.awesome_list.images for "%s": %s', artwork, name, url)
             return Preview()
         return self.plugin.previews.get(url, Preview())
 

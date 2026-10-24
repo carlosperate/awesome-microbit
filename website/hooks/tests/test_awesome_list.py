@@ -648,14 +648,33 @@ class TestRenderedEntries:
         assert details.index("awesome-entry__desc") < details.index("awesome-entry__subs")
         assert html.index("awesome-entry__media") < html.index("awesome-entry__details")
 
-    def test_shelf_ignores_the_preview(self, caplog):
-        plugin = _make_plugin(default_style="shelf")
+    @pytest.mark.parametrize("style", ["shelf", "posters"])
+    def test_artwork_styles_ignore_the_preview(self, caplog, style):
+        plugin = _make_plugin(default_style=style)
         plugin.previews["https://example.com"] = Preview("https://example.com/og.png", "picture")
         html = _render(plugin, "- [Book](https://example.com) - A book.")
 
         assert 'data-image="none"' in html
         assert "og.png" not in html
         assert 'images for "Book": https://example.com' in caplog.text
+
+    def test_posters_use_local_artwork_and_keep_details_visible(self):
+        plugin = _make_plugin(default_style="posters", images={"https://example.com": COVER})
+        text = (
+            "- [Poster](https://example.com) - A poster.\n"
+            "\t- [Translation](https://example.com/translation) - Translated poster.\n"
+        )
+        html = _render(plugin, text)
+
+        assert '<ul class="awesome-list awesome-list--posters">' in html
+        assert 'src="assets/awesome-list/images/a.webp" width="300"' in html
+        assert 'height="400"' in html
+        assert 'class="awesome-entry__desc">A poster.' in html
+        assert "awesome-entry__subs" in html
+        assert "awesome-entry__details" not in html
+        assert "awesome-subs" not in html
+        assert "awesome-list--media" not in html
+        assert "awesome-list--gallery" not in html
 
     def test_plain_lists_unchanged(self):
         plugin = _make_plugin()
@@ -714,16 +733,17 @@ class TestFetch:
     def test_only_styles_with_a_preview_fetch_it(self, mock_preview, mock_favicon):
         mock_preview.return_value = Preview()
         mock_favicon.return_value = b"png"
-        plugin = _make_plugin(section_styles={"libraries": "index", "books": "shelf"})
+        plugin = _make_plugin(section_styles={"libraries": "index", "books": "shelf", "posters": "posters"})
         md = (
             "- [A](https://a.example.com) - Card.\n\n"
             "## Libraries\n\n- [B](https://b.example.com) - Index row.\n\n"
             "## Books\n\n- [C](https://c.example.com) - Book.\n"
+            "## Posters\n\n- [D](https://d.example.com) - Poster.\n"
         )
         _render(plugin, md)
 
         assert set(plugin.previews) == {"https://a.example.com"}
-        assert set(plugin.favicons) == {"a.example.com", "b.example.com", "c.example.com"}
+        assert set(plugin.favicons) == {"a.example.com", "b.example.com", "c.example.com", "d.example.com"}
 
     def test_images_from_the_option_not_fetched(self, mock_preview, mock_favicon):
         mock_favicon.return_value = b"png"

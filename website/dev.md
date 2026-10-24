@@ -38,12 +38,12 @@ python -m http.server 8000 --directory site
 
 ## CSS Screen sizes
 
-- Phone: below 576px
-- Small tablet: from 576px to 767px
-- Tablet: from 768px to 991px 
-- Small desktop: from 992px to 1199px
-- Desktop: from 1200px to 1399px
-- Large desktop: from 1400px
+- Phone, test at 360×750: below 576px
+- Small tablet, test at 744×1133: from 576px to 767px
+- Tablet, test at 820×1180: from 768px to 991px
+- Small desktop, test at 1024×768: from 992px to 1199px
+- Desktop, test at 1280×800: from 1200px to 1399px
+- Large desktop, test at 1440×900: from 1400px
 
 ## Book covers
 
@@ -56,6 +56,23 @@ preview picture isn't always the cover, so a new book needs one:
 4. Add the book's link and the file under `images:` in `mkdocs.yml`, in the README's order.
 
 Until then the book gets a plain cover, and the build warns about it.
+
+## Poster artwork
+
+The Posters section shows each print in its own framed card, with two cards per row on phones.
+Like Books, it uses local artwork rather than OpenGraph previews:
+
+1. Visit the resource and download the actual poster or render the first page of its PDF.
+   For a collection, choose one representative poster without adding extra list entries.
+2. Keep the entire print and its aspect ratio. Resize it to fit 600×400px, without upscaling
+   smaller originals, and save it in `images/posters/` as WebP at quality 80. This is twice the
+   largest displayed size (about 300×200px), for sharp thumbnails on high-density screens.
+3. Map the README entry's exact URL to this file under `images:` in `mkdocs.yml`.
+4. Record its source and attribution in `images/posters/README.md`. Download signed image links
+   while valid, as the site must serve a local copy after those links expire.
+
+A poster without artwork still has its title, description and source link, with a favicon
+placeholder. The build warns about missing artwork and never substitutes a social card.
 
 ## Blocked previews
 

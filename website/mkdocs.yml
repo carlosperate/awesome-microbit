@@ -81,7 +81,8 @@ extra:
       microbit-live: gallery
       other-conference-talks: gallery
       3d-printing: gallery
-      posters: gallery
+      # Individual framed posters, using local artwork rather than social previews
+      posters: posters
       # "shelf" is a special style designed to display book covers on shelves
       books: shelf
     # Images to show instead of a link's own preview, keyed by link.
@@ -106,6 +107,11 @@ extra:
       "https://link.springer.com/book/10.1007/978-1-4842-9197-9": images/books/microbit-projects-with-python-and-single-board-computers.webp
       "https://www.makershed.com/products/make-ai-robots-print": images/books/make-ai-robots.webp
       "https://mrmorrison.co.uk/books/": images/books/make-the-most-of-your-microbit.webp
+      # Poster artwork, kept in its original proportions (sources in images/posters/README.md)
+      "https://www.microbit.org/teach/classroom-resources/?filters=9891baf2-873c-4c17-9550-798cbd9842e0": images/posters/microbit-annotated-poster.webp
+      "https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/550": images/posters/element14-v1-poster.webp
+      "https://community.element14.com/learn/learning-center/stem-academy/microbit/m/files/2028": images/posters/element14-v2-poster.webp
+      "https://microbit.org/teach/classroom-resources/microbit-tactile-diagram/": images/posters/microbit-tactile-poster.webp
       # Previews of pages behind Cloudflare challenges, which the build can't fetch
       "https://www.printables.com/model/20112-gamer-case-for-bbc-microbit": images/previews/printables-gamer-case.webp
       "https://www.printables.com/model/46067-bbc-microbit-v2-battery-pack-holder": images/previews/printables-battery-pack-holder.webp
