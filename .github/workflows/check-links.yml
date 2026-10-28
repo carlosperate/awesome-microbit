@@ -12,9 +12,9 @@ on:
 
 jobs:
   awesome_bot:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.6'
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Check Redirects
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - name: Check redirects
       uses: ./.github/actions/url-redirect
       with:
